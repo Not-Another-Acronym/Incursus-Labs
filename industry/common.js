@@ -7,7 +7,8 @@ var ops = {
 	ge:5
 }
 var types = {
-	t_int:0
+	t_int:0,
+	t_float:1
 }
 var asInitVals = new Array();
 Presets = {};
@@ -38,18 +39,26 @@ function updatePresetsDropdown(oTable)
 }
 function filterTableInner(td, value, index, type, oTable)
 {
-	if(value.startsWith("<"))
-		filters[index] = [ops.lt, value.substring(1), type];
-	else if(value.startsWith(">"))
-		filters[index] = [ops.gt, value.substring(1), type];
-	else if(value.startsWith("="))
-		filters[index] = [ops.eq, value.substring(1), type];
-	else if(value.startsWith("!="))
-		filters[index] = [ops.ne, value.substring(2), type];
-	else if(value.startsWith("<="))
-		filters[index] = [ops.le, value.substring(2), type];
-	else if(value.startsWith(">="))
-		filters[index] = [ops.ge, value.substring(2), type];
+	if(value.startsWith("<") || value.startsWith(">") || value.startsWith("=") || value.startsWith("!="))
+	{
+		value = value.split("&");
+		for(var i = 0; i < value.length; i++)
+		{
+			filters[index] = [];
+			if(value[i].startsWith("<"))
+				filters[index].push([ops.lt, value[i].substring(1), type]);
+			else if(value[i].startsWith(">"))
+				filters[index].push([ops.gt, value[i].substring(1), type]);
+			else if(value[i].startsWith("="))
+				filters[index].push([ops.eq, value[i].substring(1), type]);
+			else if(value[i].startsWith("!="))
+				filters[index].push([ops.ne, value[i].substring(2), type]);
+			else if(value[i].startsWith("<="))
+				filters[index].push([ops.le, value[i].substring(2), type]);
+			else if(value[i].startsWith(">="))
+				filters[index].push([ops.ge, value[i].substring(2), type]);
+		}
+	}
 	else
 	{
 		filters[index] = undefined;
@@ -64,6 +73,8 @@ function filterTable(td, value, index, oTable)
 {
 	if($($(td).parent()).hasClass("int"))
 		filterTableInner(td, value, index, types.t_int, oTable)
+	else if($($(td).parent()).hasClass("float"))
+		filterTableInner(td, value, index, types.t_float, oTable)
 	else
 	{
 		checked = $("#use_regex").val() == "on";
@@ -84,6 +95,11 @@ $.fn.dataTableExt.afnFiltering.push(
 				{
 					a = parseInt(a.replace(',',''))
 					b = parseInt(b.replace(',',''))
+				}
+				else if(filters[i][2] == types.t_float)
+				{
+					a = parseFloat(a.replace(',',''))
+					b = parseFloat(b.replace(',',''))
 				}
 				
 				if(filters[i][0] == ops.lt && !(a < b))
