@@ -30,7 +30,7 @@ function updatePresetsDropdown(oTable)
 	$("#presets").editableSelect().change(function(){
     	if(Presets[this.value] != undefined)
     	{
-    		oTable.fnFilter( "^((" + Presets[this.value].join(")|(") + "))$", 9, false, false );
+    		oTable.fnFilter( "^((" + Presets[this.value].join(")|(") + "))$", 9, true, false );
     	}
     	else
     		oTable.fnFilter( ".*", 9, true, false );
@@ -204,4 +204,7 @@ $(document).ready(function() {
         /* Filter on the column (the index) of this element */
        filterTable(this, this.value, $($(this).parent()).index(), oTable );
     } );
+    
+    if (typeof extraLoad == 'function')
+    	extraLoad(oTable)
 } );
