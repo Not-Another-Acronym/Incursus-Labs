@@ -5,8 +5,8 @@
 	{
 		$script = "chartItems = new Array();";
 		print("<table id='maintable'>
-		        <thead><tr>            <th>Item Name</th>    <th>Group</th>        <th>Profit Margin</th>    <th>Profit/Min</th>       <th>Build Time</th>       <th>Invent Time</th>      <th>Copy Time</th>        <th>Total Time/Unit</th>  <th>Date</th>             <th>Item ID</th></tr></thead>
-		        <thead><tr id='filter'><th class='text'></th><th class='text'></th><th class='text int'></th><th class='text int'></th><th class='text int'></th><th class='text int'></th><th class='text int'></th><th class='text int'></th><th class='text int'></th><th></th></tr></thead>");
+		        <thead><tr>            <th>Item Name</th>    <th>Group</th>        <th>Profit Margin</th>      <th>Profit/Min</th>         <th>Build Time</th>         <th>Invent Time</th>        <th>Copy Time</th>          <th>Total Time/Unit</th>    <th>Date</th>               <th>Item ID</th></tr></thead>
+		        <thead><tr id='filter'><th class='text'></th><th class='text'></th><th class='text float'></th><th class='text float'></th><th class='text float'></th><th class='text float'></th><th class='text float'></th><th class='text float'></th><th class='text float'></th><th></th></tr></thead>");
         while($row = $qry->fetch_object())
         {
             $buildtime = $row->productionTime/60/60;
