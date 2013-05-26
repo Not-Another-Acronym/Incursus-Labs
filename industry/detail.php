@@ -25,7 +25,6 @@
     </head>
     <body>
     	<div id="wrap">
-    		<div id="chart_div"> </div>
 	        <?php
 	            define('IN_PHPBB', true);
 	            include("../header.php");
@@ -34,10 +33,13 @@
 				if(empty($presets))
 					exit();
 				$presets = json_decode($presets);
+				var_dump($_GET["preset"]);
+				var_dump($presets->$_GET["preset"]);
 				if($presets == null || empty($_GET["preset"]) || empty($presets->$_GET["preset"]))
 					exit();
 				$current = $presets->$_GET["preset"];
 	            $db = new mysqli($mysql_host, $mysql_evecentral_username, $mysql_evecentral_password, $mysql_evecentral);
+    			print("<div id=\"chart_div\"> </div>");
 	            $qry = $db->query("
 	                    SELECT c.`itemID`, g.`groupName`, c.`Profit`, c.`Date`, i.`typeName`, b.`researchTechTime`, b.`productionTime`, b.`researchCopyTime`, d.`valueInt`, d.`valueFloat`
 	                    FROM  `calculatedTheory` c
@@ -46,11 +48,11 @@
 	                    LEFT JOIN `naa_dbdump`.`invBlueprintTypes` as b ON b.`productTypeID` = i.`typeID`
 	                    LEFT OUTER JOIN `naa_dbdump`.`dgmTypeAttributes` as d ON d.`typeID` = b.`productTypeID` AND d.`attributeID` = 422
 	                    WHERE c.`itemID` IN (" . $db->escape_string(implode($current,",")) . ")
-	                    GROUP BY c.`itemID`
-	                    ORDER BY  `c`.`Profit` DESC,
+	                    ORDER BY  `c`.`itemID` DESC,
 	                                  `c`.`Date` ASC
 	            ");
-				writeTable($qry)
+				$script = writeTable($qry, true);
+				print("<script type='text/javascript'>" . $script . "</script>");
 	        ?>
         </div>
     </body>
