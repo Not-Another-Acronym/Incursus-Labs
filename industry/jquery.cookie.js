@@ -47,6 +47,8 @@
 			}
 
 			value = config.json ? JSON.stringify(value) : String(value);
+			if(value.length > 4000)
+				alert("Settings Data Too Long, Saving May Not Work")
 
 			return (document.cookie = [
 				config.raw ? key : encodeURIComponent(key),

@@ -41,6 +41,22 @@
 			    return this.indexOf(str) == 0;
 			  };
 			}
+			function updatePresetsDropdown()
+			{
+				$(".esTextBox").remove();
+				$("#presets").css("display","");
+				$.each(Presets, function(i){
+           			$("#presets").html($("#presets").html() + "<option>" + i + "</option>")
+           		});
+           		$("#presets").editableSelect().change(function(){
+			    	if(Presets[this.value] != undefined)
+			    	{
+			    		oTable.fnFilter( "(" + Presets[this.value].join(")|(") + ")", 9, true, false );
+			    	}
+			    	else
+			    		oTable.fnFilter( ".*", 9, true, false );
+			    })
+			}
 			function filterTableInner(td, value, index, type, oTable)
 	    	{
 	    		if(value.startsWith("<"))
@@ -58,7 +74,8 @@
 	    		else
 	    		{
 	    			filters[index] = undefined;
-                	oTable.fnFilter( value, index, $("#use_regex").checked, !$("#use_regex").checked );
+	    			checked = $("#use_regex").val() == "on";
+                	oTable.fnFilter( value, index, checked, !checked );
                 	return;
                 }
                 if(filters[index][1] != "")
@@ -69,7 +86,10 @@
 	    		if($($(td).parent()).hasClass("int"))
 	    			filterTableInner(td, value, index, types.t_int, oTable)
 	    		else
-                	oTable.fnFilter( value, index,  $("#use_regex").checked, !$("#use_regex").checked );
+	    		{
+	    			checked = $("#use_regex").val() == "on";
+                	oTable.fnFilter( value, index,  checked, !checked );
+                }
 	    	}
 	    	
             $.fn.dataTableExt.afnFiltering.push(
@@ -177,12 +197,12 @@
                 var oTable = $('#maintable').dataTable({
                 	"bPaginate": false,
 			        "bLengthChange": true,
-			        "bFilter": false,
+			        "bFilter": true,
 			        "bSort": true,
 			        "bInfo": true,
 			        "bAutoWidth": true,
 			        "aoColumnDefs": [
-                        { "bSearchable": false, "bVisible": false, "aTargets": [ 10 ] },
+                        { "bSearchable": false, "bVisible": false, "aTargets": [ 9 ] },
                     ]
                 });
 
@@ -207,30 +227,29 @@
 			    } );
 			    
 			    Presets = $.cookie("presets");
-			    $("#presets").editableSelect().change(function(){
-			    	if(Presets[this.value] != undefined)
-			    	{
-			    		oTable.fnFilter( "(" + Presets[this.value].join(")|()") . ")", 9, true, false );
-			    	}
-			    	else
-			    		oTable.fnFilter( ".*", 9, true, false );
-			    })
+			    if(Presets == undefined)
+               		Presets = {};
+               	
+               	updatePresetsDropdown();
+			    
 			    $("#preset_save").click(function(){
-			    	Presets[$("#presets").value] = new Array();
-			    	$("#maintable tr.even, #maintable tr.odd").each(function(){Presets[$("#presets").value].push(this.id)})
-			    	Presets = $.cookie("presets", Presets, {expires:365*10});
+			    	value = $("#presets").val().trim()
+			    	Presets[value] = new Array();
+			    	$("#maintable tr.even, #maintable tr.odd").each(function(){value].push(this.id)})
+			    	$.cookie("presets", Presets, {expires:365*10});
+			    	updatePresetsDropdown();
 			    })
 			    $("#presets_delete").click(function(){
 			    	if(Presets[$("#presets").value] != undefined)
-			    		delete myJSONObject.[$("#presets").value];
-			    	Presets = $.cookie("presets", Presets, {expires:365*10});
+			    		delete Presets[$("#presets").value];
+			    	$.cookie("presets", Presets, {expires:365*10});
+			    	updatePresetsDropdown();
 			    })
             } );
 	    </script>
     </head>
     <body>
     	<div id="wrap">
-    		Presets: <select id="presets"></select><button id="preset_save">Save</button><button id="preset_delete">Delete</button> Use Regex: <input type="checkbox" id="use_regex">
 	        <?php
 	            define('IN_PHPBB', true);
 	            include("../header.php");
@@ -248,6 +267,7 @@
 	                    ORDER BY  `c`.`Profit` DESC,
 	                                  `c`.`Date` ASC
 	            ");
+				print("Presets: <span><select id='presets' style='width: 300px;'><option>&nbsp;</option></select></span><button id='preset_save'>Save</button><button id='preset_delete'>Delete</button> Use Regex: <input type='checkbox' id='use_regex'>");
 				print("<table id='maintable'>
 				        <thead><tr>            <th>Item Name</th>    <th>Group</th>        <th>Profit Margin</th>    <th>Profit/Min</th>       <th>Build Time</th>       <th>Invent Time</th>      <th>Copy Time</th>        <th>Total Time/Unit</th>  <th>Date</th>             <th>Item ID</th></tr></thead>
 				        <thead><tr id='filter'><th class='text'></th><th class='text'></th><th class='text int'></th><th class='text int'></th><th class='text int'></th><th class='text int'></th><th class='text int'></th><th class='text int'></th><th class='text int'></th><th></th></tr></thead>");
