@@ -41,7 +41,7 @@
 	                                  `c`.`Date` ASC
 	            ");
 				print("Presets: <span><select id='presets' style='width: 300px;'><option>&nbsp;</option></select></span><button id='preset_save'>Save</button><button id='preset_delete'>Delete</button><button id='preset_detail'>Show Detail View</button> Use Regex: <input type='checkbox' id='use_regex'>");
-				writeTable($qry)
+				writeTable($qry, false)
 	        ?>
         </div>
     </body>
