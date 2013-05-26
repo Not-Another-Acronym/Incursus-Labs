@@ -85,37 +85,36 @@ function filterTable(td, value, index, oTable)
 $.fn.dataTableExt.afnFiltering.push(
 	function( oSettings, aData, iDataIndex ) {
 		for(var i = 0; i < aData.length; i++)
-		{
 			if(filters[i] != undefined)
-			{
-				var a = aData[i]
-				var b = filters[i][1]
-				
-				if(filters[i][2] == types.t_int)
+				for(var j = 0; j < filters[i].length; j++)
 				{
-					a = parseInt(a.replace(',',''))
-					b = parseInt(b.replace(',',''))
+					var a = aData[i]
+					var b = filters[i][j][1]
+					
+					if(filters[i][j][2] == types.t_int)
+					{
+						a = parseInt(a.replace(',',''))
+						b = parseInt(b.replace(',',''))
+					}
+					else if(filters[i][j][2] == types.t_float)
+					{
+						a = parseFloat(a.replace(',',''))
+						b = parseFloat(b.replace(',',''))
+					}
+					
+					if(filters[i][j][0] == ops.lt && !(a < b))
+						return false;
+					if(filters[i][j][0] == ops.gt && !(a > b))
+						return false;
+					if(filters[i][j][0] == ops.eq && !(a = b))
+						return false;
+					if(filters[i][j][0] == ops.ne && !(a != b))
+						return false;
+					if(filters[i][j][0] == ops.le && !(a <= b))
+						return false;
+					if(filters[i][j][0] == ops.ge && !(a >= b))
+						return false;
 				}
-				else if(filters[i][2] == types.t_float)
-				{
-					a = parseFloat(a.replace(',',''))
-					b = parseFloat(b.replace(',',''))
-				}
-				
-				if(filters[i][0] == ops.lt && !(a < b))
-					return false;
-				if(filters[i][0] == ops.gt && !(a > b))
-					return false;
-				if(filters[i][0] == ops.eq && !(a = b))
-					return false;
-				if(filters[i][0] == ops.ne && !(a != b))
-					return false;
-				if(filters[i][0] == ops.le && !(a <= b))
-					return false;
-				if(filters[i][0] == ops.ge && !(a >= b))
-					return false;
-			}
-		}
 		return true;
 	}
 );
