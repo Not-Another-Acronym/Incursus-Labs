@@ -21,7 +21,7 @@
 	        $ppm = 0;
 	        if($totaltime > 0)
 	        	$ppm = $row->Profit/$totaltime;
-    		$script .= "items.push([\"" . $row->typeName . "\",\"" . $row->Date . "\",\"" . $ppm . "\"])";
+    		$script .= "chartItems.push([\"" . $row->typeName . "\",\"" . $row->Date . "\",\"" . $ppm . "\"]);";
             print("<tr id='" . $row->itemID . "'><td>" . $row->typeName . "</td><td>" . $row->groupName . "</td><td>" . number_format($row->Profit,2) . "</td><td>" . number_format($ppm,2) . "</td><td>" . number_format($buildtime,2) . "</td><td>" . number_format($inventtime,2) . "</td><td>" . number_format($copytime,2) . "</td><td>" . number_format($totaltime,2) . "</td><td>" . $row->Date . "</td><td>" . $row->itemID . "</td></tr>");
     	}
         print("</table>");
