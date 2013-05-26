@@ -33,8 +33,6 @@
 				if(empty($presets))
 					exit();
 				$presets = json_decode($presets);
-				var_dump($_GET["preset"]);
-				var_dump($presets->$_GET["preset"]);
 				if($presets == null || empty($_GET["preset"]) || empty($presets->$_GET["preset"]))
 					exit();
 				$current = $presets->$_GET["preset"];
