@@ -28,6 +28,13 @@
 	            define('IN_PHPBB', true);
 	            include("../header.php");
 	            include("common.php");
+				$presets = $_COOKIE["presets"];
+				if(empty($presets))
+					exit();
+				$presets = json_decode($presets);
+				if($presets == null || empty($_GET["preset"]) || empty($presets->$_GET["preset"]))
+					exit();
+				$current = $presets->$_GET["preset"];
 	            $db = new mysqli($mysql_host, $mysql_evecentral_username, $mysql_evecentral_password, $mysql_evecentral);
 	            $qry = $db->query("
 	                    SELECT c.`itemID`, g.`groupName`, c.`Profit`, c.`Date`, i.`typeName`, b.`researchTechTime`, b.`productionTime`, b.`researchCopyTime`, d.`valueInt`, d.`valueFloat`
@@ -36,11 +43,11 @@
 	                    LEFT JOIN `naa_dbdump`.`invGroups` AS g ON i.`groupID` = g.`groupID`
 	                    LEFT JOIN `naa_dbdump`.`invBlueprintTypes` as b ON b.`productTypeID` = i.`typeID`
 	                    LEFT OUTER JOIN `naa_dbdump`.`dgmTypeAttributes` as d ON d.`typeID` = b.`productTypeID` AND d.`attributeID` = 422
+	                    WHERE c.`itemID` IN (" . $db->escape_string(implode($current,",")) . ")
 	                    GROUP BY c.`itemID`
 	                    ORDER BY  `c`.`Profit` DESC,
 	                                  `c`.`Date` ASC
 	            ");
-				print("Presets: <span><select id='presets' style='width: 300px;'><option>&nbsp;</option></select></span><button id='preset_save'>Save</button><button id='preset_delete'>Delete</button><button id='preset_detail'>Show Detail View</button> Use Regex: <input type='checkbox' id='use_regex'>");
 				writeTable($qry)
 	        ?>
         </div>
