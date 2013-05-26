@@ -14,7 +14,84 @@
 	    <script type="text/javascript" charset="utf8" src="jquery.multiselect.filter.min.js"></script>
 	    <script type="text/javascript" charset="utf8" src="https://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
 	    <script type="text/javascript">
-            (function($) {
+	    	var ops = {
+	    		lt:0,
+	    		gt:1,
+	    		eq:2,
+	    		ne:3,
+	    		le:4,
+	    		ge:5
+	    	}
+	    	var types = {
+	    		t_int:0
+	    	}
+	    	filters = {};
+	    	if (typeof String.prototype.startsWith != 'function') {
+			  // see below for better implementation!
+			  String.prototype.startsWith = function (str){
+			    return this.indexOf(str) == 0;
+			  };
+			}
+			function filterTableInner(td, value, index, type)
+	    	{
+	    		if(value.startsWith("<"))
+	    			filters[index] = [ops.lt, value, type];
+	    		else if(value.startsWith(">"))
+	    			filters[index] = [ops.gt, value, type];
+	    		else if(value.startsWith("="))
+	    			filters[index] = [ops.eq, value, type];
+	    		else if(value.startsWith("!="))
+	    			filters[index] = [ops.ne, value, type];
+	    		else if(value.startsWith("<="))
+	    			filters[index] = [ops.le, value, type];
+	    		else if(value.startsWith(">="))
+	    			filters[index] = [ops.ge, value, type];
+	    		else
+	    		{
+	    			filters[index] = undefined;
+                	oTable.fnFilter( value, index );
+                }
+	    	}
+	    	function filterTable(td, value, index)
+	    	{
+	    		if($($(td).parent()).hasClass("int"))
+	    			filterTableInner(td, value, index, types.t_int)
+	    		else
+                	oTable.fnFilter( value, index );
+	    	}
+            $.fn.dataTableExt.afnFiltering.push(
+    			function( oSettings, aData, iDataIndex ) {
+    				for(var i = 0; i < aData; i++)
+    				{
+    					if(filters[i] != undefined)
+    					{
+    						var a = aData[i]
+    						var b = filters[i][1]
+    						
+    						if(filters[i][2] == types.t_int)
+    						{
+    							a = parseInt(a.replace(',',''))
+    							b = parseInt(b.replace(',',''))
+    						}
+    						
+    						if(filters[i][0] == ops.lt && !(a < b))
+    							return false;
+    						if(filters[i][0] == ops.gt && !(a > b))
+    							return false;
+    						if(filters[i][0] == ops.eq && !(a = b))
+    							return false;
+    						if(filters[i][0] == ops.ne && !(a != b))
+    							return false;
+    						if(filters[i][0] == ops.le && !(a <= b))
+    							return false;
+    						if(filters[i][0] == ops.ge && !(a >= b))
+    							return false;
+    					}
+    				}
+    				return true;
+    			}
+			)
+			(function($) {
                 /*
                  * Function: fnGetColumnData
                  * Purpose:  Return an array of table values from a particular column.
@@ -83,7 +160,14 @@
 
             $(document).ready(function() {
                 /* Initialise the DataTable */
-                var oTable = $('#maintable').dataTable();
+                var oTable = $('#maintable').dataTable(
+                	"bPaginate": false,
+			        "bLengthChange": true,
+			        "bFilter": false,
+			        "bSort": true,
+			        "bInfo": true,
+			        "bAutoWidth": true
+                );
 
                 /* Add a select menu for each TH element in the table footer */
                 $("#maintable #filter .select").each( function () {
@@ -92,25 +176,28 @@
                     $('select', this).multiselect({
 					   selectedText: "# of # selected"
 					}).multiselectfilter().change( function () {
-                        console.log([$(this).val(), $td.index()]);
                         oTable.fnFilter( $(this).val(), $td.index() );
                     } );
                 } );
                 
-                $("#maintable #filter .text").keyup( function () {
+                $("#maintable #filter .text").each( function () {
+                        this.innerHTML = "<input type='text' style='width:100%'>";
+                });
+                
+                $("#maintable #filter .text input").keyup( function () {
 			        /* Filter on the column (the index) of this element */
-			        oTable.fnFilter( this.value, $(this).index() );
+			       filterTable(this, this.value, $(this).index() );
 			    } );
 			    
 			    /*
 			     * Support functions to provide a little bit of 'user friendlyness' to the textboxes in
 			     * the footer
 			     */
-			    $("#maintable #filter .text").each( function (i) {
+			    $("#maintable #filter .text input").each( function (i) {
 			        asInitVals[i] = this.value;
 			    } );
 			     
-			    $("#maintable #filter .text").focus( function () {
+			    $("#maintable #filter .text input").focus( function () {
 			        if ( this.className == "search_init" )
 			        {
 			            this.className = "";
@@ -118,7 +205,7 @@
 			        }
 			    } );
 			     
-			    $("#maintable #filter .text").blur( function (i) {
+			    $("#maintable #filter .text input").blur( function (i) {
 			        if ( this.value == "" )
 			        {
 			            this.className = "search_init";
@@ -148,8 +235,8 @@
 	                                  `c`.`Date` ASC
 	            ");
 				print("<table id='maintable'>
-				        <thead><tr>            <th>Item Name</th>    <th>Group</th>          <th>Profit Margin</th><th>Profit/Min</th><th>Build Time</th><th>Invent Time</th><th>Copy Time</th><th>Total Time</th><th>Date</th><th>Item ID</th></tr></thead>
-				        <thead><tr id='filter'><th class='text'></th><th class='select'></th><th class='text'></th><th></th>          <th></th>          <th></th>           <th></th>         <th></th>          <th></th>    <th>&nbsp;</th></tr></thead>");
+				        <thead><tr>            <th>Item Name</th>    <th>Group</th>        <th>Profit Margin</th>    <th>Profit/Min</th>       <th>Build Time</th>       <th>Invent Time</th>      <th>Copy Time</th>        <th>Total Time</th>       <th>Date</th>             <th>Item ID</th></tr></thead>
+				        <thead><tr id='filter'><th class='text'></th><th class='text'></th><th class='text int'></th><th class='text int'></th><th class='text int'></th><th class='text int'></th><th class='text int'></th><th class='text int'></th><th class='text int'></th><th></th></tr></thead>");
 	            while($row = $qry->fetch_object())
 	            {
 	                    $buildtime = $row->productionTime/60/60;
