@@ -5,13 +5,19 @@
     <head>
 	    <link type="text/css" href="../header.css" rel="stylesheet" />
 	    <link rel="stylesheet" type="text/css" href="https://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
-	    <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/ui-lightness/jquery-ui.css">
+	    <link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/ui-lightness/jquery-ui.css">
 	    <link rel="stylesheet" type="text/css" href="jquery.multiselect.css">
 	    <link rel="stylesheet" type="text/css" href="jquery.multiselect.filter.css">
+	    <link rel="stylesheet" type="text/css" href="jquery.editableSelect.css">
+	    <style>
+	    	.dataTables_filter{display:none}
+	    </style>
 	    <script type="text/javascript" charset="utf8" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
 	    <script type="text/javascript" charset="utf8" src="jquery.multiselect.min.js"></script>
 	    <script type="text/javascript" charset="utf8" src="jquery.multiselect.filter.min.js"></script>
+	    <script type="text/javascript" charset="utf8" src="jquery.editableSelect.js"></script>
+	    <script type="text/javascript" charset="utf8" src="jquery.cookie.js"></script>
 	    <script type="text/javascript" charset="utf8" src="https://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
 	    <script type="text/javascript">
 	    	var ops = {
@@ -25,6 +31,9 @@
 	    	var types = {
 	    		t_int:0
 	    	}
+	    	var asInitVals = new Array();
+	    	Presets = {};
+	    	$.cookie.json = true;
 	    	filters = {};
 	    	if (typeof String.prototype.startsWith != 'function') {
 			  // see below for better implementation!
@@ -32,36 +41,40 @@
 			    return this.indexOf(str) == 0;
 			  };
 			}
-			function filterTableInner(td, value, index, type)
+			function filterTableInner(td, value, index, type, oTable)
 	    	{
 	    		if(value.startsWith("<"))
-	    			filters[index] = [ops.lt, value, type];
+	    			filters[index] = [ops.lt, value.substring(1), type];
 	    		else if(value.startsWith(">"))
-	    			filters[index] = [ops.gt, value, type];
+	    			filters[index] = [ops.gt, value.substring(1), type];
 	    		else if(value.startsWith("="))
-	    			filters[index] = [ops.eq, value, type];
+	    			filters[index] = [ops.eq, value.substring(1), type];
 	    		else if(value.startsWith("!="))
-	    			filters[index] = [ops.ne, value, type];
+	    			filters[index] = [ops.ne, value.substring(2), type];
 	    		else if(value.startsWith("<="))
-	    			filters[index] = [ops.le, value, type];
+	    			filters[index] = [ops.le, value.substring(2), type];
 	    		else if(value.startsWith(">="))
-	    			filters[index] = [ops.ge, value, type];
+	    			filters[index] = [ops.ge, value.substring(2), type];
 	    		else
 	    		{
 	    			filters[index] = undefined;
-                	oTable.fnFilter( value, index );
+                	oTable.fnFilter( value, index, $("#use_regex").checked, !$("#use_regex").checked );
+                	return;
                 }
+                if(filters[index][1] != "")
+                	oTable.fnDraw();
 	    	}
-	    	function filterTable(td, value, index)
+	    	function filterTable(td, value, index, oTable)
 	    	{
 	    		if($($(td).parent()).hasClass("int"))
-	    			filterTableInner(td, value, index, types.t_int)
+	    			filterTableInner(td, value, index, types.t_int, oTable)
 	    		else
-                	oTable.fnFilter( value, index );
+                	oTable.fnFilter( value, index,  $("#use_regex").checked, !$("#use_regex").checked );
 	    	}
+	    	
             $.fn.dataTableExt.afnFiltering.push(
     			function( oSettings, aData, iDataIndex ) {
-    				for(var i = 0; i < aData; i++)
+    				for(var i = 0; i < aData.length; i++)
     				{
     					if(filters[i] != undefined)
     					{
@@ -90,7 +103,8 @@
     				}
     				return true;
     			}
-			)
+			);
+			
 			(function($) {
                 /*
                  * Function: fnGetColumnData
@@ -160,14 +174,17 @@
 
             $(document).ready(function() {
                 /* Initialise the DataTable */
-                var oTable = $('#maintable').dataTable(
+                var oTable = $('#maintable').dataTable({
                 	"bPaginate": false,
 			        "bLengthChange": true,
 			        "bFilter": false,
 			        "bSort": true,
 			        "bInfo": true,
-			        "bAutoWidth": true
-                );
+			        "bAutoWidth": true,
+			        "aoColumnDefs": [
+                        { "bSearchable": false, "bVisible": false, "aTargets": [ 10 ] },
+                    ]
+                });
 
                 /* Add a select menu for each TH element in the table footer */
                 $("#maintable #filter .select").each( function () {
@@ -186,37 +203,34 @@
                 
                 $("#maintable #filter .text input").keyup( function () {
 			        /* Filter on the column (the index) of this element */
-			       filterTable(this, this.value, $(this).index() );
+			       filterTable(this, this.value, $($(this).parent()).index(), oTable );
 			    } );
 			    
-			    /*
-			     * Support functions to provide a little bit of 'user friendlyness' to the textboxes in
-			     * the footer
-			     */
-			    $("#maintable #filter .text input").each( function (i) {
-			        asInitVals[i] = this.value;
-			    } );
-			     
-			    $("#maintable #filter .text input").focus( function () {
-			        if ( this.className == "search_init" )
-			        {
-			            this.className = "";
-			            this.value = "";
-			        }
-			    } );
-			     
-			    $("#maintable #filter .text input").blur( function (i) {
-			        if ( this.value == "" )
-			        {
-			            this.className = "search_init";
-			            this.value = asInitVals[$("tfoot input").index(this)];
-			        }
-			    } );
+			    Presets = $.cookie("presets");
+			    $("#presets").editableSelect().change(function(){
+			    	if(Presets[this.value] != undefined)
+			    	{
+			    		oTable.fnFilter( "(" + Presets[this.value].join(")|()") . ")", 9, true, false );
+			    	}
+			    	else
+			    		oTable.fnFilter( ".*", 9, true, false );
+			    })
+			    $("#preset_save").click(function(){
+			    	Presets[$("#presets").value] = new Array();
+			    	$("#maintable tr.even, #maintable tr.odd").each(function(){Presets[$("#presets").value].push(this.id)})
+			    	Presets = $.cookie("presets", Presets, {expires:365*10});
+			    })
+			    $("#presets_delete").click(function(){
+			    	if(Presets[$("#presets").value] != undefined)
+			    		delete myJSONObject.[$("#presets").value];
+			    	Presets = $.cookie("presets", Presets, {expires:365*10});
+			    })
             } );
 	    </script>
     </head>
     <body>
     	<div id="wrap">
+    		Presets: <select id="presets"></select><button id="preset_save">Save</button><button id="preset_delete">Delete</button> Use Regex: <input type="checkbox" id="use_regex">
 	        <?php
 	            define('IN_PHPBB', true);
 	            include("../header.php");
@@ -235,7 +249,7 @@
 	                                  `c`.`Date` ASC
 	            ");
 				print("<table id='maintable'>
-				        <thead><tr>            <th>Item Name</th>    <th>Group</th>        <th>Profit Margin</th>    <th>Profit/Min</th>       <th>Build Time</th>       <th>Invent Time</th>      <th>Copy Time</th>        <th>Total Time</th>       <th>Date</th>             <th>Item ID</th></tr></thead>
+				        <thead><tr>            <th>Item Name</th>    <th>Group</th>        <th>Profit Margin</th>    <th>Profit/Min</th>       <th>Build Time</th>       <th>Invent Time</th>      <th>Copy Time</th>        <th>Total Time/Unit</th>  <th>Date</th>             <th>Item ID</th></tr></thead>
 				        <thead><tr id='filter'><th class='text'></th><th class='text'></th><th class='text int'></th><th class='text int'></th><th class='text int'></th><th class='text int'></th><th class='text int'></th><th class='text int'></th><th class='text int'></th><th></th></tr></thead>");
 	            while($row = $qry->fetch_object())
 	            {
@@ -251,7 +265,7 @@
 	            $ppm = 0;
 	            if($totaltime > 0)
 	                $ppm = $row->Profit/$totaltime;
-	                        print("<tr><td>" . $row->typeName . "</td><td>" . $row->groupName . "</td><td>" . number_format($row->Profit,2) . "</td><td>" . number_format($ppm,2) . "</td><td>" . number_format($buildtime,2) . "</td><td>" . number_format($inventtime,2) . "</td><td>" . number_format($copytime,2) . "</td><td>" . number_format($totaltime,2) . "</td><td>" . $row->Date . "</td><td>" . $row->itemID . "</td></tr>");
+	                        print("<tr id='" . $row->itemID . "'><td>" . $row->typeName . "</td><td>" . $row->groupName . "</td><td>" . number_format($row->Profit,2) . "</td><td>" . number_format($ppm,2) . "</td><td>" . number_format($buildtime,2) . "</td><td>" . number_format($inventtime,2) . "</td><td>" . number_format($copytime,2) . "</td><td>" . number_format($totaltime,2) . "</td><td>" . $row->Date . "</td><td>" . $row->itemID . "</td></tr>");
 	                }
 	                print("</table>")
 	        ?>
