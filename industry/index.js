@@ -1,5 +1,5 @@
 
-$(document).ready(function() {
+function extraLoad(oTable){
     Presets = $.cookie("presets");
     if(Presets == undefined)
    		Presets = {};
@@ -23,4 +23,4 @@ $(document).ready(function() {
     	if(Presets[$("#presets").val()] != undefined)
     		window.location="detail.php?preset=" + $("#presets").val();
     })
-})
+}

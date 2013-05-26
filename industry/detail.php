@@ -20,10 +20,12 @@
 	    <script type="text/javascript" charset="utf8" src="jquery.cookie.js"></script>
 	    <script type="text/javascript" charset="utf8" src="https://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
 	    <script type="text/javascript" charset="utf8" src="common.js"></script>
-	    <script type="text/javascript" charset="utf8" src="index.js"></script>
+	    <script type="text/javascript" charset="utf8" src="detail.js"></script>
+	    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     </head>
     <body>
     	<div id="wrap">
+    		<div id="chart_div"> </div>
 	        <?php
 	            define('IN_PHPBB', true);
 	            include("../header.php");
