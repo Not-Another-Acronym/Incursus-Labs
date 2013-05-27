@@ -3,7 +3,6 @@
 ?>
 <html>
     <head>
-	    <link type="text/css" href="../header.css" rel="stylesheet" />
 	    <link rel="stylesheet" type="text/css" href="https://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
 	    <link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/ui-lightness/jquery-ui.css">
 	    <link rel="stylesheet" type="text/css" href="jquery.multiselect.css">
