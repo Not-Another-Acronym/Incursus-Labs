@@ -5,7 +5,7 @@
 	{
 		$script = "chartItems = new Array();";
 		print("<table id='maintable'>
-		        <thead><tr>            <th>Item Name</th>    <th>Group</th>        <th>Profit Margin</th>      <th>Profit/Min</th>         <th>Build Time</th>         <th>Invent Time</th>        <th>Copy Time</th>          <th>Total Time/Unit</th>    <th>Date</th>               <th>Item ID</th></tr></thead>
+		        <thead><tr>            <th>Item Name</th>    <th>Group</th>        <th>Profit Margin</th>      <th>Profit/Hr</th>         <th>Build Time</th>         <th>Invent Time</th>        <th>Copy Time</th>          <th>Total Time/Unit</th>    <th>Date</th>               <th>Item ID</th></tr></thead>
 		        <thead><tr id='filter'><th class='text'></th><th class='text'></th><th class='text float'></th><th class='text float'></th><th class='text float'></th><th class='text float'></th><th class='text float'></th><th class='text float'></th><th class='text float'></th><th></th></tr></thead>");
         while($row = $qry->fetch_object())
         {
@@ -17,7 +17,10 @@
 	            $copytime = ($row->researchCopyTime * 2)/60/60;
 	            $inventtime = $row->researchTechTime/60/60;
             }
-	        $totaltime = $copytime/10 + $buildtime + $inventtime/10;
+		$modifier = 1;
+		if($row->maxProductionLimit != null)
+		    $modifier = CEIL($row->maxProductionLimit/10);
+	        $totaltime = $copytime/$modifier + $buildtime + $inventtime/$modifier;
 	        $ppm = 0;
 	        if($totaltime > 0)
 	        	$ppm = $row->Profit/$totaltime;

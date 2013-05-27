@@ -70,7 +70,13 @@
 				setRoles($row->user_id,$row->username,5,$row->group_id,$phpBB);
 				continue;
 			}
-			$mask = $mask->fetch_object()->accessMask;
+			$mask = $mask->fetch_object();
+			if(!$mask)
+                        {
+                                setRoles($row->user_id,$row->username,5,$row->group_id,$phpBB);
+                                continue;
+                        }
+			$mask = $mask->accessMask;
 			$qry2=$yapeal->query("SELECT characterID FROM  `accountKeyBridge` WHERE keyID = " . $key[0]);
 			$chars = array();
 			$charIds = array();

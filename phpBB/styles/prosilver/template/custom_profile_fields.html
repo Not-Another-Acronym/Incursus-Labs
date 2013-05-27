@@ -42,6 +42,7 @@
 	Key:<input type="text" class="post" name="{eveapikey.FIELD_IDENT}_key" id="{eveapikey.FIELD_IDENT}_key" size="12" maxlength="12" value="{eveapikey.FIELD_KEY}" onchange="resetApiLevel('{eveapikey.FIELD_IDENT}')" /><br>
 	VCode:<input type="text" class="post" name="{eveapikey.FIELD_IDENT}_vcode" id="{eveapikey.FIELD_IDENT}_vcode" size="64" maxlength="64" value="{eveapikey.FIELD_VCODE}" onchange="resetApiLevel('{eveapikey.FIELD_IDENT}')" /><br>
 	<input type="button" value="Check" onclick="checkAPI('{eveapikey.FIELD_IDENT}')" /> <span id="{eveapikey.FIELD_IDENT}_check_return"> </span><br>
+	<!-- IF eveapikey.FIELD_IDENT eq "pf_api_key" -->
 	Requested Permissions Level (refresh to update):<select name="{eveapikey.FIELD_IDENT}_level" id="{eveapikey.FIELD_IDENT}_level">
 		<option
 			<!-- IF eveapikey.FIELD_MAX_LEVEL eq 1 -->value="0" <!-- IF eveapikey.FIELD_LEVEL eq 0 --> selected="true"<!-- ENDIF --><!-- ELSE -->value="1"<!-- ENDIF -->
@@ -72,4 +73,5 @@
 			>Corporation Member (Level 5)</option>
 		<!-- ENDIF -->
 	</select>
+	<!-- ENDIF -->
 <!-- END eveapikey -->
