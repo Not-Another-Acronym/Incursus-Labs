@@ -64,6 +64,7 @@
 						print('<li><a href="/industry/index.php">Industry Calc</a></li>');
 				}
 			?>
+            <li><a href="/characterTools" title="Character Tools">Character Tools</a></li>
 	    	<?php global $extra; print($extra); ?>
             <?php
                 if($loggedIn)
