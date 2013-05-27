@@ -60,13 +60,14 @@
 		// Clean up settings that we don't need any more.
 		unset($iniVars);
 		
-		$qry = $phpBB->query("SELECT pf_api_key FROM " . $mysql_phpBB_prefix . "profile_fields_data");
+		$qry = $phpBB->query("SELECT pf_api_key, pf_api_key_b, pf_api_key_c, pf_api_key_d, pf_api_key_e, pf_api_key_f, pf_api_key_g, pf_api_key_h, pf_api_key_i, pf_api_key_j FROM " . $mysql_phpBB_prefix . "profile_fields_data");
 		$keys = array();
 		$chars = array();
 		
 		while($row = $qry->fetch_object())
 		{
-			$key = explode(":",$row->pf_api_key);
+			foreach(array($row->pf_api_key, $row->pf_api_key_b, $row->pf_api_key_c, $row->pf_api_key_d, $row->pf_api_key_e, $row->pf_api_key_f, $row->pf_api_key_g, $row->pf_api_key_h, $row->pf_api_key_i, $row->pf_api_key_j) as $v){
+			$key = explode(":",$v);
 			if((string)((int)$key[0]) != $key[0])
 				continue;
 			$regKey = new RegisteredKey($key[0]);
@@ -74,7 +75,7 @@
 				$keys[] = $key[0];
 			else {
 				$xml = simplexml_load_file("https://api.eveonline.com/account/APIKeyInfo.xml.aspx?keyID=" . $key[0] . "&vCode=" . $key[1]);
-	            if(empty($xml->error) && $xml->result->key->attributes()->type=="Account")
+	            if(empty($xml->error) && ($xml->result->key->attributes()->type=="Account" || $xml->result->key->attributes()->type=="Corporation"))
 				{
 					$keys[] = $key[0];
 	            	$mask = $xml->result->key->attributes()->accessMask;
@@ -97,6 +98,7 @@
 					unset($regKey);
 				}
 			}
+		}
 		}
 
 		$qry = $yapeal->query("SELECT keyID, isActive FROM utilRegisteredKey");
