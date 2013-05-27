@@ -17,7 +17,8 @@ function extraLoad(oTable){
         })
         $('#chart_div').highcharts({
             chart: {
-                renderTo: 'container'
+                renderTo: 'container',
+		height: 1000
             },
             title: {
                 text: ''

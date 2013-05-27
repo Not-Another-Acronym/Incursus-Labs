@@ -20,6 +20,19 @@ if (typeof String.prototype.startsWith != 'function') {
     return this.indexOf(str) == 0;
   };
 }
+jQuery.extend( jQuery.fn.dataTableExt.oSort, {
+    "numeric-comma-pre": function ( x ) {
+        return parseFloat( x.replace(/,/g,"") );
+    },
+ 
+    "numeric-comma-asc": function ( a, b ) {
+        return ((a < b) ? -1 : ((a > b) ? 1 : 0));
+    },
+ 
+    "numeric-comma-desc": function ( a, b ) {
+        return ((a < b) ? 1 : ((a > b) ? -1 : 0));
+    }
+} );
 function updatePresetsDropdown(oTable)
 {
 	$(".esTextBox").remove();
@@ -42,9 +55,9 @@ function filterTableInner(td, value, index, type, oTable)
 	if(value.startsWith("<") || value.startsWith(">") || value.startsWith("=") || value.startsWith("!="))
 	{
 		value = value.split("&");
+		filters[index] = [];
 		for(var i = 0; i < value.length; i++)
 		{
-			filters[index] = [];
 			if(value[i].startsWith("<"))
 				filters[index].push([ops.lt, value[i].substring(1), type]);
 			else if(value[i].startsWith(">"))
@@ -197,6 +210,18 @@ $(document).ready(function() {
         "bAutoWidth": true,
         "aoColumnDefs": [
             { "bSearchable": false, "bVisible": false, "aTargets": [ 9 ] },
+        ],
+	"aoColumns": [
+            null,
+            null,
+            { "sType": "numeric-comma" },
+            { "sType": "numeric-comma" },
+            { "sType": "numeric-comma" },
+            { "sType": "numeric-comma" },
+            { "sType": "numeric-comma" },
+            { "sType": "numeric-comma" },
+            { "sType": "numeric-comma" },
+            null
         ]
     });
 
