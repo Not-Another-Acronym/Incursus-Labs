@@ -1,7 +1,18 @@
 .descr > div{
 	display:none;
 	position:absolute;
+	background-color:whitesmoke;
+	border:1px solid black;
 }
 .descr:hover > div{
 	display:block;
+}
+.head{
+	color: blue;
+	font-size: large;
+	font-weight: bold;
+}
+td
+{
+	font-size:medium
 }
