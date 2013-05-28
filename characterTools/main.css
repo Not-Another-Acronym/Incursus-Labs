@@ -1,0 +1,7 @@
+.descr > div{
+	display:none;
+	position:absolute;
+}
+.descr:hover > div{
+	display:block;
+}
