@@ -3,6 +3,8 @@
 	position:absolute;
 	background-color:whitesmoke;
 	border:1px solid black;
+	margin-left: 100px;
+	max-width:50%;
 }
 .descr:hover > div{
 	display:block;
