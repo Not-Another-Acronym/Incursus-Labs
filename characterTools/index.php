@@ -11,54 +11,10 @@
 	        <?php
 	            define('IN_PHPBB', true);
 	            include("../header.php");
-				include("toolsHeader.php")
+				$corpAllowed = false;
+				include("toolsHeader.php");
 	        ?>
-	        <div class="forumbg">
-			    <div class="inner"><span class="corners-top"><span></span></span>
-			    <div class="solidblockmenu">
-			        <ul>
-			        	<?php
-							$phpBB = new mysqli($mysql_host, $mysql_user, $mysql_password, $mysql_phpBB_db);
-							$yapeal = new mysqli($mysql_host, $mysql_user, $mysql_password, $mysql_yapeal_db);
-			        		$qry = $phpBB->query("SELECT pf_api_key, pf_api_key_b, pf_api_key_c, pf_api_key_d, pf_api_key_e, pf_api_key_f, pf_api_key_g, pf_api_key_h, pf_api_key_i, pf_api_key_j FROM " . $mysql_phpBB_prefix . "profile_fields_data");
-							$keys = array();
-							$chars = array();
-							$firstChar = 0;
-							
-							while($row = $qry->fetch_object())
-							{
-								foreach(array($row->pf_api_key, $row->pf_api_key_b, $row->pf_api_key_c, $row->pf_api_key_d, $row->pf_api_key_e, $row->pf_api_key_f, $row->pf_api_key_g, $row->pf_api_key_h, $row->pf_api_key_i, $row->pf_api_key_j) as $v)
-								{
-									$key = explode(":",$v);
-									if((string)((int)$key[0]) != $key[0])
-										continue;
-									$keys[] = $key[0];
-									$qry2 = $yapeal->query("
-										SELECT c.characterID, c.characterName
-										FROM accountKeyBridge as b
-										JOIN accountCharacters as c ON b.characterID = c.characterID
-										WHERE b.keyID = " . $key[0]
-									);
-									while($row2 = $qry2->fetch_object())
-									{
-										if($firstChar == 0)
-											$firstChar = $row2->characterID;
-										$chars[] = $row2->characterID;
-										print('<li><a href="?charID='.$row2->characterID.'">' . $row2->characterName . '</a></li>');
-									}
-								}
-							}
-			        	?>
-			        </ul>
-			    </div>
-			    <span class="corners-bottom"><span></span></span></div>
-			</div>
 			<?php
-				$currentChar = 0;
-                if(!empty($_GET["charID"]))
-                        $currentChar = $_GET["charID"];
-                if($currentChar == 0 || !in_array($currentChar, $chars))
-                        $currentChar = $firstChar;
                 if($currentChar != 0)
                 {
                     $charQry = $yapeal->query("
