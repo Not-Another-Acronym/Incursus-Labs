@@ -51,7 +51,7 @@
 								$firstChar = $row2->characterID;
 							$corp[$row2->characterID] = $isCorp;
 							$chars[] = $row2->characterID;
-							$corpID[$currentChar] = $row2->corporationID;
+							$corpID[$row2->characterID] = $row2->corporationID;
 							if($isCorp)
 							{
 								if($corpAllowed)
