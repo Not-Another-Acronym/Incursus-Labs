@@ -4,7 +4,7 @@
 ?>
 <html>
 	<head>
-		<link type="text/css" href="main.css" />
+		<link type="text/css" href="main.css" rel="stylesheet"/>
 	</head>
     <body>
     	<div id="wrap">
@@ -122,7 +122,7 @@
 	                        WHERE s.ownerID = " . $currentChar
 	                    );
 	                    while($skillRow = $skillQry->fetch_object())
-	                    	print("<tr><td class='descr'>" . $skillRow->typeName . "<div>" . $skillRow->description . "</div></td><td class='descr'>" . $skillRow->level . "<div>" . $skillRow->skillpoints . "</div></td></tr>");
+	                    	print("<tr><td class='descr'>" . $skillRow->typeName . "<div>" . nl2br($skillRow->description) . "</div></td><td class='descr'>" . $skillRow->level . "<div>" . $skillRow->skillpoints . "</div></td></tr>");
 						print("</table></div>");
                     }
                 }
