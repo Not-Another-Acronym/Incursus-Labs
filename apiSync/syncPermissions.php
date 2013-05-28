@@ -357,7 +357,7 @@
 	function get_char_from_cust($id, $utc, $yapeal)
 	{
 		$qry2 = $yapeal->query(
-			"SELECT i.`characterName`, i.`corporation`, i.`alliance`, i.`cachedUntil` FROM
+			"SELECT i.`characterName`, i.`corporation`, i.`alliance`, i.`securityStatus`, i.`cachedUntil` FROM
     			`custom_characterInfo` as i
 			 WHERE
 				characterID = " . $id
@@ -369,7 +369,7 @@
 			if(!empty($xml->error))
 				continue;
 			$yapeal->query(
-				"INSERT INTO `Incursus_yapeal`.`custom_characterInfo`
+				"INSERT INTO `custom_characterInfo`
 				(`characterID`, `characterName`, `race`, `bloodline`, `corporationID`, `corporation`,
 					`corporationDate`, `allianceID`, `alliance`, `allianceDate`, `securityStatus`, `cachedUntil`) VALUES
 				('" . $xml->result->characterID . "', '" . $xml->result->characterName . "', '" . $xml->result->race . "', '" . $xml->result->bloodline . "', '" . $xml->result->corporationID . "', '" . $xml->result->corporation . "',
