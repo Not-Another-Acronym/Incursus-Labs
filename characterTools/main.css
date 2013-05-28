@@ -1,4 +1,8 @@
+.descr{
+	cursor: pointer;
+}
 .descr > div{
+	cursor: default;
 	display:none;
 	position:absolute;
 	background-color:whitesmoke;
