@@ -15,6 +15,24 @@ function extraLoad(oTable){
 	            }
             })
             reg = regression('polynomial', this, 8)
+            first = reg.points[0][0];
+            last = reg.points[reg.points.length-1][0];
+            incr = (last-first)/1000;
+            for(x=first;x<last;x+=incr)
+            {
+            	reg.points.push([x,(
+            		reg.equation[8] * Math.pow(x,8) +
+            		reg.equation[7] * Math.pow(x,7) +
+            		reg.equation[6] * Math.pow(x,6) +
+            		reg.equation[5] * Math.pow(x,5) +
+            		reg.equation[4] * Math.pow(x,4) +
+            		reg.equation[3] * Math.pow(x,3) +
+            		reg.equation[2] * Math.pow(x,2) +
+            		reg.equation[1] * x +
+            		reg.equation[0]
+            	)])
+            }
+            reg.points = $(reg.points).sort(function(a,b){ return a[0] - b[0] })
             series.push({
 	            type: 'spline',
 	            name: i,
