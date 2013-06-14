@@ -27,6 +27,7 @@
 	            define('IN_PHPBB', true);
 	            include("../header.php");
 	            include("common.php");
+				include("indyHeader.php");
 	            $db = new mysqli($mysql_host, $mysql_evecentral_username, $mysql_evecentral_password, $mysql_evecentral);
 	            $qry = $db->query("
 	                    SELECT c.`itemID`, g.`groupName`, c.`Profit`, c.`Date`, i.`typeName`, b.`researchTechTime`, b.`productionTime`, b.`researchCopyTime`, d.`valueInt`, d.`valueFloat`, b2.`maxProductionLimit`

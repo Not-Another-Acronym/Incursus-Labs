@@ -98,3 +98,94 @@
         else
        		return 10^10;
 	}
+	function getActualPrice($itemID,$transDT,$amount,$buildQuantity,$charIds)
+	{
+                global $ind;
+                global $error;
+                global $errorMsg;
+                $cost=0;
+                $quantity=$amount * $buildQuantity;
+                $q=$ind->query("
+                        SELECT a.price,a.quantity,a.typeID,a.journalTransactionID,b.amountUsed
+                        FROM yapeal.corpWalletTransactions as a
+                        LEFT OUTER JOIN UsedItems as b ON a.journalTransactionID=b.journalTransactionID
+                        AND a.typeID=" . $itemID . "
+                        AND (a.characterID=" . implode(" OR a.characterID=", $charIds) . ")
+                        AND a.transactionType='buy'
+                        AND a.transactionDateTime<='" . $transDT . "'
+                        ORDER BY a.`transactionDateTime` ASC
+                ");
+                $lastCost=10^100;
+                while(($r=$q->fetch_object()) && $quantity > 0){
+                        $lastCost = $r->price;
+                        if(is_null($r->amountUsed))
+                                $used=0;
+                        else
+                                $used=$r->amountUsed;
+                        $left=$r->quantity - $used;
+                        if($left <= 0)
+                                continue;
+                        //print($itemID . " " . $left . " " . $quantity . " " . $used . "/" . $r->quantity . " " . $r->price . "<br>");
+                        if($left<$quantity){
+                                $used+=$left;
+                                $quantity-=$left;
+                                $cost+=$left*$r->price;
+                        }else{
+                                $used+=$quantity;
+                                $cost+=$quantity*$r->price;
+                                $quantity=0;
+                        }
+                        if(is_null($r->amountUsed))
+                                $ind->query("INSERT INTO  `UsedItems` (`journalTransactionID` ,`amountUsed`) VALUES ('" . $r->journalTransactionID . "', '" . $used . "');");
+                        else
+                                $ind->query("UPDATE  `eve_IndMan`.`UsedItems` SET  `amountUsed` =  '" . $used . "' WHERE  `UsedItems`.`journalTransactionID` =" . $r->journalTransactionID);
+                }
+                //print("next<br>");
+                //flush();
+                if($quantity>0){
+                        $error=true;
+                        $errorMsg.="<br>NOT ENOUGH " . $itemID . " Missing " . $quantity . " ASSUMING LAST PRICE [" . $lastCost . "]";
+                        $cost+=$quantity*$lastCost;
+                        $quantity=0;
+                }
+                return $cost;
+        }
+		function getProfit($itemID,$transDT,$price,$quantity,$journalTransactionID,$date,$charIds)
+		{
+                global $ind;
+                global $error;
+                global $errorMsg;
+                $row=$ind->query("SELECT `profitMade` FROM  `ProfitMade` WHERE `journalTransactionID`='" . $journalTransactionID . "'")->fetch_object();
+                if($row)
+                        return $row->profitMade;
+                else
+                {
+                        $ind->autocommit(FALSE);
+                        $profit=calcProfit($itemID,$transDT,$price,$quantity,$charIds);
+                        if($error){
+                                print($errorMsg."<br>When building " . $itemID . " Sold on " . $date);
+                                $errorMsg="";
+                        }else{
+                                $ind->query("INSERT INTO  `eve_IndMan`.`ProfitMade` (`journalTransactionID`,`profitMade`) VALUES ('" . $journalTransactionID . "', '" . $profit . "');");
+                                if(!$ind->commit()){
+                                        print("COMMIT FAIL!");
+                                        exit();
+                                }
+                        }
+                        $ind->autocommit(TRUE);
+                        return $profit;
+                }
+        }
+		function calcProfit($itemID,$transDT,$price,$quantity,$charIds){
+                $waste=getWaste($itemID);
+                $mats=getBaseMaterials($itemID,-4,$waste);
+                $mats=$mats + getExtraMaterials($itemID);
+                $mats=$mats + getInventMaterials($itemID,10,0.4779);
+                $profit=$price*$quantity;
+                foreach($mats as $i=>$v){
+                        $profit-=getCost($i,$transDT,$v,$quantity,$charIds);
+                }
+                //print("--------------------------------------<br>");
+                return $profit;
+        }
+?>
