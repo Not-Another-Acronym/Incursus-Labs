@@ -18,7 +18,7 @@
 			<?php
                 if($currentChar != 0)
                 {
-					function getAssets($lft, $rgt, $level, $currentChar, $yapeal, $isCorp)
+					function getAssets($lft, $rgt, $level, $currentChar, $corpID, $yapeal, $isCorp)
 					{
 						$retval = array();
 						$assetQry = null;
@@ -41,7 +41,7 @@
 						while($assetRow = $assetQry->fetch_object())
 						{
 							if(($assetRow->rgt - $assetRow->lft) > 1)
-								$assetRow->contents = getAssets($assetRow->lft, $assetRow->rgt, $level + 1, $currentChar, $yapeal, $isCorp);
+								$assetRow->contents = getAssets($assetRow->lft, $assetRow->rgt, $level + 1, $currentChar, $corpID, $yapeal, $isCorp);
 							else 
 								$assetRow->contents = array();
 							$retval[] = $assetRow;
@@ -140,14 +140,22 @@
 						}
 						return $stations[$id];
 					}
-	                $corpseQry = $yapeal->query("
-	                    SELECT a.rgt, a.lft
-	                    FROM  charAssetList as a 
-	                    WHERE a.ownerID = " . $currentChar . " AND a.lvl = 0"
-	                );
+					$corpseQry = null;
+					if($isCorp)
+						$corpseQry = $yapeal->query("
+		                    SELECT a.rgt, a.lft
+		                    FROM  corpAssetList as a 
+		                    WHERE a.ownerID = " . $corpID . " AND a.lvl = 0"
+		                );
+					else
+		                $corpseQry = $yapeal->query("
+		                    SELECT a.rgt, a.lft
+		                    FROM  charAssetList as a 
+		                    WHERE a.ownerID = " . $currentChar . " AND a.lvl = 0"
+		                );
 					if($corpseRow = $corpseQry->fetch_object())
 					{
-						$result = getAssets($corpseRow->lft, $corpseRow->rgt, 1, $currentChar, $yapeal, $isCorp);
+						$result = getAssets($corpseRow->lft, $corpseRow->rgt, 1, $currentChar, $corpID, $yapeal, $isCorp);
 						print("<table>");
 						print("<thead><tr><th>&nbsp;&nbsp;&nbsp;&nbsp;</th><th>Flag</th><th>#</th><th>Name</th><th>Station</th><th>Amount Held</th></tr></thead><tbody>");
 						print_rows($result, "", $phpBB);

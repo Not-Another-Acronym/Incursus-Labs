@@ -38,7 +38,11 @@
 	{
 		$itemID = $item[0];
         $waste=getWaste($itemID);
-        $mats=getBaseMaterials($itemID,-4,$waste);
+		if($item[1] == 2)
+			$ME = -2;
+		else
+			$ME = 1000;
+        $mats=getBaseMaterials($itemID,$ME,$waste);
         $mats=$mats + getExtraMaterials($itemID);
         if($item[1] == 2)
         	$mats=$mats + getInventMaterials($itemID,10,0.4779);
