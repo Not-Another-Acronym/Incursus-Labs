@@ -6,14 +6,14 @@ function extraLoad(oTable){
         })
         series = []
         $.each(sorted, function(i){
-                series.push({
-                        type: 'spline',
-            name: i,
-            data: this,
-            marker: {
-                radius: 4
-            }
-                })
+            series.push({
+	            type: 'spline',
+	            name: i,
+	            data: this,
+	            marker: {
+	                radius: 4
+	            }
+            })
         })
         $('#chart_div').highcharts({
             chart: {
