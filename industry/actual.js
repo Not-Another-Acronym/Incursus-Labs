@@ -6,14 +6,23 @@ function extraLoad(oTable){
         })
         series = []
         $.each(sorted, function(i){
-                series.push({
-                        type: 'scatter',
-            name: i,
-            data: this,
-            marker: {
-                radius: 4
-            }
-                })
+            series.push({
+                type: 'scatter',
+	            name: i,
+	            data: this,
+	            marker: {
+	                radius: 4
+	            }
+            })
+            reg = regression('polynomial', this, 10)
+            series.push({
+	            type: 'spline',
+	            name: i,
+	            data: reg[1],
+	            marker: {
+	                radius: 0
+	            }
+            })
         })
         $('#chart_div').highcharts({
             chart: {
