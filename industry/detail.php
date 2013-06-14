@@ -20,7 +20,6 @@
 	    <script type="text/javascript" charset="utf8" src="https://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
 	    <script type="text/javascript" charset="utf8" src="common.js"></script>
 	    <script type="text/javascript" charset="utf8" src="detail.js"></script>
-	    <script type="text/javascript" charset="utf8" src="regression.min.js"></script>
 	    <script src="highcharts.js"></script>
 		<script src="exporting.js"></script>
     </head>
