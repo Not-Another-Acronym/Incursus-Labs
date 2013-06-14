@@ -14,11 +14,11 @@ function extraLoad(oTable){
 	                radius: 4
 	            }
             })
-            reg = regression('polynomial', this, 10)
+            reg = regression('polynomial', this, 8)
             series.push({
 	            type: 'spline',
 	            name: i,
-	            data: reg[1],
+	            data: reg.points,
 	            marker: {
 	                radius: 0
 	            }
