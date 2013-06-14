@@ -158,7 +158,7 @@
 		                        if(!array_key_exists($r["M"],$monthProfit))
 	                                $monthProfit[$r["M"]]=0;
 		                        $monthProfit[$r["M"]]+=$profit;
-    							$script .= "chartItems.push([\"" . $r["typeID"] . "\",\"" . $r["transactionDateTime"] . "\",\"" . ($r["price"]/$r["quantity"]) . "\"]);";
+    							$script .= "chartItems.push([\"" . $r["typeName"] . "\",\"" . $r["transactionDateTime"] . "\",\"" . ($r["price"]/$r["quantity"]) . "\"]);";
 		                }
 		        }
 		        print("<br>");
