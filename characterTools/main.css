@@ -22,6 +22,29 @@ td
 {
 	font-size:medium
 }
-.pic{
+#pic{
 	float:left;
+}
+#details{
+	float:left;
+}
+.skillsContainer
+{
+	overflow:hidden;
+}
+.skills
+{
+	float:left;
+	overflow:hidden;
+	font-size:medium;
+}
+.skills div:first-child
+{
+	float:left;
+	width:20em;
+}
+.skills div:nth-child(2)
+{
+	float:left;
+	padding-right: 1em;
 }

@@ -29,6 +29,7 @@
 	            define('IN_PHPBB', true);
 	            include("../header.php");
 	            include("common.php");
+				include("indyHeader.php");
 				$presets = $_COOKIE["presets"];
 				if(empty($presets))
 					exit();

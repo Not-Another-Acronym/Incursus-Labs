@@ -69,17 +69,18 @@
                             print("<tr><td>Charisma</td><td>" . $charRow->charisma . "</td>");
                             print("<tr><td>Willpower</td><td>" . $charRow->willpower . "</td>");
                             print("<tr><td>Memory</td><td>" . $charRow->memory . "</td>");
-                        print("</table></div>");
-						print("<div id='skills'><table>");
-						$skillQry = $yapeal->query("
+                    	print("</table></div>");
+                        $skillQry = $yapeal->query("
 	                        SELECT s.skillpoints, s.level, i.typeName, i.description
 	                        FROM  charSkills as s
 							JOIN `naa_dbdump`.`invTypes` as i ON i.`typeID` = s.`typeID`
 	                        WHERE s.ownerID = " . $currentChar
 	                    );
 	                    while($skillRow = $skillQry->fetch_object())
-	                    	print("<tr><td class='descr'>" . $skillRow->typeName . "<div>" . nl2br($skillRow->description) . "</div></td><td class='descr'>" . $skillRow->level . "<div>" . $skillRow->skillpoints . "</div></td></tr>");
-						print("</table></div>");
+	                    	print("<div class='skills'>
+	                    		<div class='descr'>" . $skillRow->typeName . "<div>" . nl2br($skillRow->description) . "</div></div>
+	                    		<div class='descr'>" . $skillRow->level . "<div>" . $skillRow->skillpoints . "</div></div>
+                    		</div>");
                     }
                 }
 			?>
