@@ -103,13 +103,15 @@
                 global $ind;
                 global $error;
                 global $errorMsg;
+                global $mysql_yapeal_db;
+                global $mysql_ind_db;
                 $cost=0;
                 $quantity=$amount * $buildQuantity;
                 $q=$ind->query("
                         SELECT a.price,a.quantity,a.typeID,a.journalTransactionID,b.amountUsed
-                        FROM yapeal.corpWalletTransactions as a
-                        LEFT OUTER JOIN UsedItems as b ON a.journalTransactionID=b.journalTransactionID
-                        AND a.typeID=" . $itemID . "
+                        FROM " . $mysql_yapeal_db . ".corpWalletTransactions as a
+                        LEFT OUTER JOIN " . $mysql_ind_db . ".UsedItems as b ON a.journalTransactionID=b.journalTransactionID
+                        WHERE a.typeID=" . $itemID . "
                         AND (a.characterID=" . implode(" OR a.characterID=", $charIds) . ")
                         AND a.transactionType='buy'
                         AND a.transactionDateTime<='" . $transDT . "'
@@ -138,7 +140,7 @@
                         if(is_null($r->amountUsed))
                                 $ind->query("INSERT INTO  `UsedItems` (`journalTransactionID` ,`amountUsed`) VALUES ('" . $r->journalTransactionID . "', '" . $used . "');");
                         else
-                                $ind->query("UPDATE  `eve_IndMan`.`UsedItems` SET  `amountUsed` =  '" . $used . "' WHERE  `UsedItems`.`journalTransactionID` =" . $r->journalTransactionID);
+                                $ind->query("UPDATE  `UsedItems` SET  `amountUsed` =  '" . $used . "' WHERE  `UsedItems`.`journalTransactionID` =" . $r->journalTransactionID);
                 }
                 //print("next<br>");
                 //flush();
@@ -161,17 +163,18 @@
                 else
                 {
                         $ind->autocommit(FALSE);
-                        $profit=calcProfit($itemID,$transDT,$price,$quantity,$charIds);
+                        $profit=getActualPrice($itemID,$transDT,$price,$quantity,$charIds);
+                        $error = false;
                         if($error){
                                 print($errorMsg."<br>When building " . $itemID . " Sold on " . $date);
                                 $errorMsg="";
-                        }else{
-                                $ind->query("INSERT INTO  `eve_IndMan`.`ProfitMade` (`journalTransactionID`,`profitMade`) VALUES ('" . $journalTransactionID . "', '" . $profit . "');");
+                        }//else{
+                                $ind->query("INSERT INTO  `ProfitMade` (`journalTransactionID`,`profitMade`) VALUES ('" . $journalTransactionID . "', '" . $profit . "');");
                                 if(!$ind->commit()){
                                         print("COMMIT FAIL!");
                                         exit();
                                 }
-                        }
+                        //}
                         $ind->autocommit(TRUE);
                         return $profit;
                 }
@@ -183,7 +186,7 @@
                 $mats=$mats + getInventMaterials($itemID,10,0.4779);
                 $profit=$price*$quantity;
                 foreach($mats as $i=>$v){
-                        $profit-=getCost($i,$transDT,$v,$quantity,$charIds);
+                        $profit-=getActualPrice($i,$transDT,$v,$quantity,$charIds);
                 }
                 //print("--------------------------------------<br>");
                 return $profit;

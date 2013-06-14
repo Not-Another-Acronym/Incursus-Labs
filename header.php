@@ -40,7 +40,8 @@
 	    $user->session_kill();
 	    $user->session_begin();
 	    $cookies = explode(';', $_SERVER['HTTP_COOKIE']);
-	    foreach($cookies as $cookie) {
+	    foreach($cookies as $cookie)
+		{
         	$parts = explode('=', $cookie);
 	        $name = trim($parts[0]);
         	setcookie($name, '', time()-1000);
