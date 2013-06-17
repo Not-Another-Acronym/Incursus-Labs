@@ -56,7 +56,20 @@
 			                        $charRow->allianceName = "----------";
 		                        print("<div id='pic'><div class='head'>" . $charRow->name . "</div><img src='http://image.eveonline.com/Character/" . $v->characterID . "_256.jpg'></div>");
 		                        print("<div id='details'><table>");
-		                            
+		                            $walletQry = $yapeal->query("
+				                        SELECT ownerID1, ownerID2, ownerName1, ownerName2, reason, amount, date
+				                        FROM charWalletJournal
+				                        WHERE (amount > 1 OR amount < -1) AND refTypeID in (1,10,37,38,45,63,64,65,66,67,68,69,70,71,74,76,77,78,79,80,81,82,83,84) AND ownerID = " . $v->characterID
+				                    );
+									while($walletRow = $walletQry->fetch_object())
+									{
+										print("<tr>");
+										if($walletRow->ownerID1 == $v->characterID)
+											print("<td>" . number_format(-$walletRow->amount,2) . "</td><td>Sent to</td><td>" . $walletRow->ownerName2 . "</td>");
+										if($walletRow->ownerID2 == $v->characterID)
+											print("<td>" . number_format($walletRow->amount,2) . "</td><td>Recieved from</td><td>" . $walletRow->ownerName1 . "</td>");
+										print("<td>" . $walletRow->date . "</td><td>" . $walletRow->reason . "</td></tr>");
+									}
 		                    	print("</table></div>");
 								print("<div style='clear:both'>&nbsp;</div>");
 		                    }
