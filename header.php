@@ -14,6 +14,7 @@
    	$phpEx = "php";
     $phpbb_root_path = (defined('PHPBB_ROOT_PATH')) ? PHPBB_ROOT_PATH : ROOT_PATH . '/';
     require_once($phpbb_root_path . 'common.' . $phpEx);
+    require_once($phpbb_root_path . 'functions_user.' . $phpEx);
 	global $user, $auth;
         
 	$loggedIn = false;
