@@ -367,7 +367,7 @@
 		{
 			$xml = simplexml_load_file("https://api.eveonline.com/eve/CharacterInfo.xml.aspx?characterID=" . $id);
 			if(!empty($xml->error))
-				continue;
+				return null;
 			$yapeal->query(
 				"INSERT INTO `custom_characterInfo`
 				(`characterID`, `characterName`, `race`, `bloodline`, `corporationID`, `corporation`,
@@ -397,13 +397,13 @@
 				corpID = " . $id
 		);
 		$row3 = null;
-		if(!($row3 = $qry3->fetch_object()) || DateTime::createFromFormat("Y-m-d H:i:s", $row3->cachedUntil, DateTimeZone::UTC) < new DateTime())
+		if(!($row3 = $qry3->fetch_object()) || DateTime::createFromFormat("Y-m-d H:i:s", $row3->cachedUntil, $utc) < new DateTime())
 		{
 			$xml = simplexml_load_file("https://api.eveonline.com/corp/CorporationSheet.xml.aspx?corporationID=" . $id);
 			if(!empty($xml->error))
-				continue;
+				return null;
 			$yapeal->query(
-				"INSERT INTO `Incursus_yapeal`.`custom_corpInfo`
+				"INSERT INTO `custom_corpInfo`
 				(`corpID`, `corpName`, `cachedUntil`) VALUES
 				('" . $xml->result->corporationID . "', '" . $xml->result->corporationName . "', '" . $xml->cachedUntil . "');"
 			);
