@@ -1,0 +1,50 @@
+.descr{
+	cursor: pointer;
+}
+.descr > div{
+	cursor: default;
+	display:none;
+	position:absolute;
+	background-color:whitesmoke;
+	border:1px solid black;
+	margin-left: 100px;
+	max-width:50%;
+}
+.descr:hover > div{
+	display:block;
+}
+.head{
+	color: blue;
+	font-size: large;
+	font-weight: bold;
+}
+td
+{
+	font-size:medium
+}
+#pic{
+	float:left;
+}
+#details{
+	float:left;
+}
+.skillsContainer
+{
+	overflow:hidden;
+}
+.skills
+{
+	float:left;
+	overflow:hidden;
+	font-size:medium;
+}
+.skills div:first-child
+{
+	float:left;
+	width:20em;
+}
+.skills div:nth-child(2)
+{
+	float:left;
+	padding-right: 1em;
+}
