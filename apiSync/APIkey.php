@@ -68,7 +68,7 @@
 		{
 			foreach(array($row->pf_api_key, $row->pf_api_key_b, $row->pf_api_key_c, $row->pf_api_key_d, $row->pf_api_key_e, $row->pf_api_key_f, $row->pf_api_key_g, $row->pf_api_key_h, $row->pf_api_key_i, $row->pf_api_key_j) as $v){
 			$key = explode(":",$v);
-			if((string)((int)$key[0]) != $key[0])
+			if((string)((int)$key[0]) != $key[0] || empty($key[1]))
 				continue;
 			$regKey = new RegisteredKey($key[0]);
 			if ($regKey->recordExists() && $regKey->isActive)

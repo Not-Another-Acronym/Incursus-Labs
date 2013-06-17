@@ -42,7 +42,8 @@
 	                    ORDER BY  `c`.`Profit` DESC,
 	                                  `c`.`Date` ASC
 	            ");
-				print("Presets: <span><select id='presets' style='width: 300px;'><option>&nbsp;</option></select></span><button id='preset_save'>Save</button><button id='preset_delete'>Delete</button><button id='preset_detail'>Show Detail View</button> Use Regex: <input type='checkbox' id='use_regex'>Item filter to remove some faction stuff: ^(?!((Serpentis)|(Civilian)|(InterBus)|(Aliastra)|(Guristas)|(Imperial Navy)|(Inner Zone)|(Blood)|(Sansha)|(Dread)|(Domination)|(Angel)|(Quafe)|(True Sansha)|(Shadow)|(Dark Blood)|(Intaki))).*$");
+				print("Presets: <span><select id='presets' style='width: 300px;'><option>&nbsp;</option></select></span><button id='preset_save'>Save</button><button id='preset_delete'>Delete</button><button id='preset_detail'>Show Detail View</button> Use Regex: <input type='checkbox' id='use_regex'><br>
+Item filter to remove some faction stuff: ^(?!((Serpentis)|(Civilian)|(InterBus)|(Aliastra)|(Guristas)|(Imperial Navy)|(Inner Zone)|(Blood)|(Sansha)|(Dread)|(Domination)|(Angel)|(Quafe)|(True Sansha)|(Shadow)|(Dark Blood)|(Intaki)|(Caldari Navy))).*$");
 				writeTable($qry, false)
 	        ?>
         </div>
