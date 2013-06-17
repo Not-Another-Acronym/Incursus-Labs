@@ -63,6 +63,8 @@
 				{
 					if($user->data['loginname'] =="waterfoul" || $user->data['loginname'] == "MrWacko" || $user->data['loginname'] == "themastercheif92")
 						print('<li><a href="/industry/index.php">Industry Calc</a></li>');
+					if( group_memberships( 14, $user->data['user_id'] ) )
+						print('<li><a href="/corpTools/index.php">Corporation Tools</a></li>');
 				}
 			?>
             <li><a href="/characterTools" title="Character Tools">Character Tools</a></li>
