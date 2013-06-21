@@ -46,7 +46,7 @@
 							$utc = new DateTimeZone("UTC");
 				 			$cust = get_char_from_cust($v->characterID, $utc, $yapeal);
 							$width = "width:450px";
-	                        print("<div style='float:left;text-align:center;padding-right:5px;padding-left:5px;border-right:1px solid black;vertical-align: top;display: inline-block;'>
+	                        print("<div style='text-align:center;padding-right:5px;padding-left:5px;border-right:1px solid black;vertical-align: top;display: inline-block;'>
 	                        	<div id='pic'><div class='head'>" . $v->name . "</div><img src='http://image.eveonline.com/Character/" . $v->characterID . "_256.jpg'>");
 	                        print("<div id='details' style='float:none'><table style='$width'>");
 	                        foreach($v->curHist as $histRow)
