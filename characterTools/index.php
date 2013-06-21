@@ -84,6 +84,7 @@
                     }
                 }
 			?>
+			<div style='clear:both'>&nbsp;</div>
         </div>
     </body>
 </html>

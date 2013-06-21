@@ -363,18 +363,29 @@
 				characterID = " . $id
 		);
 		$row2 = null;
-		if(!($row2 = $qry2->fetch_object()) || DateTime::createFromFormat("Y-m-d H:i:s", $row2->cachedUntil, $utc) < new DateTime())
+		$row2 = $qry2->fetch_object();
+		if($row2 == null || DateTime::createFromFormat("Y-m-d H:i:s", $row2->cachedUntil, $utc) < new DateTime(null, $utc))
 		{
 			$xml = simplexml_load_file("https://api.eveonline.com/eve/CharacterInfo.xml.aspx?characterID=" . $id);
 			if(!empty($xml->error))
 				return null;
-			$yapeal->query(
-				"INSERT INTO `custom_characterInfo`
+			$yapeal->query("DELETE FROM `custom_characterInfo` WHERE `characterID` = '" . $xml->result->characterID . "';");
+			$yapeal->query("DELETE FROM `custom_charHistory` WHERE `characterID` = '" . $xml->result->characterID . "';");
+			$yapeal->query("
+				INSERT INTO `custom_characterInfo`
 				(`characterID`, `characterName`, `race`, `bloodline`, `corporationID`, `corporation`,
 					`corporationDate`, `allianceID`, `alliance`, `allianceDate`, `securityStatus`, `cachedUntil`) VALUES
 				('" . $xml->result->characterID . "', '" . $xml->result->characterName . "', '" . $xml->result->race . "', '" . $xml->result->bloodline . "', '" . $xml->result->corporationID . "', '" . $xml->result->corporation . "',
 					'" . $xml->result->corporationDate . "', '" . $xml->result->allianceID . "', '" . $xml->result->alliance . "', '" . $xml->result->allianceDate . "', '" . $xml->result->securityStatus . "', '" . $xml->cachedUntil . "');"
 			);
+			foreach($xml->result->rowset->row as $v)
+			{
+				$yapeal->query("
+					INSERT INTO `custom_charHistory`
+					(`characterID`, `corpID`, `startDate`) VALUES
+					('" . $xml->result->characterID . "', '" . $v->attributes()->corporationID . "', '" . $v->attributes()->startDate . "');"
+				);
+			}
 			
 			$qry2 = $yapeal->query(
 				"SELECT i.`characterName`, i.`corporation`, i.`alliance`, i.`cachedUntil` FROM
@@ -397,13 +408,15 @@
 				corpID = " . $id
 		);
 		$row3 = null;
-		if(!($row3 = $qry3->fetch_object()) || DateTime::createFromFormat("Y-m-d H:i:s", $row3->cachedUntil, $utc) < new DateTime())
+		$row3 = $qry3->fetch_object();
+		if($row3 == null || DateTime::createFromFormat("Y-m-d H:i:s", $row3->cachedUntil, $utc) < new DateTime(null, $utc))
 		{
 			$xml = simplexml_load_file("https://api.eveonline.com/corp/CorporationSheet.xml.aspx?corporationID=" . $id);
 			if(!empty($xml->error))
 				return null;
-			$yapeal->query(
-				"INSERT INTO `custom_corpInfo`
+			$yapeal->query("DELETE FROM `custom_corpInfo` WHERE `corpID` = '" . $xml->result->corporationID . "';");
+			$yapeal->query("
+				INSERT INTO `custom_corpInfo`
 				(`corpID`, `corpName`, `cachedUntil`) VALUES
 				('" . $xml->result->corporationID . "', '" . $xml->result->corporationName . "', '" . $xml->cachedUntil . "');"
 			);
