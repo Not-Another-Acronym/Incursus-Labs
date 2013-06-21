@@ -14,56 +14,52 @@
 				$corpAllowed = false;
 				include("toolsHeader.php");
 	        ?>
-	        <?php
-	        	if(isset($_GET["user_id"]))
-				{
-					foreach($chars as $v)
+	        <div>
+		        <?php
+		        	if(isset($_GET["user_id"]))
 					{
-						if(!$corp[$v->characterID])
+						$rows = array();
+						$count = array();
+						foreach($chars as $v)
 						{
-							$charQry = $yapeal->query("
-		                        SELECT c.corporationName, c.allianceName, c.DoB, c.cloneSkillPoints, c.name, c.balance,
-		                        	a.charisma, a.intelligence, a.perception, a.willpower, a.memory, SUM( s.skillpoints ) as sp,
-		                        	f1.standing as caldStand, f2.standing as minniStand, f3.standing as amarrStand,
-		                        	f4.standing as galStand, f5.standing as amatarStand
-		                        FROM  charCharacterSheet AS c
-		                        JOIN charAttributes as a ON c.characterID = a.ownerID
-								JOIN charSkills as s ON s.`ownerID` = a.ownerID
-								LEFT OUTER JOIN `charStandingsFromFactions` as f1 ON f1.`ownerID` = a.ownerID AND f1.fromID = 500001
-								LEFT OUTER JOIN `charStandingsFromFactions` as f2 ON f2.`ownerID` = a.ownerID AND f2.fromID = 500002
-								LEFT OUTER JOIN `charStandingsFromFactions` as f3 ON f3.`ownerID` = a.ownerID AND f3.fromID = 500003
-								LEFT OUTER JOIN `charStandingsFromFactions` as f4 ON f4.`ownerID` = a.ownerID AND f4.fromID = 500005
-								LEFT OUTER JOIN `charStandingsFromFactions` as f5 ON f5.`ownerID` = a.ownerID AND f5.fromID = 500007
-		                        WHERE c.characterID = " . $v->characterID
-		                    );
-		                    if($charRow = $charQry->fetch_object())
-		                    {
-								$utc = new DateTimeZone("UTC");
-					 			$cust = get_char_from_cust($v->characterID, $utc, $yapeal);
-			                    if(empty($cust->securityStatus))
-			                        $cust->securityStatus = 0;
-			                    if(empty($charRow->amarrStand))
-			                        $charRow->amarrStand = 0;
-			                    if(empty($charRow->amatarStand))
-			                        $charRow->amatarStand = 0;
-			                    if(empty($charRow->caldStand))
-			                        $charRow->caldStand = 0;
-			                    if(empty($charRow->minniStand))
-			                        $charRow->minniStand = 0;
-			                    if(empty($charRow->galStand))
-			                        $charRow->galStand = 0;
-			                    if(empty($charRow->allianceName))
-			                        $charRow->allianceName = "----------";
-		                        print("<div id='pic'><div class='head'>" . $charRow->name . "</div><img src='http://image.eveonline.com/Character/" . $v->characterID . "_256.jpg'></div>");
-		                        print("<div id='details'><table>");
-		                            
-		                    	print("</table></div>");
-								print("<div style='clear:both'>&nbsp;</div>");
-		                    }
+							if(!$corp[$v->characterID])
+							{
+								$charQry = $yapeal->query("
+			                        SELECT characterID, name
+			                        FROM  charCharacterSheet
+			                        WHERE characterID = " . $v->characterID
+			                    );
+			                    if($charRow = $charQry->fetch_object())
+			                    {
+			                    	$charRow->curHist = array();
+									$histQry = $yapeal->query("SELECT * FROM  `custom_charHistory` WHERE `characterID`=" . $v->characterID);
+									while($histRow = $histQry->fetch_object())
+										$charRow->curHist[] = $histRow;
+			                    	$rows[] = $charRow;
+									$count[] = count($charRow->curHist);
+								}
+							}
+						}
+						array_multisort($count, SORT_DESC, $rows);
+						foreach($rows as $v)
+						{
+							$utc = new DateTimeZone("UTC");
+				 			$cust = get_char_from_cust($v->characterID, $utc, $yapeal);
+							$width = "width:450px";
+	                        print("<div style='float:left;text-align:center;padding-right:5px;padding-left:5px;border-right:1px solid black;vertical-align: top;display: inline-block;'>
+	                        	<div id='pic'><div class='head'>" . $v->name . "</div><img src='http://image.eveonline.com/Character/" . $v->characterID . "_256.jpg'>");
+	                        print("<div id='details' style='float:none'><table style='$width'>");
+	                        foreach($v->curHist as $histRow)
+							{
+								$corpData = get_corp_from_cust($histRow->corpID, $utc, $yapeal);
+								print("<tr><td>" . $corpData->corpName . "</td><td>" . $histRow->startDate . "</td><td></tr>");
+							}
+	                    	print("</table></div></div></div>");
 						}
 					}
-				}
-	        ?>
+		        ?>
+	       		<div style='clear:both'>&nbsp;</div>
+       		</div>
        	</div>
     </body>
 </html>
