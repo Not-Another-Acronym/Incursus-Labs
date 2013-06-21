@@ -357,7 +357,7 @@
 	function get_char_from_cust($id, $utc, $yapeal)
 	{
 		$qry2 = $yapeal->query(
-			"SELECT i.`characterName`, i.`corporation`, i.`alliance`, i.`securityStatus`, i.`cachedUntil` FROM
+			"SELECT i.`characterName`, i.`corporation`, i.`corporationID`, i.`alliance`, i.`securityStatus`, i.`cachedUntil` FROM
     			`custom_characterInfo` as i
 			 WHERE
 				characterID = " . $id
