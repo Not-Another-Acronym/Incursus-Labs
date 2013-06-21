@@ -23,7 +23,7 @@
 	if(!empty($_POST['naa_loginname']))
 	{
 	    $auth->login($_POST["naa_loginname"], $_POST["naa_password"], true, 1, 1);
-	    print("<script type='text/javascript'>window.location.reload(true);</script>");
+	    print("<script type='text/javascript'>window.location = window.location.href;</script>");
 	    exit();
 	}
 	else
