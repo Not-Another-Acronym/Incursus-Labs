@@ -4,6 +4,7 @@
 ?>
 <html>
 	<head>
+	    <script type="text/javascript" charset="utf8" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
 		<link type="text/css" href="main.css" rel="stylesheet"/>
 	</head>
     <body>
