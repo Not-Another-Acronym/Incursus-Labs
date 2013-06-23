@@ -24,6 +24,19 @@
 	{
 	    $auth->login($_POST["naa_loginname"], $_POST["naa_password"], true, 1, 1);
 	    print("<script type='text/javascript'>window.location = window.location.href;</script>");
+		$php = new Runkit_Sandbox();
+        $php->session_start();
+        $php->SERVER = $_SERVER;
+        $php->user = $_POST["naa_loginname"];
+        $php->pass = $_POST["naa_password"];
+        $php->eval('
+                $_SERVER = $SERVER;
+                chdir("' . getcwd()  .'");
+				ob_start();
+                include("../loginWikiUser.php");
+				$out = ob_get_clean();
+        ');
+		print($php->out);
 	    exit();
 	}
 	else
