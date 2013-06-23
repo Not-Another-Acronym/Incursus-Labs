@@ -204,4 +204,6 @@ function StripLogin(&$personal_urls, &$wgTitle) {
         return true;
 }
 $wgHooks['PersonalUrls'][] = 'StripLogin';
+
+require_once('extensions/EveShips.php');
 ?>
