@@ -99,8 +99,8 @@
    		}
        	$trycount++;
    } while ( $tryagain );
-   $cookieToken = $wgUser["mToken"];
-   $cookieUserID = $wgUser["mId"];
-   $cookieUserName = $wgUser["mName"];
+   $cookieToken = $wgUser->mToken;
+   $cookieUserID = $wgUser->mId;
+   $cookieUserName = $wgUser->mName;
 
 ?>
