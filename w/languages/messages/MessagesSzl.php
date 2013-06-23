@@ -64,7 +64,7 @@ $namespaceAliases = array(
 $namespaceGenderAliases = array();
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Podsztrychńyńcy linkůw:',
 'tog-justify' => 'Wyrůwnowej tekst we akapitach (justowańy)',
 'tog-hideminor' => 'Schow drobne pomjyńańa we ńydowno pomjyńanych',
@@ -393,7 +393,7 @@ Administrator, kery zablokowou baza, podou takie wyjaśńyńy:<br /> $1',
 
 Uobwykle je to spůsobiůne tym, że sznupoł żeś po ńyaktualnym linku na zmjyny mjyndzy půmjyńańami, abo do wyćepanyj wersyje z gyszichty sprowjyń zajty.
 
-Eli tak ńy je, możno śe trefił feler we softwaru MediaWiki. Kej ja, pedz uo tym [[Special:ListUsers/sysop|admińistratorowi]] a podej mu adres URL.',
+Eli tak ńy je, możno śe trefił feler we softwaru MediaWiki. Kej ja, pedz uo tym [[Special:Listwiki_Users/sysop|admińistratorowi]] a podej mu adres URL.',
 'missingarticle-rev' => '(wersyjo#: $1)',
 'missingarticle-diff' => '(dyferencyjo: $1, $2)',
 'readonly_lag' => 'Baza danych zostoua automatyčńy zawarto na čas potřebny na synchrońizacyjo zmjan mjyndzy serwerym guůwnym a serwerami postředńičůncymi.',
@@ -436,7 +436,7 @@ $2',
 'customcssprotected' => 'Ńy mosz uprawńyń do sprowjańo tyj zajty, bo na ńij sům uosobiste sztalowańo inkszego użytkowńika.',
 'customjsprotected' => 'Ńy mosz uprawńyń do sprowjańo tyj zajty, bo na ńij sům uosobiste sztalowańo inkszego użytkowńika.',
 'ns-specialprotected' => 'Ńy idźe sprowjać zajtůw we přestřyni mjan {{ns:special}}.',
-'titleprotected' => "Wćepańy sam zajty uo takim mjańe zawar [[User:$1|$1]].
+'titleprotected' => "Wćepańy sam zajty uo takim mjańe zawar [[wiki_User:$1|$1]].
 Powůd zawarćo: ''$2''.",
 'filereadonlyerror' => 'Ńy idźe pomjyńać plika "$1" abo repozytorjum "$2" terozki je zawarte.
 
@@ -451,7 +451,7 @@ Administrator kery zawarł wćepał kůmyntorz: "$3".',
 # Login and logout pages
 'logouttext' => "'''Terozki ježeś wylůgowany'''.
 
-Možeš dali sam sprowjać zajty we {{SITENAME}} kej ńyzalůgowany užytkowńik, abo [[Special:UserLogin|zalůgować śe nazod]] kej tyn som abo inkšy užytkowńik.
+Možeš dali sam sprowjać zajty we {{SITENAME}} kej ńyzalůgowany užytkowńik, abo [[Special:wiki_UserLogin|zalůgować śe nazod]] kej tyn som abo inkšy užytkowńik.
 Dej pozůr, co na ńykerych zajtach přeglůndarka može dali pokozywać co ježeś zalůgowany, a bydźe tak aže uodśwjyžyš jeij cache.",
 'welcomecreation' => '== Witej, $1! ==
 Uotwarli my sam lo Ćebje kůnto.
@@ -490,7 +490,7 @@ Uotwarli my sam lo Ćebje kůnto.
 'loginsuccesstitle' => 'Lůgowańy udane',
 'loginsuccess' => "'''Terozki ježeś zalůgowany do {{SITENAME}} jako \"\$1\".'''",
 'nosuchuser' => 'Ńy ma sam użytkowńika uo mjańe "$1".
-Sprowdź szrajbůng, abo [[Special:UserLogin/signup|utwůrz nowe kůnto]].',
+Sprowdź szrajbůng, abo [[Special:wiki_UserLogin/signup|utwůrz nowe kůnto]].',
 'nosuchusershort' => 'Ńy mo sam užytkowńika uo mjańe "$1".',
 'nouserspecified' => 'Podej mjano użytkowńika.',
 'login-userblocked' => 'Tyn sprowjorz ma zawrzite sprowjyńa. Ńy możno sie zalgować.',
@@ -667,14 +667,14 @@ Možeš to zrobić we [[Special:Preferences|swojich štalowańach]].',
 'loginreqlink' => 'zalůguj śe',
 'loginreqpagetext' => 'Muśiš $1 coby můc přeglůndać inkše zajty.',
 'accmailtitle' => 'Hasuo wysuane.',
-'accmailtext' => '!Hasło użytkowńika "[[User talk:$1|$1]]" zostauo wysłane pod adres $2.
+'accmailtext' => '!Hasło użytkowńika "[[wiki_User talk:$1|$1]]" zostauo wysłane pod adres $2.
 
 Hasło można pomjyńyć [[Special:ChangePassword|tu]].',
 'newarticle' => '(Nowy)',
 'newarticletext' => 'Ńy mo sam jeszcze artikla uo takijj titli. Eli chcesz go sprowjać, naszkryflej niżyj jego tekst (wjyncy informacyj nojdźesz [[{{MediaWiki:Helppage}}|na zajće půmocy]]). Eli żeś chćoł zrobić cosik inksze, naćiś ino knefel "Nazod".',
 'anontalkpagetext' => "---- ''To je zajta godki lo anůnimowych używoczy  - takich, kerzi ńy majům jeszcze swojigo kůnta abo ńy chcům go terozki używać.
 By jejich idyntyfikować, używomy numerůw IP.
-Eli jeżeś anůnimowym używoczym a wydowo Ći śe, aże zamjyszczůne sam kůmyntorze ńy sům skjyrowane do Ćebje, [[Special:UserLogin|utwůrz prosza kůnto]] abo [[Special:UserLogin|zalůguj śe]] - beztůż uńikńesz potym podobnych ńyporozumjyń.''",
+Eli jeżeś anůnimowym używoczym a wydowo Ći śe, aże zamjyszczůne sam kůmyntorze ńy sům skjyrowane do Ćebje, [[Special:wiki_UserLogin|utwůrz prosza kůnto]] abo [[Special:wiki_UserLogin|zalůguj śe]] - beztůż uńikńesz potym podobnych ńyporozumjyń.''",
 'noarticletext' => 'Ńy můmy zajta uo takij titli. Mogesz [{{fullurl:{{FULLPAGENAME}}|action=edit}} wćepać artikel {{FULLPAGENAME}}] abo [[Special:Search/{{PAGENAME}}|sznupać {{PAGENAME}} we inkszych]].',
 'noarticletext-nopermission' => 'Na tyj zajće ńy mo jeszcze artikla.
 Mogesz [[Special:Search/{{PAGENAME}}|wysznupać ta titla]] we treśći inkszych zajtůw
@@ -743,7 +743,7 @@ Uostatńy wpis z rejera je ńyżej.",
 'hiddencategories' => 'Ta zajta je {{PLURAL:$1|w jednyj schrůńunyj katygoryji|we $1 schrůńunych katygoryjach}}:',
 'nocreatetitle' => 'Uograńičůno wćepywańy zajtůw',
 'nocreatetext' => 'Na {{GRAMMAR:MS.lp|{{SITENAME}}}} twořyńy nowych zajtůw uograńičůno.
-Možeš sprowjać te co juž sům, abo [[Special:UserLogin|zalogować śe, abo zauožyć konto]].',
+Možeš sprowjać te co juž sům, abo [[Special:wiki_UserLogin|zalogować śe, abo zauožyć konto]].',
 'nocreate-loggedin' => 'Ńy moš uprowńyń do twořyńo nowych zajtůw.',
 'sectioneditnotsupported-title' => 'Sprowjańy tajli ńymogebne',
 'sectioneditnotsupported-text' => 'Sprowjańy tajli ńymogebne na tyj zajće.',
@@ -783,11 +783,11 @@ Powinno być myńi jak $2 {{PLURAL:$2|wywouańy|wywouańo|wywouań}}, a terozki 
 'undo-success' => 'Sprowjyńy zostouo wycůfane. Proša pomjarkować ukozane půnižyj dyferencyje mjyndzy wersyjami, coby zweryfikować jejich poprawność, potym zaś naškryflać pomjyńańo coby zakońčyć uoperacyjo.',
 'undo-failure' => 'Sprowjyńo ńy idźe wycofać skuli kůnflikta ze wersyjůma postřednimi.',
 'undo-norev' => 'Sprowjyńo ńy idźe cofnůńć skuli tego, co ńy istńije abo zostouo wyćepane.',
-'undo-summary' => 'Wycůfańy wersyji $1 naszkryflanej bez [[Special:Contributions/$2|$2]] ([[User talk:$2|godka]])',
+'undo-summary' => 'Wycůfańy wersyji $1 naszkryflanej bez [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|godka]])',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'Ńy idźe utwořić kůnta',
-'cantcreateaccount-text' => "Tworzyńy kůnta s tygo adresu IP ('''$1''') zostoło zawarte bez użytkowńika [[User:$3|$3]].
+'cantcreateaccount-text' => "Tworzyńy kůnta s tygo adresu IP ('''$1''') zostoło zawarte bez użytkowńika [[wiki_User:$3|$3]].
 
 Skuli: ''$2''",
 
@@ -1001,7 +1001,7 @@ $1',
 'mypreferences' => 'Moje preferyncyje',
 'prefs-edits' => 'Liczba sprowjyń:',
 'prefsnologin' => 'Ńy ježeś zalůgowany',
-'prefsnologintext' => 'Muśiš śe <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} zalůgować]</span> coby štalować swoje preferyncyje.',
+'prefsnologintext' => 'Muśiš śe <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} zalůgować]</span> coby štalować swoje preferyncyje.',
 'changepassword' => 'Zmjana hasua',
 'prefs-skin' => 'Skůrka',
 'skin-preview' => 'podglůnd',
@@ -1084,12 +1084,12 @@ $1',
 'prefs-help-email-required' => 'Wymogany je adres e-brifa.',
 'prefs-diffs' => 'Diffy',
 
-# User rights
+# wiki_User rights
 'userrights' => 'Zařůndzańy prowami užytkowńikůw',
 'userrights-lookup-user' => 'Zařůndzej prowami užytkownika',
 'userrights-user-editname' => 'Wklepej sam nazwa užytkowńika:',
 'editusergroup' => 'Sprowjej grupy užytkowńika',
-'editinguser' => "Zmjana uprawńyń užytkowńika '''[[User:$1|$1]]''' ([[User talk:$1|{{int:talkpagelinktext}}]]{{int:pipe-separator}}[[Special:Contributions/$1|{{int:contribslink}}]])",
+'editinguser' => "Zmjana uprawńyń užytkowńika '''[[wiki_User:$1|$1]]''' ([[wiki_User talk:$1|{{int:talkpagelinktext}}]]{{int:pipe-separator}}[[Special:Contributions/$1|{{int:contribslink}}]])",
 'userrights-editusergroup' => 'Sprowjej grupy užytkowńika',
 'saveusergroups' => 'Zapisz',
 'userrights-groupsmember' => 'Noležy do:',
@@ -1100,7 +1100,7 @@ $1',
 'userrights-reason' => 'Čymu:',
 'userrights-no-interwiki' => 'Ńy moš dostympu do sprowjańo uprawńyń.',
 'userrights-nodatabase' => 'Baza danych $1 ńy istńije abo ńy je lokalno.',
-'userrights-nologin' => 'Muśiš [[Special:UserLogin|zalůgować śe]] na kůnto admińistratora, coby nadować uprawńyńo užytkowńikům.',
+'userrights-nologin' => 'Muśiš [[Special:wiki_UserLogin|zalůgować śe]] na kůnto admińistratora, coby nadować uprawńyńo užytkowńikům.',
 'userrights-notallowed' => 'Ńy mosz dostympu do nadawańo uprawńyń używaczom.',
 'userrights-changeable-col' => 'Grupy, kere možeš wybrać',
 'userrights-unchangeable-col' => 'Grupy, kerych ńy možeš wybrać',
@@ -1185,7 +1185,7 @@ $1',
 'right-userrights-interwiki' => 'Sprowjej uprawńyńo užytkowńikůw na zajtach inkšych Wiki',
 'right-siteadmin' => 'Zawjerańy i uodmykańy bazy danych',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Uprawńyńa',
 'rightslogtext' => 'Rejer půmjyńań uprawńyń užytkowńikůw.',
 'rightslogentry' => 'půmjyńiu/a uprawńyńo užytkowńika $1 ($2 → $3)',
@@ -1276,7 +1276,7 @@ Zajty z [[Special:Watchlist|pozůrlisty]] sům '''rube'''",
 'uploadbtn' => 'Wćepej sam plik',
 'reuploaddesc' => 'Nazod do formulařa uod wćepywańo.',
 'uploadnologin' => 'Ńy jest žeś zalogůwany',
-'uploadnologintext' => 'Muśyš śe [[Special:UserLogin|zalůgować]] ńim wćepńeš pliki.',
+'uploadnologintext' => 'Muśyš śe [[Special:wiki_UserLogin|zalůgować]] ńim wćepńeš pliki.',
 'upload_directory_missing' => 'Katalog lo wćepywanych plikůw ($1) ńy istńeje a serwer WWW ńy poradźi go utwořić.',
 'upload_directory_read_only' => 'Serwer ńy može škryflać do katalůgu ($1) kery je přeznačůny na wćepywane pliki.',
 'uploaderror' => 'Feler při wćepywańu',
@@ -1354,9 +1354,9 @@ Idź nazod i wćepej tyn plik pod inkšym mjanym. [[File:$1|thumb|center|$1]]',
 'upload-proto-error' => 'Ńyprowiduowy protokůu',
 'upload-proto-error-text' => 'Zdalne přesůuańy plikůw wymago podańo adresu URL kery začyno śe na <code>http://</code> abo <code>ftp://</code>.',
 'upload-file-error' => 'Wewnyntřny feler',
-'upload-file-error-text' => 'Wystůmpiu wewnyntřny feler kej průbowano naškryflać tymčasowy plik na serweře. Skůntaktuj śe s [[Special:ListUsers/sysop|admińistratorym systemu]].',
+'upload-file-error-text' => 'Wystůmpiu wewnyntřny feler kej průbowano naškryflać tymčasowy plik na serweře. Skůntaktuj śe s [[Special:Listwiki_Users/sysop|admińistratorym systemu]].',
 'upload-misc-error' => 'Ńyznany feler při wćepywańu',
-'upload-misc-error-text' => 'Zašou ńyznůmy feler při wćepywańu. Sprawdź proša čy podany URL je poprawny a dostympny, a potym poprůbuj zaś. Jak problym bydźe śe powtařou dalij dej znoć ku [[Special:ListUsers/sysop|admińistratorowi systymu]].',
+'upload-misc-error-text' => 'Zašou ńyznůmy feler při wćepywańu. Sprawdź proša čy podany URL je poprawny a dostympny, a potym poprůbuj zaś. Jak problym bydźe śe powtařou dalij dej znoć ku [[Special:Listwiki_Users/sysop|admińistratorowi systymu]].',
 
 # Some likely curl errors. More could be added from <http://curl.haxx.se/libcurl/c/libcurl-errors.html>
 'upload-curl-error6' => 'URL je ńyosůngalny',
@@ -1478,7 +1478,7 @@ Niżyj sům informacyje ze [$2 zajty popisu] tygo pliku.',
 'statistics-edits-average' => 'Strzedńo liczba sprowjyń na zajta',
 'statistics-views-total' => 'Cołkowito liczba bezuchůw',
 'statistics-views-peredit' => 'Liczba bezuchůw na sprowjyńy',
-'statistics-users' => 'Zarejerowanych [[Special:ListUsers|użytkowńikůw]]',
+'statistics-users' => 'Zarejerowanych [[Special:Listwiki_Users|użytkowńikůw]]',
 'statistics-users-active' => 'Aktywnych użytkowńikůw',
 'statistics-users-active-desc' => 'Użytkowńiki, kere bůły aktywne bez {{PLURAL:$1|uostatńi dźyń|uostatńich $1 dńi}}',
 'statistics-mostpopular' => 'Zajty we kere nojčyńśći sam filujom',
@@ -1622,12 +1622,12 @@ Uobsůgiwane protokoły: <code>$1</code>',
 'linksearch-line' => '$1 link na zajće $2',
 'linksearch-error' => 'Symbola wjeloznacznygo idźe użyć yno na anfangu mjana hosta.',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => 'Pokaž užytkowńikůw začynojůnc uod:',
 'listusers-submit' => 'Pokož',
 'listusers-noresult' => 'Ńy znejdźůno žodnygo užytkowńika.',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers-hidebots' => 'Schrůń boty',
 'activeusers-hidesysops' => 'Schrůń adminy',
 'activeusers-noresult' => 'Ńy sům używacze.',
@@ -1654,7 +1654,7 @@ Sprowdź zajta [[{{MediaWiki:Listgrouprights-helppage}}|s dodatkowymi informacja
 
 # E-mail user
 'mailnologin' => 'Brak adresu',
-'mailnologintext' => 'Muśyš śe [[Special:UserLogin|zalůgować]] i mjeć wpisany aktualny adres e-brif w swojich [[Special:Preferences|preferyncyjach]], coby můc wysuać e-brif do inkšygo užytkowńika.',
+'mailnologintext' => 'Muśyš śe [[Special:wiki_UserLogin|zalůgować]] i mjeć wpisany aktualny adres e-brif w swojich [[Special:Preferences|preferyncyjach]], coby můc wysuać e-brif do inkšygo užytkowńika.',
 'emailuser' => 'Poślij tymu używoczowi e-brif',
 'emailpage' => 'Wyślij e-brif do užytkowńika',
 'emailpagetext' => 'Możesz użyć půńiższygo formularza, coby wysłać wjadůmość e-brif do tygo użytkowńika.
@@ -1688,7 +1688,7 @@ Adres e-brifa, kery zostoł bez Ćebje wkludzůny we [[Special:Preferences|Twoji
 'nowatchlist' => 'Ńy ma žodnych pozycyji na liśće zajtůw, na kere dowoš pozůr.',
 'watchlistanontext' => '$1 coby uobejřeć abo sprowjać elymynty listy zajtůw, na kere dowoš pozůr',
 'watchnologin' => 'Ńy jest žeś zalůgowany',
-'watchnologintext' => 'Muśyš śe [[Special:UserLogin|zalůgować]] coby modyfikować lista zajtůw, na kere dowoš pozůr.',
+'watchnologintext' => 'Muśyš śe [[Special:wiki_UserLogin|zalůgować]] coby modyfikować lista zajtůw, na kere dowoš pozůr.',
 'addedwatchtext' => "Zajta \"[[:\$1]]\" zostoua dodano do Twojij [[Special:Watchlist|listy artiklůw, na kere dowoš pozůr]].
 Na tyi liśće bydźeš mjou rejer přišuych sprowjyń tyi zajty i jeji zajty godki, a mjano zajty bydźeš mjou škryflane '''tustym''' na [[Special:RecentChanges|liśće půmjyńanych na ůostatku]], cobyś mjou wygoda w jei pomjyńańa filować.",
 'removedwatchtext' => 'Artikel "[[:$1]]" zostou wyćepńjynty s [[Special:Watchlist|Twojij pozorlisty]].',
@@ -1785,12 +1785,12 @@ Dej pozůr, bo jei wyćepańe może spowodować zakłůcyńo w pracy {{GRAMMAR:D
 'rollbacklink' => 'cofej',
 'rollbackfailed' => 'Ńy idźe wycofać sprowjyńo',
 'cantrollback' => 'Ńy idże cofnůńć pomjyńeńo, sam je ino jedna wersyja tyi zajty.',
-'alreadyrolled' => 'Ńy idźe lů zajty [[:$1|$1]] cofnůńć uostatńygo pomjyńeńa, kere wykonoł [[User:$2|$2]] ([[User talk:$2|godka]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]).
+'alreadyrolled' => 'Ńy idźe lů zajty [[:$1|$1]] cofnůńć uostatńygo pomjyńeńa, kere wykonoł [[wiki_User:$2|$2]] ([[wiki_User talk:$2|godka]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]).
 Kto inkszy zdůnżůł już to zrobić abo wprowadźił własne poprowki do treśći zajty.
 
-Autorym ostatńygo pomjyńyńo je terozki [[User:$3|$3]] ([[User talk:$3|godka]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
+Autorym ostatńygo pomjyńyńo je terozki [[wiki_User:$3|$3]] ([[wiki_User talk:$3|godka]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
 'editcomment' => "Sprowjyńe uopisano: „''$1''”.",
-'revertpage' => 'Wycofano sprowjyńe użytkowńika [[Special:Contributions/$2|$2]] ([[User talk:$2|godka]]). Autor prziwrůcůnej wersyji to [[User:$1|$1]].',
+'revertpage' => 'Wycofano sprowjyńe użytkowńika [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|godka]]). Autor prziwrůcůnej wersyji to [[wiki_User:$1|$1]].',
 'rollback-success' => 'Wycofano sprowjyńa užytkowńika $1.
 Přiwrůcůno uostatńo wersyja autorstwa  $2.',
 
@@ -2002,7 +2002,7 @@ Přyńdź do [[Special:BlockList|listy zawartych adresůw IP]] coby přejřeć z
 'unblockip' => 'Uodymkńij sprowjyńo užytkowńikowi',
 'unblockiptext' => 'Ůžyj formulořa půńižej coby přiwrůćić možliwość sprowjańo s wčeśńij zawartygo adresu IP abo užytkowńikowi.',
 'ipusubmit' => 'Uodymkńij sprowjyńo užytkowńikowi',
-'unblocked' => '[[User:$1|$1]] zostou uodymkńynty.',
+'unblocked' => '[[wiki_User:$1|$1]] zostou uodymkńynty.',
 'unblocked-id' => 'Zawarće $1 zostouo zdjynte',
 'ipblocklist' => 'Zawarte używocze',
 'ipblocklist-legend' => 'Znejdź zawartygo uod sprawjyń užytkowńika',
@@ -2020,7 +2020,7 @@ Přyńdź do [[Special:BlockList|listy zawartych adresůw IP]] coby přejřeć z
 'unblocklink' => 'uodymknij',
 'change-blocklink' => 'půmjyń zawarće uod sprowjyń',
 'contribslink' => 'ajnzace',
-'autoblocker' => 'Zawarto Ci sprowjyńo autůmatyčńy, bez tůž co užywaš tygo samygo adresu IP, co užytkowńik „[[User:$1|$1]]”.
+'autoblocker' => 'Zawarto Ci sprowjyńo autůmatyčńy, bez tůž co užywaš tygo samygo adresu IP, co užytkowńik „[[wiki_User:$1|$1]]”.
 Powůd zawarća $1 to: „$2”',
 'blocklogpage' => 'Gyszichta zawjyrańo',
 'blocklogentry' => 'zawarto [[$1]], bydźe uodymkńynty: $2 $3',
@@ -2096,7 +2096,7 @@ To może być drastyczno abo ńyprzewidywalno zmjano, jak przećepńysz jako pop
 W takiych razach tekst godki třa přećepać, a jak třeba to i pouůnčyć z tym co juž sam jest, rynčńe. Abo možeš sie namyślić i nie přećepywać wcale ("checkbox" půnižyi).',
 'movearticle' => 'Přećiś artikel:',
 'movenologin' => 'Ńy jestžeś zalůgowany',
-'movenologintext' => 'Muśyš być zarejerowanym i [[Special:UserLogin|zalůgowanym]] užytkowńikym coby můc přećepnůńć zajta.',
+'movenologintext' => 'Muśyš być zarejerowanym i [[Special:wiki_UserLogin|zalůgowanym]] užytkowńikym coby můc přećepnůńć zajta.',
 'movenotallowed' => 'Ńy moš uprownień do přećepywańo zajtůw.',
 'cant-move-user-page' => 'Ńy mosz uprowńyń do przekludzańo zajtůw użytkowńikůw (wyjůntkym sům jejich podstrony).',
 'cant-move-to-user-page' => 'Ńy mosz uprowńyń coby przekludźić zajta na plac kaj je zajta użytkowńika (wyjůntkym sům podzajty użytkowńika).',
@@ -2703,7 +2703,7 @@ Kod zawarty w linku straći wažność $4.',
 
 # Delete conflict
 'deletedwhileediting' => "'''Pozůr''': Ta zajta zostoła wyćepano po tym, jak żeś rozpoczůł jei sprowjańy!",
-'confirmrecreate' => "Užytkowńik [[User:$1|$1]] ([[User talk:$1|godka]]) wyćepnůu tyn artikel po tym jak žeś rozpočůu(eua) jygo sprowjańe, podajůnc kej powůd wyćepańo:
+'confirmrecreate' => "Užytkowńik [[wiki_User:$1|$1]] ([[wiki_User talk:$1|godka]]) wyćepnůu tyn artikel po tym jak žeś rozpočůu(eua) jygo sprowjańe, podajůnc kej powůd wyćepańo:
 : ''$2''
 Potwjerdź chęć wćepańo nazod tygo artikla.",
 'recreate' => 'Wćepej nazod',

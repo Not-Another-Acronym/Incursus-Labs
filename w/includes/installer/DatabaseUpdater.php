@@ -411,7 +411,7 @@ abstract class DatabaseUpdater {
 		global $wgExtNewFields, $wgExtNewTables, $wgExtModifiedFields,
 			$wgExtNewIndexes, $wgSharedDB, $wgSharedTables;
 
-		$doUser = $this->shared ?
+		$dowiki_User = $this->shared ?
 			$wgSharedDB && in_array( 'user', $wgSharedTables ) :
 			!$wgSharedDB || !in_array( 'user', $wgSharedTables );
 
@@ -424,7 +424,7 @@ abstract class DatabaseUpdater {
 		}
 
 		foreach ( $wgExtNewFields as $fieldRecord ) {
-			if ( $fieldRecord[0] != 'user' || $doUser ) {
+			if ( $fieldRecord[0] != 'user' || $dowiki_User ) {
 				$updates[] = array(
 					'addField', $fieldRecord[0], $fieldRecord[1],
 						$fieldRecord[2], true
@@ -640,15 +640,15 @@ abstract class DatabaseUpdater {
 	/**
 	 * Sets the number of active users in the site_stats table
 	 */
-	protected function doActiveUsersInit() {
-		$activeUsers = $this->db->selectField( 'site_stats', 'ss_active_users', false, __METHOD__ );
-		if ( $activeUsers == -1 ) {
-			$activeUsers = $this->db->selectField( 'recentchanges',
+	protected function doActivewiki_UsersInit() {
+		$activewiki_Users = $this->db->selectField( 'site_stats', 'ss_active_users', false, __METHOD__ );
+		if ( $activewiki_Users == -1 ) {
+			$activewiki_Users = $this->db->selectField( 'recentchanges',
 				'COUNT( DISTINCT rc_user_text )',
 				array( 'rc_user != 0', 'rc_bot' => 0, "rc_log_type != 'newusers'" ), __METHOD__
 			);
 			$this->db->update( 'site_stats',
-				array( 'ss_active_users' => intval( $activeUsers ) ),
+				array( 'ss_active_users' => intval( $activewiki_Users ) ),
 				array( 'ss_row_id' => 1 ), __METHOD__, array( 'LIMIT' => 1 )
 			);
 		}
@@ -658,14 +658,14 @@ abstract class DatabaseUpdater {
 	/**
 	 * Populates the log_user_text field in the logging table
 	 */
-	protected function doLogUsertextPopulation() {
+	protected function doLogwiki_UsertextPopulation() {
 		if ( !$this->updateRowExists( 'populate log_usertext' ) ) {
 			$this->output(
 			"Populating log_user_text field, printing progress markers. For large\n" .
 			"databases, you may want to hit Ctrl-C and do this manually with\n" .
-			"maintenance/populateLogUsertext.php.\n" );
+			"maintenance/populateLogwiki_Usertext.php.\n" );
 
-			$task = $this->maintenance->runChild( 'PopulateLogUsertext' );
+			$task = $this->maintenance->runChild( 'PopulateLogwiki_Usertext' );
 			$task->execute();
 			$this->output( "done.\n" );
 		}
@@ -723,8 +723,8 @@ abstract class DatabaseUpdater {
 	/**
 	 * Migrates user options from the user table blob to user_properties
 	 */
-	protected function doMigrateUserOptions() {
-		$cl = $this->maintenance->runChild( 'ConvertUserOptions', 'convertUserOptions.php' );
+	protected function doMigratewiki_UserOptions() {
+		$cl = $this->maintenance->runChild( 'Convertwiki_UserOptions', 'convertwiki_UserOptions.php' );
 		$cl->execute();
 		$this->output( "done.\n" );
 	}

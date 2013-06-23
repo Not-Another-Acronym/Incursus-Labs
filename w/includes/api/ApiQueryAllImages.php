@@ -154,7 +154,7 @@ class ApiQueryAllImages extends ApiQueryGeneratorBase {
 				$this->addJoinConds( array( 'user_groups' => array(
 					'LEFT JOIN',
 					array(
-						'ug_group' => User::getGroupsWithPermission( 'bot' ),
+						'ug_group' => wiki_User::getGroupsWithPermission( 'bot' ),
 						'ug_user = img_user'
 					)
 				) ) );

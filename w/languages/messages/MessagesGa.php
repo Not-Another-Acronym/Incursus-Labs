@@ -94,7 +94,7 @@ $namespaceAliases = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Folínte faoi naisc:',
 'tog-justify' => 'Comhfhadaigh na paragraif',
 'tog-hideminor' => 'Ná taispeáin mionathruithe i measc na n-athruithe is déanaí',
@@ -427,7 +427,7 @@ $1',
 
 De ghnáth, tarlaíonn sé seo nuair a leantar nasc stáire nó difr chuig leathanach a scriosadh.
 
-Murab fhíor é seo, is féidir go bhfuair tú fabht sa bhogearraí. Beimid buíoch duit é a chur in iúl do [[Special:ListUsers/sysop|riarthóir]], chomh maith le URL an suíoimh.',
+Murab fhíor é seo, is féidir go bhfuair tú fabht sa bhogearraí. Beimid buíoch duit é a chur in iúl do [[Special:Listwiki_Users/sysop|riarthóir]], chomh maith le URL an suíoimh.',
 'missingarticle-rev' => '(leagan#: $1)',
 'missingarticle-diff' => '(Dif: $1, $2)',
 'readonly_lag' => 'Glasáladh an bunachar sonraí go huathoibríoch, go dtiocfaidh na sclábhfhreastalaithe suas leis an máistirfhreastalaí.',
@@ -466,7 +466,7 @@ Más maith leat MediaWiki a aistriú, cuimhnigh ar [//translatewiki.net/wiki/Mai
 'sqlhidden' => '(Iarratas SQL folaithe)',
 'namespaceprotected' => "Ní chead agat leathanaigh a chur in eagar san ainmspás '''$1'''.",
 'ns-specialprotected' => 'Ní féidir leathanaigh speisialta a chur in eagar.',
-'titleprotected' => "Tá an teideal seo cosanta ar chruthú le [[User:$1|$1]].
+'titleprotected' => "Tá an teideal seo cosanta ar chruthú le [[wiki_User:$1|$1]].
 An fáth ná ''$2''.",
 
 # Virus scanner
@@ -476,7 +476,7 @@ An fáth ná ''$2''.",
 # Login and logout pages
 'logouttext' => "'''Tá tú logáilte amach anois.'''
 
-Is féidir leat an {{SITENAME}} a úsáid fós gan ainm, nó is féidir leat [[Special:UserLogin|logáil isteach arís]] mar an úsáideoir céanna, nó mar úsáideoir eile.
+Is féidir leat an {{SITENAME}} a úsáid fós gan ainm, nó is féidir leat [[Special:wiki_UserLogin|logáil isteach arís]] mar an úsáideoir céanna, nó mar úsáideoir eile.
 Tabhair faoi deara go taispeáinfear roinnt leathanaigh mar atá tú logáilte isteach fós, go dtí go ghlanfá amach do taisce líonleitheora.",
 'welcomecreation' => '== Tá fáilte romhat, $1! ==
 
@@ -521,7 +521,7 @@ Cumasaigh iad agus bain triail eile as, le do thoil.',
 'loginsuccess' => "'''Tá tú logáilte isteach anois sa {{SITENAME}} mar \"<nowiki>\$1</nowiki>\".'''",
 'nosuchuser' => 'Níl aon úsáideoir ann leis an ainm "$1".
 Tá ainmneacha úsáideoir cásíogair.
-Cinntigh do litriú, nó [[Special:UserLogin/signup|bain úsáid as an foirm thíos]] chun cuntas úsáideora nua a chruthú.',
+Cinntigh do litriú, nó [[Special:wiki_UserLogin/signup|bain úsáid as an foirm thíos]] chun cuntas úsáideora nua a chruthú.',
 'nosuchusershort' => 'Níl aon úsáideoir ann leis an ainm "$1". Cinntigh do litriú.',
 'nouserspecified' => 'Caithfidh ainm úsáideoir a shonrú.',
 'login-userblocked' => 'Tá an t-úsáideoir seo faoi bhac. Níl cead aige/aici logáil isteach.',
@@ -644,7 +644,7 @@ Is é $3 do sheoladh IP agus #$5 do ID coisc. Déan tagairt don seoladh seo le g
 Chun an leathanach a chruthú, tosaigh ag clóscríobh sa bhosca thíos
 (féach ar an [[{{MediaWiki:Helppage}}|leathanach cabhrach]] chun a thuilleadh eolais a fháil).
 Má tháinig tú anseo as dearmad, brúigh an cnaipe '''ar ais''' ar do bhrabhsálaí.",
-'anontalkpagetext' => "---- ''Leathanach plé é seo a bhaineann le húsáideoir gan ainm nár chruthaigh cuntas fós, nó nach bhfuil ag úsáid an chuntais. Dá bhrí sin, caithfimid an seoladh IP a úsáid chun é/í a (h)ionannú. Is féidir le níos mó ná úsáideoir amháin an seoladh IP céanna a úsáid. Má tá tú i d'úsáideoir gan ainm agus má cheapann tú go bhfuil teachtaireachtaí nach mbaineann leat seolta chugat, [[Special:UserLogin|cruthaigh cuntas]] nó [[Special:UserLogin|logáil isteach]] chun mearbhall le húsáideoirí eile gan ainmneacha a éalú amach anseo.''",
+'anontalkpagetext' => "---- ''Leathanach plé é seo a bhaineann le húsáideoir gan ainm nár chruthaigh cuntas fós, nó nach bhfuil ag úsáid an chuntais. Dá bhrí sin, caithfimid an seoladh IP a úsáid chun é/í a (h)ionannú. Is féidir le níos mó ná úsáideoir amháin an seoladh IP céanna a úsáid. Má tá tú i d'úsáideoir gan ainm agus má cheapann tú go bhfuil teachtaireachtaí nach mbaineann leat seolta chugat, [[Special:wiki_UserLogin|cruthaigh cuntas]] nó [[Special:wiki_UserLogin|logáil isteach]] chun mearbhall le húsáideoirí eile gan ainmneacha a éalú amach anseo.''",
 'noarticletext' => 'Níl aon téacs ar an leathanach seo faoi láthair.
 Is féidir [[Special:Search/{{PAGENAME}}|cuardach a dhéanamh le haghaidh an teidil seo]] i leathanaigh eile, nó <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} cuardach a dhéanamh sna logaí gaolmhara],
 nó [{{fullurl:{{FULLPAGENAME}}|action=edit}} an leathanach seo a chur in eagar].</span>',
@@ -700,7 +700,7 @@ An fáth ar thug an riarthóir a ghlasáil é: $1",
 'template-semiprotected' => '(leathghlasáilte)',
 'edittools' => '<!-- Taispeánfar an téacs seo faoi foirmeacha eagarthóireachta agus uaslódála. -->',
 'nocreatetext' => 'Tá srianadh ar {{SITENAME}} faoin leathanaigh nua a cruthaidh.
-Is féidir leat dul ar ais chun leathanach láithreach a athrú, nó [[Special:UserLogin|log isteach nó cruthaigh cuntas nua]].',
+Is féidir leat dul ar ais chun leathanach láithreach a athrú, nó [[Special:wiki_UserLogin|log isteach nó cruthaigh cuntas nua]].',
 'nocreate-loggedin' => 'Níl cead agat leathanaigh nua a chruthú.',
 'permissionserrors' => 'Cead rochtana earráidí',
 'permissionserrorstext-withaction' => 'Níl cead agat $2, mar gheall ar {{PLURAL:$1|an fáth|na fáthanna}} seo a leanas:',
@@ -711,7 +711,7 @@ Cuirtear an loga scriosta ar fáil anseo mar áis:",
 'log-fulllog' => 'Féach ar an logchomhad iomlán',
 
 # "Undo" feature
-'undo-summary' => 'Cealaíodh athrú $1 le [[Special:Contributions/$2|$2]] ([[User talk:$2|plé]])',
+'undo-summary' => 'Cealaíodh athrú $1 le [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|plé]])',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'Ní féidir cuntas a chruthú',
@@ -833,7 +833,7 @@ Bain triail as ''all:'' a chur roimh d'iarratas chun an t-inneachar ar fad (leat
 'preferences' => 'Sainroghanna',
 'mypreferences' => 'Sainroghanna',
 'prefsnologin' => 'Níl tú logáilte isteach',
-'prefsnologintext' => 'Ní mór duit <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} logáil isteach]</span> chun do chuid sainroghanna phearsanta a shocrú.',
+'prefsnologintext' => 'Ní mór duit <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} logáil isteach]</span> chun do chuid sainroghanna phearsanta a shocrú.',
 'changepassword' => "Athraigh d'fhocal faire",
 'prefs-skin' => 'Craiceann',
 'skin-preview' => 'Réamhamharc',
@@ -916,11 +916,11 @@ do chuid dreachtaí a chur i leith tusa.',
 'prefs-advancedsearchoptions' => 'Ardroghanna',
 'prefs-advancedwatchlist' => 'Ardroghanna',
 
-# User rights
+# wiki_User rights
 'userrights' => 'Bainistíocht cearta úsáideora',
 'userrights-user-editname' => 'Iontráil ainm úsáideora:',
 'editusergroup' => 'Cuir Grúpái Úsáideoirí In Eagar',
-'editinguser' => "Ag athrú ceart don úsáideoir '''[[User:$1|$1]]''' ([[User talk:$1|{{int:talkpagelinktext}}]]{{int:pipe-separator}}[[Special:Contributions/$1|{{int:contribslink}}]])",
+'editinguser' => "Ag athrú ceart don úsáideoir '''[[wiki_User:$1|$1]]''' ([[wiki_User talk:$1|{{int:talkpagelinktext}}]]{{int:pipe-separator}}[[Special:Contributions/$1|{{int:contribslink}}]])",
 'userrights-editusergroup' => 'Cuir grúpaí na n-úsáideoirí in eagar',
 'saveusergroups' => 'Sabháil cnuasach úsáideora',
 'userrights-groupsmember' => 'Ball de:',
@@ -950,7 +950,7 @@ do chuid dreachtaí a chur i leith tusa.',
 'right-undelete' => 'Díscrios leathanach',
 'right-userrights' => 'Cur gach cearta usáideoira in eagar',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Log cearta úsáideoira',
 
 # Associated actions - in the sentence "You do not have permission to X"
@@ -1006,7 +1006,7 @@ Tá na leathanaigh ar do [[Special:Watchlist|liosta faire]] i '''gcló trom'''."
 'uploadbtn' => 'Uaslódaigh comhad',
 'reuploaddesc' => 'Dul ar ais chuig an fhoirm uaslódála.',
 'uploadnologin' => 'Nil tú logáilte isteach',
-'uploadnologintext' => 'Ní mór duit [[Special:UserLogin|logáil isteach]] chun comhaid a huaslódáil.',
+'uploadnologintext' => 'Ní mór duit [[Special:wiki_UserLogin|logáil isteach]] chun comhaid a huaslódáil.',
 'uploaderror' => 'Earráid uaslódála',
 'uploadtext' => "Bain úsáid as an bhfoirm thíos chun comhaid a uaslódáil.
 Chun comhaid atá ann cheana a fheiceáil nó a chuardach téigh chuig an [[Special:FileList|liosta comhad uaslódáilte]]. Gheobhaidh tú liosta de chomhaid uaslódáilte sa [[Special:Log/upload|loga uaslódála]] agus liosta de chomhaid scriosta sa [[Special:Log/delete|loga scriosta]] freisin.
@@ -1240,7 +1240,7 @@ Féach freisin ar [[Special:WantedCategories|catagóirí faoi iarraidh]].',
 'linksearch-ok' => 'Cuardaigh',
 'linksearch-line' => '$1 naiscthe as $2',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusers-submit' => 'Taispeáin',
 
 # Special:Log/newusers
@@ -1253,7 +1253,7 @@ Féach freisin ar [[Special:WantedCategories|catagóirí faoi iarraidh]].',
 
 # E-mail user
 'mailnologin' => 'Níl aon seoladh maith ann',
-'mailnologintext' => 'Ní mór duit bheith  [[Special:UserLogin|logáilte isteach]]
+'mailnologintext' => 'Ní mór duit bheith  [[Special:wiki_UserLogin|logáilte isteach]]
 agus bheith le seoladh ríomhphoist bhailí i do chuid [[Special:Preferences|sainroghanna]]
 más mian leat ríomhphost a sheoladh chuig úsáideoirí eile.',
 'emailuser' => 'Cuir ríomhphost chuig an úsáideoir seo',
@@ -1280,7 +1280,7 @@ Beidh do seoladh ríomhphoist a d\'iontráil tú i [[Special:Preferences|do chui
 'nowatchlist' => 'Níl aon rud ar do liosta faire.',
 'watchlistanontext' => "$1, le d'thoil, chun míreanna ar do liosta faire a fheiceáil ná a athrú.",
 'watchnologin' => 'Níl tú logáilte isteach',
-'watchnologintext' => 'Tá ort a bheith [[Special:UserLogin|logáilte isteach]] chun do liosta faire a athrú.',
+'watchnologintext' => 'Tá ort a bheith [[Special:wiki_UserLogin|logáilte isteach]] chun do liosta faire a athrú.',
 'addedwatchtext' => "Cuireadh an leathanach \"<nowiki>\$1</nowiki>\" le do [[Special:Watchlist|liosta faire]].
 Amach anseo liostálfar athruithe don leathanach seo agus dá leathanach plé ansin,
 agus beidh '''cló trom''' ar a theideal san [[Special:RecentChanges|liosta de na hathruithe is déanaí]] sa chaoi go bhfeicfeá iad go héasca.",
@@ -1378,11 +1378,11 @@ Féach ar $2 chun cuntas na scriosiadh deireanacha a fháil.',
 'rollbacklink' => 'roll siar',
 'rollbackfailed' => 'Theip an rolladh siar',
 'cantrollback' => 'Ní féidir an athrú a athúsáid; ba é údar an ailt an t-aon duine a rinne athrú dó.',
-'alreadyrolled' => "Ní féidir eagrán níos luaí an leathanaigh [[:$1]] le [[User:$2|$2]] ([[User talk:$2|Plé]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]) a athúsáid; d'athraigh duine eile é cheana fein, nó d'athúsáid duine eile eagrán níos luaí cheana féin.
+'alreadyrolled' => "Ní féidir eagrán níos luaí an leathanaigh [[:$1]] le [[wiki_User:$2|$2]] ([[wiki_User talk:$2|Plé]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]) a athúsáid; d'athraigh duine eile é cheana fein, nó d'athúsáid duine eile eagrán níos luaí cheana féin.
 
-[[User:$3|$3]] ([[User talk:$3|Plé]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]) an té a rinne an athrú is déanaí.",
+[[wiki_User:$3|$3]] ([[wiki_User talk:$3|Plé]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]) an té a rinne an athrú is déanaí.",
 'editcomment' => "Seo a raibh an achoimre eagarthóireacht: \"''\$1''\".",
-'revertpage' => 'Cealaíodh athruithe [[Special:Contributions/$2|$2]] ([[User talk:$2|Plé]]); ar ais chuig leagan le [[User:$1|$1]]',
+'revertpage' => 'Cealaíodh athruithe [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Plé]]); ar ais chuig leagan le [[wiki_User:$1|$1]]',
 
 # Protect
 'protectlogpage' => 'Log cosanta',
@@ -1534,7 +1534,7 @@ leathanaigh áirithe a rinne an duine damáiste ar).',
 'unblockiptext' => 'Úsáid an foirm anseo thíos chun bealach scríofa a thabhairt ar ais do seoladh
 IP nó ainm úsáideora a raibh faoi chosc roimhe seo.',
 'ipusubmit' => 'Bain an chosc seo',
-'unblocked' => 'Díchoisceadh [[User:$1|$1]]',
+'unblocked' => 'Díchoisceadh [[wiki_User:$1|$1]]',
 'ipblocklist' => 'Úsáideoirí atá coiscthe',
 'ipblocklist-legend' => 'Aimsigh úsáideoir coiscthe',
 'ipblocklist-submit' => 'Cuardaigh',
@@ -1545,7 +1545,7 @@ IP nó ainm úsáideora a raibh faoi chosc roimhe seo.',
 'unblocklink' => 'bain an cosc',
 'change-blocklink' => 'athraigh cosc',
 'contribslink' => 'dréachtaí',
-'autoblocker' => 'Coisceadh go huathoibríoch thú dá bharr gur úsáid an t-úsáideoir "[[User:$1|$1]]" do sheoladh IP le déanaí.
+'autoblocker' => 'Coisceadh go huathoibríoch thú dá bharr gur úsáid an t-úsáideoir "[[wiki_User:$1|$1]]" do sheoladh IP le déanaí.
 Is é seo an chúis don chosc ar $1: "$2".',
 'blocklogpage' => 'Cuntas_coisc',
 'blocklogentry' => 'coisceadh [[$1]]; am éaga $2. $3',
@@ -1613,7 +1613,7 @@ cinntigh go dtuigeann tú na hiarmhairtí go léir roimh dul ar aghaigh.",
 Sna cásanna sin, caithfidh tú an leathanach a aistrigh nó a chumasc tú féin más maith leat.",
 'movearticle' => 'Athainmnigh an leathanach',
 'movenologin' => 'Níl tú logáilte isteach',
-'movenologintext' => "Ní mór duit bheith i d'úsáideoir cláraithe agus [[Special:UserLogin|logáilte isteach]] chun leathanach a hathainmniú.",
+'movenologintext' => "Ní mór duit bheith i d'úsáideoir cláraithe agus [[Special:wiki_UserLogin|logáilte isteach]] chun leathanach a hathainmniú.",
 'movenotallowed' => 'Níl cead agat leathanaigh a athainmniú.',
 'newtitle' => 'Go teideal nua',
 'move-watch' => 'Déan faire an leathanach seo',

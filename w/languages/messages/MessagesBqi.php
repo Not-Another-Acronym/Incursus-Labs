@@ -16,7 +16,7 @@
 $fallback = 'fa';
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'لینکهای خط به زیر',
 'tog-justify' => 'فاصله نهادن سی پاراگرافها',
 'tog-hideminor' => 'من ته نبیدن تغییرات کوچیک',
@@ -271,7 +271,7 @@ $1',
 'loginsuccesstitle' => 'اویدن با بخت وتوفیق به سیستم',
 'loginsuccess' => "''' ایسا اویدن به داخل سایت {{SITENAME}} بعنوان \"\$1\".'''",
 'nosuchuser' => 'کاربری به ای نام وجود نداره "$1".
-حروف نام را چک کنین, یا [[Special:UserLogin/signup|درست کنین یه حساب کاربری تازه]].',
+حروف نام را چک کنین, یا [[Special:wiki_UserLogin/signup|درست کنین یه حساب کاربری تازه]].',
 'nosuchusershort' => 'کاربری به ای نام وجود نداره"$1".
 حروف نام راچک کنین.',
 'nouserspecified' => 'ایسا دارین یه نام کاربر ذکر اکنین.',
@@ -360,7 +360,7 @@ $1',
 'templatesusedpreview' => 'قالبها  یا الگوهای استفاده وابیده در ای پیش نمایش:',
 'template-protected' => '(تحت حمایت)',
 'template-semiprotected' => '(نیمه حمایت وابیده)',
-'nocreatetext' => '{{SITENAME}}قابلیت درست کردن صفحات تازه را محدود کرده‌. ترین برگردین و صفحه‌ موجود را اصلاح کنین یا اینکه  [[Special:UserLogin|به سیستم داخل بوین یا حساب کاربری درست کنین]].',
+'nocreatetext' => '{{SITENAME}}قابلیت درست کردن صفحات تازه را محدود کرده‌. ترین برگردین و صفحه‌ موجود را اصلاح کنین یا اینکه  [[Special:wiki_UserLogin|به سیستم داخل بوین یا حساب کاربری درست کنین]].',
 'recreate-moveddeleted-warn' => "'''هشدار: ایسا در حال درست کردن دوباره صفحه‌ای هدین که قبلاً حذف وابیده '''در نظر داشته بوین که ادامه اصلاح ای صفحه کار درستی هده یا نه. نمایه حذف مربوط به ای صفحه سی راحتی کار در ادامه اویده",
 
 # History pages
@@ -406,7 +406,7 @@ $1',
 
 'grouppage-sysop' => '{{ns:project}}:مدیران',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'نمایه حقوق کاربر',
 
 # Recent changes

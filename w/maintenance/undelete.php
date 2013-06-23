@@ -33,7 +33,7 @@ class Undelete extends Maintenance {
 	}
 
 	public function execute() {
-		global $wgUser;
+		global $wgwiki_User;
 
 		$user = $this->getOption( 'user', 'Command line script' );
 		$reason = $this->getOption( 'reason', '' );
@@ -43,8 +43,8 @@ class Undelete extends Maintenance {
 		if ( !$title ) {
 			$this->error( "Invalid title", true );
 		}
-		$wgUser = User::newFromName( $user );
-		if ( !$wgUser ) {
+		$wgwiki_User = wiki_User::newFromName( $user );
+		if ( !$wgwiki_User ) {
 			$this->error( "Invalid username", true );
 		}
 		$archive = new PageArchive( $title );

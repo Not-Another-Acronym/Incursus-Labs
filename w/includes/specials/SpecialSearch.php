@@ -1136,7 +1136,7 @@ class SpecialSearch extends SpecialPage {
 	}
 
 	/**
-	 * Users of hook SpecialSearchSetupEngine can use this to
+	 * wiki_Users of hook SpecialSearchSetupEngine can use this to
 	 * add more params to links to not lose selection when
 	 * user navigates search results.
 	 * @since 1.18

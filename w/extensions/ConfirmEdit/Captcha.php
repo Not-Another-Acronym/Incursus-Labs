@@ -81,10 +81,10 @@ class SimpleCaptcha {
 	 * @param $form HTMLForm
 	 * @return bool true to keep running callbacks
 	 */
-	function injectEmailUser( &$form ) {
-		global $wgCaptchaTriggers, $wgOut, $wgUser;
+	function injectEmailwiki_User( &$form ) {
+		global $wgCaptchaTriggers, $wgOut, $wgwiki_User;
 		if ( $wgCaptchaTriggers['sendemail'] ) {
-			if ( $wgUser->isAllowed( 'skipcaptcha' ) ) {
+			if ( $wgwiki_User->isAllowed( 'skipcaptcha' ) ) {
 				wfDebug( "ConfirmEdit: user group allows skipping captcha on email sending\n" );
 				return true;
 			}
@@ -103,10 +103,10 @@ class SimpleCaptcha {
 	 * @param QuickTemplate $template
 	 * @return bool true to keep running callbacks
 	 */
-	function injectUserCreate( &$template ) {
-		global $wgCaptchaTriggers, $wgOut, $wgUser;
+	function injectwiki_UserCreate( &$template ) {
+		global $wgCaptchaTriggers, $wgOut, $wgwiki_User;
 		if ( $wgCaptchaTriggers['createaccount'] ) {
-			if ( $wgUser->isAllowed( 'skipcaptcha' ) ) {
+			if ( $wgwiki_User->isAllowed( 'skipcaptcha' ) ) {
 				wfDebug( "ConfirmEdit: user group allows skipping captcha on account creation\n" );
 				return true;
 			}
@@ -126,7 +126,7 @@ class SimpleCaptcha {
 	 * @param $template QuickTemplate
 	 * @return bool true to keep running callbacks
 	 */
-	function injectUserLogin( &$template ) {
+	function injectwiki_UserLogin( &$template ) {
 		if ( $this->isBadLoginTriggered() ) {
 			global $wgOut;
 			$template->set( 'header',
@@ -142,12 +142,12 @@ class SimpleCaptcha {
 	 * When a bad login attempt is made, increment an expiring counter
 	 * in the memcache cloud. Later checks for this may trigger a
 	 * captcha display to prevent too many hits from the same place.
-	 * @param User $user
+	 * @param wiki_User $user
 	 * @param string $password
 	 * @param int $retval authentication return value
 	 * @return bool true to keep running callbacks
 	 */
-	function triggerUserLogin( $user, $password, $retval ) {
+	function triggerwiki_UserLogin( $user, $password, $retval ) {
 		global $wgCaptchaTriggers, $wgCaptchaBadLoginExpiration, $wgMemc;
 		if ( $retval == LoginForm::WRONG_PASS && $wgCaptchaTriggers['badlogin'] ) {
 			$key = $this->badLoginKey();
@@ -244,8 +244,8 @@ class SimpleCaptcha {
 		$this->trigger = '';
 		$title = $editPage->mArticle->getTitle();
 
-		global $wgUser;
-		if ( $wgUser->isAllowed( 'skipcaptcha' ) ) {
+		global $wgwiki_User;
+		if ( $wgwiki_User->isAllowed( 'skipcaptcha' ) ) {
 			wfDebug( "ConfirmEdit: user group allows skipping captcha\n" );
 			return false;
 		}
@@ -255,16 +255,16 @@ class SimpleCaptcha {
 
 		global $wgEmailAuthentication, $ceAllowConfirmedEmail;
 		if ( $wgEmailAuthentication && $ceAllowConfirmedEmail &&
-			$wgUser->isEmailConfirmed() ) {
+			$wgwiki_User->isEmailConfirmed() ) {
 			wfDebug( "ConfirmEdit: user has confirmed mail, skipping captcha\n" );
 			return false;
 		}
 
 		if ( $this->captchaTriggers( $editPage, 'edit' ) ) {
 			// Check on all edits
-			global $wgUser;
+			global $wgwiki_User;
 			$this->trigger = sprintf( "edit trigger by '%s' at [[%s]]",
-				$wgUser->getName(),
+				$wgwiki_User->getName(),
 				$title->getPrefixedText() );
 			$this->action = 'edit';
 			wfDebug( "ConfirmEdit: checking all edits...\n" );
@@ -273,9 +273,9 @@ class SimpleCaptcha {
 
 		if ( $this->captchaTriggers( $editPage, 'create' )  && !$editPage->mTitle->exists() ) {
 			// Check if creating a page
-			global $wgUser;
+			global $wgwiki_User;
 			$this->trigger = sprintf( "Create trigger by '%s' at [[%s]]",
-				$wgUser->getName(),
+				$wgwiki_User->getName(),
 				$title->getPrefixedText() );
 			$this->action = 'create';
 			wfDebug( "ConfirmEdit: checking on page creation...\n" );
@@ -302,10 +302,10 @@ class SimpleCaptcha {
 			$numLinks = count( $addedLinks );
 
 			if ( $numLinks > 0 ) {
-				global $wgUser;
+				global $wgwiki_User;
 				$this->trigger = sprintf( "%dx url trigger by '%s' at [[%s]]: %s",
 					$numLinks,
-					$wgUser->getName(),
+					$wgwiki_User->getName(),
 					$title->getPrefixedText(),
 					implode( ", ", $addedLinks ) );
 				$this->action = 'addurl';
@@ -328,11 +328,11 @@ class SimpleCaptcha {
 
 					$numHits = count( $addedMatches );
 					if ( $numHits > 0 ) {
-						global $wgUser;
+						global $wgwiki_User;
 						$this->trigger = sprintf( "%dx %s at [[%s]]: %s",
 							$numHits,
 							$regex,
-							$wgUser->getName(),
+							$wgwiki_User->getName(),
 							$title->getPrefixedText(),
 							implode( ", ", $addedMatches ) );
 						$this->action = 'edit';
@@ -496,14 +496,14 @@ class SimpleCaptcha {
 
 	/**
 	 * Hook for user creation form submissions.
-	 * @param User $u
+	 * @param wiki_User $u
 	 * @param string $message
 	 * @return bool true to continue, false to abort user creation
 	 */
-	function confirmUserCreate( $u, &$message ) {
-		global $wgCaptchaTriggers, $wgUser;
+	function confirmwiki_UserCreate( $u, &$message ) {
+		global $wgCaptchaTriggers, $wgwiki_User;
 		if ( $wgCaptchaTriggers['createaccount'] ) {
-			if ( $wgUser->isAllowed( 'skipcaptcha' ) ) {
+			if ( $wgwiki_User->isAllowed( 'skipcaptcha' ) ) {
 				wfDebug( "ConfirmEdit: user group allows skipping captcha on account creation\n" );
 				return true;
 			}
@@ -521,12 +521,12 @@ class SimpleCaptcha {
 
 	/**
 	 * Hook for user login form submissions.
-	 * @param $u User
+	 * @param $u wiki_User
 	 * @param $pass
 	 * @param $retval
 	 * @return bool true to continue, false to abort user creation
 	 */
-	function confirmUserLogin( $u, $pass, &$retval ) {
+	function confirmwiki_UserLogin( $u, $pass, &$retval ) {
 		if ( $this->isBadLoginTriggered() ) {
 			if ( $this->isIPWhitelisted() )
 				return true;
@@ -542,7 +542,7 @@ class SimpleCaptcha {
 	}
 
 	/**
-	 * Check the captcha on Special:EmailUser
+	 * Check the captcha on Special:Emailwiki_User
 	 * @param $from MailAddress
 	 * @param $to MailAddress
 	 * @param $subject String
@@ -550,10 +550,10 @@ class SimpleCaptcha {
 	 * @param $error String reference
 	 * @return Bool true to continue saving, false to abort and show a captcha form
 	 */
-	function confirmEmailUser( $from, $to, $subject, $text, &$error ) {
-		global $wgCaptchaTriggers, $wgUser;
+	function confirmEmailwiki_User( $from, $to, $subject, $text, &$error ) {
+		global $wgCaptchaTriggers, $wgwiki_User;
 		if ( $wgCaptchaTriggers['sendemail'] ) {
-			if ( $wgUser->isAllowed( 'skipcaptcha' ) ) {
+			if ( $wgwiki_User->isAllowed( 'skipcaptcha' ) ) {
 				wfDebug( "ConfirmEdit: user group allows skipping captcha on email sending\n" );
 				return true;
 			}
@@ -566,7 +566,7 @@ class SimpleCaptcha {
 				$error = wfMessage( 'captcha-disabledinapi' )->text();
 				return false;
 			}
-			$this->trigger = "{$wgUser->getName()} sending email";
+			$this->trigger = "{$wgwiki_User->getName()} sending email";
 			if ( !$this->passCaptcha() ) {
 				$error = wfMessage( 'captcha-sendemail-fail' )->text();
 				return false;
@@ -704,10 +704,10 @@ class SimpleCaptcha {
 	 * @return array of strings
 	 */
 	function findLinks( &$editpage, $text ) {
-		global $wgParser, $wgUser;
+		global $wgParser, $wgwiki_User;
 
 		$options = new ParserOptions();
-		$text = $wgParser->preSaveTransform( $text, $editpage->mTitle, $wgUser, $options );
+		$text = $wgParser->preSaveTransform( $text, $editpage->mTitle, $wgwiki_User, $options );
 		$out = $wgParser->parse( $text, $editpage->mTitle, $options );
 
 		return array_keys( $out->getExternalLinks() );

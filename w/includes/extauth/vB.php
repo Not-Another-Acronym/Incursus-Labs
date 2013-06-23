@@ -28,7 +28,7 @@
  * code, only reads from the database.  Example lines to put in
  * LocalSettings.php:
  *
- *   $wgExternalAuthType = 'ExternalUser_vB';
+ *   $wgExternalAuthType = 'Externalwiki_User_vB';
  *   $wgExternalAuthConf = array(
  *       'server' => 'localhost',
  *       'username' => 'forum',
@@ -38,9 +38,9 @@
  *       'cookieprefix' => 'bb'
  *   );
  *
- * @ingroup ExternalUser
+ * @ingroup Externalwiki_User
  */
-class ExternalUser_vB extends ExternalUser {
+class Externalwiki_User_vB extends Externalwiki_User {
 	private $mRow;
 
 	protected function initFromName( $name ) {

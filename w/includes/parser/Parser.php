@@ -51,7 +51,7 @@
  * Globals used:
  *    object: $wgContLang
  *
- * @warning $wgUser or $wgTitle or $wgRequest or $wgLang. Keep them away!
+ * @warning $wgwiki_User or $wgTitle or $wgRequest or $wgLang. Keep them away!
  *
  * @par Settings:
  * $wgLocaltimezone
@@ -171,9 +171,9 @@ class Parser {
 	var $mShowToc, $mForceTocPosition;
 
 	/**
-	 * @var User
+	 * @var wiki_User
 	 */
-	var $mUser; # User object; only used when doing pre-save transform
+	var $mwiki_User; # wiki_User object; only used when doing pre-save transform
 
 	# Temporary
 	# These are variables reset at least once per parse regardless of $clearState
@@ -192,7 +192,7 @@ class Parser {
 	var $mRevisionObject; # The revision object of the specified revision ID
 	var $mRevisionId;   # ID to display in {{REVISIONID}} tags
 	var $mRevisionTimestamp; # The timestamp of the specified revision ID
-	var $mRevisionUser; # User to display in {{REVISIONUSER}} tag
+	var $mRevisionwiki_User; # wiki_User to display in {{REVISIONUSER}} tag
 	var $mRevIdForTs;   # The revision ID which was used to fetch the timestamp
 
 	/**
@@ -279,9 +279,9 @@ class Parser {
 		$this->mLinkHolders = new LinkHolderArray( $this );
 		$this->mLinkID = 0;
 		$this->mRevisionObject = $this->mRevisionTimestamp =
-			$this->mRevisionId = $this->mRevisionUser = null;
+			$this->mRevisionId = $this->mRevisionwiki_User = null;
 		$this->mVarCache = array();
-		$this->mUser = null;
+		$this->mwiki_User = null;
 
 		/**
 		 * Prefix for temporary replacement strings for the multipass parser.
@@ -356,12 +356,12 @@ class Parser {
 		$oldRevisionId = $this->mRevisionId;
 		$oldRevisionObject = $this->mRevisionObject;
 		$oldRevisionTimestamp = $this->mRevisionTimestamp;
-		$oldRevisionUser = $this->mRevisionUser;
+		$oldRevisionwiki_User = $this->mRevisionwiki_User;
 		if ( $revid !== null ) {
 			$this->mRevisionId = $revid;
 			$this->mRevisionObject = null;
 			$this->mRevisionTimestamp = null;
-			$this->mRevisionUser = null;
+			$this->mRevisionwiki_User = null;
 		}
 
 		wfRunHooks( 'ParserBeforeStrip', array( &$this, &$text, &$this->mStripState ) );
@@ -497,7 +497,7 @@ class Parser {
 		$this->mRevisionId = $oldRevisionId;
 		$this->mRevisionObject = $oldRevisionObject;
 		$this->mRevisionTimestamp = $oldRevisionTimestamp;
-		$this->mRevisionUser = $oldRevisionUser;
+		$this->mRevisionwiki_User = $oldRevisionwiki_User;
 		wfProfileOut( $fname );
 		wfProfileOut( __METHOD__ );
 
@@ -596,10 +596,10 @@ class Parser {
 	 * Set the current user.
 	 * Should only be used when doing pre-save transform.
 	 *
-	 * @param $user Mixed: User object or null (to reset)
+	 * @param $user Mixed: wiki_User object or null (to reset)
 	 */
-	function setUser( $user ) {
-		$this->mUser = $user;
+	function setwiki_User( $user ) {
+		$this->mwiki_User = $user;
 	}
 
 	/**
@@ -769,14 +769,14 @@ class Parser {
 	}
 
 	/**
-	 * Get a User object either from $this->mUser, if set, or from the
+	 * Get a wiki_User object either from $this->mwiki_User, if set, or from the
 	 * ParserOptions object otherwise
 	 *
-	 * @return User object
+	 * @return wiki_User object
 	 */
 	function getUser() {
-		if ( !is_null( $this->mUser ) ) {
-			return $this->mUser;
+		if ( !is_null( $this->mwiki_User ) ) {
+			return $this->mwiki_User;
 		}
 		return $this->mOptions->getUser();
 	}
@@ -2826,7 +2826,7 @@ class Parser {
 				# *after* a revision ID has been assigned. This is for null edits.
 				$this->mOutput->setFlag( 'vary-revision' );
 				wfDebug( __METHOD__ . ": {{REVISIONUSER}} used, setting vary-revision...\n" );
-				$value = $this->getRevisionUser();
+				$value = $this->getRevisionwiki_User();
 				break;
 			case 'namespace':
 				$value = str_replace( '_',' ',$wgContLang->getNsText( $this->mTitle->getNamespace() ) );
@@ -2899,7 +2899,7 @@ class Parser {
 				$value = $pageLang->formatNum( SiteStats::users() );
 				break;
 			case 'numberofactiveusers':
-				$value = $pageLang->formatNum( SiteStats::activeUsers() );
+				$value = $pageLang->formatNum( SiteStats::activewiki_Users() );
 				break;
 			case 'numberofpages':
 				$value = $pageLang->formatNum( SiteStats::pages() );
@@ -3365,7 +3365,7 @@ class Parser {
 					$context = new RequestContext;
 					$context->setTitle( $title );
 					$context->setRequest( new FauxRequest( $pageArgs ) );
-					$context->setUser( $this->getUser() );
+					$context->setwiki_User( $this->getUser() );
 					$context->setLanguage( $this->mOptions->getUserLangObj() );
 					$ret = SpecialPageFactory::capturePath( $title, $context );
 					if ( $ret ) {
@@ -4416,14 +4416,14 @@ class Parser {
 	 *
 	 * @param $text String: the text to transform
 	 * @param $title Title: the Title object for the current article
-	 * @param $user User: the User object describing the current user
+	 * @param $user wiki_User: the wiki_User object describing the current user
 	 * @param $options ParserOptions: parsing options
 	 * @param $clearState Boolean: whether to clear the parser state first
 	 * @return String: the altered wiki markup
 	 */
-	public function preSaveTransform( $text, Title $title, User $user, ParserOptions $options, $clearState = true ) {
+	public function preSaveTransform( $text, Title $title, wiki_User $user, ParserOptions $options, $clearState = true ) {
 		$this->startParse( $title, $options, self::OT_WIKI, $clearState );
-		$this->setUser( $user );
+		$this->setwiki_User( $user );
 
 		$pairs = array(
 			"\r\n" => "\n",
@@ -4434,7 +4434,7 @@ class Parser {
 		}
 		$text = $this->mStripState->unstripBoth( $text );
 
-		$this->setUser( null ); #Reset
+		$this->setwiki_User( null ); #Reset
 
 		return $text;
 	}
@@ -4444,7 +4444,7 @@ class Parser {
 	 * @private
 	 *
 	 * @param $text string
-	 * @param $user User
+	 * @param $user wiki_User
 	 *
 	 * @return string
 	 */
@@ -4536,7 +4536,7 @@ class Parser {
 	 * Do not reuse this parser instance after calling getUserSig(),
 	 * as it may have changed if it's the $wgParser.
 	 *
-	 * @param $user User
+	 * @param $user wiki_User
 	 * @param $nickname String|bool nickname to use or false to use user's default nickname
 	 * @param $fancySig Boolean|null whether the nicknname is the complete signature
 	 *                  or null to use default value
@@ -5583,19 +5583,19 @@ class Parser {
 	 *
 	 * @return String: user name
 	 */
-	function getRevisionUser() {
-		if( is_null( $this->mRevisionUser ) ) {
+	function getRevisionwiki_User() {
+		if( is_null( $this->mRevisionwiki_User ) ) {
 			$revObject = $this->getRevisionObject();
 
 			# if this template is subst: the revision id will be blank,
 			# so just use the current user's name
 			if( $revObject ) {
-				$this->mRevisionUser = $revObject->getUserText();
+				$this->mRevisionwiki_User = $revObject->getUserText();
 			} elseif( $this->ot['wiki'] || $this->mOptions->getIsPreview() ) {
-				$this->mRevisionUser = $this->getUser()->getName();
+				$this->mRevisionwiki_User = $this->getUser()->getName();
 			}
 		}
-		return $this->mRevisionUser;
+		return $this->mRevisionwiki_User;
 	}
 
 	/**
@@ -5672,8 +5672,8 @@ class Parser {
 	 *
 	 * Accepts a text string and then removes all wikitext from the
 	 * string and leaves only the resultant text (i.e. the result of
-	 * [[User:WikiSysop|Sysop]] would be "Sysop" and the result of
-	 * [[User:WikiSysop]] would be "User:WikiSysop") - this is intended
+	 * [[wiki_User:WikiSysop|Sysop]] would be "Sysop" and the result of
+	 * [[wiki_User:WikiSysop]] would be "wiki_User:WikiSysop") - this is intended
 	 * to create valid section anchors by mimicing the output of the
 	 * parser when headings are parsed.
 	 *

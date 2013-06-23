@@ -65,7 +65,7 @@ class LocalFile extends File {
 		$metadata,         # Handler-specific metadata
 		$timestamp,        # Upload timestamp
 		$sha1,             # SHA-1 base 36 content hash
-		$user, $user_text, # User, who uploaded the file
+		$user, $user_text, # wiki_User, who uploaded the file
 		$description,      # Description of current revision of the file
 		$dataLoaded,       # Whether or not all this has been loaded from the database (loadFromXxx)
 		$upgraded,         # Whether the row was upgraded on load
@@ -958,7 +958,7 @@ class LocalFile extends File {
 	 *               upload time when uploading virtual URLs for which the file info
 	 *               is already known
 	 * @param $timestamp String|bool: timestamp for img_timestamp, or false to use the current time
-	 * @param $user User|null: User object or null to use $wgUser
+	 * @param $user wiki_User|null: wiki_User object or null to use $wgwiki_User
 	 *
 	 * @return FileRepoStatus object. On success, the value member contains the
 	 *     archive name, or an empty string if it was a new file.
@@ -1011,8 +1011,8 @@ class LocalFile extends File {
 		}
 
 		if ( $watch ) {
-			global $wgUser;
-			$wgUser->addWatch( $this->getTitle() );
+			global $wgwiki_User;
+			$wgwiki_User->addWatch( $this->getTitle() );
 		}
 		return true;
 	}
@@ -1024,7 +1024,7 @@ class LocalFile extends File {
 	 * @param $pageText string
 	 * @param $props bool|array
 	 * @param $timestamp bool|string
-	 * @param $user null|User
+	 * @param $user null|wiki_User
 	 * @return bool
 	 */
 	function recordUpload2(
@@ -1033,8 +1033,8 @@ class LocalFile extends File {
 		wfProfileIn( __METHOD__ );
 
 		if ( is_null( $user ) ) {
-			global $wgUser;
-			$user = $wgUser;
+			global $wgwiki_User;
+			$user = $wgwiki_User;
 		}
 
 		$dbw = $this->repo->getMasterDB();
@@ -1484,7 +1484,7 @@ class LocalFile extends File {
 	/**
 	 * @return string
 	 */
-	function getDescription( $audience = self::FOR_PUBLIC, User $user = null ) {
+	function getDescription( $audience = self::FOR_PUBLIC, wiki_User $user = null ) {
 		$this->load();
 		if ( $audience == self::FOR_PUBLIC && $this->isDeleted( self::DELETED_COMMENT ) ) {
 			return '';
@@ -1724,11 +1724,11 @@ class LocalFileDeleteBatch {
 	}
 
 	function doDBInserts() {
-		global $wgUser;
+		global $wgwiki_User;
 
 		$dbw = $this->file->repo->getMasterDB();
 		$encTimestamp = $dbw->addQuotes( $dbw->timestamp() );
-		$encUserId = $dbw->addQuotes( $wgUser->getId() );
+		$encwiki_UserId = $dbw->addQuotes( $wgwiki_User->getId() );
 		$encReason = $dbw->addQuotes( $this->reason );
 		$encGroup = $dbw->addQuotes( 'deleted' );
 		$ext = $this->file->getExtension();
@@ -1755,7 +1755,7 @@ class LocalFileDeleteBatch {
 				array(
 					'fa_storage_group' => $encGroup,
 					'fa_storage_key'   => "CASE WHEN img_sha1='' THEN '' ELSE $concat END",
-					'fa_deleted_user'      => $encUserId,
+					'fa_deleted_user'      => $encwiki_UserId,
 					'fa_deleted_timestamp' => $encTimestamp,
 					'fa_deleted_reason'    => $encReason,
 					'fa_deleted'		   => $this->suppress ? $bitfield : 0,
@@ -1786,7 +1786,7 @@ class LocalFileDeleteBatch {
 				array(
 					'fa_storage_group' => $encGroup,
 					'fa_storage_key'   => "CASE WHEN oi_sha1='' THEN '' ELSE $concat END",
-					'fa_deleted_user'      => $encUserId,
+					'fa_deleted_user'      => $encwiki_UserId,
 					'fa_deleted_timestamp' => $encTimestamp,
 					'fa_deleted_reason'    => $encReason,
 					'fa_deleted'           => $this->suppress ? $bitfield : 'oi_deleted',

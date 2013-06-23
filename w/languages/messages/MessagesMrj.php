@@ -45,7 +45,7 @@ $namespaceAliases = array(
 $namespaceGenderAliases = array();
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Ажедмӓшвлӓм ыдыралаш',
 'tog-justify' => 'Текстӹм ӹлӹштӓш кымдык тӧрлӓш',
 'tog-hideminor' => 'Изи тӧрлӹмӓшвлӓм у вашталтымашвлӓ лошты шӹлташ, анжыкташ агыл',
@@ -262,7 +262,7 @@ $messages = array(
 
 Тенге ӹлӹштӓшӹн вашталтымашвлӓштӹ тошты ажедмӓшвлӓм анжыктымы
 годым лиӓлтеш.
-Ядмаш тиштӹ агыл гӹнь , лин кердеш, тӹнӓм тӓ программышты тамахань самыньым монда. Пуры лидӓ, тидӹ гишӓн увертӓрӹдӓ [[Special:ListUsers/sysop|администратор]], анжыктен URL.',
+Ядмаш тиштӹ агыл гӹнь , лин кердеш, тӹнӓм тӓ программышты тамахань самыньым монда. Пуры лидӓ, тидӹ гишӓн увертӓрӹдӓ [[Special:Listwiki_Users/sysop|администратор]], анжыктен URL.',
 'missingarticle-rev' => '(верси № $1)',
 'badtitletext' => 'Ядмы ӹлӹштӓшдӓн лӹмжӹ самынь, охыр, лин кердеш тӧр агыл лӹмӹм ӓль интервикым анжыктендӓ,  ӓнят лӹмӹштӹ кычылташ лидӹмӹ символым сирендӓ.',
 'viewsource' => 'Анжен лӓктӓш',
@@ -387,7 +387,7 @@ $messages = array(
 
 'grouppage-sysop' => '{{ns:project}}:Администраторвлӓ',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Сирӹшӹн прававлӓжӹм анжыктышы журнал',
 
 # Associated actions - in the sentence "You do not have permission to X"

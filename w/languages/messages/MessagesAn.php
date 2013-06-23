@@ -120,8 +120,8 @@ $specialPageAliases = array(
 	'Unusedimages'              => array( 'Fichers_no_emplegatos', 'Fichers_sin_emplegar', 'Imáchens_no_emplegatas', 'Imáchens_sin_emplegar' ),
 	'Unwatchedpages'            => array( 'Pachinas_no_cosiratas', 'Pachinas_sin_cosirar' ),
 	'Upload'                    => array( 'Cargar', 'Puyar' ),
-	'Userlogin'                 => array( 'Encetar_sesión', 'Enzetar_sesión', 'Dentrar' ),
-	'Userlogout'                => array( 'Salir', 'Rematar_sesión' ),
+	'wiki_Userlogin'                 => array( 'Encetar_sesión', 'Enzetar_sesión', 'Dentrar' ),
+	'wiki_Userlogout'                => array( 'Salir', 'Rematar_sesión' ),
 	'Version'                   => array( 'Versión', 'Bersión' ),
 	'Wantedcategories'          => array( 'Categorías_requiestas', 'Categorías_demandatas' ),
 	'Wantedfiles'               => array( 'Fichers_requiestos', 'Fichers_demandaus', 'Archibos_requiestos', 'Archibos_demandatos' ),
@@ -131,7 +131,7 @@ $specialPageAliases = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Subrayar os vinclos:',
 'tog-justify' => 'Achustar parrafos',
 'tog-hideminor' => 'Amagar edicions menors en a pachina de "zaguers cambeos"',
@@ -469,7 +469,7 @@ L'almenistrador que la bloqueyó dió ista esplicación:
 Cal que a razón d'isto siga que s'ha seguito un diff no esviellato u un vinclo ta l'historial d'una pachina que ya s'ha borrato.
 
 Si no ye iste o caso, talment haiga trobato un error en o software.
-Por favor, comunique-lo a un [[Special:ListUsers/sysop|almenistrador]] indicando-le l'adreza URL.",
+Por favor, comunique-lo a un [[Special:Listwiki_Users/sysop|almenistrador]] indicando-le l'adreza URL.",
 'missingarticle-rev' => '(versión#: $1)',
 'missingarticle-diff' => '(Esf: $1, $2)',
 'readonly_lag' => 'A base de datos ye bloqueyata temporalment entre que os servidors se sincronizan.',
@@ -511,7 +511,7 @@ Consulta: $2',
 'customcssprotected' => 'No tiene permisos ta editar a pachina CSS porque contién parametros personal de belatro usuario.',
 'customjsprotected' => 'No tien permisos ta editar a pachina JavaScript porque contién os parametros personas de belatro usuario.',
 'ns-specialprotected' => "No ye posible editar as pachinas d'o espacio de nombres {{ns:special}}.",
-'titleprotected' => "Iste títol no puede creyar-se porque ye estato protechito por [[User:$1|$1]].
+'titleprotected' => "Iste títol no puede creyar-se porque ye estato protechito por [[wiki_User:$1|$1]].
 A razón data ye ''$2''.",
 
 # Virus scanner
@@ -522,7 +522,7 @@ A razón data ye ''$2''.",
 # Login and logout pages
 'logouttext' => "'''Ha rematato a sesión.'''
 
-Puede continar navegando por {{SITENAME}} anonimament, u puede [[Special:UserLogin|encetar]] una nueva sesión con o mesmo nombre d'usuario u bell atro diferent. Pare cuenta que, entre que se limpia a caché d'o navegador, puet estar que bellas pachinas s'amuestren como si encara continase en a sesión anterior.",
+Puede continar navegando por {{SITENAME}} anonimament, u puede [[Special:wiki_UserLogin|encetar]] una nueva sesión con o mesmo nombre d'usuario u bell atro diferent. Pare cuenta que, entre que se limpia a caché d'o navegador, puet estar que bellas pachinas s'amuestren como si encara continase en a sesión anterior.",
 'welcomecreation' => "== ¡Bienveniu(da), $1! ==
 S'ha creyato a suya cuenta.
 No xublide de presonalizar [[Special:Preferences|as suyas preferencias en {{SITENAME}}]].",
@@ -562,7 +562,7 @@ Por favor, trigue-ne uno de diferent.",
 'loginsuccess' => 'Ha encetato una sesión en {{SITENAME}} como "$1".',
 'nosuchuser' => 'No bi ha garra usuario clamato "$1".
 Os nombres d\'usuario son sensibles a las mayusclas.
-Comprebe si ha escrito bien o nombre u [[Special:UserLogin/signup|creye una nueva cuenta d\'usuario]].',
+Comprebe si ha escrito bien o nombre u [[Special:wiki_UserLogin/signup|creye una nueva cuenta d\'usuario]].',
 'nosuchusershort' => 'No bi ha garra usuario con o nombre "$1". Comprebe si o nombre ye bien escrito.',
 'nouserspecified' => "Ha d'escribir un nombre d'usuario.",
 'login-userblocked' => "Iste usuario ye bloqueyau. No se permite l'inicio de sesión.",
@@ -741,7 +741,7 @@ Talment bell un l'haiga moviu u borrau entre que vusté vesitaba a pachina.",
 'loginreqlink' => 'encetar una sesión',
 'loginreqpagetext' => 'Ha de $1 ta veyer atras pachinas.',
 'accmailtitle' => "S'ha ninviau a clau.",
-'accmailtext' => "S'ha ninviato a $2 una clau ta [[User talk:$1|$1]] chenerata aliatoriament.
+'accmailtext' => "S'ha ninviato a $2 una clau ta [[wiki_User talk:$1|$1]] chenerata aliatoriament.
 
 A clau ta ista nueva cuenta la puet cambiar en a pachina ''[[Special:ChangePassword|Cambiar a clau]]'' dimpués d'haber dentrato en ella.",
 'newarticle' => '(Nuevo)',
@@ -750,7 +750,7 @@ Ta creyar a pachina, prencipie a escribir en a caixa d'abaixo (mire-se l'[[{{Med
 Si ye plegau por error, punche o botón \"enta zaga\" d'o suyo navegador.",
 'anontalkpagetext' => "----''Ista ye a pachina de descusión d'un usuario anonimo que encara no ha creyato una cuenta, u no l'ha feito servir. Por ixo, hemos d'emplegar a suya adreza IP ta identificar-lo/a.
 Diferents usuarios pueden compartir una mesma adreza IP.
-Si vusté ye un usuario anonimo y creye que l'han escrito comentarios no relevants, [[Special:UserLogin/signup|creye una cuenta]] u [[Special:UserLogin/signup|identifique-se]] ta privar confusions futuras con atros usuarios anonimos.''",
+Si vusté ye un usuario anonimo y creye que l'han escrito comentarios no relevants, [[Special:wiki_UserLogin/signup|creye una cuenta]] u [[Special:wiki_UserLogin/signup|identifique-se]] ta privar confusions futuras con atros usuarios anonimos.''",
 'noarticletext' => 'Por agora no bi ha garra texto en ista pachina. Puet [[Special:Search/{{PAGENAME}}|mirar o títol d\'ista pachina]] en atras pachinas, <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} mirar os rechistros relacionatos] u [{{fullurl:{{FULLPAGENAME}}|action=edit}} escribir ista pachina]</span>.',
 'noarticletext-nopermission' => 'Por l\'inte no i hai garra texto en ista pachina.
 Puet [[Special:Search/{{PAGENAME}}|mirar iste títol]] en atras páginas,
@@ -779,12 +779,12 @@ A zaguera dentrada d'o rechistro de bloqueyos s'amuestra contino:",
 'note' => "'''Nota:'''",
 'previewnote' => "'''Pare cuenta que isto no ye que l'anvista previa d'a pachina; os cambeos encara no s'ha alzato!'''",
 'previewconflict' => "L'anvista previa li amostrará l'aparencia d'o texto dimpués d'alzar os cambeos.",
-'session_fail_preview' => "'''Ya lo sentimos, pero no hemos puesto alzar a suya edición por una perda d'os datos de sesion. Por favor, prebe de fer-lo una atra vez, y si encara no funciona, [[Special:UserLogout|salga d'a sesión]] y torne a identificar-se.'''",
+'session_fail_preview' => "'''Ya lo sentimos, pero no hemos puesto alzar a suya edición por una perda d'os datos de sesion. Por favor, prebe de fer-lo una atra vez, y si encara no funciona, [[Special:wiki_UserLogout|salga d'a sesión]] y torne a identificar-se.'''",
 'session_fail_preview_html' => "'''Ya lo sentimos, pero no s'ha puesto procesar a suya edición por haber-se trafegato os datos de sesión.'''
 
 ''Como que {{SITENAME}} tiene l'HTML puro activato, s'ha amagato l'anviesta previa ta aprevenir ataques en JavaScript.''
 
-'''Si ye mirando d'editar lechitimament, por favor, prebe una atra vegada. Si encara no funcionase alavez, prebe de [[Special:UserLogout|zarrar a sesión]] y dentrar-ie identificando-se de nuevas.'''",
+'''Si ye mirando d'editar lechitimament, por favor, prebe una atra vegada. Si encara no funcionase alavez, prebe de [[Special:wiki_UserLogout|zarrar a sesión]] y dentrar-ie identificando-se de nuevas.'''",
 'token_suffix_mismatch' => "'''S'ha refusato a suya edición porque o suyo client ha esbarafundiato os carácters de puntuación en o editor. A edición s'ha refusata ta privar a corrompición d'a pachina de texto. Isto gosa escaixer quan se fa servir un servicio de proxy defectuoso alazetato en a web.'''",
 'edit_form_incomplete' => "'''Bellas partes d'o formulario de modificación no han plegato en o servidor, verifique que as suyas modificacions son intactas y mire de fer-lo de nuevas.'''",
 'editing' => 'Editando $1',
@@ -823,7 +823,7 @@ Como información adicional s'amuestra contino a zaguera dentrada en o rechistro
 'edittools' => "<!-- Iste testo amanixerá baxo os formularios d'edizión y carga. -->",
 'edittools-upload' => '-',
 'nocreatetitle' => "S'ha restrinchito a creyación de pachinas",
-'nocreatetext' => '{{SITENAME}} ha restrinchito a creyación de nuevas pachinas. Puede tornar enta zaga y editar una pachina ya existent, [[Special:UserLogin|identificarse u creyar una cuenta]].',
+'nocreatetext' => '{{SITENAME}} ha restrinchito a creyación de nuevas pachinas. Puede tornar enta zaga y editar una pachina ya existent, [[Special:wiki_UserLogin|identificarse u creyar una cuenta]].',
 'nocreate-loggedin' => 'No tiene premiso ta creyar nuevas pachinas.',
 'sectioneditnotsupported-title' => 'A edición por seccions no ye suportada',
 'sectioneditnotsupported-text' => 'A edición por seccions no ye suportada en ista pachina',
@@ -865,11 +865,11 @@ Bellas plantillas no se bi incluyen.",
 Antes de desfer a edición, mire-se a siguient comparanza ta comprebar que ye ixo o que quiere fer, y alce alavez os cambios ta desfer asinas a edición.',
 'undo-failure' => 'No se puet desfer a edición pues un atro usuario ha feito una edición intermeya.',
 'undo-norev' => "No s'ha puesto desfer a edición porque no existiba u ya s'heba borrato.",
-'undo-summary' => 'Desfeita a edición $1 de [[Special:Contributions/$2|$2]] ([[User talk:$2|desc.]])',
+'undo-summary' => 'Desfeita a edición $1 de [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|desc.]])',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'No se puede creyar a cuenta',
-'cantcreateaccount-text' => "A creyación de cuentas dende ixa adreza IP ('''$1''') estió bloqueyata por [[User:$3|$3]].
+'cantcreateaccount-text' => "A creyación de cuentas dende ixa adreza IP ('''$1''') estió bloqueyata por [[wiki_User:$3|$3]].
 
 A razón indicada por $3 ye ''$2''",
 
@@ -1120,7 +1120,7 @@ Asegure-se que iste cambio no trencará a continidat de l'historial d'a pachina.
 'mypreferences' => 'Preferencias',
 'prefs-edits' => "Numero d'edicions:",
 'prefsnologin' => 'No ye identificato',
-'prefsnologintext' => 'Ha d\'haber <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} encetato una sesión] </span> ta cambiar as preferencias d\'usuario.',
+'prefsnologintext' => 'Ha d\'haber <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} encetato una sesión] </span> ta cambiar as preferencias d\'usuario.',
 'changepassword' => 'Cambiar a clau',
 'prefs-skin' => 'Aparencia',
 'skin-preview' => 'Fer una prebatina',
@@ -1232,16 +1232,16 @@ Habría de tener menos de $1 {{PLURAL:$1|carácter|carácters}}.',
 'prefs-displaywatchlist' => 'Opcions de visualización',
 'prefs-diffs' => 'Diferencias',
 
-# User preference: e-mail validation using jQuery
+# wiki_User preference: e-mail validation using jQuery
 'email-address-validity-valid' => "L'adreza de correu electronico pareix valida",
 'email-address-validity-invalid' => 'Escriba una adreza valida de correu electronico',
 
-# User rights
+# wiki_User rights
 'userrights' => "Confeguración d'os dreitos d'os usuarios",
 'userrights-lookup-user' => "Confegurar collas d'usuarios",
 'userrights-user-editname' => "Escriba un nombre d'usuario:",
 'editusergroup' => "Editar as collas d'usuarios",
-'editinguser' => "S'está cambiando os permisos de l'usuario '''[[User:$1|$1]]''' $2",
+'editinguser' => "S'está cambiando os permisos de l'usuario '''[[wiki_User:$1|$1]]''' $2",
 'userrights-editusergroup' => "Editar as collas d'usuarios",
 'saveusergroups' => "Alzar as collas d'usuarios",
 'userrights-groupsmember' => 'Miembro de:',
@@ -1253,7 +1253,7 @@ Habría de tener menos de $1 {{PLURAL:$1|carácter|carácters}}.',
 'userrights-reason' => 'Razón:',
 'userrights-no-interwiki' => "No tiene premiso ta editar os dreitos d'usuario en atras wikis.",
 'userrights-nodatabase' => 'A base de datos $1 no existe u no ye local.',
-'userrights-nologin' => "Ha d'[[Special:UserLogin|encetar una sesión]] con una cuenta d'almenistrador ta poder dar dreitos d'usuario.",
+'userrights-nologin' => "Ha d'[[Special:wiki_UserLogin|encetar una sesión]] con una cuenta d'almenistrador ta poder dar dreitos d'usuario.",
 'userrights-notallowed' => "A suya cuenta no tien permisos ta asignar u desasignar permisos d'usuario.",
 'userrights-changeable-col' => 'Grupos que puede cambiar',
 'userrights-unchangeable-col' => 'Collas que no puede cambiar',
@@ -1343,7 +1343,7 @@ Habría de tener menos de $1 {{PLURAL:$1|carácter|carácters}}.',
 'right-sendemail' => 'Ninviar un correu electronico a atros usuarios',
 'right-passwordreset' => 'Veyer os correus electronicos de restabimiento de claus',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => "Rechistro de cambios en os dreitos d'os usuarios",
 'rightslogtext' => "Iste ye un rechistro d'os cambios en os dreitos d'os usuarios",
 'rightslogentry' => "ha cambiato os dreitos d'usuario de $1: de $2 a $3",
@@ -1438,7 +1438,7 @@ Habría de tener menos de $1 {{PLURAL:$1|carácter|carácters}}.',
 'reuploaddesc' => 'Anular a carga y tornar ta o formulario de carga de fichers.',
 'upload-tryagain' => "Ninviar a descripción de l'archivo modificau",
 'uploadnologin' => 'No ha encetato una sesión',
-'uploadnologintext' => "Ha d'estar [[Special:UserLogin|rechistrau]] ta cargar fichers.",
+'uploadnologintext' => "Ha d'estar [[Special:wiki_UserLogin|rechistrau]] ta cargar fichers.",
 'upload_directory_missing' => 'O directorio de carga ($1) no existe y no lo puede creyar o servidor web.',
 'upload_directory_read_only' => 'O servidor web no puede escribir en o directorio de carga de fichers ($1).',
 'uploaderror' => "S'ha producito una error en cargar o fichero",
@@ -1563,9 +1563,9 @@ $1',
 'upload-proto-error' => 'Protocolo incorrecto',
 'upload-proto-error-text' => 'Si quiere cargar fichers dende atra pachina, a URL ha de prencipiar por <code>http://</code> u <code>ftp://</code>.',
 'upload-file-error' => 'Error interna',
-'upload-file-error-text' => "Ha escaicito una error interna entre que se prebaba de creyar un fichero temporal en o servidor. Por favor, contaute con un [[Special:ListUsers/sysop|almenistrador]] d'o sistema.",
+'upload-file-error-text' => "Ha escaicito una error interna entre que se prebaba de creyar un fichero temporal en o servidor. Por favor, contaute con un [[Special:Listwiki_Users/sysop|almenistrador]] d'o sistema.",
 'upload-misc-error' => 'Error esconoixita en a carga',
-'upload-misc-error-text' => "Ha escaixito una error entre que se cargaba o fichero. Por favor, comprebe que a URL ye conforme y accesible y dimpués prebe de fer-lo una atra vegada. Si o problema contina, contaute con un [[Special:ListUsers/sysop|almenistrador]] d'o sistema.",
+'upload-misc-error-text' => "Ha escaixito una error entre que se cargaba o fichero. Por favor, comprebe que a URL ye conforme y accesible y dimpués prebe de fer-lo una atra vegada. Si o problema contina, contaute con un [[Special:Listwiki_Users/sysop|almenistrador]] d'o sistema.",
 'upload-too-many-redirects' => 'A URL contien masiadas endreceras',
 'upload-unknown-size' => 'Grandaria desconoixid',
 'upload-http-error' => 'Ha ocorriu una error HTTP: $1',
@@ -1789,7 +1789,7 @@ Debaixo s'amuestra a descripción d'a suya [$2 pachina de descripción].",
 'statistics-views-total' => 'Total de vesitas',
 'statistics-views-total-desc' => "No s'inclui as vesitas a pachinas inexistents ni a pachinas especials",
 'statistics-views-peredit' => 'Vesitas por edición',
-'statistics-users' => '[[Special:ListUsers|Usuarios]] rechistratos',
+'statistics-users' => '[[Special:Listwiki_Users|Usuarios]] rechistratos',
 'statistics-users-active' => 'Usuarios activos',
 'statistics-users-active-desc' => 'Usuarios que han feito qualsiquier acción en {{PLURAL:$1|o zaguer día|os zaguers $1 días}}',
 'statistics-mostpopular' => 'Pachinas más vistas',
@@ -1946,13 +1946,13 @@ Protocolos suportados: <code>$1</code> (no los adhiba en a suya busca).',
 'linksearch-line' => '$1 tiene un vinclo dende $2',
 'linksearch-error' => "Os carácters comodín nomás pueden apareixer en o prencipio d'o nombre d'o sitio.",
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => 'Amostrar usuarios que o nombre suyo prencipie por:',
 'listusers-submit' => 'Amostrar',
 'listusers-noresult' => "No s'ha trobato ixe usuario.",
 'listusers-blocked' => '({{GENDER:$1|bloqueyato|bloqueyata}})',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => "Lista d'usuarios activos",
 'activeusers-intro' => "Ista ye una lista d'usuarios que han teniu bella actividat en os zaguers $1 {{PLURAL:$1|diya|diyas}}.",
 'activeusers-count' => '$1 {{PLURAL:$1|edición|edicions}} en os zaguers {{PLURAL:$3|diya|$3 diyas}}',
@@ -1985,7 +1985,7 @@ Protocolos suportados: <code>$1</code> (no los adhiba en a suya busca).',
 
 # E-mail user
 'mailnologin' => "No ninviar l'adreza",
-'mailnologintext' => "Ha d'haber [[Special:UserLogin|encetato una sesión]] y tener una adreza conforme de correu-e en as suyas [[Special:Preferences|preferencias]] ta ninviar un correu electronico ta atros usuarios.",
+'mailnologintext' => "Ha d'haber [[Special:wiki_UserLogin|encetato una sesión]] y tener una adreza conforme de correu-e en as suyas [[Special:Preferences|preferencias]] ta ninviar un correu electronico ta atros usuarios.",
 'emailuser' => 'Ninviar un correu electronico ta iste usuario',
 'emailpage' => "Ninviar correu ta l'usuario",
 'emailpagetext' => 'Puede fer servir o formulario que bi ye contino ta ninviar un correu electronico a iste usuario.
@@ -2014,7 +2014,7 @@ L\'adreza de correu-e que endicó en as suyas [[Special:Preferences|preferencias
 'emailsenttext' => "S'ha ninviato o suyo correu.",
 'emailuserfooter' => 'Iste correu-e s\'ha ninviato por $1 ta $2 fendo servir a función "Email user" de {{SITENAME}}.',
 
-# User Messenger
+# wiki_User Messenger
 'usermessage-summary' => 'Deixando un mensache de sistema.',
 'usermessage-editor' => "Mensachero d'o sistema",
 
@@ -2025,7 +2025,7 @@ L\'adreza de correu-e que endicó en as suyas [[Special:Preferences|preferencias
 'nowatchlist' => 'No tien garra pachina en a lista de seguimiento.',
 'watchlistanontext' => "Ha de $1 ta veyer u editar as dentradas d'a suya lista de seguimiento.",
 'watchnologin' => 'No ha encetato a sesión',
-'watchnologintext' => "Ha d'estar [[Special:UserLogin|identificato]] ta poder cambiar a suya lista de seguimiento.",
+'watchnologintext' => "Ha d'estar [[Special:wiki_UserLogin|identificato]] ta poder cambiar a suya lista de seguimiento.",
 'addwatch' => 'Adhibir ta la lista de seguimiento',
 'addedwatchtext' => "A pachina «[[:\$1]]» s'ha adhibito t'a suya [[Special:Watchlist|lista de seguimiento]]. Os cambios esdevenideros en ista pachina y en a suya pachina de descusión asociata s'indicarán astí, y a pachina amanixerá '''en negreta''' en a [[Special:RecentChanges|lista de cambios recients]] ta que se veiga millor. <p>Si nunca quiere borrar a pachina d'a suya lista de seguimiento, punche \"Deixar de cosirar\" en o menú.",
 'removewatch' => "Sacar d'a lista de seguimiento",
@@ -2129,12 +2129,12 @@ Se veiga en $2 un rechistro d\'os borraus recients.',
 'rollbacklink' => 'revertir',
 'rollbackfailed' => "No s'ha puesto revertir",
 'cantrollback' => "No se pueden revertir as edicions; o zaguer colaborador ye o solo autor d'iste articlo.",
-'alreadyrolled' => "No se puet desfer a zaguer edición de [[:$1]] feita por [[User:$2|$2]] ([[User talk:$2|descusión]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]); belatro usuario ya ha editato u desfeito edicions en ixa pachina.
+'alreadyrolled' => "No se puet desfer a zaguer edición de [[:$1]] feita por [[wiki_User:$2|$2]] ([[wiki_User talk:$2|descusión]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]); belatro usuario ya ha editato u desfeito edicions en ixa pachina.
 
-A zaguer edición d'a pachina la fació [[User:$3|$3]] ([[User talk:$3|descusión]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).",
+A zaguer edición d'a pachina la fació [[wiki_User:$3|$3]] ([[wiki_User talk:$3|descusión]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).",
 'editcomment' => "O resumen d'a edición ye: \"''\$1''\".",
-'revertpage' => "S'han revertito as edicions de [[Special:Contributions/$2|$2]] ([[User talk:$2|Descusión]]); tornando t'a zaguera versión editada por [[User:$1|$1]]",
-'revertpage-nouser' => "S'han revertito as edicions feitas por (nombre d'usuario eliminato) a la zaguera versión feita por [[User:$1|$1]]",
+'revertpage' => "S'han revertito as edicions de [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Descusión]]); tornando t'a zaguera versión editada por [[wiki_User:$1|$1]]",
+'revertpage-nouser' => "S'han revertito as edicions feitas por (nombre d'usuario eliminato) a la zaguera versión feita por [[wiki_User:$1|$1]]",
 'rollback-success' => "Revertidas as edicions de $1; s'ha retornato t'a zaguer versión de $2.",
 
 # Edit tokens
@@ -2361,7 +2361,7 @@ as pachinas que s'han vandalizato).",
 'unblockip' => 'Desbloqueyar usuario',
 'unblockiptext' => "Replene o formulario que bi ha contino ta tornar os premisos d'escritura ta una adreza IP u cuenta d'usuario que haiga estato bloqueyata.",
 'ipusubmit' => 'Debantar ista bloqueyo',
-'unblocked' => '[[User:$1|$1]] ha estato desbloqueyato',
+'unblocked' => '[[wiki_User:$1|$1]] ha estato desbloqueyato',
 'unblocked-range' => "$1 s'ha desbloqueyau",
 'unblocked-id' => "S'ha sacato o bloqueyo $1",
 'blocklist' => 'Usuarios bloqueyaus',
@@ -2394,7 +2394,7 @@ as pachinas que s'han vandalizato).",
 'change-blocklink' => 'cambear bloqueyo',
 'contribslink' => 'contrebucions',
 'emaillink' => 'ninviar correu electronico',
-'autoblocker' => 'Ye bloqueyato automaticament porque a suya adreza IP l\'ha feito servir recientement "[[User:$1|$1]]". A razón data ta bloqueyar a "[[User:$1|$1]]" estió "$2".',
+'autoblocker' => 'Ye bloqueyato automaticament porque a suya adreza IP l\'ha feito servir recientement "[[wiki_User:$1|$1]]". A razón data ta bloqueyar a "[[wiki_User:$1|$1]]" estió "$2".',
 'blocklogpage' => 'Rechistro de bloqueyos',
 'blocklog-showlog' => "Iste usuario ya ha estau bloqueyau.
 Ta más detalles, debaixo s'amuestro o rechistro de bloqueyos:",
@@ -2489,7 +2489,7 @@ En ixos casos, si lo deseya, habrá de tresladar u combinar manualment o conteni
 'movearticle' => 'Tresladar pachina:',
 'moveuserpage-warning' => "'''Pare cuenta:''' ye en momentos de tresladar una pachina d'usuario. Pare cuenta en que nomás a pachina será tresladada peor l'usuario '''no''' será renombrau.",
 'movenologin' => 'No ha encetato sesión',
-'movenologintext' => 'Amenista estar un usuario rechistrato y [[Special:UserLogin|aber-se identificato encetando una sesión]] ta tresladar una pachina.',
+'movenologintext' => 'Amenista estar un usuario rechistrato y [[Special:wiki_UserLogin|aber-se identificato encetando una sesión]] ta tresladar una pachina.',
 'movenotallowed' => 'No tiene premisos ta tresladar pachinas.',
 'movenotallowedfile' => 'No tien premiso ta tresladar fichers.',
 'cant-move-user-page' => "No tien premiso ta tresladar pachinas d'usuario (fueras de subpachinas).",
@@ -3315,7 +3315,7 @@ Iste codigo no ye necesario ta dentrar, pero amenistará escribir-lo antis d'act
 O programa retornó o siguient codigo d'error: $1",
 'confirmemail_invalid' => 'O codigo de confirmación no ye conforme. Regular que o codigo sía circumducito.',
 'confirmemail_needlogin' => 'Amenistar $1 ta confirmar a suya adreza de correu-e.',
-'confirmemail_success' => 'A suya adreza de correu-e ya ye confirmata. Agora puede [[Special:UserLogin|dentrar]] en o wiki y gronxiar-se-ie.',
+'confirmemail_success' => 'A suya adreza de correu-e ya ye confirmata. Agora puede [[Special:wiki_UserLogin|dentrar]] en o wiki y gronxiar-se-ie.',
 'confirmemail_loggedin' => 'A suya adreza de correu-e ya ye confirmata.',
 'confirmemail_error' => 'Bella cosa falló en alzar a suya confirmación.',
 'confirmemail_subject' => "confirmación de l'adreza de correu-e de {{SITENAME}}",
@@ -3365,10 +3365,10 @@ Iste codigo de confirmación circumducirá o $4.",
 
 # Delete conflict
 'deletedwhileediting' => "Pare cuenta: Ista pachina s'ha borrato dimpués de que vusté prencipiase a editar!",
-'confirmrecreate' => "L'usuario [[User:$1|$1]] ([[User talk:$1|descusión]]) ha borrato iste articlo dimpués que vusté prencipase a editar-lo, y ha dato a siguient razón:
+'confirmrecreate' => "L'usuario [[wiki_User:$1|$1]] ([[wiki_User talk:$1|descusión]]) ha borrato iste articlo dimpués que vusté prencipase a editar-lo, y ha dato a siguient razón:
 : ''$2''
 Por favor, confirme que reyalment deseya tornar a creyar l'articlo.",
-'confirmrecreate-noreason' => "L'usuario [[User:$1|$1]] ([[User talk:$1|discusión]]) borró ista pachina dimpués que vusté prencipiase a editar-la. Por favor confirme que realment quiere tornar a creyar ista pachina.",
+'confirmrecreate-noreason' => "L'usuario [[wiki_User:$1|$1]] ([[wiki_User talk:$1|discusión]]) borró ista pachina dimpués que vusté prencipiase a editar-la. Por favor confirme que realment quiere tornar a creyar ista pachina.",
 'recreate' => 'Tornar a creyar',
 
 # action=purge

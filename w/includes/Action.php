@@ -184,9 +184,9 @@ abstract class Action {
 	}
 
 	/**
-	 * Shortcut to get the User being used for this instance
+	 * Shortcut to get the wiki_User being used for this instance
 	 *
-	 * @return User
+	 * @return wiki_User
 	 */
 	public final function getUser() {
 		return $this->getContext()->getUser();
@@ -271,11 +271,11 @@ abstract class Action {
 	 * overridden by sub-classes with more complicated permissions schemes.  Failures here
 	 * must throw subclasses of ErrorPageError
 	 *
-	 * @param $user User: the user to check, or null to use the context user
+	 * @param $user wiki_User: the user to check, or null to use the context user
 	 * @throws ErrorPageError
 	 * @return bool True on success
 	 */
-	protected function checkCanExecute( User $user ) {
+	protected function checkCanExecute( wiki_User $user ) {
 		$right = $this->getRestriction();
 		if ( $right !== null ) {
 			$errors = $this->getTitle()->getUserPermissionsErrors( $right, $user );
@@ -286,7 +286,7 @@ abstract class Action {
 
 		if ( $this->requiresUnblock() && $user->isBlocked() ) {
 			$block = $user->getBlock();
-			throw new UserBlockedError( $block );
+			throw new wiki_UserBlockedError( $block );
 		}
 
 		// This should be checked at the end so that the user won't think the

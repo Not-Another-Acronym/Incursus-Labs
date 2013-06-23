@@ -10,7 +10,7 @@ $specialPageAliases = array();
 
 /** English (English) */
 $specialPageAliases['en'] = array(
-	'Renameuser' => array( 'RenameUser' ),
+	'Renameuser' => array( 'Renamewiki_User' ),
 );
 
 /** Arabic (العربية) */
@@ -30,7 +30,7 @@ $specialPageAliases['as'] = array(
 
 /** Bashkir (башҡортса) */
 $specialPageAliases['ba'] = array(
-	'Renameuser' => array( 'RenameUser' ),
+	'Renameuser' => array( 'Renamewiki_User' ),
 );
 
 /** Bulgarian (български) */

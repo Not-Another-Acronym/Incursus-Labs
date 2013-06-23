@@ -28,7 +28,7 @@ require_once( __DIR__ . '/Maintenance.php' );
  *
  * @ingroup Maintenance
  */
-class MigrateUserGroup extends Maintenance {
+class Migratewiki_UserGroup extends Maintenance {
 	public function __construct() {
 		parent::__construct();
 		$this->mDescription = "Re-assign users from an old group to a new one";
@@ -80,5 +80,5 @@ class MigrateUserGroup extends Maintenance {
 	}
 }
 
-$maintClass = "MigrateUserGroup";
+$maintClass = "Migratewiki_UserGroup";
 require_once( RUN_MAINTENANCE_IF_MAIN );

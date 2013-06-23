@@ -39,19 +39,19 @@ class ApiRollback extends ApiBase {
 	private $mTitleObj = null;
 
 	/**
-	 * @var User
+	 * @var wiki_User
 	 */
-	private $mUser = null;
+	private $mwiki_User = null;
 
 	public function execute() {
 		$params = $this->extractRequestParams();
 
-		// User and title already validated in call to getTokenSalt from Main
+		// wiki_User and title already validated in call to getTokenSalt from Main
 		$titleObj = $this->getRbTitle();
 		$pageObj = WikiPage::factory( $titleObj );
 		$summary = $params['summary'];
 		$details = array();
-		$retval = $pageObj->doRollback( $this->getRbUser(), $summary, $params['token'], $params['markbot'], $details, $this->getUser() );
+		$retval = $pageObj->doRollback( $this->getRbwiki_User(), $summary, $params['token'], $params['markbot'], $details, $this->getUser() );
 
 		if ( $retval ) {
 			// We don't care about multiple errors, just report one of them
@@ -152,25 +152,25 @@ class ApiRollback extends ApiBase {
 	}
 
 	public function getTokenSalt() {
-		return array( $this->getRbTitle()->getPrefixedText(), $this->getRbUser() );
+		return array( $this->getRbTitle()->getPrefixedText(), $this->getRbwiki_User() );
 	}
 
-	private function getRbUser() {
-		if ( $this->mUser !== null ) {
-			return $this->mUser;
+	private function getRbwiki_User() {
+		if ( $this->mwiki_User !== null ) {
+			return $this->mwiki_User;
 		}
 
 		$params = $this->extractRequestParams();
 
 		// We need to be able to revert IPs, but getCanonicalName rejects them
-		$this->mUser = User::isIP( $params['user'] )
+		$this->mwiki_User = wiki_User::isIP( $params['user'] )
 			? $params['user']
-			: User::getCanonicalName( $params['user'] );
-		if ( !$this->mUser ) {
+			: wiki_User::getCanonicalName( $params['user'] );
+		if ( !$this->mwiki_User ) {
 			$this->dieUsageMsg( array( 'invaliduser', $params['user'] ) );
 		}
 
-		return $this->mUser;
+		return $this->mwiki_User;
 	}
 
 	/**

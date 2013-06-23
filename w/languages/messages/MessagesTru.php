@@ -11,7 +11,7 @@
  */
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-oldsig' => 'Imḍa du3do:',
 
 'underline-always' => 'Kulnaqa',
@@ -220,7 +220,7 @@ $messages = array(
 
 iFaṭaṭe belki sligo aw mtaxro merke.
 
-Elo iḍa dlo howe hawxa belki ḥselux Fawdo biSoftware. Bo³o haw Ṫebo l[[Special:ListUsers/sysop|Administrator]] u kṭaw u"URL".',
+Elo iḍa dlo howe hawxa belki ḥselux Fawdo biSoftware. Bo³o haw Ṫebo l[[Special:Listwiki_Users/sysop|Administrator]] u kṭaw u"URL".',
 'missingarticle-rev' => '(Numara duVersyon: $1)',
 'badtitle' => 'Bad title',
 'badtitletext' => 'The requested page title was invalid, empty, or an incorrectly linked inter-language or inter-wiki title.
@@ -457,7 +457,7 @@ Legend: '''({{int:cur}})''' = difference with latest revision, '''({{int:last}})
 'prefs-help-email-others' => 'Kibux mijğolat 3am Hadome ğer biFaṭo duMamlo u luglozam dumat Işmux.',
 'prefs-signature' => 'Imḍa',
 
-# User preference: e-mail validation using jQuery
+# wiki_User preference: e-mail validation using jQuery
 'email-address-validity-valid' => 'uEmail-Adresayḍux m³adlo yo.',
 
 # Groups
@@ -582,11 +582,11 @@ The description on its [$2 file description page] there is shown below.',
 'linksearch-ok' => 'Krax',
 'linksearch-line' => '$1 masro yo b$2',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusers-submit' => 'Maḥway',
 
 # Special:Log/newusers
-'newuserlogpage' => 'User creation log',
+'newuserlogpage' => 'wiki_User creation log',
 
 # Special:ListGroupRights
 'listgrouprights-group' => 'Gudo',

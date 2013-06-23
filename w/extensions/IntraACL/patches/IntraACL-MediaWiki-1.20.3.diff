@@ -36,13 +36,13 @@ index ee4c2d6..3ee0f1c 100644
  	public function execute( $feed, $rows, $lastmod, $opts ) {
 -		global $wgLang, $wgRenderHashAppend;
 -
-+		global $wgLang, $wgRenderHashAppend, $wgUser;
++		global $wgLang, $wgRenderHashAppend, $wgwiki_User;
 +		
  		if ( !FeedUtils::checkFeedOutput( $this->format ) ) {
  			return null;
  		}
  
-+		$userid = $wgUser->getId();
++		$userid = $wgwiki_User->getId();
  		$optionsHash = md5( serialize( $opts->getAllValues() ) ) . $wgRenderHashAppend;
 -		$timekey = wfMemcKey( $this->type, $this->format, $wgLang->getCode(), $optionsHash, 'timestamp' );
 -		$key = wfMemcKey( $this->type, $this->format, $wgLang->getCode(), $optionsHash );
@@ -74,10 +74,10 @@ index 11b2675..3714a01 100644
 -		// NOTE: Check permissions for anonymous users, not current user.
 -		//       No "privileged" version should end up in the cache.
 -		//       Most feed readers will not log in anway.
--		$anon = new User();
+-		$anon = new wiki_User();
 -		$accErrors = $title->getUserPermissionsErrors( 'read', $anon, true );
 +		// NOTE: Check permissions for current user. -- HaloACL
-+		$accErrors = $title->getUserPermissionsErrors( 'read', $wgUser, true );
++		$accErrors = $title->getUserPermissionsErrors( 'read', $wgwiki_User, true );
  
  		// Can't diff special pages, unreadable pages or pages with no new revision
  		// to compare against: just return the text.
@@ -252,7 +252,7 @@ index 1b5e21d..f8a5da4 100644
 +	 * 		true, if this title can be read
 +	 * 		false, if the title is protected or "Permission denied".
 +	 */
-+	public function userCanReadEx( $otherUser = NULL ) {
++	public function userCanReadEx( $otherwiki_User = NULL ) {
 +		if ( !defined( 'HACL_HALOACL_VERSION' ) ) {
 +			// IntraACL is disabled
 +			return true;
@@ -262,9 +262,9 @@ index 1b5e21d..f8a5da4 100644
 +			// Special handling of "Permission denied" page
 +			return false;
 +		}
-+		if ( $otherUser ) {
++		if ( $otherwiki_User ) {
 +			$canRead = false;
-+			$status = HACLEvaluator::userCan( $this, $otherUser, 'read', $canRead );
++			$status = HACLEvaluator::userCan( $this, $otherwiki_User, 'read', $canRead );
 +			return $canRead;
 +		}
 +		return $this->userCanRead();
@@ -333,11 +333,11 @@ index 1b5e21d..f8a5da4 100644
 +	}
 +// </IntraACL>
  }
-diff --git a/includes/User.php b/includes/User.php
+diff --git a/includes/wiki_User.php b/includes/wiki_User.php
 index 0a3db4c..245f9b5 100644
---- a/includes/User.php
-+++ b/includes/User.php
-@@ -274,7 +274,13 @@ class User {
+--- a/includes/wiki_User.php
++++ b/includes/wiki_User.php
+@@ -274,7 +274,13 @@ class wiki_User {
  				$this->loadDefaults();
  				break;
  			case 'name':
@@ -351,8 +351,8 @@ index 0a3db4c..245f9b5 100644
  				if ( !$this->mId ) {
  					# Nonexistent user placeholder object
  					$this->loadDefaults( $this->mName );
-@@ -556,6 +562,12 @@ class User {
- 	public static function isValidUserName( $name ) {
+@@ -556,6 +562,12 @@ class wiki_User {
+ 	public static function isValidwiki_UserName( $name ) {
  		global $wgContLang, $wgMaxNameChars;
  
 +		# Disable HaloACL title check as the main and/or
@@ -362,9 +362,9 @@ index 0a3db4c..245f9b5 100644
 +		}
 +		
  		if ( $name == ''
- 		|| User::isIP( $name )
+ 		|| wiki_User::isIP( $name )
  		|| strpos( $name, '/' ) !== false
-@@ -563,6 +575,9 @@ class User {
+@@ -563,6 +575,9 @@ class wiki_User {
  		|| $name != $wgContLang->ucfirst( $name ) ) {
  			wfDebugLog( 'username', __METHOD__ .
  				": '$name' invalid due to empty, IP, slash, length, or lowercase" );
@@ -374,7 +374,7 @@ index 0a3db4c..245f9b5 100644
  			return false;
  		}
  
-@@ -575,6 +590,9 @@ class User {
+@@ -575,6 +590,9 @@ class wiki_User {
  			|| strcmp( $name, $parsed->getPrefixedText() ) ) {
  			wfDebugLog( 'username', __METHOD__ .
  				": '$name' invalid due to ambiguous prefixes" );
@@ -384,7 +384,7 @@ index 0a3db4c..245f9b5 100644
  			return false;
  		}
  
-@@ -591,9 +609,14 @@ class User {
+@@ -591,9 +609,14 @@ class wiki_User {
  		if( preg_match( $unicodeBlacklist, $name ) ) {
  			wfDebugLog( 'username', __METHOD__ .
  				": '$name' invalid due to blacklisted characters" );
@@ -400,7 +400,7 @@ index 0a3db4c..245f9b5 100644
  		return true;
  	}
  
-@@ -765,6 +788,14 @@ class User {
+@@ -765,6 +788,14 @@ class wiki_User {
  	 * @return bool|string
  	 */
  	public static function getCanonicalName( $name, $validate = 'valid' ) {
@@ -415,7 +415,7 @@ index 0a3db4c..245f9b5 100644
  		# Force usernames to capital
  		global $wgContLang;
  		$name = $wgContLang->ucfirst( $name );
-@@ -780,6 +811,9 @@ class User {
+@@ -780,6 +811,9 @@ class wiki_User {
  			Title::newFromText( $name ) : Title::makeTitle( NS_USER, $name );
  		# Check for invalid titles
  		if( is_null( $t ) ) {
@@ -425,7 +425,7 @@ index 0a3db4c..245f9b5 100644
  			return false;
  		}
  
-@@ -808,6 +842,9 @@ class User {
+@@ -808,6 +842,9 @@ class wiki_User {
  			default:
  				throw new MWException( 'Invalid parameter value for $validate in ' . __METHOD__ );
  		}
@@ -435,7 +435,7 @@ index 0a3db4c..245f9b5 100644
  		return $name;
  	}
  
-@@ -3448,7 +3485,13 @@ class User {
+@@ -3448,7 +3485,13 @@ class wiki_User {
  	 */
  	protected function getTokenUrl( $page, $token ) {
  		// Hack to bypass localization of 'Special:'
@@ -449,14 +449,14 @@ index 0a3db4c..245f9b5 100644
  		return $title->getCanonicalUrl();
  	}
  
-diff --git a/includes/UserMailer.php b/includes/UserMailer.php
+diff --git a/includes/wiki_UserMailer.php b/includes/wiki_UserMailer.php
 index 01e7132..8d1ba40 100644
---- a/includes/UserMailer.php
-+++ b/includes/UserMailer.php
+--- a/includes/wiki_UserMailer.php
++++ b/includes/wiki_UserMailer.php
 @@ -564,7 +564,12 @@ class EmailNotification {
  				continue;
  			}
- 			$user = User::newFromName( $name );
+ 			$user = wiki_User::newFromName( $name );
 -			$this->compose( $user );
 +			/*op-patch|TS|2011-02-09|IntraACL|start*/
 +			if ( !method_exists( $title, 'userCanReadEx' ) || $title->userCanReadEx( $user ) ) {
@@ -472,7 +472,7 @@ index 4de1a97..d1cf98e 100644
 --- a/includes/logging/LogEventsList.php
 +++ b/includes/logging/LogEventsList.php
 @@ -308,6 +308,12 @@ class LogEventsList extends ContextSource {
- 		$formatter->setShowUserToolLinks( !( $this->flags & self::NO_EXTRA_USER_LINKS ) );
+ 		$formatter->setShowwiki_UserToolLinks( !( $this->flags & self::NO_EXTRA_USER_LINKS ) );
  
  		$title = $entry->getTarget();
 +		// <IntraACL>
@@ -799,10 +799,10 @@ index 5f5b6b4..1d9bdf3 100644
  			$result = $matches->next();
  		}
  		$out .= "</ul>\n";
-diff --git a/includes/specials/SpecialUserlogin.php b/includes/specials/SpecialUserlogin.php
+diff --git a/includes/specials/Specialwiki_Userlogin.php b/includes/specials/Specialwiki_Userlogin.php
 index 58da77d..1a0663f 100644
---- a/includes/specials/SpecialUserlogin.php
-+++ b/includes/specials/SpecialUserlogin.php
+--- a/includes/specials/Specialwiki_Userlogin.php
++++ b/includes/specials/Specialwiki_Userlogin.php
 @@ -961,7 +961,9 @@ class LoginForm extends SpecialPage {
  		}
  

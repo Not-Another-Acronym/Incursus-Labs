@@ -157,7 +157,7 @@ $messages = array(
 
 # Short words for each namespace, by default used in the namespace tab in monobook
 'nstab-main' => 'Artikle',
-'nstab-user' => 'Useren pagine',
+'nstab-user' => 'wiki_Useren pagine',
 'nstab-special' => 'Spesial pagine',
 'nstab-project' => 'Projetal pagine',
 'nstab-mediawiki' => 'Mesaje',
@@ -174,7 +174,7 @@ $messages = array(
 'logouttext' => "'''Vu es nun eksignatat.'''
 
 Vu pove kontinua usa {{SITENAME}} anonimim, o vu pove riensignata kom li sami o altri usere.",
-'yourname' => 'Usere-nome:',
+'yourname' => 'wiki_Usere-nome:',
 'yourpassword' => 'Pasa-vorde:',
 'remembermypassword' => 'Memora men pasa-vorde (kun kuke) (for a maximum of $1 {{PLURAL:$1|day|days}})',
 'login' => 'Ensignata',
@@ -247,7 +247,7 @@ Proba [[Special:Search|sercho sur li wiki]] por relatet pagines.',
 'preferences' => 'Preferos',
 'mypreferences' => 'Men preferos',
 'prefsnologin' => 'Non ensignatat',
-'prefsnologintext' => 'Vu mus es <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} ensignatat] por determina useren preferos.',
+'prefsnologintext' => 'Vu mus es <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} ensignatat] por determina useren preferos.',
 'prefs-rc' => 'Resenti chanjos',
 'searchresultshead' => 'Sercha',
 'timezoneregion-africa' => 'Afrika',
@@ -281,12 +281,12 @@ Proba [[Special:Search|sercho sur li wiki]] por relatet pagines.',
 # Special:ListFiles
 'listfiles_search_for' => 'Sercha imaje nome:',
 'listfiles_name' => 'Nome',
-'listfiles_user' => 'Usere',
+'listfiles_user' => 'wiki_Usere',
 'listfiles_size' => 'Grandeso (bites)',
 'listfiles_description' => 'Deskriptione',
 
 # File description page
-'filehist-user' => 'Usere',
+'filehist-user' => 'wiki_Usere',
 'imagelinks' => 'Linkes',
 
 # Random page
@@ -323,7 +323,7 @@ Proba [[Special:Search|sercho sur li wiki]] por relatet pagines.',
 'booksources-go' => 'Vada',
 
 # Special:Log
-'specialloguserlabel' => 'Usere:',
+'specialloguserlabel' => 'wiki_Usere:',
 
 # Special:AllPages
 'allpages' => 'Omni pagines',
@@ -373,7 +373,7 @@ Si vu voli plu tardim ekarta li pagine fro vun observa-liste, klikta \"Desobserv
 'deletecomment' => 'Resone:',
 
 # Rollback
-'revertpage' => 'Riverted modifikos da [[Special:Contributions/$2|$2]] ([[User talk:$2|Talk]]); restaurad lasti versione da [[User:$1|$1]]',
+'revertpage' => 'Riverted modifikos da [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Talk]]); restaurad lasti versione da [[wiki_User:$1|$1]]',
 
 # Protect
 'prot_1movedto2' => '[[$1]] movat a [[$2]]',
@@ -384,7 +384,7 @@ Si vu voli plu tardim ekarta li pagine fro vun observa-liste, klikta \"Desobserv
 'blanknamespace' => '(Chefi)',
 
 # Contributions
-'contributions' => 'Useren kontributiones',
+'contributions' => 'wiki_Useren kontributiones',
 'mycontris' => 'Men kontributiones',
 
 'sp-contributions-newbies' => 'Montra kontributiones nur de novi useres',

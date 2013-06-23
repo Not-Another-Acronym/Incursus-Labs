@@ -341,7 +341,7 @@ class DatabasePostgres extends DatabaseBase {
 
 		$this->mServer = $server;
 		$port = $wgDBport;
-		$this->mUser = $user;
+		$this->mwiki_User = $user;
 		$this->mPassword = $password;
 		$this->mDBname = $dbName;
 
@@ -368,7 +368,7 @@ class DatabasePostgres extends DatabaseBase {
 
 		if ( !$this->mConn ) {
 			wfDebug( "DB connection error\n" );
-			wfDebug( "Server: $server, Database: $dbName, User: $user, Password: " . substr( $password, 0, 3 ) . "...\n" );
+			wfDebug( "Server: $server, Database: $dbName, wiki_User: $user, Password: " . substr( $password, 0, 3 ) . "...\n" );
 			wfDebug( $this->lastError() . "\n" );
 			throw new DBConnectionError( $this, str_replace( "\n", ' ', $phpError ) );
 		}
@@ -400,7 +400,7 @@ class DatabasePostgres extends DatabaseBase {
 	 */
 	function selectDB( $db ) {
 		if ( $this->mDBname !== $db ) {
-			return (bool)$this->open( $this->mServer, $this->mUser, $this->mPassword, $db );
+			return (bool)$this->open( $this->mServer, $this->mwiki_User, $this->mPassword, $db );
 		} else {
 			return true;
 		}

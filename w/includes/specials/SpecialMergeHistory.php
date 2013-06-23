@@ -280,7 +280,7 @@ class SpecialMergeHistory extends SpecialPage {
 			);
 		}
 
-		$userLink = Linker::revUserTools( $rev );
+		$userLink = Linker::revwiki_UserTools( $rev );
 
 		$size = $row->rev_len;
 		if( !is_null( $size ) ) {
@@ -477,7 +477,7 @@ class MergeHistoryPager extends ReverseChronologicalPager {
 		$conds[] = "rev_timestamp < {$this->maxTimestamp}";
 		return array(
 			'tables' => array( 'revision', 'page', 'user' ),
-			'fields' => array_merge( Revision::selectFields(), Revision::selectUserFields() ),
+			'fields' => array_merge( Revision::selectFields(), Revision::selectwiki_UserFields() ),
 			'conds'  => $conds,
 			'join_conds' => array(
 				'page' => Revision::pageJoinCond(),

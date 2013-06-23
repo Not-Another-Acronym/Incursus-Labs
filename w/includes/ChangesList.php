@@ -77,13 +77,13 @@ class ChangesList extends ContextSource {
 
 	/**
 	 * Fetch an appropriate changes list class for the main context
-	 * This first argument used to be an User object.
+	 * This first argument used to be an wiki_User object.
 	 *
 	 * @deprecated in 1.18; use newFromContext() instead
-	 * @param $unused string|User Unused
+	 * @param $unused string|wiki_User Unused
 	 * @return ChangesList|EnhancedChangesList|OldChangesList derivative
 	 */
-	public static function newFromUser( $unused ) {
+	public static function newFromwiki_User( $unused ) {
 		wfDeprecated( __METHOD__, '1.18' );
 		return self::newFromContext( RequestContext::getMain() );
 	}
@@ -398,7 +398,7 @@ class ChangesList extends ContextSource {
 	 * @param &$s String HTML to update
 	 * @param &$rc RecentChange
 	 */
-	public function insertUserRelatedLinks( &$s, &$rc ) {
+	public function insertwiki_UserRelatedLinks( &$s, &$rc ) {
 		if( $this->isDeleted( $rc, Revision::DELETED_USER ) ) {
 			$s .= ' <span class="history-deleted">' . $this->msg( 'rev-deleted-user' )->escaped() . '</span>';
 		} else {
@@ -417,7 +417,7 @@ class ChangesList extends ContextSource {
 	public function insertLogEntry( $rc ) {
 		$formatter = LogFormatter::newFromRow( $rc->mAttribs );
 		$formatter->setContext( $this->getContext() );
-		$formatter->setShowUserToolLinks( true );
+		$formatter->setShowwiki_UserToolLinks( true );
 		$mark = $this->getLanguage()->getDirMark();
 		return $formatter->getActionText() . " $mark" . $formatter->getComment();
 	}
@@ -442,8 +442,8 @@ class ChangesList extends ContextSource {
 	 * @return Boolean
 	 */
 	public static function usePatrol() {
-		global $wgUser;
-		return $wgUser->useRCPatrol();
+		global $wgwiki_User;
+		return $wgwiki_User->useRCPatrol();
 	}
 
 	/**
@@ -477,10 +477,10 @@ class ChangesList extends ContextSource {
 	 * field of this revision, if it's marked as deleted.
 	 * @param $rc RCCacheEntry
 	 * @param $field Integer
-	 * @param $user User object to check, or null to use $wgUser
+	 * @param $user wiki_User object to check, or null to use $wgwiki_User
 	 * @return Boolean
 	 */
-	public static function userCan( $rc, $field, User $user = null ) {
+	public static function userCan( $rc, $field, wiki_User $user = null ) {
 		if( $rc->mAttribs['rc_type'] == RC_LOG ) {
 			return LogEventsList::userCanBitfield( $rc->mAttribs['rc_deleted'], $field, $user );
 		} else {
@@ -635,8 +635,8 @@ class OldChangesList extends ChangesList {
 		if ( $rc->mAttribs['rc_type'] == RC_LOG ) {
 			$s .= $this->insertLogEntry( $rc );
 		} else {
-			# User tool links
-			$this->insertUserRelatedLinks( $s, $rc );
+			# wiki_User tool links
+			$this->insertwiki_UserRelatedLinks( $s, $rc );
 			# LTR/RTL direction mark
 			$s .= $this->getLanguage()->getDirMark();
 			$s .= $this->insertComment( $rc );
@@ -1079,7 +1079,7 @@ class EnhancedChangesList extends ChangesList {
 			if ( $rcObj->mAttribs['rc_type'] == RC_LOG ) {
 				$r .= $this->insertLogEntry( $rcObj );
 			} else {
-				# User links
+				# wiki_User links
 				$r .= $rcObj->userlink;
 				$r .= $rcObj->usertalklink;
 				$r .= $this->insertComment( $rcObj );

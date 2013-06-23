@@ -137,9 +137,9 @@ $specialPageAliases = array(
 	'Unusedtemplates'           => array( 'Nekorišteni_predlošci' ),
 	'Unwatchedpages'            => array( 'Negledane_stranice' ),
 	'Upload'                    => array( 'Postavi_datoteku' ),
-	'Userlogin'                 => array( 'Prijava' ),
-	'Userlogout'                => array( 'Odjava' ),
-	'Userrights'                => array( 'Suradnička_prava' ),
+	'wiki_Userlogin'                 => array( 'Prijava' ),
+	'wiki_Userlogout'                => array( 'Odjava' ),
+	'wiki_Userrights'                => array( 'Suradnička_prava' ),
 	'Version'                   => array( 'Verzija' ),
 	'Wantedcategories'          => array( 'Tražene_kategorije' ),
 	'Wantedfiles'               => array( 'Tražene_datoteke' ),
@@ -314,7 +314,7 @@ $fallback8bitEncoding = 'iso-8859-2';
 $linkTrail = '/^([čšžćđßa-z]+)(.*)$/sDu';
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Podcrtane poveznice',
 'tog-justify' => 'Poravnaj odlomke i zdesna',
 'tog-hideminor' => 'Sakrij manje izmjene na stranici Nedavnih promjena',
@@ -653,7 +653,7 @@ Administrator koji je izvršio zaključavanje naveo je ovaj razlog: $1',
 
 Ovo se najčešće događa zbog poveznice na zastarjelu usporedbu ili staru promjenu stranice koja je u međuvremenu izbrisana.
 
-Ako to nije slučaj, možda se radi o softverskoj grešci. Molimo da u tom slučaju pošaljete poruku [[Special:ListUsers/sysop|administratoru]] navodeći URL.',
+Ako to nije slučaj, možda se radi o softverskoj grešci. Molimo da u tom slučaju pošaljete poruku [[Special:Listwiki_Users/sysop|administratoru]] navodeći URL.',
 'missingarticle-rev' => '(izmjena#: $1)',
 'missingarticle-diff' => '(razlika: $1, $2)',
 'readonly_lag' => 'Baza podataka je automatski zaključana dok se sekundarni bazni poslužitelji ne usklade s glavnim',
@@ -700,7 +700,7 @@ $2',
 'customcssprotected' => 'Ne možete uređivati ovu CSS stranicu zato što ona sadrži osobne postavke drugog suradnika.',
 'customjsprotected' => 'Ne možete uređivati ovu JavaScript stranicu zato što ona sadrži osobne postavke drugog suradnika.',
 'ns-specialprotected' => "Stranice u imenskom prostoru ''{{ns:special}}'' ne mogu se uređivati.",
-'titleprotected' => "Ovaj naslov je od kreiranja zaštitio suradnik [[User:$1|$1]], uz razlog: ''$2''.",
+'titleprotected' => "Ovaj naslov je od kreiranja zaštitio suradnik [[wiki_User:$1|$1]], uz razlog: ''$2''.",
 'filereadonlyerror' => 'Ne mogu izmijeniti datoteku "$1" jer je spremište "$2" dostupno samo za čitanje.
 
 Administrator koji je zaključao spremište naveo je sljedeći razlog: "$3".',
@@ -717,7 +717,7 @@ Administrator koji je zaključao spremište naveo je sljedeći razlog: "$3".',
 # Login and logout pages
 'logouttext' => "'''Odjavili ste se.'''
 
-Možete nastaviti s korištenjem {{SITENAME}} neprijavljeni, ili se možete ponovo [[Special:UserLogin|prijaviti]] pod istim ili drugim imenom.
+Možete nastaviti s korištenjem {{SITENAME}} neprijavljeni, ili se možete ponovo [[Special:wiki_UserLogin|prijaviti]] pod istim ili drugim imenom.
 Neke se stranice mogu prikazivati kao da ste još uvijek prijavljeni, sve dok ne očistite međuspremnik svog preglednika.",
 'welcomecreation' => '== Dobrodošli, $1! ==
 Vaš je suradnički račun otvoren.
@@ -761,7 +761,7 @@ Provjerite jesu li kolačići (''cookies'') omogućeni, ponovo učitajte ovu str
 'loginsuccess' => 'Prijavili ste se na wiki kao "$1".',
 'nosuchuser' => 'Ne postoji suradnik s imenom "$1".
 Suradnička imena su osjetljiva na veličinu slova.
-Provjerite jeste li točno upisali, ili [[Special:UserLogin/signup|otvorite novi suradnički račun]].',
+Provjerite jeste li točno upisali, ili [[Special:wiki_UserLogin/signup|otvorite novi suradnički račun]].',
 'nosuchusershort' => 'Ne postoji suradnik s imenom "$1". Provjerite Vaš unos.',
 'nouserspecified' => 'Molimo navedite suradničko ime.',
 'login-userblocked' => 'Ovaj suradnik je blokiran. Prijava nije dozvoljena.',
@@ -958,14 +958,14 @@ Možda je premješten ili izbrisan dok ste pregledavali stranicu.',
 'loginreqlink' => 'prijavite se',
 'loginreqpagetext' => 'Morate se $1 da biste vidjeli ostale stranice.',
 'accmailtitle' => 'Lozinka poslana.',
-'accmailtext' => "Nova lozinka za [[User talk:$1|$1]] je poslana na $2.
+'accmailtext' => "Nova lozinka za [[wiki_User talk:$1|$1]] je poslana na $2.
 
 Nakon prijave, lozinka za ovaj novi račun može biti promijenjena na stranici ''[[Special:ChangePassword|promijeni lozinku]]''",
 'newarticle' => '(Novo)',
 'newarticletext' => "Došli ste na stranicu koja još ne postoji.
 Ako želite stvoriti tu stranicu, počnite tipkati u prozor ispod ovog teksta (pogledajte [[{{MediaWiki:Helppage}}|stranicu za pomoć]]).
 Ako ste ovamo dospjeli slučajno, kliknite gumb '''natrag''' (back) u svom pregledniku.",
-'anontalkpagetext' => "----''Ovo je stranica za razgovor s neprijavljenim suradnikom koji još nije otvorio suradnički račun ili se njime ne koristi. Zbog toga se moramo služiti brojčanom IP adresom kako bismo ga identificirali. Takvu adresu često može dijeliti više ljudi. Ako ste neprijavljeni suradnik i smatrate da su Vam upućeni irelevantni komentari, molimo Vas da [[Special:UserLogin/signup|otvorite suradnički račun]] ili [[Special:UserLogin|se prijavite]] te tako u budućnosti izbjegnete zamjenu s drugim neprijavljenim suradnicima.''",
+'anontalkpagetext' => "----''Ovo je stranica za razgovor s neprijavljenim suradnikom koji još nije otvorio suradnički račun ili se njime ne koristi. Zbog toga se moramo služiti brojčanom IP adresom kako bismo ga identificirali. Takvu adresu često može dijeliti više ljudi. Ako ste neprijavljeni suradnik i smatrate da su Vam upućeni irelevantni komentari, molimo Vas da [[Special:wiki_UserLogin/signup|otvorite suradnički račun]] ili [[Special:wiki_UserLogin|se prijavite]] te tako u budućnosti izbjegnete zamjenu s drugim neprijavljenim suradnicima.''",
 'noarticletext' => 'Na ovoj stranici trenutačno nema sadržaja.
 Možete [[Special:Search/{{PAGENAME}}|potražiti ovaj naslov]] na drugim stranicama,
 <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} pretražiti povezane evidencije]
@@ -1001,12 +1001,12 @@ Posljednja stavka evidencije blokiranja navedena je niže kao napomena:',
 'previewconflict' => 'Ovaj pregled odražava stanje u gornjem polju za unos koje će biti sačuvano
 ako pritisnete "Sačuvaj stranicu".',
 'session_fail_preview' => "'''Ispričavamo se! Nismo mogli obraditi Vašu izmjenu zbog gubitka podataka o prijavi.
-Molimo pokušajte ponovno. Ako i dalje ne bude uspijevalo, pokušajte se [[Special:UserLogout|odjaviti]] i ponovno prijaviti.'''",
+Molimo pokušajte ponovno. Ako i dalje ne bude uspijevalo, pokušajte se [[Special:wiki_UserLogout|odjaviti]] i ponovno prijaviti.'''",
 'session_fail_preview_html' => "'''Oprostite! Pretpregled nije moguć jer je ''session'' istekao.'''
 
 ''Budući da je na ovom wikiju ({{SITENAME}}) omogućen unos HTML oznaka (tagova), pretpregled je skriven kao mjera predostrožnosti protiv napada pomoću JavaScripta.''
 
-'''Ako ste pokušali vidjeti kako stranica izgleda, molimo probajte opet. Ako ne uspije, [[Special:UserLogout|odjavite se]] i prijavite se ponovo.'''",
+'''Ako ste pokušali vidjeti kako stranica izgleda, molimo probajte opet. Ako ne uspije, [[Special:wiki_UserLogout|odjavite se]] i prijavite se ponovo.'''",
 'token_suffix_mismatch' => "'''Vaše uređivanje je odbačeno jer je Vaš web preglednik ubacio znak/znakove interpunkcije u token uređivanja.'''
 Stoga je uređivanje odbačeno da se spriječi uništavanje teksta stranice.
 To se ponekad događa kad rabite neispravan web-baziran anonimni posrednik (proxy).",
@@ -1052,7 +1052,7 @@ Posljednja stavka u evidenciji navedena je niže kao napomena:",
 'hiddencategories' => 'Ova stranica je član {{PLURAL:$1|1 skrivene kategorija|$1 skrivene kategorije|$1 skrivenih kategorija}}:',
 'nocreatetitle' => 'Otvaranje novih stranica ograničeno',
 'nocreatetext' => 'Na ovom je projektu ograničeno otvaranje novih stranica.
-Možete se vratiti i uređivati već postojeće stranice ili se [[Special:UserLogin|prijaviti ili otvoriti suradnički račun]].',
+Možete se vratiti i uređivati već postojeće stranice ili se [[Special:wiki_UserLogin|prijaviti ili otvoriti suradnički račun]].',
 'nocreate-loggedin' => 'Nemate ovlasti za stvaranje novih stranica.',
 'sectioneditnotsupported-title' => 'Uređivanje odjeljka nije podržano',
 'sectioneditnotsupported-text' => 'Uređivanje odjeljka nije podržano na ovoj stranici',
@@ -1101,11 +1101,11 @@ Neki predlošci neće biti uključeni.',
 'undo-success' => 'Izmjena je uklonjena (tekst u okviru ispod ne sadrži zadnju izmjenu). Molim sačuvajte stranicu (provjerite sažetak).',
 'undo-failure' => 'Ova izmjena ne može biti uklonjena zbog postojanja međuinačica.',
 'undo-norev' => 'Izmjena nije mogla biti uklonjena jer ne postoji ili je obrisana.',
-'undo-summary' => 'Uklanjanje izmjene $1 što ju je unio/unijela [[Special:Contributions/$2|$2]] ([[User talk:$2|razgovor]])',
+'undo-summary' => 'Uklanjanje izmjene $1 što ju je unio/unijela [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|razgovor]])',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'Nije moguće stvoriti suradnički račun',
-'cantcreateaccount-text' => "Otvaranje suradničkog računa ove IP adrese ('''$1''') blokirao/la je [[User:$3|$3]].
+'cantcreateaccount-text' => "Otvaranje suradničkog računa ove IP adrese ('''$1''') blokirao/la je [[wiki_User:$3|$3]].
 
 Razlog koji je dao/la $3 je ''$2''",
 
@@ -1363,7 +1363,7 @@ Više informacija možete pronaći u [{{fullurl:{{#Special:Log}}/delete|page={{F
 'mypreferences' => 'Moje postavke',
 'prefs-edits' => 'Broj uređivanja:',
 'prefsnologin' => 'Niste prijavljeni',
-'prefsnologintext' => 'Morate biti <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} prijavljeni]</span> za podešavanje suradničkih postavki.',
+'prefsnologintext' => 'Morate biti <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} prijavljeni]</span> za podešavanje suradničkih postavki.',
 'changepassword' => 'Promjena lozinke',
 'prefs-skin' => 'Izgled',
 'skin-preview' => 'Pregled',
@@ -1471,16 +1471,16 @@ Ne smije biti duži od $1 {{PLURAL:$1|znaka|znaka|znakova}}.',
 'prefs-displaywatchlist' => 'Opcije prikaza',
 'prefs-diffs' => 'razl',
 
-# User preference: e-mail validation using jQuery
+# wiki_User preference: e-mail validation using jQuery
 'email-address-validity-valid' => 'E-mail adresa se pokazuje ispravnom',
 'email-address-validity-invalid' => 'Unesite valjanu e-mail adresu',
 
-# User rights
+# wiki_User rights
 'userrights' => 'Upravljanje suradničkim pravima',
 'userrights-lookup-user' => 'Upravljaj suradničkim skupinama',
 'userrights-user-editname' => 'Unesite suradničko ime:',
 'editusergroup' => 'Uredi suradničke skupine',
-'editinguser' => "Promjena suradničkih prava za suradnika '''[[User:$1|$1]]''' $2",
+'editinguser' => "Promjena suradničkih prava za suradnika '''[[wiki_User:$1|$1]]''' $2",
 'userrights-editusergroup' => 'Uredi suradničke skupine',
 'saveusergroups' => 'Snimi suradničke skupine',
 'userrights-groupsmember' => 'Član:',
@@ -1492,7 +1492,7 @@ Ne smije biti duži od $1 {{PLURAL:$1|znaka|znaka|znakova}}.',
 'userrights-reason' => 'Razlog:',
 'userrights-no-interwiki' => 'Nemate dopuštenje za uređivanje suradničkih prava na drugim wikijima.',
 'userrights-nodatabase' => 'Baza podataka $1 ne postoji ili nije lokalno dostupna.',
-'userrights-nologin' => 'Morate se [[Special:UserLogin|prijaviti]] s administratorskim računom da bi mogli dodijeliti suradnička prava.',
+'userrights-nologin' => 'Morate se [[Special:wiki_UserLogin|prijaviti]] s administratorskim računom da bi mogli dodijeliti suradnička prava.',
 'userrights-notallowed' => 'Vaš trenutačni suradnički račun nema ovlasti mijenjanja suradničkih prava.',
 'userrights-changeable-col' => 'Skupine koje možete promijeniti',
 'userrights-unchangeable-col' => 'Skupine koje ne možete promijeniti',
@@ -1583,7 +1583,7 @@ Ne smije biti duži od $1 {{PLURAL:$1|znaka|znaka|znakova}}.',
 'right-sendemail' => 'Slanje e-maila drugim korisnicima',
 'right-passwordreset' => 'Vidi poruku e-pošte o ponovnom postavljanju lozinke',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Evidencija suradničkih prava',
 'rightslogtext' => 'Ovo je evidencija promjena suradničkih prava.',
 'rightslogentry' => 'promijenjena suradnička prava za $1 iz $2 u $3',
@@ -1679,7 +1679,7 @@ Ne smije biti duži od $1 {{PLURAL:$1|znaka|znaka|znakova}}.',
 'reuploaddesc' => 'Vratite se u obrazac za postavljanje.',
 'upload-tryagain' => 'Pošalji izmijenjeni opis datoteke',
 'uploadnologin' => 'Niste prijavljeni',
-'uploadnologintext' => 'Za postavljanje datoteka morate biti  [[Special:UserLogin|prijavljeni]].',
+'uploadnologintext' => 'Za postavljanje datoteka morate biti  [[Special:wiki_UserLogin|prijavljeni]].',
 'upload_directory_missing' => 'Mapa za datoteke ($1) nedostaje i webserver ju ne može napraviti.',
 'upload_directory_read_only' => 'Server ne može pisati u direktorij za postavljanje ($1).',
 'uploaderror' => 'Pogreška kod postavljanja',
@@ -1792,11 +1792,11 @@ $1',
 'upload-proto-error' => 'Protokol nije valjan',
 'upload-proto-error-text' => 'Udaljeno snimanje zahtijeva URL-ove koji počinju sa <code>http://</code> ili <code>ftp://</code>.',
 'upload-file-error' => 'Interna pogreška',
-'upload-file-error-text' => 'Interna pogreška se dogodila pri pokušaju stvaranja privremene datoteke na poslužitelju. Molimo javite se [[Special:ListUsers/sysop|administratoru]].',
+'upload-file-error-text' => 'Interna pogreška se dogodila pri pokušaju stvaranja privremene datoteke na poslužitelju. Molimo javite se [[Special:Listwiki_Users/sysop|administratoru]].',
 'upload-misc-error' => 'Nepoznata pogreška pri snimanju',
 'upload-misc-error-text' => 'Dogodila se nepoznata pogrješka pri snimanju.
 Provjerite valjanost i dostupnost URL-a i pokušajte opet.
-Ako se problem ponovi, javite to [[Special:ListUsers/sysop|administratoru]].',
+Ako se problem ponovi, javite to [[Special:Listwiki_Users/sysop|administratoru]].',
 'upload-too-many-redirects' => 'URL je sadržavao previše preusmjeravanja',
 'upload-unknown-size' => 'Nepoznata veličina',
 'upload-http-error' => 'HTTP pogreška: $1',
@@ -2030,7 +2030,7 @@ Možda želite urediti njen opis na [$2 stranici opisa datoteke].',
 'statistics-views-total' => 'Posjeta ukupno',
 'statistics-views-total-desc' => 'Posjeti nepostojećim i posebnim stranicama nisu uključeni',
 'statistics-views-peredit' => 'Posjeta po uređivanju',
-'statistics-users' => 'Prijavljeni [[Special:ListUsers|suradnici]]',
+'statistics-users' => 'Prijavljeni [[Special:Listwiki_Users|suradnici]]',
 'statistics-users-active' => 'Aktivni suradnici',
 'statistics-users-active-desc' => 'Suradnici koji su napravili neku od radnji u posljednjih {{PLURAL:$1|dan|$1 dana}}',
 'statistics-mostpopular' => 'Najposjećenije stranice',
@@ -2198,13 +2198,13 @@ Podržani su protokoli: <code>$1</code> (ne stavljajte ih u vaše pretraživanje
 'linksearch-line' => '$1 poveznica s članka $2',
 'linksearch-error' => 'Džoker znakovi se mogu rabiti samo na početku imena poslužitelja.',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => 'Prikaži suradnike počevši od:',
 'listusers-submit' => 'Prikaži',
 'listusers-noresult' => 'Nema takvih suradnika.',
 'listusers-blocked' => '(blokiran)',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'Popis aktivnih suradnika',
 'activeusers-intro' => 'Ovo je popis suradnika koji su napravili neku aktivnost u {{PLURAL:$1|zadnji $1 dan|zadnja $1 dana|zadnjih $1 dana}}.',
 'activeusers-count' => '{{PLURAL:$1|nedavna $1 izmjena|nedavne $1 izmjene|nedavnih $1 izmjena}} u {{PLURAL:$3|posljednji $3 dan|posljednja $3 dana|posljednjih $3 dana}}',
@@ -2238,7 +2238,7 @@ Dodatne informacije o pojedinim pravim se mogu pronaći [[{{MediaWiki:Listgroupr
 
 # E-mail user
 'mailnologin' => 'Nema adrese pošiljaoca',
-'mailnologintext' => 'Morate biti [[Special:UserLogin|prijavljeni]]
+'mailnologintext' => 'Morate biti [[Special:wiki_UserLogin|prijavljeni]]
 i imati valjanu adresu e-pošte u svojim [[Special:Preferences|postavkama]]
 da bi mogli slati poštu drugim suradnicima.',
 'emailuser' => 'Pošalji e-poštu ovom suradniku',
@@ -2271,7 +2271,7 @@ E-mail adresa iz Vaših [[Special:Preferences|postavki]] nalazit će se u "From"
 'emailsenttext' => 'Vaša poruka je poslana.',
 'emailuserfooter' => 'Ovaj e-mail je poslan od $1 za $2 korištenjem "elektroničke pošte" s projekta {{SITENAME}}.',
 
-# User Messenger
+# wiki_User Messenger
 'usermessage-summary' => 'Ostavljanje poruke sustava.',
 'usermessage-editor' => 'Uređivač sistemskih poruka',
 
@@ -2282,7 +2282,7 @@ E-mail adresa iz Vaših [[Special:Preferences|postavki]] nalazit će se u "From"
 'nowatchlist' => 'Na Vašem popisu praćenja nema nijednog članka.',
 'watchlistanontext' => 'Molimo Vas $1 kako biste mogli vidjeti ili uređivati Vaš popis praćenih stranica.',
 'watchnologin' => 'Niste prijavljeni',
-'watchnologintext' => 'Morate biti [[Special:UserLogin|prijavljeni]]
+'watchnologintext' => 'Morate biti [[Special:wiki_UserLogin|prijavljeni]]
 za promjene u popisu praćenja.',
 'addwatch' => 'Dodaj u popis praćenja',
 'addedwatchtext' => 'Stranica "[[:$1]]" je dodana na Vaš [[Special:Watchlist|popis praćenja]].
@@ -2389,12 +2389,12 @@ Sva vremena su prema poslužiteljevom vremenu.',
 'rollbacklinkcount-morethan' => 'ukloni više od $1 {{PLURAL:$1|uređivanje|uređivanja}}',
 'rollbackfailed' => 'Uklanjanje neuspješno',
 'cantrollback' => 'Ne mogu ukloniti posljednju promjenu, postoji samo jedna promjena.',
-'alreadyrolled' => 'Ne mogu ukloniti posljednju promjenu članka [[:$1]] koju je napravio  [[User:$2|$2]] ([[User talk:$2|Razgovor]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]); netko je već promijenio stranicu ili uklonio promjenu.
+'alreadyrolled' => 'Ne mogu ukloniti posljednju promjenu članka [[:$1]] koju je napravio  [[wiki_User:$2|$2]] ([[wiki_User talk:$2|Razgovor]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]); netko je već promijenio stranicu ili uklonio promjenu.
 
-Posljednju promjenu napravio je [[User:$3|$3]] ([[User talk:$3|Razgovor]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
+Posljednju promjenu napravio je [[wiki_User:$3|$3]] ([[wiki_User talk:$3|Razgovor]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
 'editcomment' => "Sažetak promjene je bio: \"''\$1''\".",
 'revertpage' => 'Uklonjena promjena suradnika $2, vraćeno na zadnju inačicu suradnika $1',
-'revertpage-nouser' => 'Vraćene izmjene suradnika (suradničko ime uklonjeno) na posljednju inačicu suradnika [[User:$1|$1]]',
+'revertpage-nouser' => 'Vraćene izmjene suradnika (suradničko ime uklonjeno) na posljednju inačicu suradnika [[wiki_User:$1|$1]]',
 'rollback-success' => 'Uklonjeno uređivanje suradnika $1; vraćeno na zadnju inačicu suradnika $2.',
 
 # Edit tokens
@@ -2625,7 +2625,7 @@ Pogledajte [[Special:BlockList|popis blokiranja]] za pregled blokiranih suradnik
 'unblockip' => 'Deblokiraj suradnika',
 'unblockiptext' => 'Ovaj se obrazac koristi za vraćanje prava na pisanje prethodno blokiranoj IP adresi.',
 'ipusubmit' => 'Ukloni ovaj blok',
-'unblocked' => '[[User:$1|$1]] je deblokiran',
+'unblocked' => '[[wiki_User:$1|$1]] je deblokiran',
 'unblocked-range' => '$1 je deblokiran',
 'unblocked-id' => 'Blok $1 je uklonjen',
 'blocklist' => 'Blokirani suradnici',
@@ -2658,7 +2658,7 @@ Pogledajte [[Special:BlockList|popis blokiranja]] za pregled blokiranih suradnik
 'change-blocklink' => 'promijeni blokiranje',
 'contribslink' => 'doprinosi',
 'emaillink' => 'pošalji e-mail',
-'autoblocker' => 'Automatski ste blokirani jer je Vašu IP adresu nedavno koristio "[[User:$1|$1]]" koji je blokiran zbog: "$2".',
+'autoblocker' => 'Automatski ste blokirani jer je Vašu IP adresu nedavno koristio "[[wiki_User:$1|$1]]" koji je blokiran zbog: "$2".',
 'blocklogpage' => 'Evidencija blokiranja',
 'blocklog-showlog' => 'Ovaj suradnik je ranije blokiran.
 Evidencija blokiranja je prikazan ispod kao napomena:',
@@ -2757,7 +2757,7 @@ ako to želite.",
 'movearticle' => 'Premjesti stranicu',
 'moveuserpage-warning' => "'''Upozorenje:''' Premještate suradničku stranicu. Imajte na umu da će stranica biti premještena, ali suradnik ''ne će'' biti preimenovan.",
 'movenologin' => 'Niste prijavljeni',
-'movenologintext' => 'Ako želite premjestiti stranicu morate biti [[Special:UserLogin|prijavljeni]].',
+'movenologintext' => 'Ako želite premjestiti stranicu morate biti [[Special:wiki_UserLogin|prijavljeni]].',
 'movenotallowed' => 'Nemate pravo premještanja stranica.',
 'movenotallowedfile' => 'Nemate ovlasti za premještanje datoteka.',
 'cant-move-user-page' => 'Nemate dopuštenja za premještanje root suradničkih stranica.',
@@ -3649,10 +3649,10 @@ Valjanost ovog potvrdnog koda istječe u $4',
 
 # Delete conflict
 'deletedwhileediting' => "'''Upozorenje''': Ova stranica je obrisana nakon što ste počeli uređivati!",
-'confirmrecreate' => "Suradnik [[User:$1|$1]] ([[User talk:$1|talk]]) izbrisao je ovaj članak nakon što ste ga počeli uređivati. Razlog brisanja
+'confirmrecreate' => "Suradnik [[wiki_User:$1|$1]] ([[wiki_User talk:$1|talk]]) izbrisao je ovaj članak nakon što ste ga počeli uređivati. Razlog brisanja
 : ''$2''
 Potvrdite namjeru vraćanja ovog članka.",
-'confirmrecreate-noreason' => 'Suradnik [[User:$1|$1]] ([[User talk:$1|razgovor]]) je obrisao ovaj članak nakon što ste ga počeli uređivati. Molimo potvrdite da stvarno želite ponovo započeti ovaj članak.',
+'confirmrecreate-noreason' => 'Suradnik [[wiki_User:$1|$1]] ([[wiki_User talk:$1|razgovor]]) je obrisao ovaj članak nakon što ste ga počeli uređivati. Molimo potvrdite da stvarno želite ponovo započeti ovaj članak.',
 'recreate' => 'Vrati',
 
 # action=purge

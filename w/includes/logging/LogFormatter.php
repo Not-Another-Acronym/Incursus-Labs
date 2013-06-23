@@ -139,7 +139,7 @@ class LogFormatter {
 	 * CSS/JS solution.
 	 * @param $value boolean
 	 */
-	public function setShowUserToolLinks( $value ) {
+	public function setShowwiki_UserToolLinks( $value ) {
 		$this->linkFlood = $value;
 	}
 
@@ -452,7 +452,7 @@ class LogFormatter {
 	public function getPerformerElement() {
 		if ( $this->canView( LogPage::DELETED_USER ) ) {
 			$performer = $this->entry->getPerformer();
-			$element = $this->makeUserLink( $performer );
+			$element = $this->makewiki_UserLink( $performer );
 			if ( $this->entry->isDeleted( LogPage::DELETED_USER ) ) {
 				$element = $this->styleRestricedElement( $element );
 			}
@@ -520,7 +520,7 @@ class LogFormatter {
 		return $this->context->msg( $key );
 	}
 
-	protected function makeUserLink( User $user ) {
+	protected function makewiki_UserLink( wiki_User $user ) {
 		if ( $this->plaintext ) {
 			$element = $user->getName();
 		} else {
@@ -975,16 +975,16 @@ class PatrolLogFormatter extends LogFormatter {
  * This class formats new user log entries.
  * @since 1.19
  */
-class NewUsersLogFormatter extends LogFormatter {
+class Newwiki_UsersLogFormatter extends LogFormatter {
 	protected function getMessageParameters() {
 		$params = parent::getMessageParameters();
 		if ( $this->entry->getSubtype() === 'create2' ) {
 			if ( isset( $params[3] ) ) {
-				$target = User::newFromId( $params[3] );
+				$target = wiki_User::newFromId( $params[3] );
 			} else {
-				$target = User::newFromName( $this->entry->getTarget()->getText(), false );
+				$target = wiki_User::newFromName( $this->entry->getTarget()->getText(), false );
 			}
-			$params[2] = Message::rawParam( $this->makeUserLink( $target ) );
+			$params[2] = Message::rawParam( $this->makewiki_UserLink( $target ) );
 			$params[3] = $target->getName();
 		}
 		return $params;

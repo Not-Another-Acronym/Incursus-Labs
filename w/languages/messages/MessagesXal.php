@@ -56,7 +56,7 @@ $namespaceAliases = array(
 $namespaceGenderAliases = array();
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Заалһиг татас татх:',
 'tog-justify' => 'Зүүл тегшлтн',
 'tog-hideminor' => 'Шидрә сольлһна сеткүлд баһ хүврлһиг бултулх',
@@ -376,7 +376,7 @@ $1',
 Тер йовдл һарһсн халхна тууҗин өңгрсн заалһиг дахлһна арһ болад бәәнә.
 
 Эс гиҗ, тиим болх зөвтә, та заклһна теткүлин эндүһиг олв.
-Буйн болтха, URL заалһ бичәд, тер йовдлин туск [[Special:ListUsers/sysop|закрачд]] келтн.',
+Буйн болтха, URL заалһ бичәд, тер йовдлин туск [[Special:Listwiki_Users/sysop|закрачд]] келтн.',
 'missingarticle-rev' => '($1 тойгта халхна янз)',
 'missingarticle-diff' => '(йилһән: $1, $2)',
 'internalerror' => 'Дотрнь эндү',
@@ -397,7 +397,7 @@ $1',
 # Login and logout pages
 'logouttext' => "'''Та һарад бәәнәт.'''
 
-Та {{SITENAME}} гидг ормиг нертә уга олзлҗ чаднат, аль та [[Special:UserLogin|дәкәд орҗ]] цацу аль талдан нертә чаднат.
+Та {{SITENAME}} гидг ормиг нертә уга олзлҗ чаднат, аль та [[Special:wiki_UserLogin|дәкәд орҗ]] цацу аль талдан нертә чаднат.
 Зәрм халхс цааранднь та ода чигн орсн мет үзүлҗ чаддг тускар темдглтн (та хәләчин санлиг цеврлтл).",
 'welcomecreation' => '== Ирхитн эрҗәнәвидн, $1! ==
 Таднар шин бичгдлһн бүтв.
@@ -431,7 +431,7 @@ $1',
 'nosuchuser' => '«$1» гидг нерәдлһтә демнч бәәшго.
 Демнчна нерт баһ болн ик үзгүд әдл биш болна.
 «<nowiki>$1</nowiki>» гидг нерәдлһтә демнч бәәшго.
-Бичлһиг шүүтн аль [[Special:UserLogin/signup|бигчдлһиг бүтәтн]].',
+Бичлһиг шүүтн аль [[Special:wiki_UserLogin/signup|бигчдлһиг бүтәтн]].',
 'nosuchusershort' => '«$1» гидг нерәдлһтә демнч бәәшго.
 Бичлһиг шүүтн.',
 'nouserspecified' => 'Та демнчна нернь бичх йостав.',
@@ -509,7 +509,7 @@ $1',
 'previewconflict' => 'Тер хәләвр деегүрк чикллһнә теегт бәәдг бичг хадлһҗ бичсн мет үзүлнә.',
 'session_fail_preview' => "'''Гемим тәвтн, сервер тана сольлһта даңдад болв. Юнгад гихлә, тана харһлһна медүллһн геев.
 Буйн болтха, дәкәд арһ хәәтн.
-Тер эндү давтхла, [[Special:UserLogout|һартн]] тегәд бас харһтн.'''",
+Тер эндү давтхла, [[Special:wiki_UserLogout|һартн]] тегәд бас харһтн.'''",
 'editing' => 'Чикллһн: $1',
 'editingsection' => '«$1» гидг халхна чикллһн (хүв)',
 'editconflict' => 'Чикллһнә керүл: $1',
@@ -616,7 +616,7 @@ $1',
 'mypreferences' => 'Көгүд',
 'prefs-edits' => 'Чикллһнә то:',
 'prefsnologin' => 'Та харһв биш',
-'prefsnologintext' => 'Та <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} харһх]</span> кергтә,  тегәд көгүдиг сольҗ чаднат.',
+'prefsnologintext' => 'Та <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} харһх]</span> кергтә,  тегәд көгүдиг сольҗ чаднат.',
 'changepassword' => 'Нууц үгиг сольҗ',
 'prefs-skin' => 'Хувцнь',
 'skin-preview' => 'Хәләвр',
@@ -688,7 +688,7 @@ $1',
 'prefs-advancedwatchlist' => 'Дәкәд көгүд',
 'prefs-diffs' => 'Йилһәс',
 
-# User rights
+# wiki_User rights
 'userrights-reason' => 'Учр:',
 
 # Groups
@@ -712,7 +712,7 @@ $1',
 'grouppage-sysop' => '{{ns:project}}:Закрачуд',
 'grouppage-bureaucrat' => '{{ns:project}}:Нойнчуд',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Демнчна зөвәнә сеткүл',
 'rightsnone' => '(уга)',
 
@@ -761,7 +761,7 @@ $1',
 # Upload
 'upload' => 'Боомгиг тәвх',
 'uploadbtn' => 'Боомгиг тәвх',
-'uploadnologintext' => 'Та [[Special:UserLogin|харһх]] кергтә.',
+'uploadnologintext' => 'Та [[Special:wiki_UserLogin|харһх]] кергтә.',
 'uploaderror' => 'Тәвллһнә эндү',
 'uploadlogpage' => 'Тәвллһнә сеткүл',
 'filename' => 'Боомгна нернь',
@@ -819,7 +819,7 @@ $1',
 'statistics-edits-average' => 'Халхарн сольлһна то',
 'statistics-views-total' => 'Цуг хәләврин то',
 'statistics-views-peredit' => 'Сольлһарн хәләврин то',
-'statistics-users' => 'Бичгдлһтә [[Special:ListUsers|демнчнр]]',
+'statistics-users' => 'Бичгдлһтә [[Special:Listwiki_Users|демнчнр]]',
 'statistics-users-active' => 'Үүлтә демнчнр',
 'statistics-users-active-desc' => '{{PLURAL:$1|$1 өдрт|$1 өдрмүдт|$1 өдрмүдт}} болв чигн үүл кесн демнчнр',
 'statistics-mostpopular' => 'Маш хәләсн халхс',

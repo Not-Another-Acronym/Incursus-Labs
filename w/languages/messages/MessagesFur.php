@@ -98,9 +98,9 @@ $specialPageAliases = array(
 	'Unusedtemplates'           => array( 'ModeiNoDoprâts' ),
 	'Unwatchedpages'            => array( 'PagjinisNoTignudisDiVoli' ),
 	'Upload'                    => array( 'Cjame' ),
-	'Userlogin'                 => array( 'Jentre', 'Login' ),
-	'Userlogout'                => array( 'Jes', 'Logout' ),
-	'Userrights'                => array( 'PermèsUtents' ),
+	'wiki_Userlogin'                 => array( 'Jentre', 'Login' ),
+	'wiki_Userlogout'                => array( 'Jes', 'Logout' ),
+	'wiki_Userrights'                => array( 'PermèsUtents' ),
 	'Wantedcategories'          => array( 'CategoriisDesideradis' ),
 	'Watchlist'                 => array( 'TignudisDiVoli' ),
 	'Whatlinkshere'             => array( 'Leams' ),
@@ -118,7 +118,7 @@ $dateFormats = array(
 $separatorTransformTable = array( ',' => "\xc2\xa0", '.' => ',' );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Sotlinee leams',
 'tog-justify' => 'Justifiche paragraf',
 'tog-hideminor' => 'Plate lis piçulis modifichis tai ultins cambiaments',
@@ -397,7 +397,7 @@ L'aministradôr ch'al à metût il bloc al à scrit cheste motivazion: $1",
 Chest in gjenar al è causât dal jessi lâts daûr dal leam a une pagjine che e je stade eliminade, partint dal confront di dôs versions o di un leam tal storic.
 
 Se la cause no samee jessi cheste, tu podaressis vê cjatât un problem tal software.
-Segnalilu par plasê a un [[Special:ListUsers/sysop|administrator]], notant la URL.',
+Segnalilu par plasê a un [[Special:Listwiki_Users/sysop|administrator]], notant la URL.',
 'missingarticle-rev' => '(numar de revision: $1)',
 'filedeleteerror' => 'No si pues eliminâ il file "$1".',
 'filenotfound' => 'No si pues cjatâ il file "$1".',
@@ -410,7 +410,7 @@ Al podarès vê dentri caratars che no podin jessi doprâts tai titui.',
 # Login and logout pages
 'logouttext' => "'''Tu sâs cumò lât fûr.'''
 
-Tu puedis continuâ a doprâ {{SITENAME}} come anonim, o tu puedis [[Special:UserLogin|jentrâ di gnûf]] cul stes o cuntun altri non utent.
+Tu puedis continuâ a doprâ {{SITENAME}} come anonim, o tu puedis [[Special:wiki_UserLogin|jentrâ di gnûf]] cul stes o cuntun altri non utent.
 Considere che cualchi pagjine e pues mostrâti ancjemò come jentrât tal sît fin cuant che no tu netis la memorie cache dal sgarfadôr.",
 'welcomecreation' => '== Mandi e benvignût $1! ==
 La tô identitât e je stade creade. 
@@ -445,7 +445,7 @@ No stâ dismenteâti di gambiâ lis [[Special:Preferences|preferencis di {{SITEN
 'noname' => 'No tu âs inserît un non utent valit.',
 'loginsuccesstitle' => 'Jentrât cun sucès',
 'loginsuccess' => 'Cumò tu sês jentrât te {{SITENAME}} sicu "$1".',
-'nosuchuser' => 'Nissun utent regjistrât cul non "$1". Controle il non inserît o [[Special:UserLogin/signup|cree tu une gnove identitât]].',
+'nosuchuser' => 'Nissun utent regjistrât cul non "$1". Controle il non inserît o [[Special:wiki_UserLogin/signup|cree tu une gnove identitât]].',
 'nosuchusershort' => 'Nol esist nissun utent cul non "$1". Controle di no vê sbaliât di scrivi.',
 'nouserspecified' => 'Tu scugnis specificâ un non utent.',
 'wrongpassword' => 'La peraule clâf zontade no je juste. Torne par plasê a provâ.',
@@ -540,12 +540,12 @@ Par plasê inclût la to direzion IP atuâl ($3) o il numar dal bloc (ID #$5) in
 'loginreqlink' => 'jentrâ',
 'loginreqpagetext' => 'Tu scugnis $1 par viodi lis altris pagjinis.',
 'accmailtitle' => 'Password mandade.',
-'accmailtext' => "Une password gjenerade a câs par [[User talk:$1|$1]] e je stade mandade a $2.
+'accmailtext' => "Une password gjenerade a câs par [[wiki_User talk:$1|$1]] e je stade mandade a $2.
 
 La password par cheste identitât e pues jessi cambiade su la pagjine ''[[Special:ChangePassword|cambie password]]'' daspò de jentrade.",
 'newarticle' => '(Gnûf)',
 'newarticletext' => "Tu âs seguît un leam a une pagjine che no esist ancjemò. Par creâ une pagjine, scomence a scrivi tal spazi ca sot (cjale il [[{{MediaWiki:Helppage}}|jutori]] par altris informazions). Se tu sês ca par erôr, frache semplicementri il boton '''Indaûr''' dal to sgarfadôr.",
-'anontalkpagetext' => "----''Cheste e je la pagjine di discussion di un utent anonim, che nol à ancjemò creât une identitât, o che no la vûl doprâ. Par identificâlu/e a doprin alore la so direzion IP. Lis direzions IP a podin però jessi condividudis di plui utents. Se tu sês un utent anonim e tu crodis che ti vedin fat coments che no si riferissin a ti, par plasê [[Special:UserLogin|cree une gnove identitâ o jentre]] cun chê che tu âs za cussì tu evitarâs in futûr di jessi confondût un altris utents anonims.''",
+'anontalkpagetext' => "----''Cheste e je la pagjine di discussion di un utent anonim, che nol à ancjemò creât une identitât, o che no la vûl doprâ. Par identificâlu/e a doprin alore la so direzion IP. Lis direzions IP a podin però jessi condividudis di plui utents. Se tu sês un utent anonim e tu crodis che ti vedin fat coments che no si riferissin a ti, par plasê [[Special:wiki_UserLogin|cree une gnove identitâ o jentre]] cun chê che tu âs za cussì tu evitarâs in futûr di jessi confondût un altris utents anonims.''",
 'noarticletext' => 'Par cumò nol è nuie in cheste pagjine.
 Tu puedis [[Special:Search/{{PAGENAME}}|cirî chest titul]] in altris pagjinis o <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} cirî i regjistris leâts],
 o ben [{{fullurl:{{FULLPAGENAME}}|action=edit}} cambiâ cheste pagjine]</span>.',
@@ -579,7 +579,7 @@ L'aministradôr che al à blocât la base di dâts al à ufiert chest spiegazion
 'template-semiprotected' => '(semi-protezût)',
 'hiddencategories' => 'Cheste pagjine e je {{PLURAL:$1|intune categorie platade|in $1 categoriis platadis}}:',
 'nocreatetitle' => 'Creazion des pagjinis limitade',
-'nocreatetext' => '{{SITENAME}} al à limitât la pussibilitât di creâ gnovis pagjinis ai utents regjistrâts. Tu puedis tornâ indaûr e cambiâ une pagjine che e esist o se no [[Special:UserLogin|jentrâ o creâ une gnove identitât]].',
+'nocreatetext' => '{{SITENAME}} al à limitât la pussibilitât di creâ gnovis pagjinis ai utents regjistrâts. Tu puedis tornâ indaûr e cambiâ une pagjine che e esist o se no [[Special:wiki_UserLogin|jentrâ o creâ une gnove identitât]].',
 'nocreate-loggedin' => 'No tu âs i permès che a coventin par creâ gnovis pagjinis.',
 'permissionserrors' => 'Erôr tai permès',
 'permissionserrorstext-withaction' => 'No tu âs i permès che a coventin par $2, {{PLURAL:$1|par il motîf|pai motîfs}} ca sot:',
@@ -804,8 +804,8 @@ La tô direzion di pueste no ven mostrade cuant che i utents ti contatin.',
 'prefs-advancedsearchoptions' => 'Opzions avanzadis',
 'prefs-advancedwatchlist' => 'Opzions avanzadis',
 
-# User rights
-'editinguser' => "Cambiament dai dirits par l'utent '''[[User:$1|$1]]''' ([[User talk:$1|{{int:talkpagelinktext}}]]{{int:pipe-separator}}[[Special:Contributions/$1|{{int:contribslink}}]])",
+# wiki_User rights
+'editinguser' => "Cambiament dai dirits par l'utent '''[[wiki_User:$1|$1]]''' ([[wiki_User talk:$1|{{int:talkpagelinktext}}]]{{int:pipe-separator}}[[Special:Contributions/$1|{{int:contribslink}}]])",
 'userrights-groupsmember' => 'Al fâs part di:',
 
 # Groups
@@ -819,7 +819,7 @@ La tô direzion di pueste no ven mostrade cuant che i utents ti contatin.',
 
 'grouppage-sysop' => '{{ns:project}}:Aministradôrs',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Regjistri dai dirits dai utents',
 
 # Associated actions - in the sentence "You do not have permission to X"
@@ -873,7 +873,7 @@ La tô direzion di pueste no ven mostrade cuant che i utents ti contatin.',
 'upload' => 'Cjame sù un file',
 'uploadbtn' => 'Cjame sù un file',
 'uploadnologin' => 'No jentrât',
-'uploadnologintext' => 'Tu scugnis [[Special:UserLogin|jentrâ]] cul to non utent par cjamâ sù files.',
+'uploadnologintext' => 'Tu scugnis [[Special:wiki_UserLogin|jentrâ]] cul to non utent par cjamâ sù files.',
 'uploaderror' => 'Erôr cjamant sù',
 'uploadtext' => "Dopre la form ca sot par cjamâ sù un file, par cjalâ o cirî i files cjamâts sù in precedence va te [[Special:FileList|liste dai files cjamâts sù]], lis cjamadis e lis eliminazions a son ancje regjistrâts tal [[Special:Log/upload|regjistri des cjamadis]].
 
@@ -988,7 +988,7 @@ La descrizion su la sô [$2 pagjine di descrizion] e je mostrade ca sot.',
 'statistics-edits-average' => 'Medie dai cambiaments par ogni pagjine',
 'statistics-views-total' => 'Viodudis totâls',
 'statistics-views-peredit' => 'Viodudis par cambiament',
-'statistics-users' => '[[Special:ListUsers|Utents]] regjistrâts',
+'statistics-users' => '[[Special:Listwiki_Users|Utents]] regjistrâts',
 'statistics-users-active' => 'Utents atîfs',
 'statistics-users-active-desc' => 'Utents che a àn fat une azion {{PLURAL:$1|intal ultin dì|intai ultins $1 dîs}}',
 'statistics-mostpopular' => 'Pagjinis plui visitadis',
@@ -1102,13 +1102,13 @@ Cjale ancje lis [[Special:WantedCategories|categoriis desideradis]].',
 'linksearch-ok' => 'Cîr',
 'linksearch-line' => '$1 al à un leam di $2',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => 'Mostre i utents scomençant di:',
 'listusers-submit' => 'Mostre',
 'listusers-noresult' => 'Nissun utent cjatât.',
 'listusers-blocked' => '({{GENDER:$1|blocât|blocade}})',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'Liste dai utents atîfs',
 'activeusers-intro' => 'Cheste e je une liste dai utents che a àn vût cualchi gjenar di ativitât {{PLURAL:$1|te ultime dì|tai ultins $1 diis}}.',
 'activeusers-count' => '$1 {{PLURAL:$1|cambiament|cambiaments}} {{PLURAL:$3|te ultime dì|tai ultins $3 diis}}',
@@ -1149,7 +1149,7 @@ Cjale ancje lis [[Special:WantedCategories|categoriis desideradis]].',
 'watchlistfor2' => 'Par $1 $2',
 'nowatchlist' => 'Nissun element al è tignût di voli.',
 'watchnologin' => 'No tu sês jentrât',
-'watchnologintext' => "Tu 'nd âs di [[Special:UserLogin|jentrâ]] par modificâ la liste des pagjinis tignudis di voli.",
+'watchnologintext' => "Tu 'nd âs di [[Special:wiki_UserLogin|jentrâ]] par modificâ la liste des pagjinis tignudis di voli.",
 'addedwatchtext' => "La pagjine \"<nowiki>\$1</nowiki>\" e je stade zontade ae [[Special:Watchlist|liste di chês tignudis di voli]].
 Tal futûr i cambiaments a cheste pagjine e ae pagjine di discussion relative a saran segnalâts ca,
 e la pagjine e sarà '''gruessute''' te [[Special:RecentChanges|liste dai ultins cambiaments]] cussì che tu puedis notâle daurman.
@@ -1348,7 +1348,7 @@ tu âs di cognossi lis conseguencis prime di lâ indevant.",
 In chescj câs, tu varâs di movi o unî a man lis informazions contignudis te pagjine di discussion, se tu lu desideris.",
 'movearticle' => 'Môf la vôs',
 'movenologin' => 'No tu sês jentrât',
-'movenologintext' => 'Tu âs di jessi un utent regjistrât e [[Special:UserLogin|jentrât]] par movi une pagjine.',
+'movenologintext' => 'Tu âs di jessi un utent regjistrât e [[Special:wiki_UserLogin|jentrât]] par movi une pagjine.',
 'movenotallowed' => 'No tu âs i permès che a coventin par movi lis pagjinis.',
 'newtitle' => 'Al gnûf titul',
 'move-watch' => 'Ten di voli cheste pagjine',

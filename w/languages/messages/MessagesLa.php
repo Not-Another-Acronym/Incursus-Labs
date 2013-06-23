@@ -143,9 +143,9 @@ $specialPageAliases = array(
 	'Unusedtemplates'           => array( 'Formulae non in usu' ),
 	'Unwatchedpages'            => array( 'Paginae incustoditae' ),
 	'Upload'                    => array( 'Fasciculos onerare', 'Imagines onerare' ),
-	'Userlogin'                 => array( 'Conventum aperire' ),
-	'Userlogout'                => array( 'Conventum concludere' ),
-	'Userrights'                => array( 'Usorum potestates', 'Iura usorum' ),
+	'wiki_Userlogin'                 => array( 'Conventum aperire' ),
+	'wiki_Userlogout'                => array( 'Conventum concludere' ),
+	'wiki_Userrights'                => array( 'Usorum potestates', 'Iura usorum' ),
 	'Version'                   => array( 'Versio' ),
 	'Wantedcategories'          => array( 'Categoriae desideratae' ),
 	'Wantedfiles'               => array( 'Fasciculi desiderati', 'Imagines desideratae' ),
@@ -157,7 +157,7 @@ $specialPageAliases = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Versores linea denotandi:',
 'tog-justify' => 'Iustificare paragrapha',
 'tog-hideminor' => 'Celare recensiones minores in indice nuper mutatorum',
@@ -483,7 +483,7 @@ Inquisitio: $2',
 'sqlhidden' => '(inquisitio SQL celata)',
 'namespaceprotected' => "Tibi non licet paginas spatii nominalis '''$1''' recensere.",
 'ns-specialprotected' => 'Paginae speciales recenseri non possunt.',
-'titleprotected' => 'Hic titulus protectus est ab usore [[User:$1|$1]] ne creetur.
+'titleprotected' => 'Hic titulus protectus est ab usore [[wiki_User:$1|$1]] ne creetur.
 Ratio data est "\'\'$2\'\'".',
 
 # Virus scanner
@@ -494,7 +494,7 @@ Ratio data est "\'\'$2\'\'".',
 # Login and logout pages
 'logouttext' => "'''Conventum tuum conclusum est.'''
 
-Ignote continues {{grammar:ablative|{{SITENAME}}}} uti, aut conventum novum vel sub eodem vel novo nomine [[Special:UserLogin|aperias]].
+Ignote continues {{grammar:ablative|{{SITENAME}}}} uti, aut conventum novum vel sub eodem vel novo nomine [[Special:wiki_UserLogin|aperias]].
 Nota bene paginas fortasse videantur quasi tuum conventum esset apertum, priusquam navigatrum purgaveris.",
 'welcomecreation' => '== Salve, $1! ==
 Ratio tua creata est.
@@ -530,7 +530,7 @@ Nomen usoris alium selige.',
 'loginsuccesstitle' => 'Conventum prospere apertum est',
 'loginsuccess' => "'''Apud {{grammar:accusative|{{SITENAME}}}} agnosceris nomine \"\$1\".'''",
 'nosuchuser' => 'Usor "$1" non est.
-Confirma orthographiam (cave litteras maiusculas minusculasque), aut [[Special:UserLogin/signup|novam rationem crea]].',
+Confirma orthographiam (cave litteras maiusculas minusculasque), aut [[Special:wiki_UserLogin/signup|novam rationem crea]].',
 'nosuchusershort' => 'Usor "$1" non est.
 Confirma orthographiam.',
 'nouserspecified' => 'Nomen usoris indicare debes.',
@@ -654,7 +654,7 @@ Fortasse aliquis hanc partem movit vel delevit.',
 'loginreqlink' => 'conventum aperire',
 'loginreqpagetext' => 'Necesse est tibi $1 priusquam paginas alias legas.',
 'accmailtitle' => 'Tessera missa est.',
-'accmailtext' => "Tessera nova usoris [[User talk:$1|$1]] ad $2 missa est.
+'accmailtext' => "Tessera nova usoris [[wiki_User talk:$1|$1]] ad $2 missa est.
 
 Convento aperto, tessera huius novae rationis hic potest mutari: ''[[Special:ChangePassword|tesseram mutare]]''.",
 'newarticle' => '(Nova)',
@@ -662,7 +662,7 @@ Convento aperto, tessera huius novae rationis hic potest mutari: ''[[Special:Cha
 Novam paginam si vis creare, in capsam infra praebitam scribe.
 (Vide [[{{MediaWiki:Helppage}}|paginam auxilii]] si plura cognoscere vis.)
 Si hic es propter errorem, solum '''Retrorsum''' in navigatro tuo preme.",
-'anontalkpagetext' => "----''Haec est pagina disputationis usoris anonymi, solum a loco IP suo noti. Memento locos IP aliquando mutaturos, et a usoribus multis fortasse adhibitos. Si es usor ignotus, et tibi querulae sine causa datae sunt, conventum [[Special:UserLogin/signup|crea]] vel [[Special:UserLogin|aperi]] ad confusionem futuram evitendam.''",
+'anontalkpagetext' => "----''Haec est pagina disputationis usoris anonymi, solum a loco IP suo noti. Memento locos IP aliquando mutaturos, et a usoribus multis fortasse adhibitos. Si es usor ignotus, et tibi querulae sine causa datae sunt, conventum [[Special:wiki_UserLogin/signup|crea]] vel [[Special:wiki_UserLogin|aperi]] ad confusionem futuram evitendam.''",
 'noarticletext' => 'Hac in pagina non sunt litterae.
 Potes [[Special:Search/{{PAGENAME}}|hanc rem in aliis paginis quaerere]],
 <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} acta huius paginae videre]
@@ -726,11 +726,11 @@ quia haec pagina iam est.',
 
 # "Undo" feature
 'undo-norev' => 'Recensio abrogari non potuit quia non est aut deleta est.',
-'undo-summary' => 'Abrogans recensionem $1 ab usore [[Special:Contributions/$2|$2]] ([[User talk:$2|Disputatio]])',
+'undo-summary' => 'Abrogans recensionem $1 ab usore [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Disputatio]])',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'Ratio creari non potest',
-'cantcreateaccount-text' => "Creatio rationum ab hoc loco IP ('''$1''') obstructa est ab usore [[User:$3|$3]].
+'cantcreateaccount-text' => "Creatio rationum ab hoc loco IP ('''$1''') obstructa est ab usore [[wiki_User:$3|$3]].
 
 Ille hanc causam dedit: ''$2''",
 
@@ -882,7 +882,7 @@ Conare praefixare tua inquisitionem cum ''all:'' ut quaeras contenta omnia (pagi
 'mypreferences' => 'Praeferentiae',
 'prefs-edits' => 'Numerus recensionum:',
 'prefsnologin' => 'Conventum non est apertum',
-'prefsnologintext' => '<span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} Conventum aperire]</span> debes ad praeferentias tuas modificandum.',
+'prefsnologintext' => '<span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} Conventum aperire]</span> debes ad praeferentias tuas modificandum.',
 'changepassword' => 'Tesseram mutare',
 'prefs-skin' => 'Aspectum',
 'skin-preview' => 'Praevisum',
@@ -962,12 +962,12 @@ Si vis id dare, opera tua tibi ascribentur.',
 'prefs-signature' => 'Subscriptio',
 'prefs-diffs' => 'Differentiae',
 
-# User rights
+# wiki_User rights
 'userrights' => 'Usorum potestates',
 'userrights-lookup-user' => 'Greges usorum regere',
 'userrights-user-editname' => 'Nomen usoris inscribe:',
 'editusergroup' => 'Greges usorum recensere',
-'editinguser' => "Modificare potestates usoris '''[[User:$1|$1]]''' $2",
+'editinguser' => "Modificare potestates usoris '''[[wiki_User:$1|$1]]''' $2",
 'userrights-editusergroup' => 'Greges usorum recensere',
 'saveusergroups' => 'Greges usorum servare',
 'userrights-groupsmember' => 'In grege aut in gregibus:',
@@ -1038,7 +1038,7 @@ Si vis id dare, opera tua tibi ascribentur.',
 'right-userrights-interwiki' => 'Potestates usorum aliis in vicis recensere',
 'right-siteadmin' => 'Basem datorum obstruere vel deobstruere',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Index mutationum iuribus usorum',
 'rightslogtext' => 'Haec est index mutationum iuribus usorum.',
 'rightsnone' => '(nullus)',
@@ -1119,7 +1119,7 @@ Si vis id dare, opera tua tibi ascribentur.',
 'uploadbtn' => 'Fasciculum imponere',
 'reuploaddesc' => 'Siste imponere et ad imponendi formam redi',
 'uploadnologin' => 'Conventum non est apertum',
-'uploadnologintext' => 'Oportet [[Special:UserLogin|aperire conventum]] ut fasciculos imponas.',
+'uploadnologintext' => 'Oportet [[Special:wiki_UserLogin|aperire conventum]] ut fasciculos imponas.',
 'uploaderror' => 'Imponendi erratum',
 'uploadtext' => "Utere formam subter ad fasciculos imponendos.
 Ut fasciculos antea impositos videas aut quaeras, adi ad [[Special:FileList|indicem fasciculorum impositorum]]. Fasciculi impositi et deleti quoque in [[Special:Log/upload|notatione fasciculorum impositorum]] notantur.
@@ -1278,7 +1278,7 @@ Fortasse [$2 paginam descriptionis fasciculi] ibi sitam recensere vis.',
 'statistics-edits-average' => 'Recensiones per paginam',
 'statistics-views-total' => 'Visus',
 'statistics-views-peredit' => 'Visus per recensionem',
-'statistics-users' => '[[Special:ListUsers|Usores]] relati',
+'statistics-users' => '[[Special:Listwiki_Users|Usores]] relati',
 'statistics-users-active' => 'Usores activi',
 'statistics-users-active-desc' => 'Usores qui {{PLURAL:$1|proxima die|proximis $1 diebus}} actionem perfecerunt',
 'statistics-mostpopular' => 'Paginae plurimum visae',
@@ -1408,12 +1408,12 @@ Vide etiam [[Special:WantedCategories|categorias desideratas]].',
 'linksearch-ns' => 'Spatium nominale:',
 'linksearch-ok' => 'Quaerere',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusers-submit' => 'Monstrare',
 'listusers-noresult' => 'Nullus usor inventus.',
 'listusers-blocked' => '(obstructus)',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'Index usorum activorum',
 'activeusers-count' => '{{PLURAL:$1|una recensio recens|$1 recensiones recentes}} {{PLURAL:$3|die proximo|in diebus $3 proximis}}',
 'activeusers-hidebots' => 'Celare automata',
@@ -1459,7 +1459,7 @@ Inscriptio electronica quam in [[Special:Preferences|praeferentiis tuis]] dedis 
 'emailsenttext' => 'Nuntium tuum missum est.',
 'emailuserfooter' => 'Has litteras electronicas $1 ad $2 misit per "Litteras electronicas usori mittere" in {{grammar:ablative|{{SITENAME}}}}.',
 
-# User Messenger
+# wiki_User Messenger
 'usermessage-editor' => 'Nuntius systematis',
 
 # Watchlist
@@ -1469,7 +1469,7 @@ Inscriptio electronica quam in [[Special:Preferences|praeferentiis tuis]] dedis 
 'nowatchlist' => 'Nullas paginas custodis.',
 'watchlistanontext' => 'Necesse est $1 ad indicem paginarum custoditarum inspiciendum vel recensendum.',
 'watchnologin' => 'Conventum non est apertum',
-'watchnologintext' => '[[Special:UserLogin|Conventum aperire]] debes ut indicem paginarum custoditarum mutes.',
+'watchnologintext' => '[[Special:wiki_UserLogin|Conventum aperire]] debes ut indicem paginarum custoditarum mutes.',
 'addedwatchtext' => 'Pagina "[[:$1]]" in [[Special:Watchlist|paginas tuas custoditas]] addita est.
 Mutationes posthac huic paginae et paginae disputationis ibi notabuntur.',
 'removedwatchtext' => 'Pagina "[[:$1]]" ex [[Special:Watchlist|indice paginarum custoditarum]] remota est.',
@@ -1562,11 +1562,11 @@ Adfirma quaesumus te paginam re vera delere velle, te consequentias intellere, e
 'rollbacklinkcount-morethan' => 'reverti plus quam {{PLURAL:$1|unam recensionem|$1 recensiones}}',
 'rollbackfailed' => 'Reversum defecit',
 'cantrollback' => 'Haec non potest reverti; conlator proximus solus auctor huius rei est.',
-'alreadyrolled' => 'Ad emendationem proximam paginae [[:$1]] ab usore [[User:$2|$2]] ([[User talk:$2|Disputatio]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]) reverti non potest; alius paginam iam recensuit vel revertit.
+'alreadyrolled' => 'Ad emendationem proximam paginae [[:$1]] ab usore [[wiki_User:$2|$2]] ([[wiki_User talk:$2|Disputatio]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]) reverti non potest; alius paginam iam recensuit vel revertit.
 
-Emendatio proxima ab usore [[User:$3|$3]] ([[User talk:$3|Disputatio]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]) effecta est.',
+Emendatio proxima ab usore [[wiki_User:$3|$3]] ([[wiki_User talk:$3|Disputatio]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]) effecta est.',
 'editcomment' => "Summarium erat: \"''\$1''\".",
-'revertpage' => 'Reverti recensiones ab usore [[Special:Contributions/$2|$2]] ([[User talk:$2|Disputatio]]) ad emendationem proximam ab [[User:$1|$1]]',
+'revertpage' => 'Reverti recensiones ab usore [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Disputatio]]) ad emendationem proximam ab [[wiki_User:$1|$1]]',
 'rollback-success' => 'Reverti recensiones ab usore $1
 ad emendationem proximam ab $2.',
 
@@ -1733,7 +1733,7 @@ Rationem certam subscribe (exempli gratia titulos paginarum quas iste usor modo 
 'unblockip' => 'Deobstruere locum IP',
 'unblockiptext' => 'Formam inferam usere ut locum IP deobstruere.',
 'ipusubmit' => 'Hanc obstructionem removere',
-'unblocked' => '[[User:$1|$1]] deobstructus est',
+'unblocked' => '[[wiki_User:$1|$1]] deobstructus est',
 'unblocked-id' => 'Obstructio numeri $1 abrogata est',
 'ipblocklist' => 'Usores obstructi',
 'ipblocklist-legend' => 'Usorem obstructum quaerere',
@@ -1749,7 +1749,7 @@ Rationem certam subscribe (exempli gratia titulos paginarum quas iste usor modo 
 'unblocklink' => 'deobstruere',
 'change-blocklink' => 'protectionem mutare',
 'contribslink' => 'conlationes',
-'autoblocker' => 'Obstructus es automatice quia "[[User:$1|$1]]" nuper tuum locum IP adhibuit. Ratio data ob obstructionem usoris $1 est: "$2"',
+'autoblocker' => 'Obstructus es automatice quia "[[wiki_User:$1|$1]]" nuper tuum locum IP adhibuit. Ratio data ob obstructionem usoris $1 est: "$2"',
 'blocklogpage' => 'Index obstructionum',
 'blocklog-showlog' => 'Hic usor antea obstructus est.
 Commodule notatio obstructionum subter datur.',
@@ -1814,7 +1814,7 @@ Ergo manu necesse disputationes motare vel contribuere erit, si vis.",
 'movearticle' => 'Paginam movere:',
 'moveuserpage-warning' => "'''Monitio:''' Si paginam usoris moves, solum pagina movetur, usor '''non''' renominatur.",
 'movenologin' => 'Conventum non est apertum',
-'movenologintext' => 'Rationem usoris habere et [[Special:UserLogin|conventum aperire]] debes ad movendum paginam.',
+'movenologintext' => 'Rationem usoris habere et [[Special:wiki_UserLogin|conventum aperire]] debes ad movendum paginam.',
 'movenotallowed' => 'Tibi non licet paginas movere.',
 'movenotallowedfile' => 'Tibi non licet fasciculos movere.',
 'cant-move-user-page' => 'Tibi non licet paginas usorum movere (solum eorum subpaginas).',
@@ -2230,7 +2230,7 @@ Nuntius reddidit: $1',
 'confirmemail_invalid' => 'Codex adfirmationis invalidus. Fortasse id exitum est.',
 'confirmemail_needlogin' => 'Necesse est tibi $1 ut inscriptionem tuam electronicam adfirmes.',
 'confirmemail_success' => 'Tua inscriptio electronica adfirmata est.
-Libenter [[Special:UserLogin|conventum aperias]] utarisque {{grammar:ablative|{{SITENAME}}}}.',
+Libenter [[Special:wiki_UserLogin|conventum aperias]] utarisque {{grammar:ablative|{{SITENAME}}}}.',
 'confirmemail_loggedin' => 'Inscriptio tua electronica iam adfirmata est.',
 'confirmemail_error' => 'Aliquid erravit quando adfirmationem tuam servabamus.',
 'confirmemail_subject' => '{{SITENAME}} - Adfirmatio inscriptionis electronicae',
@@ -2252,7 +2252,7 @@ Hic codex adfirmationis exibit $4.',
 
 # Delete conflict
 'deletedwhileediting' => "'''Monitio:''' Haec pagina deleta est postquam inceperis eam recensere!",
-'confirmrecreate' => "Usor [[User:$1|$1]] ([[User talk:$1|disputatio]]) delevit hanc paginam postquam eam emendare inceperis cum ratione:
+'confirmrecreate' => "Usor [[wiki_User:$1|$1]] ([[wiki_User talk:$1|disputatio]]) delevit hanc paginam postquam eam emendare inceperis cum ratione:
 : ''$2''
 Quaesumus, adfirma ut iterum hanc paginam crees.",
 'recreate' => 'Recreare',

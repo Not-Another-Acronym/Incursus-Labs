@@ -361,7 +361,7 @@ class HistoryPager extends ReverseChronologicalPager {
 	function getQueryInfo() {
 		$queryInfo = array(
 			'tables'  => array( 'revision', 'user' ),
-			'fields'  => array_merge( Revision::selectFields(), Revision::selectUserFields() ),
+			'fields'  => array_merge( Revision::selectFields(), Revision::selectwiki_UserFields() ),
 			'conds'   => array_merge(
 				array( 'rev_page' => $this->getWikiPage()->getId() ),
 				$this->conds ),
@@ -568,7 +568,7 @@ class HistoryPager extends ReverseChronologicalPager {
 				$del = Xml::check( 'showhiderevisions', false,
 					array( 'name' => 'ids[' . $rev->getId() . ']' ) );
 			}
-		// User can only view deleted revisions...
+		// wiki_User can only view deleted revisions...
 		} elseif ( $rev->getVisibility() && $user->isAllowed( 'deletedhistory' ) ) {
 			// If revision was hidden from sysops, disable the link
 			if ( !$rev->userCan( Revision::DELETED_RESTRICTED, $user ) ) {
@@ -591,7 +591,7 @@ class HistoryPager extends ReverseChronologicalPager {
 		$s .= " $link";
 		$s .= $dirmark;
 		$s .= " <span class='history-user'>" .
-			Linker::revUserTools( $rev, true ) . "</span>";
+			Linker::revwiki_UserTools( $rev, true ) . "</span>";
 		$s .= $dirmark;
 
 		if ( $rev->isMinor() ) {
@@ -617,8 +617,8 @@ class HistoryPager extends ReverseChronologicalPager {
 		$tools = array();
 
 		# Rollback and undo links
-		if ( $prevRev && $this->getTitle()->quickUserCan( 'edit', $user ) ) {
-			if ( $latest && $this->getTitle()->quickUserCan( 'rollback', $user ) ) {
+		if ( $prevRev && $this->getTitle()->quickwiki_UserCan( 'edit', $user ) ) {
+			if ( $latest && $this->getTitle()->quickwiki_UserCan( 'rollback', $user ) ) {
 				$this->preventClickjacking();
 				$tools[] = '<span class="mw-rollback-link">' .
 					Linker::buildRollbackLink( $rev, $this->getContext() ) . '</span>';

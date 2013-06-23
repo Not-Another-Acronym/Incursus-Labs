@@ -58,7 +58,7 @@ $specialPageAliases = array(
 	'Shortpages'                => array( 'ʻAoʻaoPōkole', 'AoaoPokole' ),
 	'Specialpages'              => array( 'PapaNui' ),
 	'Upload'                    => array( 'Hoʻouka', 'Hoouka' ),
-	'Userlogout'                => array( 'Haʻalele', 'Haalele' ),
+	'wiki_Userlogout'                => array( 'Haʻalele', 'Haalele' ),
 	'Watchlist'                 => array( 'PapaNānāPono', 'PapaNanaPono' ),
 );
 
@@ -87,7 +87,7 @@ $magicWords = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Kahalalo i nā loulou:',
 'tog-justify' => 'Ho‘okaulihi i nā paukū',
 'tog-hideminor' => 'E hūnā i nā ho‘opololei iki ma nā loli hou',
@@ -400,7 +400,7 @@ E hoʻopaʻa ʻia ana kou IP ma ko kēia ʻaoʻao mōʻaukala.",
 'newarticle' => '(Hou)',
 'anontalkpagetext' => "----''‘O kēia ka ʻaoʻao kūkākūkā no kekahi mea ho‘ohana me ka moʻokāki ʻole. No laila, pono mākou e ho‘ohana i ka wahi noho IP no ka hōʻoia ʻana iā ia.
 Hiki i kekahi mau mea hoʻohana ke hoʻokaʻana i kēia wahi noho IP.
-Inā he mea ho‘ohana ʻoe a ua haʻi ʻia kekahi manaʻo iā ʻoe, [[Special:UserLogin/signup|e hoʻokumu ʻia kekahi moʻokāki]] a i ʻole [[Special:UserLogin|e ʻeʻe]].''",
+Inā he mea ho‘ohana ʻoe a ua haʻi ʻia kekahi manaʻo iā ʻoe, [[Special:wiki_UserLogin/signup|e hoʻokumu ʻia kekahi moʻokāki]] a i ʻole [[Special:wiki_UserLogin|e ʻeʻe]].''",
 'noarticletext' => 'ʻAʻohe kikokikona a kēia ʻaoʻao.
 Hiki iā ʻoe ke [[Special:Search/{{PAGENAME}}|huli no kēia inoa ʻaoʻao]] i nā ʻaoʻao ʻē aʻe, <span class="plainlinks">[{{fullurl:SpecialLog|page={{FULLPAGENAMEE}}}} huli i nā moʻolelo pili], a i ʻole [{{fullurl:{{FULLPAGENAME}}|action=edit}} hoʻololi i kēia ʻaoʻao]</span>.',
 'previewnote' => "'''‘O keia ka nāmua;
@@ -424,7 +424,7 @@ Ke hoʻohiki nei ʻoe iā kākou: nou i kākau i kēia kikokikona a i ʻole nou 
 # "Undo" feature
 'undo-success' => 'Hiki iā ʻoe ke hoʻihoʻi mai i kēia loli ʻana.
 E ʻoluʻolu, e hōʻoia i ka hoʻokūkū ʻana i lalo, a laila, e mālama i nā loli i lalo no ka hoʻopau ʻana i ka hoʻihoʻi mai ʻana i ka loli.',
-'undo-summary' => 'Hoʻihoʻi mai i ke kāmua $1 na [[Special:Contributions/$2|$2]] ([[User talk:$2|kūkākūkā]])',
+'undo-summary' => 'Hoʻihoʻi mai i ke kāmua $1 na [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|kūkākūkā]])',
 
 # History pages
 'currentrev' => 'Kāmua hou',
@@ -517,7 +517,7 @@ E ʻoluʻolu, e hōʻoia i ka hoʻokūkū ʻana i lalo, a laila, e mālama i nā
 'email' => 'Leka uila',
 'prefs-help-email-required' => 'Koina ka leka uila.',
 
-# User rights
+# wiki_User rights
 'userrights' => 'Ho‘oponopono ‘ana o nā kuleana',
 
 # Groups
@@ -639,7 +639,7 @@ E ʻoluʻolu, e hōʻoia i ka hoʻokūkū ʻana i lalo, a laila, e mālama i nā
 'linksearch' => 'Loulou waho wahi',
 'linksearch-ok' => 'Huli',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusers-submit' => 'Hō‘ike',
 
 # Special:ListGroupRights

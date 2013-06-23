@@ -18,7 +18,7 @@ class BackupDumperLoggerTest extends DumpTestCase {
 	 *
 	 * @param $type string: type of the log entry
 	 * @param $subtype string: subtype of the log entry
-	 * @param $user User: user that performs the logged operation
+	 * @param $user wiki_User: user that performs the logged operation
 	 * @param $ns int: number of the namespace for the entry's target's title
 	 * @param $title string: title of the entry's target
 	 * @param $comment string: comment of the log entry
@@ -27,7 +27,7 @@ class BackupDumperLoggerTest extends DumpTestCase {
 	 *
 	 * @return int id of the added log entry
 	 */
-	private function addLogEntry( $type, $subtype, User $user, $ns, $title,
+	private function addLogEntry( $type, $subtype, wiki_User $user, $ns, $title,
 		$comment = null, $parameters = null ) {
 
                 $logEntry = new ManualLogEntry( $type, $subtype );
@@ -47,7 +47,7 @@ class BackupDumperLoggerTest extends DumpTestCase {
 		$this->tablesUsed[] = 'user';
 
 		try {
-			$user1 = User::newFromName( 'BackupDumperLogUserA' );
+			$user1 = wiki_User::newFromName( 'BackupDumperLogwiki_UserA' );
 			$this->userId1 = $user1->getId();
 			if ( $this->userId1 === 0 ) {
 				$user1->addToDatabase();
@@ -55,7 +55,7 @@ class BackupDumperLoggerTest extends DumpTestCase {
 			}
 			$this->assertGreaterThan( 0, $this->userId1 );
 
-			$user2 = User::newFromName( 'BackupDumperLogUserB' );
+			$user2 = wiki_User::newFromName( 'BackupDumperLogwiki_UserB' );
 			$this->userId2 = $user2->getId();
 			if ( $this->userId2 === 0 ) {
 				$user2->addToDatabase();
@@ -151,18 +151,18 @@ class BackupDumperLoggerTest extends DumpTestCase {
 		// Analyzing the dumped data
 		$this->assertDumpStart( $fname );
 
-		$this->assertLogItem( $this->logId1, "BackupDumperLogUserA",
+		$this->assertLogItem( $this->logId1, "BackupDumperLogwiki_UserA",
 			$this->userId1, null, "type", "subtype", "PageA" );
 
 		$this->assertNotNull( $wgContLang, "Content language object validation" );
 		$namespace = $wgContLang->getNsText( NS_TALK );
 		$this->assertInternalType( 'string', $namespace );
 		$this->assertGreaterThan( 0, strlen( $namespace ) );
-		$this->assertLogItem( $this->logId2, "BackupDumperLogUserB",
+		$this->assertLogItem( $this->logId2, "BackupDumperLogwiki_UserB",
 			$this->userId2, "SomeComment", "supress", "delete",
 			$namespace . ":PageB" );
 
-		$this->assertLogItem( $this->logId3, "BackupDumperLogUserB",
+		$this->assertLogItem( $this->logId3, "BackupDumperLogwiki_UserB",
 			$this->userId2, "SomeOtherComment", "move", "delete",
 			"PageA", array( 'key1' => 1, 3 => 'value3' ) );
 
@@ -200,18 +200,18 @@ class BackupDumperLoggerTest extends DumpTestCase {
 
 		$this->assertDumpStart( $fname );
 
-		$this->assertLogItem( $this->logId1, "BackupDumperLogUserA",
+		$this->assertLogItem( $this->logId1, "BackupDumperLogwiki_UserA",
 			$this->userId1, null, "type", "subtype", "PageA" );
 
 		$this->assertNotNull( $wgContLang, "Content language object validation" );
 		$namespace = $wgContLang->getNsText( NS_TALK );
 		$this->assertInternalType( 'string', $namespace );
 		$this->assertGreaterThan( 0, strlen( $namespace ) );
-		$this->assertLogItem( $this->logId2, "BackupDumperLogUserB",
+		$this->assertLogItem( $this->logId2, "BackupDumperLogwiki_UserB",
 			$this->userId2, "SomeComment", "supress", "delete",
 			$namespace . ":PageB" );
 
-		$this->assertLogItem( $this->logId3, "BackupDumperLogUserB",
+		$this->assertLogItem( $this->logId3, "BackupDumperLogwiki_UserB",
 			$this->userId2, "SomeOtherComment", "move", "delete",
 			"PageA", array( 'key1' => 1, 3 => 'value3' ) );
 

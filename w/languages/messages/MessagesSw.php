@@ -111,9 +111,9 @@ $specialPageAliases = array(
 	'Unusedcategories'          => array( 'JamiiZisizotumika' ),
 	'Unusedimages'              => array( 'FailiZisizotumika', 'PichaZisizotumika' ),
 	'Upload'                    => array( 'Pakia' ),
-	'Userlogin'                 => array( 'IngiaMtumiaji' ),
-	'Userlogout'                => array( 'TokaMtumiaji' ),
-	'Userrights'                => array( 'HakizaMtumiaji' ),
+	'wiki_Userlogin'                 => array( 'IngiaMtumiaji' ),
+	'wiki_Userlogout'                => array( 'TokaMtumiaji' ),
+	'wiki_Userrights'                => array( 'HakizaMtumiaji' ),
 	'Version'                   => array( 'Toleo' ),
 	'Wantedcategories'          => array( 'JamiiZinazotakikana' ),
 	'Wantedfiles'               => array( 'FailiZinazotakikana' ),
@@ -124,7 +124,7 @@ $specialPageAliases = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Wekea mstari viungo:',
 'tog-justify' => 'Sawazisha ibara',
 'tog-hideminor' => 'Ficha mabadilisho madogo ya hivi karibuni',
@@ -466,7 +466,7 @@ Mkabidhi aliyeifunga ametoa maelezo haya: $1',
 Jambo kama hili kikawaida husababishwa kwa kufuatia kwisha kwa diff au historia ya kiungo ambacho kilifutwa.
 
 Ikiwa hii siyo sababu, basi unaweza kukuta kuna mdudu katika bidhaa pepe.
-Tafadhali ripoti hili kwa [[Special:ListUsers/sysop|mkabidhi]], na uache jina la URL.',
+Tafadhali ripoti hili kwa [[Special:Listwiki_Users/sysop|mkabidhi]], na uache jina la URL.',
 'missingarticle-rev' => '(namba ya pitio: $1)',
 'missingarticle-diff' => '(Tofauti: $1, $2)',
 'readonly_lag' => 'Kihifadhidata kimejifunga chenyewe wakati seva za kifadhidata joli imedakwa na seva ya utawala',
@@ -514,7 +514,7 @@ $2',
 'customcssprotected' => 'Huna ruksa ya kuhariri ukurasa huu wa CSS, kwa sababu una mapendekezo ya binafsi ya mtumiaji mwingine.',
 'customjsprotected' => 'Huna ruksa ya kuhariri ukurasa huu wa JavaScript, kwa sababu una mapendendekezo ya binafsi ya mtumiaji mwingine.',
 'ns-specialprotected' => 'Kurasa maalumu haziwezi kuhaririwa.',
-'titleprotected' => 'Jina hili limekingwa lisiumbwe na [[User:$1|$1]].
+'titleprotected' => 'Jina hili limekingwa lisiumbwe na [[wiki_User:$1|$1]].
 Sababu zilizotolewa ni "\'\'$2\'\'".',
 'exception-nologin' => 'Hujaingia',
 'exception-nologin-text' => 'Ukurasa huu unahitaji kuwa mtumiaji awe ameingia katika wiki hii.',
@@ -527,7 +527,7 @@ Sababu zilizotolewa ni "\'\'$2\'\'".',
 # Login and logout pages
 'logouttext' => "'''Umetoka kwenye akaunti yako.'''
 
-Unaweza kuendelea kutumia {{SITENAME}} bila kutaja jina lako, au unaweza [[Special:UserLogin|kuingia tena]] kwenye akaunti yako. Kumbuka kwamba kurasa nyingine zitaendelea kuonekana kana kwamba bado hujatoka kwenye akaunti yako, hadi utakaposafisha kache ya kivinjari.",
+Unaweza kuendelea kutumia {{SITENAME}} bila kutaja jina lako, au unaweza [[Special:wiki_UserLogin|kuingia tena]] kwenye akaunti yako. Kumbuka kwamba kurasa nyingine zitaendelea kuonekana kana kwamba bado hujatoka kwenye akaunti yako, hadi utakaposafisha kache ya kivinjari.",
 'welcomecreation' => '== Karibu, $1! ==
 Ushafunguliwa akaunti yako tayari.
 Usisahau kubadilisha mapendekezo yako ya [[Special:Preferences|{{SITENAME}}]].',
@@ -571,7 +571,7 @@ Hakikisha kwamba kuki zimewezeshwa kwenye tarakalishi yako, fungua upya ukurasa 
 'loginsuccess' => "'''Umeingia {{SITENAME}} kama \"\$1\".'''",
 'nosuchuser' => 'Hakuna mtumiaji mwenye jina "$1".
 Kumbuka kwamba programu inatofautishana kati ya herufi kubwa na ndogo.
-Labda umeandika vibaya, au [[Special:UserLogin/signup|sajili akaunti mpya]].',
+Labda umeandika vibaya, au [[Special:wiki_UserLogin/signup|sajili akaunti mpya]].',
 'nosuchusershort' => 'Hakuna mtumiaji mwenye jina "$1". Labda umeandika vibaya.',
 'nouserspecified' => 'Lazima uandike jina la mtumiaji.',
 'login-userblocked' => 'Mtumiaji huyu amezuiwa. Hawezi kuingia.',
@@ -767,7 +767,7 @@ Labda ilihamishwa au ilifutwa endapo unatazama ukurasa.',
 'loginreqlink' => 'uingie',
 'loginreqpagetext' => 'Inabidi $1 ili uweze kutazama kurasa zingine.',
 'accmailtitle' => 'Neno la siri limetumwa.',
-'accmailtext' => "Neno la siri limetolewa na programu kwa ajili ya [[User talk:$1|$1]] na limetumwa kwa $2.
+'accmailtext' => "Neno la siri limetolewa na programu kwa ajili ya [[wiki_User talk:$1|$1]] na limetumwa kwa $2.
 
 Unaweza kubadilisha neno la siri hili kwenye ukurasa wa ''[[Special:ChangePassword|kubadilisha neno la siri]]'' baada ya kuingia kwenye wiki.",
 'newarticle' => '(Mpya)',
@@ -775,7 +775,7 @@ Unaweza kubadilisha neno la siri hili kwenye ukurasa wa ''[[Special:ChangePasswo
 'anontalkpagetext' => "----''Huu ni ukurasa wa majadiliano wa mtumiaji ambaye hana jina na bado hajaumba akaunti bado, au hajawahi kutumia kabisa.
 Kwa hiyo tunatumia namba za anwani ya IP yake kumtambulisha.
 Anwani ya IP kama hiyo inaweza kutumika na watumiaji kadhaa.
-Labda itakusumbua kwamba kuna maoni mengine yanawekwa hapa na unaamini kwamba haya maoni hayakulengi. Ikiwa hivyo, tafadhali [[Special:UserLogin/signup|fungua akaunti]] au  [[Special:UserLogin|ingia]] ili kuepuka kuchanganywa na watumiaji wengine ambao hawana jina.''",
+Labda itakusumbua kwamba kuna maoni mengine yanawekwa hapa na unaamini kwamba haya maoni hayakulengi. Ikiwa hivyo, tafadhali [[Special:wiki_UserLogin/signup|fungua akaunti]] au  [[Special:wiki_UserLogin|ingia]] ili kuepuka kuchanganywa na watumiaji wengine ambao hawana jina.''",
 'noarticletext' => 'Ukurasa huu haujaandikwa bado. [[Special:Search/{{PAGENAME}}|tafutia jina hili]] katika kurasa nyingine, <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} tafuta kumbukumbu zinazohusika], au [{{fullurl:{{FULLPAGENAME}}|action=edit}} hariri ukurasa huu]</span>.',
 'noarticletext-nopermission' => 'Kwa sasa hakuna maandishi katika ukurasa huu.
 Unaweza [[Special:Search/{{PAGENAME}}|kutafuta jina la ukurasa huu]] katika kurasa nyingine,
@@ -811,13 +811,13 @@ Mabadiliko hayajahifadhiwa bado!",
 'previewconflict' => 'Hakikisho hii inaonyesha maandiko yaliyopo sanduku la juu yataonekayo ukiyahifadhi.',
 'session_fail_preview' => "'''Pole! Hatukuweza kuhifadhi sahihisho lako kwa sababu data za kipindi zilipotelewa.'''
 Tafadhali jaribu tena.
-Kama bado haifanyi kazi, jaribu [[Special:UserLogout|kutoka kwenye akaunti yako]], halafu ingia tena.",
+Kama bado haifanyi kazi, jaribu [[Special:wiki_UserLogout|kutoka kwenye akaunti yako]], halafu ingia tena.",
 'session_fail_preview_html' => "'''Kumradhi! Hatukuweza kushughulikia haririo lako kwa kufuatia upungufu wa ukaaji wa data.'''
 
 ''Kwa sababu {{SITENAME}} ina HTML zilizowezeshwa, hakikio limefichwa ikiwa kama tahadhari dhidi ya mashambulio ya JavaScript.''
 
 '''Iwapo hili ni haririo la jaribio halali, tafadhali jaribu tena.'''
-Iwapo bado haifanyikazi, jaribu [[Special:UserLogout|kutoka]] na uingie tena.",
+Iwapo bado haifanyikazi, jaribu [[Special:wiki_UserLogout|kutoka]] na uingie tena.",
 'token_suffix_mismatch' => "'''Uhariri wako umekataliwa kwa sababu koteja yako imeharibu herufi za ishara ya kuhariri.'''
 Haririo umekataliwa ili kuzuia uharibifu wa maandishi ya kurasa.
 Haya hutokea kwa muda ambao unatumia huduma ya seva ya wavu isiyotiwa jina na yenye hitilafu nyingi.",
@@ -866,7 +866,7 @@ Rejea kumbukumbu ya mwisho inayoandikwa chini:",
 'template-semiprotected' => '(ulindaji kwa kiasi)',
 'hiddencategories' => 'Ukurasa huu uliomo katika jamii $1 {{PLURAL:$1|iliofichwa|zilizofichwa}}:',
 'nocreatetitle' => 'Si wote wanaoweza kuanzisha ukurasa',
-'nocreatetext' => '{{SITENAME}} imebana uwezekano kutengeneza kurasa mpya. Unaweza kurudia na kuhariri kurasa zilizomo, au [[Special:UserLogin|ingia au anza akaunti]].',
+'nocreatetext' => '{{SITENAME}} imebana uwezekano kutengeneza kurasa mpya. Unaweza kurudia na kuhariri kurasa zilizomo, au [[Special:wiki_UserLogin|ingia au anza akaunti]].',
 'nocreate-loggedin' => 'Huna ruhusa ya kuanzisha ukurasa mpya.',
 'sectioneditnotsupported-title' => 'Kuhariri sehemu kwa sehemu haiwezikani',
 'sectioneditnotsupported-text' => 'Haiwezikani kuhariri ukurasa huu sehemu kwa sehemu.',
@@ -900,11 +900,11 @@ Baadhi ya vigezo havitaweza kuingizwa.",
 Tafadhali tazama linganisho lililopo chini ili kuthibitisha kwamba kutengua ndiyo inayotakiwa, na kisha uhifadhi mabadiliko ili kukamilisha kutengua sahihisho.',
 'undo-failure' => 'Haririo halikuweza kutenguliwa kwa kufuatia mgongano wa maharirio katikati.',
 'undo-norev' => 'Sahihisho halikuweza kutenguliwa kwa sababu halipo au limeshafutwa.',
-'undo-summary' => 'Tengua pitio $1 lililoandikwa na [[Special:Contributions/$2|$2]] ([[User talk:$2|Majadiliano]])',
+'undo-summary' => 'Tengua pitio $1 lililoandikwa na [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Majadiliano]])',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'Kushindwa kusajili akaunti',
-'cantcreateaccount-text' => "Kusajili akaunti kwa kutumia anwani ya IP hii ('''$1''') imezuiwa na [[User:$3|$3]].
+'cantcreateaccount-text' => "Kusajili akaunti kwa kutumia anwani ya IP hii ('''$1''') imezuiwa na [[wiki_User:$3|$3]].
 
 Sababu iliyotolewa na $3 ni ''$2''",
 
@@ -1135,7 +1135,7 @@ Ujue lakini kwamba kumbukumbu za {{SITENAME}} kule Google labda zilipitwa na wak
 'mypreferences' => 'Mapendekezo',
 'prefs-edits' => 'Idadi ya marekebisho:',
 'prefsnologin' => 'Hujaingia',
-'prefsnologintext' => 'Inabidi <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} uingie akaunti yako]</span> ili ubadilishe mapendekezo yako.',
+'prefsnologintext' => 'Inabidi <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} uingie akaunti yako]</span> ili ubadilishe mapendekezo yako.',
 'changepassword' => 'Badilisha neno la siri',
 'prefs-skin' => 'Umbo',
 'skin-preview' => 'Hakiki',
@@ -1247,16 +1247,16 @@ Taarifa hii itakuwa wazi.',
 'prefs-displaywatchlist' => 'Mapendekezo ya kuzinza',
 'prefs-diffs' => 'Tofauti',
 
-# User preference: e-mail validation using jQuery
+# wiki_User preference: e-mail validation using jQuery
 'email-address-validity-valid' => 'Anwani ya barua pepe inaonekana kuwa sawa',
 'email-address-validity-invalid' => 'Ingiza anwani halisi ya barua pepe',
 
-# User rights
+# wiki_User rights
 'userrights' => 'Usimamizi wa wezo za mtumiaji',
 'userrights-lookup-user' => 'Kusimamia kundi za watumiaji',
 'userrights-user-editname' => 'Andika jina la mtumiaji:',
 'editusergroup' => 'Kuhariri vikundi vya watumiaji',
-'editinguser' => "Kubadilisha wezo za mtumiaji '''[[User:$1|$1]]''' $2",
+'editinguser' => "Kubadilisha wezo za mtumiaji '''[[wiki_User:$1|$1]]''' $2",
 'userrights-editusergroup' => 'Kuhariri kundi za watumiaji',
 'saveusergroups' => 'Kuhifadhi kundi za watumiaji',
 'userrights-groupsmember' => 'Mwanachama wa:',
@@ -1268,7 +1268,7 @@ Taarifa hii itakuwa wazi.',
 'userrights-reason' => 'Sababu:',
 'userrights-no-interwiki' => 'Huna ruhusa ya kuhariri haki za mtumiaji kwenye wiki zingine.',
 'userrights-nodatabase' => 'Hakuna hifadhidata inayoitwa $1 au haimo katiko jumuia hii ya wiki.',
-'userrights-nologin' => 'Lazima [[Special:UserLogin|uingie ndani]] ya akaunti ya mkabidhi ili kupanga haki za mtumiaji.',
+'userrights-nologin' => 'Lazima [[Special:wiki_UserLogin|uingie ndani]] ya akaunti ya mkabidhi ili kupanga haki za mtumiaji.',
 'userrights-notallowed' => 'Akaunti yako haina ruhusa ya kuongeza au kutoa haki za mtumiaji.',
 'userrights-changeable-col' => 'Makundi unayoweza kuyabadilisha',
 'userrights-unchangeable-col' => 'Makundi usiyoweza kuyabadilisha',
@@ -1345,7 +1345,7 @@ Taarifa hii itakuwa wazi.',
 'right-sendemail' => 'Kutuma barua-pepe kwa watumiaji wengine',
 'right-passwordreset' => 'Onesha barua pepe zinazoweka neno la siri upya',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Kumbukumbu za vyeo vya watumiaji',
 'rightslogtext' => 'Hii ni kumbukumbu za mabadiliko za wezo za watumiaji.',
 'rightslogentry' => 'alibadilisha wezo za $1 aliyekuwa na wezo za kundi $2 awe mwanachama wa $3',
@@ -1436,7 +1436,7 @@ Taarifa hii itakuwa wazi.',
 'reuploaddesc' => 'Kubatilisha kupakia na kurudi kwenye fomu ya kupakia',
 'upload-tryagain' => 'Wasilisha maelezo ya faili lililobadilishwa',
 'uploadnologin' => 'Hujaingia',
-'uploadnologintext' => 'Lazima [[Special:UserLogin|uingie akaunti yako]] ile upakie mafaili.',
+'uploadnologintext' => 'Lazima [[Special:wiki_UserLogin|uingie akaunti yako]] ile upakie mafaili.',
 'uploaderror' => 'Hitilafu ya kupia',
 'upload-recreate-warning' => "'''Ilani: Faili lenye jina hilo limeshafutwa au limeshasogezwa.'''
 
@@ -1560,11 +1560,11 @@ $1',
 'upload-proto-error-text' => 'Upakiaji wa mbali lazima URL ianze na <code>http://</code> au <code>ftp://</code>.',
 'upload-file-error' => 'Hitilafu ya ndani',
 'upload-file-error-text' => 'Hitilafu ya ndani ilitokea wakati unajaribu kuanzisha faili la muda kwenye seva.
-Tafadhali wasiliana na [[Special:ListUsers/sysop|mkabidhi]].',
+Tafadhali wasiliana na [[Special:Listwiki_Users/sysop|mkabidhi]].',
 'upload-misc-error' => 'Hitilafu ya kupakia isiyojulikana',
 'upload-misc-error-text' => 'Hitilafu isiyojulikana ilitokea wakati wa kupakia.
 Tafadhali uhakikishe kwamba URL ni halali na inafikika, halafu jaribu tena.
-Tatizo likiendelea, uwasiliane na [[Special:ListUsers/sysop|mkabidhi]].',
+Tatizo likiendelea, uwasiliane na [[Special:Listwiki_Users/sysop|mkabidhi]].',
 'upload-too-many-redirects' => 'URL ilikuwa na maelekezo mengi mno',
 'upload-unknown-size' => 'Ukubwa haujulikani',
 'upload-http-error' => 'Imetokea hitilafu ya HTTP: $1',
@@ -1754,7 +1754,7 @@ Kumbuka kuhakikisha kwamba hakuna viungo vingine vinavyoelekea kigezo fulani kab
 'statistics-views-total' => 'Jumla ya mitazamaji',
 'statistics-views-total-desc' => 'Tazamo za kurasa zisizokuwepo na kurasa maalumu hazionikani.',
 'statistics-views-peredit' => 'Mitazamaji kwa haririo',
-'statistics-users' => '[[Special:ListUsers|Watumiaji]] waliojisajiri',
+'statistics-users' => '[[Special:Listwiki_Users|Watumiaji]] waliojisajiri',
 'statistics-users-active' => 'Watumiaji wanaofanya kazi',
 'statistics-users-active-desc' => 'Watumiaji waliofanya kazi katika siku {{PLURAL:$1|iliyopita|$1 zilizopita}}',
 'statistics-mostpopular' => 'Kurasa zinazotazamwa sana',
@@ -1907,13 +1907,13 @@ Itifaki zinazoungwa mkono: <code>$1</code> (usiongeza hizi unapotafuta).',
 'linksearch-line' => '$2 umeungwa kutoka $1',
 'linksearch-error' => 'Alama maalumu zinaweza kuonekana mwanzoni mwa URL tu.',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => 'Onyesha watumiaji kuanzia:',
 'listusers-submit' => 'Onyesha',
 'listusers-noresult' => 'Mtumiaji hakupatikana.',
 'listusers-blocked' => '(imezuiwa)',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'Orodha ya watumiaji hai',
 'activeusers-intro' => 'Hii ni orodha ya watumiaji walioshughulika jambo fulani ndani ya siku $1 {{PLURAL:$1|iliyopita|zilizopita}}.',
 'activeusers-count' => '{{PLURAL:$1|haririo|maharirio}} $1 katika siku $3 {{PLURAL:$3|iliyopita|zilizopita}}',
@@ -1947,7 +1947,7 @@ Labda patakuwa na [[{{MediaWiki:Listgrouprights-helppage}}|maelezo mengine]] kuh
 
 # E-mail user
 'mailnologin' => 'Hakuna anwani wa kutuma',
-'mailnologintext' => 'Ukitaka kutuma barua pepe kwa watumiaji wengine inabidi uwe [[Special:UserLogin|umeshaingia kwenye akaunti yako]] na pia uwe na anwani ya barua pepe sahihi pale [[Special:Preferences|mapendekezo yako]].',
+'mailnologintext' => 'Ukitaka kutuma barua pepe kwa watumiaji wengine inabidi uwe [[Special:wiki_UserLogin|umeshaingia kwenye akaunti yako]] na pia uwe na anwani ya barua pepe sahihi pale [[Special:Preferences|mapendekezo yako]].',
 'emailuser' => 'Mtumie mtumiaji huyu barua pepe',
 'emailuser-title-target' => 'Tumia barua pepe {{GENDER:$1|user}}',
 'emailuser-title-notarget' => 'Kumtumia mtumiaji barua pepe',
@@ -1978,7 +1978,7 @@ Anwani yako ya barua pepe ulioitaja katika [[Special:Preferences|mapendekezo yak
 'emailsenttext' => 'Barua pepe yako imetumwa.',
 'emailuserfooter' => 'Barua pepe hii imetumwa na $1 kwa $2 kwa kutumia zana ya "Kumtumia mtumiaji barua pepe" iliyopo {{SITENAME}}.',
 
-# User Messenger
+# wiki_User Messenger
 'usermessage-summary' => 'Inawacha ujumbe wa mfumo.',
 'usermessage-editor' => 'Jumbe za mfumo',
 
@@ -1989,7 +1989,7 @@ Anwani yako ya barua pepe ulioitaja katika [[Special:Preferences|mapendekezo yak
 'nowatchlist' => 'Hamna vitu katika maangalizi yako.',
 'watchlistanontext' => 'Tafadhali $1 ili kutazama au kuhariri vitu vilivyopo katika orodha yako ya maangalizi.',
 'watchnologin' => 'Hujaingia',
-'watchnologintext' => 'Lazima uwe [[Special:UserLogin|umeshaingia]] ili uweze kuhariri orodha ya maangalizi yako.',
+'watchnologintext' => 'Lazima uwe [[Special:wiki_UserLogin|umeshaingia]] ili uweze kuhariri orodha ya maangalizi yako.',
 'addwatch' => 'Ongeza kwenye orodha ya maangalizi',
 'addedwatchtext' => "Ukurasa \"[[:\$1]]\" umewekwa kwenye [[Special:Watchlist|maangalizi]] yako.
 Mabadiliko katika ukurasa huo na ukurasa wake wa majadiliano utaonekana hapo,
@@ -2101,8 +2101,8 @@ endelea kwa uangalifu.',
 'cantrollback' => 'Haiwezekana kujesha sahihisho;
 ukurasa huu una mhariri mmoja tu.',
 'editcomment' => "Muhtasari wa kuhariri ilikuwa: \"''\$1''\".",
-'revertpage' => 'Masahihisho aliyefanya [[Special:Contributions/$2|$2]] ([[User talk:$2|Majadiliano]]) yalirejeshwa hadi sahihisho la mwisho na [[User:$1|$1]]',
-'revertpage-nouser' => 'Masahihisho ya mtumiaji (jina lake limefichwa) yamerudishwa hadi pitio la mwisho lililotengenezwa na [[User:$1|$1]].',
+'revertpage' => 'Masahihisho aliyefanya [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Majadiliano]]) yalirejeshwa hadi sahihisho la mwisho na [[wiki_User:$1|$1]]',
+'revertpage-nouser' => 'Masahihisho ya mtumiaji (jina lake limefichwa) yamerudishwa hadi pitio la mwisho lililotengenezwa na [[wiki_User:$1|$1]].',
 'rollback-success' => 'Masahihisho aliyeyafanya $1 yalirejeshwa hadi kufika sahihisho la mwisho aliyefanya $2.',
 
 # Edit tokens
@@ -2365,7 +2365,7 @@ Kama tayari kuna ukurasa au ukifuta tiki, itabidi usogeze au uunganishe ukurasa 
 Kama tayari kuna ukurasa au ukifuta tiki, itabidi usogeze au uunganishe ukurasa kwa mkono ukitaka.",
 'moveuserpage-warning' => "'''Ilani:''' Unatarajia kuhamisha ukurasa wa mtumiaji. Tafadhali kumbuka kwamba ni ukurasa tu utakaohamishwa; jina la mtumiaji ''haitabadilishwa''.",
 'movenologin' => 'Hujaingia',
-'movenologintext' => 'Lazima uwe mtumiaji uliyesajiliwa na [[Special:UserLogin|uliyeingizwa]] ili uhamishe ukurasa.',
+'movenologintext' => 'Lazima uwe mtumiaji uliyesajiliwa na [[Special:wiki_UserLogin|uliyeingizwa]] ili uhamishe ukurasa.',
 'movenotallowed' => 'Huna ruhusa ya kuhamisha kurasa.',
 'movenotallowedfile' => 'Huna ruhusa ya kuhamisha mafaili.',
 'cant-move-user-page' => 'Huna fursa ya kuhamisha ukurasa wa mtumiaji (isopokuwa kurasa ndogo).',
@@ -2888,7 +2888,7 @@ Huduma ya barua pepe inasema: $1',
 Huenda zimepitwa na wakati.',
 'confirmemail_needlogin' => 'Unahitajika $1 kuthibitisha anwani ya barua pepe yako.',
 'confirmemail_success' => 'Barua pepe yako imethibitishwa.
-Sasa unaweza [[Special:UserLogin|kuingia]] na kuifurahia {{SITENAME}}.',
+Sasa unaweza [[Special:wiki_UserLogin|kuingia]] na kuifurahia {{SITENAME}}.',
 'confirmemail_loggedin' => 'Anwani ya barua pepe yako imethibishwa sasa.',
 'confirmemail_error' => 'Kuna mambo yameenda kombo hifadhi ukamilisho wako.',
 'confirmemail_subject' => 'Barua pepe ya uthibitisho ya {{SITENAME}}',
@@ -2934,10 +2934,10 @@ Ishara hizi za uthibitisho zitaishia mnamo $4.',
 
 # Delete conflict
 'deletedwhileediting' => "'''Ilani''': Ukurasa huu ulifutwa ulipokwisha kuanza huuhariri!",
-'confirmrecreate' => "Mtumiaji [[User:$1|$1]] ([[User talk:$1|majadiliano]]) aliufuta ukurasa huu wakati umeshaanza kuuhariri, akaandika sababu hii ya kufuta:
+'confirmrecreate' => "Mtumiaji [[wiki_User:$1|$1]] ([[wiki_User talk:$1|majadiliano]]) aliufuta ukurasa huu wakati umeshaanza kuuhariri, akaandika sababu hii ya kufuta:
 : ''$2''
 Tafadhali uthibitishe kwamba kweli unataka kuanzisha ukurasa huu upya.",
-'confirmrecreate-noreason' => 'Mtumiaji [[User:$1|$1]] ([[User talk:$1|majadiliano]]) aliufuta ukurasa huu wakati umeshaanza kuuhariri. Tafadhali uthibitishe kwamba kweli unataka kuanzisha ukurasa huu upya.',
+'confirmrecreate-noreason' => 'Mtumiaji [[wiki_User:$1|$1]] ([[wiki_User talk:$1|majadiliano]]) aliufuta ukurasa huu wakati umeshaanza kuuhariri. Tafadhali uthibitishe kwamba kweli unataka kuanzisha ukurasa huu upya.',
 'recreate' => 'Anzisha upya',
 
 # action=purge

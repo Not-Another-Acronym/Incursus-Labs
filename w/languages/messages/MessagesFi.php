@@ -297,9 +297,9 @@ $specialPageAliases = array(
 	'Unusedtemplates'           => array( 'Käyttämättömät_mallineet' ),
 	'Unwatchedpages'            => array( 'Tarkkailemattomat_sivut' ),
 	'Upload'                    => array( 'Tallenna', 'Lisää_tiedosto' ),
-	'Userlogin'                 => array( 'Kirjaudu_sisään' ),
-	'Userlogout'                => array( 'Kirjaudu_ulos' ),
-	'Userrights'                => array( 'Käyttöoikeudet' ),
+	'wiki_Userlogin'                 => array( 'Kirjaudu_sisään' ),
+	'wiki_Userlogout'                => array( 'Kirjaudu_ulos' ),
+	'wiki_Userrights'                => array( 'Käyttöoikeudet' ),
 	'Version'                   => array( 'Versio' ),
 	'Wantedcategories'          => array( 'Halutuimmat_luokat' ),
 	'Wantedfiles'               => array( 'Halutuimmat_tiedostot' ),
@@ -313,7 +313,7 @@ $specialPageAliases = array(
 $linkTrail = '/^([a-zäö]+)(.*)$/sDu';
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Linkkien alleviivaus',
 'tog-justify' => 'Tasaa kappaleet',
 'tog-hideminor' => 'Piilota pienet muutokset tuoreet muutokset -listasta',
@@ -651,7 +651,7 @@ Tietokannan lukinneen ylläpitäjän selitys: $1',
 Useimmiten tämä johtuu vanhentuneesta vertailu- tai historiasivulinkistä poistettuun sivuun.
 
 Jos kyseessä ei ole poistettu sivu, olet ehkä löytänyt virheen ohjelmistossa.
-Ilmoita tämän sivun osoite wikin [[Special:ListUsers/sysop|ylläpitäjälle]].',
+Ilmoita tämän sivun osoite wikin [[Special:Listwiki_Users/sysop|ylläpitäjälle]].',
 'missingarticle-rev' => '(versio: $1)',
 'missingarticle-diff' => '(vertailu: $1, $2)',
 'readonly_lag' => 'Tietokanta on automaattisesti lukittu, jotta kaikki tietokantapalvelimet saisivat kaikki tuoreet muutokset',
@@ -697,7 +697,7 @@ $2',
 'customcssprotected' => 'Sinulla ei ole oikeutta muuttaa tätä CSS-sivua, koska se sisältää toisen käyttäjän henkilökohtaisia asetuksia.',
 'customjsprotected' => 'Sinulla ei ole oikeutta muuttaa tätä JavaScript-sivua, koska se sisältää toisen käyttäjän henkilökohtaisia asetuksia.',
 'ns-specialprotected' => 'Toimintosivuja ei voi muokata.',
-'titleprotected' => "Käyttäjä [[User:$1|$1]] on suojannut tämän sivunimen, ja sivua ei voi luoda.
+'titleprotected' => "Käyttäjä [[wiki_User:$1|$1]] on suojannut tämän sivunimen, ja sivua ei voi luoda.
 Syynä on: ''$2''.",
 'filereadonlyerror' => 'Tiedostoa $1 ei voi muuttaa, koska jaettu mediavarasto $2 on vain luku -tilassa.
 
@@ -715,7 +715,7 @@ Lukituksen asettanut ylläpitäjä on antanut seuraavan syyn toimenpiteelle: $3.
 # Login and logout pages
 'logouttext' => "'''Olet nyt kirjautunut ulos.'''
 
-Voit jatkaa {{GRAMMAR:genitive|{{SITENAME}}}} käyttöä nimettömänä, tai [[Special:UserLogin|kirjautua uudelleen sisään]].
+Voit jatkaa {{GRAMMAR:genitive|{{SITENAME}}}} käyttöä nimettömänä, tai [[Special:wiki_UserLogin|kirjautua uudelleen sisään]].
 Huomaa, että jotkut sivut saattavat näkyä edelleen kuin olisit kirjautunut sisään, kunnes tyhjennät selaimen välimuistin.",
 'welcomecreation' => '== Tervetuloa $1! ==
 Käyttäjätunnuksesi on luotu.
@@ -754,7 +754,7 @@ Käyttäjätunnuksesi on luotu.
 'noname' => 'Et ole määritellyt kelvollista käyttäjänimeä.',
 'loginsuccesstitle' => 'Sisäänkirjautuminen onnistui',
 'loginsuccess' => "'''Olet kirjautunut käyttäjänä $1.'''",
-'nosuchuser' => 'Käyttäjää ”$1” ei ole olemassa. Nimet ovat kirjainkoosta riippuvaisia. Tarkista kirjoititko nimen oikein, tai [[Special:UserLogin/signup|luo uusi käyttäjätunnus]].',
+'nosuchuser' => 'Käyttäjää ”$1” ei ole olemassa. Nimet ovat kirjainkoosta riippuvaisia. Tarkista kirjoititko nimen oikein, tai [[Special:wiki_UserLogin/signup|luo uusi käyttäjätunnus]].',
 'nosuchusershort' => 'Käyttäjää nimeltä ”$1” ei ole. Kirjoititko nimen oikein?',
 'nouserspecified' => 'Käyttäjätunnusta ei ole määritelty.',
 'login-userblocked' => 'Tämä käyttäjä on estetty. Kirjautuminen ei ole sallittua.',
@@ -944,14 +944,14 @@ Se on saatettu siirtää tai poistaa äskettäin.',
 'loginreqlink' => 'kirjautua sisään',
 'loginreqpagetext' => 'Sinun täytyy $1, jotta voisit nähdä muut sivut.',
 'accmailtitle' => 'Salasana lähetetty.',
-'accmailtext' => 'Satunnaisesti generoitu salasana käyttäjälle [[User talk:$1|$1]] on lähetetty osoitteeseen $2.
+'accmailtext' => 'Satunnaisesti generoitu salasana käyttäjälle [[wiki_User talk:$1|$1]] on lähetetty osoitteeseen $2.
 
 Salasanan tälle uudelle tunnukselle voi vaihtaa kirjautumisen jälkeen [[Special:ChangePassword|asetussivulla]].',
 'newarticle' => '(uusi)',
 'newarticletext' => 'Linkki toi sivulle, jota ei vielä ole.
 Voit luoda sivun kirjoittamalla alla olevaan kenttään (katso [[{{MediaWiki:Helppage}}|ohjesivulta]] lisätietoja).
 Jos et halua luoda sivua, käytä selaimen paluutoimintoa.',
-'anontalkpagetext' => "----''Tämä on nimettömän käyttäjän keskustelusivu. Hän ei ole joko luonut itselleen käyttäjätunnusta tai ei käytä sitä. Siksi hänet tunnistetaan nyt numeerisella IP-osoitteella. Kyseinen IP-osoite voi olla useamman henkilön käytössä. Jos olet nimetön käyttäjä, ja sinusta tuntuu, että aiheettomia kommentteja on ohjattu sinulle, [[Special:UserLogin/signup|luo itsellesi käyttäjätunnus]] tai [[Special:UserLogin|kirjaudu sisään]] välttääksesi jatkossa sekaannukset muiden nimettömien käyttäjien kanssa.''",
+'anontalkpagetext' => "----''Tämä on nimettömän käyttäjän keskustelusivu. Hän ei ole joko luonut itselleen käyttäjätunnusta tai ei käytä sitä. Siksi hänet tunnistetaan nyt numeerisella IP-osoitteella. Kyseinen IP-osoite voi olla useamman henkilön käytössä. Jos olet nimetön käyttäjä, ja sinusta tuntuu, että aiheettomia kommentteja on ohjattu sinulle, [[Special:wiki_UserLogin/signup|luo itsellesi käyttäjätunnus]] tai [[Special:wiki_UserLogin|kirjaudu sisään]] välttääksesi jatkossa sekaannukset muiden nimettömien käyttäjien kanssa.''",
 'noarticletext' => 'Tällä hetkellä tällä sivulla ei ole tekstiä.
 Voit [[Special:Search/{{PAGENAME}}|etsiä sivun nimellä]] muilta sivuilta,
 <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} hakea aiheeseen liittyviä lokeja]
@@ -986,12 +986,12 @@ Alla on viimeisin estolokin tapahtuma:',
 Tekemiäsi muutoksia ei ole vielä tallennettu.",
 'continue-editing' => 'Siirry muokkauskenttään',
 'previewconflict' => 'Tämä esikatselu näyttää miltä muokkausalueella oleva teksti näyttää tallennettuna.',
-'session_fail_preview' => "'''Muokkaustasi ei voitu tallentaa, koska istuntosi tiedot ovat kadonneet.''' Yritä uudelleen. Jos ongelma ei katoa, yritä [[Special:UserLogout|kirjautua ulos]] ja takaisin sisään.",
+'session_fail_preview' => "'''Muokkaustasi ei voitu tallentaa, koska istuntosi tiedot ovat kadonneet.''' Yritä uudelleen. Jos ongelma ei katoa, yritä [[Special:wiki_UserLogout|kirjautua ulos]] ja takaisin sisään.",
 'session_fail_preview_html' => "'''Muokkaustasi ei voitu tallentaa, koska istuntosi tiedot ovat kadonneet.'''
 
 Esikatselu on piilotettu varokeinona JavaScript-hyökkäyksiä vastaan – tässä wikissä on HTML-tila päällä.
 
-Yritä uudelleen. Jos ongelma ei katoa, yritä [[Special:UserLogout|kirjautua ulos]] ja takaisin sisään.",
+Yritä uudelleen. Jos ongelma ei katoa, yritä [[Special:wiki_UserLogout|kirjautua ulos]] ja takaisin sisään.",
 'token_suffix_mismatch' => "'''Muokkauksesi on hylätty, koska asiakasohjelmasi ei osaa käsitellä välimerkkejä muokkaustarkisteessa. Syynä voi olla viallinen välityspalvelin.'''",
 'edit_form_incomplete' => "'''Osa muokkauslomakkeesta ei saavuttanut palvelinta. Tarkista, että muokkauksesi ovat vahingoittumattomia ja yritä uudelleen.'''",
 'editing' => 'Muokataan sivua $1',
@@ -1031,7 +1031,7 @@ Alla on viimeisin lokitapahtuma:",
 'hiddencategories' => 'Tämä sivu kuuluu {{PLURAL:$1|seuraavaan piilotettuun luokkaan|seuraaviin piilotettuihin luokkiin}}:',
 'edittools' => '<!-- Tässä oleva teksti näytetään muokkauskentän alla. -->',
 'nocreatetitle' => 'Sivujen luominen on rajoitettu',
-'nocreatetext' => 'Et voi luoda uusia sivuja. Voit muokata olemassa olevia sivuja tai [[Special:UserLogin|luoda käyttäjätunnuksen]].',
+'nocreatetext' => 'Et voi luoda uusia sivuja. Voit muokata olemassa olevia sivuja tai [[Special:wiki_UserLogin|luoda käyttäjätunnuksen]].',
 'nocreate-loggedin' => 'Sinulla ei ole oikeuksia luoda uusia sivuja.',
 'sectioneditnotsupported-title' => 'Osiomuokkaaminen ei ole tuettu.',
 'sectioneditnotsupported-text' => 'Osiomuokkaaminen ei ole tuettu tällä sivulla.',
@@ -1077,11 +1077,11 @@ Nämä muuttujat on jätetty käsittelemättä.",
 'undo-success' => 'Kumoaminen onnistui. Valitse <em>tallenna</em> toteuttaaksesi muutokset.',
 'undo-failure' => 'Muokkausta ei voitu kumota välissä olevien ristiriitaisten muutosten vuoksi. Kumoa muutokset käsin.',
 'undo-norev' => 'Muokkausta ei voitu perua, koska sitä ei ole olemassa tai se on poistettu.',
-'undo-summary' => 'Kumottu muokkaus $1, jonka teki [[Special:Contributions/$2|$2]] ([[User talk:$2|keskustelu]])',
+'undo-summary' => 'Kumottu muokkaus $1, jonka teki [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|keskustelu]])',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'Tunnuksen luominen epäonnistui',
-'cantcreateaccount-text' => "Käyttäjä [[User:$3|$3]] on estänyt käyttäjätunnusten luomisen tästä IP-osoitteesta ($1).
+'cantcreateaccount-text' => "Käyttäjä [[wiki_User:$3|$3]] on estänyt käyttäjätunnusten luomisen tästä IP-osoitteesta ($1).
 
 Käyttäjän $3 antama syy on ''$2''",
 
@@ -1338,7 +1338,7 @@ Kokeile lisätä haun alkuun ''all:'', niin haku kohdistuu kaikkeen sisältöön
 'mypreferences' => 'Asetukset',
 'prefs-edits' => 'Muokkauksia',
 'prefsnologin' => 'Et ole kirjautunut sisään.',
-'prefsnologintext' => 'Sinun täytyy <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} kirjautua sisään]</span>, jotta voisit muuttaa asetuksiasi.',
+'prefsnologintext' => 'Sinun täytyy <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} kirjautua sisään]</span>, jotta voisit muuttaa asetuksiasi.',
 'changepassword' => 'Salasanan vaihto',
 'prefs-skin' => 'Ulkoasu',
 'skin-preview' => 'esikatselu',
@@ -1447,16 +1447,16 @@ Tässä satunnaisesti tuotettu arvo, jota voit käyttää: $1',
 'prefs-displaywatchlist' => 'Näyttöasetukset',
 'prefs-diffs' => 'Erot',
 
-# User preference: e-mail validation using jQuery
+# wiki_User preference: e-mail validation using jQuery
 'email-address-validity-valid' => 'Sähköpostiosoite vaikuttaa kelvolliselta',
 'email-address-validity-invalid' => 'Virheellinen sähköpostiosoite',
 
-# User rights
+# wiki_User rights
 'userrights' => 'Käyttöoikeuksien hallinta',
 'userrights-lookup-user' => 'Käyttöoikeuksien hallinta',
 'userrights-user-editname' => 'Käyttäjätunnus',
 'editusergroup' => 'Muokkaa käyttäjän ryhmiä',
-'editinguser' => "Käyttäjän '''[[User:$1|$1]]''' oikeudet $2",
+'editinguser' => "Käyttäjän '''[[wiki_User:$1|$1]]''' oikeudet $2",
 'userrights-editusergroup' => 'Käyttäjän ryhmät',
 'saveusergroups' => 'Tallenna',
 'userrights-groupsmember' => 'Käyttäjä on jäsenenä ryhmissä',
@@ -1468,7 +1468,7 @@ Tässä satunnaisesti tuotettu arvo, jota voit käyttää: $1',
 'userrights-reason' => 'Syy',
 'userrights-no-interwiki' => 'Sinulla ei ole lupaa muokata käyttöoikeuksia muissa wikeissä.',
 'userrights-nodatabase' => 'Tietokantaa $1 ei ole tai se ei ole paikallinen.',
-'userrights-nologin' => 'Sinun täytyy [[Special:UserLogin|kirjautua sisään]] ylläpitäjätunnuksella, jotta voisit muuttaa käyttöoikeuksia.',
+'userrights-nologin' => 'Sinun täytyy [[Special:wiki_UserLogin|kirjautua sisään]] ylläpitäjätunnuksella, jotta voisit muuttaa käyttöoikeuksia.',
 'userrights-notallowed' => 'Tunnuksellasi ei ole lupaa lisätä tai poistaa käyttöoikeuksia.',
 'userrights-changeable-col' => 'Ryhmät, joita voit muuttaa',
 'userrights-unchangeable-col' => 'Ryhmät, joita et voi muuttaa',
@@ -1559,7 +1559,7 @@ Tässä satunnaisesti tuotettu arvo, jota voit käyttää: $1',
 'right-sendemail' => 'Lähettää sähköpostia muille käyttäjille',
 'right-passwordreset' => 'Tarkastella salasanan alustusviestejä',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Käyttöoikeusloki',
 'rightslogtext' => 'Tämä on loki käyttäjien käyttöoikeuksien muutoksista.',
 'rightslogentry' => 'muutti käyttäjän $1 oikeudet ryhmistä $2 ryhmiin $3',
@@ -1655,7 +1655,7 @@ Tässä satunnaisesti tuotettu arvo, jota voit käyttää: $1',
 'reuploaddesc' => 'Peruuta tallennus ja palaa tallennuslomakkeelle.',
 'upload-tryagain' => 'Lähetä muutettu tiedostokuvaus',
 'uploadnologin' => 'Et ole kirjautunut sisään',
-'uploadnologintext' => 'Sinun pitää olla [[Special:UserLogin|kirjautuneena sisään]], jotta voisit tallentaa tiedostoja.',
+'uploadnologintext' => 'Sinun pitää olla [[Special:wiki_UserLogin|kirjautuneena sisään]], jotta voisit tallentaa tiedostoja.',
 'upload_directory_missing' => 'Tallennushakemisto $1 puuttuu, eikä palvelin pysty luomaan sitä.',
 'upload_directory_read_only' => 'Palvelimella ei ole kirjoitusoikeuksia tallennushakemistoon $1.',
 'uploaderror' => 'Tallennusvirhe',
@@ -1778,7 +1778,7 @@ $1',
 'upload-proto-error' => 'Virheellinen protokolla',
 'upload-proto-error-text' => 'Etälähetys on mahdollista vain osoitteista, jotka alkavat merkkijonolla <code>http://</code> tai <code>ftp://</code>.',
 'upload-file-error' => 'Sisäinen virhe',
-'upload-file-error-text' => 'Väliaikaistiedoston luominen epäonnistui. Ota yhteyttä sivuston [[Special:ListUsers/sysop|ylläpitäjään]].',
+'upload-file-error-text' => 'Väliaikaistiedoston luominen epäonnistui. Ota yhteyttä sivuston [[Special:Listwiki_Users/sysop|ylläpitäjään]].',
 'upload-misc-error' => 'Virhe',
 'upload-misc-error-text' => 'Tiedoston etälähetys ei onnistunut. Varmista, että antamasi osoite on oikein ja toimiva. Jos virhe ei katoa, ota yhteyttä sivuston ylläpitäjään.',
 'upload-too-many-redirects' => 'URL sisälsi liian monta ohjausta',
@@ -2012,7 +2012,7 @@ Syöte: sisältötyyppi/alatyyppi, esimerkiksi <code>image/jpeg</code>.',
 'statistics-views-total' => 'Sivuja katsottu yhteensä',
 'statistics-views-total-desc' => 'Näyttökertoihin eivät sisälly toimintosivut eikä sivut, joita ei ole olemassa',
 'statistics-views-peredit' => 'Sivuja katsottu muokkausta kohden',
-'statistics-users' => 'Rekisteröityneitä [[Special:ListUsers|käyttäjiä]]',
+'statistics-users' => 'Rekisteröityneitä [[Special:Listwiki_Users|käyttäjiä]]',
 'statistics-users-active' => 'Aktiivisia käyttäjiä',
 'statistics-users-active-desc' => 'Käyttäjät, jotka ovat suorittaneet jonkin toiminnon {{PLURAL:$1|edellisen päivän|edellisten $1 päivän}} aikana.',
 'statistics-mostpopular' => 'Katsotuimmat sivut',
@@ -2180,13 +2180,13 @@ Tuetut protokollat: <code>$1</code> (oletuksena on <code>http://</code>, jos pro
 'linksearch-line' => '$1 on linkitetty sivulta $2',
 'linksearch-error' => 'Jokerimerkkiä voi käyttää ainoastaan osoitteen alussa.',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => 'Katkaisuhaku',
 'listusers-submit' => 'Hae',
 'listusers-noresult' => 'Käyttäjiä ei löytynyt.',
 'listusers-blocked' => '(estetty)',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'Aktiivisten käyttäjien lista',
 'activeusers-intro' => 'Tämä on luettelo käyttäjistä, jotka ovat tehneet jotain viimeisen $1 {{PLURAL:$1|päivän}} sisällä.',
 'activeusers-count' => '$1 {{PLURAL:$1|toiminto|toimintoa}} viimeisen {{PLURAL:$3|päivän|$3 päivän}} aikana',
@@ -2220,7 +2220,7 @@ Lisätietoa yksittäisistä käyttäjäoikeuksista saattaa löytyä [[{{MediaWik
 
 # E-mail user
 'mailnologin' => 'Lähettäjän osoite puuttuu',
-'mailnologintext' => 'Sinun pitää olla [[Special:UserLogin|kirjautuneena sisään]] ja [[Special:Preferences|asetuksissasi]] pitää olla toimiva ja <strong>varmennettu</strong> sähköpostiosoite, jotta voit lähettää sähköpostia muille käyttäjille.',
+'mailnologintext' => 'Sinun pitää olla [[Special:wiki_UserLogin|kirjautuneena sisään]] ja [[Special:Preferences|asetuksissasi]] pitää olla toimiva ja <strong>varmennettu</strong> sähköpostiosoite, jotta voit lähettää sähköpostia muille käyttäjille.',
 'emailuser' => 'Lähetä sähköpostia tälle käyttäjälle',
 'emailuser-title-target' => 'Lähetä sähköpostia tälle {{GENDER:$1|käyttäjälle}}',
 'emailuser-title-notarget' => 'Lähetä sähköpostia käyttäjälle',
@@ -2250,7 +2250,7 @@ Lisätietoa yksittäisistä käyttäjäoikeuksista saattaa löytyä [[{{MediaWik
 'emailsenttext' => 'Sähköpostiviestisi on lähetetty.',
 'emailuserfooter' => 'Tämän sähköpostin lähetti $1 käyttäjälle $2 käyttämällä ”Lähetä sähköpostia” -toimintoa {{GRAMMAR:inessive|{{SITENAME}}}}.',
 
-# User Messenger
+# wiki_User Messenger
 'usermessage-summary' => 'Jätetään järjestelmäviesti.',
 'usermessage-editor' => 'Järjestelmäviestittäjä',
 
@@ -2261,7 +2261,7 @@ Lisätietoa yksittäisistä käyttäjäoikeuksista saattaa löytyä [[{{MediaWik
 'nowatchlist' => 'Tarkkailulistallasi ei ole sivuja.',
 'watchlistanontext' => 'Sinun täytyy $1, jos haluat käyttää tarkkailulistaa.',
 'watchnologin' => 'Et ole kirjautunut sisään',
-'watchnologintext' => 'Sinun pitää [[Special:UserLogin|kirjautua sisään]], jotta voisit käyttää tarkkailulistaasi.',
+'watchnologintext' => 'Sinun pitää [[Special:wiki_UserLogin|kirjautua sisään]], jotta voisit käyttää tarkkailulistaasi.',
 'addwatch' => 'Lisää tarkkailulistalle',
 'addedwatchtext' => "Sivu '''[[:$1]]''' on lisätty [[Special:Watchlist|tarkkailulistallesi]].
 Tulevaisuudessa sivuun ja sen keskustelusivuun tehtävät muutokset listataan täällä.",
@@ -2367,12 +2367,12 @@ Sivulla $2 on lista viimeaikaisista poistoista.',
 'rollbacklinkcount-morethan' => 'palauta yli $1 {{PLURAL:$1|muutos|muutosta}}',
 'rollbackfailed' => 'Palautus epäonnistui',
 'cantrollback' => 'Aiempaan versioon ei voi palauttaa, koska viimeisin kirjoittaja on sivun ainoa tekijä.',
-'alreadyrolled' => 'Käyttäjän [[User:$2|$2]] ([[User talk:$2|keskustelu]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]) tekemiä muutoksia sivuun [[:$1]] ei voi kumota, koska joku muu on muuttanut sivua.
+'alreadyrolled' => 'Käyttäjän [[wiki_User:$2|$2]] ([[wiki_User talk:$2|keskustelu]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]) tekemiä muutoksia sivuun [[:$1]] ei voi kumota, koska joku muu on muuttanut sivua.
 
-Viimeisimmän muokkauksen on tehnyt käyttäjä [[User:$3|$3]] ([[User talk:$3|keskustelu]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
+Viimeisimmän muokkauksen on tehnyt käyttäjä [[wiki_User:$3|$3]] ([[wiki_User talk:$3|keskustelu]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
 'editcomment' => "Muokkauksen yhteenveto oli: ''$1''.",
-'revertpage' => 'Käyttäjän [[Special:Contributions/$2|$2]] ([[User talk:$2|keskustelu]]) muokkaukset kumottiin ja sivu palautettiin viimeisimpään käyttäjän [[User:$1|$1]] tekemään versioon.',
-'revertpage-nouser' => 'Käyttäjän (käyttäjänimi poistettu) muokkaukset kumottiin ja sivu palautettiin viimeisimpään käyttäjän [[User:$1|$1]] tekemään versioon.',
+'revertpage' => 'Käyttäjän [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|keskustelu]]) muokkaukset kumottiin ja sivu palautettiin viimeisimpään käyttäjän [[wiki_User:$1|$1]] tekemään versioon.',
+'revertpage-nouser' => 'Käyttäjän (käyttäjänimi poistettu) muokkaukset kumottiin ja sivu palautettiin viimeisimpään käyttäjän [[wiki_User:$1|$1]] tekemään versioon.',
 'rollback-success' => 'Käyttäjän $1 tekemät muokkaukset kumottiin ja sivu palautettiin käyttäjän $2 versioon.',
 
 # Edit tokens
@@ -2592,7 +2592,7 @@ Voimassa olevat estot näkyvät [[Special:BlockList|estolistasta]].',
 'unblockip' => 'Muokkauseston poisto',
 'unblockiptext' => 'Tällä lomakkeella voit poistaa käyttäjän tai IP-osoitteen muokkauseston.',
 'ipusubmit' => 'Poista esto',
-'unblocked' => 'Käyttäjän [[User:$1|$1]] esto on poistettu',
+'unblocked' => 'Käyttäjän [[wiki_User:$1|$1]] esto on poistettu',
 'unblocked-range' => '$1 ei ole enää estettynä',
 'unblocked-id' => 'Esto $1 on poistettu',
 'blocklist' => 'Estetyt käyttäjät',
@@ -2625,7 +2625,7 @@ Voimassa olevat estot näkyvät [[Special:BlockList|estolistasta]].',
 'change-blocklink' => 'muuta estoa',
 'contribslink' => 'muokkaukset',
 'emaillink' => 'lähetä sähköpostia',
-'autoblocker' => 'Olet automaattisesti estetty, koska jaat IP-osoitteen käyttäjän [[User:$1|$1]] kanssa. 
+'autoblocker' => 'Olet automaattisesti estetty, koska jaat IP-osoitteen käyttäjän [[wiki_User:$1|$1]] kanssa. 
 Käyttäjän $1 saaman eston syy on: $2.',
 'blocklogpage' => 'Estoloki',
 'blocklog-showlog' => 'Tämä käyttäjä on ollut aiemmin estettynä.
@@ -2714,7 +2714,7 @@ Näissä tapauksissa sivut täytyy siirtää tai yhdistää käsin.",
 'movearticle' => 'Siirrettävä sivu',
 'moveuserpage-warning' => "'''Varoitus:''' Olet siirtämässä käyttäjäsivua. Huomaa, että vain sivu siirretään ja käyttäjää ''ei'' nimetä uudelleen.",
 'movenologin' => 'Et ole kirjautunut sisään',
-'movenologintext' => 'Sinun pitää olla rekisteröitynyt käyttäjä ja [[Special:UserLogin|kirjautua sisään]], jotta voisit siirtää sivun.',
+'movenologintext' => 'Sinun pitää olla rekisteröitynyt käyttäjä ja [[Special:wiki_UserLogin|kirjautua sisään]], jotta voisit siirtää sivun.',
 'movenotallowed' => 'Sinulla ei ole oikeuksia siirtää sivuja.',
 'movenotallowedfile' => 'Sinulla ei ole oikeuksia siirtää tiedostoja.',
 'cant-move-user-page' => 'Sinulla ei ole lupaa siirtää käyttäjäsivuja (lukuun ottamatta alasivuja).',
@@ -3572,7 +3572,7 @@ Postitusohjelma palautti: $1',
 'confirmemail_invalid' => 'Varmennuskoodi ei kelpaa. Koodi on voinut vanhentua.',
 'confirmemail_needlogin' => 'Sinun täytyy $1, jotta voisit varmistaa sähköpostiosoitteesi.',
 'confirmemail_success' => 'Sähköpostiosoitteesi on nyt varmennettu.
-Voit [[Special:UserLogin|kirjautua sisään]].',
+Voit [[Special:wiki_UserLogin|kirjautua sisään]].',
 'confirmemail_loggedin' => 'Sähköpostiosoitteesi on nyt varmennettu.',
 'confirmemail_error' => 'Jokin epäonnistui varmennuksen tallentamisessa.',
 'confirmemail_subject' => '{{GRAMMAR:genitive|{{SITENAME}}}} sähköpostiosoitteen varmennus',
@@ -3619,10 +3619,10 @@ Varmennuskoodi vanhenee $4.',
 
 # Delete conflict
 'deletedwhileediting' => "'''Varoitus''': Tämä sivu on poistettu sen jälkeen, kun aloitit sen muokkaamisen!",
-'confirmrecreate' => "Käyttäjä '''[[User:$1|$1]]''' ([[User talk:$1|keskustelu]]) on poistanut sivun sen jälkeen, kun aloit muokata sitä. Syy oli:
+'confirmrecreate' => "Käyttäjä '''[[wiki_User:$1|$1]]''' ([[wiki_User talk:$1|keskustelu]]) on poistanut sivun sen jälkeen, kun aloit muokata sitä. Syy oli:
 : ''$2''
 Varmista, että haluat luoda sivun uudelleen.",
-'confirmrecreate-noreason' => "Käyttäjä '''[[User:$1|$1]]''' ([[User talk:$1|keskustelu]]) on poistanut tämän sivun sen jälkeen, kun aloit muokata sitä. 
+'confirmrecreate-noreason' => "Käyttäjä '''[[wiki_User:$1|$1]]''' ([[wiki_User talk:$1|keskustelu]]) on poistanut tämän sivun sen jälkeen, kun aloit muokata sitä. 
 Varmista, että haluat luoda sivun uudelleen.",
 'recreate' => 'Luo uudelleen',
 

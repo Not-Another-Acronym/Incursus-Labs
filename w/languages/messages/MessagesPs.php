@@ -85,8 +85,8 @@ $specialPageAliases = array(
 	'Unusedtemplates'           => array( 'ناکارېدلې_کينډۍ' ),
 	'Unwatchedpages'            => array( 'ناکتلي_مخونه' ),
 	'Upload'                    => array( 'پورته_کول' ),
-	'Userlogin'                 => array( 'ننوتل' ),
-	'Userlogout'                => array( 'وتل' ),
+	'wiki_Userlogin'                 => array( 'ننوتل' ),
+	'wiki_Userlogout'                => array( 'وتل' ),
 	'Version'                   => array( 'بڼه' ),
 	'Wantedcategories'          => array( 'غوښتلې_وېشنيزې' ),
 	'Wantedfiles'               => array( 'غوښتلې_دوتنې' ),
@@ -158,7 +158,7 @@ $magicWords = array(
 $rtl = true;
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'کرښنې تړنې:',
 'tog-justify' => 'پاراګرافونه همجوليزول',
 'tog-hideminor' => 'په وروستيو بدلونو کې واړه سمونونه پټول',
@@ -480,7 +480,7 @@ $1',
 دا ستونزه اکثراً د يوه ړنګ شوي مخ د پېښليک يا توپير د تړنو په څارلو کې رامېنځ ته کېږي.
 
 که چېرته داسې نه وي، نو بيا کېدای شي چې په ساوترې کې کومه تېروتنه رابرسېره شوې وي.
-لطفاً د دې چارې راپور د URL په نښه کولو سره يوه [[Special:ListUsers/sysop|پازوال]] ته ورکړۍ.',
+لطفاً د دې چارې راپور د URL په نښه کولو سره يوه [[Special:Listwiki_Users/sysop|پازوال]] ته ورکړۍ.',
 'missingarticle-rev' => '(مخليدنه#: $1)',
 'missingarticle-diff' => '(توپير: $1، $2)',
 'internalerror' => 'کورنۍ تېروتنه',
@@ -519,7 +519,7 @@ $1',
 'customcssprotected' => 'تاسې د دې CSS مخ د سمولو اجازه نه لرۍ، دا ځکه چې دا مخ د بل کارن شخصي امستنې لري.',
 'customjsprotected' => 'تاسې د دې جاواسکرېپټ مخ د سمولو اجازه نه لرۍ، دا ځکه چې دا مخ د بل کارن شخصي امستنې لري.',
 'ns-specialprotected' => 'ځانګړي مخونو کې سمون او بدلون نه شی راوستلای.',
-'titleprotected' => 'د [[User:$1|$1]] لخوا د دې سرليک د جوړېدلو مخنيوی شوی.
+'titleprotected' => 'د [[wiki_User:$1|$1]] لخوا د دې سرليک د جوړېدلو مخنيوی شوی.
 او د دې کړنې سبب "\'\'$2\'\'" ورکړ شوی.',
 'exception-nologin' => 'غونډال کې نه ياست ننوتي',
 
@@ -531,7 +531,7 @@ $1',
 # Login and logout pages
 'logouttext' => "'''تاسې اوس د غونډال نه ووتلی.'''
 
-تاسې کولای شی چې د کارن-نوم نه پرته په ورکنومي توګه {{SITENAME}} وکاروی، او يا هم په همدې او يا کوم بل کارن-نوم، يو ځل [[Special:UserLogin|بيا غونډال ته ورننوځۍ]].
+تاسې کولای شی چې د کارن-نوم نه پرته په ورکنومي توګه {{SITENAME}} وکاروی، او يا هم په همدې او يا کوم بل کارن-نوم، يو ځل [[Special:wiki_UserLogin|بيا غونډال ته ورننوځۍ]].
 دا په پام کې وساتۍ چې تر څو تاسې د خپل کتنمل حافظه نه وي سپينه کړې، نو ځينې مخونو کې به لا تر اوسه پورې په غونډال کې ننوتي ښکارۍ.",
 'welcomecreation' => '==$1 ښه راغلۍ! ==
 
@@ -575,7 +575,7 @@ $1',
 'loginsuccess' => "'''تاسې اوس {{SITENAME}} کې د \"\$1\" په نوم ننوتي ياست.'''",
 'nosuchuser' => 'د "$1" په نوم هېڅ کارن نشته.
 د کارنانو نومونه د غټو او واړو تورو سره حساس دي.
-خپل حجا وڅارۍ، او يا هم [[Special:UserLogin/signup|يو نوی ګڼون جوړ کړی]].',
+خپل حجا وڅارۍ، او يا هم [[Special:wiki_UserLogin/signup|يو نوی ګڼون جوړ کړی]].',
 'nosuchusershort' => 'د "$1" په نوم هېڅ کوم ګڼون نشته. لطفاً خپل د نوم ليکلې بڼې ته ځير شی چې پکې تېروتنه نه وي.',
 'nouserspecified' => 'تاسې ځان ته کوم کارن نوم نه دی ځانګړی کړی.',
 'login-userblocked' => 'په دې کارن بنديز لګېدلی. غونډال کې ننوتلو ته پرې نه ښودلی شو.',
@@ -742,7 +742,7 @@ $1',
 'newarticletext' => "تاسې د يوې داسې تړنې څارنه کړې چې لا تر اوسه پورې نه شته.
 که همدا مخ ليکل غواړۍ، نو په لانديني چوکاټ کې خپل متن وټاپۍ (د لا نورو مالوماتو لپاره د [[{{MediaWiki:Helppage}}|لارښود مخ]] وګورۍ).
 که چېرته تاسې دلته په تېروتنه راغلي ياست، نو يواځې د خپل د کتنمل '''مخ پر شا''' تڼۍ مو وټوکۍ.",
-'anontalkpagetext' => "----''دا د يوه ورکنومي کارن چې کارن-نوم نه لري او يا خپل کارن-نوم نه کاروي، د سکالو يوه پاڼه ده. نو د يوه کس د پېژندلو پخاطر موږ د هماغه کارن د انټرنېټ شمېره يا IP پته دلته ثبتوؤ. داسې يوه IP پته د ډېرو کارنانو لخوا هم کارېدلی شي. که تاسې يو ورکنومی کارن ياست او تاسې ته دا څرګندېږي چې تاسې ته نااړونده پېغامونه او تبصرې اشاره شوي، نو د نورو بې نومو کارنانو او ستاسې ترمېنځ د ټکنتوب د مخ نيونې لپاره لطفاً [[Special:UserLogin/signup|يو ګڼون جوړ کړۍ]] او يا هم [[Special:UserLogin|غونډال ته ورننوځۍ]].''",
+'anontalkpagetext' => "----''دا د يوه ورکنومي کارن چې کارن-نوم نه لري او يا خپل کارن-نوم نه کاروي، د سکالو يوه پاڼه ده. نو د يوه کس د پېژندلو پخاطر موږ د هماغه کارن د انټرنېټ شمېره يا IP پته دلته ثبتوؤ. داسې يوه IP پته د ډېرو کارنانو لخوا هم کارېدلی شي. که تاسې يو ورکنومی کارن ياست او تاسې ته دا څرګندېږي چې تاسې ته نااړونده پېغامونه او تبصرې اشاره شوي، نو د نورو بې نومو کارنانو او ستاسې ترمېنځ د ټکنتوب د مخ نيونې لپاره لطفاً [[Special:wiki_UserLogin/signup|يو ګڼون جوړ کړۍ]] او يا هم [[Special:wiki_UserLogin|غونډال ته ورننوځۍ]].''",
 'noarticletext' => 'دم مهال په دې مخ کې څه نشته.
 تاسې کولای شی چې په نورو مخونو کې [[Special:Search/{{PAGENAME}}|د دې مخ د سرليک پلټنه]] يا
 <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} د اړوندو يادښتونو پلټنه] وکړی.
@@ -799,7 +799,7 @@ $1',
 'hiddencategories' => 'دا مخ د {{PLURAL:$1|1 پټې وېشنيزې|$1 پټو وېشنيزو}} يو غړی دی:',
 'nocreatetitle' => 'د مخ جوړول بريد ټاکلی دی',
 'nocreatetext' => '{{SITENAME}} د نوو مخونو د جوړولو وړتيا محدوده کړې.
-تاسو بېرته پر شا تللای شی او په شته مخونو کې سمونې ترسره کولای شی، او يا هم [[Special:UserLogin|غونډال ته ننوتلای او يو ګڼون جوړولای شی]].',
+تاسو بېرته پر شا تللای شی او په شته مخونو کې سمونې ترسره کولای شی، او يا هم [[Special:wiki_UserLogin|غونډال ته ننوتلای او يو ګڼون جوړولای شی]].',
 'nocreate-loggedin' => 'تاسې د نوو مخونو د جوړولو پرېښله نلرۍ.',
 'sectioneditnotsupported-title' => 'د برخې د سمون ملاتړ نه کېږي',
 'sectioneditnotsupported-text' => 'په دې مخ د برخې د سمون ملاتړ نه کېږي.',
@@ -996,7 +996,7 @@ $1',
 'mypreferences' => 'غوره توبونه',
 'prefs-edits' => 'د سمونو شمېر:',
 'prefsnologin' => 'غونډال کې نه ياست ننوتي',
-'prefsnologintext' => 'د دې لپاره چې خپل غوره توبونه مو وټاکی، نو پکار ده چې لومړی تاسو غونډال کې <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} ننوځی]</span>.',
+'prefsnologintext' => 'د دې لپاره چې خپل غوره توبونه مو وټاکی، نو پکار ده چې لومړی تاسو غونډال کې <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} ننوځی]</span>.',
 'changepassword' => 'پټنوم بدلول',
 'prefs-skin' => 'پوښۍ',
 'skin-preview' => 'مخکتنه',
@@ -1094,11 +1094,11 @@ $1',
 'prefs-displaywatchlist' => 'د ښکارېدنې خوښنې',
 'prefs-diffs' => 'توپيرونه',
 
-# User preference: e-mail validation using jQuery
+# wiki_User preference: e-mail validation using jQuery
 'email-address-validity-valid' => 'برېښليک پته سمه ښکاري',
 'email-address-validity-invalid' => 'يوه سمه برېښليک پته وليکۍ',
 
-# User rights
+# wiki_User rights
 'userrights' => 'د کارن رښتو سمبالښت',
 'userrights-lookup-user' => 'کارن ډلې سمبالول',
 'userrights-user-editname' => 'يو کارن نوم وليکۍ:',
@@ -1165,7 +1165,7 @@ $1',
 'right-userrights-interwiki' => 'په نورو ويکي ګانو د نورو کارنانو  کارن-رښتې سمول',
 'right-sendemail' => 'نورو کارنانو ته برېښليک لېږل',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'د کارن د رښتو يادښت',
 'rightslogtext' => 'دا د کارن رښتو د بدلونونو يو يادښت دی',
 'rightsnone' => '(هېڅ)',
@@ -1240,7 +1240,7 @@ $1',
 'upload' => 'دوتنه پورته کول',
 'uploadbtn' => 'دوتنه پورته کول',
 'uploadnologin' => 'غونډال کې نه ياست ننوتي',
-'uploadnologintext' => 'ددې لپاره چې دوتنې پورته کړای شۍ، نو لومړی غونډال کې [[Special:UserLogin|ورننوځۍ]].',
+'uploadnologintext' => 'ددې لپاره چې دوتنې پورته کړای شۍ، نو لومړی غونډال کې [[Special:wiki_UserLogin|ورننوځۍ]].',
 'uploaderror' => 'د پورته کولو ستونزه',
 'uploadtext' => "د دوتنې د پورته کېدو لپاره لاندينی چوکاټ وکاروۍ.
 که چېرته د پخونيو پورته شويو دوتنو کتل او پلټل غواړۍ نو [[Special:FileList|د پورته شويو دوتنو لړليک]] ته ورشۍ، [[Special:Log/upload|د (بيا) پورته شويو دوتنو يادښتونه]] او [[Special:Log/delete|د ړنګېدو يادښتونه]] هم کتلای شی.
@@ -1435,7 +1435,7 @@ $1',
 'statistics-edits-average' => 'پر يوه مخ د سمون منځوۍ کچه',
 'statistics-views-total' => 'ټولټال کتنې',
 'statistics-views-peredit' => 'د هر سمون په سر کتنې',
-'statistics-users' => 'ثبت شوي [[Special:ListUsers|کارنان]]',
+'statistics-users' => 'ثبت شوي [[Special:Listwiki_Users|کارنان]]',
 'statistics-users-active' => 'فعاله کارنان',
 'statistics-users-active-desc' => 'هغه کارنان چې په {{PLURAL:$1|وروستۍ ورځ|وروستيو $1 ورځو}} کې فعاله ونډه لرلې',
 'statistics-mostpopular' => 'ډېر کتل شوي مخونه',
@@ -1566,13 +1566,13 @@ $1',
 'linksearch-ok' => 'پلټل',
 'linksearch-line' => '$1 د $2 سره تړل شوی',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => 'هغه کارنان کتل چې نومونه يې پېلېږي په:',
 'listusers-submit' => 'ښکاره کول',
 'listusers-noresult' => 'هېڅ کوم کارن و نه موندل شو.',
 'listusers-blocked' => '(بنديز لګېدلی)',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'د فعالو کارنانو لړليک',
 'activeusers-intro' => 'دا د هغو کارنانو لړليک دی چې په {{PLURAL:$1|تېرې|تېرو}} $1 {{PLURAL:$1|ورځ|ورځو}} کې يې ونډې ترسره کړي.',
 'activeusers-count' => 'په {{PLURAL:$2|تېرې|تېرو}} {{PLURAL:$3|ورځ|$3 ورځو}} کې $1 {{PLURAL:$1|سمون|سمونونه}}',
@@ -1627,7 +1627,7 @@ $1',
 'emailsenttext' => 'ستاسو برېښليکي پيغام ولېږل شو.',
 'emailuserfooter' => 'دا برېښليک د $1 لخوا $2 ته د {{SITENAME}} په وېبځي کې د "کارن ته برېښليک لېږل" د کړنې په مرسته لېږل شوی.',
 
-# User Messenger
+# wiki_User Messenger
 'usermessage-summary' => 'د غونډال پيغام پرېښودل.',
 'usermessage-editor' => 'د غونډال پيغام رسونکی',
 
@@ -1638,7 +1638,7 @@ $1',
 'nowatchlist' => 'ستاسې کتنلړ کې څه نه شته.',
 'watchlistanontext' => 'د خپل کتنلړ د توکو د سمولو او کتلو لپاره $1 ترسره کړۍ.',
 'watchnologin' => 'غونډال کې نه ياست ننوتي.',
-'watchnologintext' => 'ددې لپاره چې خپل کتنلړ کې بدلون راولی نو تاسو ته پکار ده چې لومړی غونډال کې [[Special:UserLogin|ورننوځۍ]].',
+'watchnologintext' => 'ددې لپاره چې خپل کتنلړ کې بدلون راولی نو تاسو ته پکار ده چې لومړی غونډال کې [[Special:wiki_UserLogin|ورننوځۍ]].',
 'addwatch' => 'کتنلړ کې ورګډول',
 'addedwatchtext' => 'د "[[:$1]]" په نوم يو مخ ستاسې [[Special:Watchlist|کتنلړ]] کې ورګډ شو.
 په راتلونکې کې چې په دغه مخ او د دې د خبرواترو مخ کې کوم بدلونونه راځي نو هغه به ستاسې کتنلړ کې ښکاري.',
@@ -1886,7 +1886,7 @@ $UNWATCHURL  نه ليدنه وکړۍ
 'ipb-blocklist-contribs' => 'د $1 ونډې',
 'unblockip' => 'کارن له بنديزه وېستل',
 'ipusubmit' => 'دا بنديز ليرې کول',
-'unblocked' => 'له [[User:$1|$1]] بنديز ليري شو',
+'unblocked' => 'له [[wiki_User:$1|$1]] بنديز ليري شو',
 'unblocked-range' => 'له $1 بنديز ليرې شو',
 'blocklist' => 'بنديز لګېدلي کارنان',
 'ipblocklist' => 'بنديز لګېدلي کارنان',
@@ -1914,7 +1914,7 @@ $UNWATCHURL  نه ليدنه وکړۍ
 'change-blocklink' => 'د بنديز بدلون',
 'contribslink' => 'ونډې',
 'emaillink' => 'برېښليک لېږل',
-'autoblocker' => 'په اتوماتيک ډول ستاسو مخنيوی شوی دا ځکه چې ستاسو IP پته وروستی ځل د "[[User:$1|$1]]" له خوا کارېدلې. او د $1 د مخنيوي سبب دا دی: "$2"',
+'autoblocker' => 'په اتوماتيک ډول ستاسو مخنيوی شوی دا ځکه چې ستاسو IP پته وروستی ځل د "[[wiki_User:$1|$1]]" له خوا کارېدلې. او د $1 د مخنيوي سبب دا دی: "$2"',
 'blocklogpage' => 'د بنديز يادښت',
 'blocklogentry' => 'په [[$1]] بنديز لګېدلی چې د بنديز د پای وخت يې $2 $3 دی',
 'unblocklogentry' => 'بنديز ليرې شو $1',
@@ -1970,7 +1970,7 @@ $UNWATCHURL  نه ليدنه وکړۍ
 'movearticle' => 'مخ لېږدول',
 'moveuserpage-warning' => "'''ګواښنه:''' تاسې د يو کارن مخ د لېږدولو په حال کې ياست. لطفاً دا مه هېروۍ چې يوازې همدا مخ به ولېږدول شي او د کارن نوم به ''نه'' بدلېږي.",
 'movenologin' => 'غونډال کې نه ياست ننوتي',
-'movenologintext' => 'ددې لپاره چې يو مخ ولېږدوی، نو تاسې بايد يو ثبت شوی کارن او غونډال کې [[Special:UserLogin|ننوتي]] اوسۍ.',
+'movenologintext' => 'ددې لپاره چې يو مخ ولېږدوی، نو تاسې بايد يو ثبت شوی کارن او غونډال کې [[Special:wiki_UserLogin|ننوتي]] اوسۍ.',
 'movenotallowed' => 'تاسې د مخونو د لېږدولو پرېښله نلرۍ.',
 'movenotallowedfile' => 'تاسې د دوتنو د لېږدولو پرېښله نلرۍ.',
 'cant-move-user-page' => 'تاسې د کارن مخونو د لېږدولو پرېښله نلرۍ (د څېرمه مخونو نه پرته).',

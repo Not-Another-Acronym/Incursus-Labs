@@ -43,7 +43,7 @@ $fallback8bitEncoding = 'windows-1251';
 $separatorTransformTable = array( ',' => "\xc2\xa0", '.' => ',' );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Линкъёс ултӥз гожен сызоно',
 'tog-hideminor' => 'Берпуметӥ тупатонъёслэн списоксэс ичи воштонъёстэк возьматыны',
 'tog-hidepatrolled' => 'Берпуметӥ тупатонъёслэн списоксэс партрулировать каремын воштонъёстэк возьматыны',

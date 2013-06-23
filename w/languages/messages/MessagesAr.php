@@ -439,9 +439,9 @@ $specialPageAliases = array(
 	'Unwatchedpages'            => array( 'صفحات_غير_مراقبة' ),
 	'Upload'                    => array( 'رفع' ),
 	'UploadStash'               => array( 'رفع_مخفي' ),
-	'Userlogin'                 => array( 'دخول_المستخدم' ),
-	'Userlogout'                => array( 'خروج_المستخدم' ),
-	'Userrights'                => array( 'صلاحيات_المستخدم', 'ترقية_مدير_نظام', 'ترقية_بوت' ),
+	'wiki_Userlogin'                 => array( 'دخول_المستخدم' ),
+	'wiki_Userlogout'                => array( 'خروج_المستخدم' ),
+	'wiki_Userrights'                => array( 'صلاحيات_المستخدم', 'ترقية_مدير_نظام', 'ترقية_بوت' ),
 	'Version'                   => array( 'نسخة' ),
 	'Wantedcategories'          => array( 'تصنيفات_مطلوبة' ),
 	'Wantedfiles'               => array( 'ملفات_مطلوبة' ),
@@ -468,7 +468,7 @@ $imageFiles = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'ضع خطا تحت الوصلات:',
 'tog-justify' => 'ساو الفقرات',
 'tog-hideminor' => 'أخف التعديلات الطفيفة في أحدث التغييرات',
@@ -811,7 +811,7 @@ $1',
 عادة ما يحدث هذا عند اتباع فرق قديم أو وصلة تاريخ تؤدي إلى صفحة حذفت.
 
 إذا لم تكن هذه هي الحالة، فالمحتمل أنك وجدت خللا في البرنامج.
-من فضلك أبلغ أحد [[Special:ListUsers/sysop|الإداريين]]، وأعطه وصلة إلى مسار هذه الصفحة.',
+من فضلك أبلغ أحد [[Special:Listwiki_Users/sysop|الإداريين]]، وأعطه وصلة إلى مسار هذه الصفحة.',
 'missingarticle-rev' => '(رقم المراجعة: $1)',
 'missingarticle-diff' => '(فرق: $1، $2)',
 'readonly_lag' => 'تم إغلاق قاعدة البيانات تلقائيا حتى تستطيع الخواديم التابعة ملاحقة الخادوم الرئيسي',
@@ -863,7 +863,7 @@ $2',
 'customcssprotected' => 'أنت لا تمتلك السماح لتعديل صفحة الCSS هذه، لأنها تحتوي على الإعدادات الشخصية لمستخدم آخر.',
 'customjsprotected' => 'أنت لا تمتلك السماح لتعديل صفحة الجافاسكريبت هذه، لأنها تحتوي على الإعدادات الشخصية لمستخدم آخر.',
 'ns-specialprotected' => 'الصفحات الخاصة لا يمكن تعديلها.',
-'titleprotected' => "{{GENDER:$1|حمى|حمت}} [[User:$1|$1]] هذا العنوان من الإنشاء.
+'titleprotected' => "{{GENDER:$1|حمى|حمت}} [[wiki_User:$1|$1]] هذا العنوان من الإنشاء.
 السبب المعطى هو ''$2''.",
 'filereadonlyerror' => 'تعذر تعديل الملف "$1" لأن مستودع الملف "$2" في وضع القراءة فقط. 
 
@@ -881,7 +881,7 @@ $2',
 # Login and logout pages
 'logouttext' => "'''أنت الآن غير مسجل الدخول.'''
 
-تستطيع المتابعة باستعمال {{SITENAME}} كمجهول، أو [[Special:UserLogin|الدخول مرة أخرى]] بنفس الاسم أو باسم آخر.
+تستطيع المتابعة باستعمال {{SITENAME}} كمجهول، أو [[Special:wiki_UserLogin|الدخول مرة أخرى]] بنفس الاسم أو باسم آخر.
 من الممكن أن ترى بعض الصفحات كما لو أنك مسجل الدخول، وذلك حتى تقوم بإفراغ الصفحات المختزنة في المتصفح لديك.",
 'welcomecreation' => '== مرحبا، $1! ==
 تم إنشاء حسابك.
@@ -929,7 +929,7 @@ $2',
 'loginsuccess' => "'''لقد سجلت الدخول ل{{SITENAME}} باسم \"\$1\".'''",
 'nosuchuser' => 'لا يوجد مستخدم بالاسم "$1".
 أسماء المستخدمين حساسة لحالة الحروف.
-تأكد من إملاء الاسم، أو [[Special:UserLogin/signup|قم بإنشاء حساب جديد]].',
+تأكد من إملاء الاسم، أو [[Special:wiki_UserLogin/signup|قم بإنشاء حساب جديد]].',
 'nosuchusershort' => 'لا يوجد مستخدم باسم $1".
 تأكد من إملاء الاسم.',
 'nouserspecified' => 'يجب عليك تحديد اسم مستخدم.',
@@ -1128,7 +1128,7 @@ $2
 'loginreqlink' => 'تسجيل الدخول',
 'loginreqpagetext' => 'يجب عليك $1 لتشاهد صفحات أخرى.',
 'accmailtitle' => 'تم إرسال كلمة السر.',
-'accmailtext' => "كلمة سر مولدة عشوائيا ل [[User talk:$1|$1]] تم إرسالها إلى $2.
+'accmailtext' => "كلمة سر مولدة عشوائيا ل [[wiki_User talk:$1|$1]] تم إرسالها إلى $2.
 
 كلمة السر لهذا الحساب الجديد يمكن تغييرها في صفحة ''[[Special:ChangePassword|تغيير كلمة السر]]'' عند تسجيل الدخول.",
 'newarticle' => '(جديد)',
@@ -1138,7 +1138,7 @@ $2
 'anontalkpagetext' => "----''هذه صفحة نقاش لمستخدم مجهول لم يقم بإنشاء حساب بعد أو لا يستعمل ذلك الحساب.
 لذا فيجب علينا استعمال رقم الأيبي للتعرف عليه/عليها.
 مثل هذا العنوان يمكن أن يشترك فيه عدة مستخدمين.
-لو كنت مستخدما مجهولا وتشعر بأن تعليقات لا تخصك تم توجيهها إليك، من فضلك [[Special:UserLogin/signup|أنشئ حسابا]] أو [[Special:UserLogin|سجل الدخول]] لتجنب الارتباك المستقبلي مع مستخدمين مجهولين آخرين.''",
+لو كنت مستخدما مجهولا وتشعر بأن تعليقات لا تخصك تم توجيهها إليك، من فضلك [[Special:wiki_UserLogin/signup|أنشئ حسابا]] أو [[Special:wiki_UserLogin|سجل الدخول]] لتجنب الارتباك المستقبلي مع مستخدمين مجهولين آخرين.''",
 'noarticletext' => 'لا يوجد حاليا أي نص في هذه الصفحة.
 يمكنك [[Special:Search/{{PAGENAME}}|البحث عن عنوان هذه الصفحة]] في الصفحات الأخرى،
 <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} البحث في السجلات المتعلقة]،
@@ -1180,13 +1180,13 @@ $2
 'previewconflict' => 'هذا العرض يوضح النص الموجود في صندوق التحرير العلوي والذي سيظهر إذا اخترت الحفظ.',
 'session_fail_preview' => "'''عذرا! لم نتمكن من حفظ التعديلات التي قمت بها نتيجة لضياع بيانات هذه الجلسة.
 من فضلك حاول مرة أخرى.
-في حال استمرار المشكلة حاول أن تقوم [[Special:UserLogout|بالخروج]] ومن ثم الولوج مرة أخرى.'''",
+في حال استمرار المشكلة حاول أن تقوم [[Special:wiki_UserLogout|بالخروج]] ومن ثم الولوج مرة أخرى.'''",
 'session_fail_preview_html' => "'''عذرا! لم نستطع معالجة تعديلك بسبب فقدان بيانات الجلسة.'''
 
 ''لأن {{SITENAME}} بها HTML الخام مفعلة، العرض المسبق مخفي كاحتياط ضد هجمات الجافا سكريبت.''
 
 '''إذا كانت هذه محاولة تعديل صادقة، من فضلك حاول مرة أخرى.
-إذا كانت مازالت لا تعمل، حاول [[Special:UserLogout|تسجيل الخروج]] ثم تسجيل الدخول مجددا.'''",
+إذا كانت مازالت لا تعمل، حاول [[Special:wiki_UserLogout|تسجيل الخروج]] ثم تسجيل الدخول مجددا.'''",
 'token_suffix_mismatch' => "'''تعديلك تم رفضه لأن عميلك أخطأ في علامات الترقيم
 في نص التعديل. تم رفض التعديل لمنع فساد نص المقالة.
 هذا يحدث أحيانا عندما تستخدم خدمة بروكسي مجهول معيبة مبنية على الوب.'''",
@@ -1238,7 +1238,7 @@ $2
 'edittools' => '<!-- النص هنا سيظهر تحت صندوق التحرير واستمارة رفع الصور. -->',
 'nocreatetitle' => 'تم تحديد إنشاء الصفحات',
 'nocreatetext' => 'قام {{SITENAME}} بتحديد القدرة على إنشاء صفحات جديدة.
-يمكنك العودة وتحرير صفحة موجودة بالفعل، أو [[Special:UserLogin|الدخول أو تسجيل حساب]].',
+يمكنك العودة وتحرير صفحة موجودة بالفعل، أو [[Special:wiki_UserLogin|الدخول أو تسجيل حساب]].',
 'nocreate-loggedin' => 'أنت لا تمتلك الصلاحية لإنشاء صفحات جديدة.',
 'sectioneditnotsupported-title' => 'تعديل الأقسام غير مدعوم',
 'sectioneditnotsupported-text' => 'تعديل الأقسام غير مدعوم في هذه الصفحة',
@@ -1289,11 +1289,11 @@ $2
 تحقق من المقارنة بالأسفل للتأكد من أن هذا هو ما تريد أن تفعله، ثم احفظ التغييرات بالأسفل للانتهاء من استرجاع التعديل.',
 'undo-failure' => 'لم يمكن استرجاع التعديل بسبب تعديلات متعارضة تمت على الصفحة.',
 'undo-norev' => 'فشل في الرجوع عن التعديل حيث أنه غير موجود أو تم حذفه.',
-'undo-summary' => 'الرجوع عن التعديل $1 بواسطة [[Special:Contributions/$2|$2]] ([[User talk:$2|نقاش]])',
+'undo-summary' => 'الرجوع عن التعديل $1 بواسطة [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|نقاش]])',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'لا يمكن إنشاء حساب',
-'cantcreateaccount-text' => "إنشاء الحسابات من عنوان الأيبي هذا ('''$1''') تم منعه بواسطة [[User:$3|$3]].
+'cantcreateaccount-text' => "إنشاء الحسابات من عنوان الأيبي هذا ('''$1''') تم منعه بواسطة [[wiki_User:$3|$3]].
 
 السبب المعطى بواسطة $3 هو ''$2''",
 
@@ -1558,7 +1558,7 @@ $1",
 'mypreferences' => 'تفضيلاتي',
 'prefs-edits' => 'عدد التعديلات:',
 'prefsnologin' => 'غير مسجل الدخول',
-'prefsnologintext' => 'يجب أن تكون <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} مسجل الدخول]</span>  حتى تتمكن من تعديل تفضيلات المستخدم.',
+'prefsnologintext' => 'يجب أن تكون <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} مسجل الدخول]</span>  حتى تتمكن من تعديل تفضيلات المستخدم.',
 'changepassword' => 'غير كلمة السر',
 'prefs-skin' => 'واجهة',
 'skin-preview' => 'عرض مسبق',
@@ -1670,16 +1670,16 @@ $1",
 'prefs-displaywatchlist' => 'خصائص العرض',
 'prefs-diffs' => 'فروقات',
 
-# User preference: e-mail validation using jQuery
+# wiki_User preference: e-mail validation using jQuery
 'email-address-validity-valid' => 'يبدو أن عنوان البريد الإلكتروني صالح',
 'email-address-validity-invalid' => 'أدخل عنوان بريد إلكتروني صالح',
 
-# User rights
+# wiki_User rights
 'userrights' => 'إدارة صلاحيات المستخدم',
 'userrights-lookup-user' => 'أدِر مجموعات المستخدم',
 'userrights-user-editname' => 'أدخل اسم مستخدم:',
 'editusergroup' => 'عدل مجموعات المستخدم',
-'editinguser' => "تغيير صلاحيات المستخدم '''[[User:$1|$1]]''' $2",
+'editinguser' => "تغيير صلاحيات المستخدم '''[[wiki_User:$1|$1]]''' $2",
 'userrights-editusergroup' => 'تعديل مجموعات المستخدم',
 'saveusergroups' => 'احفظ مجموعات المستخدم',
 'userrights-groupsmember' => 'عضو في:',
@@ -1691,7 +1691,7 @@ $1",
 'userrights-reason' => 'السبب:',
 'userrights-no-interwiki' => 'أنت لا تمتلك الصلاحية لتعديل صلاحيات المستخدمين على الويكيات الأخرى.',
 'userrights-nodatabase' => 'قاعدة البيانات $1 غير موجودة أو ليست محلية.',
-'userrights-nologin' => 'يجب عليك [[Special:UserLogin|تسجيل الدخول]] بحساب إداري لتعديل صلاحيات المستخدم.',
+'userrights-nologin' => 'يجب عليك [[Special:wiki_UserLogin|تسجيل الدخول]] بحساب إداري لتعديل صلاحيات المستخدم.',
 'userrights-notallowed' => 'حسابك لا يمتلك إذنا لإضافة أو إزالة صلاحيات المستخدمين.',
 'userrights-changeable-col' => 'المجموعات التي يمكنك تغييرها',
 'userrights-unchangeable-col' => 'المجموعات التي لا يمكنك تغييرها',
@@ -1782,7 +1782,7 @@ $1",
 'right-sendemail' => 'إرسال رسائل بريد إلكتروني إلى مستخدمين آخرين',
 'right-passwordreset' => 'عرض رسائل إعادة ضبط كلمات السر',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'سجل صلاحيات المستخدمين',
 'rightslogtext' => 'هذا سجل بالتغييرات في صلاحيات المستخدمين.',
 'rightslogentry' => 'غير صلاحيات $1 من $2 إلى $3',
@@ -1879,7 +1879,7 @@ $1",
 'reuploaddesc' => 'إلغاء الرفع والرجوع إلى استمارة الرفع',
 'upload-tryagain' => 'أرسل وصف ملف معدل',
 'uploadnologin' => 'غير مسجل الدخول',
-'uploadnologintext' => 'يجب أن تكون [[Special:UserLogin|مسجلا الدخول]] لتتمكن من رفع الملفات.',
+'uploadnologintext' => 'يجب أن تكون [[Special:wiki_UserLogin|مسجلا الدخول]] لتتمكن من رفع الملفات.',
 'upload_directory_missing' => 'مجلد الرفع ($1) مفقود ولم يمكن إنشاؤه بواسطة خادوم الوب.',
 'upload_directory_read_only' => 'مجلد الرفع ($1) لا يمكن الكتابة عليه بواسطة خادوم الوب.',
 'uploaderror' => 'خطأ في الرفع',
@@ -2015,11 +2015,11 @@ $1',
 'upload-proto-error-text' => 'الرفع عن بعد يتطلب مساراً يبدأ بـ <code>http://</code> أو <code>ftp://</code>.',
 'upload-file-error' => 'خطأ داخلي',
 'upload-file-error-text' => 'حدث خطأ داخلي عند محاولة إنشاء ملف مؤقت على الخادوم.
-من فضلك اتصل [[Special:ListUsers/sysop|بإداري]].',
+من فضلك اتصل [[Special:Listwiki_Users/sysop|بإداري]].',
 'upload-misc-error' => 'خطأ غير معروف في الرفع',
 'upload-misc-error-text' => 'حدث خطأ غير معروف أثناء عملية الرفع.
 من فضلك تاكد أن المسار صحيح ومن الممكن الدخول عليه ثم حاول مرة أخرى.
-إذا استمرت المشكلة في الحدوث، اتصل [[Special:ListUsers/sysop|بإداري]].',
+إذا استمرت المشكلة في الحدوث، اتصل [[Special:Listwiki_Users/sysop|بإداري]].',
 'upload-too-many-redirects' => 'احتوى المسار تحويلات كثيرة جدا',
 'upload-unknown-size' => 'حجم غير معروف',
 'upload-http-error' => 'صودف خطأ HTTP: $1',
@@ -2262,7 +2262,7 @@ $1',
 'statistics-views-total' => 'إجمالي المشاهدات',
 'statistics-views-total-desc' => 'مشاهدات الصفحات غير الموجودة والصفحات الخاصة غير مشمولة.',
 'statistics-views-peredit' => 'المشاهدات لكل تعديل',
-'statistics-users' => '[[Special:ListUsers|مستخدمون]] مسجلون',
+'statistics-users' => '[[Special:Listwiki_Users|مستخدمون]] مسجلون',
 'statistics-users-active' => 'مستخدمون نشطون',
 'statistics-users-active-desc' => 'المستخدمون الذين قاموا بفعل في آخر {{PLURAL:$1|يوم|$1 يوم}}',
 'statistics-mostpopular' => 'أكثر الصفحات مشاهدة',
@@ -2431,13 +2431,13 @@ $1',
 'linksearch-line' => '$1 موصولة من $2',
 'linksearch-error' => 'الكروت الخاصة يمكن أن تظهر فقط في بداية اسم المضيف.',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => 'اعرض المستخدمين بدءاً من:',
 'listusers-submit' => 'اعرض',
 'listusers-noresult' => 'لم يتم إيجاد مستخدم.',
 'listusers-blocked' => '(ممنوع)',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'قائمة المستخدمين النشطين',
 'activeusers-intro' => 'هذه قائمة بالمستخدمين الذين مارسوا نوعاً من النشاط خلال {{PLURAL:$1||اليوم الماضي|اليومين الماضيين|ال$1 أيام الماضية|ال$1 يوماً ماضياً|ال$1 يوم ماضي}}.',
 'activeusers-count' => '{{PLURAL:$1|ما من تعديلات|تعديل حديث واحد|تعديلان حديثان|$1 تعديلات حديثة|$1 تعديلا حديثا|$1 تعديل حديث}} منذ {{PLURAL:$3||يوم|يومين|$3 أيام|$3 يوما|$1 يوم}}',
@@ -2471,7 +2471,7 @@ $1',
 
 # E-mail user
 'mailnologin' => 'لا يوجد عنوان للإرسال',
-'mailnologintext' => 'يجب أن تقوم [[Special:UserLogin|بتسجيل الدخول]] وإدخال بريد إلكتروني صالح في صفحة [[Special:Preferences|التفضيلات]] لتتمكن من إرسال الرسائل لمستخدمين آخرين.',
+'mailnologintext' => 'يجب أن تقوم [[Special:wiki_UserLogin|بتسجيل الدخول]] وإدخال بريد إلكتروني صالح في صفحة [[Special:Preferences|التفضيلات]] لتتمكن من إرسال الرسائل لمستخدمين آخرين.',
 'emailuser' => 'إرسال رسالة لهذا المستخدم',
 'emailuser-title-target' => 'راسل بالبريد الإلكتروني هذا  {{GENDER:$1| المستخدم}}',
 'emailuser-title-notarget' => 'مراسلة المستخدم',
@@ -2502,7 +2502,7 @@ $1',
 'emailsenttext' => 'أُرسلت رسالتك الإلكترونية.',
 'emailuserfooter' => 'هذا البريد الإلكتروني تم إرساله بواسطة $1 إلى $2 بواسطة وظيفة "مراسلة المستخدم" في {{SITENAME}}.',
 
-# User Messenger
+# wiki_User Messenger
 'usermessage-summary' => 'ترك رسالة نظام.',
 'usermessage-editor' => 'مراسل النظام',
 
@@ -2513,7 +2513,7 @@ $1',
 'nowatchlist' => 'لا توجد مدخلات في قائمة مراقبتك.',
 'watchlistanontext' => 'الرجاء $1 لعرض أو تعديل الصفحات في قائمة مراقبتك.',
 'watchnologin' => 'غير مسجل الدخول',
-'watchnologintext' => 'يجب أن تكون [[Special:UserLogin|مسجل الدخول]] لتعدل قائمة مراقبتك.',
+'watchnologintext' => 'يجب أن تكون [[Special:wiki_UserLogin|مسجل الدخول]] لتعدل قائمة مراقبتك.',
 'addwatch' => 'إضافة إلى قائمة المراقبة',
 'addedwatchtext' => 'أضيفت الصفحة  "[[:$1]]" إلى [[Special:Watchlist|قائمة مراقبتك]].
 التغييرات القادمة على هذه الصفحة وصفحة نقاشها سيتم وضعها هناك.',
@@ -2622,13 +2622,13 @@ $UNWATCHURL
 'rollbackfailed' => 'لم ينجح الاسترجاع',
 'cantrollback' => 'لم يمكن استرجاع التعديل؛
 آخر مساهم هو المؤلف الوحيد لهذه الصفحة.',
-'alreadyrolled' => 'لم يمكن استرجاع آخر تعديل ل[[$1]] بواسطة [[User:$2|$2]] ([[User talk:$2|نقاش]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]])؛
+'alreadyrolled' => 'لم يمكن استرجاع آخر تعديل ل[[$1]] بواسطة [[wiki_User:$2|$2]] ([[wiki_User talk:$2|نقاش]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]])؛
 شخص آخر عدل أو استرجع الصفحة بالفعل.
 
-آخر تعديل كان بواسطة [[User:$3|$3]] ([[User talk:$3|نقاش]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
+آخر تعديل كان بواسطة [[wiki_User:$3|$3]] ([[wiki_User talk:$3|نقاش]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
 'editcomment' => "ملخص التعديل كان: \"''\$1''\".",
-'revertpage' => 'استرجع التعديلات بواسطة [[Special:Contributions/$2|$2]] ([[User talk:$2|نقاش]]) حتى آخر نسخة بواسطة [[User:$1|$1]]',
-'revertpage-nouser' => 'استرجع التعديلات بواسطة (أزيل اسم المستخدم) حتى آخر نسخة بواسطة [[User:$1|$1]]',
+'revertpage' => 'استرجع التعديلات بواسطة [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|نقاش]]) حتى آخر نسخة بواسطة [[wiki_User:$1|$1]]',
+'revertpage-nouser' => 'استرجع التعديلات بواسطة (أزيل اسم المستخدم) حتى آخر نسخة بواسطة [[wiki_User:$1|$1]]',
 'rollback-success' => 'استرجع تعديلات $1؛
 استرجع حتى آخر نسخة بواسطة $2.',
 
@@ -2863,7 +2863,7 @@ $1',
 'unblockip' => 'رفع المنع عن المستخدم',
 'unblockiptext' => 'استخدم الاستمارة أدناه لاسترجاع صلاحية الكتابة الخاصة بعنوان أيبي أو مستخدم تم سحبها منه مسبقا.',
 'ipusubmit' => 'ارفع هذا المنع',
-'unblocked' => '[[User:$1|$1]] تم رفع المنع عنه',
+'unblocked' => '[[wiki_User:$1|$1]] تم رفع المنع عنه',
 'unblocked-range' => 'تم إلغاء منع $1',
 'unblocked-id' => 'منع $1 تم رفعه',
 'blocklist' => 'المستخدمون الممنوعون',
@@ -2896,7 +2896,7 @@ $1',
 'change-blocklink' => 'تغيير المنع',
 'contribslink' => 'مساهمات',
 'emaillink' => 'أرسل بريدا إلكترونيا',
-'autoblocker' => 'تم منعك تلقائياً لأن الأيبي الخاص بك تم استخدامه مؤخراً بواسطة «[[User:$1|$1]]».
+'autoblocker' => 'تم منعك تلقائياً لأن الأيبي الخاص بك تم استخدامه مؤخراً بواسطة «[[wiki_User:$1|$1]]».
 السبب المعطى لمنع $1 هو: «$2»',
 'blocklogpage' => 'سجل المنع',
 'blocklog-showlog' => 'سبق منع هذا المستخدم.
@@ -3002,7 +3002,7 @@ $1',
 'movearticle' => 'انقل الصفحة:',
 'moveuserpage-warning' => "'''تحذير: أنت على وشك نقل صفحة مستخدم. من فضلك لاحظ أن الصفحة وحدها سوف تنقل وأن المستخدم لن يعاد تسميته.'''",
 'movenologin' => 'غير مسجل الدخول',
-'movenologintext' => 'يجب أن تكون مستخدماً مسجلاً وأن  [[Special:UserLogin|تسجل دخولك]] لكي تنقل صفحة.',
+'movenologintext' => 'يجب أن تكون مستخدماً مسجلاً وأن  [[Special:wiki_UserLogin|تسجل دخولك]] لكي تنقل صفحة.',
 'movenotallowed' => 'أنت لا تمتلك الصلاحية لنقل الصفحات.',
 'movenotallowedfile' => 'أنت لا تمتلك الصلاحية لنقل الملفات.',
 'cant-move-user-page' => 'أنت لا تمتلك الصلاحية لنقل صفحات المستخدم الرئيسية.',
@@ -3913,7 +3913,7 @@ $1',
 ربما انتهت فترة صلاحيته.',
 'confirmemail_needlogin' => 'يجب عليك $1 لتأكيد بريدك الإلكتروني.',
 'confirmemail_success' => 'تم تأكيد بريدك الإلكتروني.
-يمكنك الآن [[Special:UserLogin|الدخول]] والتمتع بالويكي.',
+يمكنك الآن [[Special:wiki_UserLogin|الدخول]] والتمتع بالويكي.',
 'confirmemail_loggedin' => 'بريدك الإلكتروني تم تأكيده الآن.',
 'confirmemail_error' => 'ثمة شيء خطأ عند محاولة حفظ تأكيدك.',
 'confirmemail_subject' => 'رسالة تأكيد البريد من {{SITENAME}}',
@@ -3970,10 +3970,10 @@ $5
 
 # Delete conflict
 'deletedwhileediting' => "'''تحذير''': هذه الصفحة تم حذفها بعد أن بدأت أنت بتعديلها!",
-'confirmrecreate' => "حذف المستخدم [[User:$1|$1]] ([[User talk:$1|نقاش]]) هذه الصفحة بعد أن بدأت أنت بتحريرها للسبب التالي:
+'confirmrecreate' => "حذف المستخدم [[wiki_User:$1|$1]] ([[wiki_User talk:$1|نقاش]]) هذه الصفحة بعد أن بدأت أنت بتحريرها للسبب التالي:
 :''$2''
 الرجاء التأكد من أنك تريد إعادة إنشاء هذه الصفحة.",
-'confirmrecreate-noreason' => 'حذف المستخدم [[User:$1|$1]] ([[User talk:$1|نقاش]]) هذه الصفحة بعد أن بدأت أنت بتحريرها. الرجاء التأكد من أنك تريد إعادة إنشاء هذه الصفحة.',
+'confirmrecreate-noreason' => 'حذف المستخدم [[wiki_User:$1|$1]] ([[wiki_User talk:$1|نقاش]]) هذه الصفحة بعد أن بدأت أنت بتحريرها. الرجاء التأكد من أنك تريد إعادة إنشاء هذه الصفحة.',
 'recreate' => 'أعد الإنشاء',
 
 'unit-pixel' => 'بك',

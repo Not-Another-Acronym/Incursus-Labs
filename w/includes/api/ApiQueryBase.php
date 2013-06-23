@@ -507,10 +507,10 @@ abstract class ApiQueryBase extends ApiBase {
 	 * @param bool $showBlockInfo
 	 * @return void
 	 */
-	public function showHiddenUsersAddBlockInfo( $showBlockInfo ) {
-		$userCanViewHiddenUsers = $this->getUser()->isAllowed( 'hideuser' );
+	public function showHiddenwiki_UsersAddBlockInfo( $showBlockInfo ) {
+		$userCanViewHiddenwiki_Users = $this->getUser()->isAllowed( 'hideuser' );
 
-		if ( $showBlockInfo || !$userCanViewHiddenUsers ) {
+		if ( $showBlockInfo || !$userCanViewHiddenwiki_Users ) {
 			$this->addTables( 'ipblocks' );
 			$this->addJoinConds( array(
 				'ipblocks' => array( 'LEFT JOIN', 'ipb_user=user_id' ),
@@ -523,7 +523,7 @@ abstract class ApiQueryBase extends ApiBase {
 			}
 
 			// Don't show hidden names
-			if ( !$userCanViewHiddenUsers ) {
+			if ( !$userCanViewHiddenwiki_Users ) {
 				$this->addWhere( 'ipb_deleted = 0 OR ipb_deleted IS NULL' );
 			}
 		}

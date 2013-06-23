@@ -14,7 +14,7 @@
  */
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Linkiga hoos ka calaamadeysan:',
 'tog-justify' => 'Geesdhig baaragaraafyada',
 'tog-hideminor' => 'Qari bedelada yar ee isbedelada dhow',
@@ -338,7 +338,7 @@ Waxaa meeshaan ka heli kartaa liiska bogyaasha khaaska ah oo jiro  [[Special:Spe
 
 Waxaan oo kale waxaa sabab ugu ah soo raacida linkiga duqoobay ee duwanaan ama taariikh oo kula xiriirtay bog la tirtitay.
 Hadii ee sidaas eheen, waxaa laga yaabaa in software-ka aad qalad ka heshay.
-Fadlan u sheek [[Special:ListUsers/sysop|maamulaha]], kana digtooneesii URL-ka.',
+Fadlan u sheek [[Special:Listwiki_Users/sysop|maamulaha]], kana digtooneesii URL-ka.',
 'missingarticle-rev' => '(bedelaadka#: $1)',
 'missingarticle-diff' => '(Duwanaan: $1, $2)',
 'internalerror' => 'Qalad gudaha ah',
@@ -374,7 +374,7 @@ $2',
 'namespaceprotected' => "Ma laguu ogolo in aad wax ka bedesho maqaalada ku jirto '''$1''' xarun magaceedka.",
 'customcssprotected' => "Ma laguu ogolo in aad wax ka badashid boggaan, sababtoo ah waxaa ku qoran isticmaale'yaal kale waxyaabo u shaqsi ah.",
 'ns-specialprotected' => 'Bogyaasha gaarka ah wax malaga bedeli karo.',
-'titleprotected' => 'Qoraalkaan aad qortay waxaa difaacay  [[User:$1|$1]] si loo sameynin.
+'titleprotected' => 'Qoraalkaan aad qortay waxaa difaacay  [[wiki_User:$1|$1]] si loo sameynin.
 Sababta neh waxaa waaye "\'\'$2\'\'".',
 
 # Virus scanner
@@ -384,7 +384,7 @@ Sababta neh waxaa waaye "\'\'$2\'\'".',
 # Login and logout pages
 'logouttext' => "'''Hada waad ka baxday.'''
 
-Waad sii isticmaali kartaa {{SITENAME}} adoona lagu aqoon, ama [[Special:UserLogin|gudaha gal]] adiga oo isticmaalaya magacaagii hore ama mid ka duwan. OGEYSIIS waxaa lagayabaa bogyaasha qaarkood in ay yiraahdaan wali gudaha ayaad ku jirtaa, ilaa inta aad ka nadiifineesid browsahaaga Internetka.",
+Waad sii isticmaali kartaa {{SITENAME}} adoona lagu aqoon, ama [[Special:wiki_UserLogin|gudaha gal]] adiga oo isticmaalaya magacaagii hore ama mid ka duwan. OGEYSIIS waxaa lagayabaa bogyaasha qaarkood in ay yiraahdaan wali gudaha ayaad ku jirtaa, ilaa inta aad ka nadiifineesid browsahaaga Internetka.",
 'welcomecreation' => "== Soo dhawoow, $1! ==
 Akoon kaada  waa la sameeyay.
 Ha' hilmaamin in aad wax ka bedesho [[Special:Preferences|{{SITENAME}} dooqyadaada]].",
@@ -429,7 +429,7 @@ Waa in aad hubsataa in aad shiday cookies'kaaga, ku soo noqo boggaan markale neh
 'loginsuccess' => "'''Waxaa hadda gudaha ugu soo gashay {{SITENAME}} sida \"\$1\".'''",
 'nosuchuser' => 'Ma jiro isticmaalo leh magacaan "$1".
 Magacyada way kala waaweyn yihiin.
-Sax hingaada, ama  [[Special:UserLogin/signup|samayso magac gudagale ah]].',
+Sax hingaada, ama  [[Special:wiki_UserLogin/signup|samayso magac gudagale ah]].',
 'nosuchusershort' => 'Majiro isticmaale leh magacaan "$1". Sax qoraalkaaga.',
 'nouserspecified' => 'Waa in aad magac gudagale heshaa.',
 'login-userblocked' => 'Isticmaalahaan waa la mamnuucay. Lama ogolo in oo gudaha u galo',
@@ -590,7 +590,7 @@ Waxaa laga yaabaa in la wareejiyay ama la tirtiray adiga oo fiirinaayo bogga.',
 'loginreqlink' => 'Gudaha gal',
 'loginreqpagetext' => 'Waa in aad $1 si aad u fiirisid bogyaasha kale.',
 'accmailtitle' => "Ereysirka waa la'diray.",
-'accmailtext' => "Ereysir loogu tala galay [[User talk:$1|$1]] waxaa loogu diray $2.
+'accmailtext' => "Ereysir loogu tala galay [[wiki_User talk:$1|$1]] waxaa loogu diray $2.
 
 Akoonkaan cusub eraysirkiisa waxaa ku badali kartaa  bogga ''[[Special:ChangePassword|bedel eraysirka]]'' si aad u soo gashid.",
 'newarticle' => '(Cusub)',
@@ -599,7 +599,7 @@ Hadii aad rabto in aad sameyso bogga, hoos ka bilaaw qoraalkaada (fiiri [[{{Medi
 hadii aad meeshaan ku soo qaldantay, riix batoonka barowsahaaga  '''gadaal uuga noqo''' .",
 'anontalkpagetext' => "----''Meeshaan waa bogga wadahadalka isticmaalayaasha la aqoon oo aanan weli sameysanin akoon, ama  wali isticmaalin. 
 Sidaas darteed, waa in aan isticmaalnaa lambar cinwaaneedka IP:ga si aan u ogaano asiga/ayada. Cinwaanka IP:ga waxaa suurto gal ah in ay qeybsadaan isticmaaleyaal badan.
-Hadii aad tahay isticmaale aanan la'aqoonsanin oo aad dareemaysid in laguu gafay, fadlan  [[Special:UserLogin/signup|sameyso akoon]]  ama [[Special:UserLogin|gudaha gal]] si aad u dhowrsatid in hadhowdi laguugu qaldo isticmaalada kale oo aann la'aqoonsanin.''",
+Hadii aad tahay isticmaale aanan la'aqoonsanin oo aad dareemaysid in laguu gafay, fadlan  [[Special:wiki_UserLogin/signup|sameyso akoon]]  ama [[Special:wiki_UserLogin|gudaha gal]] si aad u dhowrsatid in hadhowdi laguugu qaldo isticmaalada kale oo aann la'aqoonsanin.''",
 'noarticletext' => 'Boggaan hadda wax qoraal ah kuma qorno.
 Waxaa  [[Special:Search/{{PAGENAME}}|magaca boggaan]] ka raadin kartaa bogyaasha kale,
 <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} raadi kuwo la mid ah],
@@ -664,11 +664,11 @@ Tusmooyinka qaar lagumo dari doono.",
 'post-expand-template-argument-warning' => "'''Digniin:'''Boggaan waxaa ku jira ugu yaraan hal iyo wixii ka badan oo template ah, waxaana ku xiran kuwa kale.",
 
 # "Undo" feature
-'undo-summary' => 'Noqay bedelaadka $1 ee sameeyay  [[Special:Contributions/$2|$2]] ([[User talk:$2|hadal]])',
+'undo-summary' => 'Noqay bedelaadka $1 ee sameeyay  [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|hadal]])',
 
 # Account creation failure
 'cantcreateaccounttitle' => "Ma' sameynkaro gudagal (akoon)",
-'cantcreateaccount-text' => "Akoon'ka sameeyaha leh ciwaankaan  IP:ka ('''$1''') waxaa mamnuucay [[User:$3|$3]].
+'cantcreateaccount-text' => "Akoon'ka sameeyaha leh ciwaankaan  IP:ka ('''$1''') waxaa mamnuucay [[wiki_User:$3|$3]].
 
 Sababta uu qoray $3 waa ''$2''",
 
@@ -785,7 +785,7 @@ sababteeda neh waxaa laga heli kartaa  [{{fullurl:{{#Special:Log}}/delete|page={
 'preferences' => 'Dooqyada',
 'mypreferences' => 'Dooqyadeyda',
 'prefsnologin' => 'Gudaha kuma jirtid',
-'prefsnologintext' => 'Waa in aad <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} Gudaha ku jirtaa]</span> si aad dooqyadaada u dalbatid.',
+'prefsnologintext' => 'Waa in aad <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} Gudaha ku jirtaa]</span> si aad dooqyadaada u dalbatid.',
 'prefs-skin' => 'Jirka',
 'skin-preview' => 'Horfiirin',
 'datedefault' => "Ma'jiro dooq",
@@ -828,7 +828,7 @@ Waa in aysan ka badanin $1 {{PLURAL:$1|eray|erayo}}.',
 E-mailkaada mala sheegaayo markii ee dadka kale kula soo xiriirayaan.',
 'prefs-help-email-required' => 'Waxaa loo baahanyahay e-mail.',
 
-# User rights
+# wiki_User rights
 'saveusergroups' => 'Kaydi kooxaha isticmaalayaasha',
 'userrights-groupsmember' => 'Ka mid ah:',
 
@@ -858,7 +858,7 @@ E-mailkaada mala sheegaayo markii ee dadka kale kula soo xiriirayaan.',
 'right-browsearchive' => 'Raadi maqaalada la tirtiray',
 'right-undelete' => 'Ha tirtirin bog',
 
-# User rights log
+# wiki_User rights log
 'rightsnone' => '(waxna)',
 
 # Associated actions - in the sentence "You do not have permission to X"
@@ -1059,7 +1059,7 @@ Tafaasiishiisa waxee ku qorantahay [$2 bogga tafaasiisha faylka] oo ka arki kart
 'linksearch-ok' => 'Raadi',
 'linksearch-line' => '$1 wuxuu ka socdaa $2',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => "I'tus isticmaalayaasha laga bilaabo:",
 'listusers-submit' => "I'tus",
 'listusers-noresult' => 'Lama helin isticmaale.',
@@ -1073,7 +1073,7 @@ Tafaasiishiisa waxee ku qorantahay [$2 bogga tafaasiisha faylka] oo ka arki kart
 
 # E-mail user
 'mailnologin' => "Ma'jiro cinwaan wax lagu diro",
-'mailnologintext' => 'Waa in aad [[Special:UserLogin|gudaha ku jirtaa]]
+'mailnologintext' => 'Waa in aad [[Special:wiki_UserLogin|gudaha ku jirtaa]]
 kuna haysatid E-boosto sax ah [[Special:Preferences|dooqyadaada]],
 si aad ugu dirto E-boosto isticmaalayaasha kale.',
 'emailuser' => 'E-mail u dir isticmaalahaan',
@@ -1095,7 +1095,7 @@ si aad ugu dirto E-boosto isticmaalayaasha kale.',
 'nowatchlist' => 'Waxba kuma jiraan liiskaaga waardiyeynta.',
 'watchlistanontext' => 'Fadlan $1 si aad u fiirisid ama wax uga bedeshid qoraalada ku jira liiska waardiyeyska.',
 'watchnologin' => 'Gudaha kuma jirtid',
-'watchnologintext' => 'Waa ina aad [[Special:UserLogin|gudaha ku jirtaa]] si aad wax uga bedeshid liiskaaga waardiyeynta.',
+'watchnologintext' => 'Waa ina aad [[Special:wiki_UserLogin|gudaha ku jirtaa]] si aad wax uga bedeshid liiskaaga waardiyeynta.',
 'addedwatchtext' => "Bogga \"[[:\$1]]\" waxaa lagudaray [[Special:Watchlist|liiska-waardiyahaaga]].
 Isbedelka mustaqbalka ku dhaca boggan iyo bogga wadahadalka la'xiriira waxaa lagu soo qoridoonaa inta,
 boggana wuxuu noqonaayaa mid la' '''nuuriyey''' dhinaca [[Special:RecentChanges|Liiska isbedelada show]] si
@@ -1134,8 +1134,8 @@ Hadii aad rabootid in aad boggan ka saartid wardiyeynta, dhagsii \"Ha' wardiyeyn
 # Rollback
 'rollback_short' => 'Soo celi',
 'rollbacklink' => 'dib u soo celi',
-'revertpage' => 'Wuxuu dib u noqay badalkii oo sameeyay  [[Special:Contributions/$2|$2]] ([[User talk:$2|talk]]) kuna celiyay badalkii ka  danbeeyay oo sameeyay  [[User:$1|$1]]',
-'revertpage-nouser' => 'Wuxuu dib u noqay bedelyada (magaca isticmaalaha waa laga saaray) kuna celiyay  [[User:$1|$1]]',
+'revertpage' => 'Wuxuu dib u noqay badalkii oo sameeyay  [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|talk]]) kuna celiyay badalkii ka  danbeeyay oo sameeyay  [[wiki_User:$1|$1]]',
+'revertpage-nouser' => 'Wuxuu dib u noqay bedelyada (magaca isticmaalaha waa laga saaray) kuna celiyay  [[wiki_User:$1|$1]]',
 'rollback-success' => 'Wuxuu dib u noqay bedelka oo sameeyay  $1;
 Wuxuu ku badalay bedelkii ka danbeeyay oo sameeyay $2.',
 
@@ -1236,7 +1236,7 @@ eeg [[Special:ProtectedPages|Liiska bogagga dhowrsoon]] liiska bogagga howlaha d
 'unblocklink' => 'ka qaad mamnuucida',
 'change-blocklink' => 'wax ka bedel mamnuucida',
 'contribslink' => 'ku darsasho',
-'autoblocker' => 'Waxaa automaatik u xirista keenay in mudo dhow uu cinwaanka IP:ga isticmaalay "[[User:$1|$1]]". Sababta keentay in loo xiro $1 waa: "\'\'\'$2\'\'\'"',
+'autoblocker' => 'Waxaa automaatik u xirista keenay in mudo dhow uu cinwaanka IP:ga isticmaalay "[[wiki_User:$1|$1]]". Sababta keentay in loo xiro $1 waa: "\'\'\'$2\'\'\'"',
 'blocklogpage' => 'Mamnuucida guda galaheeda',
 'blocklogentry' => 'la mamnuucay  [[$1]] Waqtiga uu dhacaayo neh waa $2 $3',
 'blocklogtext' => 'Halkaan waa  liiska lagu muujiyo manuuca iyo mamnuuc ka qaadista.

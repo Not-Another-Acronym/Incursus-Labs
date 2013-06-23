@@ -1,7 +1,7 @@
 <?php
 
 /* Wraps the user object, so we can also retain full access to properties like password if we log in via the API */
-class TestUser {
+class Testwiki_User {
 	public $username;
 	public $password;
 	public $email;
@@ -17,9 +17,9 @@ class TestUser {
 		// don't allow user to hardcode or select passwords -- people sometimes run tests
 		// on live wikis. Sometimes we create sysop users in these tests. A sysop user with
 		// a known password would be a Bad Thing.
-		$this->password = User::randomPassword();
+		$this->password = wiki_User::randomPassword();
 
-		$this->user = User::newFromName( $this->username );
+		$this->user = wiki_User::newFromName( $this->username );
 		$this->user->load();
 
 		// In an ideal world we'd have a new wiki (or mock data store) for every single test.
@@ -28,7 +28,7 @@ class TestUser {
 		// In core MediaWiki, there is no functionality to delete users, so this is the best we can do.
 		if ( !$this->user->getID() ) {
 			// create the user
-			$this->user = User::createNew(
+			$this->user = wiki_User::createNew(
 				$this->username, array(
 					"email" => $this->email,
 					"real_name" => $this->realname

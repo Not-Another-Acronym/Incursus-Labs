@@ -48,7 +48,7 @@ span.mw-blocklist-actions{
 	font-weight: bold;
 }
 
-/**** Special:EmailUser ****/
+/**** Special:Emailwiki_User ****/
 table.mw-emailuser-table {
 	width: 98%;
 }
@@ -264,7 +264,7 @@ td.mw-statistics-numbers {
 	text-align: right;
 }
 
-/**** Special:UserRights ****/
+/**** Special:wiki_UserRights ****/
 .mw-userrights-disabled {
 	color: #888;
 }

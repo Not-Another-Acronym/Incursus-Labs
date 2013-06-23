@@ -42,7 +42,7 @@ $magicWords = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Suttastritgar colliaziuns:',
 'tog-justify' => "Text en furma da 'bloc'",
 'tog-hideminor' => 'Zuppentar pitschnas midadas en las ultimas midadas',
@@ -384,7 +384,7 @@ L'adminstratur che ha bloccà la banca da datas ha inditgà suandant motiv: $1",
 Quai capita sch\'ins suonda in link che n\'è betg pli actuals u in link sin ina pagina ch\'è vegnida stizzada.
 
 Sche quai na duess betg esser il cas, lura è quai in sbagl da la software.
-Annunzia per plaschair la URL ad in [[Special:ListUsers/sysop|administratur]].',
+Annunzia per plaschair la URL ad in [[Special:Listwiki_Users/sysop|administratur]].',
 'missingarticle-rev' => '(number da la versiun: $1)',
 'missingarticle-diff' => '(Differenza tranter versiuns: $1, $2)',
 'readonly_lag' => "La banca da datas èn vegnidas bloccadas automaticamain per ch'ils servers da bancas da datas derasads (slaves) pon vegnir sincronisads cun il server da bancas da datas principal (master).",
@@ -435,7 +435,7 @@ $2",
 'customcssprotected' => "Ti n'has betg la permissiun da modifitgar questa pagina da CSS, perquai ch'ella cuntegna configuraziuns persunalas d'in auter utilisader.",
 'customjsprotected' => "Ti n'has betg la permissiun da modifitgar questa pagina da JavaScript, perquai ch'ella cuntegna configuraziuns persunalas d'in auter utilisader.",
 'ns-specialprotected' => 'Paginas spezialas no pon betg vegnir modifitgadas.',
-'titleprotected' => 'Quest titel è vegnì protegì da la creaziun da [[User:$1|$1]].
+'titleprotected' => 'Quest titel è vegnì protegì da la creaziun da [[wiki_User:$1|$1]].
 Il motiv inditgà è "\'\'$2\'\'".',
 'filereadonlyerror' => 'Impussibel da modifitgar la datoteca "$1" perquai ch\'il repository da datotecas "$2" è en il modus \'be leger\'.
 
@@ -453,7 +453,7 @@ L\'administratur che ha bloccà l\'access da scriva ha dà suandanta explicaziun
 # Login and logout pages
 'logouttext' => "'''Sortì cun success.'''
 
-Ti pos cuntinuar cun utilisar {{SITENAME}} anonimamain, u che ti pos [[Special:UserLogin|t'annunziar]] sco medem u in'auter utilisader. Resguarda che entginas paginas pon anc vesair or tuttina sco sche ti eras annunzià enfin che ti has stizzà il cache da tes navigatur.",
+Ti pos cuntinuar cun utilisar {{SITENAME}} anonimamain, u che ti pos [[Special:wiki_UserLogin|t'annunziar]] sco medem u in'auter utilisader. Resguarda che entginas paginas pon anc vesair or tuttina sco sche ti eras annunzià enfin che ti has stizzà il cache da tes navigatur.",
 'welcomecreation' => '==Bainvegni, $1! ==
 Tes conto è vegni creà.
 Betg emblida da midar tias [[Special:Preferences|preferenzas da {{SITENAME}}]].',
@@ -500,7 +500,7 @@ Controllescha che ti has activà ils cookies, rechargia la pagina ed emprova dan
 'loginsuccess' => "'''Ti es t'annunzia tar {{SITENAME}} sco \"\$1\".'''",
 'nosuchuser' => 'I exista nagin utilisader cun il num "$1".
 Fa stim dad utilisar correctamain maiusclas e minusclas.
-Curregia il num u [[Special:UserLogin/signup|creescha in nov conto]].',
+Curregia il num u [[Special:wiki_UserLogin/signup|creescha in nov conto]].',
 'nosuchusershort' => 'I dat nagin utilisader cun il num "$1".
 Curregia ti\'endataziun.',
 'nouserspecified' => "Inditgescha per plaschair in num d'utilisader.",
@@ -692,7 +692,7 @@ Ella è eventualmain vegnida spustada u stizzada durant che ti has contemplà la
 'loginreqlink' => "t'annunziar",
 'loginreqpagetext' => 'Ti stos $1 per vesair autras paginas.',
 'accmailtitle' => 'Il pled-clav è vegnì tramess.',
-'accmailtext' => "In pled-clav casual per l'utilisader [[User talk:$1|$1]] è vegnì tramess a $2.
+'accmailtext' => "In pled-clav casual per l'utilisader [[wiki_User talk:$1|$1]] è vegnì tramess a $2.
 
 Il pled-clav per quest nov conto po vegnir midà sin la pagina ''[[Special:ChangePassword|midar pled-clav]]'' suenter che ti t'es annunzià.",
 'newarticle' => '(Nov)',
@@ -700,7 +700,7 @@ Il pled-clav per quest nov conto po vegnir midà sin la pagina ''[[Special:Chang
 'anontalkpagetext' => "----''Quai è la pagina da discussiun per in utilisader anomim che n'ha anc betg creà in conto d'utilisader u che n'al utilisescha betg.
 Perquai avain nus d'utilisar l'adressa dad IP per l'identifitgar.
 Ina tala adressa dad IP po vegnir utilisada da differents utilisaders.
-Sche ti es in utilisaders anonim e pensas che commentaris che na pertutgan betg tai vegnan adressads a tai, lura [[Special:UserLogin/signup|creescha in conto]] u [[Special:UserLogin|t'annunzia]] per evitar en futur che ti vegns sbaglià cun auters utilisaders.''",
+Sche ti es in utilisaders anonim e pensas che commentaris che na pertutgan betg tai vegnan adressads a tai, lura [[Special:wiki_UserLogin/signup|creescha in conto]] u [[Special:wiki_UserLogin|t'annunzia]] per evitar en futur che ti vegns sbaglià cun auters utilisaders.''",
 'noarticletext' => 'Quest artitgel cuntegna actualmain nagin text.
 Ti pos [[Special:Search/{{PAGENAME}}|tschertgar il term]] sin in\'autra pagina,
 <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} tschertgar en ils logs],
@@ -741,13 +741,13 @@ Tias midadas n'èn anc betg vegnidas memorisadas!",
 'previewconflict' => "Questa prevista visualisescha il text en il champ d'endataziun sura. Uschia vegn la pagina vesair ora, sche ti la memoriseschas ussa.",
 'session_fail_preview' => "'''Stgisa! Tia modificaziun na pudeva betg vegnir memorisada perquei che las datas da la sesida èn idas a perder.'''
 Emprova per plaschair danovamain.
-Sche quai na funcziuna anc adina betg, emprova da [[Special:UserLogout|partir]] ed anc ina giada t'annunziar.",
+Sche quai na funcziuna anc adina betg, emprova da [[Special:wiki_UserLogout|partir]] ed anc ina giada t'annunziar.",
 'session_fail_preview_html' => "''Stgisa! Tia modificaziun na pudeva betg vegnir memorisada perquei che las datas da la sesida èn idas a perder.'''
 
 ''Perquai che {{SITENAME}} ha activà la pussaivlada d'utilisar HTML è la prevista betg visibla per impedir attaccas cun JavaScript.''
 
 '''Emprova per plaschair danovamain.'''
-Sche quai na funcziuna anc adina betg, emprova da [[Special:UserLogout|partir]] ed anc ina giada t'annunziar.",
+Sche quai na funcziuna anc adina betg, emprova da [[Special:wiki_UserLogout|partir]] ed anc ina giada t'annunziar.",
 'token_suffix_mismatch' => "'''Tia modificaziun è vegnida refusada perquai che tes navigatur ha manizzà ils segns en il token da modifitgar.'''
 La modificaziun è vegnida refusada per evitar ch'il cuntegn da la pagina vegnia destruì. 
 Quai po capitar sche ti utiliseschas in survetsch da proxy anonim che na funcziuna betg correctamain.",
@@ -798,7 +798,7 @@ L'ultima endataziun dal log vegn mussada sco referenza:",
 'hiddencategories' => 'Quest artitgel è commember da {{PLURAL:$1|1 categoria zuppentada|$1 categorias zuppentadas}}:',
 'nocreatetitle' => 'La creaziun da novas paginas è limitada',
 'nocreatetext' => "{{SITENAME}} ha restrinschì las pussaivladas da crear novas paginas.
-Ti pos ir anavos e modifitgar ina pagina existenta, u [[Special:UserLogin|t'annunziar u registrar]].",
+Ti pos ir anavos e modifitgar ina pagina existenta, u [[Special:wiki_UserLogin|t'annunziar u registrar]].",
 'nocreate-loggedin' => "Ti n'has betg la lubientscha da crear novas paginas.",
 'sectioneditnotsupported-title' => 'La modificaziun da secziuns na vegn betg sustegnida',
 'sectioneditnotsupported-text' => 'La modificaziun da secziuns na vegn betg sustegnì da questa pagina.',
@@ -848,11 +848,11 @@ Quests arguments vegnan ignorads.",
 Controlleschan en la vista per cumparegliar sutvart sche quei è quai che ti vuls far e lura memorisescha las midadas sutvart per terminar la modificaziun.',
 'undo-failure' => 'La modificaziun na pudeva betg vegnir revocada causa modificaziuns pli novas che stattan en conflict cun questa acziun.',
 'undo-norev' => "La modificaziun na pudeva betg vegnir revocada perquai ch'ella n'exista betg u è vegnida stizzada.",
-'undo-summary' => 'Revocar la versiun $1 da [[Special:Contributions/$2|$2]] ([[User talk:$2|discussiun]])',
+'undo-summary' => 'Revocar la versiun $1 da [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|discussiun]])',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'Betg pussaivel da crear il conto',
-'cantcreateaccount-text' => "La creaziun da contos du'utilisader è vegnida bloccada da l'utilisader [[User:$3|$3]] per questa adressa IP ('''$1''').
+'cantcreateaccount-text' => "La creaziun da contos du'utilisader è vegnida bloccada da l'utilisader [[wiki_User:$3|$3]] per questa adressa IP ('''$1''').
 
 Il motiv inditgà da $3 è ''$2''",
 
@@ -1118,7 +1118,7 @@ Considerescha che lur index da {{SITENAME}} po cuntegnair datas ch'èn betg pli 
 'mypreferences' => 'Preferenzas',
 'prefs-edits' => 'Dumber da las modificaziuns:',
 'prefsnologin' => "Betg t'annunzià",
-'prefsnologintext' => 'Ti stos esser <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} t\'annunzià]</span> per midar tias preferenzas.',
+'prefsnologintext' => 'Ti stos esser <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} t\'annunzià]</span> per midar tias preferenzas.',
 'changepassword' => 'Midar pled-clav',
 'prefs-skin' => 'Skin',
 'skin-preview' => 'Prevista',
@@ -1232,16 +1232,16 @@ Tia adressa dad e-mail na vegn betg mussada sche auters utilisaders ta contactes
 'prefs-displaywatchlist' => 'Opziuns da visualisar',
 'prefs-diffs' => 'Cumparegliaziun da versiuns',
 
-# User preference: e-mail validation using jQuery
+# wiki_User preference: e-mail validation using jQuery
 'email-address-validity-valid' => "L'adressa da e-mail para dad esser valida",
 'email-address-validity-invalid' => 'Endatescha ina adressa dad e-mail valida',
 
-# User rights
+# wiki_User rights
 'userrights' => "Administraziun da dretgs d'utilisaders",
 'userrights-lookup-user' => "Administrar gruppas d'utilisaders",
 'userrights-user-editname' => "Inditgescha in num d'utilisader:",
 'editusergroup' => "Modifitgar las gruppas d'utilisaders",
-'editinguser' => "Midar ils dretgs da l'utilisader '''[[User:$1|$1]]''' $2",
+'editinguser' => "Midar ils dretgs da l'utilisader '''[[wiki_User:$1|$1]]''' $2",
 'userrights-editusergroup' => "Modifitgar las gruppas d'utilisaders",
 'saveusergroups' => "Memorisar questas gruppas d'utilisaders",
 'userrights-groupsmember' => 'Commember da:',
@@ -1253,7 +1253,7 @@ Tia adressa dad e-mail na vegn betg mussada sche auters utilisaders ta contactes
 'userrights-reason' => 'Motiv:',
 'userrights-no-interwiki' => "Ti n'has betg la permissiun da midar dretgs d'utilisaders sin autras wikis.",
 'userrights-nodatabase' => "La banca da datas $1 n'exista betg u n'è betg locala.",
-'userrights-nologin' => "Ti stos [[Special:UserLogin|t'annunziar]] cun in conto d'aministratur per modifitgar ils dretgs d'utilisader.",
+'userrights-nologin' => "Ti stos [[Special:wiki_UserLogin|t'annunziar]] cun in conto d'aministratur per modifitgar ils dretgs d'utilisader.",
 'userrights-notallowed' => "Tes conto d'utilisader n'ha betg la permissiun dad agiuntar u allontanar dretgs d'utilisaders.",
 'userrights-changeable-col' => 'Gruppas che ti pos modifitgar',
 'userrights-unchangeable-col' => 'Gruppas che ti nas pos betg modifitgar',
@@ -1344,7 +1344,7 @@ Tia adressa dad e-mail na vegn betg mussada sche auters utilisaders ta contactes
 'right-sendemail' => 'Trametter e-mails ad auters utilisaders',
 'right-passwordreset' => "Vesair l'e-mail per redefinir pleds-clav",
 
-# User rights log
+# wiki_User rights log
 'rightslog' => "Log dals dretgs d'utilisader",
 'rightslogtext' => "Quai è il log da las midadas en ils dretgs d'utilisaders.",
 'rightslogentry' => 'midar la commembranza da $1 davent da $2 a $3',
@@ -1441,7 +1441,7 @@ Paginas sin [[Special:Watchlist|tia glista d'observaziun]] èn '''grassas'''.",
 'reuploaddesc' => 'Enavos tar la pagina da chargiar si.',
 'upload-tryagain' => 'Trametter la descripziun da la datoteca midada',
 'uploadnologin' => "Betg t'annunzià",
-'uploadnologintext' => "Ti stos [[Special:UserLogin|t'annunziar]] per chargiar si datotecas.",
+'uploadnologintext' => "Ti stos [[Special:wiki_UserLogin|t'annunziar]] per chargiar si datotecas.",
 'upload_directory_missing' => "L'ordinatur per chargiar viaden ($1) n'exista betg e na pudeva betg vegnir creà dal server.",
 'upload_directory_read_only' => "L'ordinatur per chargiar viaden ($1) na po betg vegnir modifitgà dal server.",
 'uploaderror' => 'Errur cun chargiar si',
@@ -1565,11 +1565,11 @@ $1',
 'upload-proto-error-text' => 'Il transfer da servers externs basegna URLs che cumenzan cun <code>http://</code> u <code>ftp://</code>.',
 'upload-file-error' => 'Errur interna',
 'upload-file-error-text' => 'Ina errur interna è capitada durant empruvar da crear ina datoteca temporara sin il server. 
-Contactescha per plaschair in [[Special:ListUsers/sysop|administratur]].',
+Contactescha per plaschair in [[Special:Listwiki_Users/sysop|administratur]].',
 'upload-misc-error' => 'Errur da transferir nunenconuschenta',
 'upload-misc-error-text' => "Ina errur nunenconuschenta è capitada durant transferir. 
 Controllescha per plaschair che l'URL è valida ed accessibla ed emprova anc ina giada.
-Sch'il problem exista anc adina, contactescha in [[Special:ListUsers/sysop|administratur]].",
+Sch'il problem exista anc adina, contactescha in [[Special:Listwiki_Users/sysop|administratur]].",
 'upload-too-many-redirects' => 'La URL ha cuntegnì memia blers renviaments',
 'upload-unknown-size' => 'Grondezza nunenconuschenta',
 'upload-http-error' => 'In sbagl da HTTP è capità: $1',
@@ -1809,7 +1809,7 @@ Betg emblida da controllar sche autras colliaziuns mainan als models avant ch'al
 'statistics-views-total' => 'Visitas totalmain',
 'statistics-views-total-desc' => "Visitas da paginas ch'existan betg u da paginas spezialas n'èn betg inclusas",
 'statistics-views-peredit' => 'Visitas per modificaziun',
-'statistics-users' => '[[Special:ListUsers|Utilisaders]] registrads',
+'statistics-users' => '[[Special:Listwiki_Users|Utilisaders]] registrads',
 'statistics-users-active' => 'Utilisaders activs',
 'statistics-users-active-desc' => "Utilisaders che han fatg almain ina acziun {{PLURAL:$1|l'ultim di|ils ultims $1 dis}}",
 'statistics-mostpopular' => 'Paginas visitadas il pli savens',
@@ -1978,13 +1978,13 @@ Protocols sustegnids: <code>$1</code> (n\'agiunta betg quels a tia tschertga).',
 'linksearch-line' => '$1 è collià davent da la pagina $2',
 'linksearch-error' => "Wildcards pon esser be a l'entschatta dal num da host.",
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => 'Mussar utilisaders davent da:',
 'listusers-submit' => 'Mussar',
 'listusers-noresult' => 'Betg chattà in utilisader.',
 'listusers-blocked' => '(bloccà)',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'Glista dals utilisaders activs',
 'activeusers-intro' => "Quai è ina glista dals utilisaders che han gì activitads {{PLURAL:$1|l'ultim di|en ils ultims $1 dis}}.",
 'activeusers-count' => "$1 {{PLURAL:$1|modificaziun|modificaziuns}} {{PLURAL:$3|l'ultim di|ils ultims $3 dis}}",
@@ -2018,7 +2018,7 @@ Infurmaziuns supplementaras davart ils singuls dretgs chattas [[{{MediaWiki:List
 
 # E-mail user
 'mailnologin' => 'Nagina adressa per trametter',
-'mailnologintext' => "Ti stos [[Special:UserLogin|t'annunziar]] ed avair ina adressa dad e-mail valida en tias [[Special:Preferences|preferenzas]] per trametter e-mails ad auters utilisaders.",
+'mailnologintext' => "Ti stos [[Special:wiki_UserLogin|t'annunziar]] ed avair ina adressa dad e-mail valida en tias [[Special:Preferences|preferenzas]] per trametter e-mails ad auters utilisaders.",
 'emailuser' => 'Trametter in e-mail a quest utilisader',
 'emailuser-title-target' => 'Trametta in e-mail a {{GENDER:$1|quest utilisader|questa utilisadra}}',
 'emailuser-title-notarget' => "Trametter in e-mail a l'utilisader",
@@ -2049,7 +2049,7 @@ L'adressa dad e-mail che ti has endatà en [[Special:Preferences|tias preferenza
 'emailsenttext' => 'Tes e-mail è vegnì tramess.',
 'emailuserfooter' => 'Quest e-mail è vegnì tramess da $1 a $2 cun agid da la funcziun da trametter e-mails ad utilisaders sin {{SITENAME}}.',
 
-# User Messenger
+# wiki_User Messenger
 'usermessage-summary' => 'Scrit in messadi da sistem.',
 'usermessage-editor' => 'Messenger dal sistem',
 
@@ -2060,7 +2060,7 @@ L'adressa dad e-mail che ti has endatà en [[Special:Preferences|tias preferenza
 'nowatchlist' => "Ti n'has nagins elements sin tia glista d'observaziun.",
 'watchlistanontext' => "Ti stos $1 per vesair u modifitgar elements sin tia glista d'observaziun",
 'watchnologin' => "Ti n'es betg t'annunzià!",
-'watchnologintext' => "Ti stos [[Special:UserLogin|t'annunziar]] per midar tia glista d'observaziun.",
+'watchnologintext' => "Ti stos [[Special:wiki_UserLogin|t'annunziar]] per midar tia glista d'observaziun.",
 'addwatch' => "Agiuntar a la glista d'observaziun",
 'addedwatchtext' => 'La pagina "[[:$1]]" è vegnida agiuntada a tia [[Special:Watchlist|glista dad observaziun]].
 Midadas futuras vid questa pagina e la pagina da discussiun appertegnenta vegnan mussadas là.',
@@ -2173,13 +2173,13 @@ Cuntinuescha cun precauziun.',
 'rollbackfailed' => 'Betg reussì da revocar',
 'cantrollback' => "Betg pussaivel da reinizialisar questa modificaziun; 
 l'ulitima contribuziun è dal sulet autur da questa pagina.",
-'alreadyrolled' => "Impussibel da reinizialisar la midada da l'artitgel [[:$1]] da l'utilisader [[User:$2|$2]] ([[User talk:$2|talk]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]);
+'alreadyrolled' => "Impussibel da reinizialisar la midada da l'artitgel [[:$1]] da l'utilisader [[wiki_User:$2|$2]] ([[wiki_User talk:$2|talk]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]);
 Enzatgi auter ha gia modifitga u reinizialisà qeusta pagina.
 
-L'ultima modificaziun vid questa pagina è da [[User:$3|$3]] ([[User talk:$3|talk]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).",
+L'ultima modificaziun vid questa pagina è da [[wiki_User:$3|$3]] ([[wiki_User talk:$3|talk]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).",
 'editcomment' => "La resumaziun da la midada era: \"''\$1''\"",
-'revertpage' => "Annullà las modificaziun da [[Special:Contributions/$2|$2]] ([[User talk:$2|discussiun]]), l'ultima versiun da [[User:$1|$1]] è vegnida restaurada",
-'revertpage-nouser' => "Annullà las modificaziuns da (allontanà il num d'utilisader), l'ultima versiun da [[User:$1|$1]] è vegnida restaurada",
+'revertpage' => "Annullà las modificaziun da [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|discussiun]]), l'ultima versiun da [[wiki_User:$1|$1]] è vegnida restaurada",
+'revertpage-nouser' => "Annullà las modificaziuns da (allontanà il num d'utilisader), l'ultima versiun da [[wiki_User:$1|$1]] è vegnida restaurada",
 'rollback-success' => "Annullà las modificaziuns da $1;
 restaurà l'ultima versiun da $2.",
 
@@ -2416,7 +2416,7 @@ La [[Special:BlockList|glista da bloccadas]] mussa tut las bloccadas.',
 'unblockip' => 'Debloccar in utilisader',
 'unblockiptext' => "Utilisescha il formular sutvart per restituir l'access da scriver per ina adressa IP u in utilisader ch'è vegnì bloccà pli baud.",
 'ipusubmit' => 'Allontanar questa bloccada',
-'unblocked' => '[[User:$1|$1]] è vegnì debloccà',
+'unblocked' => '[[wiki_User:$1|$1]] è vegnì debloccà',
 'unblocked-range' => '$1 è vegnì debloccà',
 'unblocked-id' => 'La bloccada $1 è vegnida allontanada',
 'blocklist' => 'Utilisaders bloccads',
@@ -2449,7 +2449,7 @@ La [[Special:BlockList|glista da bloccadas]] mussa tut las bloccadas.',
 'change-blocklink' => 'Midar opziuns da bloccar',
 'contribslink' => 'contribuziuns',
 'emaillink' => 'Trametter in e-mail',
-'autoblocker' => "Vossa adressa dad IP è vegnida bloccada perquai che vus utilisais ina adressa dad IP cun [[User:$1|$1]]. Motiv per bolccar $1: '''$2'''.",
+'autoblocker' => "Vossa adressa dad IP è vegnida bloccada perquai che vus utilisais ina adressa dad IP cun [[wiki_User:$1|$1]]. Motiv per bolccar $1: '''$2'''.",
 'blocklogpage' => 'Log dal bloccar',
 'blocklog-showlog' => 'Quest utilisader è gia vegnì bloccà pli baud.
 Qua il log da bloccaziun sco infurmaziun:',
@@ -2554,7 +2554,7 @@ En quests cas as ti da spustar u colliar manualmain las paginas, sche giavischà
 'movearticle' => 'Spustar artitgel:',
 'moveuserpage-warning' => "'''Attenziun:''' Ti es londervi da spustar ina pagina d'utilisader. Considerescha che be la pagina vegn spustada ed il num da l'utilisader na vegn ''betg'' midà.",
 'movenologin' => "Ti n'ès betg t'annunzià",
-'movenologintext' => "Ti stos [[Special:UserLogin|t'annunziar]] per spustar in artitgel.",
+'movenologintext' => "Ti stos [[Special:wiki_UserLogin|t'annunziar]] per spustar in artitgel.",
 'movenotallowed' => "Ti n'has betg il dretg da spustar paginas.",
 'movenotallowedfile' => "Ti n'has betg il dretg da spustar datotecas.",
 'cant-move-user-page' => "Ti n'has betg il dretg da spustar paginas d'utilisader (auter che sutpaginas).",
@@ -3391,7 +3391,7 @@ Il server dad e-mail ha returnà: $1",
 'confirmemail_invalid' => 'Il code da confermaziun è nunvalid. Il code è probablamain scrudà.',
 'confirmemail_needlogin' => 'Ti stos $1 per confermar tia adressa dad e-mail.',
 'confirmemail_success' => "Tia adressa dad e-mail è vegnida confermada. 
-Ussa pos ti [[Special:UserLogin|t'annunziar]] ed utilisar la wiki.",
+Ussa pos ti [[Special:wiki_UserLogin|t'annunziar]] ed utilisar la wiki.",
 'confirmemail_loggedin' => 'Tia adressa dad e-mail è ussa vegnida confermada.',
 'confirmemail_error' => 'Insatge è crappà cun tes mail da confermaziun. Stgisa foll!',
 'confirmemail_subject' => "{{SITENAME}} - Confermaziun da l'adressa dad e-mail",
@@ -3447,9 +3447,9 @@ Quai code da confermaziun vegn a scrudar ils $4.',
 
 # Delete conflict
 'deletedwhileediting' => "'''Attenziun:''' Questa pagina è vegnida stizzada suenter che ti has cumanzà a la modifitgar.",
-'confirmrecreate' => "L'utilisader [[User:$1|$1]] ([[User talk:$1|talk]]) ha stizzà quest artitgel (motiv: ''$2'') suenter che ti as cumenzà a modifitgar l'artitgel.
+'confirmrecreate' => "L'utilisader [[wiki_User:$1|$1]] ([[wiki_User talk:$1|talk]]) ha stizzà quest artitgel (motiv: ''$2'') suenter che ti as cumenzà a modifitgar l'artitgel.
 Conferma per plaschair che ti vuls propi crear danovamain quest artitgel.",
-'confirmrecreate-noreason' => "L'utilisader [[User:$1|$1]] ([[User talk:$1|discussiun]]) ha stizzà questa pagina suenter che ti has cumenzà da la modifitgar. Conferma per plaschair che ti vuls recrear questa pagina.",
+'confirmrecreate-noreason' => "L'utilisader [[wiki_User:$1|$1]] ([[wiki_User talk:$1|discussiun]]) ha stizzà questa pagina suenter che ti has cumenzà da la modifitgar. Conferma per plaschair che ti vuls recrear questa pagina.",
 'recreate' => 'Crear danovamain',
 
 # action=purge

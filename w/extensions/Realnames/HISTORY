@@ -17,7 +17,7 @@ features:
 * adds support for Extension:Configure (undoc at release)
 
 bugfix:
-* i18n links User: namespaces (thanks Nilsy)
+* i18n links wiki_User: namespaces (thanks Nilsy)
 * support for upcoming 1.18 gendered namespaces
 * title handling for pre 1.16 wiki's
 * custom namespace names
@@ -43,9 +43,9 @@ issues:
 == 0.1 (2011-09-17) ==
 
 initial tested pages:
-* Special:ListUsers
+* Special:Listwiki_Users
 * old and new Special:RecentChanges
-* Special:Search of the User: space
+* Special:Search of the wiki_User: space
 * History of page
 * Revisions list of page
 * Revision view of page
@@ -54,5 +54,5 @@ initial tested pages:
 * Should integrate into any page where user links are found
 
 issues:
-*Always destructive of User: text, new config in future release?
+*Always destructive of wiki_User: text, new config in future release?
 *improve bare detection on users with spaces or underscores in names (article titles and html title)

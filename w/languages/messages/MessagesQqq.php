@@ -143,7 +143,7 @@
  */
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => "[[Special:Preferences]], tab 'Misc'. Offers user a choice how to underline links. {{Gender}}",
 'tog-justify' => "[[Special:Preferences]], tab 'Appearance'. Offers user a choice to justify paragraphs or not. {{Gender}}",
 'tog-hideminor' => "[[Special:Preferences]], tab 'Recent changes'. Offers user to hide minor edits in recent changes or not. {{Gender}}",
@@ -160,7 +160,7 @@ This is the toolbar: [[Image:Toolbar.png]]",
 'tog-editsectiononrightclick' => "[[Special:Preferences]], tab 'Edit'. Offers user to edit a section by clicking on a section title. {{Gender}}",
 'tog-showtoc' => "[[Special:Preferences]], tab 'Misc'.
 Offers user to show a table of contents automatically if a page has more than 3 headings (= 4 or more headings).",
-'tog-rememberpassword' => "{{Identical|Remember my login on this computer}}[[Special:Preferences]], tab 'User profile', section 'Change password'. Offers user remember login details.  {{Gender}} Parameters:
+'tog-rememberpassword' => "{{Identical|Remember my login on this computer}}[[Special:Preferences]], tab 'wiki_User profile', section 'Change password'. Offers user remember login details.  {{Gender}} Parameters:
 * $1 is the number of days the login details are remembered.",
 'tog-watchcreations' => "[[Special:Preferences]], tab 'Watchlist'. Offers user to add created pages to watchlist. {{Gender}}",
 'tog-watchdefault' => "[[Special:Preferences]], tab 'Watchlist'. Offers user to add edited pages to watchlist. {{Gender}}",
@@ -177,7 +177,7 @@ Offers user to show a table of contents automatically if a page has more than 3 
 Is only shown if {{msg-mw|tog-enotifusertalkpages}} or/and {{msg-mw|tog-enotifwatchlistpages}} are shown.',
 'tog-enotifrevealaddr' => 'Toggle option used in [[Special:Preferences]] > {{int:prefs-personal}} > {{int:email}}. {{Gender}}',
 'tog-shownumberswatching' => 'Toggle option used in [[Special:Preferences]], in the section for recent changes. When this option is activated, the entries in recent changes includes the number of users who watch pages. {{Gender}}',
-'tog-oldsig' => 'Used in [[Special:Preferences]], tab User profile. {{Gender}}',
+'tog-oldsig' => 'Used in [[Special:Preferences]], tab wiki_User profile. {{Gender}}',
 'tog-fancysig' => 'In user preferences under the signature box.  {{Gender}}',
 'tog-externaleditor' => "[[Special:Preferences]], tab 'Edit'. Offers user to use an external editor by default. {{Gender}}",
 'tog-externaldiff' => "[[Special:Preferences]], tab 'Edit'. Offers user to use an external diff program by default. {{Gender}}",
@@ -363,7 +363,7 @@ See also:
 * {{msg-mw|Mytalk}}
 * {{msg-mw|Accesskey-pt-mytalk}}
 * {{msg-mw|Tooltip-pt-mytalk}}',
-'anontalk' => 'Link to the talk page appearing in [[mw:Help:Navigation#User_Links|user links]] for each anonymous users when [[mw:Manual:$wgShowIPinHeader|$wgShowIPinHeader]] is true.
+'anontalk' => 'Link to the talk page appearing in [[mw:Help:Navigation#wiki_User_Links|user links]] for each anonymous users when [[mw:Manual:$wgShowIPinHeader|$wgShowIPinHeader]] is true.
 
 See also:
 * {{msg-mw|Anontalk}}
@@ -771,13 +771,13 @@ See also:
 * {{msg-mw|Accesskey-ca-nstab-main}}
 * {{msg-mw|Tooltip-ca-nstab-main}}
 {{Identical|Page}}',
-'nstab-user' => 'The name for the tab of the user namespace. Example: [[User:Example]]. It is possible to use <nowiki>{{GENDER:{{BASEPAGENAME}}|male form|female form}}</nowiki> if needed.
+'nstab-user' => 'The name for the tab of the user namespace. Example: [[wiki_User:Example]]. It is possible to use <nowiki>{{GENDER:{{BASEPAGENAME}}|male form|female form}}</nowiki> if needed.
 
 See also:
 * {{msg-mw|Nstab-user}}
 * {{msg-mw|Accesskey-ca-nstab-user}}
 * {{msg-mw|Tooltip-ca-nstab-user}}
-{{Identical|User page}}',
+{{Identical|wiki_User page}}',
 'nstab-media' => 'The name for the tab of the media namespace. Example: [[Media:Example]]
 
 See also:
@@ -969,13 +969,13 @@ See also {{msg-mw|protectedinterface}}.',
 'invalidtitle-knownnamespace' => 'Displayed when an invalid title was encountered (generally in a list), but the namespace number is known to exist.
 * $1 is the namespace number
 * $2 is the namespace name in content language or {{msg-mw|blanknamespace}} for the main namespace
-* $3 is the part of the title after the namespace (e.g. SomeName for the page User:SomeName)',
+* $3 is the part of the title after the namespace (e.g. SomeName for the page wiki_User:SomeName)',
 'invalidtitle-unknownnamespace' => 'Displayed when an invalid title was encountered (generally in a list) and the namespace number is unknown.
 * $1 is the namespace number
-* $2 is the part of the title after the namespace (e.g. SomeName for the page User:SomeName)',
-'exception-nologin' => 'Generic page title used on error page when a user is not logged in. Message used by the UserNotLoggedIn exception.
+* $2 is the part of the title after the namespace (e.g. SomeName for the page wiki_User:SomeName)',
+'exception-nologin' => 'Generic page title used on error page when a user is not logged in. Message used by the wiki_UserNotLoggedIn exception.
 {{Identical|Not logged in}}',
-'exception-nologin-text' => 'Generic reason displayed on error page when a user is not logged in. Message used by the UserNotLoggedIn exception.',
+'exception-nologin-text' => 'Generic reason displayed on error page when a user is not logged in. Message used by the wiki_UserNotLoggedIn exception.',
 
 # Virus scanner
 'virus-badscanner' => 'Used as error message.',
@@ -990,19 +990,19 @@ See also {{msg-mw|protectedinterface}}.',
 
 <nowiki>{{</nowiki>[[Gender|GENDER]]<nowiki>}}</nowiki> is '''NOT''' supported.
 
-{{Identical|Username}}",
+{{Identical|wiki_Username}}",
 'yourpassword' => 'In user preferences
 
 {{Identical|Password}}',
 'yourpasswordagain' => 'In user preferences',
-'remembermypassword' => 'A check box in [[Special:UserLogin]]
+'remembermypassword' => 'A check box in [[Special:wiki_UserLogin]]
 
 {{Identical|Remember my login on this computer}}',
 'securelogin-stick-https' => 'Used as label for checkbox.',
 'yourdomainname' => 'Used as label for listbox.',
 'password-change-forbidden' => 'Error message shown when an external authentication source does not allow the password to be changed.',
 'externaldberror' => 'This message is thrown when a valid attempt to change the wiki password for a user fails because of a database error or an error from an external system.',
-'login' => "Shown as the caption of the button at [[Special:UserLogin]], and also to anonymous users in the upper right corner of the page when they can't create an account (otherwise the message {{msg-mw|nav-login-createaccount}} is shown there).
+'login' => "Shown as the caption of the button at [[Special:wiki_UserLogin]], and also to anonymous users in the upper right corner of the page when they can't create an account (otherwise the message {{msg-mw|nav-login-createaccount}} is shown there).
 
 See also:
 * {{msg-mw|Login}}
@@ -1012,9 +1012,9 @@ See also:
 'nav-login-createaccount' => "Shown to anonymous users in the upper right corner of the page. When you can't create an account, the message {{msg-mw|login}} is shown.
 {{identical|Log in / create account}}",
 'loginprompt' => 'A small notice in the log in form.',
-'userlogin' => 'Name of special page [[Special:UserLogin]] where a user can log in or click to create a user account.
+'userlogin' => 'Name of special page [[Special:wiki_UserLogin]] where a user can log in or click to create a user account.
 {{Identical|Log in / create account}}',
-'userloginnocreate' => 'A variant of {{msg-mw|Userlogin}} when the user is not allowed to create a new account.
+'userloginnocreate' => 'A variant of {{msg-mw|wiki_Userlogin}} when the user is not allowed to create a new account.
 
 {{Identical|Log in}}',
 'logout' => 'Used as link text in your personal toolbox (upper right side).
@@ -1042,7 +1042,7 @@ It is also used on the top of the page for logged out users, where it appears ne
 
 {{Identical|Log in}}',
 'userlogin-resetlink' => 'Used on the login page.',
-'createaccountmail' => 'Button text for creating a new account and sending the new password to the specified e-mail address directly, as used on [[Special:UserLogin/signup]] if creating accounts by e-mail is allowed.',
+'createaccountmail' => 'Button text for creating a new account and sending the new password to the specified e-mail address directly, as used on [[Special:wiki_UserLogin/signup]] if creating accounts by e-mail is allowed.',
 'createaccountreason' => '{{Identical|Reason}}',
 'badretype' => 'Used as error message when the new password and its retype do not match.',
 'userexists' => 'Used as error message in creating a user account.',
@@ -1075,7 +1075,7 @@ Defaults to '''nocookieslogin''' ({{int:nocookieslogin}})",
 $1 is the minimum number of characters in the password.',
 'password-name-match' => 'Used as error message when password validity check failed.',
 'password-login-forbidden' => 'Error message shown when the user has tried to log in using one of the special username/password combinations used for MediaWiki testing. (See [[mwr:75589]], [[mwr:75605]].)',
-'mailmypassword' => 'Shown at [[Special:UserLogin]]',
+'mailmypassword' => 'Shown at [[Special:wiki_UserLogin]]',
 'passwordremindertitle' => 'Title of e-mail which contains temporary password',
 'passwordremindertext' => 'This text is used in an e-mail sent when a user requests a new temporary password (he has forgotten his password) or when an sysop creates a new user account choosing to have password and username sent to the new user by e-mail.
 * $1 is an IP address. Example: 123.123.123.123
@@ -1083,7 +1083,7 @@ $1 is the minimum number of characters in the password.',
 * $3 is a password. Example: er##@fdas!
 * $4 is a URL. Example: http://wiki.example.com
 * $5 is a number of days in which the temporary password will expire',
-'noemail' => 'Shown as error message when trying to register a user sending password to e-mail adress and no e-mail address has been given. Registering users and sending a password to an e-mail address may require non-standard user rights ([http://translatewiki.net/w/i.php?title=Special:UserLogin&action=submitlogin&type=signup register user link]).
+'noemail' => 'Shown as error message when trying to register a user sending password to e-mail adress and no e-mail address has been given. Registering users and sending a password to an e-mail address may require non-standard user rights ([http://translatewiki.net/w/i.php?title=Special:wiki_UserLogin&action=submitlogin&type=signup register user link]).
 
 Parameters:
 * $1 is a user name. This parameter can be used with GENDER.',
@@ -1103,17 +1103,17 @@ Parameters:
 * $2: date
 * $3: time',
 'emailnotauthenticated' => 'Message in [[Special:Preferences]] > {{int:prefs-personal}} > {{int:email}}. It appears after saving your e-mail address but before it has been authenticated.',
-'noemailprefs' => "Message appearing in the 'E-mail options' section of the 'User profile' page in [[Special:Preferences|Preferences]], when no user e-mail address has been entered.",
+'noemailprefs' => "Message appearing in the 'E-mail options' section of the 'wiki_User profile' page in [[Special:Preferences|Preferences]], when no user e-mail address has been entered.",
 'emailconfirmlink' => 'Link to [[Special:ConfirmEmail]]. Appears in [[Special:Preferences]] > {{int:prefs-personal}} > {{int:email}} after saving your e-mail address but before it has been authenticated.',
-'invalidemailaddress' => 'Shown as a warning when written an invalid e-mail adress in [[Special:Preferences]] and {{fullurl:Special:UserLogin|type=signup}} page',
+'invalidemailaddress' => 'Shown as a warning when written an invalid e-mail adress in [[Special:Preferences]] and {{fullurl:Special:wiki_UserLogin|type=signup}} page',
 'cannotchangeemail' => 'Error message shown when user goes to [[Special:ChangeEmail]] but email addresses cannot be changed on the site.',
 'emaildisabled' => 'Error message shown when user tries to set an e-mail address but e-mail features are disabled.',
-'accountcreated' => 'Used as page title in [[Special:UserLogin]].
+'accountcreated' => 'Used as page title in [[Special:wiki_UserLogin]].
 
 See also:
 * {{msg-mw|Accountcreated|title}}
 * {{msg-mw|Accountcreatedtext|message}}',
-'accountcreatedtext' => 'Used in [[Special:UserLogin]]. Parameters:
+'accountcreatedtext' => 'Used in [[Special:wiki_UserLogin]]. Parameters:
 * $1 - username
 See also:
 * {{msg-mw|Accountcreated|title}}
@@ -1124,11 +1124,11 @@ See also:
 *Parameter $2 is the name entered as username.
 *Parameter $3 is a password (randomly generated).
 *Parameter $4 is a URL to the wiki',
-'login-throttled' => 'Error message shown at [[Special:UserLogin]] after 5 wrong passwords. The hardcoded waiting time is 300 seconds.',
+'login-throttled' => 'Error message shown at [[Special:wiki_UserLogin]] after 5 wrong passwords. The hardcoded waiting time is 300 seconds.',
 'login-abort-generic' => 'The generic unsuccessful login message is used unless otherwise specified by hook writers',
-'loginlanguagelabel' => 'Used on [[Special:UserLogin]] if $wgLoginLanguageSelector is true. $1 is a pipe-separated list built from the names that appear in the message {{msg-mw|Loginlanguagelinks}}.
+'loginlanguagelabel' => 'Used on [[Special:wiki_UserLogin]] if $wgLoginLanguageSelector is true. $1 is a pipe-separated list built from the names that appear in the message {{msg-mw|Loginlanguagelinks}}.
 {{Identical|Language}}',
-'suspicious-userlogout' => 'Used when the logout request looks suspicious, in Special:UserLogout.',
+'suspicious-userlogout' => 'Used when the logout request looks suspicious, in Special:wiki_UserLogout.',
 
 # E-mail sending
 'php-mail-error-unknown' => 'Used as error message when <code>mail()</code> returned empty error message.',
@@ -1138,14 +1138,14 @@ See also:
 'resetpass' => 'The caption of [[Special:ChangePassword]]
 
 {{Identical|Change password}}',
-'resetpass_announce' => 'Used in [[Special:UserLogin]].',
+'resetpass_announce' => 'Used in [[Special:wiki_UserLogin]].',
 'resetpass_text' => '{{optional}}',
 'resetpass_header' => 'Header on box on special page [[Special:ChangePassword]].
 
 {{Identical|Reset password}}',
-'oldpassword' => "Used on the 'User profile' tab of 'my preferences'. This is the text next to an entry box for the old password in the 'change password' section.",
+'oldpassword' => "Used on the 'wiki_User profile' tab of 'my preferences'. This is the text next to an entry box for the old password in the 'change password' section.",
 'newpassword' => '{{Identical|New password}}',
-'retypenew' => "Appears on the 'User profile' tab of the 'Preferences' special page in the 'Change password' section. It appears next to the text box for entering the new password a second time.",
+'retypenew' => "Appears on the 'wiki_User profile' tab of the 'Preferences' special page in the 'Change password' section. It appears next to the text box for entering the new password a second time.",
 'resetpass_submit' => 'Submit button on [[Special:ChangePassword]]',
 'resetpass_success' => 'Used in [[Special:ChangePassword]].',
 'resetpass_forbidden' => "Used as error message in changing password. Maybe the external auth plugin won't allow local password changes.",
@@ -1168,7 +1168,7 @@ Used on [[Special:ResetPass]]',
 'passwordreset-pretext' => 'These instructions are shown on the password reset dialogue, which can, in principle, take the user\'s email address as well as, or instead of, their username. This text displays above one or more fields, at least one of which needs to be completed, and the message does not know which routes are available, so it needs to refer to some vague noun rather than specifically "username".
 "One of the pieces of data" means "an info"/"a datum" (probably to be translatea with a singular noun in your language if available). Parameters:
 * $1 is the number of password reset routes. This is never 1, but always two or more. Thus, the first plural option is empty in English.',
-'passwordreset-username' => '{{Identical|Username}}',
+'passwordreset-username' => '{{Identical|wiki_Username}}',
 'passwordreset-domain' => 'A domain like used in Domain Name System (DNS) or more specifically like a domain component in the Lightweight Directory Access Protocol (LDAP)',
 'passwordreset-capture' => 'Label for checkbox asking the user whether they want to see the contents of the password reset email (only shown if they have the <tt>passwordreset</tt> permission',
 'passwordreset-capture-help' => 'Longer explanatory message for the capture checkbox label.',
@@ -1350,7 +1350,7 @@ Parameters:
 * {{msg-mw|cantcreateaccount-text}}.
 {{Identical|No reason given}}',
 'whitelistedittext' => 'Used as error message. Parameters:
-* $1 is a link to [[Special:UserLogin]] with {{msg-mw|loginreqlink}} as link description
+* $1 is a link to [[Special:wiki_UserLogin]] with {{msg-mw|loginreqlink}} as link description
 See also:
 * {{msg-mw|Nocreatetext}}
 * {{msg-mw|Uploadnologintext}}
@@ -1366,7 +1366,7 @@ See also:
 
 {{Identical|Log in}}',
 'loginreqpagetext' => 'This message is displayed if an anonymous reader attempts to access a page which is only available to logged-in users.
-* $1 is a link to [[Special:UserLogin]] with {{msg-mw|loginreqlink}} as link description
+* $1 is a link to [[Special:wiki_UserLogin]] with {{msg-mw|loginreqlink}} as link description
 See also:
 * {{msg-mw|Whitelistedittext}}
 * {{msg-mw|Nocreatetext}}
@@ -1374,7 +1374,7 @@ See also:
 'accmailtitle' => 'Page title when temporary password was sent to a user via email.',
 'accmailtext' => "The message shown when a temporary password has been sent to the user's email address.
 
-{{doc-important|Do not translate \"<nowiki>[[User talk:\$1|\$1]]</nowiki>\" and ''Special:ChangePassword''.}}",
+{{doc-important|Do not translate \"<nowiki>[[wiki_User talk:\$1|\$1]]</nowiki>\" and ''Special:ChangePassword''.}}",
 'newarticle' => '{{Identical|New}}',
 'newarticletext' => "Text displayed above the edit box in editor when trying to create a new page.<br />'''Very important:''' leave <tt><nowiki>{{MediaWiki:Helppage}}</nowiki></tt> exactly as it is!",
 'anontalkpagetext' => 'Displayed at the bottom of talk pages of anonymous users.',
@@ -1389,7 +1389,7 @@ Example: [http://translatewiki.net/w/i.php?title=Project:News&oldid=9999999 Perm
 * $1 is the ID of the missing revision',
 'userpage-userdoesnotexist' => 'Error message displayed when trying to edit or create a page or a subpage that belongs to a user who is not registered on the wiki. Parameters:
 * $1 is a possible username that has not been registered.',
-'userpage-userdoesnotexist-view' => 'Shown in user pages of non existing users. See for example [http://translatewiki.net/wiki/User:Foo User:Foo]. Parameters:
+'userpage-userdoesnotexist-view' => 'Shown in user pages of non existing users. See for example [http://translatewiki.net/wiki/wiki_User:Foo wiki_User:Foo]. Parameters:
 * $1 is a username.',
 'blocked-notice-logextract' => 'Parameters:
 * $1 is the name of the blocked user (optional). Can be used for GENDER.',
@@ -2095,7 +2095,7 @@ See also:
 See also:
 * {{msg-mw|Viewprevnext}}',
 'shown-title' => '* $1 - number of search results',
-'viewprevnext' => 'This is part of the navigation message on the top and bottom of Special pages which are lists of things, e.g. the User\'s contributions page (in date order) or the list of all categories (in alphabetical order). ($1) and ($2) are either {{msg-mw|Pager-older-n}} and {{msg-mw|Pager-newer-n}} (for date order) or {{msg-mw|Prevn}} and {{msg-mw|Nextn}} (for alphabetical order).
+'viewprevnext' => 'This is part of the navigation message on the top and bottom of Special pages which are lists of things, e.g. the wiki_User\'s contributions page (in date order) or the list of all categories (in alphabetical order). ($1) and ($2) are either {{msg-mw|Pager-older-n}} and {{msg-mw|Pager-newer-n}} (for date order) or {{msg-mw|Prevn}} and {{msg-mw|Nextn}} (for alphabetical order).
 
 It is also used by [[Special:WhatLinksHere|Whatlinkshere]] pages, where ($1) and ($2) are {{msg-mw|Whatlinkshere-prev}} and {{msg-mw|Whatlinkshere-next}}.
 ($3) is made up in all cases of the various proposed numbers of results per page, e.g. "(20 | 50 | 100 | 250 | 500)".
@@ -2237,7 +2237,7 @@ Shown on [[Special:Search]] when the internal search is disabled.',
 'preferences' => 'Title of the Special:Preferences page.
 
 {{Identical|Preferences}}',
-'mypreferences' => 'Action link label that leads to Special:Preferences; appears in the top menu (e.g. "Username Talk Preferences Watchlist Contributions Log out").
+'mypreferences' => 'Action link label that leads to Special:Preferences; appears in the top menu (e.g. "wiki_Username Talk Preferences Watchlist Contributions Log out").
 
 See also:
 * {{msg-mw|Mypreferences}}
@@ -2247,7 +2247,7 @@ See also:
 'prefs-edits' => 'In user preferences.',
 'prefsnologin' => '{{Identical|Not logged in}}',
 'prefsnologintext' => '* $1 - URI for "returnto" argument',
-'changepassword' => "Section heading on [[Special:Preferences]], tab 'User profile'.
+'changepassword' => "Section heading on [[Special:Preferences]], tab 'wiki_User profile'.
 {{Identical|Change password}}",
 'prefs-skin' => 'Used in user preferences.
 {{Identical|Skin}}',
@@ -2363,8 +2363,8 @@ Shown as legend of the second fieldset of the tab 'Search' in [[Special:Preferen
 'youremail' => 'Label of the e-mail text box of the "E-mail options" section of "Special:Preferences".
 
 {{Identical|E-mail}}',
-'username' => '{{Identical|Username}}',
-'uid' => '{{Identical|User ID}}',
+'username' => '{{Identical|wiki_Username}}',
+'uid' => '{{Identical|wiki_User ID}}',
 'prefs-memberingroups' => 'This message is shown on [[Special:Preferences]], first tab. See also {{msg-mw|prefs-memberingroups-type}}.',
 'prefs-memberingroups-type' => '{{optional}}
 Parameters:
@@ -2385,7 +2385,7 @@ Used in [[Special:Preferences]]. Parameters are:
 'yournick' => 'Used in [[Special:Preferences]], first tab.
 
 {{Identical|Signature}}',
-'prefs-help-signature' => 'Used in [[Special:Preferences]], tab User profile.',
+'prefs-help-signature' => 'Used in [[Special:Preferences]], tab wiki_User profile.',
 'badsig' => 'Error message displayed when entering invalid signature in user preferences',
 'badsiglength' => 'Warning message that is displayed on [[Special:Preferences]] when trying to save a signature that is too long. Parameter $1 is the maximum number of characters that is allowed in a signature (multi-byte characters are counted as one character).',
 'yourgender' => 'Used in [[Special:Preferences]], first tab.
@@ -2451,36 +2451,36 @@ Used in [[Special:Preferences]], tab "Watchlist". The display options refer to:
 * {{msg-mw|Prefs-watchlist-edits}}',
 'prefs-diffs' => 'Used in [[Special:Preferences]], tab "Misc".',
 
-# User preference: e-mail validation using jQuery
+# wiki_User preference: e-mail validation using jQuery
 'email-address-validity-valid' => 'Used as hint for {{msg-mw|changeemail-newemail}} field in [[Special:ChangeEmail]], when the provided E-mail address is valid.',
 'email-address-validity-invalid' => 'Used as warning for {{msg-mw|changeemail-newemail}} field in [[Special:ChangeEmail]], when the provided E-mail address is invalid.',
 
-# User rights
-'userrights' => 'Page title of [[Special:UserRights]].',
-'userrights-lookup-user' => 'Label text when managing user rights ([[Special:UserRights]])',
-'userrights-user-editname' => 'Displayed on [[Special:UserRights]].',
-'editusergroup' => 'Button name, in page [[Special:Userrights]] (only available to administrators), in the section named {{MediaWiki:userrights-lookup-user}}.
+# wiki_User rights
+'userrights' => 'Page title of [[Special:wiki_UserRights]].',
+'userrights-lookup-user' => 'Label text when managing user rights ([[Special:wiki_UserRights]])',
+'userrights-user-editname' => 'Displayed on [[Special:wiki_UserRights]].',
+'editusergroup' => 'Button name, in page [[Special:wiki_Userrights]] (only available to administrators), in the section named {{MediaWiki:userrights-lookup-user}}.
 
 {{Identical|Edit user groups}}',
-'editinguser' => 'Appears on [[Special:UserRights]]. Parameters:
+'editinguser' => 'Appears on [[Special:wiki_UserRights]]. Parameters:
 * $1 is a username
 * $2 are user tool links. Example: "(Talk | contribs | block | send e-mail)".',
 'userrights-editusergroup' => 'Parameter:
 * $1 is a username - optional, can be used for GENDER
 {{Identical|Edit user groups}}',
 'saveusergroups' => 'Button text when editing user groups',
-'userrights-groupsmember' => 'Used when editing user groups in [[Special:Userrights]]. The message is followed by a list of group names.
+'userrights-groupsmember' => 'Used when editing user groups in [[Special:wiki_Userrights]]. The message is followed by a list of group names.
 
 Parameters:
 * $1 - the number of items in the list following the message, for PLURAL.
 * $2 - the user name, for GENDER.',
-'userrights-groupsmember-auto' => 'Used when editing user groups in [[Special:Userrights]]. The message is followed by a list of group names.
+'userrights-groupsmember-auto' => 'Used when editing user groups in [[Special:wiki_Userrights]]. The message is followed by a list of group names.
 "Implicit" is for groups that the user was automatically added to (such as "autoconfirmed"); cf. {{msg-mw|userrights-groupsmember}}
 
 Parameters
 * $1 - the number of items in the list following the message, for PLURAL.
 * $2 - the user name, for GENDER.',
-'userrights-groups-help' => 'Instructions displayed on [[Special:UserRights]]. Parameters:
+'userrights-groups-help' => 'Instructions displayed on [[Special:wiki_UserRights]]. Parameters:
 * $1 is a username - optional, can be used for GENDER',
 'userrights-reason' => 'Text beside log field when editing user groups
 
@@ -2488,13 +2488,13 @@ Parameters
 'userrights-no-interwiki' => 'Error message when editing user groups',
 'userrights-nodatabase' => 'Error message when editing user groups. "Local" means databases/wikis of the same farm/cluster; that is, meta, enwiki, dewiki, commons, etc are all local databases of the Wikimedia Foundation.
 See http://meta.wikimedia.org/w/index.php?title=Special%3ALog&type=rights for a usage of local databases: username@barwiki',
-'userrights-nologin' => "Error displayed on [[Special:UserRights]] when you aren't logged in. If you are logged in, but don't have the correct permission, you see {{msg|userrights-notallowed|pl=yes}}.",
-'userrights-notallowed' => "Error displayed on [[Special:UserRights]] when you don't have the permission.",
-'userrights-changeable-col' => 'Used when editing user groups in [[Special:Userrights]]. The message is the head of a column of group assignements.
+'userrights-nologin' => "Error displayed on [[Special:wiki_UserRights]] when you aren't logged in. If you are logged in, but don't have the correct permission, you see {{msg|userrights-notallowed|pl=yes}}.",
+'userrights-notallowed' => "Error displayed on [[Special:wiki_UserRights]] when you don't have the permission.",
+'userrights-changeable-col' => 'Used when editing user groups in [[Special:wiki_Userrights]]. The message is the head of a column of group assignements.
 
 Parameters:
 * $1 - optional, for PLURAL use, the number of items in the column following the message. Avoid PLURAL, if your language can do without.',
-'userrights-unchangeable-col' => 'Used when editing user groups in [[Special:Userrights]]. The message is the head of a column of group assignements.
+'userrights-unchangeable-col' => 'Used when editing user groups in [[Special:wiki_Userrights]]. The message is the head of a column of group assignements.
 
 Parameters:
 * $1 - optional, for PLURAL use, the number of items in the column following the message. Avoid PLURAL, if your language allows that.',
@@ -2503,7 +2503,7 @@ Parameters:
 # Groups
 'group' => '{{Identical|Group}}',
 'group-user' => '{{doc-group|user}}
-{{Identical|User}}',
+{{Identical|wiki_User}}',
 'group-autoconfirmed' => '{{doc-group|autoconfirmed}}
 On Wikimedia sites autoconfirmed users are users which are older than 4 days. After those 4 days, they have more rights.',
 'group-bot' => '{{doc-group|bot}}',
@@ -2580,7 +2580,7 @@ Related messages:
 'right-purge' => '{{doc-right|purge}}
 The right to use <tt>&action=purge</tt> in the URL, without needing to confirm it (by default, anonymous users need to confirm it).',
 'right-autoconfirmed' => "{{doc-right|autoconfirmed}}
-If your account is older than [[mw:Manual:\$wgAutoConfirmAge|wgAutoConfirmAge]] and if you have at least [[mw:Manual:\$wgAutoConfirmCount|\$wgAutoConfirmCount]] edits, you are in the '''group \"autoconfirmed\"''' (note that you can't see this group at [[Special:ListUsers]]).
+If your account is older than [[mw:Manual:\$wgAutoConfirmAge|wgAutoConfirmAge]] and if you have at least [[mw:Manual:\$wgAutoConfirmCount|\$wgAutoConfirmCount]] edits, you are in the '''group \"autoconfirmed\"''' (note that you can't see this group at [[Special:Listwiki_Users]]).
 If you are in that group, you have (by default) the '''right \"autoconfirmed\"'''. With this right, you can for example <!-- I think this right includes more things --> edit semi-protected pages.",
 'right-bot' => '{{doc-right|bot}}',
 'right-nominornewtalk' => '{{doc-right|nominornewtalk}}
@@ -2671,11 +2671,11 @@ The rate limits have no effect on the groups that have this right. Rate limits i
 'right-sendemail' => '{{doc-right|sendemail}}',
 'right-passwordreset' => '{{doc-right|passwordreset}}',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => '{{doc-logpage}}
 In [[Special:Log]]',
 'rightslogtext' => 'Text in [[Special:Log/rights]].',
-'rightslogentry' => 'This message is displayed in the [[Special:Log/rights|User Rights Log]] when a bureaucrat changes the user groups for a user.
+'rightslogentry' => 'This message is displayed in the [[Special:Log/rights|wiki_User Rights Log]] when a bureaucrat changes the user groups for a user.
 
 * Parameter $1 is the username
 * Parameters $2 and $3 are lists of user groups or {{msg-mw|Rightsnone}}
@@ -2683,7 +2683,7 @@ In [[Special:Log]]',
 The name of the bureaucrat who did this task appears before this message.
 
 Similar to {{msg-mw|Gur-rightslog-entry}}',
-'rightslogentry-autopromote' => 'This message is displayed in the [[Special:Log/rights|User Rights Log]] when a user is automatically promoted to a user group.
+'rightslogentry-autopromote' => 'This message is displayed in the [[Special:Log/rights|wiki_User Rights Log]] when a user is automatically promoted to a user group.
 
 Parameters:
 * $2 is a comma separated list of old user groups or {{msg-mw|Rightsnone}}
@@ -2804,7 +2804,7 @@ See also:
 'unpatrolledletter' => '{{optional}}
 
 Used in {{msg-mw|Recentchanges-label-legend}}, meaning "unpatrolled".',
-'number_of_watching_users_pageview' => 'Used if <code>$wgPageShowWatchingUsers</code> is true.
+'number_of_watching_users_pageview' => 'Used if <code>$wgPageShowWatchingwiki_Users</code> is true.
 * $1 - number of watching user(s)',
 'rc_categories' => "Probably to do with 'recent changes' special page, either in a particular skin, or for a particular user group.
 
@@ -3414,7 +3414,7 @@ Used on [[Special:UploadWizard]].',
 'img-auth-isdir' => '[[mw:Manual:Image Authorization|Manual:Image Authorization]]: Trying to access a directory instead of a file, $1 is the directory.',
 'img-auth-streaming' => '[[mw:Manual:Image Authorization|Manual:Image Authorization]]: Is now streaming file specified by $1.',
 'img-auth-public' => '[[mw:Manual:Image Authorization|Manual:Image Authorization]]: An error message when the admin has configured the wiki to be a public wiki, but is using img_auth script - normally this is a configuration error, except when special restriction extensions are used',
-'img-auth-noread' => '[[mw:Manual:Image Authorization|Manual:Image Authorization]]: User does not have access to read file, $1 is the file',
+'img-auth-noread' => '[[mw:Manual:Image Authorization|Manual:Image Authorization]]: wiki_User does not have access to read file, $1 is the file',
 
 # HTTP errors
 'http-invalid-url' => '* $1 - URL',
@@ -3508,7 +3508,7 @@ See also:
 'listfiles_name' => 'Column header for the result table displayed on [[Special:ListFiles]].
 {{Identical|Name}}',
 'listfiles_user' => 'Column header for the result table displayed on [[Special:ListFiles]].
-{{Identical|User}}',
+{{Identical|wiki_User}}',
 'listfiles_size' => 'Column header for the result table displayed on [[Special:ListFiles]].
 {{Identical|Size}}',
 'listfiles_description' => 'Column header for the result table displayed on [[Special:ListFiles]].
@@ -3546,7 +3546,7 @@ Example: [[wikipedia:Image:Madeleine close2.jpg]]",
 Example: [[:Image:Addon-icn.png]]',
 'filehist-user' => 'In image description page.
 
-{{Identical|User}}',
+{{Identical|wiki_User}}',
 'filehist-dimensions' => 'In file description page',
 'filehist-filesize' => 'In image description page',
 'filehist-comment' => 'In file description page
@@ -3745,7 +3745,7 @@ Possible alternatives to the word 'content' are 'subject matter' or 'wiki subjec
 'statistics-edits-average' => 'Used in [[Special:Statistics]]',
 'statistics-views-total' => 'Used in [[Special:Statistics]]',
 'statistics-views-peredit' => 'Used in [[Special:Statistics]]',
-'statistics-users' => 'Used in [[Special:Statistics]]. Do not change "Special:ListUsers"!',
+'statistics-users' => 'Used in [[Special:Statistics]]. Do not change "Special:Listwiki_Users"!',
 'statistics-users-active' => 'Used in [[Special:Statistics]]',
 'statistics-users-active-desc' => "Description shown beneath ''Active users'' in [[Special:Statistics]]
 
@@ -3835,16 +3835,16 @@ $1 is a page title",
 'protectedtitlestext' => 'Shown on top of list of titles on [[Special:ProtectedTitles]]. If the list is empty the message [[MediaWiki:Protectedtitlesempty]] appears instead of this. See the [//www.mediawiki.org/wiki/Project:Protected_titles help page on Mediawiki] for more information.',
 'protectedtitlesempty' => 'Used on [[Special:ProtectedTitles]]. This text appears if the list of protected titles is empty. See the [//www.mediawiki.org/wiki/Project:Protected_titles help page on Mediawiki] for more information.',
 'listusers' => 'Name of special page displayed in [[Special:SpecialPages]]',
-'listusers-editsonly' => 'Option in [[Special:ListUsers]].',
-'listusers-creationsort' => 'Option in [[Special:ListUsers]].',
-'usereditcount' => 'Shown behind every username on [[Special:ListUsers]].',
-'usercreated' => 'Used in [[Special:ListUsers]].
+'listusers-editsonly' => 'Option in [[Special:Listwiki_Users]].',
+'listusers-creationsort' => 'Option in [[Special:Listwiki_Users]].',
+'usereditcount' => 'Shown behind every username on [[Special:Listwiki_Users]].',
+'usercreated' => 'Used in [[Special:Listwiki_Users]].
 * <code>$1</code> is a date
 * <code>$2</code> is a time
 * <code>$3</code> is the name of the user, for use in GENDER',
 'newpages' => 'Name of special page displayed in [[Special:SpecialPages]]
 {{Identical|New page}}',
-'newpages-username' => '{{Identical|Username}}',
+'newpages-username' => '{{Identical|wiki_Username}}',
 'ancientpages' => 'The page title of [[Special:Ancientpages]]. [[mw:Manual:Interface/Special pages title|mw manual]]',
 'move' => 'Name of Move tab. Should be in the imperative mood.
 
@@ -3879,9 +3879,9 @@ The title is {{msg-mw|nopagetitle}}.
 See also:
 * {{msg-mw|Nopagetitle|title}}
 * {{msg-mw|Nopagetext|text}}',
-'pager-newer-n' => "This is part of the navigation message on the top and bottom of Special pages which are lists of things in date order, e.g. the User's contributions page. It is passed as the second argument of {{msg-mw|Viewprevnext}}. $1 is the number of items shown per page.
+'pager-newer-n' => "This is part of the navigation message on the top and bottom of Special pages which are lists of things in date order, e.g. the wiki_User's contributions page. It is passed as the second argument of {{msg-mw|Viewprevnext}}. $1 is the number of items shown per page.
 {{Identical|Newer}}",
-'pager-older-n' => "This is part of the navigation message on the top and bottom of Special pages which are lists of things in date order, e.g. the User's contributions page. It is passed as the first argument of {{msg-mw|Viewprevnext}}. $1 is the number of items shown per page.",
+'pager-older-n' => "This is part of the navigation message on the top and bottom of Special pages which are lists of things in date order, e.g. the wiki_User's contributions page. It is passed as the first argument of {{msg-mw|Viewprevnext}}. $1 is the number of items shown per page.",
 'suppress' => '{{Identical|Oversight}}',
 'querypage-disabled' => "On special pages that use expensive database queries but are not cacheable, this message is displayed when 'miser mode' is on (i.e. no expensive queries allowed).",
 
@@ -3944,7 +3944,7 @@ Title of [[Special:Log]].',
 'allpagesnext' => "Allegedly used in [[Special:AllPages]], although I haven't seen it.
 
 {{Identical|Next}}",
-'allpagessubmit' => 'Text on submit button in [[Special:AllPages]], [[Special:RecentChanges]], [[Special:RecentChangesLinked]], [[Special:NewPages]], [[Special:Log]], [[Special:ListUsers]], [[Special:ProtectedPages]], [[Special:ProtectedTitles]], [[Special:WhatLinksHere]] and [[Special:Watchlist]].
+'allpagessubmit' => 'Text on submit button in [[Special:AllPages]], [[Special:RecentChanges]], [[Special:RecentChangesLinked]], [[Special:NewPages]], [[Special:Log]], [[Special:Listwiki_Users]], [[Special:ProtectedPages]], [[Special:ProtectedTitles]], [[Special:WhatLinksHere]] and [[Special:Watchlist]].
 
 {{Identical|Go}}',
 'allpagesprefix' => "Used for the label of the input box of [[Special:PrefixIndex]]. On this page you can either write 'Name of namespace:string from which to begin display in alphabetical order' in the top box, or you can choose a namespace in the bottom box and put 'string from which to begin display in alphabetical order' in the top box. The result will be the same.",
@@ -3964,7 +3964,7 @@ Title of [[Special:Log]].',
 'special-categories-sort-count' => 'This message is used on [[Special:Categories]] to sort the list by the number of members in the categories.',
 
 # Special:DeletedContributions
-'deletedcontributions' => 'The message is shown as a link on user contributions page (like [[Special:Contributions/User]]) to the corresponding [[Special:DeletedContributions]] page.
+'deletedcontributions' => 'The message is shown as a link on user contributions page (like [[Special:Contributions/wiki_User]]) to the corresponding [[Special:DeletedContributions]] page.
 
 {{Identical|Deleted user contributions}}',
 'deletedcontributions-title' => 'Title of [[Special:DeletedContributions]] (extension), a special page with a list of edits to pages which were deleted. Only viewable by sysops.
@@ -3994,24 +3994,24 @@ $1 is a list of internet protocols.',
 
 You can apparently use 'URL' instead of 'hostname'.",
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => 'identical with {{msg-mw|activeusers-from}}',
-'listusers-submit' => 'Text displayed in the submission button of the [[Special:ListUsers]] form.
+'listusers-submit' => 'Text displayed in the submission button of the [[Special:Listwiki_Users]] form.
 {{Identical|Go}}
 {{Identical|Show}}',
 'listusers-noresult' => 'identical with {{msg-mw|activeusers-noresult}}',
-'listusers-blocked' => 'Used on [[Special:ActiveUsers]] when a user has been blocked.
+'listusers-blocked' => 'Used on [[Special:Activewiki_Users]] when a user has been blocked.
 * $1 is a user name for use with GENDER (optional)',
 
-# Special:ActiveUsers
-'activeusers' => 'Title of [[Special:ActiveUsers]]',
-'activeusers-intro' => 'Used as introduction in [[Special:ActiveUsers]]. Parameters:
-* $1 - number of days (<code>$wgActiveUserDays</code>)',
-'activeusers-count' => "Used in [[Special:ActiveUsers]] to show the active user's recent action count in brackets ([]).
+# Special:Activewiki_Users
+'activeusers' => 'Title of [[Special:Activewiki_Users]]',
+'activeusers-intro' => 'Used as introduction in [[Special:Activewiki_Users]]. Parameters:
+* $1 - number of days (<code>$wgActivewiki_UserDays</code>)',
+'activeusers-count' => "Used in [[Special:Activewiki_Users]] to show the active user's recent action count in brackets ([]).
 * $1 is the number of recent actions
 * $2 is the user's name for use with GENDER (optional)
 * $3 is the maximum number of days of the RecentChangesList",
-'activeusers-from' => 'Used as label for checkbox in the form on [[Special:ActiveUsers]].
+'activeusers-from' => 'Used as label for checkbox in the form on [[Special:Activewiki_Users]].
 
 identical with {{msg-mw|listusersfrom}}
 
@@ -4019,13 +4019,13 @@ See also:
 * {{msg-mw|activeusers|legend for the form}}
 * {{msg-mw|activeusers-hidebots|label for checkbox}}
 * {{msg-mw|activeusers-hidesysops|label for checkbox}}',
-'activeusers-hidebots' => 'Used as label for checkbox in the form on [[Special:ActiveUsers]].
+'activeusers-hidebots' => 'Used as label for checkbox in the form on [[Special:Activewiki_Users]].
 
 See also:
 * {{msg-mw|activeusers|legend for the form}}
 * {{msg-mw|activeusers-from|label for input box}}
 * {{msg-mw|activeusers-hidesysops|label for checkbox}}',
-'activeusers-hidesysops' => 'Used as label for checkbox in the form on [[Special:ActiveUsers]].
+'activeusers-hidesysops' => 'Used as label for checkbox in the form on [[Special:Activewiki_Users]].
 
 See also:
 * {{msg-mw|activeusers|legend for the form}}
@@ -4049,7 +4049,7 @@ Part of the "Newuserlog" extension. It is both the title of [[Special:Log/newuse
 'listgrouprights-rights' => "The title of the column in the table, about user rights (like you can ''edit'' this page).
 {{Identical|Right}}",
 'listgrouprights-helppage' => "The link used on [[Special:ListGroupRights]]. Just translate \"Group rights\", and '''leave the \"Help:\" namespace exactly as it is'''.",
-'listgrouprights-members' => 'Used on [[Special:ListGroupRights]] and [[Special:Statistics]] as a link to [[Special:ListUsers|Special:ListUsers/"group"]], a list of members in that group.',
+'listgrouprights-members' => 'Used on [[Special:ListGroupRights]] and [[Special:Statistics]] as a link to [[Special:Listwiki_Users|Special:Listwiki_Users/"group"]], a list of members in that group.',
 'listgrouprights-right-display' => "{{optional}}
 * $1 is the text from the 'right-...' messages, i.e. {{msg-mw|right-edit}}
 * $2 is the codename of this right",
@@ -4080,10 +4080,10 @@ See also {{msg|listgrouprights-addgroup}}.',
 {{Related|Listgrouprights}}',
 
 # E-mail user
-'mailnologin' => 'Used in [[Special:EmailUser]].
+'mailnologin' => 'Used in [[Special:Emailwiki_User]].
 
 Used as title of the error message {{msg-mw|Mailnologintext}}.',
-'mailnologintext' => 'Used as error message in [[Special:EmailUser]].
+'mailnologintext' => 'Used as error message in [[Special:Emailwiki_User]].
 
 The title of this error message is {{msg-mw|Mailnologin}}.',
 'emailuser' => 'Link in the sidebar to send an e-mail to a user.
@@ -4092,42 +4092,42 @@ See also:
 * {{msg-mw|Emailuser}}
 * {{msg-mw|Accesskey-t-emailuser}}
 * {{msg-mw|Tooltip-t-emailuser}}',
-'emailuser-title-target' => 'Title of [[Special:EmailUser|special page]] when a user was given to e-mail. Parameters:
+'emailuser-title-target' => 'Title of [[Special:Emailwiki_User|special page]] when a user was given to e-mail. Parameters:
 * $1 is a plain text username, used for GENDER.',
-'emailuser-title-notarget' => 'Title of [[Special:EmailUser|special page]] when no user given to e-mail yet',
-'emailpage' => "Title of special page [[Special:EmailUser]], when it is the destination of the sidebar link {{msg-mw|Emailuser}} on a user's page.",
-'emailpagetext' => 'This is the text that is displayed above the e-mail form on [[Special:EmailUser]].
+'emailuser-title-notarget' => 'Title of [[Special:Emailwiki_User|special page]] when no user given to e-mail yet',
+'emailpage' => "Title of special page [[Special:Emailwiki_User]], when it is the destination of the sidebar link {{msg-mw|Emailuser}} on a user's page.",
+'emailpagetext' => 'This is the text that is displayed above the e-mail form on [[Special:Emailwiki_User]].
 
-Special:EmailUser appears when you click on the link "E-mail this user" in the sidebar, but only if there is an e-mail address in the recipient\'s user preferences. If there isn\'t then the message [[Mediawiki:Noemailtext]] will appear instead of Special:EmailUser.',
-'defemailsubject' => 'The default subject of EmailUser emails. Parameters:
+Special:Emailwiki_User appears when you click on the link "E-mail this user" in the sidebar, but only if there is an e-mail address in the recipient\'s user preferences. If there isn\'t then the message [[Mediawiki:Noemailtext]] will appear instead of Special:Emailwiki_User.',
+'defemailsubject' => 'The default subject of Emailwiki_User emails. Parameters:
 * $1 is the username of the user sending the email and can be used for GENDER.',
-'usermaildisabled' => 'Caption for an error message ({{msg-mw|Usermaildisabledtext}}) shown when the user-to-user e-mail feature is disabled on the wiki (see [[mw:Manual:$wgEnableEmail]], [[mw:Manual:$wgEnableUserEmail]]).',
-'usermaildisabledtext' => 'Used as error message in [[Special:EmailUser]].
+'usermaildisabled' => 'Caption for an error message ({{msg-mw|wiki_Usermaildisabledtext}}) shown when the user-to-user e-mail feature is disabled on the wiki (see [[mw:Manual:$wgEnableEmail]], [[mw:Manual:$wgEnablewiki_UserEmail]]).',
+'usermaildisabledtext' => 'Used as error message in [[Special:Emailwiki_User]].
 
-The title for this error message is {{msg-mw|Usermaildisabled}}.',
-'noemailtitle' => 'The title of the message that appears instead of Special:EmailUser after clicking the "E-mail this user" link in the sidebar, if no e-mail can be sent to the user.',
-'noemailtext' => 'The text of the message that appears in [[Special:EmailUser]] after clicking the "E-mail this user" link in the sidebar, if no e-mail can be sent to the user because he has not specified or not confirmed an e-mail address.',
+The title for this error message is {{msg-mw|wiki_Usermaildisabled}}.',
+'noemailtitle' => 'The title of the message that appears instead of Special:Emailwiki_User after clicking the "E-mail this user" link in the sidebar, if no e-mail can be sent to the user.',
+'noemailtext' => 'The text of the message that appears in [[Special:Emailwiki_User]] after clicking the "E-mail this user" link in the sidebar, if no e-mail can be sent to the user because he has not specified or not confirmed an e-mail address.',
 'nowikiemailtext' => 'This is an error message used in [[Special:Emailuser]] when called with a target user not consenting to be an e-mail recipient.',
 'emailnotarget' => 'This is an error message that may be used in [[Special:Emailuser]] when called without a (valid) target user for the e-mail.',
 'emailtarget' => 'This is an input group label being used in [[Special:Emailuser]] when called without a (valid) target user for the e-mail.',
 'emailusername' => 'This is a prompt being used in [[Special:Emailuser]] when called without a (valid) target user for the e-mail.
 
-{{Identical|Username}}',
+{{Identical|wiki_Username}}',
 'emailusernamesubmit' => '{{Identical|Submit}}
 
 This is a button text used in [[Special:Emailuser]] when called without a (valid) target user for the e-mail.',
-'email-legend' => 'Title of the box in [[Special:EmailUser]]',
-'emailfrom' => 'Field in [[Special:EmailUser]].
+'email-legend' => 'Title of the box in [[Special:Emailwiki_User]]',
+'emailfrom' => 'Field in [[Special:Emailwiki_User]].
 {{Identical|From}}',
-'emailto' => 'Field in [[Special:EmailUser]].
+'emailto' => 'Field in [[Special:Emailwiki_User]].
 {{Identical|To}}',
-'emailsubject' => 'Field in [[Special:EmailUser]].
+'emailsubject' => 'Field in [[Special:Emailwiki_User]].
 
 {{Identical|Subject}}',
-'emailmessage' => 'Field in [[Special:EmailUser]].
+'emailmessage' => 'Field in [[Special:Emailwiki_User]].
 
 {{Identical|Message}}',
-'emailsend' => 'Button name in [[Special:EmailUser]].
+'emailsend' => 'Button name in [[Special:Emailwiki_User]].
 
 {{Identical|Send}}',
 'emailccme' => 'Used at [[Special:Preferences]] > E-mail',
@@ -4139,7 +4139,7 @@ This is a button text used in [[Special:Emailuser]] when called without a (valid
 * $1: username of the sender
 * $2: username of the recipient',
 
-# User Messenger
+# wiki_User Messenger
 'usermessage-summary' => 'This message is used as an edit summary for any message that is posted because of a system event. Translate "leaving a message" in the sense of: to give a message to someone; to deliver a message somewhere; to deposit.',
 'usermessage-editor' => 'The user name for the user that is the editor of system messages. See [http://translatewiki.net/wiki/Thread:Support/Message_info_please discussion on Support].',
 'usermessage-template' => '{{optional}}',
@@ -4155,11 +4155,11 @@ See also:
 {{Identical|My watchlist}}',
 'watchlistfor2' => 'Subtitle on [[Special:Watchlist]].
 
-*$1: Username of current user
+*$1: wiki_Username of current user
 *$2: Tool links (View relevant changes | View and edit watchlist | Edit raw watchlist)
 {{Identical|For $1}}',
 'nowatchlist' => 'Displayed when there is no pages in the watchlist.',
-'watchlistanontext' => '* $1 is a link to [[Special:UserLogin]] with {{msg-mw|loginreqlink}} as link description',
+'watchlistanontext' => '* $1 is a link to [[Special:wiki_UserLogin]] with {{msg-mw|loginreqlink}} as link description',
 'watchnologin' => '{{Identical|Not logged in}}',
 'addwatch' => 'Link to a dialog box, displayed at the end of the list of categories at the foot of each page.',
 'addedwatchtext' => 'Explanation shown when clicking on the {{msg-mw|watch}} tab.
@@ -4272,7 +4272,7 @@ Possible value for $CHANGEDORCREATED in the following messages:
 'enotif_lastvisited' => '$1 is a URL address.',
 'enotif_lastdiff' => 'E-mail notification text to the latest page differences. Parameters:
 * $1 is a link to a diff, shown as a plain link.',
-'enotif_anon_editor' => 'User name in an e-mail notification when referring to an anonymous user. Parameters:
+'enotif_anon_editor' => 'wiki_User name in an e-mail notification when referring to an anonymous user. Parameters:
 * $1 is the anonymous user name (i.e. an IP address).',
 'enotif_body' => 'Text of a notification e-mail sent when a watched page has been edited or deleted.[[File:Screenshot_MediaWiki_e-mail_notifier.PNG|150px|right]]
 
@@ -4397,7 +4397,7 @@ Title of [[Special:Log/protect]].',
 'movedarticleprotection' => 'This is a log entry. It appears in the log if a protected page is renamed.
 
 Example:
-<code>00:51, 16 September 2010 Siebrand +(Talk • contribs • block) moved protection settings from "User:Siebrand/prot-move" to "User:Siebrand/prot-moved" ‎ (User:Siebrand/prot-move moved to User:Siebrand/prot-moved: prot_move test.)</code>',
+<code>00:51, 16 September 2010 Siebrand +(Talk • contribs • block) moved protection settings from "wiki_User:Siebrand/prot-move" to "wiki_User:Siebrand/prot-moved" ‎ (wiki_User:Siebrand/prot-move moved to wiki_User:Siebrand/prot-moved: prot_move test.)</code>',
 'protect-title' => 'Title for the protection form. $1 is the title of the page to be (un)protected.',
 'protect-title-notallowed' => 'Same as {{msg-mw|protect-title}}, but when the user does not have the right to change protection levels.',
 'prot_1movedto2' => 'Message description: [[mw:Manual:Interface/1movedto2]]',
@@ -4448,7 +4448,7 @@ See also:
 {{Identical|Other time}}',
 'protect-othertime-op' => 'Used on the page protection form in the drop down menu
 {{Identical|Other time}}',
-'protect-existing-expiry' => 'Shows the existing expiry time in the drop down menu of the protection form ([http://translatewiki.net/w/i.php?title=User:Raymond/test&action=unprotect example])
+'protect-existing-expiry' => 'Shows the existing expiry time in the drop down menu of the protection form ([http://translatewiki.net/w/i.php?title=wiki_User:Raymond/test&action=unprotect example])
 
 * $1: date and time of the existing expiry time (kept for backward compatibility purposes)
 * $2: date of the existing expiry time
@@ -4544,7 +4544,7 @@ See also:
 * $4: date of the revision
 * $5: time of the revision
 
-\'\'Example:\'\' Deleted revision of [[Main Page]] (as of {{CURRENTDAY}} {{CURRENTMONTHNAME}} {{CURRENTYEAR}}, at {{CURRENTTIME}}) by [[User:Username|Username]]:',
+\'\'Example:\'\' Deleted revision of [[Main Page]] (as of {{CURRENTDAY}} {{CURRENTMONTHNAME}} {{CURRENTYEAR}}, at {{CURRENTTIME}}) by [[wiki_User:wiki_Username|wiki_Username]]:',
 'undelete-nodiff' => 'Used in [[Special:Undelete]].',
 'undeletebtn' => 'Shown on [[Special:Undelete]] as button caption and on [[Special:Log/delete|deletion log]] after each entry (for sysops).
 
@@ -4647,7 +4647,7 @@ This message has a tooltip {{msg-mw|tooltip-namespace association}}',
 'blanknamespace' => 'Name for main namespace (blank namespace) in drop-down menus at [[Special:RecentChanges]] and other special pages.',
 
 # Contributions
-'contributions' => "Display name for the 'User contributions', shown in the sidebar menu of all user pages and user talk pages. Also the page name of the target page. The target page shows an overview of the most recent contributions by a user.",
+'contributions' => "Display name for the 'wiki_User contributions', shown in the sidebar menu of all user pages and user talk pages. Also the page name of the target page. The target page shows an overview of the most recent contributions by a user.",
 'contributions-title' => 'The page title in your browser bar, but not the page title. See also {{msg|contributions}}. Parameter $1 is the username.
 
 {{Gender}}',
@@ -4706,7 +4706,7 @@ See also:
 * {{msg-mw|Sp-contributions-deleted}}
 * {{msg-mw|Sp-contributions-userrights}}
 {{Identical|Upload}}',
-'sp-contributions-logs' => "Appears as an action link in the header of the Special:Contributions/''Username'' pages (e.g. \"For Somebody (talk | block log | logs)\").
+'sp-contributions-logs' => "Appears as an action link in the header of the Special:Contributions/''wiki_Username'' pages (e.g. \"For Somebody (talk | block log | logs)\").
 
 Used as link title in [[Special:Contributions]] and in [[Special:DeletedContributions]].
 
@@ -4918,7 +4918,7 @@ See also:
 * Go to [[Special:BlockList]]
 * Click "unblock" for any block (but you can only see "unblock" if you have administrator rights)
 * It is now the button below the form',
-'unblocked' => '{{doc-important|Do not translate the namespace "User:".}}
+'unblocked' => '{{doc-important|Do not translate the namespace "wiki_User:".}}
 Parameters:
 * $1 - the IP address or username that was unblocked
 See also:
@@ -5020,7 +5020,7 @@ Part of the log entry of user block in [[Special:BlockList]].
 
 {{Related|Blocklist}}',
 'ipblocklist-empty' => 'Shown on page [[Special:Blocklist]], if no blocks are to be shown.',
-'blocklink' => "Display name for a link that, when selected, leads to a form where a user can be blocked. Used in page history and recent changes pages. Example: \"''UserName (Talk | contribs | '''block''')''\".
+'blocklink' => "Display name for a link that, when selected, leads to a form where a user can be blocked. Used in page history and recent changes pages. Example: \"''wiki_UserName (Talk | contribs | '''block''')''\".
 
 Used as link title in [[Special:Contributions]] and in [[Special:DeletedContributions]].
 
@@ -5066,7 +5066,7 @@ See also:
 * $2 - reason',
 'blocklogpage' => "{{doc-logpage}}
 
-The page name of [[Special:Log/block]]. Also appears in the drop down menu of [[Special:Log]] pages and in the action links of Special:Contributions/''Username'' pages (e.g. \"For Somebody (talk | block log | logs)\").
+The page name of [[Special:Log/block]]. Also appears in the drop down menu of [[Special:Log]] pages and in the action links of Special:Contributions/''wiki_Username'' pages (e.g. \"For Somebody (talk | block log | logs)\").
 
 {{Identical|Block log}}",
 'blocklog-showlog' => 'Parameters:
@@ -5169,7 +5169,7 @@ See also:
 'sorbsreason' => 'See also:
 * {{msg-mw|Sorbsreason}}
 * {{msg-mw|Sorbs create account_reason}}',
-'sorbs_create_account_reason' => 'Used in [[Special:UserLogin]] when creating an account.
+'sorbs_create_account_reason' => 'Used in [[Special:wiki_UserLogin]] when creating an account.
 
 See also:
 * {{msg-mw|Sorbsreason}}
@@ -5876,7 +5876,7 @@ See also:
 'javascripttest-qunit-heading' => '{{Optional}}',
 
 # Tooltip help for the actions
-'tooltip-pt-userpage' => 'Tooltip shown when hovering the mouse over the link to your own User page in the upper-side personal toolbox.
+'tooltip-pt-userpage' => 'Tooltip shown when hovering the mouse over the link to your own wiki_User page in the upper-side personal toolbox.
 
 See also:
 <!--* username-->
@@ -6136,7 +6136,7 @@ See also:
 * {{msg-mw|Accesskey-ca-nstab-main}}
 * {{msg-mw|Tooltip-ca-nstab-main}}
 {{Identical|Content page}}',
-'tooltip-ca-nstab-user' => 'Tooltip shown when hovering over {{msg|nstab-user}} (User namespace tab).
+'tooltip-ca-nstab-user' => 'Tooltip shown when hovering over {{msg|nstab-user}} (wiki_User namespace tab).
 
 No GENDER-Support for performance reason.
 
@@ -7671,7 +7671,7 @@ See also:
 * {{msg-mw|Confirmemail oncreate}}',
 'confirmemail_invalid' => 'Error message on [[Special:ConfirmEmail]] on error of confirmation.',
 'confirmemail_needlogin' => 'Used on [[Special:ConfirmEmail]] when you are logged out.
-* $1 is a link to [[Special:UserLogin]] with {{msg-mw|loginreqlink}} as link description',
+* $1 is a link to [[Special:wiki_UserLogin]] with {{msg-mw|loginreqlink}} as link description',
 'confirmemail_success' => 'Explanation on [[Special:ConfirmEmail]] on completion of confirmation.',
 'confirmemail_loggedin' => 'Explanation on [[Special:ConfirmEmail]] on completion of confirmation.',
 'confirmemail_error' => 'Error message on [[Special:ConfirmEmail]]',

@@ -303,8 +303,8 @@ function haclfInitContentLanguage($langcode)
 /**
  * Returns the ID and name of the given user.
  *
- * @param User/string/int $user
- *         User-object, name of a user or ID of a user. If <null> (which is the
+ * @param wiki_User/string/int $user
+ *         wiki_User-object, name of a user or ID of a user. If <null> (which is the
  *      default), the currently logged in user is assumed.
  *      There are two special user names:
  *            '*' - all users including anonymous (ID: 0)
@@ -317,7 +317,7 @@ function haclfInitContentLanguage($langcode)
  *         HACLException(HACLException::UNKNOWN_USER)
  *             ...if the user does not exist.
  */
-function haclfGetUserID($user = null, $throw_error = true)
+function haclfGetwiki_UserID($user = null, $throw_error = true)
 {
     $userID = false;
     $userName = '';
@@ -325,9 +325,9 @@ function haclfGetUserID($user = null, $throw_error = true)
     {
         // no user given
         // => the current user's ID is requested
-        global $wgUser;
-        $userID = $wgUser->getId();
-        $userName = $wgUser->getName();
+        global $wgwiki_User;
+        $userID = $wgwiki_User->getId();
+        $userName = $wgwiki_User->getName();
     }
     elseif (is_int($user) || is_numeric($user))
     {
@@ -350,16 +350,16 @@ function haclfGetUserID($user = null, $throw_error = true)
         {
             // name of user given
             $etc = haclfDisableTitlePatch();
-            $userID = User::idFromName($user);
+            $userID = wiki_User::idFromName($user);
             haclfRestoreTitlePatch($etc);
             if (!$userID)
                 $userID = false;
             $userName = $user;
         }
     }
-    elseif (is_a($user, 'User'))
+    elseif (is_a($user, 'wiki_User'))
     {
-        // User-object given
+        // wiki_User-object given
         $userID = $user->getId();
         $userName = $user->getName();
     }
@@ -409,9 +409,9 @@ function haclfIsFileCacheable($article)
  */
 function haclfPageRenderingHash(&$hash)
 {
-    global $wgUser, $wgTitle;
-    if (is_object($wgUser))
-        $hash .= '!'.$wgUser->getId();
+    global $wgwiki_User, $wgTitle;
+    if (is_object($wgwiki_User))
+        $hash .= '!'.$wgwiki_User->getId();
     return true;
 }
 

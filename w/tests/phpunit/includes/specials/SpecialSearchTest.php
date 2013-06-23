@@ -17,7 +17,7 @@ class SpecialSearchTest extends MediaWikiTestCase {
 	 * @covers SpecialSearch::load
 	 * @dataProvider provideSearchOptionsTests
 	 * @param $requested Array Request parameters. For example array( 'ns5' => true, 'ns6' => true). NULL to use default options.
-	 * @param $userOptions Array User options to test with. For example array('searchNs5' => 1 );. NULL to use default options.
+	 * @param $userOptions Array wiki_User options to test with. For example array('searchNs5' => 1 );. NULL to use default options.
 	 * @param $expectedProfile An expected search profile name
 	 * @param $expectedNs Array Expected namespaces
 	 */
@@ -26,8 +26,8 @@ class SpecialSearchTest extends MediaWikiTestCase {
 		$message = 'Profile name and namespaces mismatches!'
 	) {
 		$context = new RequestContext;
-		$context->setUser(
-			$this->newUserWithSearchNS( $userOptions )
+		$context->setwiki_User(
+			$this->newwiki_UserWithSearchNS( $userOptions )
 		);
 		/*
 		$context->setRequest( new FauxRequest( array(
@@ -67,7 +67,7 @@ class SpecialSearchTest extends MediaWikiTestCase {
 		return array(
 			/**
 			 * Parameters:
-			 * 	<Web Request>, <User options>
+			 * 	<Web Request>, <wiki_User options>
 			 * Followed by expected values:
 			 * 	<ProfileName>, <NSList>
 			 * Then an optional message.
@@ -85,25 +85,25 @@ class SpecialSearchTest extends MediaWikiTestCase {
 			array(
 				$EMPTY_REQUEST, array( 'searchNs2' => 1, 'searchNs14' => 1 ),
 				'advanced', array( 2, 14 ),
-				'Bug 33583: search with no option should honor User search preferences'
+				'Bug 33583: search with no option should honor wiki_User search preferences'
 			),
 			array(
 				$EMPTY_REQUEST, array_fill_keys( array_map( function( $ns ) {
 					return "searchNs$ns";
 				}, $defaultNS ), 0 ) + array( 'searchNs2' => 1, 'searchNs14' => 1 ),
 				'advanced', array( 2, 14 ),
-				'Bug 33583: search with no option should honor User search preferences'
+				'Bug 33583: search with no option should honor wiki_User search preferences'
 				. 'and have all other namespace disabled'
 			),
 		);
 	}
 
 	/**
-	 * Helper to create a new User object with given options
-	 * User remains anonymous though
+	 * Helper to create a new wiki_User object with given options
+	 * wiki_User remains anonymous though
 	 */
-	function newUserWithSearchNS( $opt = null ) {
-		$u = User::newFromId(0);
+	function newwiki_UserWithSearchNS( $opt = null ) {
+		$u = wiki_User::newFromId(0);
 		if( $opt === null ) {
 			return $u;
 		}

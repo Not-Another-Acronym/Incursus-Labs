@@ -130,9 +130,9 @@ $specialPageAliases = array(
 	'Unusedtemplates'           => array( 'Nenaudojami_šablonai' ),
 	'Unwatchedpages'            => array( 'Nestebimi_puslapiai' ),
 	'Upload'                    => array( 'Įkėlimas' ),
-	'Userlogin'                 => array( 'Prisijungimas' ),
-	'Userlogout'                => array( 'Atsijungimas' ),
-	'Userrights'                => array( 'Naudotojo_teisės' ),
+	'wiki_Userlogin'                 => array( 'Prisijungimas' ),
+	'wiki_Userlogout'                => array( 'Atsijungimas' ),
+	'wiki_Userrights'                => array( 'Naudotojo_teisės' ),
 	'Version'                   => array( 'Versija' ),
 	'Wantedcategories'          => array( 'Trokštamiausios_kategorijos' ),
 	'Wantedfiles'               => array( 'Trokštami_failai' ),
@@ -182,7 +182,7 @@ $dateFormats = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Pabraukti nuorodas:',
 'tog-justify' => 'Lygiuoti pastraipas pagal abi puses',
 'tog-hideminor' => 'Slėpti smulkius pakeitimus naujausių keitimų sąraše',
@@ -524,7 +524,7 @@ Užrakinusiojo administratoriaus pateiktas rakinimo paaiškinimas: $1',
 Paprastai tai būna dėl pasenusios skirtumo ar istorijos nuorodos į puslapį, kuris buvo ištrintas.
 
 Jei tai ne tas atvejis, jūs galbūt radote klaidą programinėje įrangoje.
-Prašome apie tai pranešti [[Special:ListUsers/sysop|administratoriui]], nepamiršdami nurodyti nuorodą.',
+Prašome apie tai pranešti [[Special:Listwiki_Users/sysop|administratoriui]], nepamiršdami nurodyti nuorodą.',
 'missingarticle-rev' => '(versija#: $1)',
 'missingarticle-diff' => '(Skirt.: $1, $2)',
 'readonly_lag' => 'Duomenų bazė buvo automatiškai užrakinta, kol pagalbinės duomenų bazės prisivys pagrindinę',
@@ -570,7 +570,7 @@ $2',
 'customcssprotected' => 'Jūs neturite teisės keisti šį CSS puslapį, nes jame yra kito naudotojo asmeniniai nustatymai.',
 'customjsprotected' => 'Jūs neturite teisės keisti šį JavaScript puslapį, nes jame yra kito naudotojo asmeniniai nustatymai.',
 'ns-specialprotected' => 'Specialieji puslapiai negali būti redaguojami.',
-'titleprotected' => "[[User:$1|$1]] apsaugojo šį pavadinimą nuo sukūrimo.
+'titleprotected' => "[[wiki_User:$1|$1]] apsaugojo šį pavadinimą nuo sukūrimo.
 Nurodyta priežastis yra ''$2''.",
 'filereadonlyerror' => 'Neįmanoma pakeisti failo "$1" nes failų saugykla "$2" yra nustatyta tik skaitymo režimu.
 
@@ -588,7 +588,7 @@ Ją užrakinęs administratorius pateikė šį paaiškinimą: "$3".',
 # Login and logout pages
 'logouttext' => "'''Dabar jūs esate atsijungęs.'''
 
-Galite toliau naudoti {{SITENAME}} anonimiškai arba [[Special:UserLogin|prisijunkite]] iš naujo tuo pačiu ar kitu naudotoju.
+Galite toliau naudoti {{SITENAME}} anonimiškai arba [[Special:wiki_UserLogin|prisijunkite]] iš naujo tuo pačiu ar kitu naudotoju.
 Pastaba: kai kuriuose puslapiuose ir toliau gali rodyti, kad esate prisijungęs iki tol, kol išvalysite savo naršyklės podėlį.",
 'welcomecreation' => '== Sveiki, $1! ==
 
@@ -631,7 +631,7 @@ Prašome pasirinkti kitą vardą.',
 'loginsuccess' => "'''Dabar jūs prisijungęs prie {{SITENAME}} kaip „$1“.'''",
 'nosuchuser' => 'Nėra jokio naudotojo, turinčio vardą „$1“.
 Naudotojų varduose skiriamos didžiosios ir mažosios raidės.
-Patikrinkite rašybą, arba [[Special:UserLogin/signup|sukurkite naują paskyrą]].',
+Patikrinkite rašybą, arba [[Special:wiki_UserLogin/signup|sukurkite naują paskyrą]].',
 'nosuchusershort' => 'Nėra jokio naudotojo, pavadinto „$1“. Patikrinkite rašybą.',
 'nouserspecified' => 'Jums reikia nurodyti naudotojo vardą.',
 'login-userblocked' => 'Šis naudotojas yra užblokuotas. Prisijungti neleidžiama.',
@@ -817,7 +817,7 @@ Jis galėjo būti perkeltas arba ištrintas, kol peržiūrėjote puslapį.',
 'loginreqlink' => 'prisijungti',
 'loginreqpagetext' => 'Jums reikia $1, kad matytumėte kitus puslapius.',
 'accmailtitle' => 'Slaptažodis išsiųstas.',
-'accmailtext' => "Atsitiktinai sugeneruotas naudotojo [[User talk:$1|$1]] slaptažodis nusiųstas į $2.
+'accmailtext' => "Atsitiktinai sugeneruotas naudotojo [[wiki_User talk:$1|$1]] slaptažodis nusiųstas į $2.
 
 Šios naujos paskyros slaptažodis gali būti pakeistas ''[[Special:ChangePassword|keisti slaptažodį]]'' puslapyje.",
 'newarticle' => '(Naujas)',
@@ -828,7 +828,7 @@ Jei patekote čia per klaidą, paprasčiausiai spustelkite  naršyklės mygtuką
 'anontalkpagetext' => "----''Tai yra anoniminio naudotojo, nesusikūrusio arba nenaudojančio paskyros, aptarimų puslapis.
 Dėl to naudojamas IP adresas jo identifikavimui.
 Šis IP adresas gali būti dalinamas keliems naudotojams.
-Jeigu Jūs esate anoniminis naudotojas ir atrodo, kad komentarai nėra skirti Jums, [[Special:UserLogin/signup|sukurkite paskyrą]] arba [[Special:UserLogin|prisijunkite]], ir nebūsite tapatinamas su kitais anoniminiais naudotojais.''",
+Jeigu Jūs esate anoniminis naudotojas ir atrodo, kad komentarai nėra skirti Jums, [[Special:wiki_UserLogin/signup|sukurkite paskyrą]] arba [[Special:wiki_UserLogin|prisijunkite]], ir nebūsite tapatinamas su kitais anoniminiais naudotojais.''",
 'noarticletext' => 'Šiuo metu šiame puslapyje nėra jokio teksto.
 Jūs galite [[Special:Search/{{PAGENAME}}|ieškoti šio puslapio pavadinimo]] kituose puslapiuose,
 <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} ieškoti susijusių įrašų],
@@ -864,7 +864,7 @@ Prašome pamėginti vėl. Jei tai nepadeda, pamėginkite atsijungti ir prisijung
 
 ''Kadangi {{SITENAME}} grynasis HTML yra įjungtas, peržiūra yra paslėpta kaip atsargumo priemonė prieš JavaScript atakas.''
 
-'''Jei tai teisėtas keitimo bandymas, prašome pamėginti vėl. Jei tai nepadeda, pamėginkite [[Special:UserLogout|atsijungti]] ir prisijungti atgal.'''",
+'''Jei tai teisėtas keitimo bandymas, prašome pamėginti vėl. Jei tai nepadeda, pamėginkite [[Special:wiki_UserLogout|atsijungti]] ir prisijungti atgal.'''",
 'token_suffix_mismatch' => "'''Jūsų pakeitimas buvo atmestas, nes jūsų naršyklė iškraipė skyrybos ženklus keitimo žymėje. Keitimas buvo atmestas norint apsaugoti puslapio tekstą nuo sugadinimo. Taip kartais būna, kai jūs naudojate anoniminį tarpinio serverio paslaugą.'''",
 'edit_form_incomplete' => "'''Kai redaguoti formos dalys nepasiekė serverio; du kartus patikrinti, kad jūsų pakeitimai yra nesugadintos ir bandykite dar kartą.'''",
 'editing' => 'Taisomas $1',
@@ -910,7 +910,7 @@ Naujausias įrašas žurnale yra pateiktas žemiau:",
 'edittools' => '<!-- Šis tekstas bus rodomas po redagavimo ir įkėlimo formomis. -->',
 'nocreatetitle' => 'Puslapių kūrimas apribotas',
 'nocreatetext' => '{{SITENAME}} apribojo galimybę kurti naujus puslapius.
-Jūs galite grįžti ir redaguoti jau esantį puslapį, arba [[Special:UserLogin|prisijungti arba sukurti paskyrą]].',
+Jūs galite grįžti ir redaguoti jau esantį puslapį, arba [[Special:wiki_UserLogin|prisijungti arba sukurti paskyrą]].',
 'nocreate-loggedin' => 'Jūs neturite teisės kurti puslapius.',
 'sectioneditnotsupported-title' => 'Skyrių redagavimas nepalaikomas',
 'sectioneditnotsupported-text' => 'Šiame puslapyje skyrių redagavimas nepalaikomas.',
@@ -953,11 +953,11 @@ Kai kurie šablonai nebus įtraukti.',
 'undo-success' => 'Keitimas gali būti atšauktas. Prašome patikrinti palyginimą, esantį žemiau, kad patvirtintumėte, kad jūs tai ir norite padaryti, ir tada išsaugokite pakeitimus, esančius žemiau, kad užbaigtumėte keitimo atšaukimą.',
 'undo-failure' => 'Keitimas negali būti atšauktas dėl konfliktuojančių tarpinių keitimų.',
 'undo-norev' => 'Keitimas negali būti atšauktas, kadangi jis neegzistuoja arba buvo ištrintas.',
-'undo-summary' => 'Atšauktas [[Special:Contributions/$2|$2]] ([[User talk:$2|Aptarimas]] | [[Special:Contributions/$2|{{MediaWiki:Contribslink}}]]) keitimas ($1 versija)',
+'undo-summary' => 'Atšauktas [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Aptarimas]] | [[Special:Contributions/$2|{{MediaWiki:Contribslink}}]]) keitimas ($1 versija)',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'Paskyrų kūrimas negalimas',
-'cantcreateaccount-text' => "Paskyrų kūrimą iš šio IP adreso ('''$1''') užblokavo [[User:$3|$3]].
+'cantcreateaccount-text' => "Paskyrų kūrimą iš šio IP adreso ('''$1''') užblokavo [[wiki_User:$3|$3]].
 
 $3 nurodyta priežastis yra ''$2''",
 
@@ -1213,7 +1213,7 @@ Prašome patikrinti sąrašus.',
 'mypreferences' => 'Mano nustatymai',
 'prefs-edits' => 'Keitimų skaičius:',
 'prefsnologin' => 'Neprisijungęs',
-'prefsnologintext' => 'Jums reikia būti <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} prisijungusiam]</span>, kad galėtumėte keisti savo nustatymus.',
+'prefsnologintext' => 'Jums reikia būti <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} prisijungusiam]</span>, kad galėtumėte keisti savo nustatymus.',
 'changepassword' => 'Pakeisti slaptažodį',
 'prefs-skin' => 'Išvaizda',
 'skin-preview' => 'Peržiūra',
@@ -1326,16 +1326,16 @@ Jei jūs jį įvesite, jis bus naudojamas pažymėti jūsų darbą.',
 'prefs-displaywatchlist' => 'Rodymo nuostatos',
 'prefs-diffs' => 'Skirtumai',
 
-# User preference: e-mail validation using jQuery
+# wiki_User preference: e-mail validation using jQuery
 'email-address-validity-valid' => 'Panašu, kad E-pašto adresas yra teisingas',
 'email-address-validity-invalid' => 'Įveskite korektišką e-pašto adresą',
 
-# User rights
+# wiki_User rights
 'userrights' => 'Naudotojų teisių valdymas',
 'userrights-lookup-user' => 'Tvarkyti naudotojo grupes',
 'userrights-user-editname' => 'Įveskite naudotojo vardą:',
 'editusergroup' => 'Redaguoti naudotojo grupes',
-'editinguser' => "Taisomos naudotojo '''[[User:$1|$1]]''' $2
+'editinguser' => "Taisomos naudotojo '''[[wiki_User:$1|$1]]''' $2
 teisės",
 'userrights-editusergroup' => 'Redaguoti naudotojų grupes',
 'saveusergroups' => 'Saugoti naudotojų grupes',
@@ -1348,7 +1348,7 @@ teisės",
 'userrights-reason' => 'Priežastis:',
 'userrights-no-interwiki' => 'Jūs neturite leidimo keisti naudotojų teises kituose projektuose.',
 'userrights-nodatabase' => 'Duomenų bazė $1 neegzistuoja arba yra ne vietinė.',
-'userrights-nologin' => 'Jūs privalote [[Special:UserLogin|prisijungti]] kaip administratorius, kad galėtumėte priskirti naudotojų teises.',
+'userrights-nologin' => 'Jūs privalote [[Special:wiki_UserLogin|prisijungti]] kaip administratorius, kad galėtumėte priskirti naudotojų teises.',
 'userrights-notallowed' => 'Jūsų paskyra neturi teisių priskirti ar panaikinti naudotojų teises.',
 'userrights-changeable-col' => 'Grupės, kurias galite keisti',
 'userrights-unchangeable-col' => 'Grupės, kurių negalite keisti',
@@ -1439,7 +1439,7 @@ teisės",
 'right-sendemail' => 'Siųsti el. laišką kitiems naudotojams',
 'right-passwordreset' => 'Peržiūrėti slaptažodžio pakeitimo e-mail laiškus',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Naudotojų teisių pakeitimai',
 'rightslogtext' => 'Pateikiamas naudotojų teisių pakeitimų sąrašas.',
 'rightslogentry' => 'pakeista $1 grupės narystė iš $2 į $3',
@@ -1536,7 +1536,7 @@ Puslapiai iš jūsų [[Special:Watchlist|stebimųjų sąrašo]] yra '''paryškin
 'reuploaddesc' => 'Atšaukti įkėlimą ir grįžti į įkėlimo formą.',
 'upload-tryagain' => 'Siųsti pakeistą failo aprašymą',
 'uploadnologin' => 'Neprisijungęs',
-'uploadnologintext' => 'Norėdami įkelti failą, turite būti [[Special:UserLogin|prisijungęs]].',
+'uploadnologintext' => 'Norėdami įkelti failą, turite būti [[Special:wiki_UserLogin|prisijungęs]].',
 'upload_directory_missing' => 'Nėra įkėlimo aplanko ($1) ir negali būti sukurtas tinklo serverio.',
 'upload_directory_read_only' => 'Tinklapio serveris negali rašyti į įkėlimo aplanką ($1).',
 'uploaderror' => 'Įkėlimo klaida',
@@ -1652,7 +1652,7 @@ $1',
 'upload-proto-error-text' => 'Nuotoliniai įkėlimas reikalauja, kad URL prasidėtų <code>http://</code> arba <code>ftp://</code>.',
 'upload-file-error' => 'Vidinė klaida',
 'upload-file-error-text' => 'Įvyko vidinė klaida bandant sukurti laikinąjį failą serveryje.
-Prašome susisiekti su [[Special:ListUsers/sysop|sistemos administratoriumi]].',
+Prašome susisiekti su [[Special:Listwiki_Users/sysop|sistemos administratoriumi]].',
 'upload-misc-error' => 'Nežinoma įkėlimo klaida',
 'upload-misc-error-text' => 'Įvyko nežinoma klaida vykstant įkėlimui. Prašome patikrinti, kad URL teisingas bei pasiekiamas ir pamėginkite vėl. Jei problema lieka, susisiekite su sistemos administratoriumi.',
 'upload-too-many-redirects' => 'URL yra per daug kartų peradresuotas',
@@ -1873,7 +1873,7 @@ Informacija iš [$2 failo aprašymo puslapio] yra pateikiama žemiau.',
 'statistics-views-total' => 'Iš viso peržiūrų',
 'statistics-views-total-desc' => 'Neegzistuojančių ir specialiųjų puslapių parodymai neįtraukti',
 'statistics-views-peredit' => 'Peržiūrų skaičius puslapio versijai',
-'statistics-users' => 'Registruotų [[Special:ListUsers|naudotojų]]',
+'statistics-users' => 'Registruotų [[Special:Listwiki_Users|naudotojų]]',
 'statistics-users-active' => 'Aktyvių naudotojų',
 'statistics-users-active-desc' => 'Naudotojai, kurie per {{PLURAL:$1|paskutinę dieną|paskutines $1 dienų}} padarė keitimų',
 'statistics-mostpopular' => 'Daugiausiai rodyti puslapiai',
@@ -2040,13 +2040,13 @@ Palaikomi protokolai: <code>$1</code> (nei vieno iš jų nenurodykite paieškoje
 'linksearch-line' => '$1 yra susietas iš $2',
 'linksearch-error' => 'Žvaigždutės gali būti tik adreso pradžioje.',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => 'Rodyti naudotojus pradedant nuo:',
 'listusers-submit' => 'Rodyti',
 'listusers-noresult' => 'Nerasta jokių naudotojų.',
 'listusers-blocked' => '(užblokuotas)',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'Aktyvių naudotojų sąrašas',
 'activeusers-intro' => 'Tai naudotojų sąrašas, kurie ką nors padarė per $1 {{PLURAL:$1|paskutinę dieną|paskutines dienas|paskutinių dienų}}.',
 'activeusers-count' => '$1 {{PLURAL:$1|keitimas|keitimai|keitimų}} per $3 {{PLURAL:$3|paskutinę dieną|paskutines dienas|paskutinių dienų}}',
@@ -2080,7 +2080,7 @@ Palaikomi protokolai: <code>$1</code> (nei vieno iš jų nenurodykite paieškoje
 
 # E-mail user
 'mailnologin' => 'Nėra adreso',
-'mailnologintext' => 'Jums reikia būti [[Special:UserLogin|prisijungusiam]] ir turi būti įvestas teisingas el. pašto adresas jūsų [[Special:Preferences|nustatymuose]], kad siųstumėte el. laiškus kitiems nautotojams.',
+'mailnologintext' => 'Jums reikia būti [[Special:wiki_UserLogin|prisijungusiam]] ir turi būti įvestas teisingas el. pašto adresas jūsų [[Special:Preferences|nustatymuose]], kad siųstumėte el. laiškus kitiems nautotojams.',
 'emailuser' => 'Rašyti laišką šiam naudotojui',
 'emailuser-title-notarget' => 'El. pašto vartotojas',
 'emailpage' => 'Siųsti el. laišką naudotojui',
@@ -2110,7 +2110,7 @@ El. pašto adresas, kurį įvedėte [[Special:Preferences|savo naudotojo nustaty
 'emailsenttext' => 'Jūsų el. pašto žinutė išsiųsta.',
 'emailuserfooter' => 'Šis elektroninis laiškas buvo išsiųstas naudotojo $1 naudotojui $2 naudojant „Rašyti elektroninį laišką“ funkciją projekte {{SITENAME}}.',
 
-# User Messenger
+# wiki_User Messenger
 'usermessage-summary' => 'Paliekamas sistemos pranešimas.',
 'usermessage-editor' => 'Sistemos pranešėjas',
 
@@ -2121,7 +2121,7 @@ El. pašto adresas, kurį įvedėte [[Special:Preferences|savo naudotojo nustaty
 'nowatchlist' => 'Neturite nei vieno stebimo puslapio.',
 'watchlistanontext' => 'Prašome $1, kad peržiūrėtumėte ar pakeistumėte elementus savo stebimųjų sąraše.',
 'watchnologin' => 'Neprisijungęs',
-'watchnologintext' => 'Jums reikia būti [[Special:UserLogin|prisijungusiam]], kad pakeistumėte savo stebimųjų sąrašą.',
+'watchnologintext' => 'Jums reikia būti [[Special:wiki_UserLogin|prisijungusiam]], kad pakeistumėte savo stebimųjų sąrašą.',
 'addwatch' => 'Pridėti į stebimųjų sąrašą',
 'addedwatchtext' => "Puslapis „[[:$1]]“ pridėtas į [[Special:Watchlist|stebimųjų sąrašą]].
 Būsimi puslapio bei atitinkamo aptarimo puslapio pakeitimai bus rodomi stebimųjų puslapių sąraše,
@@ -2231,13 +2231,13 @@ Paskutinių šalinimų istorija - $2.',
 'rollbacklinkcount-morethan' => 'atmesti daugiau nei $1 {{PLURAL:$1|keitimą|keitimų}}',
 'rollbackfailed' => 'Atmetimas nepavyko',
 'cantrollback' => 'Negalima atmesti redagavimo; paskutinis keitęs naudotojas yra šio puslapio autorius.',
-'alreadyrolled' => 'Nepavyko atmesti paskutinio [[User:$2|$2]] ([[User talk:$2|Aptarimas]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]) daryto puslapio [[:$1]] keitimo;
+'alreadyrolled' => 'Nepavyko atmesti paskutinio [[wiki_User:$2|$2]] ([[wiki_User talk:$2|Aptarimas]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]) daryto puslapio [[:$1]] keitimo;
 kažkas jau pakeitė puslapį arba suspėjo pirmas atmesti keitimą.
 
-Paskutimas keitimas darytas naudotojo [[User:$3|$3]] ([[User talk:$3|Aptarimas]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
+Paskutimas keitimas darytas naudotojo [[wiki_User:$3|$3]] ([[wiki_User talk:$3|Aptarimas]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
 'editcomment' => "Redagavimo komentaras: „''$1''“.",
-'revertpage' => 'Atmestas [[Special:Contributions/$2|$2]] ([[User talk:$2|Aptarimas]]) pakeitimas; sugrąžinta [[User:$1|$1]] versija',
-'revertpage-nouser' => 'Atmesti (naudotojo vardas pašalintas) pakeitimai, grąžinta prieš tai buvusi [[User:$1|$1]] versija',
+'revertpage' => 'Atmestas [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Aptarimas]]) pakeitimas; sugrąžinta [[wiki_User:$1|$1]] versija',
+'revertpage-nouser' => 'Atmesti (naudotojo vardas pašalintas) pakeitimai, grąžinta prieš tai buvusi [[wiki_User:$1|$1]] versija',
 'rollback-success' => 'Atmesti $1 pakeitimai;
 grąžinta prieš tai buvusi $2 versija.',
 
@@ -2468,7 +2468,7 @@ Aplankykite [[Special:BlockList|IP blokavimų istoriją]] norėdami jį peržiū
 'unblockiptext' => 'Naudokite šią formą, kad atkurtumėte redagavimo galimybę
 ankščiau užblokuotam IP adresui ar naudotojui.',
 'ipusubmit' => 'Atblokuoti šį adresą',
-'unblocked' => '[[User:$1|$1]] buvo atblokuotas',
+'unblocked' => '[[wiki_User:$1|$1]] buvo atblokuotas',
 'unblocked-range' => '$1 buvo atblokuotas',
 'unblocked-id' => 'Blokavimas $1 buvo pašalintas',
 'blocklist' => 'Blokuoti naudotojai',
@@ -2501,7 +2501,7 @@ ankščiau užblokuotam IP adresui ar naudotojui.',
 'change-blocklink' => 'keisti blokavimo nustatymus',
 'contribslink' => 'įnašas',
 'emaillink' => 'siųsti el. laišką',
-'autoblocker' => 'Jūs buvote automatiškai užblokuotas, nes jūsų IP adresą neseniai naudojo „[[User:$1|$1]]“. Nurodyta naudotojo $1 blokavimo priežastis: „$2“.',
+'autoblocker' => 'Jūs buvote automatiškai užblokuotas, nes jūsų IP adresą neseniai naudojo „[[wiki_User:$1|$1]]“. Nurodyta naudotojo $1 blokavimo priežastis: „$2“.',
 'blocklogpage' => 'Blokavimų sąrašas',
 'blocklog-showlog' => 'Šis naudotojas buvo užblokuotas.
 Pateikiamas paskutinis blokavimo istorijos įrašas.',
@@ -2612,7 +2612,7 @@ dėl to šį veiksmą vykdykite tik įsitikinę, kad suprantate visas pasekmes."
 'movearticle' => 'Pervardinti puslapį:',
 'moveuserpage-warning' => "'''Dėmesio:''' Jūs ruošiatės perkelti naudotojo puslapį. Atkreipkite dėmesį, kad bus perkeltas tik puslapis, naudotojas ''nebus'' pervadintas.",
 'movenologin' => 'Neprisijungęs',
-'movenologintext' => 'Norėdami pervadinti puslapį, turite būti užsiregistravęs naudotojas ir būti  [[Special:UserLogin|prisijungęs]].',
+'movenologintext' => 'Norėdami pervadinti puslapį, turite būti užsiregistravęs naudotojas ir būti  [[Special:wiki_UserLogin|prisijungęs]].',
 'movenotallowed' => 'Jūs neturite teisių pervadinti puslapių.',
 'movenotallowedfile' => 'Jūs neturite teisės perkelti failus.',
 'cant-move-user-page' => 'Jūs neturite teisės perkelti naudotojų puslapių (išskyrus popuslapius).',
@@ -3502,10 +3502,10 @@ $5
 
 # Delete conflict
 'deletedwhileediting' => 'Dėmesio: Šis puslapis ištrintas po to, kai pradėjote redaguoti!',
-'confirmrecreate' => "{{GENDER:$1|Naudotojas&nbsp;|Naudotoja&nbsp;|}}[[User:$1|$1]] ([[User talk:$1|aptarimas]]) ištrynė šį puslapį po to, kai pradėjote jį redaguoti. Trynimo priežastis:
+'confirmrecreate' => "{{GENDER:$1|Naudotojas&nbsp;|Naudotoja&nbsp;|}}[[wiki_User:$1|$1]] ([[wiki_User talk:$1|aptarimas]]) ištrynė šį puslapį po to, kai pradėjote jį redaguoti. Trynimo priežastis:
 : ''$2''
 Prašome patvirtinti, kad tikrai norite iš naujo sukurti puslapį.",
-'confirmrecreate-noreason' => '{{GENDER:$1|Naudotojas&nbsp;|Naudotoja&nbsp;|}}[[User:$1|$1]] ([[User talk:$1|aptarimas]]) ištrynė šį puslapį po to, kai jūs pradėjote redaguoti. Prašome patvirtinti, jog jūs tikrai norite atkurti šį puslapį.',
+'confirmrecreate-noreason' => '{{GENDER:$1|Naudotojas&nbsp;|Naudotoja&nbsp;|}}[[wiki_User:$1|$1]] ([[wiki_User talk:$1|aptarimas]]) ištrynė šį puslapį po to, kai jūs pradėjote redaguoti. Prašome patvirtinti, jog jūs tikrai norite atkurti šį puslapį.',
 'recreate' => 'Atkurti',
 
 # action=purge

@@ -7,14 +7,14 @@
 class GenderCacheTest extends MediaWikiLangTestCase {
 
 	function setUp() {
-		global $wgDefaultUserOptions;
+		global $wgDefaultwiki_UserOptions;
 		parent::setUp();
 		//ensure the correct default gender
-		$wgDefaultUserOptions['gender'] = 'unknown';
+		$wgDefaultwiki_UserOptions['gender'] = 'unknown';
 	}
 
 	function addDBData() {
-		$user = User::newFromName( 'UTMale' );
+		$user = wiki_User::newFromName( 'UTMale' );
 		if( $user->getID() == 0 ) {
 			$user->addToDatabase();
 			$user->setPassword( 'UTMalePassword' );
@@ -23,7 +23,7 @@ class GenderCacheTest extends MediaWikiLangTestCase {
 		$user->setOption( 'gender', 'male' );
 		$user->saveSettings();
 
-		$user = User::newFromName( 'UTFemale' );
+		$user = wiki_User::newFromName( 'UTFemale' );
 		if( $user->getID() == 0 ) {
 			$user->addToDatabase();
 			$user->setPassword( 'UTFemalePassword' );
@@ -32,7 +32,7 @@ class GenderCacheTest extends MediaWikiLangTestCase {
 		$user->setOption( 'gender', 'female' );
 		$user->saveSettings();
 
-		$user = User::newFromName( 'UTDefaultGender' );
+		$user = wiki_User::newFromName( 'UTDefaultGender' );
 		if( $user->getID() == 0 ) {
 			$user->addToDatabase();
 			$user->setPassword( 'UTDefaultGenderPassword' );
@@ -45,9 +45,9 @@ class GenderCacheTest extends MediaWikiLangTestCase {
 	/**
 	 * test usernames
 	 *
-	 * @dataProvider dataUserName
+	 * @dataProvider datawiki_UserName
 	 */
-	function testUserName( $username, $expectedGender ) {
+	function testwiki_UserName( $username, $expectedGender ) {
 		$genderCache = GenderCache::singleton();
 		$gender = $genderCache->getGenderOf( $username );
 		$this->assertEquals( $gender, $expectedGender, "GenderCache normal" );
@@ -56,16 +56,16 @@ class GenderCacheTest extends MediaWikiLangTestCase {
 	/**
 	 * genderCache should work with user objects, too
 	 *
-	 * @dataProvider dataUserName
+	 * @dataProvider datawiki_UserName
 	 */
-	function testUserObjects( $username, $expectedGender ) {
+	function testwiki_UserObjects( $username, $expectedGender ) {
 		$genderCache = GenderCache::singleton();
-		$user = User::newFromName( $username );
+		$user = wiki_User::newFromName( $username );
 		$gender = $genderCache->getGenderOf( $user );
 		$this->assertEquals( $gender, $expectedGender, "GenderCache normal" );
 	}
 
-	function dataUserName() {
+	function datawiki_UserName() {
 		return array(
 			array( 'UTMale', 'male' ),
 			array( 'UTFemale', 'female' ),

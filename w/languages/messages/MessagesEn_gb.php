@@ -23,7 +23,7 @@ $specialPageAliases = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-watchcreations' => 'Add pages I create to my watchlist',
 'tog-watchdefault' => 'Add pages I edit to my watchlist',
 'tog-watchmoves' => 'Add pages I move to my watchlist',
@@ -55,7 +55,7 @@ Database returned error ‘$3: $4’',
 This is usually caused by following an outdated diff or history link to a page that has been deleted.
 
 If this is not the case, you may have found a bug in the software.
-Please report this to an [[Special:ListUsers/sysop|administrator]], making note of the URL.',
+Please report this to an [[Special:Listwiki_Users/sysop|administrator]], making note of the URL.',
 'fileappenderrorread' => 'Could not read ‘$1’ during append.',
 'fileappenderror' => 'Could not append ‘$1’ to ‘$2.’',
 'filecopyerror' => 'Could not copy file ‘$1’ to ‘$2.’',

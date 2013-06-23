@@ -47,7 +47,7 @@ $separatorTransformTable = null;
  * checkboxes. Extra settings in derived languages will automatically be
  * appended to the array of the fallback languages.
  */
-$extraUserToggles = array();
+$extrawiki_UserToggles = array();
 
 /**
  * URLs do not specify their encoding. UTF-8 is used by default, but if the
@@ -83,8 +83,8 @@ $namespaceNames = array(
 	NS_SPECIAL          => 'Special',
 	NS_MAIN             => '',
 	NS_TALK             => 'Talk',
-	NS_USER             => 'User',
-	NS_USER_TALK        => 'User_talk',
+	NS_USER             => 'wiki_User',
+	NS_USER_TALK        => 'wiki_User_talk',
 	# NS_PROJECT set by $wgMetaNamespace
 	NS_PROJECT_TALK     => '$1_talk',
 	NS_FILE             => 'File',
@@ -371,13 +371,13 @@ $magicWords = array(
  * hook.
  */
 $specialPageAliases = array(
-	'Activeusers'               => array( 'ActiveUsers' ),
+	'Activeusers'               => array( 'Activewiki_Users' ),
 	'Allmessages'               => array( 'AllMessages' ),
 	'Allpages'                  => array( 'AllPages' ),
 	'Ancientpages'              => array( 'AncientPages' ),
 	'Badtitle'                  => array( 'Badtitle' ),
 	'Blankpage'                 => array( 'BlankPage' ),
-	'Block'                     => array( 'Block', 'BlockIP', 'BlockUser' ),
+	'Block'                     => array( 'Block', 'BlockIP', 'Blockwiki_User' ),
 	'Blockme'                   => array( 'BlockMe' ),
 	'Booksources'               => array( 'BookSources' ),
 	'BrokenRedirects'           => array( 'BrokenRedirects' ),
@@ -393,7 +393,7 @@ $specialPageAliases = array(
 	'Disambiguations'           => array( 'Disambiguations' ),
 	'DoubleRedirects'           => array( 'DoubleRedirects' ),
 	'EditWatchlist'             => array( 'EditWatchlist' ),
-	'Emailuser'                 => array( 'EmailUser' ),
+	'Emailuser'                 => array( 'Emailwiki_User' ),
 	'Export'                    => array( 'Export' ),
 	'Fewestrevisions'           => array( 'FewestRevisions' ),
 	'FileDuplicateSearch'       => array( 'FileDuplicateSearch' ),
@@ -406,9 +406,9 @@ $specialPageAliases = array(
 	'Listadmins'                => array( 'ListAdmins' ),
 	'Listbots'                  => array( 'ListBots' ),
 	'Listfiles'                 => array( 'ListFiles', 'FileList', 'ImageList' ),
-	'Listgrouprights'           => array( 'ListGroupRights', 'UserGroupRights' ),
+	'Listgrouprights'           => array( 'ListGroupRights', 'wiki_UserGroupRights' ),
 	'Listredirects'             => array( 'ListRedirects' ),
-	'Listusers'                 => array( 'ListUsers', 'UserList' ),
+	'Listusers'                 => array( 'Listwiki_Users', 'wiki_UserList' ),
 	'Lockdb'                    => array( 'LockDB' ),
 	'Log'                       => array( 'Log', 'Logs' ),
 	'Lonelypages'               => array( 'LonelyPages', 'OrphanedPages' ),
@@ -460,9 +460,9 @@ $specialPageAliases = array(
 	'Unwatchedpages'            => array( 'UnwatchedPages' ),
 	'Upload'                    => array( 'Upload' ),
 	'UploadStash'               => array( 'UploadStash' ),
-	'Userlogin'                 => array( 'UserLogin' ),
-	'Userlogout'                => array( 'UserLogout' ),
-	'Userrights'                => array( 'UserRights', 'MakeSysop', 'MakeBot' ),
+	'wiki_Userlogin'                 => array( 'wiki_UserLogin' ),
+	'wiki_Userlogout'                => array( 'wiki_UserLogout' ),
+	'wiki_Userrights'                => array( 'wiki_UserRights', 'MakeSysop', 'MakeBot' ),
 	'Version'                   => array( 'Version' ),
 	'Wantedcategories'          => array( 'WantedCategories' ),
 	'Wantedfiles'               => array( 'WantedFiles' ),
@@ -635,7 +635,7 @@ XHTML id names.
 * TOOLBOX
 * LANGUAGES', # do not translate or duplicate this message to other languages
 
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline'               => 'Link underlining:',
 'tog-justify'                 => 'Justify paragraphs',
 'tog-hideminor'               => 'Hide minor edits in recent changes',
@@ -950,7 +950,7 @@ See [[Special:Version|version page]].',
 
 # Short words for each namespace, by default used in the namespace tab in monobook
 'nstab-main'      => 'Page',
-'nstab-user'      => 'User page',
+'nstab-user'      => 'wiki_User page',
 'nstab-media'     => 'Media page',
 'nstab-special'   => 'Special page',
 'nstab-project'   => 'Project page',
@@ -996,7 +996,7 @@ The administrator who locked it offered this explanation: $1',
 This is usually caused by following an outdated diff or history link to a page that has been deleted.
 
 If this is not the case, you may have found a bug in the software.
-Please report this to an [[Special:ListUsers/sysop|administrator]], making note of the URL.',
+Please report this to an [[Special:Listwiki_Users/sysop|administrator]], making note of the URL.',
 'missingarticle-rev'            => '(revision#: $1)',
 'missingarticle-diff'           => '(Diff: $1, $2)',
 'readonly_lag'                  => 'The database has been automatically locked while the slave database servers catch up to the master',
@@ -1048,7 +1048,7 @@ $2',
 'customcssprotected'            => "You do not have permission to edit this CSS page because it contains another user's personal settings.",
 'customjsprotected'             => "You do not have permission to edit this JavaScript page because it contains another user's personal settings.",
 'ns-specialprotected'           => 'Special pages cannot be edited.',
-'titleprotected'                => 'This title has been protected from creation by [[User:$1|$1]].
+'titleprotected'                => 'This title has been protected from creation by [[wiki_User:$1|$1]].
 The reason given is "\'\'$2\'\'".',
 'filereadonlyerror'             => 'Unable to modify the file "$1" because the file repository "$2" is in read-only mode.
 
@@ -1066,12 +1066,12 @@ The administrator who locked it offered this explanation: "$3".',
 # Login and logout pages
 'logouttext'                 => "'''You are now logged out.'''
 
-You can continue to use {{SITENAME}} anonymously, or you can [[Special:UserLogin|log in again]] as the same or as a different user.
+You can continue to use {{SITENAME}} anonymously, or you can [[Special:wiki_UserLogin|log in again]] as the same or as a different user.
 Note that some pages may continue to be displayed as if you were still logged in, until you clear your browser cache.",
 'welcomecreation'            => '== Welcome, $1! ==
 Your account has been created.
 Do not forget to change your [[Special:Preferences|{{SITENAME}} preferences]].',
-'yourname'                   => 'Username:',
+'yourname'                   => 'wiki_Username:',
 'yourpassword'               => 'Password:',
 'yourpasswordagain'          => 'Retype password:',
 'remembermypassword'         => 'Remember my login on this browser (for a maximum of $1 {{PLURAL:$1|day|days}})',
@@ -1097,7 +1097,7 @@ Do not forget to change your [[Special:Preferences|{{SITENAME}} preferences]].',
 'createaccountmail'          => 'By e-mail',
 'createaccountreason'        => 'Reason:',
 'badretype'                  => 'The passwords you entered do not match.',
-'userexists'                 => 'Username entered already in use.
+'userexists'                 => 'wiki_Username entered already in use.
 Please choose a different name.',
 'loginerror'                 => 'Login error',
 'createaccounterror'         => 'Could not create account: $1',
@@ -1115,8 +1115,8 @@ Ensure you have cookies enabled, reload this page and try again.',
 'loginsuccesstitle'          => 'Login successful',
 'loginsuccess'               => "'''You are now logged in to {{SITENAME}} as \"\$1\".'''",
 'nosuchuser'                 => 'There is no user by the name "$1".
-Usernames are case sensitive.
-Check your spelling, or [[Special:UserLogin/signup|create a new account]].',
+wiki_Usernames are case sensitive.
+Check your spelling, or [[Special:wiki_UserLogin/signup|create a new account]].',
 'nosuchusershort'            => 'There is no user by the name "$1".
 Check your spelling.',
 'nouserspecified'            => 'You have to specify a username.',
@@ -1173,7 +1173,7 @@ Please enter a well-formatted address or empty that field.',
 You should log in and change your password now.
 
 You may ignore this message, if this account was created in error.',
-'usernamehasherror'          => 'Username cannot contain hash characters',
+'usernamehasherror'          => 'wiki_Username cannot contain hash characters',
 'login-throttled'            => 'You have made too many recent login attempts.
 Please wait before trying again.',
 'login-abort-generic'        => 'Your login was unsuccessful - Aborted',
@@ -1219,7 +1219,7 @@ You may have already successfully changed your password or requested a new tempo
 'passwordreset-legend'             => 'Reset password',
 'passwordreset-disabled'           => 'Password resets have been disabled on this wiki.',
 'passwordreset-pretext'            => '{{PLURAL:$1||Enter one of the pieces of data below}}',
-'passwordreset-username'           => 'Username:',
+'passwordreset-username'           => 'wiki_Username:',
 'passwordreset-domain'             => 'Domain:',
 'passwordreset-capture'            => 'View the resulting e-mail?',
 'passwordreset-capture-help'       => 'If you check this box, the e-mail (with the temporary password) will be shown to you as well as being sent to the user.',
@@ -1236,7 +1236,7 @@ You should log in and choose a new password now. If someone else made this
 request, or if you have remembered your original password, and you no longer
 wish to change it, you may ignore this message and continue using your old
 password.',
-'passwordreset-emailtext-user'     => 'User $1 on {{SITENAME}} requested a reminder of your account details for {{SITENAME}}
+'passwordreset-emailtext-user'     => 'wiki_User $1 on {{SITENAME}} requested a reminder of your account details for {{SITENAME}}
 ($4). The following user {{PLURAL:$3|account is|accounts are}} associated with this e-mail address:
 
 $2
@@ -1246,7 +1246,7 @@ You should log in and choose a new password now. If someone else made this
 request, or if you have remembered your original password, and you no longer
 wish to change it, you may ignore this message and continue using your old
 password.',
-'passwordreset-emailelement'       => 'Username: $1
+'passwordreset-emailelement'       => 'wiki_Username: $1
 Temporary password: $2',
 'passwordreset-emailsent'          => 'A reminder e-mail has been sent.',
 'passwordreset-emailsent-capture'  => 'A reminder e-mail has been sent, which is shown below.',
@@ -1304,7 +1304,7 @@ If you click \"{{int:savearticle}}\" again, your edit will be saved without one.
 If you click \"{{int:savearticle}}\" again, your edit will be saved without one.",
 'summary-preview'                  => 'Summary preview:',
 'subject-preview'                  => 'Subject/headline preview:',
-'blockedtitle'                     => 'User is blocked',
+'blockedtitle'                     => 'wiki_User is blocked',
 'blockedtext'                      => "'''Your username or IP address has been blocked.'''
 
 The block was made by $1.
@@ -1344,7 +1344,7 @@ It may have been moved or deleted while you were viewing the page.',
 'loginreqlink'                     => 'log in',
 'loginreqpagetext'                 => 'You must $1 to view other pages.',
 'accmailtitle'                     => 'Password sent.',
-'accmailtext'                      => "A randomly generated password for [[User talk:$1|$1]] has been sent to $2.
+'accmailtext'                      => "A randomly generated password for [[wiki_User talk:$1|$1]] has been sent to $2.
 
 The password for this new account can be changed on the ''[[Special:ChangePassword|change password]]'' page upon logging in.",
 'newarticle'                       => '(New)',
@@ -1356,7 +1356,7 @@ If you are here by mistake, click your browser's '''back''' button.",
 'anontalkpagetext'                 => "----''This is the discussion page for an anonymous user who has not created an account yet, or who does not use it.
 We therefore have to use the numerical IP address to identify him/her.
 Such an IP address can be shared by several users.
-If you are an anonymous user and feel that irrelevant comments have been directed at you, please [[Special:UserLogin/signup|create an account]] or [[Special:UserLogin|log in]] to avoid future confusion with other anonymous users.''",
+If you are an anonymous user and feel that irrelevant comments have been directed at you, please [[Special:wiki_UserLogin/signup|create an account]] or [[Special:wiki_UserLogin|log in]] to avoid future confusion with other anonymous users.''",
 'noarticletext'                    => 'There is currently no text in this page.
 You can [[Special:Search/{{PAGENAME}}|search for this page title]] in other pages,
 <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} search the related logs],
@@ -1368,9 +1368,9 @@ You can [[Special:Search/{{PAGENAME}}|search for this page title]] in other page
 
 This is usually caused by following an outdated history link to a page that has been deleted.
 Details can be found in the [{{fullurl:{{#Special:Log}}/delete|page={{FULLPAGENAMEE}}}} deletion log].',
-'userpage-userdoesnotexist'        => 'User account "$1" is not registered.
+'userpage-userdoesnotexist'        => 'wiki_User account "$1" is not registered.
 Please check if you want to create/edit this page.',
-'userpage-userdoesnotexist-view'   => 'User account "$1" is not registered.',
+'userpage-userdoesnotexist-view'   => 'wiki_User account "$1" is not registered.',
 'blocked-notice-logextract'        => 'This user is currently blocked.
 The latest block log entry is provided below for reference:',
 'clearyourcache'                   => "'''Note:''' After saving, you may have to bypass your browser's cache to see the changes.
@@ -1398,13 +1398,13 @@ Your changes have not yet been saved!",
 'previewconflict'                  => 'This preview reflects the text in the upper text editing area as it will appear if you choose to save.',
 'session_fail_preview'             => "'''Sorry! We could not process your edit due to a loss of session data.'''
 Please try again.
-If it still does not work, try [[Special:UserLogout|logging out]] and logging back in.",
+If it still does not work, try [[Special:wiki_UserLogout|logging out]] and logging back in.",
 'session_fail_preview_html'        => "'''Sorry! We could not process your edit due to a loss of session data.'''
 
 ''Because {{SITENAME}} has raw HTML enabled, the preview is hidden as a precaution against JavaScript attacks.''
 
 '''If this is a legitimate edit attempt, please try again.'''
-If it still does not work, try [[Special:UserLogout|logging out]] and logging back in.",
+If it still does not work, try [[Special:wiki_UserLogout|logging out]] and logging back in.",
 'token_suffix_mismatch'            => "'''Your edit has been rejected because your client mangled the punctuation characters in the edit token.'''
 The edit has been rejected to prevent corruption of the page text.
 This sometimes happens when you are using a buggy web-based anonymous proxy service.",
@@ -1460,7 +1460,7 @@ The latest log entry is provided below for reference:",
 'edittools-upload'                 => '-', # only translate this message to other languages if you have to change it
 'nocreatetitle'                    => 'Page creation limited',
 'nocreatetext'                     => '{{SITENAME}} has restricted the ability to create new pages.
-You can go back and edit an existing page, or [[Special:UserLogin|log in or create an account]].',
+You can go back and edit an existing page, or [[Special:wiki_UserLogin|log in or create an account]].',
 'nocreate-loggedin'                => 'You do not have permission to create new pages.',
 'sectioneditnotsupported-title'    => 'Section editing not supported',
 'sectioneditnotsupported-text'     => 'Section editing is not supported in this page.',
@@ -1513,11 +1513,11 @@ These arguments have been omitted.",
 Please check the comparison below to verify that this is what you want to do, and then save the changes below to finish undoing the edit.',
 'undo-failure' => 'The edit could not be undone due to conflicting intermediate edits.',
 'undo-norev'   => 'The edit could not be undone because it does not exist or was deleted.',
-'undo-summary' => 'Undo revision $1 by [[Special:Contributions/$2|$2]] ([[User talk:$2|talk]])',
+'undo-summary' => 'Undo revision $1 by [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|talk]])',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'Cannot create account',
-'cantcreateaccount-text' => "Account creation from this IP address ('''$1''') has been blocked by [[User:$3|$3]].
+'cantcreateaccount-text' => "Account creation from this IP address ('''$1''') has been blocked by [[wiki_User:$3|$3]].
 
 The reason given by $3 is ''$2''",
 
@@ -1807,7 +1807,7 @@ Note that their indexes of {{SITENAME}} content may be out of date.',
 'mypreferences'                 => 'Preferences',
 'prefs-edits'                   => 'Number of edits:',
 'prefsnologin'                  => 'Not logged in',
-'prefsnologintext'              => 'You must be <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} logged in]</span> to set user preferences.',
+'prefsnologintext'              => 'You must be <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} logged in]</span> to set user preferences.',
 'changepassword'                => 'Change password',
 'changepassword-summary'        => '', # do not translate or duplicate this message to other languages
 'prefs-skin'                    => 'Skin',
@@ -1816,8 +1816,8 @@ Note that their indexes of {{SITENAME}} content may be out of date.',
 'prefs-beta'                    => 'Beta features',
 'prefs-datetime'                => 'Date and time',
 'prefs-labs'                    => 'Labs features',
-'prefs-user-pages'              => 'User pages',
-'prefs-personal'                => 'User profile',
+'prefs-user-pages'              => 'wiki_User pages',
+'prefs-personal'                => 'wiki_User profile',
 'prefs-rc'                      => 'Recent changes',
 'prefs-watchlist'               => 'Watchlist',
 'prefs-watchlist-days'          => 'Days to show in watchlist:',
@@ -1881,8 +1881,8 @@ This cannot be undone.',
 'prefs-emailconfirm-label'      => 'E-mail confirmation:',
 'prefs-textboxsize'             => 'Size of editing window',
 'youremail'                     => 'E-mail:',
-'username'                      => 'Username:',
-'uid'                           => 'User ID:',
+'username'                      => 'wiki_Username:',
+'uid'                           => 'wiki_User ID:',
 'prefs-memberingroups'          => 'Member of {{PLURAL:$1|group|groups}}:',
 'prefs-memberingroups-type'     => '$1', # only translate this message to other languages if you have to change it
 'prefs-registration'            => 'Registration time:',
@@ -1925,17 +1925,17 @@ Your e-mail address is not revealed when other users contact you.',
 'prefs-displaywatchlist'        => 'Display options',
 'prefs-diffs'                   => 'Diffs',
 
-# User preference: e-mail validation using jQuery
+# wiki_User preference: e-mail validation using jQuery
 'email-address-validity-valid'   => 'E-mail address appears valid',
 'email-address-validity-invalid' => 'Enter a valid e-mail address',
 
-# User rights
-'userrights'                     => 'User rights management',
+# wiki_User rights
+'userrights'                     => 'wiki_User rights management',
 'userrights-summary'             => '', # do not translate or duplicate this message to other languages
 'userrights-lookup-user'         => 'Manage user groups',
 'userrights-user-editname'       => 'Enter a username:',
 'editusergroup'                  => 'Edit user groups',
-'editinguser'                    => "Changing user rights of user '''[[User:$1|$1]]''' $2",
+'editinguser'                    => "Changing user rights of user '''[[wiki_User:$1|$1]]''' $2",
 'userrights-editusergroup'       => 'Edit user groups',
 'saveusergroups'                 => 'Save user groups',
 'userrights-groupsmember'        => 'Member of:',
@@ -1947,7 +1947,7 @@ Your e-mail address is not revealed when other users contact you.',
 'userrights-reason'              => 'Reason:',
 'userrights-no-interwiki'        => 'You do not have permission to edit user rights on other wikis.',
 'userrights-nodatabase'          => 'Database $1 does not exist or is not local.',
-'userrights-nologin'             => 'You must [[Special:UserLogin|log in]] with an administrator account to assign user rights.',
+'userrights-nologin'             => 'You must [[Special:wiki_UserLogin|log in]] with an administrator account to assign user rights.',
 'userrights-notallowed'          => 'Your account does not have permission to add or remove user rights.',
 'userrights-changeable-col'      => 'Groups you can change',
 'userrights-unchangeable-col'    => 'Groups you cannot change',
@@ -1955,7 +1955,7 @@ Your e-mail address is not revealed when other users contact you.',
 
 # Groups
 'group'               => 'Group:',
-'group-user'          => 'Users',
+'group-user'          => 'wiki_Users',
 'group-autoconfirmed' => 'Autoconfirmed users',
 'group-bot'           => 'Bots',
 'group-sysop'         => 'Administrators',
@@ -1970,7 +1970,7 @@ Your e-mail address is not revealed when other users contact you.',
 'group-bureaucrat-member'    => '{{GENDER:$1|bureaucrat}}',
 'group-suppress-member'      => '{{GENDER:$1|oversight}}',
 
-'grouppage-user'          => '{{ns:project}}:Users',
+'grouppage-user'          => '{{ns:project}}:wiki_Users',
 'grouppage-autoconfirmed' => '{{ns:project}}:Autoconfirmed users',
 'grouppage-bot'           => '{{ns:project}}:Bots',
 'grouppage-sysop'         => '{{ns:project}}:Administrators',
@@ -2039,8 +2039,8 @@ Your e-mail address is not revealed when other users contact you.',
 'right-sendemail'             => 'Send e-mail to other users',
 'right-passwordreset'         => 'View password reset e-mails',
 
-# User rights log
-'rightslog'                  => 'User rights log',
+# wiki_User rights log
+'rightslog'                  => 'wiki_User rights log',
 'rightslogtext'              => 'This is a log of changes to user rights.',
 'rightslogentry'             => 'changed group membership for $1 from $2 to $3',
 'rightslogentry-autopromote' => 'was automatically promoted from $2 to $3',
@@ -2141,7 +2141,7 @@ Pages on [[Special:Watchlist|your watchlist]] are '''bold'''.",
 'reuploaddesc'                => 'Cancel upload and return to the upload form',
 'upload-tryagain'             => 'Submit modified file description',
 'uploadnologin'               => 'Not logged in',
-'uploadnologintext'           => 'You must be [[Special:UserLogin|logged in]] to upload files.',
+'uploadnologintext'           => 'You must be [[Special:wiki_UserLogin|logged in]] to upload files.',
 'upload_directory_missing'    => 'The upload directory ($1) is missing and could not be created by the webserver.',
 'upload_directory_read_only'  => 'The upload directory ($1) is not writable by the webserver.',
 'uploaderror'                 => 'Upload error',
@@ -2285,11 +2285,11 @@ $1',
 'upload-proto-error-text'           => 'Remote upload requires URLs beginning with <code>http://</code> or <code>ftp://</code>.',
 'upload-file-error'                 => 'Internal error',
 'upload-file-error-text'            => 'An internal error occurred when attempting to create a temporary file on the server.
-Please contact an [[Special:ListUsers/sysop|administrator]].',
+Please contact an [[Special:Listwiki_Users/sysop|administrator]].',
 'upload-misc-error'                 => 'Unknown upload error',
 'upload-misc-error-text'            => 'An unknown error occurred during the upload.
 Please verify that the URL is valid and accessible and try again.
-If the problem persists, contact an [[Special:ListUsers/sysop|administrator]].',
+If the problem persists, contact an [[Special:Listwiki_Users/sysop|administrator]].',
 'upload-too-many-redirects'         => 'The URL contained too many redirects',
 'upload-unknown-size'               => 'Unknown size',
 'upload-http-error'                 => 'An HTTP error occurred: $1',
@@ -2371,7 +2371,7 @@ Only file access is allowed.',
 'img-auth-public'           => 'The function of img_auth.php is to output files from a private wiki.
 This wiki is configured as a public wiki.
 For optimal security, img_auth.php is disabled.',
-'img-auth-noread'           => 'User does not have access to read "$1".',
+'img-auth-noread'           => 'wiki_User does not have access to read "$1".',
 'img-auth-bad-query-string' => 'The URL has an invalid query string.',
 
 # HTTP errors
@@ -2410,7 +2410,7 @@ When filtered by user, only files where that user uploaded the most recent versi
 'listfiles_thumb'       => 'Thumbnail',
 'listfiles_date'        => 'Date',
 'listfiles_name'        => 'Name',
-'listfiles_user'        => 'User',
+'listfiles_user'        => 'wiki_User',
 'listfiles_size'        => 'Size',
 'listfiles_description' => 'Description',
 'listfiles_count'       => 'Versions',
@@ -2427,7 +2427,7 @@ When filtered by user, only files where that user uploaded the most recent versi
 'filehist-thumb'                    => 'Thumbnail',
 'filehist-thumbtext'                => 'Thumbnail for version as of $1',
 'filehist-nothumb'                  => 'No thumbnail',
-'filehist-user'                     => 'User',
+'filehist-user'                     => 'wiki_User',
 'filehist-dimensions'               => 'Dimensions',
 'filehist-filesize'                 => 'File size',
 'filehist-comment'                  => 'Comment',
@@ -2527,7 +2527,7 @@ Remember to check for other links to the templates before deleting them.',
 'statistics-header-pages'      => 'Page statistics',
 'statistics-header-edits'      => 'Edit statistics',
 'statistics-header-views'      => 'View statistics',
-'statistics-header-users'      => 'User statistics',
+'statistics-header-users'      => 'wiki_User statistics',
 'statistics-header-hooks'      => 'Other statistics',
 'statistics-articles'          => 'Content pages',
 'statistics-pages'             => 'Pages',
@@ -2538,9 +2538,9 @@ Remember to check for other links to the templates before deleting them.',
 'statistics-views-total'       => 'Views total',
 'statistics-views-total-desc'  => 'Views to non-existing pages and special pages are not included',
 'statistics-views-peredit'     => 'Views per edit',
-'statistics-users'             => 'Registered [[Special:ListUsers|users]]',
+'statistics-users'             => 'Registered [[Special:Listwiki_Users|users]]',
 'statistics-users-active'      => 'Active users',
-'statistics-users-active-desc' => 'Users who have performed an action in the last {{PLURAL:$1|day|$1 days}}',
+'statistics-users-active-desc' => 'wiki_Users who have performed an action in the last {{PLURAL:$1|day|$1 days}}',
 'statistics-mostpopular'       => 'Most viewed pages',
 'statistics-footer'            => '', # do not translate or duplicate this message to other languages
 
@@ -2648,7 +2648,7 @@ It now redirects to [[$2]].',
 'protectedtitles-summary'         => '', # do not translate or duplicate this message to other languages
 'protectedtitlestext'             => 'The following titles are protected from creation',
 'protectedtitlesempty'            => 'No titles are currently protected with these parameters.',
-'listusers'                       => 'User list',
+'listusers'                       => 'wiki_User list',
 'listusers-summary'               => '', # do not translate or duplicate this message to other languages
 'listusers-editsonly'             => 'Show only users with edits',
 'listusers-creationsort'          => 'Sort by creation date',
@@ -2656,7 +2656,7 @@ It now redirects to [[$2]].',
 'usercreated'                     => '{{GENDER:$3|Created}} on $1 at $2',
 'newpages'                        => 'New pages',
 'newpages-summary'                => '', # do not translate or duplicate this message to other languages
-'newpages-username'               => 'Username:',
+'newpages-username'               => 'wiki_Username:',
 'ancientpages'                    => 'Oldest pages',
 'ancientpages-summary'            => '', # do not translate or duplicate this message to other languages
 'move'                            => 'Move',
@@ -2750,13 +2750,13 @@ Supported protocols: <code>$1</code> (defaults to http:// if no protocol is spec
 'linksearch-line'    => '$1 is linked from $2',
 'linksearch-error'   => 'Wildcards may appear only at the start of the hostname.',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom'      => 'Display users starting at:',
 'listusers-submit'   => 'Show',
 'listusers-noresult' => 'No user found.',
 'listusers-blocked'  => '(blocked)',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers'            => 'Active users list',
 'activeusers-summary'    => '', # do not translate or duplicate this message to other languages
 'activeusers-intro'      => 'This is a list of users who had some kind of activity within the last $1 {{PLURAL:$1|day|days}}.',
@@ -2767,11 +2767,11 @@ Supported protocols: <code>$1</code> (defaults to http:// if no protocol is spec
 'activeusers-noresult'   => 'No users found.',
 
 # Special:Log/newusers
-'newuserlogpage'     => 'User creation log',
+'newuserlogpage'     => 'wiki_User creation log',
 'newuserlogpagetext' => 'This is a log of user creations.',
 
 # Special:ListGroupRights
-'listgrouprights'                      => 'User group rights',
+'listgrouprights'                      => 'wiki_User group rights',
 'listgrouprights-summary'              => 'The following is a list of user groups defined on this wiki, with their associated access rights.
 There may be [[{{MediaWiki:Listgrouprights-helppage}}|additional information]] about individual rights.',
 'listgrouprights-key'                  => '* <span class="listgrouprights-granted">Granted right</span>
@@ -2793,7 +2793,7 @@ There may be [[{{MediaWiki:Listgrouprights-helppage}}|additional information]] a
 
 # E-mail user
 'mailnologin'              => 'No send address',
-'mailnologintext'          => 'You must be [[Special:UserLogin|logged in]] and have a valid e-mail address in your [[Special:Preferences|preferences]] to send e-mail to other users.',
+'mailnologintext'          => 'You must be [[Special:wiki_UserLogin|logged in]] and have a valid e-mail address in your [[Special:Preferences|preferences]] to send e-mail to other users.',
 'emailuser'                => 'E-mail this user',
 'emailuser-title-target'   => 'E-mail this {{GENDER:$1|user}}',
 'emailuser-title-notarget' => 'E-mail user',
@@ -2803,7 +2803,7 @@ There may be [[{{MediaWiki:Listgrouprights-helppage}}|additional information]] a
 The e-mail address you entered in [[Special:Preferences|your user preferences]] will appear as the "From" address of the e-mail, so the recipient will be able to reply directly to you.',
 'usermailererror'          => 'Mail object returned error:',
 'defemailsubject'          => '{{SITENAME}} e-mail from user "$1"',
-'usermaildisabled'         => 'User e-mail disabled',
+'usermaildisabled'         => 'wiki_User e-mail disabled',
 'usermaildisabledtext'     => 'You cannot send e-mail to other users on this wiki',
 'noemailtitle'             => 'No e-mail address',
 'noemailtext'              => 'This user has not specified a valid e-mail address.',
@@ -2811,7 +2811,7 @@ The e-mail address you entered in [[Special:Preferences|your user preferences]] 
 'nowikiemailtext'          => 'This user has chosen not to receive e-mail from other users.',
 'emailnotarget'            => 'Non-existent or invalid username for recipient.',
 'emailtarget'              => 'Enter username of recipient',
-'emailusername'            => 'Username:',
+'emailusername'            => 'wiki_Username:',
 'emailusernamesubmit'      => 'Submit',
 'email-legend'             => 'Send an e-mail to another {{SITENAME}} user',
 'emailfrom'                => 'From:',
@@ -2825,10 +2825,10 @@ The e-mail address you entered in [[Special:Preferences|your user preferences]] 
 'emailsenttext'            => 'Your e-mail message has been sent.',
 'emailuserfooter'          => 'This e-mail was sent by $1 to $2 by the "E-mail user" function at {{SITENAME}}.',
 
-# User Messenger
+# wiki_User Messenger
 'usermessage-summary'  => 'Leaving system message.',
 'usermessage-editor'   => 'System messenger',
-'usermessage-template' => 'MediaWiki:UserMessage', # only translate this message to other languages if you have to change it
+'usermessage-template' => 'MediaWiki:wiki_UserMessage', # only translate this message to other languages if you have to change it
 
 # Watchlist
 'watchlist'            => 'My watchlist',
@@ -2838,7 +2838,7 @@ The e-mail address you entered in [[Special:Preferences|your user preferences]] 
 'nowatchlist'          => 'You have no items on your watchlist.',
 'watchlistanontext'    => 'Please $1 to view or edit items on your watchlist.',
 'watchnologin'         => 'Not logged in',
-'watchnologintext'     => 'You must be [[Special:UserLogin|logged in]] to modify your watchlist.',
+'watchnologintext'     => 'You must be [[Special:wiki_UserLogin|logged in]] to modify your watchlist.',
 'addwatch'             => 'Add to watchlist',
 'addedwatchtext'       => 'The page "[[:$1]]" has been added to your [[Special:Watchlist|watchlist]].
 Future changes to this page and its associated talk page will be listed there.',
@@ -2950,13 +2950,13 @@ proceed with caution.',
 'rollbackfailed'             => 'Rollback failed',
 'cantrollback'               => 'Cannot revert edit;
 last contributor is only author of this page.',
-'alreadyrolled'              => 'Cannot rollback last edit of [[:$1]] by [[User:$2|$2]] ([[User talk:$2|talk]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]);
+'alreadyrolled'              => 'Cannot rollback last edit of [[:$1]] by [[wiki_User:$2|$2]] ([[wiki_User talk:$2|talk]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]);
 someone else has edited or rolled back the page already.
 
-The last edit to the page was by [[User:$3|$3]] ([[User talk:$3|talk]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
+The last edit to the page was by [[wiki_User:$3|$3]] ([[wiki_User talk:$3|talk]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
 'editcomment'                => "The edit summary was: \"''\$1''\".",
-'revertpage'                 => 'Reverted edits by [[Special:Contributions/$2|$2]] ([[User talk:$2|talk]]) to last revision by [[User:$1|$1]]',
-'revertpage-nouser'          => 'Reverted edits by (username removed) to last revision by [[User:$1|$1]]',
+'revertpage'                 => 'Reverted edits by [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|talk]]) to last revision by [[wiki_User:$1|$1]]',
+'revertpage-nouser'          => 'Reverted edits by (username removed) to last revision by [[wiki_User:$1|$1]]',
 'rollback-success'           => 'Reverted edits by $1;
 changed back to last revision by $2.',
 
@@ -3099,9 +3099,9 @@ $1',
 'blanknamespace'                => '(Main)',
 
 # Contributions
-'contributions'         => 'User contributions',
+'contributions'         => 'wiki_User contributions',
 'contributions-summary' => '', # do not translate or duplicate this message to other languages
-'contributions-title'   => 'User contributions for $1',
+'contributions-title'   => 'wiki_User contributions for $1',
 'mycontris'             => 'Contributions',
 'contribsub2'           => 'For $1 ($2)',
 'nocontribs'            => 'No changes were found matching these criteria.',
@@ -3111,7 +3111,7 @@ $1',
 
 'sp-contributions-newbies'             => 'Show contributions of new accounts only',
 'sp-contributions-newbies-sub'         => 'For new accounts',
-'sp-contributions-newbies-title'       => 'User contributions for new accounts',
+'sp-contributions-newbies-title'       => 'wiki_User contributions for new accounts',
 'sp-contributions-blocklog'            => 'block log',
 'sp-contributions-deleted'             => 'deleted user contributions',
 'sp-contributions-uploads'             => 'uploads',
@@ -3202,7 +3202,7 @@ See the [[Special:BlockList|block list]] to review blocks.',
 'unblockip'                       => 'Unblock user',
 'unblockiptext'                   => 'Use the form below to restore write access to a previously blocked IP address or username.',
 'ipusubmit'                       => 'Remove this block',
-'unblocked'                       => '[[User:$1|$1]] has been unblocked',
+'unblocked'                       => '[[wiki_User:$1|$1]] has been unblocked',
 'unblocked-range'                 => '$1 has been unblocked',
 'unblocked-id'                    => 'Block $1 has been removed',
 'blocklist'                       => 'Blocked users',
@@ -3236,7 +3236,7 @@ See the [[Special:BlockList|block list]] to review blocks.',
 'change-blocklink'                => 'change block',
 'contribslink'                    => 'contribs',
 'emaillink'                       => 'send e-mail',
-'autoblocker'                     => 'Autoblocked because your IP address has been recently used by "[[User:$1|$1]]".
+'autoblocker'                     => 'Autoblocked because your IP address has been recently used by "[[wiki_User:$1|$1]]".
 The reason given for $1\'s block is "\'\'$2\'\'"',
 'blocklogpage'                    => 'Block log',
 'blocklog-showlog'                => 'This user has been blocked previously.
@@ -3343,7 +3343,7 @@ In those cases, you will have to move or merge the page manually if desired.",
 'movearticle'                  => 'Move page:',
 'moveuserpage-warning'         => "'''Warning:''' You are about to move a user page. Please note that only the page will be moved and the user will ''not'' be renamed.",
 'movenologin'                  => 'Not logged in',
-'movenologintext'              => 'You must be a registered user and [[Special:UserLogin|logged in]] to move a page.',
+'movenologintext'              => 'You must be a registered user and [[Special:wiki_UserLogin|logged in]] to move a page.',
 'movenotallowed'               => 'You do not have permission to move pages.',
 'movenotallowedfile'           => 'You do not have permission to move files.',
 'cant-move-user-page'          => 'You do not have permission to move user pages (apart from subpages).',
@@ -3979,7 +3979,7 @@ Others will be hidden by default.
 'exif-compressedbitsperpixel'      => 'Image compression mode',
 'exif-pixelydimension'             => 'Image width',
 'exif-pixelxdimension'             => 'Image height',
-'exif-usercomment'                 => 'User comments',
+'exif-usercomment'                 => 'wiki_User comments',
 'exif-relatedsoundfile'            => 'Related audio file',
 'exif-datetimeoriginal'            => 'Date and time of data generation',
 'exif-datetimedigitized'           => 'Date and time of digitizing',
@@ -4375,7 +4375,7 @@ $8', # only translate this message to other languages if you have to change it
 'exif-urgency-normal' => 'Normal ($1)',
 'exif-urgency-low'    => 'Low ($1)',
 'exif-urgency-high'   => 'High ($1)',
-'exif-urgency-other'  => 'User-defined priority ($1)',
+'exif-urgency-other'  => 'wiki_User-defined priority ($1)',
 
 # External editor support
 'edit-externally'      => 'Edit this file using an external application',
@@ -4408,7 +4408,7 @@ Mailer returned: $1',
 The code may have expired.',
 'confirmemail_needlogin'    => 'You need to $1 to confirm your e-mail address.',
 'confirmemail_success'      => 'Your e-mail address has been confirmed.
-You may now [[Special:UserLogin|log in]] and enjoy the wiki.',
+You may now [[Special:wiki_UserLogin|log in]] and enjoy the wiki.',
 'confirmemail_loggedin'     => 'Your e-mail address has now been confirmed.',
 'confirmemail_error'        => 'Something went wrong saving your confirmation.',
 'confirmemail_subject'      => '{{SITENAME}} e-mail address confirmation',
@@ -4464,10 +4464,10 @@ This confirmation code will expire at $4.',
 
 # Delete conflict
 'deletedwhileediting'      => "'''Warning''': This page was deleted after you started editing!",
-'confirmrecreate'          => "User [[User:$1|$1]] ([[User talk:$1|talk]]) deleted this page after you started editing with reason:
+'confirmrecreate'          => "wiki_User [[wiki_User:$1|$1]] ([[wiki_User talk:$1|talk]]) deleted this page after you started editing with reason:
 : ''$2''
 Please confirm that you really want to recreate this page.",
-'confirmrecreate-noreason' => 'User [[User:$1|$1]] ([[User talk:$1|talk]]) deleted this page after you started editing.  Please confirm that you really want to recreate this page.',
+'confirmrecreate-noreason' => 'wiki_User [[wiki_User:$1|$1]] ([[wiki_User talk:$1|talk]]) deleted this page after you started editing.  Please confirm that you really want to recreate this page.',
 'recreate'                 => 'Recreate',
 
 'unit-pixel' => 'px', # only translate this message to other languages if you have to change it
@@ -4741,7 +4741,7 @@ Images are shown in full resolution, other file types are started with their ass
 'specialpages-group-login'       => 'Login / create account',
 'specialpages-group-changes'     => 'Recent changes and logs',
 'specialpages-group-media'       => 'Media reports and uploads',
-'specialpages-group-users'       => 'Users and rights',
+'specialpages-group-users'       => 'wiki_Users and rights',
 'specialpages-group-highuse'     => 'High use pages',
 'specialpages-group-pages'       => 'Lists of pages',
 'specialpages-group-pagetools'   => 'Page tools',
@@ -4842,10 +4842,10 @@ This site is experiencing technical difficulties.',
 'logentry-move-move_redir-noredirect' => '$1 moved page $3 to $4 over a redirect without leaving a redirect',
 'logentry-patrol-patrol'              => '$1 marked revision $4 of page $3 patrolled',
 'logentry-patrol-patrol-auto'         => '$1 automatically marked revision $4 of page $3 patrolled',
-'logentry-newusers-newusers'          => 'User account $1 was created',
-'logentry-newusers-create'            => 'User account $1 was created',
-'logentry-newusers-create2'           => 'User account $3 was created by $1',
-'logentry-newusers-autocreate'        => 'User account $1 was created automatically',
+'logentry-newusers-newusers'          => 'wiki_User account $1 was created',
+'logentry-newusers-create'            => 'wiki_User account $1 was created',
+'logentry-newusers-create2'           => 'wiki_User account $3 was created by $1',
+'logentry-newusers-autocreate'        => 'wiki_User account $1 was created automatically',
 'newuserlog-byemail'                  => 'password sent by e-mail',
 
 # For IRC, see bug 34508. Do not change

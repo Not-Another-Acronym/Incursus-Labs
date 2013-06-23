@@ -21,7 +21,7 @@
  */
 
 /**
- * User interface for the rollback action
+ * wiki_User interface for the rollback action
  *
  * @ingroup Actions
  */

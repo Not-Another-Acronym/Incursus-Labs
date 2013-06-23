@@ -50,7 +50,7 @@ class RequestContext implements IContextSource {
 	private $output;
 
 	/**
-	 * @var User
+	 * @var wiki_User
 	 */
 	private $user;
 
@@ -181,22 +181,22 @@ class RequestContext implements IContextSource {
 	}
 
 	/**
-	 * Set the User object
+	 * Set the wiki_User object
 	 *
-	 * @param $u User
+	 * @param $u wiki_User
 	 */
-	public function setUser( User $u ) {
+	public function setwiki_User( wiki_User $u ) {
 		$this->user = $u;
 	}
 
 	/**
-	 * Get the User object
+	 * Get the wiki_User object
 	 *
-	 * @return User
+	 * @return wiki_User
 	 */
 	public function getUser() {
 		if ( $this->user === null ) {
-			$this->user = User::newFromSession( $this->getRequest() );
+			$this->user = wiki_User::newFromSession( $this->getRequest() );
 		}
 		return $this->user;
 	}
@@ -287,7 +287,7 @@ class RequestContext implements IContextSource {
 			$code = $request->getVal( 'uselang', $user->getOption( 'language' ) );
 			$code = self::sanitizeLangCode( $code );
 
-			wfRunHooks( 'UserGetLanguageObject', array( $user, &$code, $this ) );
+			wfRunHooks( 'wiki_UserGetLanguageObject', array( $user, &$code, $this ) );
 
 			if( $code === $wgLanguageCode ) {
 				$this->lang = $wgContLang;
@@ -388,7 +388,7 @@ class RequestContext implements IContextSource {
 	 * external to the current session.
 	 * - Title is specified by argument
 	 * - Request is a FauxRequest, or a FauxRequest can be specified by argument
-	 * - User is an anonymous user, for separation IPv4 localhost is used
+	 * - wiki_User is an anonymous user, for separation IPv4 localhost is used
 	 * - Language will be based on the anonymous user and request, may be content
 	 *   language or a uselang param in the fauxrequest data may change the lang
 	 * - Skin will be based on the anonymous user, should be the wiki's default skin
@@ -405,7 +405,7 @@ class RequestContext implements IContextSource {
 		} else {
 			$context->setRequest( new FauxRequest( $request ) );
 		}
-		$context->user = User::newFromName( '127.0.0.1', false );
+		$context->user = wiki_User::newFromName( '127.0.0.1', false );
 		return $context;
 	}
 

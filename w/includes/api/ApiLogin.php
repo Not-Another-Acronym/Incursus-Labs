@@ -75,7 +75,7 @@ class ApiLogin extends ApiBase {
 		switch ( $authRes ) {
 			case LoginForm::SUCCESS:
 				$user = $context->getUser();
-				$this->getContext()->setUser( $user );
+				$this->getContext()->setwiki_User( $user );
 				$user->setOption( 'rememberpassword', 1 );
 				$user->setCookies( $this->getRequest() );
 
@@ -85,7 +85,7 @@ class ApiLogin extends ApiBase {
 				// @todo FIXME: Split back and frontend from this hook.
 				// @todo FIXME: This hook should be placed in the backend
 				$injected_html = '';
-				wfRunHooks( 'UserLoginComplete', array( &$user, &$injected_html ) );
+				wfRunHooks( 'wiki_UserLoginComplete', array( &$user, &$injected_html ) );
 
 				$result['result'] = 'Success';
 				$result['lguserid'] = intval( $user->getId() );
@@ -122,7 +122,7 @@ class ApiLogin extends ApiBase {
 				$result['result'] = 'NotExists';
 				break;
 
-			case LoginForm::RESET_PASS: // bug 20223 - Treat a temporary password as wrong. Per SpecialUserLogin - "The e-mailed temporary password should not be used for actual logins;"
+			case LoginForm::RESET_PASS: // bug 20223 - Treat a temporary password as wrong. Per Specialwiki_UserLogin - "The e-mailed temporary password should not be used for actual logins;"
 			case LoginForm::WRONG_PASS:
 				$result['result'] = 'WrongPass';
 				break;
@@ -176,7 +176,7 @@ class ApiLogin extends ApiBase {
 
 	public function getParamDescription() {
 		return array(
-			'name' => 'User Name',
+			'name' => 'wiki_User Name',
 			'password' => 'Password',
 			'domain' => 'Domain (optional)',
 			'token' => 'Login token obtained in first request',
@@ -265,7 +265,7 @@ class ApiLogin extends ApiBase {
 			array( 'code' => 'WrongPluginPass', 'info' => 'Same as "WrongPass", returned when an authentication plugin rather than MediaWiki itself rejected the password' ),
 			array( 'code' => 'CreateBlocked', 'info' => 'The wiki tried to automatically create a new account for you, but your IP address has been blocked from account creation' ),
 			array( 'code' => 'Throttled', 'info' => 'You\'ve logged in too many times in a short time' ),
-			array( 'code' => 'Blocked', 'info' => 'User is blocked' ),
+			array( 'code' => 'Blocked', 'info' => 'wiki_User is blocked' ),
 		) );
 	}
 

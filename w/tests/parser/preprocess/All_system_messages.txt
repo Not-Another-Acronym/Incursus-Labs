@@ -422,7 +422,7 @@ $1 to $2
 [http://tl.wiktionary.org/w/wiki.phtml?title=MediaWiki:Alreadyloggedin&action=edit alreadyloggedin]<br>
 [[MediaWiki_talk:Alreadyloggedin|Talk]]
 </td><td>
-&lt;font color=red&gt;&lt;b&gt;User $1, you are already logged in!&lt;/b&gt;&lt;/font&gt;&lt;br /&gt;
+&lt;font color=red&gt;&lt;b&gt;wiki_User $1, you are already logged in!&lt;/b&gt;&lt;/font&gt;&lt;br /&gt;
 
 </td><td>
 {{int:Alreadyloggedin}}
@@ -431,9 +431,9 @@ $1 to $2
 [[MediaWiki_talk:Alreadyrolled|Talk]]
 </td><td>
 Cannot rollback last edit of &#91;&#91;$1]]
-by &#91;&#91;User:$2&#124;$2]] (&#91;&#91;User talk:$2&#124;Talk]]); someone else has edited or rolled back the page already. 
+by &#91;&#91;wiki_User:$2&#124;$2]] (&#91;&#91;wiki_User talk:$2&#124;Talk]]); someone else has edited or rolled back the page already. 
 
-Last edit was by &#91;&#91;User:$3&#124;$3]] (&#91;&#91;User talk:$3&#124;Talk]]). 
+Last edit was by &#91;&#91;wiki_User:$3&#124;$3]] (&#91;&#91;wiki_User talk:$3&#124;Talk]]). 
 </td><td>
 {{int:Alreadyrolled}}
 </td></tr><tr><td>
@@ -461,7 +461,7 @@ Talk for this IP
 [http://tl.wiktionary.org/w/wiki.phtml?title=MediaWiki:Anontalkpagetext&action=edit anontalkpagetext]<br>
 [[MediaWiki_talk:Anontalkpagetext|Talk]]
 </td><td>
-----&#39;&#39;This is the discussion page for an anonymous user who has not created an account yet or who does not use it. We therefore have to use the numerical &#91;&#91;IP address]] to identify him/her. Such an IP address can be shared by several users. If you are an anonymous user and feel that irrelevant comments have been directed at you, please &#91;&#91;Special:Userlogin&#124;create an account or log in]] to avoid future confusion with other anonymous users.&#39;&#39; 
+----&#39;&#39;This is the discussion page for an anonymous user who has not created an account yet or who does not use it. We therefore have to use the numerical &#91;&#91;IP address]] to identify him/her. Such an IP address can be shared by several users. If you are an anonymous user and feel that irrelevant comments have been directed at you, please &#91;&#91;Special:wiki_Userlogin&#124;create an account or log in]] to avoid future confusion with other anonymous users.&#39;&#39; 
 </td><td>
 {{int:Anontalkpagetext}}
 </td></tr><tr><td>
@@ -613,7 +613,7 @@ Your IP address is $3. Please include this address in any queries you make.
 [http://tl.wiktionary.org/w/wiki.phtml?title=MediaWiki:Blockedtitle&action=edit blockedtitle]<br>
 [[MediaWiki_talk:Blockedtitle|Talk]]
 </td><td>
-User is blocked
+wiki_User is blocked
 </td><td>
 {{int:Blockedtitle}}
 </td></tr><tr><td>
@@ -972,7 +972,7 @@ For $1
 [http://tl.wiktionary.org/w/wiki.phtml?title=MediaWiki:Contributions&action=edit contributions]<br>
 [[MediaWiki_talk:Contributions|Talk]]
 </td><td>
-User contributions
+wiki_User contributions
 </td><td>
 {{int:Contributions}}
 </td></tr><tr><td>
@@ -2142,7 +2142,7 @@ list
 [http://tl.wiktionary.org/w/wiki.phtml?title=MediaWiki:Listusers&action=edit listusers]<br>
 [[MediaWiki_talk:Listusers|Talk]]
 </td><td>
-User list
+wiki_User list
 </td><td>
 {{int:Listusers}}
 </td></tr><tr><td>
@@ -2245,7 +2245,7 @@ Login error
 [http://tl.wiktionary.org/w/wiki.phtml?title=MediaWiki:Loginpagetitle&action=edit loginpagetitle]<br>
 [[MediaWiki_talk:Loginpagetitle|Talk]]
 </td><td>
-User login
+wiki_User login
 </td><td>
 {{int:Loginpagetitle}}
 </td></tr><tr><td>
@@ -2266,7 +2266,7 @@ You must have cookies enabled to log in to Wiktionary.
 [http://tl.wiktionary.org/w/wiki.phtml?title=MediaWiki:Loginreqtext&action=edit loginreqtext]<br>
 [[MediaWiki_talk:Loginreqtext|Talk]]
 </td><td>
-You must &#91;&#91;special:Userlogin&#124;login]] to view other pages.
+You must &#91;&#91;special:wiki_Userlogin&#124;login]] to view other pages.
 </td><td>
 {{int:Loginreqtext}}
 </td></tr><tr><td>
@@ -2313,7 +2313,7 @@ your browser cache
 [http://tl.wiktionary.org/w/wiki.phtml?title=MediaWiki:Logouttitle&action=edit logouttitle]<br>
 [[MediaWiki_talk:Logouttitle|Talk]]
 </td><td>
-User logout
+wiki_User logout
 </td><td>
 {{int:Logouttitle}}
 </td></tr><tr><td>
@@ -2364,7 +2364,7 @@ No send address
 [http://tl.wiktionary.org/w/wiki.phtml?title=MediaWiki:Mailnologintext&action=edit mailnologintext]<br>
 [[MediaWiki_talk:Mailnologintext|Talk]]
 </td><td>
-You must be &lt;a href=&quot;{{localurl:Special:Userlogin&quot;&gt;logged in&lt;/a&gt;
+You must be &lt;a href=&quot;{{localurl:Special:wiki_Userlogin&quot;&gt;logged in&lt;/a&gt;
 and have a valid e-mail address in your &lt;a href=&quot;/wiki/Special:Preferences&quot;&gt;preferences&lt;/a&gt;
 to send e-mail to other users.
 </td><td>
@@ -2381,7 +2381,7 @@ Main Page
 [[MediaWiki_talk:Mainpagedocfooter|Talk]]
 </td><td>
 Please see &#91;http&#58;//meta.wikipedia.org/wiki/MediaWiki_i18n documentation on customizing the interface]
-and the &#91;http&#58;//meta.wikipedia.org/wiki/MediaWiki_User%27s_Guide User&#39;s Guide] for usage and configuration help.
+and the &#91;http&#58;//meta.wikipedia.org/wiki/MediaWiki_wiki_User%27s_Guide wiki_User&#39;s Guide] for usage and configuration help.
 </td><td>
 {{int:Mainpagedocfooter}}
 </td></tr><tr><td>
@@ -2423,7 +2423,7 @@ Make a user into a sysop
 [http://tl.wiktionary.org/w/wiki.phtml?title=MediaWiki:Makesysopfail&action=edit makesysopfail]<br>
 [[MediaWiki_talk:Makesysopfail|Talk]]
 </td><td>
-&lt;b&gt;User &quot;$1&quot; could not be made into a sysop. (Did you enter the name correctly?)&lt;/b&gt;
+&lt;b&gt;wiki_User &quot;$1&quot; could not be made into a sysop. (Did you enter the name correctly?)&lt;/b&gt;
 </td><td>
 {{int:Makesysopfail}}
 </td></tr><tr><td>
@@ -2437,7 +2437,7 @@ Name of the user:
 [http://tl.wiktionary.org/w/wiki.phtml?title=MediaWiki:Makesysopok&action=edit makesysopok]<br>
 [[MediaWiki_talk:Makesysopok|Talk]]
 </td><td>
-&lt;b&gt;User &quot;$1&quot; is now a sysop&lt;/b&gt;
+&lt;b&gt;wiki_User &quot;$1&quot; is now a sysop&lt;/b&gt;
 </td><td>
 {{int:Makesysopok}}
 </td></tr><tr><td>
@@ -2692,7 +2692,7 @@ Not logged in
 [http://tl.wiktionary.org/w/wiki.phtml?title=MediaWiki:Movenologintext&action=edit movenologintext]<br>
 [[MediaWiki_talk:Movenologintext|Talk]]
 </td><td>
-You must be a registered user and &lt;a href=&quot;/wiki/Special:Userlogin&quot;&gt;logged in&lt;/a&gt;
+You must be a registered user and &lt;a href=&quot;/wiki/Special:wiki_Userlogin&quot;&gt;logged in&lt;/a&gt;
 to move a page.
 </td><td>
 {{int:Movenologintext}}
@@ -3210,7 +3210,7 @@ Template
 [http://tl.wiktionary.org/w/wiki.phtml?title=MediaWiki:Nstab-user&action=edit nstab-user]<br>
 [[MediaWiki_talk:Nstab-user|Talk]]
 </td><td>
-User page
+wiki_User page
 </td><td>
 {{int:Nstab-user}}
 </td></tr><tr><td>
@@ -3425,7 +3425,7 @@ Misc settings
 [http://tl.wiktionary.org/w/wiki.phtml?title=MediaWiki:Prefs-personal&action=edit prefs-personal]<br>
 [[MediaWiki_talk:Prefs-personal|Talk]]
 </td><td>
-User data
+wiki_User data
 </td><td>
 {{int:Prefs-personal}}
 </td></tr><tr><td>
@@ -3442,7 +3442,7 @@ Recent changes and stub display
 You are logged in as &quot;$1&quot;.
 Your internal ID number is $2.
 
-See &#91;&#91;Wiktionary:User preferences help]] for help deciphering the options.
+See &#91;&#91;Wiktionary:wiki_User preferences help]] for help deciphering the options.
 </td><td>
 {{int:Prefslogintext}}
 </td></tr><tr><td>
@@ -3456,7 +3456,7 @@ Not logged in
 [http://tl.wiktionary.org/w/wiki.phtml?title=MediaWiki:Prefsnologintext&action=edit prefsnologintext]<br>
 [[MediaWiki_talk:Prefsnologintext|Talk]]
 </td><td>
-You must be &lt;a href=&quot;/wiki/Special:Userlogin&quot;&gt;logged in&lt;/a&gt;
+You must be &lt;a href=&quot;/wiki/Special:wiki_Userlogin&quot;&gt;logged in&lt;/a&gt;
 to set user preferences.
 </td><td>
 {{int:Prefsnologintext}}
@@ -4161,7 +4161,7 @@ Server time is now
 [http://tl.wiktionary.org/w/wiki.phtml?title=MediaWiki:Set_rights_fail&action=edit set_rights_fail]<br>
 [[MediaWiki_talk:Set_rights_fail|Talk]]
 </td><td>
-&lt;b&gt;User rights for &quot;$1&quot; could not be set. (Did you enter the name correctly?)&lt;/b&gt;
+&lt;b&gt;wiki_User rights for &quot;$1&quot; could not be set. (Did you enter the name correctly?)&lt;/b&gt;
 </td><td>
 {{int:Set_rights_fail}}
 </td></tr><tr><td>
@@ -5206,7 +5206,7 @@ Not logged in
 [http://tl.wiktionary.org/w/wiki.phtml?title=MediaWiki:Uploadnologintext&action=edit uploadnologintext]<br>
 [[MediaWiki_talk:Uploadnologintext|Talk]]
 </td><td>
-You must be &lt;a href=&quot;/wiki/Special:Userlogin&quot;&gt;logged in&lt;/a&gt;
+You must be &lt;a href=&quot;/wiki/Special:wiki_Userlogin&quot;&gt;logged in&lt;/a&gt;
 to upload files.
 </td><td>
 {{int:Uploadnologintext}}
@@ -5252,90 +5252,90 @@ Upload warning
 </td><td>
 {{int:Uploadwarning}}
 </td></tr><tr><td>
-[http://tl.wiktionary.org/w/wiki.phtml?title=MediaWiki:User_rights_set&action=edit user_rights_set]<br>
-[[MediaWiki_talk:User_rights_set|Talk]]
+[http://tl.wiktionary.org/w/wiki.phtml?title=MediaWiki:wiki_User_rights_set&action=edit user_rights_set]<br>
+[[MediaWiki_talk:wiki_User_rights_set|Talk]]
 </td><td>
-&lt;b&gt;User rights for &quot;$1&quot; updated&lt;/b&gt;
+&lt;b&gt;wiki_User rights for &quot;$1&quot; updated&lt;/b&gt;
 </td><td>
-{{int:User_rights_set}}
+{{int:wiki_User_rights_set}}
 </td></tr><tr><td>
-[http://tl.wiktionary.org/w/wiki.phtml?title=MediaWiki:Usercssjs&action=edit usercssjs]<br>
-[[MediaWiki_talk:Usercssjs|Talk]]
+[http://tl.wiktionary.org/w/wiki.phtml?title=MediaWiki:wiki_Usercssjs&action=edit usercssjs]<br>
+[[MediaWiki_talk:wiki_Usercssjs|Talk]]
 </td><td>
 &#39;&#39;&#39;Note:&#39;&#39;&#39; After saving, you have to tell your bowser to get the new version: &#39;&#39;&#39;Mozilla:&#39;&#39;&#39; click &#39;&#39;reload&#39;&#39;(or &#39;&#39;ctrl-r&#39;&#39;), &#39;&#39;&#39;IE / Opera:&#39;&#39;&#39; &#39;&#39;ctrl-f5&#39;&#39;, &#39;&#39;&#39;Safari:&#39;&#39;&#39; &#39;&#39;cmd-r&#39;&#39;, &#39;&#39;&#39;Konqueror&#39;&#39;&#39; &#39;&#39;ctrl-r&#39;&#39;.
 </td><td>
-{{int:Usercssjs}}
+{{int:wiki_Usercssjs}}
 </td></tr><tr><td>
-[http://tl.wiktionary.org/w/wiki.phtml?title=MediaWiki:Usercssjsyoucanpreview&action=edit usercssjsyoucanpreview]<br>
-[[MediaWiki_talk:Usercssjsyoucanpreview|Talk]]
+[http://tl.wiktionary.org/w/wiki.phtml?title=MediaWiki:wiki_Usercssjsyoucanpreview&action=edit usercssjsyoucanpreview]<br>
+[[MediaWiki_talk:wiki_Usercssjsyoucanpreview|Talk]]
 </td><td>
 &lt;strong&gt;Tip:&lt;/strong&gt; Use the &#39;Show preview&#39; button to test your new css/js before saving.
 </td><td>
-{{int:Usercssjsyoucanpreview}}
+{{int:wiki_Usercssjsyoucanpreview}}
 </td></tr><tr><td>
-[http://tl.wiktionary.org/w/wiki.phtml?title=MediaWiki:Usercsspreview&action=edit usercsspreview]<br>
-[[MediaWiki_talk:Usercsspreview|Talk]]
+[http://tl.wiktionary.org/w/wiki.phtml?title=MediaWiki:wiki_Usercsspreview&action=edit usercsspreview]<br>
+[[MediaWiki_talk:wiki_Usercsspreview|Talk]]
 </td><td>
 &#39;&#39;&#39;Remember that you are only previewing your user css, it has not yet been saved!&#39;&#39;&#39;
 </td><td>
-{{int:Usercsspreview}}
+{{int:wiki_Usercsspreview}}
 </td></tr><tr><td>
-[http://tl.wiktionary.org/w/wiki.phtml?title=MediaWiki:Userexists&action=edit userexists]<br>
-[[MediaWiki_talk:Userexists|Talk]]
+[http://tl.wiktionary.org/w/wiki.phtml?title=MediaWiki:wiki_Userexists&action=edit userexists]<br>
+[[MediaWiki_talk:wiki_Userexists|Talk]]
 </td><td>
 The user name you entered is already in use. Please choose a different name.
 </td><td>
-{{int:Userexists}}
+{{int:wiki_Userexists}}
 </td></tr><tr><td>
-[http://tl.wiktionary.org/w/wiki.phtml?title=MediaWiki:Userjspreview&action=edit userjspreview]<br>
-[[MediaWiki_talk:Userjspreview|Talk]]
+[http://tl.wiktionary.org/w/wiki.phtml?title=MediaWiki:wiki_Userjspreview&action=edit userjspreview]<br>
+[[MediaWiki_talk:wiki_Userjspreview|Talk]]
 </td><td>
 &#39;&#39;&#39;Remember that you are only testing/previewing your user javascript, it has not yet been saved!&#39;&#39;&#39;
 </td><td>
-{{int:Userjspreview}}
+{{int:wiki_Userjspreview}}
 </td></tr><tr><td>
-[http://tl.wiktionary.org/w/wiki.phtml?title=MediaWiki:Userlogin&action=edit userlogin]<br>
-[[MediaWiki_talk:Userlogin|Talk]]
+[http://tl.wiktionary.org/w/wiki.phtml?title=MediaWiki:wiki_Userlogin&action=edit userlogin]<br>
+[[MediaWiki_talk:wiki_Userlogin|Talk]]
 </td><td>
 Log in
 </td><td>
-{{int:Userlogin}}
+{{int:wiki_Userlogin}}
 </td></tr><tr><td>
-[http://tl.wiktionary.org/w/wiki.phtml?title=MediaWiki:Userlogout&action=edit userlogout]<br>
-[[MediaWiki_talk:Userlogout|Talk]]
+[http://tl.wiktionary.org/w/wiki.phtml?title=MediaWiki:wiki_Userlogout&action=edit userlogout]<br>
+[[MediaWiki_talk:wiki_Userlogout|Talk]]
 </td><td>
 Log out
 </td><td>
-{{int:Userlogout}}
+{{int:wiki_Userlogout}}
 </td></tr><tr><td>
-[http://tl.wiktionary.org/w/wiki.phtml?title=MediaWiki:Usermailererror&action=edit usermailererror]<br>
-[[MediaWiki_talk:Usermailererror|Talk]]
+[http://tl.wiktionary.org/w/wiki.phtml?title=MediaWiki:wiki_Usermailererror&action=edit usermailererror]<br>
+[[MediaWiki_talk:wiki_Usermailererror|Talk]]
 </td><td>
 Mail object returned error: 
 </td><td>
-{{int:Usermailererror}}
+{{int:wiki_Usermailererror}}
 </td></tr><tr><td>
-[http://tl.wiktionary.org/w/wiki.phtml?title=MediaWiki:Userpage&action=edit userpage]<br>
-[[MediaWiki_talk:Userpage|Talk]]
+[http://tl.wiktionary.org/w/wiki.phtml?title=MediaWiki:wiki_Userpage&action=edit userpage]<br>
+[[MediaWiki_talk:wiki_Userpage|Talk]]
 </td><td>
 View user page
 </td><td>
-{{int:Userpage}}
+{{int:wiki_Userpage}}
 </td></tr><tr><td>
-[http://tl.wiktionary.org/w/wiki.phtml?title=MediaWiki:Userstats&action=edit userstats]<br>
-[[MediaWiki_talk:Userstats|Talk]]
+[http://tl.wiktionary.org/w/wiki.phtml?title=MediaWiki:wiki_Userstats&action=edit userstats]<br>
+[[MediaWiki_talk:wiki_Userstats|Talk]]
 </td><td>
-User statistics
+wiki_User statistics
 </td><td>
-{{int:Userstats}}
+{{int:wiki_Userstats}}
 </td></tr><tr><td>
-[http://tl.wiktionary.org/w/wiki.phtml?title=MediaWiki:Userstatstext&action=edit userstatstext]<br>
-[[MediaWiki_talk:Userstatstext|Talk]]
+[http://tl.wiktionary.org/w/wiki.phtml?title=MediaWiki:wiki_Userstatstext&action=edit userstatstext]<br>
+[[MediaWiki_talk:wiki_Userstatstext|Talk]]
 </td><td>
 There are &#39;&#39;&#39;$1&#39;&#39;&#39; registered users.
 &#39;&#39;&#39;$2&#39;&#39;&#39; of these are administrators (see $3).
 </td><td>
-{{int:Userstatstext}}
+{{int:wiki_Userstatstext}}
 </td></tr><tr><td>
 [http://tl.wiktionary.org/w/wiki.phtml?title=MediaWiki:Version&action=edit version]<br>
 [[MediaWiki_talk:Version|Talk]]
@@ -5458,7 +5458,7 @@ Not logged in
 [http://tl.wiktionary.org/w/wiki.phtml?title=MediaWiki:Watchnologintext&action=edit watchnologintext]<br>
 [[MediaWiki_talk:Watchnologintext|Talk]]
 </td><td>
-You must be &lt;a href=&quot;/wiki/Special:Userlogin&quot;&gt;logged in&lt;/a&gt;
+You must be &lt;a href=&quot;/wiki/Special:wiki_Userlogin&quot;&gt;logged in&lt;/a&gt;
 to modify your watchlist.
 </td><td>
 {{int:Watchnologintext}}
@@ -5495,7 +5495,7 @@ What links here
 [http://tl.wiktionary.org/w/wiki.phtml?title=MediaWiki:Whitelistacctext&action=edit whitelistacctext]<br>
 [[MediaWiki_talk:Whitelistacctext|Talk]]
 </td><td>
-To be allowed to create accounts in this Wiki you have to &#91;&#91;Special:Userlogin&#124;log]] in and have the appropriate permissions.
+To be allowed to create accounts in this Wiki you have to &#91;&#91;Special:wiki_Userlogin&#124;log]] in and have the appropriate permissions.
 </td><td>
 {{int:Whitelistacctext}}
 </td></tr><tr><td>
@@ -5509,7 +5509,7 @@ You are not allowed to create an account
 [http://tl.wiktionary.org/w/wiki.phtml?title=MediaWiki:Whitelistedittext&action=edit whitelistedittext]<br>
 [[MediaWiki_talk:Whitelistedittext|Talk]]
 </td><td>
-You have to &#91;&#91;Special:Userlogin&#124;login]] to edit pages.
+You have to &#91;&#91;Special:wiki_Userlogin&#124;login]] to edit pages.
 </td><td>
 {{int:Whitelistedittext}}
 </td></tr><tr><td>
@@ -5523,7 +5523,7 @@ Login required to edit
 [http://tl.wiktionary.org/w/wiki.phtml?title=MediaWiki:Whitelistreadtext&action=edit whitelistreadtext]<br>
 [[MediaWiki_talk:Whitelistreadtext|Talk]]
 </td><td>
-You have to &#91;&#91;Special:Userlogin&#124;login]] to read pages.
+You have to &#91;&#91;Special:wiki_Userlogin&#124;login]] to read pages.
 </td><td>
 {{int:Whitelistreadtext}}
 </td></tr><tr><td>

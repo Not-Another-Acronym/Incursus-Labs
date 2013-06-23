@@ -74,13 +74,13 @@ class ChangesFeed {
 	 * @return null|bool True or null
 	 */
 	public function execute( $feed, $rows, $lastmod, $opts ) {
-		global $wgLang, $wgRenderHashAppend, $wgUser;
+		global $wgLang, $wgRenderHashAppend, $wgwiki_User;
 		
 		if ( !FeedUtils::checkFeedOutput( $this->format ) ) {
 			return null;
 		}
 
-		$userid = $wgUser->getId();
+		$userid = $wgwiki_User->getId();
 		$optionsHash = md5( serialize( $opts->getAllValues() ) ) . $wgRenderHashAppend;
 		$timekey = wfMemcKey( $this->type, $this->format, $userid, $wgLang->getCode(), $optionsHash, 'timestamp' );
 		$key = wfMemcKey( $this->type, $this->format, $userid, $wgLang->getCode(), $optionsHash );

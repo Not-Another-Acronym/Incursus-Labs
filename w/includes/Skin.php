@@ -35,7 +35,7 @@
 abstract class Skin extends ContextSource {
 	protected $skinname = 'standard';
 	protected $mRelevantTitle = null;
-	protected $mRelevantUser = null;
+	protected $mRelevantwiki_User = null;
 
 	/**
 	 * Fetch the set of available skins.
@@ -206,7 +206,7 @@ abstract class Skin extends ContextSource {
 	function preloadExistence() {
 		$user = $this->getUser();
 
-		// User/talk link
+		// wiki_User/talk link
 		$titles = array( $user->getUserPage(), $user->getTalkPage() );
 
 		// Other tab link
@@ -270,11 +270,11 @@ abstract class Skin extends ContextSource {
 
 	/**
 	 * Set the "relevant" user
-	 * @see self::getRelevantUser()
-	 * @param $u User object to use
+	 * @see self::getRelevantwiki_User()
+	 * @param $u wiki_User object to use
 	 */
-	public function setRelevantUser( $u ) {
-		$this->mRelevantUser = $u;
+	public function setRelevantwiki_User( $u ) {
+		$this->mRelevantwiki_User = $u;
 	}
 
 	/**
@@ -283,24 +283,24 @@ abstract class Skin extends ContextSource {
 	 * Special:Contributions mark the user which they are relevant to so that
 	 * things like the toolbox can display the information they usually are only
 	 * able to display on a user's userpage and talkpage.
-	 * @return User
+	 * @return wiki_User
 	 */
-	public function getRelevantUser() {
-		if ( isset($this->mRelevantUser) ) {
-			return $this->mRelevantUser;
+	public function getRelevantwiki_User() {
+		if ( isset($this->mRelevantwiki_User) ) {
+			return $this->mRelevantwiki_User;
 		}
 		$title = $this->getRelevantTitle();
 		if( $title->getNamespace() == NS_USER || $title->getNamespace() == NS_USER_TALK ) {
-			$rootUser = strtok( $title->getText(), '/' );
-			if ( User::isIP( $rootUser ) ) {
-				$this->mRelevantUser = User::newFromName( $rootUser, false );
+			$rootwiki_User = strtok( $title->getText(), '/' );
+			if ( wiki_User::isIP( $rootwiki_User ) ) {
+				$this->mRelevantwiki_User = wiki_User::newFromName( $rootwiki_User, false );
 			} else {
-				$user = User::newFromName( $rootUser, false );
+				$user = wiki_User::newFromName( $rootwiki_User, false );
 				if ( $user && $user->isLoggedIn() ) {
-					$this->mRelevantUser = $user;
+					$this->mRelevantwiki_User = $user;
 				}
 			}
-			return $this->mRelevantUser;
+			return $this->mRelevantwiki_User;
 		}
 		return null;
 	}
@@ -365,7 +365,7 @@ abstract class Skin extends ContextSource {
 	 * @param $out OutputPage
 	 * @todo delete
 	 */
-	abstract function setupSkinUserCss( OutputPage $out );
+	abstract function setupSkinwiki_UserCss( OutputPage $out );
 
 	/**
 	 * TODO: document
@@ -952,14 +952,14 @@ abstract class Skin extends ContextSource {
 	}
 
 	/**
-	 * @param $id User|int
+	 * @param $id wiki_User|int
 	 * @return bool
 	 */
-	function showEmailUser( $id ) {
-		if ( $id instanceof User ) {
+	function showEmailwiki_User( $id ) {
+		if ( $id instanceof wiki_User ) {
 			$targetUser = $id;
 		} else {
-			$targetUser = User::newFromId( $id );
+			$targetUser = wiki_User::newFromId( $id );
 		}
 		return $this->getUser()->canSendEmail() && # the sending user must have a confirmed email address
 			$targetUser->canReceiveEmail(); # the target user must have a confirmed email address and allow emails from users

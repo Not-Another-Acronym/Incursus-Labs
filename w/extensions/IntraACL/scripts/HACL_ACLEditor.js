@@ -70,7 +70,7 @@ HACLACLEditor.prototype.target_change = function(total_change)
             if (this.last_target_names[what])
                 an.value = this.last_target_names[what];
             else if (what == 'template')
-                an.value = wgUserName;
+                an.value = wgwiki_UserName;
             else
                 an.value = '';
             this.target_hint.curValue = null; // force SHint refill
@@ -154,7 +154,7 @@ HACLACLEditor.prototype.pf_param = function(name, value, is_assigned_to)
     if (is_assigned_to)
     {
         if (this.regexp_user)
-            ass = ass.replace(this.regexp_user, '$1User:');
+            ass = ass.replace(this.regexp_user, '$1wiki_User:');
         if (this.regexp_group)
             ass = ass.replace(this.regexp_group, '$1Group/');
     }
@@ -232,7 +232,7 @@ HACLACLEditor.prototype.check_errors = function()
     var has_managers = false, has_rights = false;
     var merge = [ this.rights_direct, this.rights_indirect ];
     var dontlose = false;
-    var curUser = 'User:'+mediaWiki.config.get('wgUserName');
+    var curwiki_User = 'wiki_User:'+mediaWiki.config.get('wgwiki_UserName');
     for (var h in merge)
     {
         h = merge[h];
@@ -249,7 +249,7 @@ HACLACLEditor.prototype.check_errors = function()
             if (has_rights && has_managers)
                 break;
         }
-        dontlose = dontlose || h[curUser] && (this.last_target_type == 'page' && h[curUser]['manage'] || h[curUser]['template']);
+        dontlose = dontlose || h[curwiki_User] && (this.last_target_type == 'page' && h[curwiki_User]['manage'] || h[curwiki_User]['template']);
     }
     document.getElementById('acl_define_rights').style.display = has_rights ? 'none' : '';
     var m = document.getElementById('acl_define_manager');
@@ -496,7 +496,7 @@ HACLACLEditor.prototype.to_name_change = function()
         {
             direct = this.rights_direct[g_to] && this.rights_direct[g_to][a];
             grp = this.rights_indirect[g_to] && this.rights_indirect[g_to][a];
-            if (!grp && g_to.substr(0, 5) == 'User:')
+            if (!grp && g_to.substr(0, 5) == 'wiki_User:')
             {
                 if (this.rights_direct['#'] && this.rights_direct['#'][a])
                     grp = this.msg.indirect_grant_reg;
@@ -526,7 +526,7 @@ HACLACLEditor.prototype.to_name_change = function()
     }
 };
 
-// get grant subject (*, #, User:X, Group/X)
+// get grant subject (*, #, wiki_User:X, Group/X)
 HACLACLEditor.prototype.get_grant_to = function()
 {
     var g_to = document.getElementById('to_type').value;
@@ -538,7 +538,7 @@ HACLACLEditor.prototype.get_grant_to = function()
     if (g_to == 'group')
         g_to = 'Group/' + n;
     else if (g_to == 'user')
-        g_to = 'User:' + n;
+        g_to = 'wiki_User:' + n;
     return g_to;
 };
 
@@ -606,7 +606,7 @@ HACLACLEditor.prototype.get_empty_hint = function()
             if (n != '*' && n != '#' &&
                 (tt == 'group') == (n.substr(0, 6) == 'Group/'))
             {
-                n = htmlspecialchars(n.replace(/^User:|^Group\//, ''));
+                n = htmlspecialchars(n.replace(/^wiki_User:|^Group\//, ''));
                 involved.push('<div id="hi_'+(++j)+'" class="hacl_ti" title="'+n+'">'+n+'</div>');
             }
         }

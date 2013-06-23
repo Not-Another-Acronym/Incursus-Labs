@@ -8,10 +8,10 @@
  * @file
  *
  * @author Akoppad
- * @author Ashwath Mattur <ashwatham@gmail.com> http://en.wikipedia.org/wiki/User:Ashwatham
+ * @author Ashwath Mattur <ashwatham@gmail.com> http://en.wikipedia.org/wiki/wiki_User:Ashwatham
  * @author Dipin
  * @author HPN
- * @author Hari Prasad Nadig <hpnadig@gmail.com> http://en.wikipedia.org/wiki/User:Hpnadig
+ * @author Hari Prasad Nadig <hpnadig@gmail.com> http://en.wikipedia.org/wiki/wiki_User:Hpnadig
  * @author Kaganer
  * @author Ktkaushik
  * @author M G Harish
@@ -63,7 +63,7 @@ $digitTransformTable = array(
 $digitGroupingPattern = "##,##,###";
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'ಲಿಂಕುಗಳ ಕೆಳಗೆ ಗೆರೆ ತೋರಿಸಿ',
 'tog-justify' => 'ಪರಿಚ್ಛೇದಗಳ ಬದಿಗಳನ್ನು ಸಮನಾಗಿಸು',
 'tog-hideminor' => 'ಚಿಕ್ಕಪುಟ್ಟ ಬದಲಾವಣೆಗಳನ್ನು ಅಡಗಿಸಿ',
@@ -393,7 +393,7 @@ MySQL ಹಿಂದಿರುಗಿಸಿದ ದೋಷ "$3: $4"',
 ಇದು ಸಾಮಾನ್ಯವಾಗಿ ಅಳಿಸಿಹಾಕಲ್ಪಟ್ಟ ಹಳೆಯದಾದ ಪುಟದ ವ್ಯತ್ಯಾಸಗಳು ಅಥವಾ ಇತಿಹಾಸದ ಕೊಂಡಿಗಳಿಂದಾಗಿರಬಹುದು.
 
 ಈ ಒಂದು ಫಲಿತಾಂಶ ಸರಿಯಿಲ್ಲದಿದರೆ, ನೀವು ತಂತ್ರಾಂಶದ ದೋಷವೊಂದನ್ನು ಎದುರಿಸುತ್ತಿದ್ದೀರಿ.
-ದಯವಿಟ್ಟು ಇದನ್ನು [[Special:ListUsers/sysop|administrator]] ರೊಬ್ಬರಿಗೆ, URL ನೊಂದಿಗೆ ಸೂಚಿಸಿ.',
+ದಯವಿಟ್ಟು ಇದನ್ನು [[Special:Listwiki_Users/sysop|administrator]] ರೊಬ್ಬರಿಗೆ, URL ನೊಂದಿಗೆ ಸೂಚಿಸಿ.',
 'missingarticle-rev' => '(ಆವೃತ್ತಿ#: $1)',
 'missingarticle-diff' => '(ವ್ಯತ್ಯಾಸ: $1, $2)',
 'readonly_lag' => 'ಅಡಿಯಲ್ಲಿರುವ ಡೇಟಾಬೇಸ್ ಸರ್ವರ್‍ಗಳು ಮೂಲ ಸರ್ವರ್ ಒಂದಿಗೆ ಸಮಾನತೆಗೆ ಬರುವವರೆಗೂ ಡೇಟಾಬೇಸ್ ಅನ್ನು ಯಾಂತ್ರಿಕವಾಗಿ ಮುಚ್ಚಲಾಗಿದೆ',
@@ -429,7 +429,7 @@ MySQL ಹಿಂದಿರುಗಿಸಿದ ದೋಷ "$3: $4"',
 $2',
 'namespaceprotected' => "ನಿಮಗೆ '''$1''' ಪುಟಪ್ರಬೇಧಕ್ಕೆ ಸೇರಿರುವ ಪುಟಗಳನ್ನು ಸಂಪಾದಿಸುವ ಅನುಮತಿ ಇಲ್ಲ.",
 'ns-specialprotected' => 'ವಿಶೇಷ ಪುಟಗಳನ್ನು ಸಂಪಾದಿಸಲು ಆಗುವುದಿಲ್ಲ.',
-'titleprotected' => "ಈ ಹೆಸರಿನ ಪುಟವನ್ನು ಸೃಷ್ಟಿಸಲಾಗದಂತೆ [[User:$1|$1]] ಅವರು ಸಂರಕ್ಷಿಸಿದ್ದಾರೆ.
+'titleprotected' => "ಈ ಹೆಸರಿನ ಪುಟವನ್ನು ಸೃಷ್ಟಿಸಲಾಗದಂತೆ [[wiki_User:$1|$1]] ಅವರು ಸಂರಕ್ಷಿಸಿದ್ದಾರೆ.
 ಸಂರಕ್ಷಣೆಗೆ ನೀಡಿರುವ ಕಾರಣ: ''$2''.",
 
 # Virus scanner
@@ -438,7 +438,7 @@ $2',
 # Login and logout pages
 'logouttext' => "'''ನೀವು ಈಗ ಲಾಗ್ ಔಟ್ ಆಗಿರುವಿರಿ.'''
 
-ನೀವು {{SITENAME}} ಅನ್ನು ಅನಾಮಧೇಯವಾಗಿ ಉಪಯೋಗಿಸಬಹುದು, ಅಥವ ಮತ್ತೆ ಇದೇ ಹೆಸರಿನಲ್ಲಿ ಅಥವ ಬೇರೆ ಹೆಸರಿನಲ್ಲಿ [[Special:UserLogin|ಲಾಗ್ ಇನ್]] ಆಗಬಹುದು.
+ನೀವು {{SITENAME}} ಅನ್ನು ಅನಾಮಧೇಯವಾಗಿ ಉಪಯೋಗಿಸಬಹುದು, ಅಥವ ಮತ್ತೆ ಇದೇ ಹೆಸರಿನಲ್ಲಿ ಅಥವ ಬೇರೆ ಹೆಸರಿನಲ್ಲಿ [[Special:wiki_UserLogin|ಲಾಗ್ ಇನ್]] ಆಗಬಹುದು.
 ಗಮನಿಸಿ: ನಿಮ್ಮ ಬ್ರೌಸರ್‍ನ cache ಅನ್ನು ಅಳಿಸುವವರೆಗೂ ಕೆಲವು ಪುಟಗಳು ನೀವಿನ್ನೂ ಲಾಗ್ ಇನ್ ಆಗಿರುವಂತೆ ಪ್ರದರ್ಶಿತವಾಗಬಹುದು.",
 'welcomecreation' => '== ಸುಸ್ವಾಗತ, $1! ==
 ನಿಮ್ಮ ಅಕೌಂಟನ್ನು ಸೃಷ್ಟಿಸಲಾಗಿದೆ.
@@ -477,7 +477,7 @@ $2',
 'loginsuccesstitle' => 'ಲಾಗಿನ್ ಯಶಸ್ವಿ',
 'loginsuccess' => 'ನೀವು ಈಗ "$1" ಆಗಿ ವಿಕಿಪೀಡಿಯಕ್ಕೆ ಲಾಗಿನ್ ಆಗಿದ್ದೀರಿ.',
 'nosuchuser' => '"$1" ಹೆಸರಿನ ಯಾವ ಸದಸ್ಯರೂ ಇಲ್ಲ.
-ಕಾಗುಣಿತವನ್ನು ಪರೀಕ್ಷಿಸಿ, ಅಥವಾ [[Special:UserLogin/signup|ಹೊಸ ಸದಸ್ಯತ್ವ ಖಾತೆಯನ್ನು ಸೃಷ್ಟಿಸಿ]].',
+ಕಾಗುಣಿತವನ್ನು ಪರೀಕ್ಷಿಸಿ, ಅಥವಾ [[Special:wiki_UserLogin/signup|ಹೊಸ ಸದಸ್ಯತ್ವ ಖಾತೆಯನ್ನು ಸೃಷ್ಟಿಸಿ]].',
 'nosuchusershort' => '"$1" ಹೆಸರಿನ ಸದಸ್ಯರು ಯಾರೂ ಇಲ್ಲ.
 ಹೆಸರಲ್ಲಿ ಕಾಗುಣಿತ ತಪ್ಪಿದೆಯೆ ಎಂದು ಪರೀಕ್ಷಿಸಿ.',
 'nouserspecified' => 'ನೀವು ಒಂದು ಸದಸ್ಯತ್ವದ ಹೆಸರನ್ನು ಸೂಚಿಸಬೇಕು.',
@@ -612,7 +612,7 @@ $2',
 'loginreqlink' => 'ಲಾಗ್ ಇನ್',
 'loginreqpagetext' => 'ಇತರ ಪುಟಗಳನ್ನು ನೋಡಲು ನೀವು $1 ಆಗಬೇಕು.',
 'accmailtitle' => 'ಪ್ರವೇಶ ಪದ ಕಳುಹಿಸಲಾಯಿತು.',
-'accmailtext' => "[[User talk:$1|$1]] ಅವರ ಹೊಸ ಪ್ರವೇಶಪದ $2 ಗೆ ಕಳುಹಿಸಲಾಗಿದೆ.
+'accmailtext' => "[[wiki_User talk:$1|$1]] ಅವರ ಹೊಸ ಪ್ರವೇಶಪದ $2 ಗೆ ಕಳುಹಿಸಲಾಗಿದೆ.
 
 ಈ ಖಾತೆಯ ಪ್ರವೇಶಪದವನ್ನು ಲಾಗಿನ್ ಆದ ನಂತರ ''[[Special:ChangePassword|ಪ್ರವೇಶಪದ ಬದಲಾವಣೆ]]'' ಪುಟದಲ್ಲಿ ಬದಲಾಯಿಸಬಹುದು.",
 'newarticle' => '(ಹೊಸತು)',
@@ -623,7 +623,7 @@ $2',
 'anontalkpagetext' => "----''ಇದು ಖಾತೆಯೊಂದನ್ನು ಹೊಂದಿರದ ಅನಾಮಧೇಯ ಬಳಕೆದಾರರೊಬ್ಬರ ಚರ್ಚೆ ಪುಟ.
 ಖಾತೆಯಿಲ್ಲದಿರುವುದರಿಂದ ಅವರನ್ನು ಗುರುತಿಸಲು ಅವರ IP ವಿಳಾಸವನ್ನು ಉಪಯೋಗಿಸುತ್ತಿದ್ದೇವೆ.
 ಈ ರೀತಿಯ IP ವಿಳಾಸವು ಅನೇಕ ಬಳಕೆದಾರರಿಂದ ಉಪಯೋಗದಲ್ಲಿರಬಹುದು.
-ನೀವು ಅನಾಮಧೇಯ ಬಳಕೆದಾರರಾಗಿದ್ದಲ್ಲಿ, ಹಾಗು ನಿಮಗೆ ಸಂಬಂಧವಿಲ್ಲದಂತ ಸಂದೇಶಗಳು ಬರುತ್ತಿವೆ ಎಂದು ಅನಿಸಿದರೆ, ಮುಂದೆ ಬೇರೆ ಅನಾಮಧೇಯ ಬಳಕೆದಾರರೊಂದಿಗೆ ತಪ್ಪಾಗಿ ಗುರುತಿಸಬಾರದೆಂದಿದ್ದರೆ ದಯವಿಟ್ಟು [[Special:UserLogin/signup|ಸದಸ್ಯರಾಗಿ]] ಅಥವ [[Special:UserLogin|ಲಾಗ್ ಇನ್ ಆಗಿ]].''",
+ನೀವು ಅನಾಮಧೇಯ ಬಳಕೆದಾರರಾಗಿದ್ದಲ್ಲಿ, ಹಾಗು ನಿಮಗೆ ಸಂಬಂಧವಿಲ್ಲದಂತ ಸಂದೇಶಗಳು ಬರುತ್ತಿವೆ ಎಂದು ಅನಿಸಿದರೆ, ಮುಂದೆ ಬೇರೆ ಅನಾಮಧೇಯ ಬಳಕೆದಾರರೊಂದಿಗೆ ತಪ್ಪಾಗಿ ಗುರುತಿಸಬಾರದೆಂದಿದ್ದರೆ ದಯವಿಟ್ಟು [[Special:wiki_UserLogin/signup|ಸದಸ್ಯರಾಗಿ]] ಅಥವ [[Special:wiki_UserLogin|ಲಾಗ್ ಇನ್ ಆಗಿ]].''",
 'noarticletext' => 'ಈ ಪುಟದಲ್ಲಿ ಸದ್ಯಕ್ಕೆ ಏನೂ ಇಲ್ಲ.
 ನೀವು ಇತರ ಪುಟಗಳಲ್ಲಿ [[Special:Search/{{PAGENAME}}|ಈ ಹೆಸರನ್ನು ಹುಡುಕಬಹುದು]],
 <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} ಸಂಬಂಧಿತ ದಾಖಲೆಗಳನ್ನು ಹುಡುಕಬಹುದು],
@@ -680,7 +680,7 @@ $2',
 'hiddencategories' => 'ಈ ಪುಟವು {{PLURAL:$1|೧ ಗುಪ್ತ ವರ್ಗಕ್ಕೆ|$1 ಗುಪ್ತ ವರ್ಗಗಳಿಗೆ}} ಸೇರಿದೆ:',
 'nocreatetitle' => 'ಪುಟವನ್ನು ಸೃಷ್ಟಿಸುವುದನ್ನು ನಿಯಮಿಸಲಾಗಿದೆ',
 'nocreatetext' => '{{SITENAME}} ಅಲ್ಲಿ ಹೊಸ ಪುಟಗಳನ್ನು ಸೃಷ್ಟಿಸಲು ಕೆಲವು ನಿಬಂಧನೆಗಳಿವೆ.
-ನೀವು ಹಿಂದಿರುಗಿ ಆಗಲೇ ಅಸ್ಥಿತ್ವದಲ್ಲಿರುವ ಪುಟವೊಂದನ್ನು ಸಂಪಾದಿಸಿ, ಅಥವ [[Special:UserLogin|ಲಾಗ್ ಇನ್ ಆಗಿ ಅಥವ ಹೊಸ ಸದಸ್ಯರಾಗಿ]].',
+ನೀವು ಹಿಂದಿರುಗಿ ಆಗಲೇ ಅಸ್ಥಿತ್ವದಲ್ಲಿರುವ ಪುಟವೊಂದನ್ನು ಸಂಪಾದಿಸಿ, ಅಥವ [[Special:wiki_UserLogin|ಲಾಗ್ ಇನ್ ಆಗಿ ಅಥವ ಹೊಸ ಸದಸ್ಯರಾಗಿ]].',
 'nocreate-loggedin' => 'ಹೊಸ ಪುಟಗಳನ್ನು ಸೃಷ್ಟಿಸಲು ನಿಮಗೆ ಅನುಮತಿ ಇಲ್ಲ.',
 'permissionserrors' => 'ಅನುಮತಿಗಳ ದೋಷಗಳು',
 'permissionserrorstext' => 'ನಿಮಗೆ ಅದನ್ನು ಮಾಡಲು ಅನುಮತಿ ಇಲ್ಲ, ಅದಕ್ಕೆ {{PLURAL:$1|ಕಾರಣ|ಕಾರಣಗಳು}}:',
@@ -712,7 +712,7 @@ $2',
 'undo-success' => 'ಸಂಪಾದನೆಯನ್ನು ವಜಾ ಮಾಡಬಹುದು. ದಯವಿಟ್ಟು ಕೆಳಗಿರುವ ತುಲನೆಯನ್ನು ಪರೀಕ್ಷಿಸಿ ನೀವು ಮಾಡಲು ಇಚ್ಚಿಸಿರುವುದನ್ನು ಖಾತ್ರಿ ಮಾಡಿಕೊಂಡು ವಜಾಗೊಳಿಸುವ ಕ್ರಿಯೆಯನ್ನು 
 ಪೂರ್ಣಗೊಳಿಸಲು ಬದಲಾವಣೆಗಳನ್ನು ಉಳಿಸಿ.',
 'undo-norev' => 'ಸಂಪಾದನೆಯನ್ನು ವಜಾಗೊಳಿಸಲು ಸಾದ್ಯವಿಲ್ಲ ಏಕೆಂದರೆ ಒಂದೊ ಇದು ಅಸ್ತಿತ್ವದಲ್ಲಿ ಇಲ್ಲ ಅಧವಾ ಇದು ಅಳಿಸಲ್ಪಟ್ಟಿದೆ',
-'undo-summary' => '[[Special:Contributions/$2|$2]] ([[User talk:$2|talk]]) ರ $1 ಪರಿಷ್ಕರಣೆಯನ್ನು ವಜಾ ಮಾಡಿ',
+'undo-summary' => '[[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|talk]]) ರ $1 ಪರಿಷ್ಕರಣೆಯನ್ನು ವಜಾ ಮಾಡಿ',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'ಖಾತೆಯನ್ನು ಸೃಷ್ಟಿಸಲಾಗುತ್ತಿಲ್ಲ',
@@ -892,7 +892,7 @@ $2',
 'mypreferences' => 'ಪ್ರಾಶಸ್ತ್ಯಗಳು',
 'prefs-edits' => 'ಸಂಪಾದನೆಗಳ ಸಂಖ್ಯೆ:',
 'prefsnologin' => 'ಲಾಗಿನ್ ಆಗಿಲ್ಲ',
-'prefsnologintext' => 'ಬಳಕೆದಾರ ಪ್ರಾಶಸ್ತ್ಯಗಳನ್ನು ಬದಲಾಯಿಸಲು ನೀವು <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} ಲಾಗ್ ಇನ್]</span> ಆಗಿರಬೇಕು.',
+'prefsnologintext' => 'ಬಳಕೆದಾರ ಪ್ರಾಶಸ್ತ್ಯಗಳನ್ನು ಬದಲಾಯಿಸಲು ನೀವು <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} ಲಾಗ್ ಇನ್]</span> ಆಗಿರಬೇಕು.',
 'changepassword' => 'ಪ್ರವೇಶ ಪದ ಬದಲಾಯಿಸಿ',
 'prefs-skin' => 'ಚರ್ಮ',
 'skin-preview' => 'ಮುನ್ನೋಟ',
@@ -965,12 +965,12 @@ $2',
 'prefs-displaysearchoptions' => 'ಪ್ರದರ್ಶನ ಆಯ್ಕೆಗಳು',
 'prefs-displaywatchlist' => 'ಪ್ರದರ್ಶನ ಆಯ್ಕೆಗಳು',
 
-# User rights
+# wiki_User rights
 'userrights' => 'ಬಳಕೆದಾರ ಹಕ್ಕುಗಳ ನಿರ್ವಹಣೆ',
 'userrights-lookup-user' => 'ಬಳಕೆದಾರ ಗುಂಪುಗಳನ್ನು ನಿರ್ವಹಿಸು',
 'userrights-user-editname' => 'ಬಳಕೆದಾರ ಹೆಸರನ್ನು ಸೂಚಿಸಿ:',
 'editusergroup' => 'ಬಳಕೆದಾರ ಗುಂಪುಗಳನ್ನು ಸಂಪಾದಿಸು',
-'editinguser' => "'''[[User:$1|$1]]''' ([[User talk:$1|{{int:talkpagelinktext}}]]{{int:pipe-separator}}[[Special:Contributions/$1|{{int:contribslink}}]]) ಅವರ ಸದಸ್ಯತ್ವದ ಹಕ್ಕುಗಳನ್ನು ಬದಲಾಗಿಸಲಾಗುತ್ತಿದೆ.",
+'editinguser' => "'''[[wiki_User:$1|$1]]''' ([[wiki_User talk:$1|{{int:talkpagelinktext}}]]{{int:pipe-separator}}[[Special:Contributions/$1|{{int:contribslink}}]]) ಅವರ ಸದಸ್ಯತ್ವದ ಹಕ್ಕುಗಳನ್ನು ಬದಲಾಗಿಸಲಾಗುತ್ತಿದೆ.",
 'userrights-editusergroup' => 'ಬಳಕೆದಾರ ಗುಂಪುಗಳನ್ನು ಸಂಪಾದಿಸು',
 'saveusergroups' => 'ಬಳಕೆದಾರ ಗುಂಪುಗಳನ್ನು ಉಳಿಸು',
 'userrights-groupsmember' => 'ಗುಂಪುಗಳ ಸದಸ್ಯತ್ವ:',
@@ -981,7 +981,7 @@ $2',
 'userrights-reason' => 'ಕಾರಣ:',
 'userrights-no-interwiki' => 'ಇತರ ವಿಕಿಗಳಲ್ಲಿ ನಿಮಗೆ ಬಳಕೆದಾರ ಹಕ್ಕುಗಳನ್ನು ಬದಲಾಯಿಸುವ ಅನುಮತಿಯಿಲ್ಲ.',
 'userrights-nodatabase' => 'ಡೇಟಾಬೇಸ್ $1 ಅಸ್ಥಿತ್ವದಲ್ಲಿಲ್ಲ ಅಥವ ಸ್ಥಳೀಯವಾದುದಲ್ಲ.',
-'userrights-nologin' => 'ಬಳಕೆದಾರ ಹಕ್ಕುಗಳನ್ನು ನೇಮಿಸಲು ನೀವು ನಿರ್ವಾಹಕ ಖಾತೆಯೊಂದಕ್ಕೆ [[Special:UserLogin|ಲಾಗ್ ಇನ್]] ಆಗಬೇಕು.',
+'userrights-nologin' => 'ಬಳಕೆದಾರ ಹಕ್ಕುಗಳನ್ನು ನೇಮಿಸಲು ನೀವು ನಿರ್ವಾಹಕ ಖಾತೆಯೊಂದಕ್ಕೆ [[Special:wiki_UserLogin|ಲಾಗ್ ಇನ್]] ಆಗಬೇಕು.',
 'userrights-notallowed' => 'ಬಳಕೆದಾರ ಹಕ್ಕುಗಳನ್ನು ನೇಮಿಸಲು ನಿಮ್ಮ ಖಾತೆಗೆ ಅನುಮತಿಯಿಲ್ಲ.',
 'userrights-changeable-col' => 'ನೀವು ಬದಲಾಯಿಸಬಲ್ಲ ಗುಂಪುಗಳು',
 'userrights-unchangeable-col' => 'ನೀವು ಬದಲಾಯಿಸಲಾಗದಂತಹ ಗುಂಪುಗಳು',
@@ -1031,7 +1031,7 @@ $2',
 'right-sendemail' => 'ಇತರ ಬಳಕೆದಾರರಿಗೆ ಇಮೇಲ್ ಕಳುಹಿಸಿ',
 'right-passwordreset' => 'ಪಾಸ್ವರ್ಡ್ ಮತ್ತೆ ಜೋಡಿಸಲ್ಪಟ್ಟ  ಇಮೇಲ್ ಗಳನ್ನು ವೀಕ್ಷಿಸಿ',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'ಸದಸ್ಯರ ಹಕ್ಕುಗಳ ದಾಖಲೆಗಳು',
 'rightslogtext' => 'ಇದು ಬಳಕೆದಾರ ಹಕ್ಕುಗಳ ಬದಲಾವಣೆಗಳ ದಾಖಲೆ.',
 'rightslogentry' => '$1 ಅವರ ಗುಂಪು ಸದಸ್ಯತ್ವವನ್ನು $2 ಇಂದ $3 ಗೆ ಬದಲಾಯಿಸಲಾಯಿತು',
@@ -1108,7 +1108,7 @@ $2',
 'uploadbtn' => 'ಫೈಲನ್ನು ಅಪ್ಲೋಡ್ ಮಾಡಿ',
 'reuploaddesc' => 'ಅಪ್ಲೋಡ್ ಅನ್ನು ನಿಲ್ಲಿಸಿ ಮತ್ತೆ ಅಪ್ಲೋಡ್ ವಕ್ಕಣೆಗೆ ಹಿಂದಿರುಗಿ',
 'uploadnologin' => 'ಲಾಗಿನ್ ಆಗಿಲ್ಲ',
-'uploadnologintext' => 'ಫೈಲುಗಳನ್ನು ಅಪ್ಲೋಡ್ ಮಾಡಲು ನೀವು [[Special:UserLogin|ಲಾಗ್ ಇನ್]] ಆಗಬೇಕು.',
+'uploadnologintext' => 'ಫೈಲುಗಳನ್ನು ಅಪ್ಲೋಡ್ ಮಾಡಲು ನೀವು [[Special:wiki_UserLogin|ಲಾಗ್ ಇನ್]] ಆಗಬೇಕು.',
 'uploaderror' => 'ಅಪ್ಲೋಡ್ ದೋಷ',
 'upload-permitted' => 'ಅಂಗೀಕೃತ ಫೈಲು ಮಾದರಿಗಳು: $1.',
 'upload-preferred' => 'ಐಚ್ಛಿಕ ಫೈಲು ಮಾದರಿಗಳು: $1.',
@@ -1422,12 +1422,12 @@ $2',
 'linksearch-ok' => 'ಹುಡುಕು',
 'linksearch-line' => '$1 ನ್ನು $2 ರಿಂದ ಜೋಡಿಸಲಾಗಿದೆ',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => 'ಇದರಿಂದ ಪ್ರಾರಂಭವಾಗುವ ಬಳಕೆದಾರರನ್ನು ತೋರಿಸು:',
 'listusers-submit' => 'ತೋರು',
 'listusers-noresult' => 'ಯಾವ ಬಳಕೆದಾರರೂ ಸಿಗಲಿಲ್ಲ.',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'ಸಕ್ರಿಯ ಸದಸ್ಯರ ಪಟ್ಟಿ',
 'activeusers-noresult' => 'ಯಾವ ಬಳಕೆದಾರರೂ ಸಿಗಲಿಲ್ಲ.',
 
@@ -1445,7 +1445,7 @@ $2',
 
 # E-mail user
 'mailnologin' => 'ಕಳುಹಿಸುವ ವಿಳಾಸ ಇಲ್ಲ',
-'mailnologintext' => 'ಇತರ ಬಳಕೆದಾರರಿಗೆ ಇ-ಅಂಚೆ ಕಳುಹಿಸಲು ನೀವು [[Special:UserLogin|ಲಾಗ್ ಇನ್]] ಆಗಿರಬೇಕು ಮತ್ತು ನಿಮ್ಮ [[Special:Preferences|ಪ್ರಾಶಸ್ತ್ಯಗಳ ಪುಟದಲ್ಲಿ]] ಒಂದು ಧೃಡೀಕೃತ ಇ-ಅಂಚೆ ವಿಳಾಸ ನೀಡಿರಬೇಕು.',
+'mailnologintext' => 'ಇತರ ಬಳಕೆದಾರರಿಗೆ ಇ-ಅಂಚೆ ಕಳುಹಿಸಲು ನೀವು [[Special:wiki_UserLogin|ಲಾಗ್ ಇನ್]] ಆಗಿರಬೇಕು ಮತ್ತು ನಿಮ್ಮ [[Special:Preferences|ಪ್ರಾಶಸ್ತ್ಯಗಳ ಪುಟದಲ್ಲಿ]] ಒಂದು ಧೃಡೀಕೃತ ಇ-ಅಂಚೆ ವಿಳಾಸ ನೀಡಿರಬೇಕು.',
 'emailuser' => 'ಈ ಸದಸ್ಯರಿಗೆ ಇ-ಅಂಚೆ ಕಳಿಸಿ',
 'emailuser-title-notarget' => 'ಸದಸ್ಯರಿಗೆ ವಿ-ಅ೦ಚೆ ಕಳಿಸಿ',
 'emailpage' => 'ಸದಸ್ಯರಿಗೆ ವಿ-ಅ೦ಚೆ ಕಳಿಸಿ',
@@ -1469,7 +1469,7 @@ $2',
 'nowatchlist' => 'ನಿಮ್ಮ ವೀಕ್ಷಣಾಪಟ್ಟಿಯಲ್ಲಿ ಯಾವುದೇ ಪುಟಗಳಿಲ್ಲ',
 'watchlistanontext' => 'ನಿಮ್ಮ ವೀಕ್ಷಣಾಪಟ್ಟಿಯನ್ನು ನೋಡಲು ಅಥವ ಸಂಪಾದಿಸಲು ದಯವಿಟ್ಟು $1 ಮಾಡಿ.',
 'watchnologin' => 'ಲಾಗಿನ್ ಆಗಿಲ್ಲ',
-'watchnologintext' => 'ನಿಮ್ಮ ವೀಕ್ಷಣಾಪಟ್ಟಿಯನ್ನು ಬದಲಾಯಿಸಲು ನೀವು [[Special:UserLogin|ಲಾಗಿನ್]] ಆಗಿರಬೇಕು.',
+'watchnologintext' => 'ನಿಮ್ಮ ವೀಕ್ಷಣಾಪಟ್ಟಿಯನ್ನು ಬದಲಾಯಿಸಲು ನೀವು [[Special:wiki_UserLogin|ಲಾಗಿನ್]] ಆಗಿರಬೇಕು.',
 'addedwatchtext' => '"[[:$1]]" ಪುಟವನ್ನು ನಿಮ್ಮ [[Special:Watchlist|ವೀಕ್ಷಣಾಪಟ್ಟಿಗೆ]] ಸೇರಿಸಲಾಗಿದೆ. ಈ ಪುಟದ ಮತ್ತು ಇದರ ಚರ್ಚಾ ಪುಟದ ಮುಂದಿನ ಬದಲಾವಣೆಗಳು ವೀಕ್ಷಣಾ ಪಟ್ಟಿಯಲ್ಲಿ ಕಾಣಸಿಗುತ್ತವೆ, ಮತ್ತು [[Special:RecentChanges|ಇತ್ತೀಚೆಗಿನ ಬದಲಾವಣೆಗಳ]] ಪಟ್ಟಿಯಲ್ಲಿ ಈ ಪುಟಗಳನ್ನು ದಪ್ಪಕ್ಷರಗಳಲ್ಲಿ ಕಾಣಿಸಲಾಗುವುದು.
 
 <p>ಈ ಪುಟವನ್ನು ವೀಕ್ಷಣಾ ಪಟ್ಟಿಯಿಂದ ತೆಗೆಯಬಯಸಿದಲ್ಲಿ, ಮೇಲ್ಪಟ್ಟಿಯಲ್ಲಿ ಕಾಣಿಸಿರುವ "ವೀಕ್ಷಣಾ ಪುಟದಿಂದ ತೆಗೆ" ಅನ್ನು ಕ್ಲಿಕ್ಕಿಸಿ.',
@@ -1671,7 +1671,7 @@ $2',
 'ipb-blocklist' => 'ಅಸ್ಥಿತ್ವದಲ್ಲಿರುವ ತಡೆಗಳನ್ನು ನೋಡು',
 'unblockip' => 'ಬಳಕೆದಾರನ ತಡೆಯನ್ನು ತೆಗೆ',
 'ipusubmit' => 'ಈ ವಿಳಾಸದ ತಡೆಯನ್ನು ತೆಗೆ',
-'unblocked' => '[[User:$1|$1]] ಖಾತೆಯ ತಡೆಯನ್ನು ತೆಗೆಯಲಾಗಿದೆ',
+'unblocked' => '[[wiki_User:$1|$1]] ಖಾತೆಯ ತಡೆಯನ್ನು ತೆಗೆಯಲಾಗಿದೆ',
 'unblocked-id' => '$1 ತಡೆಯನ್ನು ತೆಗೆಯಲಾಗಿದೆ',
 'ipblocklist' => 'ನಿರ್ಬಂಧಿಸಲಾಗಿರುವ IP ವಿಳಾಸಗಳು ಹಾಗೂ ಬಳಕೆಯ ಹೆಸರುಗಳು',
 'ipblocklist-legend' => 'ತಡೆಹಿಡಿಯಲಾದ ಬಳಕೆದಾರನನ್ನು ಹುಡುಕು',
@@ -1734,7 +1734,7 @@ $2',
 ಈ ಪ್ರಸಂಗಗಳಲ್ಲಿ ನೀವು ಸ್ವತಃ ಚರ್ಚೆ ಪುಟವನ್ನು ಸ್ಥಳಾಂತರಿಸಬೇಕು ಅಥವ ಒಂದುಗೂಡಿಸಬೇಕು.",
 'movearticle' => 'ಪುಟವನ್ನು ಸ್ಥಳಾಂತರಿಸಿ',
 'movenologin' => 'ಲಾಗಿನ್ ಆಗಿಲ್ಲ',
-'movenologintext' => 'ಪುಟವನ್ನು ಸ್ಥಳಾಂತರಿಸಲು ನೀವು ನೋಂದಾಯಿತ ಸದಸ್ಯರಾಗಿದ್ದು [[Special:UserLogin|ಲಾಗಿನ್]] ಆಗಿರಬೇಕು.',
+'movenologintext' => 'ಪುಟವನ್ನು ಸ್ಥಳಾಂತರಿಸಲು ನೀವು ನೋಂದಾಯಿತ ಸದಸ್ಯರಾಗಿದ್ದು [[Special:wiki_UserLogin|ಲಾಗಿನ್]] ಆಗಿರಬೇಕು.',
 'movenotallowed' => 'ನಿಮಗೆ {{SITENAME}} ಅಲ್ಲಿ ಪುಟಗಳನ್ನು ಸ್ಥಳಾಂತರಿಸುವ ಅನುಮತಿ ಇಲ್ಲ.',
 'newtitle' => 'ಈ ಹೊಸ ಶೀರ್ಷಿಕೆಗೆ:',
 'move-watch' => 'ಈ ಪುಟವನ್ನು ವೀಕ್ಷಿಸು',
@@ -2072,7 +2072,7 @@ $5
 
 # Delete conflict
 'deletedwhileediting' => "'''ಸೂಚನೆ''': ನೀವು ಸಂಪಾದನೆ ಪ್ರಾರಂಭಿಸಿದ ನಂತರ ಈ ಪುಟವನ್ನು ಅಳಿಸಲಾಗಿದೆ!",
-'confirmrecreate' => "ಸದಸ್ಯ [[User:$1|$1]] ([[User talk:$1|ಚರ್ಚೆ]]) ನೀವು ಸಂಪಾದನೆ ಶುರು ಮಾಡಿದ ಮೇಲೆ ಕೆಳಗಿನ ಕಾರಣ ನೀಡಿ ಈ ಪುಟವನ್ನು ಅಳಿಸಿದ್ದಾರೆ:
+'confirmrecreate' => "ಸದಸ್ಯ [[wiki_User:$1|$1]] ([[wiki_User talk:$1|ಚರ್ಚೆ]]) ನೀವು ಸಂಪಾದನೆ ಶುರು ಮಾಡಿದ ಮೇಲೆ ಕೆಳಗಿನ ಕಾರಣ ನೀಡಿ ಈ ಪುಟವನ್ನು ಅಳಿಸಿದ್ದಾರೆ:
 : ''$2''
 ದಯವಿಟ್ಟು ಈ ಪುಟವನ್ನು ನೀವು ಪುನಃ ಸೃಷ್ಟಿಸಬೇಕೆಂದಿರುವಿರಿ ಎಂದು ಧೃಡೀಕರಿಸಿ.",
 'recreate' => 'ಪುನಃ ಸೃಷ್ಟಿಸು',

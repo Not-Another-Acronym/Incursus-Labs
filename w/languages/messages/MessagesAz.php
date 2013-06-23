@@ -80,7 +80,7 @@ $magicWords = array(
 $separatorTransformTable = array( ',' => '.', '.' => ',' );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Keçidlərin altını xətlə:',
 'tog-justify' => 'Mətni səhifə boyu payla',
 'tog-hideminor' => 'Son dəyişikliklərdə kiçik redaktələri gizlə',
@@ -422,7 +422,7 @@ Verilənlər bazasını bloklayan operatorun izahatı: $1',
 Bu vəziyyət səhifənin, silinmiş bir səhifənin keçmiş versiyası olmasından qaynaqlana bilər.
 
 Əgər niyə bu deyilsə, proqramda bir səhv ilə qarşılaşmış ola bilərsiniz.
-Xahiş edirik bunu bir [[Special:ListUsers/sysop|İdarəçilərə]], URL not edərək göndərin.',
+Xahiş edirik bunu bir [[Special:Listwiki_Users/sysop|İdarəçilərə]], URL not edərək göndərin.',
 'missingarticle-rev' => '(təftiş № $1)',
 'missingarticle-diff' => '(fərq: $1, $2)',
 'readonly_lag' => 'Məlumatlar bazasının ikinci dərəcəli serveri əsas serverlə əlaqə yaradanadək məlumatlar bazası avtomatik olaraq bloklanmışdır',
@@ -466,7 +466,7 @@ Tərcümə üçün daha yaxşı olar ki, MediaWiki-nin lokallaşması üçün ol
 $2',
 'namespaceprotected' => 'Sizin adlarında $1 olan məqalələrdə redaktə etməyə icazəniz yoxdur.',
 'ns-specialprotected' => 'Xüsusi səhifələr redaktə oluna bilməz.',
-'titleprotected' => 'Bu adda səhifənin yaradılması istifadəçi [[User:$1|$1]] tərəfindən qadağan edilmişdir.
+'titleprotected' => 'Bu adda səhifənin yaradılması istifadəçi [[wiki_User:$1|$1]] tərəfindən qadağan edilmişdir.
 Göstərilən səbəb: "\'\'$2\'\'".',
 
 # Virus scanner
@@ -477,7 +477,7 @@ Göstərilən səbəb: "\'\'$2\'\'".',
 # Login and logout pages
 'logouttext' => "'''Sistemdən çıxdınız.'''
 
-Siz {{SITENAME}} saytını anonim olaraq istifadə etməyə davam edə bilər və ya eyni, yaxud başqa istifadəçi adı ilə [[Special:UserLogin|yenidən daxil ola]] bilərsiniz. Veb-brauzerin keş yaddaşını təmizləyənədək bəzi səhifələr hələ də sistemdə imişsiniz kimi görünə bilər.",
+Siz {{SITENAME}} saytını anonim olaraq istifadə etməyə davam edə bilər və ya eyni, yaxud başqa istifadəçi adı ilə [[Special:wiki_UserLogin|yenidən daxil ola]] bilərsiniz. Veb-brauzerin keş yaddaşını təmizləyənədək bəzi səhifələr hələ də sistemdə imişsiniz kimi görünə bilər.",
 'welcomecreation' => '== $1, xoş gəlmişsiniz! ==
 Hesabınız yaradıldı.
 [[Special:Preferences|{{SITENAME}} nizamlamalarınızı]] dəyişdirməyi unutmayın.',
@@ -522,7 +522,7 @@ Kukların qoşulmasına əmin olduqdan sonra səhifəni yeniləyib bir daha sın
 'loginsuccess' => "'''\"\$1\" adı ilə sistemə daxil oldunuz.'''",
 'nosuchuser' => '"$1" adlı istifadəçi mövcud deyil.
 İstifadəçi adları hərflərin böyük və ya kiçik olmasına həssasdırlar.
-Düzgün yazdığınıza əmin olun, yaxud [[Special:UserLogin/signup|yeni hesab açın]].',
+Düzgün yazdığınıza əmin olun, yaxud [[Special:wiki_UserLogin/signup|yeni hesab açın]].',
 'nosuchusershort' => '"$1" adında istifadəçi mövcud deyil.
 Düzgün yazdığına əmin ol.',
 'nouserspecified' => 'İstifadəçi adı daxil etməlisiniz.',
@@ -650,14 +650,14 @@ Həmin alt səhifə ola bilsin siz səhifəyə baxan zaman silinib.',
 'loginreqlink' => 'daxil olmalısınız',
 'loginreqpagetext' => 'Digər səhifələri görmək üçün $1 olmalısınız.',
 'accmailtitle' => 'Parol göndərildi.',
-'accmailtext' => "[[User talk:$1|$1]] üçün təsadüfi yolla yaradılmış parol $2 ünvanına göndərildi.
+'accmailtext' => "[[wiki_User talk:$1|$1]] üçün təsadüfi yolla yaradılmış parol $2 ünvanına göndərildi.
 Hesabınıza daxil olduqdan sonra, parolunuzu ''[[Special:ChangePassword|parolu dəyiş]]'' səhifəsində dəyişdirə bilərsiniz.",
 'newarticle' => '(Yeni)',
 'newarticletext' => "Mövcud olmayan səhifəyə olan keçidi izlədiniz. Aşağıdakı sahəyə məzmununu yazaraq bu səhifəni '''siz''' yarada bilərsiniz. (əlavə məlumat üçün [[{{MediaWiki:Helppage}}|kömək səhifəsinə]] baxın). Əgər bu səhifəyə səhvən gəlmisinizsə sadəcə olaraq brauzerin '''geri''' düyməsinə vurun.",
 'anontalkpagetext' => "----''Bu səhifə qeydiyyatdan keçməmiş və ya daxil olmamış anonim istifadəçiyə aid müzakirə səhifəsidir.
 Ona görə bu istifadəçini rəqəmlərdən ibarət IP ünvanı ilə müəyyən etmək məcburiyyətindəyik.
 Belə IP ünvan bir neçə fərd tərəfindən istifadədə ola bilər.
-Əgər siz anonim istifadəçisinizsə və bu mesajın sizə aid olmadığını düşünürsünüzsə, onda  [[Special:UserLogin/signup|qeydiyyatdan keçin]] və ya [[Special:UserLogin|daxi olun]].''",
+Əgər siz anonim istifadəçisinizsə və bu mesajın sizə aid olmadığını düşünürsünüzsə, onda  [[Special:wiki_UserLogin/signup|qeydiyyatdan keçin]] və ya [[Special:wiki_UserLogin|daxi olun]].''",
 'noarticletext' => 'Hal-hazırda bu səhifə boşdur. Başqa səhifələrdə eyni adda səhifəni [[Special:Search/{{PAGENAME}}| axtara]], əlaqəli qeydlərə
 <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} baxa],
 və ya səhifəni [{{fullurl:{{FULLPAGENAME}}|action=edit}} redaktə]</span> edə bilərsiniz.',
@@ -711,7 +711,7 @@ Siz eyni zamanda söz verirsiniz ki, bu yazıları siz özünüz yazmısınız v
 'edittools-upload' => '-',
 'nocreatetitle' => 'Səhifə yaratma məhdudlaşdırılıb.',
 'nocreatetext' => '{{SITENAME}} saytında yeni səhifələrin yaradılması imkanları məhdudlaşdırılıb.
-Siz geri qayıdıb mövcud səhifəni və ya  [[Special:UserLogin|sistemə təqdim olunma və ya yeni hesab açmaq]] səhifəsini redaktə edə bilərsiniz.',
+Siz geri qayıdıb mövcud səhifəni və ya  [[Special:wiki_UserLogin|sistemə təqdim olunma və ya yeni hesab açmaq]] səhifəsini redaktə edə bilərsiniz.',
 'nocreate-loggedin' => 'Sizin yeni səhifələr yaratmaq üçün icazəniz yoxdur.',
 'sectioneditnotsupported-title' => 'Bölüm redaktəsi dəstəklənmir',
 'sectioneditnotsupported-text' => 'Bölüm redaktəsi bu səhifədə dəstəklənmir.',
@@ -747,11 +747,11 @@ Bəzi şablonlar əlavə olunmayacaq.",
 # "Undo" feature
 'undo-failure' => 'Dəyişikliklərin toqquşması nəticəsində geriyə qaytarma işi uğursuz oldu.',
 'undo-norev' => 'Düzəlişlər geri qaytarıla bilinmir, çünki onlar ya mövcüd deyil, ya da silinib.',
-'undo-summary' => '$1 dəyişikliyi [[Special:Contributions/$2|$2]] ([[User talk:$2|Müzakirə]]) tərəfindən geri alındı.',
+'undo-summary' => '$1 dəyişikliyi [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Müzakirə]]) tərəfindən geri alındı.',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'Hesab açılmır.',
-'cantcreateaccount-text' => "Bu IP ünvanından ('''$1''') istifadəçi hesabı yaradılması [[User:$3|$3]] tərəfindən əngəllənmişdir.
+'cantcreateaccount-text' => "Bu IP ünvanından ('''$1''') istifadəçi hesabı yaradılması [[wiki_User:$3|$3]] tərəfindən əngəllənmişdir.
 
 $3 tərəfindən verilən səbəb ''$2''",
 
@@ -960,7 +960,7 @@ $1",
 'mypreferences' => 'Nizamlamalar',
 'prefs-edits' => 'Redaktələrin sayı:',
 'prefsnologin' => 'Daxil olmamısınız',
-'prefsnologintext' => 'Nizamlamaları dəyişmək üçün <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} daxil olmaq]</span> zəruridir.',
+'prefsnologintext' => 'Nizamlamaları dəyişmək üçün <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} daxil olmaq]</span> zəruridir.',
 'changepassword' => 'Parolu dəyiş',
 'prefs-skin' => 'Cild',
 'skin-preview' => 'Sınaq görüntüsü',
@@ -1069,16 +1069,16 @@ Həmçinin kimliyinizi gostərmədən belə, başqalarının sizinlə istifadə�
 'prefs-displaywatchlist' => 'Görüntü variantları',
 'prefs-diffs' => 'Fərqlər',
 
-# User preference: e-mail validation using jQuery
+# wiki_User preference: e-mail validation using jQuery
 'email-address-validity-valid' => 'E-poçt ünvanı düzgündür',
 'email-address-validity-invalid' => 'Düzgün e-poçt ünvanı daxil edin',
 
-# User rights
+# wiki_User rights
 'userrights' => 'İstifadəçi hüququ idarəsi',
 'userrights-lookup-user' => 'İstifadəçi qruplarını idarə et',
 'userrights-user-editname' => 'İstifadəçi adınızı yazın:',
 'editusergroup' => 'İstifadəçi qruplarını redaktə et',
-'editinguser' => "İstifadəçi '''[[User:$1|$1]]''' $2 üçün istifadəçi hüquqları dəyişdirilir",
+'editinguser' => "İstifadəçi '''[[wiki_User:$1|$1]]''' $2 üçün istifadəçi hüquqları dəyişdirilir",
 'userrights-editusergroup' => 'İstifadəçi qruplarını redaktə et',
 'saveusergroups' => 'İstifadəçi qrupunu qeyd et',
 'userrights-groupsmember' => 'Daxil olduğu qruplar:',
@@ -1086,7 +1086,7 @@ Həmçinin kimliyinizi gostərmədən belə, başqalarının sizinlə istifadə�
 'userrights-reason' => 'Səbəb:',
 'userrights-no-interwiki' => 'Sizə başqa vikilayihələrdəki istifadəçilərin statusunu dəyişməyə icazə verilməyib',
 'userrights-nodatabase' => '$1 verilənlər bazası ya mövcud deyil, ya da lokal deyil.',
-'userrights-nologin' => 'Siz istifadəçilərin hüquqlarını dəyişmək üçün sistemə idarəçi olaraq [[Special:UserLogin|daxil olmalısınız]].',
+'userrights-nologin' => 'Siz istifadəçilərin hüquqlarını dəyişmək üçün sistemə idarəçi olaraq [[Special:wiki_UserLogin|daxil olmalısınız]].',
 'userrights-notallowed' => 'Sizin istifadəçi hesabınıza digər istifadəçilərə hüquqlar vermək və ya almağa icazə verilməyib.',
 'userrights-changeable-col' => 'Dəyişdirə bildiyiniz qruplar',
 'userrights-unchangeable-col' => 'Dəyişdirə bilmədiyiniz qruplar',
@@ -1171,7 +1171,7 @@ Həmçinin kimliyinizi gostərmədən belə, başqalarının sizinlə istifadə�
 'right-siteadmin' => 'Məlumatlar bazasının bloklanması və blokun götürülməsi',
 'right-sendemail' => 'Digər istifadəçilərə elektron poçt göndər',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'İstifadəçi hüquqları qeydləri',
 'rightslogtext' => 'İstifadəçi hüquqları dəyişikliyi qeydləri.',
 'rightslogentry' => '$1 adlı istifadəçinin istifadəçi qruplarındakı üzvlüyü dəyişdirildi: $2 ► $3',
@@ -1266,7 +1266,7 @@ Həmçinin kimliyinizi gostərmədən belə, başqalarının sizinlə istifadə�
 'reuploaddesc' => 'Return to the upload form.',
 'upload-tryagain' => 'Dəyşdirilmiş fayl izahını göndər',
 'uploadnologin' => 'Daxil olmamısınız',
-'uploadnologintext' => 'Fayl yükləmək üçün [[Special:UserLogin|daxil olmalısınız]].',
+'uploadnologintext' => 'Fayl yükləmək üçün [[Special:wiki_UserLogin|daxil olmalısınız]].',
 'upload_directory_missing' => '($1) yükləmə qaydası axtarılır və vebserverdə yaradılması qeyri-mümkündür.',
 'upload_directory_read_only' => '"$1" kataloqunun arxivi veb-server yazıları üçün qapalıdır.',
 'uploaderror' => 'Yükləmə xətası',
@@ -1503,7 +1503,7 @@ $1',
 'statistics-views-total' => 'Cəmi göstərmə',
 'statistics-views-total-desc' => 'Mövcud olmayan və xüsusi səhifələrin göstərilmələri daxil edilməmişdir.',
 'statistics-views-peredit' => 'Redaktə başına göstərmə',
-'statistics-users' => 'Qeydiyyatdan keçmiş [[Special:ListUsers|istifadəçilər]]',
+'statistics-users' => 'Qeydiyyatdan keçmiş [[Special:Listwiki_Users|istifadəçilər]]',
 'statistics-users-active' => 'Aktiv istifadəçilər',
 'statistics-users-active-desc' => 'Son {{PLURAL:$1|gün|$1 gündə}} iş görən istifadəçilər',
 'statistics-mostpopular' => 'Ən çox baxılan səhifələr',
@@ -1639,12 +1639,12 @@ Həmçinin, [[Special:WantedCategories|tələb olunan kateqoriyalara]] baxın.',
 'linksearch-ok' => 'Axtar',
 'linksearch-line' => '$2-dən $1 keçid verilib',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusers-submit' => 'Göstər',
 'listusers-noresult' => 'İstifadəçi tapılmadı.',
 'listusers-blocked' => '(bloklandı)',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'Aktiv istifadəçilərin siyahısı',
 'activeusers-count' => '$1 {{PLURAL:$1|edit|redaktə}} son {{PLURAL:$3|day|$3 gün}}',
 'activeusers-hidebots' => 'Botları gizlə',
@@ -1700,7 +1700,7 @@ Fərdi hüquqlar haqqında əlavə məlumatı [[{{MediaWiki:Listgrouprights-help
 'emailsent' => 'E-məktub göndərildi',
 'emailsenttext' => 'E-məktub mesajınız göndərildi.',
 
-# User Messenger
+# wiki_User Messenger
 'usermessage-summary' => 'Sistem mesajı qoyun.',
 'usermessage-editor' => 'Sistem məlumatları',
 'usermessage-template' => 'MediaWiki:İstifadəçi müzakirəsi',
@@ -1712,7 +1712,7 @@ Fərdi hüquqlar haqqında əlavə məlumatı [[{{MediaWiki:Listgrouprights-help
 'nowatchlist' => 'İzləmə siyahınız böşdur.',
 'watchlistanontext' => 'Lütfən, izlədiyiniz səhifələri görmək və ya redaktə etmək üçün $1.',
 'watchnologin' => 'Daxil olmamısınız',
-'watchnologintext' => 'İzləmə siyahınızda dəyişiklik aparmaq üçün [[Special:UserLogin|daxil olmalısınız]].',
+'watchnologintext' => 'İzləmə siyahınızda dəyişiklik aparmaq üçün [[Special:wiki_UserLogin|daxil olmalısınız]].',
 'addwatch' => 'İzləmə siyahısına əlavə et',
 'addedwatchtext' => '"[[:$1]]" səhifəsi [[Special:Watchlist|izlədiyiniz səhifələr]] siyahısına əlavə edildi. Bu səhifədə və əlaqəli müzakirə səhifəsindəki bütün dəyişikliklər orada göstəriləcək və səhifə asanlıqla seçiləbilmək üçün [[Special:RecentChanges|son dəyişikliklərdə]] qalın şriftlərlə görünəcəkdir. <p> Səhifəni izləmə siyahınızdan çıxarmaq üçün yan lövhədəki "izləmə" düyməsinə vurun.',
 'removewatch' => 'Bu səhifəni İzlədiyim səhifələr siyahısından çıxar',
@@ -1806,8 +1806,8 @@ Sonuncu silinmələrə bax: $2.',
 'rollbacklink' => 'əvvəlki halına qaytar',
 'rollbackfailed' => 'Geri qaytarma uğursuzdur',
 'cantrollback' => 'Redaktə geri qaytarıla bilməz; axırıncı redaktə səhifədə olan yeganə fəaliyyətdir.',
-'revertpage' => '[[Special:Contributions/$2|$2]] ([[User talk:$2|Müzakirə]]) tərəfindən edilmiş dəyişikliklər [[User:$1|$1]] tərəfindən edilmiş dəyişikliklərə qaytarıldı.',
-'revertpage-nouser' => '(istifadəçi adı çıxarılmış) tərəfindən edilən dəyişikliklər [[User:$1|$1]] tərəfindən edilən son dəyişikliyə geri alındı',
+'revertpage' => '[[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Müzakirə]]) tərəfindən edilmiş dəyişikliklər [[wiki_User:$1|$1]] tərəfindən edilmiş dəyişikliklərə qaytarıldı.',
+'revertpage-nouser' => '(istifadəçi adı çıxarılmış) tərəfindən edilən dəyişikliklər [[wiki_User:$1|$1]] tərəfindən edilən son dəyişikliyə geri alındı',
 'rollback-success' => '$1 tərəfindən edilmiş redaktələr geri qaytarıldı; $2 tərəfindən yaradılmış son versiya bərpa olundu.',
 
 # Edit tokens
@@ -2005,7 +2005,7 @@ Bax [[Special:BlockList|IP blok siyahısı]] bloklanmış IP-lər.',
 'unblockip' => 'İstifadəçinin blokunu götür',
 'unblockiptext' => 'Əvvəlcədən bloklanmış bir IP ünvanına və ya istifadəçi adına yazma geri vermek için aşağıdakı formadan istifadə edin.',
 'ipusubmit' => 'Bu bloku götür',
-'unblocked' => '[[User:$1|$1]] - nin bloku götürüldü',
+'unblocked' => '[[wiki_User:$1|$1]] - nin bloku götürüldü',
 'unblocked-range' => '$1-nin bloku götürüldü',
 'unblocked-id' => '$1-nin bloku götürüldü',
 'blocklist' => 'Bloklanmış istifadəçilər',
@@ -2038,7 +2038,7 @@ Bax [[Special:BlockList|IP blok siyahısı]] bloklanmış IP-lər.',
 'change-blocklink' => 'bloklamanı dəyişdir',
 'contribslink' => 'Köməklər',
 'emaillink' => 'e-məktub göndər',
-'autoblocker' => 'Avtomatik olaraq bloklanmısınız. Çünki, qısa müddət əvvəl sizin IP-ünvanınız "[[User:$1|$1]]" tərəfindən istifadə edilmişdir.
+'autoblocker' => 'Avtomatik olaraq bloklanmısınız. Çünki, qısa müddət əvvəl sizin IP-ünvanınız "[[wiki_User:$1|$1]]" tərəfindən istifadə edilmişdir.
 $1 adlı istifadəçinin bloklanma səbəbi: "$2"',
 'blocklogpage' => 'Bloklama qeydləri',
 'blocklog-showlog' => 'Bu istifadəçi daha əvvəl bloklanmışdır. Bloklama gündəliyi referans üçün aşağıda göstərilib:',
@@ -2811,7 +2811,7 @@ Variants for Chinese language
 'confirmemail_sent' => 'Təsdiq e-məktubu göndərildi.',
 'confirmemail_invalid' => 'Səhv təsdiqləmə kodu. Kodun vaxtı keçmiş ola bilər.',
 'confirmemail_needlogin' => 'E-poçt ünvanınızın təsdiqlənməsi üçün $1 lazımdır.',
-'confirmemail_success' => 'E-poçt ünvanınız indi təsdiq edildi. Siz indi [[Special:UserLogin|hesab açaraq]] vikidən həzz ala bilərsiz.',
+'confirmemail_success' => 'E-poçt ünvanınız indi təsdiq edildi. Siz indi [[Special:wiki_UserLogin|hesab açaraq]] vikidən həzz ala bilərsiz.',
 'confirmemail_loggedin' => 'E-məktubunuz indi təsdiq edildi.',
 'confirmemail_subject' => '{{SITENAME}} e-məktub təsdiq etmə',
 'confirmemail_invalidated' => 'E-mail təsdiqlənməsi dayandırıldı',

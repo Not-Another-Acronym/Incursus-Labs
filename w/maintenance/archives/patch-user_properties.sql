@@ -1,5 +1,5 @@
 --
--- User preferences and perhaps other fun stuff. :)
+-- wiki_User preferences and perhaps other fun stuff. :)
 -- Replaces the old user.user_options blob, with a couple nice properties:
 --
 -- 1) We only store non-default settings, so changes to the defauls

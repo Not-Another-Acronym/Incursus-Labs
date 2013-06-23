@@ -106,7 +106,7 @@ Class CreateAccountTestCase extends SeleniumTestCase {
         $this->click( "wpCreateaccount" );
         $this->waitForPageToLoad( SeleniumTestConstants::WIKI_TEST_WAIT_TIME );
 
-        // Verify successful account creation for valid combination of 'Username', 'Password', 'Retype password'
+        // Verify successful account creation for valid combination of 'wiki_Username', 'Password', 'Retype password'
         $this->assertEquals( "Welcome, ".ucfirst( $this->userName )."!",
                 $this->getText( "Welcome,_".ucfirst( $this->userName )."!" ));
     }

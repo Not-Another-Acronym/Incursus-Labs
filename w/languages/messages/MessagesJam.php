@@ -13,7 +13,7 @@
  */
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Lingk andalainin',
 'tog-justify' => 'Jostifai paragraaf',
 'tog-hideminor' => 'Aid maina edit ina riisant chienj',
@@ -346,7 +346,7 @@ Di adminischrieta uu laki aafa dis explanieshan: $1',
 Dis yuujal kaaz ef ifala outdiet dif ar ischri lingk to piej wa diliit.
 
 Ef dis a no di kies, a maita fain yu fain bog ina di saafwier.
-Begyu ripuot dis tu wahn [[Special:ListUsers/sysop|administrieta]], mek nuot a di URL.',
+Begyu ripuot dis tu wahn [[Special:Listwiki_Users/sysop|administrieta]], mek nuot a di URL.',
 'missingarticle-rev' => '(rivijan#: $1)',
 'missingarticle-diff' => '(Dif: $1, $2)',
 'readonly_lag' => 'Di dietabies aatamatikali lak wails di sliev dietabies soervadem kechop tu di maasta',
@@ -392,7 +392,7 @@ Fi chranslieshan, begyu kansida fi yuuz [//translatewiki.net/wiki/Main_Page?setl
 $2',
 'namespaceprotected' => "Yu no gat no pomishan fi edit piej ina di '''$1''' niemspies.",
 'ns-specialprotected' => 'Peshal piejdem kyaahn edit.',
-'titleprotected' => 'Dis taikl protek frahn krieshan bai [[User:$1|$1]].
+'titleprotected' => 'Dis taikl protek frahn krieshan bai [[wiki_User:$1|$1]].
 Di riizn dehn gi a "\'\'$2\'\'".',
 
 # Virus scanner
@@ -403,7 +403,7 @@ Di riizn dehn gi a "\'\'$2\'\'".',
 # Login and logout pages
 'logouttext' => "'''Yu nou lag out.'''
 
-Yu kiahn kantiniu yuuz {{SITENAME}} ananimosli, ar yu kiahn [[Special:UserLogin|lag iin agen]] az di siem ar az difrant yuuza.
+Yu kiahn kantiniu yuuz {{SITENAME}} ananimosli, ar yu kiahn [[Special:wiki_UserLogin|lag iin agen]] az di siem ar az difrant yuuza.
 Nuot se som piej maita kantiniu fi displie laik se yu stil log iin, antel yu klier yu brouza kiash.",
 'welcomecreation' => '== Welkom, $1! ==
 Yu akount don kriet.
@@ -447,7 +447,7 @@ Begyu eniebl dem ahn chrai agen.',
 'loginsuccess' => "'''Yu nou lag iin tu {{SITENAME}} az \"\$1\".'''",
 'nosuchuser' => 'No yuuza no de bai di niem "$1".
 Yuuza niem kies sensitiv.
-Chek yu spelin, ar [[Special:UserLogin/signup|kriet a nyuu akount]].',
+Chek yu spelin, ar [[Special:wiki_UserLogin/signup|kriet a nyuu akount]].',
 'nosuchusershort' => 'No yuuza no de bai di niem "$1".
 Chek yu spelin.',
 'nouserspecified' => 'Yu afi spesifai a yuuzaniem.',
@@ -602,7 +602,7 @@ Imaita muuv ar diliit wails yu a vyuu di piej.',
 'loginreqlink' => 'Lag iin',
 'loginreqpagetext' => 'Yu mos $1 fi vyuu ada piej',
 'accmailtitle' => 'Paaswod sen.',
-'accmailtext' => "A random jinariet paaswod fi [[User talk:$1|$1]] sen tu $2.
+'accmailtext' => "A random jinariet paaswod fi [[wiki_User talk:$1|$1]] sen tu $2.
 
 Di paaswod fi dis nyuu akount kiahn chienj a di ''[[Special:ChangePassword|chienj paaswod]]'' piej afta yu lag iin.",
 'newarticle' => '(Nyuu)',
@@ -612,7 +612,7 @@ Ef yu de ya by mistiek, klik yu brouza '''bak''' botn.",
 'anontalkpagetext' => "----''Dis a di diskoshan piej fi ananimos yuuza uu no kriet no akount yet, ar uu no yuuzi.
 Wi dierfuor afi yuuz di nyuumerikal IP ajres fi aidentifai im/ar.
 Soch a IP ajres kiahn shier bai sebral yuuza.
-Ef yu a ananimos yuuza ahn fiil se irelivant kament dairek tu yu, begyu [[Special:UserLogin/signup|kriet a akount]] ar [[Special:UserLogin|lag iin]] fi avaid fyuucha kanfyuujan wid ada ananimos yuuza.''",
+Ef yu a ananimos yuuza ahn fiil se irelivant kament dairek tu yu, begyu [[Special:wiki_UserLogin/signup|kriet a akount]] ar [[Special:wiki_UserLogin|lag iin]] fi avaid fyuucha kanfyuujan wid ada ananimos yuuza.''",
 'noarticletext' => 'Korentli no tex no de ina dis piej.
 Yu kiahn [[Special:Search/{{PAGENAME}}|saach fi dis piej taikl]] ina ada piej,
 <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} saach di rilietid lagdem],
@@ -637,13 +637,13 @@ Yu chienjdem no sieb yet!",
 'previewconflict' => 'Dis priivyuu riflek di tex ina di opa editin ieria az iwi apier ef yu chuuz fi siebi.',
 'session_fail_preview' => "'''Sari! Wi kudn pruoses yu edit juu tu a laas a seshan dieta.'''
 Begyu chrai agen.
-Ef istil no wok, chrai [[Special:UserLogout|lag out]] ahn lag bak iin.",
+Ef istil no wok, chrai [[Special:wiki_UserLogout|lag out]] ahn lag bak iin.",
 'session_fail_preview_html' => "'''Sari! Wi kudn pruoses yu edit juu tu laas a seshan dieta.'''
 
 ''Bikaa {{SITENAME}} ab raa HTML eniebl, di priivyuu aidwe az prikaashan gens JavaScript atak.''
 
 '''Ef dis a lejitimet edit atemp, begyu chrai agen.'''
-Ef istil no wok, chrai [[Special:UserLogout|lag out]] ahn lag bak iin.",
+Ef istil no wok, chrai [[Special:wiki_UserLogout|lag out]] ahn lag bak iin.",
 'token_suffix_mismatch' => "'''Yu edit rijek bikaa yu klayant manggl di pongtyueshan kiaraktadem ina di edit tuokn.'''
 Di edit rijek fi privent koropshan a di piej tex.
 Dis somtaim apn wen yu a yuuz a bogi web-bies ananimos praxi saabis.",
@@ -740,7 +740,7 @@ Chrai priifix yu kwieri wid ''all:'' fi saach aal kantent (inkluudn taak piej, t
 
 'grouppage-sysop' => '{{ns:project}}:Adminischrieta',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Yuuza raits lag',
 
 # Associated actions - in the sentence "You do not have permission to X"

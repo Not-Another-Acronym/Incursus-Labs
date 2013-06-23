@@ -12,7 +12,7 @@
 			action: 'watch',
 			title: String( page ),
 			token: mw.user.tokens.get( 'watchToken' ),
-			uselang: mw.config.get( 'wgUserLanguage' )
+			uselang: mw.config.get( 'wgwiki_UserLanguage' )
 		};
 		function ok( data ) {
 			success( data.watch );

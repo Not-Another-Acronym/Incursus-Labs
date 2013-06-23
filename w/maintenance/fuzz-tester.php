@@ -274,7 +274,7 @@ define( "VALIDATOR_URL",  "http://validator.w3.org/check" );
 define( "PATH_TO_TIDY",  "/usr/bin/tidy" );
 
 // The name of a user who has edited on your wiki. Used
-// when testing the Special:Contributions and Special:Userlogin page.
+// when testing the Special:Contributions and Special:wiki_Userlogin page.
 if ( !empty( $options["user"] ) ) {
 	define( "USER_ON_WIKI", $options["user"] );
 } else {
@@ -1105,11 +1105,11 @@ class specialLogTest extends pageTest {
 
 
 /**
- ** a page test for "Special:Userlogin", with a successful login.
+ ** a page test for "Special:wiki_Userlogin", with a successful login.
  */
-class successfulUserLoginTest extends pageTest {
+class successfulwiki_UserLoginTest extends pageTest {
 	function __construct() {
-		$this->pagePath = "index.php?title=Special:Userlogin&action=submitlogin&type=login&returnto=" . wikiFuzz::makeFuzz( 2 );
+		$this->pagePath = "index.php?title=Special:wiki_Userlogin&action=submitlogin&type=login&returnto=" . wikiFuzz::makeFuzz( 2 );
 
 		$this->params = array (
 				"wpName"          => USER_ON_WIKI,
@@ -1124,12 +1124,12 @@ class successfulUserLoginTest extends pageTest {
 
 
 /**
- ** a page test for "Special:Userlogin".
+ ** a page test for "Special:wiki_Userlogin".
  */
 class userLoginTest extends pageTest {
 	function __construct() {
 
-		$this->pagePath = "index.php?title=Special:Userlogin";
+		$this->pagePath = "index.php?title=Special:wiki_Userlogin";
 
 		$this->params = array (
 				'wpRetype'        => wikiFuzz::makeFuzz( 2 ),
@@ -1604,17 +1604,17 @@ class specialLockdbPageTest extends pageTest {
 
 
 /**
- ** a page test for "Special:Userrights"
+ ** a page test for "Special:wiki_Userrights"
  */
-class specialUserrights extends pageTest {
+class specialwiki_Userrights extends pageTest {
 	function __construct() {
-		$this->pagePath = "index.php?title=Special:Userrights";
+		$this->pagePath = "index.php?title=Special:wiki_Userrights";
 
 		$this->params = array (
 				'wpEditToken'   => wikiFuzz::chooseInput( array( "20398702394", "", wikiFuzz::makeFuzz( 2 ) ) ),
 				'user-editname' => wikiFuzz::chooseInput( array( "Nickj2", "Nickj2\n<xyz>", wikiFuzz::makeFuzz( 2 ) ) ),
 				'ssearchuser'   => wikiFuzz::chooseInput( array( "0", "1", "++--34234", wikiFuzz::makeFuzz( 2 ) ) ),
-				'saveusergroups' => wikiFuzz::chooseInput( array( "0", "1", "++--34234", wikiFuzz::makeFuzz( 2 ) ), "Save User Groups" ),
+				'saveusergroups' => wikiFuzz::chooseInput( array( "0", "1", "++--34234", wikiFuzz::makeFuzz( 2 ) ), "Save wiki_User Groups" ),
 				'member[]'      => wikiFuzz::chooseInput( array( "0", "bot", "1", "++--34234", wikiFuzz::makeFuzz( 2 ) ) ),
 				"available[]"   => wikiFuzz::chooseInput( array( "0", "sysop", "bureaucrat", "1", "++--34234", wikiFuzz::makeFuzz( 2 ) ) )
 				);
@@ -2102,7 +2102,7 @@ class api extends pageTest {
 
 		// Set the cookie:
 		// @todo FIXME: Need to get this cookie dynamically set, rather than hard-coded.
-		$this->cookie = "wikidbUserID=10001; wikidbUserName=Test; wikidb_session=178df0fe68c75834643af65dec9ec98a; wikidbToken=1adc6753d62c44aec950c024d7ae0540";
+		$this->cookie = "wikidbwiki_UserID=10001; wikidbwiki_UserName=Test; wikidb_session=178df0fe68c75834643af65dec9ec98a; wikidbToken=1adc6753d62c44aec950c024d7ae0540";
 
 		// Output format
 		$this->params["format"] = wikiFuzz::chooseInput( array( "json", "jsonfm", "php", "phpfm",
@@ -2160,7 +2160,7 @@ class GeSHi_Test extends pageTest {
 /**
  ** selects a page test to run.
  * @param $count
- * @return \api|\confirmEmail|\contributionsTest|\editPageTest|\imagelistTest|\imagepageTest|\ipblocklistTest|\listusersTest|\mimeSearchTest|\newImagesTest|\pageDeletion|\pageHistoryTest|\pageProtectionForm|\prefixindexTest|\profileInfo|\recentchangesTest|\redirectTest|\searchTest|\specialAllmessagesTest|\specialAllpagesTest|\specialBlockip|\specialBlockmeTest|\specialBooksourcesTest|\specialCategoryTree|\specialChemicalsourcesTest|\specialCitePageTest|\specialExportTest|\specialFilepathPageTest|\specialImportPageTest|\specialLinksearch|\specialLockdbPageTest|\specialLogTest|\specialMovePage|\specialNewpagesPageTest|\specialRenameuserPageTest|\specialRevisionDeletePageTest|\specialUndeletePageTest|\specialUnlockdbPageTest|\specialUserrights|\successfulUserLoginTest|\thumbTest|\userLoginTest|\viewPageTest|\watchlistTest
+ * @return \api|\confirmEmail|\contributionsTest|\editPageTest|\imagelistTest|\imagepageTest|\ipblocklistTest|\listusersTest|\mimeSearchTest|\newImagesTest|\pageDeletion|\pageHistoryTest|\pageProtectionForm|\prefixindexTest|\profileInfo|\recentchangesTest|\redirectTest|\searchTest|\specialAllmessagesTest|\specialAllpagesTest|\specialBlockip|\specialBlockmeTest|\specialBooksourcesTest|\specialCategoryTree|\specialChemicalsourcesTest|\specialCitePageTest|\specialExportTest|\specialFilepathPageTest|\specialImportPageTest|\specialLinksearch|\specialLockdbPageTest|\specialLogTest|\specialMovePage|\specialNewpagesPageTest|\specialRenameuserPageTest|\specialRevisionDeletePageTest|\specialUndeletePageTest|\specialUnlockdbPageTest|\specialwiki_Userrights|\successfulwiki_UserLoginTest|\thumbTest|\userLoginTest|\viewPageTest|\watchlistTest
  */
 function selectPageTest( $count ) {
 
@@ -2173,7 +2173,7 @@ function selectPageTest( $count ) {
 	// Some of the time we test Special pages, the remaining
 	// time we test using the standard edit page.
 	switch ( $count % 100 ) {
-		case 0 : return new successfulUserLoginTest();
+		case 0 : return new successfulwiki_UserLoginTest();
 		case 1 : return new listusersTest();
 		case 2 : return new searchTest();
 		case 3 : return new recentchangesTest();
@@ -2201,7 +2201,7 @@ function selectPageTest( $count ) {
 		case 25: return new specialMovePage();
 		case 26: return new specialUnlockdbPageTest();
 		case 27: return new specialLockdbPageTest();
-		case 28: return new specialUserrights();
+		case 28: return new specialwiki_Userrights();
 		case 29: return new pageProtectionForm();
 		case 30: return new specialBlockip();
 		case 31: return new imagepageTest();

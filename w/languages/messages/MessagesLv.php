@@ -50,7 +50,7 @@ $namespaceNames = array(
 $separatorTransformTable = array( ',' => "\xc2\xa0", '.' => ',' );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Pasvītrot saites:',
 'tog-justify' => 'Izlīdzināt rindkopām abas malas',
 'tog-hideminor' => 'Paslēpt maznozīmīgus labojumus pēdējo izmaiņu lapā',
@@ -385,7 +385,7 @@ Administrators, kurš nobloķēja datubāzi, norādīja šādu iemeslu: $1',
 Tas parasti notiek novecojušu saišu gadījumā: pieprasot izmaiņas vai hronoloģiju lapai, kas ir izdzēsta.
 
 Ja lapai ir jābūt, tad, iespējams, ir kļūda programmā.
-Par to varat ziņot [[Special:ListUsers/sysop|kādam administratoram]], norādot arī URL.',
+Par to varat ziņot [[Special:Listwiki_Users/sysop|kādam administratoram]], norādot arī URL.',
 'missingarticle-rev' => '(Pārskatīšana #: $1)',
 'missingarticle-diff' => '(Salīdz.: $1, $2)',
 'internalerror' => 'Iekšēja kļūda',
@@ -419,7 +419,7 @@ Vaicājums: $2',
 'sqlhidden' => '(SQL vaicājums paslēpts)',
 'namespaceprotected' => "Tev nav atļaujas izmainīt lapas, kas atrodas '''$1''' ''namespacē''.",
 'ns-specialprotected' => 'Nevar izmainīt īpašās lapas.',
-'titleprotected' => "Šī lapa ir aizsargāta pret izveidošanu. To aizsargāja [[User:$1|$1]].
+'titleprotected' => "Šī lapa ir aizsargāta pret izveidošanu. To aizsargāja [[wiki_User:$1|$1]].
 Norādītais iemesls bija ''$2''.",
 
 # Virus scanner
@@ -430,7 +430,7 @@ Norādītais iemesls bija ''$2''.",
 # Login and logout pages
 'logouttext' => "'''Tu esi izgājis no {{grammar:ģenitīvs|{{SITENAME}}}}.'''
 
-Vari turpināt to izmantot anonīmi, vari [[Special:UserLogin|atgriezties]] kā cits lietotājs vai varbūt tas pats.
+Vari turpināt to izmantot anonīmi, vari [[Special:wiki_UserLogin|atgriezties]] kā cits lietotājs vai varbūt tas pats.
 Ņem vērā, ka arī pēc iziešanas, dažas lapas var tikt parādītas tā, it kā tu vēl būtu iekšā, līdz tiks iztīrīta pārlūka kešatmiņa.",
 'welcomecreation' => '== Laipni lūdzam, $1! ==
 
@@ -468,7 +468,7 @@ Lūdzu, izvēlieties citu vārdu.',
 'noname' => 'Tu neesi norādījis derīgu lietotāja vārdu.',
 'loginsuccesstitle' => 'Ieiešana veiksmīga',
 'loginsuccess' => 'Tu esi ienācis {{grammar:lokatīvs|{{SITENAME}}}} kā "$1".',
-'nosuchuser' => 'Šeit nav lietotāja ar vārdu "$1". Lietotājvārdi ir reģistrjutīgi (lielie un mazie burti nav viens un tas pats) Pārbaudi, vai pareizi uzrakstīts, vai arī [[Special:UserLogin/signup|izveido jaunu kontu]].',
+'nosuchuser' => 'Šeit nav lietotāja ar vārdu "$1". Lietotājvārdi ir reģistrjutīgi (lielie un mazie burti nav viens un tas pats) Pārbaudi, vai pareizi uzrakstīts, vai arī [[Special:wiki_UserLogin/signup|izveido jaunu kontu]].',
 'nosuchusershort' => 'Šeit nav lietotāja ar vārdu "$1". Pārbaudi, vai nav drukas kļūda.',
 'nouserspecified' => 'Tev jānorāda lietotājvārds.',
 'login-userblocked' => 'Šis lietotājs ir bloķēts. Pieslēgšanās nav atļauta.',
@@ -634,7 +634,7 @@ Tā var būt pārvietota vai dzēsta, kamēr jūs apskatījāt lapu.',
 'loginreqlink' => 'login',
 'loginreqpagetext' => 'Tev nepieciešams $1, lai apskatītu citas lapas.',
 'accmailtitle' => 'Parole nosūtīta.',
-'accmailtext' => "Nejauši ģenerēta parole lietotājam [[User talk:$1|$1]] tika nosūtīta uz $2.
+'accmailtext' => "Nejauši ģenerēta parole lietotājam [[wiki_User talk:$1|$1]] tika nosūtīta uz $2.
 
 Šī konta paroli pēc ielogošanās varēs nomainīt ''[[Special:ChangePassword|šeit]]''.",
 'newarticle' => '(Jauns raksts)',
@@ -643,7 +643,7 @@ Lai izveidotu lapu, sāc rakstīt teksta logā apakšā (par teksta formatēšan
 Ja tu šeit nonāci kļūdas pēc, vienkārši uzspied '''back''' pogu pārlūkprogrammā.",
 'anontalkpagetext' => "----''Šī ir diskusiju lapa anonīmam lietotājam, kurš vēl nav kļuvis par reģistrētu lietotāju vai arī neizmanto savu lietotājvārdu. Tādēļ mums ir jāizmanto skaitliskā IP adrese, lai viņu identificētu.
 Šāda IP adrese var būt vairākiem lietotājiem.
-Ja tu esi anonīms lietotājs un uzskati, ka tev ir adresēti neatbilstoši komentāri, lūdzu, [[Special:UserLogin/signup|kļūsti par lietotāju]] vai arī [[Special:UserLogin|izmanto jau izveidotu lietotājvārdu]], lai izvairītos no turpmākām neskaidrībām un tu netiktu sajaukts ar citiem anonīmiem lietotājiem.''",
+Ja tu esi anonīms lietotājs un uzskati, ka tev ir adresēti neatbilstoši komentāri, lūdzu, [[Special:wiki_UserLogin/signup|kļūsti par lietotāju]] vai arī [[Special:wiki_UserLogin|izmanto jau izveidotu lietotājvārdu]], lai izvairītos no turpmākām neskaidrībām un tu netiktu sajaukts ar citiem anonīmiem lietotājiem.''",
 'noarticletext' => 'Šajā lapā šobrīd nav nekāda teksta, tu vari [[Special:Search/{{PAGENAME}}|meklēt citās lapās pēc šīs lapas nosaukuma]], <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} meklēt saistītos reģistru ierakstos] vai arī [{{fullurl:{{FULLPAGENAME}}|action=edit}} sākt rediģēt šo lapu]</span>.',
 'noarticletext-nopermission' => 'Šajā lapā pašlaik nav nekāda teksta.
 Tu vari [[Special:Search/{{PAGENAME}}|meklēt šīs lapas nosaukumu]] citās lapās,
@@ -674,13 +674,13 @@ Pēdējais bloķēšanas reģistra ieraksts ir apskatāms zemāk:',
 'continue-editing' => 'Turpināt labošanu',
 'session_fail_preview' => "'''Neizdevās apstrādāt tavas izmaiņas, jo tika pazaudēti sesijas dati.
 Lūdzu mēģini vēlreiz.
-Ja tas joprojām nedarbojas, mēģini [[Special:UserLogout|izlogoties ārā]] un ielogoties no jauna.'''",
+Ja tas joprojām nedarbojas, mēģini [[Special:wiki_UserLogout|izlogoties ārā]] un ielogoties no jauna.'''",
 'session_fail_preview_html' => "'''Neizdevās apstrādāt tavas izmaiņas, jo tika pazaudēti sesijas dati.'''
 
 ''Tā, kā {{grammar:ģenitīvs|{{SITENAME}}}} darbojas neapstrādāts HTML, pirmskats ir paslēpts, lai aizsargātos no JavaScripta  uzbrukumiem.''
 
 '''Ja šis bija parasts rediģēšanas mēģinājums, mēģini vēlreiz.
-Ja tas joprojām nedarbojas, mēģini [[Special:UserLogout|izlogoties ārā]] un ielogoties no jauna.'''",
+Ja tas joprojām nedarbojas, mēģini [[Special:wiki_UserLogout|izlogoties ārā]] un ielogoties no jauna.'''",
 'editing' => 'Izmainīt $1',
 'editingsection' => 'Izmainīt $1 (sadaļa)',
 'editingcomment' => 'Izmainīt $1 (jauna sadaļa)',
@@ -726,7 +726,7 @@ Pēdējais reģistra ieraksts ir apskatāms zemāk:",
 'hiddencategories' => 'Šī lapa ietilpst {{PLURAL:$1|1 slēptajā kategorijā|$1 slēptajās kategorijās}}:',
 'nocreatetitle' => 'Lapu veidošana ierobežota',
 'nocreatetext' => '{{grammar:lokatīvs|{{SITENAME}}}} ir atslēgta iespēja izveidot jauinas lapas.
-Tu vari atgriezties atpakaļ un izmainīt esošu lapu, vai arī [[Special:UserLogin|ielogoties, vai izveidot kontu]].',
+Tu vari atgriezties atpakaļ un izmainīt esošu lapu, vai arī [[Special:wiki_UserLogin|ielogoties, vai izveidot kontu]].',
 'nocreate-loggedin' => 'Tev nav atļaujas veidot jaunas lapas.',
 'sectioneditnotsupported-title' => 'Sadaļa rediģēšana nav atbalstīta',
 'sectioneditnotsupported-text' => 'Sadaļu rediģēsana šajā lapā nav atļauta.',
@@ -763,7 +763,7 @@ Dažas veidnes netiks iekļautas.",
 Lūdzu, pārbaudi zemāk redzamajā salīdzinājumā, vai tu to tiešām vēlies darīt, un pēc tam saglabā lapu, lai pabeigtu izmaiņas atcelšanu.',
 'undo-failure' => 'Šo labojumu nevar atcelt, jo ir veikti nozīmīgi labojumi vēl pēc šī labojuma izdarīšanas.',
 'undo-norev' => 'Šo izmaiņu nevar atcelt, jo tādas nav vai tā ir izdzēsta.',
-'undo-summary' => 'Atcēlu [[Special:Contributions/$2|$2]] ([[User talk:$2|Diskusija]]) izdarīto izmaiņu $1',
+'undo-summary' => 'Atcēlu [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Diskusija]]) izdarīto izmaiņu $1',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'Nevar izveidot lietotāju',
@@ -969,7 +969,7 @@ Pagaidām vari meklēt, izmantojot Google vai Yahoo.
 'mypreferences' => 'Iestatījumi',
 'prefs-edits' => 'Izmaiņu skaits:',
 'prefsnologin' => 'Neesi iegājis',
-'prefsnologintext' => 'Tev jābūt <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} iegājušam]</span>, lai mainītu lietotāja izvēles.',
+'prefsnologintext' => 'Tev jābūt <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} iegājušam]</span>, lai mainītu lietotāja izvēles.',
 'changepassword' => 'Mainīt paroli',
 'prefs-skin' => 'Apdare',
 'skin-preview' => 'Priekšskats',
@@ -1077,16 +1077,16 @@ Ja tu izvēlies to norādīt, tas tiks izmantots, lai identificētu tavu darbu (
 'prefs-displaywatchlist' => 'Pamatuzstādījumi',
 'prefs-diffs' => 'Izmaiņas',
 
-# User preference: e-mail validation using jQuery
+# wiki_User preference: e-mail validation using jQuery
 'email-address-validity-valid' => 'E-pasta adrese šķiet derīga',
 'email-address-validity-invalid' => 'Ievadiet derīgu e-pasta adresi',
 
-# User rights
+# wiki_User rights
 'userrights' => 'Lietotāju tiesību pārvaldība',
 'userrights-lookup-user' => 'Pārvaldīt lietotāja grupas',
 'userrights-user-editname' => 'Ievadi lietotājvārdu:',
 'editusergroup' => 'Izmainīt lietotāja grupas',
-'editinguser' => "Izmainīt lietotāja '''[[User:$1|$1]]''' ([[User talk:$1|{{int:talkpagelinktext}}]]{{int:pipe-separator}}[[Special:Contributions/$1|{{int:contribslink}}]]) statusu",
+'editinguser' => "Izmainīt lietotāja '''[[wiki_User:$1|$1]]''' ([[wiki_User talk:$1|{{int:talkpagelinktext}}]]{{int:pipe-separator}}[[Special:Contributions/$1|{{int:contribslink}}]]) statusu",
 'userrights-editusergroup' => 'Izmainīt lietotāja grupas',
 'saveusergroups' => 'Saglabāt lietotāja grupas',
 'userrights-groupsmember' => 'Šobrīd ietilpst grupās:',
@@ -1098,7 +1098,7 @@ Ja tu izvēlies to norādīt, tas tiks izmantots, lai identificētu tavu darbu (
 'userrights-reason' => 'Iemesls:',
 'userrights-no-interwiki' => 'Tev nav atļaujas izmainīt lietotāju tiesības citos wiki.',
 'userrights-nodatabase' => 'Datubāze $1 neeksistē vai nav lokāla.',
-'userrights-nologin' => 'Tev ir [[Special:UserLogin|jāieiet iekšā]] kā adminam, lai varētu izmainīt lietotāju grupas.',
+'userrights-nologin' => 'Tev ir [[Special:wiki_UserLogin|jāieiet iekšā]] kā adminam, lai varētu izmainīt lietotāju grupas.',
 'userrights-notallowed' => 'Jūsu lietotāja kontam nav atļaujas pievienot vai noņemt lietotāju tiesības.',
 'userrights-changeable-col' => 'Grupas, kuras tu vari izmainīt',
 'userrights-unchangeable-col' => 'Grupas, kuras tu nevari izmainīt',
@@ -1181,7 +1181,7 @@ Ja tu izvēlies to norādīt, tas tiks izmantots, lai identificētu tavu darbu (
 'right-sendemail' => 'Sūtīt e-pastu citiem lietotājiem',
 'right-passwordreset' => 'Apskatīt paroles atiestatīšanas e-pasta ziņojumus',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Lietotāju tiesību reģistrs',
 'rightslogtext' => 'Šis ir lietotāju tiesību izmaiņu reģistrs.',
 'rightslogentry' => 'izmainīja $1 grupas no $2 uz $3',
@@ -1274,7 +1274,7 @@ Lapas, kas ir tavā [[Special:Watchlist|uzraugāmo rakstu sarakstā]] ir '''trek
 'reuploaddesc' => 'Atcelt augšupielādi un atgriezties pie augšupielādes veidnes.',
 'upload-tryagain' => 'Iesniegt izmainīto faila aprakstu',
 'uploadnologin' => 'Neesi iegājis',
-'uploadnologintext' => 'Tev jābūt [[Special:UserLogin|iegājušam]], lai augšuplādētu failus.',
+'uploadnologintext' => 'Tev jābūt [[Special:wiki_UserLogin|iegājušam]], lai augšuplādētu failus.',
 'upload_directory_missing' => 'Augšupielādes direktorijs ($1) ir pazudis, un to tīmekļa serveris nevar izveidot.',
 'upload_directory_read_only' => 'Augšupielādes direktoriju ($1) tīmekļa serveris nevar labot.',
 'uploaderror' => 'Augšupielādes kļūda',
@@ -1399,7 +1399,7 @@ $1',
 'upload-proto-error-text' => 'Attālinātai augšupielādei URL ir jāsākas ar <code>http://</code> vai <code>ftp://</code>.',
 'upload-file-error' => 'Iekšējā kļūda',
 'upload-file-error-text' => 'Iekšējā kļūda, mēģinot izveidot pagaidu failu uz servera.
-Lūdzu, sazinieties ar [[Special:ListUsers/sysop|administratoru.]]',
+Lūdzu, sazinieties ar [[Special:Listwiki_Users/sysop|administratoru.]]',
 'upload-misc-error' => 'Nezināma augšupielādes kļūda',
 'upload-too-many-redirects' => 'URL sastāvēja pārāk daudz pāradresāciju',
 'upload-unknown-size' => 'Nezināms izmērs',
@@ -1717,13 +1717,13 @@ Skatīt arī [[Special:WantedCategories|''sarkanās'' kategorijas]].",
 'linksearch-text' => 'Atbalstītie protokoli: <code>$1</code>',
 'linksearch-line' => '$1 ir izveidota saite no $2',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => 'Parādīt lietotājus sākot ar:',
 'listusers-submit' => 'Parādīt',
 'listusers-noresult' => 'Neviens lietotājs nav atrasts.',
 'listusers-blocked' => '(bloķēts)',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'Aktīvo lietotāju saraksts',
 'activeusers-intro' => 'Šis ir lietotāju saraksts, kas veikuši kādu darbību {{PLURAL:daudzskaitlī:$1|pēdējā|pēdējās}} $1 {{PLURAL:daudzskaitlī:$1|dienā|dienās}}.',
 'activeusers-from' => 'Parādīt lietotājus sākot ar:',
@@ -1752,7 +1752,7 @@ Papildu informāciju par katru individuālu piekļuves tiesību veidu, iespējam
 
 # E-mail user
 'mailnologin' => 'Nav adreses, uz kuru sūtīt',
-'mailnologintext' => 'Tev jābūt [[Special:UserLogin|iegājušam]], kā arī tev jābūt [[Special:Preferences|norādītai]] derīgai e-pasta adresei, lai sūtītu e-pastu citiem lietotājiem.',
+'mailnologintext' => 'Tev jābūt [[Special:wiki_UserLogin|iegājušam]], kā arī tev jābūt [[Special:Preferences|norādītai]] derīgai e-pasta adresei, lai sūtītu e-pastu citiem lietotājiem.',
 'emailuser' => 'Sūtīt e-pastu šim lietotājam',
 'emailpage' => 'Sūtīt e-pastu lietotājam',
 'emailpagetext' => 'Ar šo veidni ir iespējams nosūtīt e-pastu šim lietotājam.
@@ -1780,7 +1780,7 @@ Tā e-pasta adrese, kuru tu esi norādījis [[Special:Preferences|savā izvēļu
 'emailsenttext' => 'Tavs e-pasts ir nosūtīts.',
 'emailuserfooter' => 'Šis e-pasts ir lietotāja $1 sūtīts lietotājam $2, izmantojot "Sūtīt e-pastu šim lietotājam" funkciju {{SITENAME}}.',
 
-# User Messenger
+# wiki_User Messenger
 'usermessage-summary' => 'Atstāt sistēmas ziņojumu.',
 'usermessage-editor' => 'Sistēmas ziņotājs',
 
@@ -1790,7 +1790,7 @@ Tā e-pasta adrese, kuru tu esi norādījis [[Special:Preferences|savā izvēļu
 'nowatchlist' => 'Tavā uzraugāmo rakstu sarakstā nav neviena raksta.',
 'watchlistanontext' => 'Lūdzu $1, lai apskatītu vai labotu savu uzraugāmo rakstu saraksta saturu.',
 'watchnologin' => 'Neesi iegājis',
-'watchnologintext' => 'Tev ir [[Special:UserLogin|jāieiet]], lai mainītu uzraugāmo lapu sarakstu.',
+'watchnologintext' => 'Tev ir [[Special:wiki_UserLogin|jāieiet]], lai mainītu uzraugāmo lapu sarakstu.',
 'addwatch' => 'Pievienot uzraugāmo lapu sarakstam',
 'addedwatchtext' => "Lapa \"[[:\$1]]\" ir pievienota [[Special:Watchlist|tevis uzraudzītajām lapām]], kur tiks parādītas izmaiņas, kas izdarītas šajā lapā vai šīs lapas diskusiju lapā, kā arī šī lapa tiks iezīmēta '''pustrekna''' [[Special:RecentChanges|pēdējo izmaiņu lapā]], lai to būtu vieglāk pamanīt.
 
@@ -1890,12 +1890,12 @@ Papildinformācija:
 'rollbacklink' => 'novērst',
 'rollbackfailed' => 'Novēršana neizdevās',
 'cantrollback' => 'Nav iespējams novērst labojumu; iepriekšējais labotājs ir vienīgais lapas autors.',
-'alreadyrolled' => 'Nav iespējams novērst pēdējās izmaiņas, ko lapā [[:$1]] saglabāja [[User:$2|$2]] ([[User talk:$2|Diskusija]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]). Kāds cits jau ir rediģējis šo lapu vai novērsis izmaiņas.
+'alreadyrolled' => 'Nav iespējams novērst pēdējās izmaiņas, ko lapā [[:$1]] saglabāja [[wiki_User:$2|$2]] ([[wiki_User talk:$2|Diskusija]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]). Kāds cits jau ir rediģējis šo lapu vai novērsis izmaiņas.
 
-Pēdējās izmaiņas saglabāja [[User:$3|$3]] ([[User talk:$3|diskusija]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
+Pēdējās izmaiņas saglabāja [[wiki_User:$3|$3]] ([[wiki_User talk:$3|diskusija]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
 'editcomment' => "Attiecīgās izmaiņas kopsavilkums bija: \"''\$1''\".",
-'revertpage' => 'Novērsu izmaiņas, ko izdarīja [[Special:Contributions/$2|$2]] ([[User talk:$2|Diskusija]]), atjaunoju versiju, ko saglabāja [[User:$1|$1]]',
-'revertpage-nouser' => 'Novērsu (lietotājvārds slēpts) izmaiņas, atjaunoju [[User:$1|$1]] versiju.',
+'revertpage' => 'Novērsu izmaiņas, ko izdarīja [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Diskusija]]), atjaunoju versiju, ko saglabāja [[wiki_User:$1|$1]]',
+'revertpage-nouser' => 'Novērsu (lietotājvārds slēpts) izmaiņas, atjaunoju [[wiki_User:$1|$1]] versiju.',
 'rollback-success' => 'Tika novērstas $1 izdarītās izmaiņas;
 un tika atjaunota iepriekšējā versija, kuru bija izveidojis $2.',
 
@@ -2106,7 +2106,7 @@ Visus blokus var apskatīties [[Special:BlockList|IP bloku sarakstā]].',
 'unblockip' => 'Atbloķēt lietotāju',
 'unblockiptext' => 'Šeit var atbloķēt iepriekš nobloķētu IP adresi vai lietotāja vārdu (atjaunot viņiem rakstīšanas piekļuvi).',
 'ipusubmit' => 'Noņemt šo bloku',
-'unblocked' => '[[User:$1|$1]] tika atbloķēts',
+'unblocked' => '[[wiki_User:$1|$1]] tika atbloķēts',
 'unblocked-range' => '$1 tika atbloķēts',
 'unblocked-id' => 'Bloks $1 tika noņemts',
 'blocklist' => 'Bloķētie lietotāji',
@@ -2136,7 +2136,7 @@ Visus blokus var apskatīties [[Special:BlockList|IP bloku sarakstā]].',
 'change-blocklink' => 'izmainīt bloku',
 'contribslink' => 'devums',
 'emaillink' => 'nosūtīt e-pastu',
-'autoblocker' => 'Tava IP ir nobloķēta automātiski, tāpēc, ka to nesen lietojis "[[User:$1|$1]]".
+'autoblocker' => 'Tava IP ir nobloķēta automātiski, tāpēc, ka to nesen lietojis "[[wiki_User:$1|$1]]".
 Viņa bloķēšanas iemesls bija: "$2"',
 'blocklogpage' => 'Bloķēšanas reģistrs',
 'blocklog-showlog' => 'Šis lietotājs ir bijis bloķēts jau agrāk.
@@ -2208,7 +2208,7 @@ pirms turpināšanas vēlreiz pārdomā, vai tu izproti visas iespējamās sekas
 Ja tomēr vēlēsies, tad tev šī diskusiju lapa būs jāpārvieto vai jāapvieno pašam.",
 'movearticle' => 'Pārvietot lapu',
 'movenologin' => 'Neesi iegājis kā reģistrēts lietotājs',
-'movenologintext' => 'Tev ir jābūt reģistrētam lietotājam un jābūt [[Special:UserLogin|iegājušam]] {{grammar:lokatīvs|{{SITENAME}}}}, lai pārvietotu lapu.',
+'movenologintext' => 'Tev ir jābūt reģistrētam lietotājam un jābūt [[Special:wiki_UserLogin|iegājušam]] {{grammar:lokatīvs|{{SITENAME}}}}, lai pārvietotu lapu.',
 'movenotallowed' => 'Tev nav atļaujas pārvietot lapas.',
 'movenotallowedfile' => 'Tev nav atļaujas pārvietot failus.',
 'cant-move-user-page' => 'Tev nav atļaujas pārvietot lietotāju lapas (neskaitot apakšlapas).',
@@ -2880,7 +2880,7 @@ Nosūtīšanas programma atmeta atpakaļ: $1',
 'confirmemail_invalid' => 'Nederīgs apstiprināšanas kods. Iespējams, beidzies tā termiņš.',
 'confirmemail_needlogin' => 'Lai apstiprinātu e-pasta adresi, tev vispirms jāielogojas ($1).',
 'confirmemail_success' => 'Tava e-pasta adrese ir apstiprināta.
-Tagad vari [[Special:UserLogin|doties iekšā]] ar savu lietotājvārdu un pilnvērtīgi izmantot wiki iespējas.',
+Tagad vari [[Special:wiki_UserLogin|doties iekšā]] ar savu lietotājvārdu un pilnvērtīgi izmantot wiki iespējas.',
 'confirmemail_loggedin' => 'Tava e-pasta adrese tagad ir apstiprināta.',
 'confirmemail_error' => 'Notikusi kāda kļūme ar tava apstiprinājuma saglabāšanu.',
 'confirmemail_subject' => 'E-pasta adreses apstiprinajums no {{grammar:ģenitīvs|{{SITENAME}}}}',
@@ -2905,7 +2905,7 @@ Si apstiprinajuma koda deriguma termins ir $4.',
 
 # Delete conflict
 'deletedwhileediting' => "'''Brīdinājums:''' Šī lapa tika izdzēsta, pēc tam, kad tu to sāki izmainīt!",
-'confirmrecreate' => "Lietotājs [[User:$1|$1]] ([[User talk:$1|diskusija]]) izdzēsa šo lapu, pēc tam, kad tu to biji sācis rediģēt, ar iemeslu:
+'confirmrecreate' => "Lietotājs [[wiki_User:$1|$1]] ([[wiki_User talk:$1|diskusija]]) izdzēsa šo lapu, pēc tam, kad tu to biji sācis rediģēt, ar iemeslu:
 : ''$2''
 Lūdzu apstiprini, ka tiešām gribi izveidot šo lapu no jauna.",
 'recreate' => 'Izveidot no jauna',

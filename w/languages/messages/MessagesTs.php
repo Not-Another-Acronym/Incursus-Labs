@@ -11,7 +11,7 @@
  */
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Hlanganisa nkhwatiheto:',
 'tog-justify' => 'Hikahata xirhapa',
 'tog-hideminor' => 'Tumbeta mindzulamiso leyi tsongo',
@@ -323,7 +323,7 @@ The administrator who locked it offered this explanation: $1',
 Leswi swinga vangiwa hi kuva u landzele xithlavinyeti lexi hundzeriweke hi nkari kumbe tluka leri suriweke.
 
 Loko leswi swingari xona xivangelo, ungava ukume xigalana eka xitirhisi lexi.
-Ukomberiwa ku pota xigalana lexi eka [[Special:ListUsers/sysop|mulanguteri]], u rhumela na xithlavinyeti xa URL.',
+Ukomberiwa ku pota xigalana lexi eka [[Special:Listwiki_Users/sysop|mulanguteri]], u rhumela na xithlavinyeti xa URL.',
 'missingarticle-rev' => '(revision#: $1)',
 'missingarticle-diff' => '(Diff: $1, $2)',
 'readonly_lag' => 'The database has been automatically locked while the slave database servers catch up to the master',
@@ -366,13 +366,13 @@ $2',
 'customcssprotected' => "Uhava mpfumelelo wo ulamisa tluka leri ra CSS, hikuva rina minhlawulo ya mutirhisi un'wana.",
 'customjsprotected' => "Uhava mpfumelelo wolulamisa tluka-xirhumiwa xa Java, hiuva ringava rikhome minhlawulo yamutirhisi un'wana.",
 'ns-specialprotected' => 'Matluka yohlawuleka amalulamisiwi.',
-'titleprotected' => 'Nhlokomhaka leyi yisirheleriwile ekutumbuluxiwa hi [[User:$1|$1]].
+'titleprotected' => 'Nhlokomhaka leyi yisirheleriwile ekutumbuluxiwa hi [[wiki_User:$1|$1]].
 Hikwlaho ka xivangelo xa "\'\'$2\'\'".',
 
 # Login and logout pages
 'logouttext' => "'''Uhumile eka wiki leyi.'''
 
-Ungaya emahlweni utirhisa {{SITENAME}} handle ko tipaluxa, kumbe unga [[Special:UserLogin|pfula unghena nakambe]] tani hi mutirhisa un'wana kumbe kumbe hivuxokoxoko bya wena.
+Ungaya emahlweni utirhisa {{SITENAME}} handle ko tipaluxa, kumbe unga [[Special:wiki_UserLogin|pfula unghena nakambe]] tani hi mutirhisa un'wana kumbe kumbe hivuxokoxoko bya wena.
 Tsundzuka leswaku matluka man'wana mangaha komba onge upfule unghena eka wiki, loko ungasi sula tluka rakhompuyuta leri tsundzukaka matluka lawa uma vhakeleke.",
 'welcomecreation' => '== Hoyohoyo, eka Wena $1 ! ==
 Akhawunti yawena yitumbuluxiwile.

@@ -101,9 +101,9 @@ $specialPageAliases = array(
 	'Unusedtemplates'           => array( 'ТевсАпакНолдаЛопаПарцунт' ),
 	'Unwatchedpages'            => array( 'ВанстнемавтомоЛопат' ),
 	'Upload'                    => array( 'Ёвкстамо' ),
-	'Userlogin'                 => array( 'ТеицяСовамо' ),
-	'Userlogout'                => array( 'ТеицяЛисема' ),
-	'Userrights'                => array( 'ТеицяньВидечыть' ),
+	'wiki_Userlogin'                 => array( 'ТеицяСовамо' ),
+	'wiki_Userlogout'                => array( 'ТеицяЛисема' ),
+	'wiki_Userrights'                => array( 'ТеицяньВидечыть' ),
 	'Version'                   => array( 'Версия' ),
 	'Wantedcategories'          => array( 'ВешезьКатегорият' ),
 	'Wantedfiles'               => array( 'ВешезьФайлат' ),
@@ -186,7 +186,7 @@ $magicWords = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Сюлмавома петнень алга черькстамс:',
 'tog-justify' => 'Вейкетстявтомс сёрмадовкс ушодоманть лопанть кувалмга',
 'tog-hideminor' => 'Од полавтоматнесэ кекшемс вишинькине витевкстнэнь',
@@ -489,7 +489,7 @@ $messages = array(
 Седе сеедьстэ истя лиси, зярдо таштомозь diff эли историянь сюлмавома песь вети нардань лопас.
 
 Лисиндерясь аволь истя, можок муить программа керьксстэнть (тапавкс тарка) сийне.
-Пачтта сёрмине теде [[Special:ListUsers/sysop|системань ветийнень]] URL адресэнть тештязь.',
+Пачтта сёрмине теде [[Special:Listwiki_Users/sysop|системань ветийнень]] URL адресэнть тештязь.',
 'missingarticle-rev' => '(лиякстомтома#: $1)',
 'missingarticle-diff' => '(Мейсэ явовить: $1, $2)',
 'internalerror' => 'Потмоильведькс',
@@ -564,7 +564,7 @@ $messages = array(
 'loginsuccesstitle' => 'Совавить',
 'loginsuccess' => "'''Тон совить {{SITENAME}}-с кода \"\$1\".'''",
 'nosuchuser' => '$1 лем марто теиця арась.
-Теиця лемтне явозь тень корясь вишка эли покш тештинесэ сёрмадозь. Ваннык видестэ - а видестэ сёрмадык, эли [[Special:UserLogin/signup|тейть-шкак од совамо тарка]].',
+Теиця лемтне явозь тень корясь вишка эли покш тештинесэ сёрмадозь. Ваннык видестэ - а видестэ сёрмадык, эли [[Special:wiki_UserLogin/signup|тейть-шкак од совамо тарка]].',
 'nosuchusershort' => '"$1" лемсэ теиця арась. Варштака, кизды, аволь истя сёрмадозь.',
 'nouserspecified' => 'Теицянь лем эряви.',
 'login-userblocked' => 'Те теицясь аравтозь саймас. Совамонзо а мерить.',
@@ -684,7 +684,7 @@ IP-тешкстэть — $3, саймас совавтоманть ID-сь — 
 'loginreqlink' => 'совамс',
 'loginreqpagetext' => 'Лия лопань ванномга, эряви $1.',
 'accmailtitle' => 'Салавань вал кучозь.',
-'accmailtext' => "Кода понгсь теезь совамо вал [[User talk:$1|$1]]-нь туртов кучозь $2 адресэнтень.
+'accmailtext' => "Кода понгсь теезь совамо вал [[wiki_User talk:$1|$1]]-нь туртов кучозь $2 адресэнтень.
 
 Те од совамо таркас совамо валось полавтови ''[[Special:ChangePassword|совамо валонь полавтома]]'' лопас совамодо мейле.",
 'newarticle' => '(Од)',
@@ -724,7 +724,7 @@ IP-тешкстэть — $3, саймас совавтоманть ID-сь — 
 'template-semiprotected' => '(пельс ванстозь)',
 'hiddencategories' => 'Те лопась совавтови {{PLURAL:$1|кекшень 1 категорияс|кекшень $1 категорияс}}:',
 'nocreatetitle' => 'Лопань теемась аволь певтеме',
-'nocreatetext' => 'Те {{SITENAME}} лопасонть пирязь од лопань теемась. Тонь ули мелеть велявтомс удалов ды  питнемензе-витнемензе улиця лопанть, али [[Special:UserLogin|совамс али теемс од совама]].',
+'nocreatetext' => 'Те {{SITENAME}} лопасонть пирязь од лопань теемась. Тонь ули мелеть велявтомс удалов ды  питнемензе-витнемензе улиця лопанть, али [[Special:wiki_UserLogin|совамс али теемс од совама]].',
 'nocreate-loggedin' => 'Тонеть а мерить теемс-шкамс од лопат.',
 'permissionserrorstext' => 'Тонеть а мерить теемс тень, вана {{PLURAL:$1|тувталось|тувталтнэ}}:',
 'permissionserrorstext-withaction' => 'Тонеть а мерить теемс $2, {{PLURAL:$1|тувталось|тувталтнэ}} вана:',
@@ -972,10 +972,10 @@ IP-тешкстэть — $3, саймас совавтоманть ID-сь — 
 'prefs-dateformat' => 'Ков чинь форматозо',
 'prefs-diffs' => 'Мейсэ явовить верзиятне',
 
-# User preference: e-mail validation using jQuery
+# wiki_User preference: e-mail validation using jQuery
 'email-address-validity-valid' => 'Е-сёрмапаргот маряви маштови',
 
-# User rights
+# wiki_User rights
 'userrights-lookup-user' => 'Сови куротнень ветямось',
 'userrights-user-editname' => 'Сёрмадт теицянь лем:',
 'editusergroup' => 'Витнемс-петнемс сови куротнень',
@@ -1036,7 +1036,7 @@ IP-тешкстэть — $3, саймас совавтоманть ID-сь — 
 'right-siteadmin' => 'Датабазань сёлгомо ды панжомо',
 'right-passwordreset' => 'Ваномс теицянь салава валонь полавтома е-сёрмат',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Уськетеицянть видечинть кемекстома',
 'rightsnone' => '(арасть)',
 
@@ -1397,12 +1397,12 @@ IP-тешкстэть — $3, саймас совавтоманть ID-сь — 
 'linksearch-ok' => 'Вешнэмс',
 'linksearch-line' => '$1-в сюлмавома песь моли вана тестэ $2',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusers-submit' => 'Невтемс',
 'listusers-noresult' => 'Совицязо а муеви',
 'listusers-blocked' => '(саймас саезь)',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'Активной теицятнеде списка',
 'activeusers-hidebots' => 'Кекшемс ботатнень',
 'activeusers-hidesysops' => 'Кекшемс администратортнэнь',

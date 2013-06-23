@@ -129,9 +129,9 @@ $specialPageAliases = array(
 	'Unusedtemplates'           => array( 'تمپلتان بی استفاده' ),
 	'Unwatchedpages'            => array( 'نه چارتگین صفحه' ),
 	'Upload'                    => array( 'آپلود' ),
-	'Userlogin'                 => array( 'ورودکاربر' ),
-	'Userlogout'                => array( 'دربیگ کاربر' ),
-	'Userrights'                => array( 'حقوق کاربر' ),
+	'wiki_Userlogin'                 => array( 'ورودکاربر' ),
+	'wiki_Userlogout'                => array( 'دربیگ کاربر' ),
+	'wiki_Userrights'                => array( 'حقوق کاربر' ),
 	'Version'                   => array( 'نسخه' ),
 	'Wantedcategories'          => array( 'لوٹتگین دسته' ),
 	'Wantedpages'               => array( 'لوٹتگین صفحات' ),
@@ -141,7 +141,7 @@ $specialPageAliases = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => ':لینکانآ خط کش',
 'tog-justify' => 'پاراگرافنآ همتراز کن',
 'tog-hideminor' => 'هوردین تغییراتآ ته نوکین تغییرات پناه کن',
@@ -457,7 +457,7 @@ $1',
 
 شی معمولای به وسیله ی یک تاریح گوشتگین تاریح یا لینک تاریح به یک صفحه که حذف بوتت پیش کیت.
 
-اگه شی دلیل نهنت، شما شاید یک باگی ته نرم افزار در گهتگ. لطفا په مدیر گزارش دهیت،[[Special:ListUsers/sysop|administrator]]، ای URL یادداشت کینت.',
+اگه شی دلیل نهنت، شما شاید یک باگی ته نرم افزار در گهتگ. لطفا په مدیر گزارش دهیت،[[Special:Listwiki_Users/sysop|administrator]]، ای URL یادداشت کینت.',
 'missingarticle-rev' => '(بازبینی#: $1)',
 'missingarticle-diff' => '(تفاوت: $1, $2)',
 'readonly_lag' => 'دیتابیس اتوماتیک کبل بیت وهدی که سرورآن دیتابیس برده مستر بیت.',
@@ -498,7 +498,7 @@ Query: $2',
 $2',
 'namespaceprotected' => "شما اجازت په اصلاح صفحات ته  '''$1'' نام فضا نیست",
 'ns-specialprotected' => 'حاصین صفحات اصلاح نه بنت',
-'titleprotected' => "ای عنوان محافظت بوتت چه سربیگ به وسیله  [[User:$1|$1]].
+'titleprotected' => "ای عنوان محافظت بوتت چه سربیگ به وسیله  [[wiki_User:$1|$1]].
 ای دلیل دییگ بیتت ''$2''.",
 
 # Virus scanner
@@ -549,7 +549,7 @@ $2',
 'loginsuccess' => "''''شما الان وارد {{SITENAME}} په عنوان \"\$1\".'''",
 'nosuchuser' => 'هچ کاربری گون نام "$1" نیستن.
 کاربری نام حرفش په هور و مزنی حساس انت.
-وتی املايا چک کنیت یا [[Special:UserLogin/signup|نوکین حسابی شرکنیت]].',
+وتی املايا چک کنیت یا [[Special:wiki_UserLogin/signup|نوکین حسابی شرکنیت]].',
 'nosuchusershort' => 'هچ کاربری گون نام  "$1"نیستن.
 وتی املايا کنترل کنیت',
 'nouserspecified' => 'شما باید یک نام کاربری مشخص کنیت.',
@@ -686,7 +686,7 @@ $2',
 'loginreqlink' => 'ورود',
 'loginreqpagetext' => 'شما باید $1 په گندگ دگه صفحات.',
 'accmailtitle' => 'کلمه رمز دیم دات',
-'accmailtext' => "کلمه رمز په [[User talk:$1|$1]]  دیم دهگ بوت په $2.
+'accmailtext' => "کلمه رمز په [[wiki_User talk:$1|$1]]  دیم دهگ بوت په $2.
 کلمه رمز په نوکین حساب ته صفحه ''[[Special:ChangePassword|عوض کتن رمز]]'' وهدی که وارد بیتت تونیت بدل بیتن",
 'newarticle' => '(نوکین)',
 'newarticletext' => "شما رند چه یک لینکی په یک صفحه ی که هنو نیستند اتکگیت.
@@ -694,7 +694,7 @@ $2',
 اگر شما اشتباهی ادانیت ته وتی بروزر دکمه ''Back'' بجن.",
 'anontalkpagetext' => "----'' ای صفحه بحث انت په یک ناشناس کاربری که هنگت یک حسابی شر نه کتت یا آی ا ستفاده نه کتت. اچه ما بایدن آدرس آی پی عددی په پچاه آرگ آیی استفاده کنین.
 چوشن آدرس آی پی گون چندین کاربر استفاده بیت.
-اگه شما یک کاربر ناشناس ایت وی حس کنیت بی ربطین نظر مربوط شمی هست، لطفا [[Special:UserLogin|وارد بیت ]] یا [[Special:UserLogin/signup|حسابی شرکن]] دان چه هور بییگ گون ناسناسین کاربران پرهیز بیت.''",
+اگه شما یک کاربر ناشناس ایت وی حس کنیت بی ربطین نظر مربوط شمی هست، لطفا [[Special:wiki_UserLogin|وارد بیت ]] یا [[Special:wiki_UserLogin/signup|حسابی شرکن]] دان چه هور بییگ گون ناسناسین کاربران پرهیز بیت.''",
 'noarticletext' => 'هنو هچ متنی ته ای صفحه نیست.
 شما تونیت [[Special:Search/{{PAGENAME}}|گردیت په عنوان صفحه]]  ته دگه صفحات یا<span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} گردگ په مربوطین آمار],
 یا [{{fullurl:{{FULLPAGENAME}}|action=edit}} اصلاح ای صفحه]</span>.',
@@ -712,12 +712,12 @@ $2',
 تغییرات هنگت ذخیره نهنت. '''",
 'previewconflict' => 'ای بازبین متنء پیش داریت ته منطفه بالدی اصلاحی هنچوش که پیش دارگ بیت اگه شما انتخاب کنیت ذخیره',
 'session_fail_preview' => "'''شرمنده! ما نه تونست شمی اصلاحء په خاطر گار کتن دیتا دیوان پردازش کنین.
-طلف دگه سعی کنیت. اگر هنگت کار نکنت یک بری [[Special:UserLogout|دربیت]] و پیدا وارد بیت.'''",
+طلف دگه سعی کنیت. اگر هنگت کار نکنت یک بری [[Special:wiki_UserLogout|دربیت]] و پیدا وارد بیت.'''",
 'session_fail_preview_html' => "'''شرمنده! ما نه تونست شمی اصلاحء په خاطر گار کتن دیتا دیوان پردازش کنین.'''
 
 ''په چی که {{SITENAME}} HTML هام فعالنت، بازبین په خاطر حملات JavaScript پناهنت.''
 
-''' اگر شی یک قانونی تلاش اصلاحنت، دگه کوشش کنیت. اگر هنگت کار نکنت یک بری [[Special:UserLogout|دربیت]] و دگه وارد بیت.'''",
+''' اگر شی یک قانونی تلاش اصلاحنت، دگه کوشش کنیت. اگر هنگت کار نکنت یک بری [[Special:wiki_UserLogout|دربیت]] و دگه وارد بیت.'''",
 'token_suffix_mismatch' => "''' شمی اصلاح رد بوت په چی که شمی کلاینت نویسگ کاراکترانی په هم جتت.
 اصلاح رد بوت داں چه هراب بیگ متن صفحه جلوگیری بیت.
 شی لهتی وهد پیش کت که شما چه یک هرابین سرویس پروکسی وبی استفاده کنیت.'''",
@@ -762,7 +762,7 @@ $2',
 'edittools' => '<!-- <strong>په کپی و پست کتن چه CTRL+V , CTRL+C استفاده کنیت.</strong> -->',
 'nocreatetitle' => 'شرکتن صفحه محدودنت',
 'nocreatetext' => '{{SITENAME}} شما را چه شرکتن نوکین صفحه منه کته.
-شما تونیت برگردیت و یک پیشگین صفحه ای اصلاح کنیت، یا [[Special:UserLogin|وارد بیت یان یک حسابی شرکنیت]].',
+شما تونیت برگردیت و یک پیشگین صفحه ای اصلاح کنیت، یا [[Special:wiki_UserLogin|وارد بیت یان یک حسابی شرکنیت]].',
 'nocreate-loggedin' => 'شما را اجازت په شرکتن نوکین صفحات نیست.',
 'permissionserrors' => 'حطای اجازت',
 'permissionserrorstext' => 'شما را اجازت په انجام آی نیست، په جهلیگین دلیل {{PLURAL:$1|دلیل|دلایل}}:',
@@ -800,11 +800,11 @@ $2',
 'undo-success' => 'اصلاح برگشت نه بیت. لطفا مقایسه جهلگینء کنترل کنیت په تایید شی که شی هما انت که شما لوٹیت، و بعدا تغغیرات جهلی په تمام کتن بر نگردگ اصلاح ذخیره کنیت.',
 'undo-failure' => 'اصلاح بر نرگردیت په خاطر تضاد میان اصلاحاتی',
 'undo-norev' => 'اصلاح نه تونیت برگردیت په چی که آی وجود نهنت یا حذف بوتت.',
-'undo-summary' => 'بازبینی برگردین $1 گون [[Special:مشارکتان/$2|$2]] ([[User talk:$2|گپ]] | [[Special:Contributions/$2|{{MediaWiki:Contribslink}}]])',
+'undo-summary' => 'بازبینی برگردین $1 گون [[Special:مشارکتان/$2|$2]] ([[wiki_User talk:$2|گپ]] | [[Special:Contributions/$2|{{MediaWiki:Contribslink}}]])',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'نه نونیت حساب شرکنت',
-'cantcreateaccount-text' => "شرکتن حساب چی ای آدرس آی پی ('''$1''') محدود بوتت توسط [[User:$3|$3]].
+'cantcreateaccount-text' => "شرکتن حساب چی ای آدرس آی پی ('''$1''') محدود بوتت توسط [[wiki_User:$3|$3]].
 
 دلیلی داتگین توسط $3  شی انت ''$2''",
 
@@ -1018,7 +1018,7 @@ $1",
 'mypreferences' => 'منی ترجیحات',
 'prefs-edits' => 'تعداد اصلاحات:',
 'prefsnologin' => 'وارد نهیت',
-'prefsnologintext' => 'شما بایدن  <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} وارد بیت]</span> په تنظیم کتن ترجیحات.',
+'prefsnologintext' => 'شما بایدن  <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} وارد بیت]</span> په تنظیم کتن ترجیحات.',
 'changepassword' => 'کلمه رمز عوض کن',
 'prefs-skin' => 'پوست',
 'skin-preview' => 'بازین',
@@ -1113,12 +1113,12 @@ $1",
 'prefs-displayrc' => 'پیشدارگ گزینه هان',
 'prefs-diffs' => 'پرک',
 
-# User rights
+# wiki_User rights
 'userrights' => 'مدیریت حقوق کاربر',
 'userrights-lookup-user' => 'مدیریت گروه کاربر',
 'userrights-user-editname' => 'یک نام کاربری وارد کن',
 'editusergroup' => 'اصلاح گروه کاربر',
-'editinguser' => "عوض کنت حقوق کاربر  '''[[User:$1|$1]]''' ([[User talk:$1|{{int:talkpagelinktext}}]]{{int:pipe-separator}}[[Special:Contributions/$1|{{int:contribslink}}]])",
+'editinguser' => "عوض کنت حقوق کاربر  '''[[wiki_User:$1|$1]]''' ([[wiki_User talk:$1|{{int:talkpagelinktext}}]]{{int:pipe-separator}}[[Special:Contributions/$1|{{int:contribslink}}]])",
 'userrights-editusergroup' => 'اصلاح گروه کاربر',
 'saveusergroups' => 'ذخیره گروه کاربر',
 'userrights-groupsmember' => 'عضو انت:',
@@ -1129,7 +1129,7 @@ $1",
 'userrights-reason' => 'دلیل:',
 'userrights-no-interwiki' => 'شما را اجازت نیست دان حقوق کاربر ته دگ ویکی آن اصلاح کنیت.',
 'userrights-nodatabase' => 'دیتابیس $1  موجود نهنت یا محلی نهنت.',
-'userrights-nologin' => 'شما باید [[Special:UserLogin|وارد بیت]]  گون حساب مدیریتی په مشخص کتن حقوق کاربر.',
+'userrights-nologin' => 'شما باید [[Special:wiki_UserLogin|وارد بیت]]  گون حساب مدیریتی په مشخص کتن حقوق کاربر.',
 'userrights-notallowed' => 'شمی حساب اجازت په مشخص کتن حقوق کاربر نیست.',
 'userrights-changeable-col' => 'گروهانی که شما تونیت عوض کنیت',
 'userrights-unchangeable-col' => 'گروهانی که شما نه نونیت عوض کنیت',
@@ -1215,7 +1215,7 @@ $1",
 'right-siteadmin' => 'کبل و پچ دیتابیس',
 'right-override-export-depth' => 'درگیزگ صفحات گون صفحاتی لینک بوتگین ته سطح ۵',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'ورودان حقوق کاربر',
 'rightslogtext' => 'شی یک آماری چه تغییرات په حقوق کاربری انت.',
 'rightslogentry' => 'عوض بوت عضویت گروهی په $1  چه $2 په $3',
@@ -1302,7 +1302,7 @@ $1",
 'uploadbtn' => 'آپلود فایل',
 'reuploaddesc' => 'کنسل آپلودء و ترر په فرم آپلود',
 'uploadnologin' => 'وارد نهیت',
-'uploadnologintext' => 'شما بایدن [[Special:UserLogin|واردبیت]] په آپلود کتن فایل.',
+'uploadnologintext' => 'شما بایدن [[Special:wiki_UserLogin|واردبیت]] په آپلود کتن فایل.',
 'upload_directory_missing' => 'مسیر آپلود ($1)  گارنت و گون وب سرور شر گنگ نه بیت.',
 'upload_directory_read_only' => 'مسیر آپلود ($1)  قابل نوشتن گون وب سرور نهنت.',
 'uploaderror' => 'حطا آپلود',
@@ -1402,11 +1402,11 @@ PICT # misc.
 'upload-proto-error-text' => 'آپلود دراین نیاز په URL آنی داریت که شروع بیت گون  <code>http://</code> یا <code>ftp://</code>.',
 'upload-file-error' => 'حطا درونی',
 'upload-file-error-text' => 'یک حطای درونی پیش اتک وهد شرکتن فایل موقت ته سرور.
-لطفا گون یک [[Special:ListUsers/sysop|مدیر]].تماس گریت.',
+لطفا گون یک [[Special:Listwiki_Users/sysop|مدیر]].تماس گریت.',
 'upload-misc-error' => 'ناشناس حطا آپلود',
 'upload-misc-error-text' => 'یک ناشناسین حطا وهد آپلود کتن پیش آتک.
 لطفا تایید کنیت که URL معتبرانت و دسترسی بیت و دگه سعی کنیت.
-اگر مشکل ادامه داشت، گون [[Special:ListUsers/sysop|مدیر]]ء تماس گریت.',
+اگر مشکل ادامه داشت، گون [[Special:Listwiki_Users/sysop|مدیر]]ء تماس گریت.',
 'upload-too-many-redirects' => 'ای لینک بازگین غیرمستقیم ی هستن',
 'upload-unknown-size' => 'ناشناین اندازه',
 'upload-http-error' => 'یک ارور اچ‌تی‌تی‌پی پیش آتک : $1',
@@ -1546,7 +1546,7 @@ PICT # misc.
 'statistics-edits-average' => 'میانگین اصلاحات ته هر صفحه ای',
 'statistics-views-total' => 'چارگان کل',
 'statistics-views-peredit' => 'چارگ ته هر اصلاح',
-'statistics-users' => 'ثبت نامی [[Special:ListUsers|users]]',
+'statistics-users' => 'ثبت نامی [[Special:Listwiki_Users|users]]',
 'statistics-users-active' => 'فعالین کاربر',
 'statistics-users-active-desc' => 'کاربرانی که ته پیشگین {{PLURAL:$1|روچ|$1 روچان}} کاری اش کتت',
 'statistics-mostpopular' => 'باز چار تگین صفحات',
@@ -1695,13 +1695,13 @@ PICT # misc.
 'linksearch-line' => '$1 لینک بوتت چه $2',
 'linksearch-error' => 'تقریبیان شاید فقط ته اول نام هاست جاه کاینت.',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => 'پیشدار کابرانی که شروع بنت گون:',
 'listusers-submit' => 'پیش دار',
 'listusers-noresult' => 'هچ کابری در گیزگ نه بوت.',
 'listusers-blocked' => '(بند بیتگ)',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'لیست کاربران فعال',
 'activeusers-count' => '$1 {{PLURAL:$1|اصلاح|اصلاح}} نوکین',
 'activeusers-from' => 'پیشدار کاربرانی که شروع بنت گون :‌',
@@ -1732,7 +1732,7 @@ PICT # misc.
 
 # E-mail user
 'mailnologin' => 'هچ آدرس دیم دهگ',
-'mailnologintext' => 'شما بایدن [[Special:UserLogin|وارد بیت]] و یک معتبرین آدرس ایمیلی داشته بیت ته وتی [[Special:Preferences|ترجیحات]] په دیم داتن ایمیل په دگه کاربران',
+'mailnologintext' => 'شما بایدن [[Special:wiki_UserLogin|وارد بیت]] و یک معتبرین آدرس ایمیلی داشته بیت ته وتی [[Special:Preferences|ترجیحات]] په دیم داتن ایمیل په دگه کاربران',
 'emailuser' => 'په ای کابر ایمیل دیم دی',
 'emailpage' => 'ایمیل کاربر',
 'emailpagetext' => 'گر ای کاربر یک معتبرین آدرس ایمیلی ته وتی ترجیحات کاربری وارد کتت،جهلگین فرم په آیء یک کوله ای دیم دنت.
@@ -1761,7 +1761,7 @@ PICT # misc.
 'nowatchlist' => 'شما را هچ چیزی ته وتی لیست چارگ نیست.',
 'watchlistanontext' => 'لطفا  $1 په دیستن یا اصلاح ایتیمان ته وتی لیست چارگء',
 'watchnologin' => 'وارد نه بی تگیت',
-'watchnologintext' => 'شما بایدن  [[Special:UserLogin|وارد بیت]] په تغییر داتن وتی لیست چارگء',
+'watchnologintext' => 'شما بایدن  [[Special:wiki_UserLogin|وارد بیت]] په تغییر داتن وتی لیست چارگء',
 'addedwatchtext' => 'صفحه  "[[:$1]]"  په شمی [[Special:Watchlist|watchlist]] هور بیت.
 دیمگی تغییرات په ای صفحه و آیاء صفحه گپ ادان لیست بنت، و صفحه پررنگ جاه کیت ته [[Special:RecentChanges|لیست نوکیت تغییرات]] په راحتر کتن شی که آی زورگ بیت.',
 'removedwatchtext' => 'صفحه"[[:$1]]"  چه [[Special:Watchlist|شمی لیست چارگ]]. دربیت.',
@@ -1862,12 +1862,12 @@ $NEWPAGE
 'rollbackfailed' => 'پشتررگ پروشت',
 'cantrollback' => 'نه تونیت اصلاح برگردینیت؛
 آهری شرکت کننده فقط نویسوک ای صفحه انت.',
-'alreadyrolled' => 'نه تونیت ترینیت اهری اصلاح چه  [[:$1]] گون  [[User:$2|$2]] ([[User talk:$2|گپ]] | {{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]);
+'alreadyrolled' => 'نه تونیت ترینیت اهری اصلاح چه  [[:$1]] گون  [[wiki_User:$2|$2]] ([[wiki_User talk:$2|گپ]] | {{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]);
 یکی دگه پیش تر صفحهء اصلاح کتت یا بری گردینت.
 
-آهری اصلاح توسط [[User:$3|$3]] ([[User talk:$3|Talk]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
+آهری اصلاح توسط [[wiki_User:$3|$3]] ([[wiki_User talk:$3|Talk]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
 'editcomment' => "خلاصه اصلاح ات:\"''\$1''\".",
-'revertpage' => 'ترینت اصلاحات توسط  [[Special:Contributions/$2|$2]] ([[User talk:$2|گپ کن]])په آهری بازبینی گون [[User:$1|$1]]',
+'revertpage' => 'ترینت اصلاحات توسط  [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|گپ کن]])په آهری بازبینی گون [[wiki_User:$1|$1]]',
 'rollback-success' => 'اصلاحات ترینگ بوتت گون $1;
 په آهری نسخه ترینگ بوتنت گون $2.',
 
@@ -2078,7 +2078,7 @@ $1',
 'unblockip' => 'کاربر رفع محدودیت کن',
 'unblockiptext' => 'چه ای جهلی فرم استفاده کن په ترینگ دسترسی نوشتن په یک پیشگین آدرس آی پی محدود یا نام کاربری.',
 'ipusubmit' => 'ای محدودیتءَ بزور',
-'unblocked' => '[[User:$1|$1]] رفع محدودیت بیت.',
+'unblocked' => '[[wiki_User:$1|$1]] رفع محدودیت بیت.',
 'unblocked-id' => 'محدودیت $1  زورگ بیتت',
 'ipblocklist' => 'لیست محدود بیتگین آی پی و نام کاربران',
 'ipblocklist-legend' => 'درگیزگ یم محدودین کاربری',
@@ -2096,7 +2096,7 @@ $1',
 'unblocklink' => 'رفع محدودیت',
 'change-blocklink' => 'عوض کتن کبل',
 'contribslink' => 'مشارکتان',
-'autoblocker' => 'اتوماتیک کبلت په چی که شمی آدرس آی پی نوکی استفاده بوتت گون  "[[User:$1|$1]]".
+'autoblocker' => 'اتوماتیک کبلت په چی که شمی آدرس آی پی نوکی استفاده بوتت گون  "[[wiki_User:$1|$1]]".
 داتگین دلیل په محدود کتن $1 شی انت: "$2"',
 'blocklogpage' => 'بلاک ورود',
 'blocklogentry' => 'محدود بوته [[$1]] گون یک زمان انقاضای $2 $3',
@@ -2175,7 +2175,7 @@ $1',
 ته ای موراد شما بایدن صفحه یا دسته جاه په جاه کنی و یا آیآ چن و بند کینت.",
 'movearticle' => 'جاه په چاهی صفحه:',
 'movenologin' => 'وارد نهیت',
-'movenologintext' => 'شما بایدن یک ثبت نامی کاربری بیت و [[Special:UserLogin|وارد بیت]]په جاه په جاه کتن یک صفحه.',
+'movenologintext' => 'شما بایدن یک ثبت نامی کاربری بیت و [[Special:wiki_UserLogin|وارد بیت]]په جاه په جاه کتن یک صفحه.',
 'movenotallowed' => 'شما را اجازت به جاه په جاه کتن صفحات نیست.',
 'movenotallowedfile' => 'شما را اجارت په جاه په جاه کتن فایلان نیستن.',
 'cant-move-user-page' => 'شما را اجازت نیستن که صفحات کاربر اصلیء جاه په جاه کنیت.',
@@ -2895,7 +2895,7 @@ $5
 
 # Delete conflict
 'deletedwhileediting' => "'''هوژاری''': ای صفحه حذف بوتت رند چه شمی اصلاح کتن شروه بیگ!",
-'confirmrecreate' => "کاربر [[User:$1|$1]] ([[User talk:$1|گپ]]) ای صفحهء حذف کتت بعد چه شی که شما اصلاح شروع کتت گون ای دلیل:
+'confirmrecreate' => "کاربر [[wiki_User:$1|$1]] ([[wiki_User talk:$1|گپ]]) ای صفحهء حذف کتت بعد چه شی که شما اصلاح شروع کتت گون ای دلیل:
 : ''$2''
 لطفا تایید کنیت که واقعا شما لوٹیت ای صفحه دگه شرکنیت.",
 'recreate' => 'دگ شرکن',

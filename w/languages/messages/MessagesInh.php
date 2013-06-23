@@ -17,7 +17,7 @@
 $fallback = 'ru';
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Ӏинкаш белгалде:',
 'tog-justify' => 'Яздам оагӀува шоралца хьанийсде',
 'tog-hideminor' => 'ЗӀамига хувцамаш керда хувцаман дагарленашках къайлаяккха',
@@ -315,7 +315,7 @@ $messages = array(
 Из мо гӀалат нийсалуш хула, саг тишъенна Ӏинкаца, д|адаьккха дола оагӀувни хувца искара тӀа чувала гӀертача.
 
 Наггахь санна из иштта децe, шоана гӀорса Ӏалаш деча гӀалат кораяь хила мега.
-Дехар да, [[Special:ListUsers/sysop|мазакулгалхочоа]] хоам бе, URL хьахьокхаш.',
+Дехар да, [[Special:Listwiki_Users/sysop|мазакулгалхочоа]] хоам бе, URL хьахьокхаш.',
 'missingarticle-rev' => '(бӀаргоагӀув № $1)',
 'internalerror' => 'Чура гӀалат',
 'internalerror_info' => 'Чура гӀалат: $1',
@@ -602,7 +602,7 @@ $messages = array(
 'prefs-help-email-others' => 'Кхыбола дакъалаьцархоша шоаца бувзам я йийшхургья шун оагIува тIа гIолла, д-хоамни хьаела ца езаш.',
 'prefs-signature' => 'Кулгяздар',
 
-# User rights
+# wiki_User rights
 'userrights-user-editname' => 'Дакъалаьцархочунна цIи Iоязаде',
 'editusergroup' => 'Дакъалаьцархочунна тоабаш хувца',
 'saveusergroups' => 'Дакъалаьцархочунна тоабаш дита',
@@ -633,7 +633,7 @@ $messages = array(
 'right-move' => 'ОагIувний цIи хувца',
 'right-movefile' => 'Паьлий цIи хувца',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Дакъалаьцархочунна бокъона тептар',
 'rightsnone' => '(а)',
 

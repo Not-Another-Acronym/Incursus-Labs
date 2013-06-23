@@ -73,11 +73,11 @@ $specialPageAliases = array(
 	'Shortpages'                => array( 'Zāzaniltōn', 'PáginasCortas' ),
 	'Specialpages'              => array( 'NōncuahquīzquiĀmatl', 'PáginasEspeciales' ),
 	'Upload'                    => array( 'Quetza', 'Subir' ),
-	'Userlogin'                 => array( 'Tlacalaquiliztli', 'Registrarse' ),
+	'wiki_Userlogin'                 => array( 'Tlacalaquiliztli', 'Registrarse' ),
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Mokìnxòîkuilòtzàswis tzòwilistìn:',
 'tog-justify' => 'Mokintêtènyèktlàlis in tlâkuilispaltìn',
 'tog-hideminor' => 'Motlàtìs tepỉtzìn tlayèktlàlilistli ìpan welok tlapảtlalistli',
@@ -370,7 +370,7 @@ Hueliz quimpiya tlahtōl tlein ahmo mohuelītih motequitiltia tōcāpan.',
 'sqlhidden' => '(Tlatēmoliztli SQL omotlāti)',
 'namespaceprotected' => "Ahmo tiquihuelīti tiquimpatla zāzaniltin īpan '''$1'''.",
 'ns-specialprotected' => 'In nònkuâkìskàtlaìxtlapaltìn awel ìmpan nemàtilòs mokinyèktlàlis.',
-'titleprotected' => "Inīn zāzanilli ōmoquīxti ic tlachīhualiztli ic [[User:$1|$1]].
+'titleprotected' => "Inīn zāzanilli ōmoquīxti ic tlachīhualiztli ic [[wiki_User:$1|$1]].
 Ōquihto: ''$2''",
 
 # Virus scanner
@@ -411,7 +411,7 @@ Timitztlātlauhtiah xicpehpena occē.',
 'loginsuccess' => "'''Ōticalac {{SITENAME}} quemeh \"\$1\".'''",
 'nosuchuser' => 'Ayāc tlatequitiltilīlli motōcāitia "$1".
 In tlatequitiltilīltōcāitl quimati in huēyimachiyōtlahtōliztli.
-Xiquitta in yēquihcuilōlli, ahnozo [[Special:UserLogin/signup|xicchīhua yancuīc cuenta]].',
+Xiquitta in yēquihcuilōlli, ahnozo [[Special:wiki_UserLogin/signup|xicchīhua yancuīc cuenta]].',
 'nosuchusershort' => 'Ayāc tlatequitiltilīlli motōcāitia "$1". Xiquitta in tlein ōtitlahcuiloh melāhuacā cah.
 Xiquitta moyēquihcuilōl.',
 'nouserspecified' => 'Mohuīquilia tiquihtoa cualli tlatequitiltilīltōcāitl.',
@@ -482,7 +482,7 @@ Occeppa xicalaqui niman ticmatīz.',
 'loginreqlink' => 'ximocalaqui',
 'loginreqpagetext' => 'Tihuīquilia $1 ic tiquintta occequīntīn zāzaniltin.',
 'accmailtitle' => 'Tlahtōlichtacāyōtl ōmoihuah.',
-'accmailtext' => "Cē zāzotlahtōlichtacāyōtl ōcyōcox [[User talk:$1|$1]]  moquitītlani īhuīc $2.
+'accmailtext' => "Cē zāzotlahtōlichtacāyōtl ōcyōcox [[wiki_User talk:$1|$1]]  moquitītlani īhuīc $2.
 
 In tlahtōlichtacāyōtl īpal inīn yancuīc cuenta hueliti ticpatlalo zāzanilpan ''[[Special:ChangePassword|tlahtōlichtacāyōtl patlaliztli]]'' zatepan ōticalac.",
 'newarticle' => '(Yancuīc)',
@@ -513,7 +513,7 @@ Tihuelīti [[Special:Search/{{PAGENAME}}|tictēmoa inīn zāzaniltōcācopa]] oc
 'templatesusedsection' => '{{PLURAL:$1|Nemachiòtl tlèn motekìuhtia|Nemachiòmë tlèn mokìntekìuhtiä}} ìpan inìn tlaxélòlistli:',
 'template-protected' => '(ōmoquīxti)',
 'hiddencategories' => 'Inīn zāzanilli mopiya {{PLURAL:$1|1 neneuhcāyōc ōmotlāti|$1 neneuhcāyōc ōmotlāti}}:',
-'nocreatetext' => 'Inīn huiqui ōquitzacuili tlahuelītiliztli ic tlachīhua yancuīc zāzaniltin. Tichuelīti ticcuepa auh ticpatla cē zāzanilli, [[Special:UserLogin|xicalaqui nozo xicchīhua cē cuentah]].',
+'nocreatetext' => 'Inīn huiqui ōquitzacuili tlahuelītiliztli ic tlachīhua yancuīc zāzaniltin. Tichuelīti ticcuepa auh ticpatla cē zāzanilli, [[Special:wiki_UserLogin|xicalaqui nozo xicchīhua cē cuentah]].',
 'nocreate-loggedin' => 'Ahmo tihuelīti tiquinchīhua yancuīc zāzaniltin.',
 'permissionserrors' => 'Huelītiliztechcopa ahcuallōtl',
 'permissionserrorstext' => 'Ahmo tihuelīti quichīhua inōn, inīn {{PLURAL:$1|īxtlamatilizpampa|īxtlamatilizpampa}}:',
@@ -528,7 +528,7 @@ Ye ia.',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'Ahmo huelītih mochīhua cuentah',
-'cantcreateaccount-text' => "[[User:$3|$3]] ōcquīxti cuentah tlachīhualiztli īpal inīn IP ('''$1''').
+'cantcreateaccount-text' => "[[wiki_User:$3|$3]] ōcquīxti cuentah tlachīhualiztli īpal inīn IP ('''$1''').
 
 Īxtlamatiliztli īpal $3 cah ''$2''",
 
@@ -692,7 +692,7 @@ Ahmo quihuīquilia quimpiya achi $1 {{PLURAL:$1|machiyōtlahtōliztli|machiyōtl
 Intlā ticnequi, tlācah quimatīzqueh motequi.',
 'prefs-help-email-required' => 'Tihuīquilia quihcuiloa mo e-mailcān.',
 
-# User rights
+# wiki_User rights
 'userrights-user-editname' => 'Xihcuiloa cē tlatequitiltilīltōcāitl:',
 'editusergroup' => 'Tiquimpatlāz tlatequitiltilīlli olōlli',
 'userrights-editusergroup' => 'Tiquimpatlāz tlatequitiltilīlli olōlli',
@@ -743,7 +743,7 @@ Intlā ticnequi, tlācah quimatīzqueh motequi.',
 'right-userrights' => 'Tiquimpatlāz mochīntīn tlatequitiltilīlli huelītiliztli',
 'right-userrights-interwiki' => 'Tiquimpatlāz tlatequitiltilīlli huelītiliztli occequīntīn huiquipan',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Tlatequitiltilīlli huelītiliztli tlahcuilōlloh',
 'rightsnone' => 'ahtlein',
 
@@ -1004,7 +1004,7 @@ Nò mà mỏta in tlèn [[Special:WantedCategories|ìpan kineki tlaìxmatkàtlà
 'linksearch-ok' => 'Tictēmōz',
 'linksearch-line' => '$1 tzonhuīlo īxquichca $2',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusers-submit' => 'Tiquittāz',
 
 # Special:ListGroupRights
@@ -1051,7 +1051,7 @@ In tlapatlaliztli īxtlamatiliztli cah: $PAGESUMMARY $PAGEMINOREDIT
  
 Xicnotzāz in tlapatlani:
 Correo electrónico: {{canonicalurl:Special:Emailuser|target=$PAGEEDITOR}}
-Huiqui: {{canonicalurl:User:$PAGEEDITOR}}
+Huiqui: {{canonicalurl:wiki_User:$PAGEEDITOR}}
 
 Ahmo onyez occē tēmachitīliztli ītech occē tlapatlaliztli, zan mā tiquihitta inīn āmoxtli yancuīcān.
 Nō tihuelīti quitlahtlālīz, in tēmachitīliztli in mochi tlachixqui mozāzanilhuīc in motlachiyaliz āmatl.
@@ -1422,7 +1422,7 @@ Hueliz cah inīn huēyi tlapatlaliztli. Timitztlātlauhtia ticmatīz cuallōtl a
 'confirmemail' => 'Ticchicāhuāz e-mail',
 'confirmemail_needlogin' => 'Tihuīquilia $1 ic ticchicāhua mo e-mail.',
 'confirmemail_success' => 'Mocorreo ōmotlahtōlneltilih
-Niman tihuelīti [[Special:UserLogin|timocalaqui]] auh ticpactiāz huiquitica.',
+Niman tihuelīti [[Special:wiki_UserLogin|timocalaqui]] auh ticpactiāz huiquitica.',
 'confirmemail_loggedin' => 'Mo e-mailcān ōmochicāuh.',
 'confirmemail_error' => 'Achi ōcatcah ahcualli mochicāhualiztechcopa.',
 'confirmemail_subject' => 'e-mailcān {{SITENAME}} ītlachicāhualiz',

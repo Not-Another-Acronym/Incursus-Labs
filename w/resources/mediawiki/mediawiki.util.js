@@ -530,7 +530,7 @@
 				// start of string
 				'^'
 				+
-				// User part which is liberal :p
+				// wiki_User part which is liberal :p
 				'[' + rfc5322_atext + '\\.]+'
 				+
 				// 'at'

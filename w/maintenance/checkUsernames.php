@@ -27,12 +27,12 @@ require_once( __DIR__ . '/Maintenance.php' );
 /**
  * Maintenance script to check that database usernames are actually valid.
  *
- * An existing usernames can become invalid if User::isValidUserName()
+ * An existing usernames can become invalid if wiki_User::isValidwiki_UserName()
  * is altered or if we change the $wgMaxNameChars
  *
  * @ingroup Maintenance
  */
-class CheckUsernames extends Maintenance {
+class Checkwiki_Usernames extends Maintenance {
 
 	public function __construct() {
 		parent::__construct();
@@ -49,13 +49,13 @@ class CheckUsernames extends Maintenance {
 		);
 
 		foreach ( $res as $row ) {
-			if ( ! User::isValidUserName( $row->user_name ) ) {
+			if ( ! wiki_User::isValidwiki_UserName( $row->user_name ) ) {
 				$this->error( sprintf( "%s: %6d: '%s'\n", wfWikiID(), $row->user_id, $row->user_name ) );
-				wfDebugLog( 'checkUsernames', $row->user_name );
+				wfDebugLog( 'checkwiki_Usernames', $row->user_name );
 			}
 		}
 	}
 }
 
-$maintClass = "CheckUsernames";
+$maintClass = "Checkwiki_Usernames";
 require_once( RUN_MAINTENANCE_IF_MAIN );

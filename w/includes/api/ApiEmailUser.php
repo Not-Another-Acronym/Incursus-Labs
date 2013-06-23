@@ -28,7 +28,7 @@
  * API Module to facilitate sending of emails to users
  * @ingroup API
  */
-class ApiEmailUser extends ApiBase {
+class ApiEmailwiki_User extends ApiBase {
 
 	public function __construct( $main, $action ) {
 		parent::__construct( $main, $action );
@@ -38,13 +38,13 @@ class ApiEmailUser extends ApiBase {
 		$params = $this->extractRequestParams();
 
 		// Validate target
-		$targetUser = SpecialEmailUser::getTarget( $params['target'] );
-		if ( !( $targetUser instanceof User ) ) {
+		$targetUser = SpecialEmailwiki_User::getTarget( $params['target'] );
+		if ( !( $targetUser instanceof wiki_User ) ) {
 			$this->dieUsageMsg( array( $targetUser ) );
 		}
 
 		// Check permissions and errors
-		$error = SpecialEmailUser::getPermissionsError( $this->getUser(), $params['token'] );
+		$error = SpecialEmailwiki_User::getPermissionsError( $this->getUser(), $params['token'] );
 		if ( $error ) {
 			$this->dieUsageMsg( array( $error ) );
 		}
@@ -55,10 +55,10 @@ class ApiEmailUser extends ApiBase {
 			'Subject' => $params['subject'],
 			'CCMe' => $params['ccme'],
 		);
-		$retval = SpecialEmailUser::submit( $data, $this->getContext() );
+		$retval = SpecialEmailwiki_User::submit( $data, $this->getContext() );
 
 		if ( $retval instanceof Status ) {
-			// SpecialEmailUser sometimes returns a status
+			// SpecialEmailwiki_User sometimes returns a status
 			// sometimes it doesn't.
 			if ( $retval->isGood() ) {
 				$retval = true;
@@ -108,7 +108,7 @@ class ApiEmailUser extends ApiBase {
 
 	public function getParamDescription() {
 		return array(
-			'target' => 'User to send email to',
+			'target' => 'wiki_User to send email to',
 			'subject' => 'Subject header',
 			'text' => 'Mail body',
 			'token' => 'A token previously acquired via prop=info',
@@ -153,7 +153,7 @@ class ApiEmailUser extends ApiBase {
 
 	public function getExamples() {
 		return array(
-			'api.php?action=emailuser&target=WikiSysop&text=Content' => 'Send an email to the User "WikiSysop" with the text "Content"',
+			'api.php?action=emailuser&target=WikiSysop&text=Content' => 'Send an email to the wiki_User "WikiSysop" with the text "Content"',
 		);
 	}
 

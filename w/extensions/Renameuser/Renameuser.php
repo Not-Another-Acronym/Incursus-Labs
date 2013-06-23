@@ -28,7 +28,7 @@ $wgExtensionMessagesFiles['Renameuser'] = $dir . 'Renameuser.i18n.php';
 $wgExtensionMessagesFiles['RenameuserAliases'] = $dir . 'Renameuser.alias.php';
 
 /**
- * Users with more than this number of edits will have their rename operation
+ * wiki_Users with more than this number of edits will have their rename operation
  * deferred via the job queue.
  */
 define( 'RENAMEUSER_CONTRIBJOB', 5000 );
@@ -39,7 +39,7 @@ $wgLogTypes[]                          = 'renameuser';
 $wgLogNames['renameuser']              = 'renameuserlogpage';
 $wgLogHeaders['renameuser']            = 'renameuserlogpagetext';
 # $wgLogActions['renameuser/renameuser'] = 'renameuserlogentry';
-$wgLogActionsHandlers['renameuser/renameuser'] = 'wfRenameUserLogActionText'; // deal with old breakage
+$wgLogActionsHandlers['renameuser/renameuser'] = 'wfRenamewiki_UserLogActionText'; // deal with old breakage
 
 /**
  * @param $type
@@ -50,7 +50,7 @@ $wgLogActionsHandlers['renameuser/renameuser'] = 'wfRenameUserLogActionText'; //
  * @param $filterWikilinks bool
  * @return String
  */
-function wfRenameUserLogActionText( $type, $action, $title = null, $skin = null, $params = array(), $filterWikilinks = false ) {
+function wfRenamewiki_UserLogActionText( $type, $action, $title = null, $skin = null, $params = array(), $filterWikilinks = false ) {
 	if ( !$title || $title->getNamespace() !== NS_USER ) {
 		$rv = ''; // handled in comment, the old way
 	} else {
@@ -64,25 +64,25 @@ function wfRenameUserLogActionText( $type, $action, $title = null, $skin = null,
 }
 
 $wgAutoloadClasses['SpecialRenameuser'] = dirname( __FILE__ ) . '/Renameuser_body.php';
-$wgAutoloadClasses['RenameUserJob'] = dirname( __FILE__ ) . '/RenameUserJob.php';
+$wgAutoloadClasses['Renamewiki_UserJob'] = dirname( __FILE__ ) . '/Renamewiki_UserJob.php';
 $wgSpecialPages['Renameuser'] = 'SpecialRenameuser';
 $wgSpecialPageGroups['Renameuser'] = 'users';
-$wgJobClasses['renameUser'] = 'RenameUserJob';
+$wgJobClasses['renamewiki_User'] = 'Renamewiki_UserJob';
 
-$wgHooks['ShowMissingArticle'][] = 'wfRenameUserShowLog';
+$wgHooks['ShowMissingArticle'][] = 'wfRenamewiki_UserShowLog';
 $wgHooks['ContributionsToolLinks'][] = 'wfRenameuserOnContribsLink';
 
 /**
  * Show a log if the user has been renamed and point to the new username.
- * Don't show the log if the $oldUserName exists as a user.
+ * Don't show the log if the $oldwiki_UserName exists as a user.
  *
  * @param $article Article
  */
-function wfRenameUserShowLog( $article ) {
+function wfRenamewiki_UserShowLog( $article ) {
 	global $wgOut;
 	$title = $article->getTitle();
-	$oldUser = User::newFromName( $title->getBaseText() );
-	if ( ($title->getNamespace() == NS_USER || $title->getNamespace() == NS_USER_TALK ) && ($oldUser && $oldUser->isAnon() )) {
+	$oldwiki_User = wiki_User::newFromName( $title->getBaseText() );
+	if ( ($title->getNamespace() == NS_USER || $title->getNamespace() == NS_USER_TALK ) && ($oldwiki_User && $oldwiki_User->isAnon() )) {
 		// Get the title for the base userpage
 		$page = Title::makeTitle( NS_USER, str_replace( ' ', '_', $title->getBaseText() ) )->getPrefixedDBkey();
 		LogEventsList::showLogExtract( $wgOut, 'renameuser', $page, '', array( 'lim' => 10, 'showIfEmpty' => false,
@@ -98,9 +98,9 @@ function wfRenameUserShowLog( $article ) {
  * @return bool
  */
 function wfRenameuserOnContribsLink( $id, $nt, &$tools ) {
-	global $wgUser;
+	global $wgwiki_User;
 
-	if ( $wgUser->isAllowed( 'renameuser' ) && $id ) {
+	if ( $wgwiki_User->isAllowed( 'renameuser' ) && $id ) {
 		$tools[] = Linker::link(
 			SpecialPage::getTitleFor( 'Renameuser' ),
 			wfMsg( 'renameuser-linkoncontribs' ),

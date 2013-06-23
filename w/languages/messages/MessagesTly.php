@@ -158,7 +158,7 @@ $magicWords = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Линки жинтоно ријә быкәш:',
 'tog-justify' => 'Мәтни бә сәһифә кәно бәробәр быкә.',
 'tog-hideminor' => 'Охоминә дәгишонәдә гәдә дәгишон нишо мәдә.',
@@ -404,7 +404,7 @@ $messages = array(
 'missing-article' => 'База мәлумотон дыләдә бә ахтар кардә быә саһифон «$1» $2 барәдә мәлумот пәјдо карде ныбе.
 Жыго вәзијјәт бе бәзне бә вахтики, ым сәһифә че рәдд кардә быә сәһифә канә рәвојәте.
 Гирәм ым жыго ни, жәгәдә шымә програм тәминатијәдә сәһв пәјдо кардәјоне.
-Хаһиш кардәмон че сәһифә URL-и бә [[Special:ListUsers/sysop|администратори]] бывғандәнән.',
+Хаһиш кардәмон че сәһифә URL-и бә [[Special:Listwiki_Users/sysop|администратори]] бывғандәнән.',
 'missingarticle-rev' => '(рәвојәт#: $1)',
 'missingarticle-diff' => '(Фәрг: $1, $2)',
 'internalerror' => 'Дыләтонә ғәләт',
@@ -621,7 +621,7 @@ $messages = array(
 'preferences' => 'Кукон',
 'mypreferences' => 'Кукон',
 'prefsnologin' => 'Ыштәни едаштәнијоне',
-'prefsnologintext' => 'Шымә бәбе <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} ыштәни едәштән]</span> бо иштирокәкә пеғәндон дәгиш кардеј.',
+'prefsnologintext' => 'Шымә бәбе <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} ыштәни едәштән]</span> бо иштирокәкә пеғәндон дәгиш кардеј.',
 'changepassword' => 'Пароли дәгиш кардеј',
 'skin-preview' => 'Сыфтәнә нишо дој',
 'prefs-user-pages' => 'Иштирокәкә сәһифон',
@@ -645,7 +645,7 @@ $messages = array(
 'prefs-help-email' => 'Е-номә унвони нывыштеј һукман ни, интаси ав бә шымә гәрәк бәбе гирам шымә пароли виро бебәкардејон.',
 'prefs-help-email-others' => 'Комәг бәка бә ҹо иштироәкон шымә е-номә унвони оныкарде, че шымә шәхси сәһифәдә быә линки де шымә әлогә огәтеј.',
 
-# User rights
+# wiki_User rights
 'userrights-reason' => 'Сәбәб:',
 
 # Groups

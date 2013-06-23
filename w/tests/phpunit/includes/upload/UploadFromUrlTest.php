@@ -20,7 +20,7 @@ class UploadFromUrlTest extends ApiTestCase {
 		}
 	}
 
-	protected function doApiRequest( Array $params, Array $unused = null, $appendModule = false, User $user = null ) {
+	protected function doApiRequest( Array $params, Array $unused = null, $appendModule = false, wiki_User $user = null ) {
 		$sessionId = session_id();
 		session_write_close();
 
@@ -44,7 +44,7 @@ class UploadFromUrlTest extends ApiTestCase {
 	}
 
 	/**
-	 * @todo Document why we test login, since the $wgUser hack used doesn't
+	 * @todo Document why we test login, since the $wgwiki_User hack used doesn't
 	 * require login
 	 */
 	public function testLogin() {
@@ -232,7 +232,7 @@ class UploadFromUrlTest extends ApiTestCase {
 			$page->doDeleteArticle( '' );
 		}
 
-		$this->assertFalse( (bool)$talk->getArticleID( Title::GAID_FOR_UPDATE ), 'User talk does not exist' );
+		$this->assertFalse( (bool)$talk->getArticleID( Title::GAID_FOR_UPDATE ), 'wiki_User talk does not exist' );
 
 		$data = $this->doApiRequest( array(
 			'action' => 'upload',
@@ -249,7 +249,7 @@ class UploadFromUrlTest extends ApiTestCase {
 		$job->run();
 
 		$this->assertTrue( wfLocalFile( 'UploadFromUrlTest.png' )->exists() );
-		$this->assertTrue( (bool)$talk->getArticleID( Title::GAID_FOR_UPDATE ), 'User talk exists' );
+		$this->assertTrue( (bool)$talk->getArticleID( Title::GAID_FOR_UPDATE ), 'wiki_User talk exists' );
 
 		$this->deleteFile( 'UploadFromUrlTest.png' );
 

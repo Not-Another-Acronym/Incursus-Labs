@@ -44,7 +44,7 @@ $namespaceGenderAliases = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Ferwiese unnerstriekje:',
 'tog-justify' => 'Text as Bloksats',
 'tog-hideminor' => 'Litje Annerengen uutbländje',
@@ -379,7 +379,7 @@ As Gruund wuude anroat: $1',
 Ju Siede is muugelkerwiese läsked of ferskäuwen wuuden.
 
 Fals dit nit die Fal is, hääst du eventuäl n Failer in ju Software fuunen.
-Mäld dit n [[Special:ListUsers/sysop|Administrator]] unner Naamenge fon ju URL.',
+Mäld dit n [[Special:Listwiki_Users/sysop|Administrator]] unner Naamenge fon ju URL.',
 'missingarticle-rev' => '(Versionsnuumer: $1)',
 'missingarticle-diff' => '(Unnerskeed twiske Versione: $1, $2)',
 'readonly_lag' => 'Ju Doatenboank wuud automatisk foar Skrieuwtougriepe speerd, deermäd sik do ferdeelde Doatenboankservere (slaves) mäd dän Hauddoatenboankserver (master) ouglieke konnen.',
@@ -426,7 +426,7 @@ $2',
 'customjsprotected' => '↓Du hääst nit ju Begjuchtegenge, disse JavaScript änthooldewnde Siede tou beoarbaidjen, deer ju do persöönelke Ienstaalengen fon n uur Benutser änthaalt.',
 'ns-specialprotected' => 'Spezioalsieden konnen nit beoarbaided wäide.',
 'titleprotected' => "Ne Siede mäd dissen Noome kon nit moaked wäide.
-Ju Speere wuude truch [[User:$1|$1]] mäd ju Begruundenge ''$2'' ienroat.",
+Ju Speere wuude truch [[wiki_User:$1|$1]] mäd ju Begruundenge ''$2'' ienroat.",
 'filereadonlyerror' => '↓Ju Doatäi „$1“ kon nit annerd wäide, deer ap dät Doatäirepositorium „$2“ bloot Leesetougriep muugelk is.
 
 Die Administrator, die dän Skrieuwtougriep speerde, roate foulgjenden Gruund an: „$3“.',
@@ -443,7 +443,7 @@ Die Administrator, die dän Skrieuwtougriep speerde, roate foulgjenden Gruund an
 # Login and logout pages
 'logouttext' => "'''Du bäst nu oumälded.'''
 
-Du koast {{SITENAME}} nu anonym fääre benutsje, of die fonnäien unner dänsälge of n uur Benutsernoome wier [[Special:UserLogin|anmäldje]].
+Du koast {{SITENAME}} nu anonym fääre benutsje, of die fonnäien unner dänsälge of n uur Benutsernoome wier [[Special:wiki_UserLogin|anmäldje]].
 Beoachtje, dät eenige Sieden noch anwiese konnen, dät du oumälded bäst, soloange du nit din Browsercache loosmoaked hääst.",
 'welcomecreation' => '== Wäilkuumen, $1 ==
 
@@ -485,7 +485,7 @@ Dät mout sicher moaked wäide, dät Cookies aktivierd sunt. Deerätter diissen 
 'loginsuccesstitle' => 'Anmäldenge mäd Ärfoulch',
 'loginsuccess' => "'''Du bäst nu as \"\$1\" bie {{SITENAME}} anmälded.'''",
 'nosuchuser' => 'Die Benutsernoome "$1" bestoant nit.
-Uurpröif ju Skrieuwwiese (Groot-/Littekskrieuwenge beoachtje) of [[Special:UserLogin/signup|mäld die as näien Benutser an]].',
+Uurpröif ju Skrieuwwiese (Groot-/Littekskrieuwenge beoachtje) of [[Special:wiki_UserLogin/signup|mäld die as näien Benutser an]].',
 'nosuchusershort' => 'Die Benutsernooome "$1" bestoant nit. Uurpröif ju Skrieuwwiese.',
 'nouserspecified' => 'Reek jädden n Benutsernoome an.',
 'login-userblocked' => 'Dissen Benutser is speerd. Anmäldenge nit ferlööwed.',
@@ -649,7 +649,7 @@ Ju kon ferskäuwen of läsked weese, ätterdät du ju Siede apruupen hääst.',
 'loginreqlink' => 'anmäldje',
 'loginreqpagetext' => 'Du moast die $1, uum uur Sieden betrachtje tou konnen.',
 'accmailtitle' => 'Paaswoud wuude fersoand.',
-'accmailtext' => 'N toufällich generierd Paaswoud foar [[User talk:$1|$1]] wuud an $2 fersoand.
+'accmailtext' => 'N toufällich generierd Paaswoud foar [[wiki_User talk:$1|$1]] wuud an $2 fersoand.
 
 Dät Paaswoud foar dit näie Benutserkonto kon ap ju Spezioalsiede
 „[[Special:ChangePassword|Paaswoud annerje]]“ annerd wäide.',
@@ -660,7 +660,7 @@ Bäst du hier bie Fersjoon, klik ju '''Tourääch'''-Skaltfläche fon din Browse
 'anontalkpagetext' => "----''Dit is ju Diskussionssiede fon n uunbekoanden Benutser, die sik nit anmälded häd.
 Wail naan Noome deer is, wäd ju nuumeriske IP-Adrässe tou Identifizierenge ferwoand.
 Man oafte wäd sunne Adrässe fon moorere Benutsere ferwoand.
-Wan du n uunbekoanden Benutser bääst un du toankst dät du Kommentare krichst do nit foar die meend sunt, dan koast du ap bääste n [[Special:UserLogin/signup|Benutserkonto iengjuchte]] of die [[Special:UserLogin|anmäldje]], uum sukke Fertuusengen mäd uur anomyme Benutsere tou fermieden.''",
+Wan du n uunbekoanden Benutser bääst un du toankst dät du Kommentare krichst do nit foar die meend sunt, dan koast du ap bääste n [[Special:wiki_UserLogin/signup|Benutserkonto iengjuchte]] of die [[Special:wiki_UserLogin|anmäldje]], uum sukke Fertuusengen mäd uur anomyme Benutsere tou fermieden.''",
 'noarticletext' => 'Deer is apstuuns naan Text ap disse Siede.
 Du koast dissen Tittel ap do uur Sieden [[Special:Search/{{PAGENAME}}|säike]],
 <span class="plainlinks"> in do touheerige [{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} Logbouke säike] of disse Siede [{{fullurl:{{FULLPAGENAME}}|action=edit}} beoarbaidje]</span>.',
@@ -695,12 +695,12 @@ Foar Information foulget n aktuellen Iendraach uut dät Benutser-Logbouk:',
 'previewconflict' => 'Disse Foarskau rakt dän Inhoold fon dät buppere Täkstfäild wier; so wol die Artikkel uutsjo, wan du nu spiekerjen dääst.',
 'session_fail_preview' => "Dien Beoarbaidenge kuud nit spiekerd wäide, deer dien Sitsengsdoaten ferlädden geen sunt.
 Fersäik dät jädden fonnäien, deertruch dät du unner ju foulgjende Foarskau nochmoal ap \"Siede spiekerje\" klikst.
-Skuul dät Problem bestounden blieuwe, [[Special:UserLogout|mäldje die ou]] un deerätter wier an.'''",
+Skuul dät Problem bestounden blieuwe, [[Special:wiki_UserLogout|mäldje die ou]] un deerätter wier an.'''",
 'session_fail_preview_html' => "'''Dien Beoarbaidenge kuud nit spiekerd wäide, deer dien Sitsengsdoaten ferlädden geen sunt.'''
 
 ''Deer in  {{SITENAME}} dät Spikerjen fon skeen HTML aktivierd is, wuude ju Foarskau uutblended uum JavaScript Angriepe tou ferhinnerjen.''
 
-'''Fersäik et fonnäien, wan du unner ju foulgjende Textfoarskau noch moal ap „Siede spiekerje“ klikst. Skuul dät Problem bestounden blieuwe, [[Special:UserLogout|mäld die ou]] un deerätter wier an.'''",
+'''Fersäik et fonnäien, wan du unner ju foulgjende Textfoarskau noch moal ap „Siede spiekerje“ klikst. Skuul dät Problem bestounden blieuwe, [[Special:wiki_UserLogout|mäld die ou]] un deerätter wier an.'''",
 'token_suffix_mismatch' => "'''Dien Beoarbaidenge wuude touräächwiesd, deer dien Browser Teekene in dät Beoarbaidje-Token ferstummeld häd.
 Ne Spiekerenge kon dän Siedeninhoold fernäile. Dit geböärt bietiede truch ju Benutsenge fon n anonymen Proxy-Tjoonst, die der failerhaft oarbaidet.'''",
 'edit_form_incomplete' => "'''Die Inhoold fon dät Beoarbaidengsformular häd dän Server nit fulboodich beloanged. Pröif dien Beoarbaidengen ap Fulständegaid un fersäik dät noch insen.",
@@ -742,7 +742,7 @@ Gruund foar ju Speere: $1",
 'hiddencategories' => 'Disse Siede is Meeglid fon {{PLURAL:$1|1 ferstatte Kategorie|$1 ferstatte Kategorien}}:',
 'edittools' => '<!-- Text hier stoant unner Beoarbaidengsfäildere un Hoochleedefäildere. -->',
 'nocreatetitle' => 'Dät Moakjen fon näie Sieden is begränsed',
-'nocreatetext' => 'Ap {{SITENAME}} wuude dät Moakjen fon näie Sieden begränsed. Du koast al bestoundene Sieden beoarbaidje of die [[Special:UserLogin|anmäldje]].',
+'nocreatetext' => 'Ap {{SITENAME}} wuude dät Moakjen fon näie Sieden begränsed. Du koast al bestoundene Sieden beoarbaidje of die [[Special:wiki_UserLogin|anmäldje]].',
 'nocreate-loggedin' => 'Du hääst neen Begjuchtigenge, näie Sieden antoulääsen.',
 'sectioneditnotsupported-title' => 'Ju Beoarbaidenge fon Ousnitte wäd nit unnerstutsed',
 'sectioneditnotsupported-text' => 'Ju Beoarbaidenge fon Ousnitte wäd ap disse Beoarbaidengssiede nit unnerstutsed.',
@@ -785,11 +785,11 @@ Der {{PLURAL:$2|duur nit moor as 1 Aproup|duuren nit moor as $1 Aproupe}} weese.
 'undo-success' => 'Ju Annerenge kuud mäd Ärfoulch tourääch annerd wäide. Jädden ju Beoarbaidenge in ju Ferglieksansicht kontrollierje un dan ap „Siede spiekerje“ klikke, uum ju tou spiekerjen.',
 'undo-failure' => 'Ju Annerenge kuud nit tourääch annerd wäide, deer ju betroffene Oudeelenge intwisken ferannerd wuude.',
 'undo-norev' => 'Ju Beoarbaidenge kuud nit räägels troald wäide, deer ju nit foarhounden is of läsked wuude.',
-'undo-summary' => 'Annerenge $1 fon [[Special:Contributions/$2|$2]] ([[User talk:$2|Diskussion]]) wuude tourääch annerd.',
+'undo-summary' => 'Annerenge $1 fon [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Diskussion]]) wuude tourääch annerd.',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'Benutserkonto kon nit moaked wäide',
-'cantcreateaccount-text' => "Dät Moakjen fon n Benutserkonto fon ju IP-Adresse '''$1''' uut wuude fon [[User:$3|$3]] speerd.
+'cantcreateaccount-text' => "Dät Moakjen fon n Benutserkonto fon ju IP-Adresse '''$1''' uut wuude fon [[wiki_User:$3|$3]] speerd.
 
 Gruund fon ju Speere: ''$2''",
 
@@ -1042,7 +1042,7 @@ Staal deertruch sicher, dät ju Versionsgeskichte fon n Artikkel historisk akroa
 'mypreferences' => 'Ienstaalengen',
 'prefs-edits' => 'Antaal Beoarbaidengen:',
 'prefsnologin' => 'Nit anmälded',
-'prefsnologintext' => 'Du moast <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} anmälded]</span> weese, uum dien Ienstaalengen annerje tou konnen.',
+'prefsnologintext' => 'Du moast <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} anmälded]</span> weese, uum dien Ienstaalengen annerje tou konnen.',
 'changepassword' => 'Paaswoud annerje',
 'prefs-skin' => 'Skin',
 'skin-preview' => 'Foarskau',
@@ -1150,16 +1150,16 @@ Ju duur maximoal $1 {{PLURAL:$1|Teeken|Teekene}} loang weese.',
 'prefs-displaywatchlist' => 'Anwies-Optione',
 'prefs-diffs' => 'Versionsfergliek',
 
-# User preference: e-mail validation using jQuery
+# wiki_User preference: e-mail validation using jQuery
 'email-address-validity-valid' => 'Gultige E-Mail-Adrässe',
 'email-address-validity-invalid' => 'Ne gultige E-Mail-Adrässe is nöödich.',
 
-# User rights
+# wiki_User rights
 'userrights' => 'Benutsergjuchteferwaltenge',
 'userrights-lookup-user' => 'Ferwaltede Gruppentouheeregaid',
 'userrights-user-editname' => 'Benutsernoome anreeke:',
 'editusergroup' => 'Beoarbaidede Benutsergjuchte',
-'editinguser' => "Uur Benutsergjuchte fon '''[[User:$1|$1]]''' $2",
+'editinguser' => "Uur Benutsergjuchte fon '''[[wiki_User:$1|$1]]''' $2",
 'userrights-editusergroup' => 'Beoarbaidje Gruppentouheeregaid fon dän Benutser',
 'saveusergroups' => 'Spiekerje Gruppentouheeregaid',
 'userrights-groupsmember' => 'Meeglid fon:',
@@ -1170,7 +1170,7 @@ Ju duur maximoal $1 {{PLURAL:$1|Teeken|Teekene}} loang weese.',
 'userrights-reason' => 'Gruund:',
 'userrights-no-interwiki' => 'Du hääst neen Begjuchtigenge, do Benutsergjuchte in uur Wikis tou annerjen.',
 'userrights-nodatabase' => 'Ju Doatenboank $1 is nit deer of nit lokoal.',
-'userrights-nologin' => 'Du moast die mäd n Administrator-Benutserkonto [[Special:UserLogin|anmäldje]], uum Benutsergjuchte tou annerjen.',
+'userrights-nologin' => 'Du moast die mäd n Administrator-Benutserkonto [[Special:wiki_UserLogin|anmäldje]], uum Benutsergjuchte tou annerjen.',
 'userrights-notallowed' => 'Du hääst neen Begjuchtigenge, uum Benutsergjuchte tou reeken of ientouluuken.',
 'userrights-changeable-col' => 'Gruppentouheeregaid, ju du annerje koast',
 'userrights-unchangeable-col' => 'Gruppentouheeregaid, ju du nit annerje koast',
@@ -1260,7 +1260,7 @@ Ju duur maximoal $1 {{PLURAL:$1|Teeken|Teekene}} loang weese.',
 'right-sendemail' => 'E-Mails an uur Benutsere seende',
 'right-passwordreset' => 'Paaswoud fon n Benutser touräächsätte ([[Special:PasswordReset|Spezioalsiede]])',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Gjuchte-Logbouk',
 'rightslogtext' => 'Dit is dät Logbouk fon do Annerengen fon do Benutsergjuchte.',
 'rightslogentry' => 'annerde ju Gruppentouheeregaid foar „$1“ fon „$2“ ap „$3“.',
@@ -1353,7 +1353,7 @@ Ju duur maximoal $1 {{PLURAL:$1|Teeken|Teekene}} loang weese.',
 'reuploaddesc' => 'Oubreeke un tourääch tou ju Hoochleede-Siede.',
 'upload-tryagain' => 'Annerde Doatäibeskrieuwenge ouseende',
 'uploadnologin' => 'Nit anmälded',
-'uploadnologintext' => 'Du moast [[Special:UserLogin|anmälded weese]], uum Doatäie hoochleede tou konnen.',
+'uploadnologintext' => 'Du moast [[Special:wiki_UserLogin|anmälded weese]], uum Doatäie hoochleede tou konnen.',
 'upload_directory_missing' => 'Dät Upload-Ferteeknis ($1) failt un kuud truch dän Webserver uk nit moaked wäide.',
 'upload_directory_read_only' => 'Die Webserver häd neen Skrieuwgjuchte foar dät Upload-Ferteeknis ($1).',
 'uploaderror' => 'Failer bie dät Hoochleeden',
@@ -1478,11 +1478,11 @@ $1',
 'upload-proto-error' => 'Falsk Protokol',
 'upload-proto-error-text' => 'Ju URL mout mäd <code>http://</code> of <code>ftp://</code> ounfange.',
 'upload-file-error' => 'Interne Failer',
-'upload-file-error-text' => 'Bie dät Moakjen fon ne tiedelke Doatäi ap dän Server is n internen Failer aptreeden. Informier jädden n [[Special:ListUsers/sysop|System-Administrator]].',
+'upload-file-error-text' => 'Bie dät Moakjen fon ne tiedelke Doatäi ap dän Server is n internen Failer aptreeden. Informier jädden n [[Special:Listwiki_Users/sysop|System-Administrator]].',
 'upload-misc-error' => 'Uunbekoanden Failer bie dät Hoochleeden',
 'upload-misc-error-text' => 'Bie dät Hoochleeden is n uunbekoanden Failer aptreeden.
 Pröif ju URL ap Failere, dän Online-Stoatus fon ju Siede un fersäik et fonnäien.
-Wan dät Problem fääre bestoant, informier n [[Special:ListUsers/sysop|System-Administrator]].',
+Wan dät Problem fääre bestoant, informier n [[Special:Listwiki_Users/sysop|System-Administrator]].',
 'upload-too-many-redirects' => 'Ju URL äntheeld toufuul Fääreleedengen',
 'upload-unknown-size' => 'Uunbekoande Grööte',
 'upload-http-error' => 'N HTTP-Failer is aptreeden: $1',
@@ -1665,7 +1665,7 @@ Ne [[Special:WhatLinksHere/$2|fulständige Lieste]] is ferföigboar.',
 'statistics-views-total' => 'Siedenaproupe mädnunner',
 'statistics-views-total-desc' => 'Aproupe fon nit bestoundende Sieden un fon Spezialsieden wäide nit in Reekenge nuumen',
 'statistics-views-peredit' => 'Siedenaproupe pro Beoarbaidenge',
-'statistics-users' => 'Registrierde [[Special:ListUsers|Benutsere]]',
+'statistics-users' => 'Registrierde [[Special:Listwiki_Users|Benutsere]]',
 'statistics-users-active' => 'Aktive Benutsere',
 'statistics-users-active-desc' => 'Benutsere mäd Beoarbaidengen {{PLURAL:$1|in do lääste 24 Uuren|in do fergeene $1 Deege}}',
 'statistics-mostpopular' => 'Maast besoachte Sieden',
@@ -1819,13 +1819,13 @@ Sjuch uk ju Lieste fon do [[Special:WantedCategories|wonskede Kategorien]].',
 'linksearch-line' => '$1 is ferlinked fon $2',
 'linksearch-error' => 'Wildcards konnen bloot an dän Ounfang fon ju URL ferwoand wäide.',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => 'Wies Benutsere fon:',
 'listusers-submit' => 'Wies',
 'listusers-noresult' => 'Naan Benutser fuunen.',
 'listusers-blocked' => '(speerd)',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'Lieste fon aktive Benutsere',
 'activeusers-intro' => 'Dit is ne Lieste fon Benutsere, do binne {{PLURAL:$1|dän lääste Dai|do lääste $1 Deege}} Aktivitäte apwiese.',
 'activeusers-count' => '$1 {{PLURAL:$1|Beoarbaidenge|Beoarbaidengen}} in do {{PLURAL:$3|lääste 24 Uuren|fergeene $3 Deege}}',
@@ -1859,7 +1859,7 @@ Informatione uurhäär uur eenpelde Gjuchte konnen [[{{MediaWiki:Listgrouprights
 
 # E-mail user
 'mailnologin' => 'Du bäst nit anmälded.',
-'mailnologintext' => 'Du moast [[Special:UserLogin|anmälded weese]] un sälwen ne [[Special:Preferences|gultige E-Mail-Adrässe]] anroat hääbe, uum uur Benutsere ne E-Mail tou seenden.',
+'mailnologintext' => 'Du moast [[Special:wiki_UserLogin|anmälded weese]] un sälwen ne [[Special:Preferences|gultige E-Mail-Adrässe]] anroat hääbe, uum uur Benutsere ne E-Mail tou seenden.',
 'emailuser' => 'Seende E-Mail an dissen Benutser',
 'emailpage' => 'E-mail an Benutser',
 'emailpagetext' => 'Du koast dän Benutser mäd dän unner stoundene Formular ne E-Mail seende.
@@ -1888,7 +1888,7 @@ As Ouseender wäd ju E-Mail-Adresse uut dien [[Special:Preferences|Ienstaalengen
 'emailsenttext' => 'Jou Begjucht is soand wuuden.',
 'emailuserfooter' => 'Disse E-Mail wuude fon „Benutzer:$1“ an „Benutzer:$2“ mäd Hälpe fon ju „E-Mail an dissen Benutser“-Funktion fon {{SITENAME}} fersoand.',
 
-# User Messenger
+# wiki_User Messenger
 'usermessage-summary' => 'Systemättergjucht spiekerd.',
 'usermessage-editor' => 'System-Messenger',
 
@@ -1899,7 +1899,7 @@ As Ouseender wäd ju E-Mail-Adresse uut dien [[Special:Preferences|Ienstaalengen
 'nowatchlist' => 'Du hääst neen Iendraage ap dien Beooboachtengslieste. Du moast anmälded weese, dät die een Beooboachtengslieste tou Ferföigenge stoant.',
 'watchlistanontext' => 'Du moast die $1, uum dien Beooboachtengslieste tou sjoon of Iendraage ap hier tou beoarbaidjen.',
 'watchnologin' => 'Du bäst nit anmälded',
-'watchnologintext' => 'Du moast [[Special:UserLogin|anmälded]] weese, uum dien Beooboachtengslieste tou beoarbaidjen.',
+'watchnologintext' => 'Du moast [[Special:wiki_UserLogin|anmälded]] weese, uum dien Beooboachtengslieste tou beoarbaidjen.',
 'addwatch' => 'Tou Beooboachtengslieste bietouföigje',
 'addedwatchtext' => "Die Artikkel \"[[:\$1]]\" wuude an dien [[Special:Watchlist|Foulgelieste]] touföiged.
 Leetere Annerengen an dissen Artikkel un ju touheerende Diskussionssiede wäide deer liested
@@ -2006,12 +2006,12 @@ In $2 fiende Jie ne Lieste fon do lääste Läskengen.',
 'rollbacklink' => 'touräächsätte',
 'rollbackfailed' => 'Touräächsätten misglukked',
 'cantrollback' => 'Disse Annerenge kon nit touräächstoald wäide; deer et naan fröieren Autor rakt.',
-'alreadyrolled' => 'Dät Touräächsätten fon do Annerengen fon [[User:$2|$2]] ([[User talk:$2|Diskussion]], [[Special:Contributions/$2|{{int:contribslink}}]]) an Siede [[:$1]] hied naan Ärfoulch, deer in ju Twiskentied al n uur Benutser Annerengen an disse Siede foarnuumen häd.
+'alreadyrolled' => 'Dät Touräächsätten fon do Annerengen fon [[wiki_User:$2|$2]] ([[wiki_User talk:$2|Diskussion]], [[Special:Contributions/$2|{{int:contribslink}}]]) an Siede [[:$1]] hied naan Ärfoulch, deer in ju Twiskentied al n uur Benutser Annerengen an disse Siede foarnuumen häd.
 
-Ju lääste Annerenge stamt fon [[User:$3|$3]] ([[User talk:$3|Diskussion]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
+Ju lääste Annerenge stamt fon [[wiki_User:$3|$3]] ([[wiki_User talk:$3|Diskussion]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
 'editcomment' => "Ju Annerengs-Touhoopefoatenge waas: \"''\$1''\".",
-'revertpage' => 'Tounichte moakede Beoarbaidengen fon [[Special:Contributions/$2|$2]] ([[User talk:$2|Talk]]) tou ju lääste Version fon [[User:$1|$1]]',
-'revertpage-nouser' => 'Annerengen fon (Benutsernoome wächhoald) touräächtroald un lääste Version fon [[User:$1|$1]] wier häärstoald',
+'revertpage' => 'Tounichte moakede Beoarbaidengen fon [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Talk]]) tou ju lääste Version fon [[wiki_User:$1|$1]]',
+'revertpage-nouser' => 'Annerengen fon (Benutsernoome wächhoald) touräächtroald un lääste Version fon [[wiki_User:$1|$1]] wier häärstoald',
 'rollback-success' => 'Do Annerengen fon $1 wuuden tourääch annerd un ju lääste Version fon $2 wuude wier moaked.',
 
 # Edit tokens
@@ -2229,7 +2229,7 @@ Toun Aphieuwjen fon ju Speere sjuch [[Special:BlockList|Lieste fon aktive Speere
 'unblockip' => 'IP-Adrässe fräireeke',
 'unblockiptext' => 'Benutsje dät Formular, uum ne blokkierde IP-Adrässe fräitoureeken.',
 'ipusubmit' => 'Disse Speerenge wächhoalje',
-'unblocked' => '[[User:$1|$1]] wuude fräiroat',
+'unblocked' => '[[wiki_User:$1|$1]] wuude fräiroat',
 'unblocked-range' => 'Speere foar $1 wuud aphäiwed',
 'unblocked-id' => 'Speer-ID $1 wuude fräiroat',
 'blocklist' => 'Speerden Benutser',
@@ -2260,7 +2260,7 @@ Toun Aphieuwjen fon ju Speere sjuch [[Special:BlockList|Lieste fon aktive Speere
 'unblocklink' => 'fräireeke',
 'change-blocklink' => 'Speere annerje',
 'contribslink' => 'Biedraage',
-'autoblocker' => 'Du wierst blokkierd, deer du eene IP-Adrässe mäd "[[User:$1|$1]]" benutsjen dääst. Foar ju Blokkierenge fon dän Benutser waas as Gruund anroat: "$2".',
+'autoblocker' => 'Du wierst blokkierd, deer du eene IP-Adrässe mäd "[[wiki_User:$1|$1]]" benutsjen dääst. Foar ju Blokkierenge fon dän Benutser waas as Gruund anroat: "$2".',
 'blocklogpage' => 'Benutserblokkoaden-Logbouk',
 'blocklog-showlog' => 'Dissen Benutser wuud al eer speerd. Hier foulget die Iendraach uut dät Benutserspeer-Logbouk:',
 'blocklog-showsuppresslog' => 'Dissen Benutser wuud al eer speerd un ferstat.
@@ -2354,7 +2354,7 @@ In disse Falle moast du ju Siede, wan wonsked, fon Hounde ferskuuwe. Jädden dä
 'movearticle' => 'Siede ferskuuwe:',
 'moveuserpage-warning' => "'''Woarskauenge:''' Du bäst tougong, ne Benutserssiede tou ferskuuwen. Betoank, dät deertruch bloot ju Benutsersiede ferskäuwen, man '''nit''' die Benutser uumenaamd wäd.",
 'movenologin' => 'Du bäst nit anmälded',
-'movenologintext' => 'Du moast n registrierden Benutser un [[Special:UserLogin|anmälded]] weese, uum ne Siede ferskuuwe tou konnen.',
+'movenologintext' => 'Du moast n registrierden Benutser un [[Special:wiki_UserLogin|anmälded]] weese, uum ne Siede ferskuuwe tou konnen.',
 'movenotallowed' => 'Du hääst neen Begjuchtigenge, Sieden tou ferskuuwen.',
 'movenotallowedfile' => 'Du hääst neen Begjuchtigenge, Doatäie tou ferskuuwen.',
 'cant-move-user-page' => 'Du hääst neen Begjuchtigenge, Benutserhaudsieden tou ferskuuwen.',
@@ -3034,7 +3034,7 @@ Wröich ju E-Mail-Adresse ap uungultige Teekene.
 Touräächmäldenge fon dän Mailserver: $1',
 'confirmemail_invalid' => 'Uungultigen Bestäätigengscode. Eventuell is die Code al wier uungultich wuuden.',
 'confirmemail_needlogin' => 'Du moast die $1, uum dien E-Mail-Adresse tou bestäätigjen.',
-'confirmemail_success' => 'Dien E-Mail-Adresse wuude mäd Ärfoulch bestäätiged. Du koast die nu [[Special:UserLogin|ienlogje]].',
+'confirmemail_success' => 'Dien E-Mail-Adresse wuude mäd Ärfoulch bestäätiged. Du koast die nu [[Special:wiki_UserLogin|ienlogje]].',
 'confirmemail_loggedin' => 'Dien E-Mail-Adresse wuude mäd Ärfoulch bestäätiged.',
 'confirmemail_error' => 'Et roat n Failer bie ju Bestäätigenge fon dien E-Mail-Adresse.',
 'confirmemail_subject' => '[{{SITENAME}}] - Bestäätigenge fon ju E-Mail-Adresse',
@@ -3093,10 +3093,10 @@ Disse Bestäätigengskode is gultich bit $4',
 'deletedwhileediting' => 'Oachtenge: Disse Siede wuude al läsked, ätter dät du anfangd hiedest, hier tou beoarbaidjen!
 Kiekje in dät [{{fullurl:Special:Log|type=delete&page=}}{{FULLPAGENAMEE}} Läsk-Logbouk] ätter,
 wieruum ju Siede läsked wuude. Wan du ju Siede spiekerst, wäd ju näi anlaid.',
-'confirmrecreate' => "Benutser [[User:$1|$1]] ([[User talk:$1|Diskussion]]) häd disse Siede läsked, ätter dät du ounfangd hääst, ju tou beoarbaidjen. Ju Begruundenge lutte:
+'confirmrecreate' => "Benutser [[wiki_User:$1|$1]] ([[wiki_User talk:$1|Diskussion]]) häd disse Siede läsked, ätter dät du ounfangd hääst, ju tou beoarbaidjen. Ju Begruundenge lutte:
 ''$2''.
 Bestäätigje, dät du disse Siede wuddelk näi moakje moatest.",
-'confirmrecreate-noreason' => 'Benutser [[User:$1|$1]] ([[User talk:$1|Diskussion]]) häd disse Siede läsked, ätter dät du ounfangd hääst, ju tou beoarbaidjen.
+'confirmrecreate-noreason' => 'Benutser [[wiki_User:$1|$1]] ([[wiki_User talk:$1|Diskussion]]) häd disse Siede läsked, ätter dät du ounfangd hääst, ju tou beoarbaidjen.
 Bestäätigje, dät du disse Siede wuddelk näi moakje moatest.',
 'recreate' => 'Wierhäärstaale',
 

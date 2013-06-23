@@ -30,7 +30,7 @@ require_once( __DIR__ . '/Maintenance.php' );
  *
  * @ingroup Maintenance
  */
-class ResetUserTokens extends Maintenance {
+class Resetwiki_UserTokens extends Maintenance {
 	public function __construct() {
 		parent::__construct();
 		$this->mDescription = "Reset the user_token of all users on the wiki. Note that this may log some of them out.";
@@ -57,7 +57,7 @@ class ResetUserTokens extends Maintenance {
 			);
 
 		foreach ( $result as $id ) {
-			$user = User::newFromId( $id->user_id );
+			$user = wiki_User::newFromId( $id->user_id );
 
 			$username = $user->getName();
 
@@ -74,5 +74,5 @@ class ResetUserTokens extends Maintenance {
 	}
 }
 
-$maintClass = "ResetUserTokens";
+$maintClass = "Resetwiki_UserTokens";
 require_once( RUN_MAINTENANCE_IF_MAIN );

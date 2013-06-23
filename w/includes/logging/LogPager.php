@@ -142,7 +142,7 @@ class LogPager extends ReverseChronologicalPager {
 			return false;
 		}
 		/* Fetch userid at first, if known, provides awesome query plan afterwards */
-		$userid = User::idFromName( $name );
+		$userid = wiki_User::idFromName( $name );
 		if( !$userid ) {
 			/* It should be nicer to abort query at all,
 			   but for now it won't pass anywhere behind the optimizer */

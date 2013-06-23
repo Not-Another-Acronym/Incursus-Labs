@@ -92,9 +92,9 @@ $specialPageAliases = array(
 	'Unusedtemplates'           => array( 'اڻ استعماليل سانچا' ),
 	'Unwatchedpages'            => array( 'اڻٽيٽيل صفحا' ),
 	'Upload'                    => array( 'چاڙهيو' ),
-	'Userlogin'                 => array( 'يوزر لاگ اِن' ),
-	'Userlogout'                => array( 'يوزر لاگ آئوٽ' ),
-	'Userrights'                => array( 'يوزر حق' ),
+	'wiki_Userlogin'                 => array( 'يوزر لاگ اِن' ),
+	'wiki_Userlogout'                => array( 'يوزر لاگ آئوٽ' ),
+	'wiki_Userrights'                => array( 'يوزر حق' ),
 	'Version'                   => array( 'ورزن' ),
 	'Wantedcategories'          => array( 'گھربل زمرا' ),
 	'Wantedpages'               => array( 'گھربل صفحا' ),
@@ -156,7 +156,7 @@ $magicWords = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-showtoolbar' => 'سنوارپ اوزار دٻي ڏيکاريو (جاوا اسڪرپٽ)',
 'tog-watchcreations' => 'منهنجا سرجيل صفحا منهنجي ٽيٽ فهرست ۾ رکو',
 'tog-watchdefault' => 'منهنجا ترميميل صفحا منهنجي ٽيٽ فهرست تي رکو',
@@ -485,7 +485,7 @@ You cannot use the 'e-mail this user' feature unless a valid e-mail address is s
 'template-protected' => '(تحفظيل)',
 'template-semiprotected' => '(نيم تحفظيل)',
 'nocreatetext' => '{{SITENAME}} نوان صفحا سرجڻ جي روڪَ ڪئي آهي.
-توهان اڳي ئي موجود صفحن کي سنواري سگھو ٿا، يا [[Special:UserLogin|لاگ اِن ٿي يا نئون کاتو کولي سگھو ٿا]].',
+توهان اڳي ئي موجود صفحن کي سنواري سگھو ٿا، يا [[Special:wiki_UserLogin|لاگ اِن ٿي يا نئون کاتو کولي سگھو ٿا]].',
 'recreate-moveddeleted-warn' => "'''خبردار: توهان اهڙو صفحو نئين سر سرجي رهيا آهيو جيڪو اڳي ڊاٺو ويو آهي.'''
 
 بهتر ٿيندو ته توهان سوچي وٺو ته ڇا ان صفحي کي سنوارڻ بهتر ٿيندو.
@@ -542,7 +542,7 @@ $1 {{PLURAL:$1|اکر|اکرن}} کان ننڍي هوڻ گھرجي.',
 'prefs-help-realname' => 'اصل نالو اختياري آهي.
 جيڪڏهن توهان اصل نالو ڄاڻائڻ جو فيصلو ٿا ڪريو، ته اهو توهان کي مڃتا ڏيڻ لاءِ ڪم آندو ويندو.',
 
-# User rights
+# wiki_User rights
 'userrights-reason' => 'سبب:',
 
 # Groups
@@ -554,7 +554,7 @@ $1 {{PLURAL:$1|اکر|اکرن}} کان ننڍي هوڻ گھرجي.',
 # Rights
 'right-undelete' => 'ڪو صفحو اڻڊاهيو',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'يُوزر حق لاگ',
 
 # Recent changes

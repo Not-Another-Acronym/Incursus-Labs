@@ -97,7 +97,7 @@ $magicWords = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Baalantıların altını çiz',
 'tog-justify' => 'Paragrafları düz',
 'tog-hideminor' => 'Küçük diişmäkleri "Bitki diişmäkler" sayfasında sakla',
@@ -360,7 +360,7 @@ $messages = array(
 Bu hal var nasıl peydalansın açan sayfa olêr geçmiş reviziyası o sayfanın angısı silindi.
 
 Herliim sebep diilsä bu, bekim karşılaştınız bir yannışlan angısı yapıldı açan programma yazıldı.
-Yalvarêrız benneyiniz URL - i hem raport ediniz bunu bir [[Special:ListUsers/sysop|izmetliyä]]',
+Yalvarêrız benneyiniz URL - i hem raport ediniz bunu bir [[Special:Listwiki_Users/sysop|izmetliyä]]',
 'missingarticle-rev' => '(reviziya#: $1)',
 'internalerror' => 'İç yannış',
 'internalerror_info' => 'İç yannış: $1',
@@ -376,7 +376,7 @@ Yalvarêrız benneyiniz URL - i hem raport ediniz bunu bir [[Special:ListUsers/s
 
 # Login and logout pages
 'logouttext' => 'Sessiyayı kapattınız.
-Şindi var nicä devam etmää kullanmaa {{SITENAME}} saytını kimlik göstermedän yaki [[Special:UserLogin|enidän sessiya açmaa]] (ister hep o kullanıcı adıylan, ister başka bir kullanıcı adıylan). O zamana kadar ani web brauzerinizin keşi temizlenecek bir takım sayfalar var nicä görünsün sansın sessiya hep açık.',
+Şindi var nicä devam etmää kullanmaa {{SITENAME}} saytını kimlik göstermedän yaki [[Special:wiki_UserLogin|enidän sessiya açmaa]] (ister hep o kullanıcı adıylan, ister başka bir kullanıcı adıylan). O zamana kadar ani web brauzerinizin keşi temizlenecek bir takım sayfalar var nicä görünsün sansın sessiya hep açık.',
 'welcomecreation' => '== Hoş geldiniz $1! ==
 
 Esapınız açıldı. Unutmayın [[Special:Preferences|{{SITENAME}} preferences]] seçimnerin diiştirmää.',
@@ -484,7 +484,7 @@ Herliim girmediniz [[Special:Preferences|seçimner]] bölümünde geçerli bir e
 'loginreqlink' => 'sessiya aç',
 'loginreqpagetext' => 'Lääzım $1 görmää übür sayfaları.',
 'accmailtitle' => 'Parol gönderildi.',
-'accmailtext' => '[[User talk:$1|$1]] kullanıcısın parolu $2 adresine gönderildi.',
+'accmailtext' => '[[wiki_User talk:$1|$1]] kullanıcısın parolu $2 adresine gönderildi.',
 'newarticle' => '(Eni)',
 'newarticletext' => "Henez var olmayan bir sayfaya konulmuş baalantıya tuşladınız. Bu sayfayı yaratmaa deyni aşaadaki tekst kutusunu kullanınız. Bilgi için [[{{MediaWiki:Helppage}}|yardım sayfasına]] bakınız. Herliim buraya yannış geldiniz, läazım tuşlamaa programınızın '''Geeri''' tuşuna.",
 'noarticletext' => 'Bu sayfa boş.
@@ -510,7 +510,7 @@ Hem siz garantiyada bulunêrsiniz ani eklemäklerin avtorusunuz, yaki onnarı ko
 'template-semiprotected' => '(yarı-korunmaa)',
 'hiddencategories' => 'Bu sayfa {{PLURAL:$1|1 saklı kategoriyaya|$1 saklı kategoriyaya}} baalı:',
 'nocreatetext' => '{{SITENAME}} eni yazılar yaratmaa yasaklandı.
-Sizä yakışêr geeri dönmää hem düzmää var olan yapraa, yaki [[Special:UserLogin|sessiya açmaa yaki esap yaratmaa]].',
+Sizä yakışêr geeri dönmää hem düzmää var olan yapraa, yaki [[Special:wiki_UserLogin|sessiya açmaa yaki esap yaratmaa]].',
 'permissionserrors' => 'İzin yannışları',
 'permissionserrorstext-withaction' => 'Aşaadaki {{PLURAL:$1|sebep|sebepler}}ä deyni yok $2 kuvediniz:',
 'recreate-moveddeleted-warn' => "'''Bak: Siz yarattınız o sayfayı angısı ilerdän silindi.'''
@@ -612,15 +612,15 @@ Aaramaanızın önünä ''all:'' prefiksini koyun da deneyin hepsi içlii aarama
 'prefs-help-realname' => '* Aslı ad (istemää baalı): herliim seçersäniz aslı adı vermää, işinize görä sizin için kullanılacêk.',
 'prefs-help-email-required' => 'E-mail adres istenildi.',
 
-# User rights
-'editinguser' => "'''[[User:$1|$1]]''' sayfasını diiştirersiniz ([[User talk:$1|{{int:talkpagelinktext}}]] | [[Special:Contributions/$1|{{int:contribslink}}]])",
+# wiki_User rights
+'editinguser' => "'''[[wiki_User:$1|$1]]''' sayfasını diiştirersiniz ([[wiki_User talk:$1|{{int:talkpagelinktext}}]] | [[Special:Contributions/$1|{{int:contribslink}}]])",
 
 # Groups
 'group-sysop' => 'Administratorlar',
 
 'grouppage-sysop' => '{{ns:project}}:Önderciler',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Kullanıcı hakları jurnalı',
 
 # Associated actions - in the sentence "You do not have permission to X"
@@ -720,7 +720,7 @@ Sizin bakmaa [[Special:Watchlist|listasındaki]] sayfalar verildi '''kalın''' b
 'statistics-views-total' => 'Hepsi resimlär',
 'statistics-views-total-desc' => 'Var nica olmadı hem maasus yapraklarından resim eklenmee',
 'statistics-views-peredit' => 'Diişmäk başına resimlär',
-'statistics-users' => 'Registratlı [[Special:ListUsers|kullanıcılar]]',
+'statistics-users' => 'Registratlı [[Special:Listwiki_Users|kullanıcılar]]',
 'statistics-users-active' => 'Aktivli kullanıcılar',
 'statistics-users-active-desc' => 'Bitki {{PLURAL:$1|gün|$1 günde}} çalışmaa yapmaa kullanıcılar',
 'statistics-mostpopular' => 'En anılmış yazılar',

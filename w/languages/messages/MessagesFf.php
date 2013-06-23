@@ -16,7 +16,7 @@
 $fallback = 'fr';
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Diidtol jokke',
 'tog-justify' => 'Fonndito lelnanɗe',
 'tog-hideminor' => 'Duuɗ taƴtanɗe pamare e bayle cakkitiiɗe',
@@ -251,7 +251,7 @@ Ruttorde keɓe ruttinii juumre "<samp>$3: $4</samp>".',
 Heewi waɗde noon ko diff nayeejo walla jokkol aslol fayde e hello momtaango.
 
 So wonaa ɗuum, maataw ko a kawruɗo e buggere e topirde ndee.
-Tiiɗno jaŋto ɗum to [[Special:ListUsers/sysop|jiiloowo]] mbaasaa yejjitde URL jokkol ngol.',
+Tiiɗno jaŋto ɗum to [[Special:Listwiki_Users/sysop|jiiloowo]] mbaasaa yejjitde URL jokkol ngol.',
 'badtitle' => 'Tiitoonde moƴƴaani',
 'badtitletext' => 'Tiitoonde ello ɗaɓɓitaango ngoo moƴƴaani, ko mehre, walla ko hakkude-ɗemɗe jokkoraade no feewaani walla tiitoonde hakkude-wiki',
 

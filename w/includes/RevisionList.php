@@ -267,7 +267,7 @@ class RevisionList extends RevisionListBase {
 		}
 		return $db->select(
 			array( 'revision', 'page', 'user' ),
-			array_merge( Revision::selectFields(), Revision::selectUserFields() ),
+			array_merge( Revision::selectFields(), Revision::selectwiki_UserFields() ),
 			$conds,
 			__METHOD__,
 			array( 'ORDER BY' => 'rev_id DESC' ),
@@ -307,7 +307,7 @@ class RevisionItem extends RevisionItemBase {
 	}
 
 	public function getAuthorNameField() {
-		return 'user_name'; // see Revision::selectUserFields()
+		return 'user_name'; // see Revision::selectwiki_UserFields()
 	}
 
 	public function canView() {
@@ -374,7 +374,7 @@ class RevisionItem extends RevisionItemBase {
 		$difflink = $this->context->msg( 'parentheses' )
 			->rawParams( $this->getDiffLink() )->escaped();
 		$revlink = $this->getRevisionLink();
-		$userlink = Linker::revUserLink( $this->revision );
+		$userlink = Linker::revwiki_UserLink( $this->revision );
 		$comment = Linker::revComment( $this->revision );
 		if ( $this->isDeleted() ) {
 			$revlink = "<span class=\"history-deleted\">$revlink</span>";

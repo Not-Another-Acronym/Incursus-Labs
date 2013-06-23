@@ -35,7 +35,7 @@ class ApiQueryContributions extends ApiQueryBase {
 		parent::__construct( $query, $moduleName, 'uc' );
 	}
 
-	private $params, $prefixMode, $userprefix, $multiUserMode, $usernames, $parentLens;
+	private $params, $prefixMode, $userprefix, $multiwiki_UserMode, $usernames, $parentLens;
 	private $fld_ids = false, $fld_title = false, $fld_timestamp = false,
 			$fld_comment = false, $fld_parsedcomment = false, $fld_flags = false,
 			$fld_patrolled = false, $fld_tags = false, $fld_size = false, $fld_sizediff = false;
@@ -61,7 +61,7 @@ class ApiQueryContributions extends ApiQueryBase {
 
 		if ( isset( $this->params['userprefix'] ) ) {
 			$this->prefixMode = true;
-			$this->multiUserMode = true;
+			$this->multiwiki_UserMode = true;
 			$this->userprefix = $this->params['userprefix'];
 		} else {
 			$this->usernames = array();
@@ -69,13 +69,13 @@ class ApiQueryContributions extends ApiQueryBase {
 				$this->params['user'] = array( $this->params['user'] );
 			}
 			if ( !count( $this->params['user'] ) ) {
-				$this->dieUsage( 'User parameter may not be empty.', 'param_user' );
+				$this->dieUsage( 'wiki_User parameter may not be empty.', 'param_user' );
 			}
 			foreach ( $this->params['user'] as $u ) {
-				$this->prepareUsername( $u );
+				$this->preparewiki_Username( $u );
 			}
 			$this->prefixMode = false;
-			$this->multiUserMode = ( count( $this->params['user'] ) > 1 );
+			$this->multiwiki_UserMode = ( count( $this->params['user'] ) > 1 );
 		}
 
 		$this->prepareQuery();
@@ -102,7 +102,7 @@ class ApiQueryContributions extends ApiQueryBase {
 		foreach ( $res as $row ) {
 			if ( ++ $count > $limit ) {
 				// We've reached the one extra which shows that there are additional pages to be had. Stop here...
-				if ( $this->multiUserMode ) {
+				if ( $this->multiwiki_UserMode ) {
 					$this->setContinueEnumParameter( 'continue', $this->continueStr( $row ) );
 				} else {
 					$this->setContinueEnumParameter( 'start', wfTimestamp( TS_ISO_8601, $row->rev_timestamp ) );
@@ -113,7 +113,7 @@ class ApiQueryContributions extends ApiQueryBase {
 			$vals = $this->extractRowInfo( $row );
 			$fit = $this->getResult()->addValue( array( 'query', $this->getModuleName() ), null, $vals );
 			if ( !$fit ) {
-				if ( $this->multiUserMode ) {
+				if ( $this->multiwiki_UserMode ) {
 					$this->setContinueEnumParameter( 'continue', $this->continueStr( $row ) );
 				} else {
 					$this->setContinueEnumParameter( 'start', wfTimestamp( TS_ISO_8601, $row->rev_timestamp ) );
@@ -131,18 +131,18 @@ class ApiQueryContributions extends ApiQueryBase {
 	 *
 	 * @param $user string
 	 */
-	private function prepareUsername( $user ) {
+	private function preparewiki_Username( $user ) {
 		if ( !is_null( $user ) && $user !== '' ) {
-			$name = User::isIP( $user )
+			$name = wiki_User::isIP( $user )
 				? $user
-				: User::getCanonicalName( $user, 'valid' );
+				: wiki_User::getCanonicalName( $user, 'valid' );
 			if ( $name === false ) {
-				$this->dieUsage( "User name {$user} is not valid", 'param_user' );
+				$this->dieUsage( "wiki_User name {$user} is not valid", 'param_user' );
 			} else {
 				$this->usernames[] = $name;
 			}
 		} else {
-			$this->dieUsage( 'User parameter may not be empty', 'param_user' );
+			$this->dieUsage( 'wiki_User parameter may not be empty', 'param_user' );
 		}
 	}
 
@@ -158,19 +158,19 @@ class ApiQueryContributions extends ApiQueryBase {
 		$this->addWhere( 'page_id=rev_page' );
 
 		// Handle continue parameter
-		if ( $this->multiUserMode && !is_null( $this->params['continue'] ) ) {
+		if ( $this->multiwiki_UserMode && !is_null( $this->params['continue'] ) ) {
 			$continue = explode( '|', $this->params['continue'] );
 			if ( count( $continue ) != 2 ) {
 				$this->dieUsage( 'Invalid continue param. You should pass the original ' .
 					'value returned by the previous query', '_badcontinue' );
 			}
 			$db = $this->getDB();
-			$encUser = $db->addQuotes( $continue[0] );
+			$encwiki_User = $db->addQuotes( $continue[0] );
 			$encTS = $db->addQuotes( $db->timestamp( $continue[1] ) );
 			$op = ( $this->params['dir'] == 'older' ? '<' : '>' );
 			$this->addWhere(
-				"rev_user_text $op $encUser OR " .
-				"(rev_user_text = $encUser AND " .
+				"rev_user_text $op $encwiki_User OR " .
+				"(rev_user_text = $encwiki_User AND " .
 				"rev_timestamp $op= $encTS)"
 			);
 		}
@@ -187,7 +187,7 @@ class ApiQueryContributions extends ApiQueryBase {
 		// ... and in the specified timeframe.
 		// Ensure the same sort order for rev_user_text and rev_timestamp
 		// so our query is indexed
-		if ( $this->multiUserMode ) {
+		if ( $this->multiwiki_UserMode ) {
 			$this->addWhereRange( 'rev_user_text', $this->params['dir'], null, null );
 		}
 		$this->addTimestampWhereRange( 'rev_timestamp',
@@ -529,8 +529,8 @@ class ApiQueryContributions extends ApiQueryBase {
 
 	public function getPossibleErrors() {
 		return array_merge( parent::getPossibleErrors(), array(
-			array( 'code' => 'param_user', 'info' => 'User parameter may not be empty.' ),
-			array( 'code' => 'param_user', 'info' => 'User name user is not valid' ),
+			array( 'code' => 'param_user', 'info' => 'wiki_User parameter may not be empty.' ),
+			array( 'code' => 'param_user', 'info' => 'wiki_User name user is not valid' ),
 			array( 'show' ),
 			array( 'code' => 'permissiondenied', 'info' => 'You need the patrol right to request the patrolled flag' ),
 		) );
@@ -544,7 +544,7 @@ class ApiQueryContributions extends ApiQueryBase {
 	}
 
 	public function getHelpUrls() {
-		return 'https://www.mediawiki.org/wiki/API:Usercontribs';
+		return 'https://www.mediawiki.org/wiki/API:wiki_Usercontribs';
 	}
 
 	public function getVersion() {

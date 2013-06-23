@@ -173,7 +173,7 @@
 				// with the (differently calculated) byte limit.
 				// Aside from being differently calculated (average chars with byteLimit
 				// is lower), we also support a callback which can make it to allow longer
-				// values (e.g. count "Foo" from "User:Foo").
+				// values (e.g. count "Foo" from "wiki_User:Foo").
 				// maxLength is a strange property. Removing or setting the property to
 				// undefined directly doesn't work. Instead, it can only be unset internally
 				// by the browser when removing the associated attribute (Firefox/Chrome).

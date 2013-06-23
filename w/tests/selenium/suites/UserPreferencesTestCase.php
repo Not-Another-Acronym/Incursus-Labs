@@ -27,17 +27,17 @@
  *
  */
 
-class UserPreferencesTestCase extends SeleniumTestCase {
+class wiki_UserPreferencesTestCase extends SeleniumTestCase {
 
     // Verify user information
-    public function testUserInfoDisplay() {
+    public function testwiki_UserInfoDisplay() {
 
         $this->open( $this->getUrl() .
                 '/index.php?title=Main_Page&action=edit' );
         $this->click( SeleniumTestConstants::LINK_START."My preferences" );
         $this->waitForPageToLoad( SeleniumTestConstants::WIKI_TEST_WAIT_TIME );
 
-        // Verify correct username displayed in User Preferences
+        // Verify correct username displayed in wiki_User Preferences
         $this->assertEquals( $this->getText( "//li[@id='pt-userpage']/a" ),
                 $this->getText( "//table[@id='mw-htmlform-info']/tbody/tr[1]/td[2]" ));
 
@@ -93,7 +93,7 @@ class UserPreferencesTestCase extends SeleniumTestCase {
         $this->click( SeleniumTestConstants::LINK_START."My preferences" );
         $this->waitForPageToLoad( SeleniumTestConstants::WIKI_TEST_WAIT_TIME );
 
-        $this->type( "mw-input-realname", "Test User" );
+        $this->type( "mw-input-realname", "Test wiki_User" );
         $this->click( "prefcontrol" );
         $this->waitForPageToLoad( SeleniumTestConstants::WIKI_TEST_WAIT_TIME );
 

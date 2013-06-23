@@ -10,7 +10,7 @@ class TemplateCategoriesTest extends MediaWikiLangTestCase {
 	function testTemplateCategories() {
 		$title = Title::newFromText( "Categorized from template" );
 		$page = WikiPage::factory( $title );
-		$user = new User();
+		$user = new wiki_User();
 		$user->mRights = array( 'createpage', 'edit', 'purge' );
 
 		$status = $page->doEdit( '{{Categorising template}}', 'Create a page with a template', 0, false, $user );

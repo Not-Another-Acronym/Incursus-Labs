@@ -272,7 +272,7 @@ class LogEventsList extends ContextSource {
 	 */
 	private function getExtraInputs( $types ) {
 		$offender = $this->getRequest()->getVal( 'offender' );
-		$user = User::newFromName( $offender, false );
+		$user = wiki_User::newFromName( $offender, false );
 		if( !$user || ($user->getId() == 0 && !IP::isIPAddress($offender) ) ) {
 			$offender = ''; // Blank field if invalid
 		}
@@ -305,7 +305,7 @@ class LogEventsList extends ContextSource {
 		$entry = DatabaseLogEntry::newFromRow( $row );
 		$formatter = LogFormatter::newFromEntry( $entry );
 		$formatter->setContext( $this->getContext() );
-		$formatter->setShowUserToolLinks( !( $this->flags & self::NO_EXTRA_USER_LINKS ) );
+		$formatter->setShowwiki_UserToolLinks( !( $this->flags & self::NO_EXTRA_USER_LINKS ) );
 
 		$title = $entry->getTarget();
 		// <IntraACL>
@@ -396,8 +396,8 @@ class LogEventsList extends ContextSource {
 			$match = is_array( $action ) ?
 				in_array( $row->log_action, $action ) : $row->log_action == $action;
 			if( $match && $right ) {
-				global $wgUser;
-				$match = $wgUser->isAllowed( $right );
+				global $wgwiki_User;
+				$match = $wgwiki_User->isAllowed( $right );
 			}
 		}
 		return $match;
@@ -409,10 +409,10 @@ class LogEventsList extends ContextSource {
 	 *
 	 * @param $row Row
 	 * @param $field Integer
-	 * @param $user User object to check, or null to use $wgUser
+	 * @param $user wiki_User object to check, or null to use $wgwiki_User
 	 * @return Boolean
 	 */
-	public static function userCan( $row, $field, User $user = null ) {
+	public static function userCan( $row, $field, wiki_User $user = null ) {
 		return self::userCanBitfield( $row->log_deleted, $field, $user );
 	}
 
@@ -422,10 +422,10 @@ class LogEventsList extends ContextSource {
 	 *
 	 * @param $bitfield Integer (current field)
 	 * @param $field Integer
-	 * @param $user User object to check, or null to use $wgUser
+	 * @param $user wiki_User object to check, or null to use $wgwiki_User
 	 * @return Boolean
 	 */
-	public static function userCanBitfield( $bitfield, $field, User $user = null ) {
+	public static function userCanBitfield( $bitfield, $field, wiki_User $user = null ) {
 		if( $bitfield & $field ) {
 			if ( $bitfield & LogPage::DELETED_RESTRICTED ) {
 				$permission = 'suppressrevision';
@@ -434,8 +434,8 @@ class LogEventsList extends ContextSource {
 			}
 			wfDebug( "Checking for $permission due to $field match on $bitfield\n" );
 			if ( $user === null ) {
-				global $wgUser;
-				$user = $wgUser;
+				global $wgwiki_User;
+				$user = $wgwiki_User;
 			}
 			return $user->isAllowed( $permission );
 		} else {
@@ -584,12 +584,12 @@ class LogEventsList extends ContextSource {
 	 * @return Mixed: string or false
 	 */
 	public static function getExcludeClause( $db, $audience = 'public' ) {
-		global $wgLogRestrictions, $wgUser;
+		global $wgLogRestrictions, $wgwiki_User;
 		// Reset the array, clears extra "where" clauses when $par is used
 		$hiddenLogs = array();
 		// Don't show private logs to unprivileged users
 		foreach( $wgLogRestrictions as $logType => $right ) {
-			if( $audience == 'public' || !$wgUser->isAllowed($right) ) {
+			if( $audience == 'public' || !$wgwiki_User->isAllowed($right) ) {
 				$safeType = $db->strencode( $logType );
 				$hiddenLogs[] = $safeType;
 			}

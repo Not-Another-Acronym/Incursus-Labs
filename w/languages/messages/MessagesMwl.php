@@ -59,8 +59,8 @@ $specialPageAliases = array(
 	'Lonelypages'               => array( 'Páiginas Uorfanas' ),
 	'Uncategorizedcategories'   => array( 'Catadories sien catadories' ),
 	'Uncategorizedimages'       => array( 'Eimaiges sien catadories' ),
-	'Userlogin'                 => array( 'Antrar' ),
-	'Userlogout'                => array( 'Salir' ),
+	'wiki_Userlogin'                 => array( 'Antrar' ),
+	'wiki_Userlogout'                => array( 'Salir' ),
 );
 
 $magicWords = array(
@@ -78,7 +78,7 @@ $magicWords = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Sublinhar lhigaçones:',
 'tog-justify' => 'Justeficar parágrafos',
 'tog-hideminor' => 'Scunder eidiçones mais pequeinhas nas redadeiras altaraçones',
@@ -341,7 +341,7 @@ $messages = array(
 Esto normalmente ye por bias de la besita a ua lhigaçon zatualizada ó de stória dua páigina que fui apagada.
 
 Se nun fur este l causo, tu puodes tener ancuntrado algun porblema ne l software.
-Por fabor, diç esto a un [[Special:ListUsers/sysop|admenistrador]], dezindo la lhigaçon.',
+Por fabor, diç esto a un [[Special:Listwiki_Users/sysop|admenistrador]], dezindo la lhigaçon.',
 'missingarticle-rev' => '(rebison#: $1)',
 'missingarticle-diff' => '(Dif.: $1, $2)',
 'internalerror' => 'Erro anterno',
@@ -390,7 +390,7 @@ Puode tener un ó mais carateres que nun puoden ser outelizados an títalos.',
 'loginsuccess' => "'''Stás agora lhigado a {{SITENAME}} cumo \"\$1\"'''.",
 'nosuchuser' => 'Num eisiste nanhun outelizador cul nome "$1".
 Ls nomes de outelizador son defrentes an lhetra grande ó pequeinha.
-Bei cumo screbiste, ó [[Special:UserLogin/signup|cria ua nuoba cuonta]].',
+Bei cumo screbiste, ó [[Special:wiki_UserLogin/signup|cria ua nuoba cuonta]].',
 'nosuchusershort' => 'Nun eisiste nanhun outelizador cul nome "$1".
 Bei se l screbiste bien.',
 'nouserspecified' => 'Tenes que dezir un nome de outelizador.',
@@ -468,7 +468,7 @@ La tue morada de IP atual ye $3 i l ID de l bloqueio ye $5. Por fabor, anclui un
 'loginreqlink' => 'antrar',
 'loginreqpagetext' => 'Percisas de $1 pa poder ber outras páiginas.',
 'accmailtitle' => 'Palabra-chabe ambiada.',
-'accmailtext' => "Ua palabra-chabe criada al calhas pa [[User talk:$1|$1]] fui ambiada pa $2.
+'accmailtext' => "Ua palabra-chabe criada al calhas pa [[wiki_User talk:$1|$1]] fui ambiada pa $2.
 
 La palabra-chabe para esta nuoba cuonta puode ser demudada na páigina pa ''[[Special:ChangePassword|demudar palabra-chabe]]'' apuis de la outenticaçon.",
 'newarticle' => '(Nuoba)',
@@ -495,7 +495,7 @@ Tu stás, al mesmo tiempo, a garantir-mos qu'esto ye algo screbido por ti, ó al
 'template-semiprotected' => '(semi-protegida)',
 'hiddencategories' => 'Esta páigina faç parte {{PLURAL:$1|dua catadorie scundida|$1 duas catadories scundidas}}:',
 'nocreatetext' => '{{SITENAME}} tem restringida la possibilidade de criar nuobas páginas.
-Pode boltar atrás i editar unha página yá eisistente, o [[Special:UserLogin|autenticar-se o criar unha cuonta]].',
+Pode boltar atrás i editar unha página yá eisistente, o [[Special:wiki_UserLogin|autenticar-se o criar unha cuonta]].',
 'permissionserrorstext-withaction' => 'Tu nun tenes premisson pa $2, {{PLURAL:$1|pula seguinte rezon|pulas seguintes rezones}}:',
 'recreate-moveddeleted-warn' => "Abiso: Tu stás a criar ua páigina que yá fui d'atrás botada fuora.'''
 
@@ -617,7 +617,7 @@ Causo l çponiblizes, este será outelizado pa te dar crédito pul tou trabalho.
 'prefs-signature' => 'Assinatura',
 'prefs-dateformat' => 'Formato de la data',
 
-# User rights
+# wiki_User rights
 'editusergroup' => 'Eiditar grupos de outelizadores',
 'userrights-groupsmember' => 'Nembro de:',
 
@@ -640,7 +640,7 @@ Causo l çponiblizes, este será outelizado pa te dar crédito pul tou trabalho.
 'right-move' => 'Arrastrar páiginas',
 'right-movefile' => 'Arrastrar fexeiros',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Registro de dreitos de l outelizador',
 'rightsnone' => '(nanhun)',
 
@@ -844,7 +844,7 @@ Páiginas que steian ne ls [[Special:Watchlist|tous begiados]] son amostradas an
 'linksearch' => 'Lhigaçones sternas',
 'linksearch-ok' => 'Percurar',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusers-submit' => 'Amostrar',
 
 # Special:Log/newusers

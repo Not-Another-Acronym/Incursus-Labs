@@ -30,7 +30,7 @@
 class SpecialStatistics extends SpecialPage {
 
 	private $views, $edits, $good, $images, $total, $users,
-			$activeUsers = 0;
+			$activewiki_Users = 0;
 
 	public function __construct() {
 		parent::__construct( 'Statistics' );
@@ -48,7 +48,7 @@ class SpecialStatistics extends SpecialPage {
 		$this->images = SiteStats::images();
 		$this->total = SiteStats::pages();
 		$this->users = SiteStats::users();
-		$this->activeUsers = SiteStats::activeUsers();
+		$this->activewiki_Users = SiteStats::activewiki_Users();
 		$this->hook = '';
 
 		# Staticic - views
@@ -164,7 +164,7 @@ class SpecialStatistics extends SpecialPage {
 	}
 
 	private function getUserStats() {
-		global $wgActiveUserDays;
+		global $wgActivewiki_UserDays;
 		return Xml::openElement( 'tr' ) .
 			Xml::tags( 'th', array( 'colspan' => '2' ), $this->msg( 'statistics-header-users' )->parse() ) .
 			Xml::closeElement( 'tr' ) .
@@ -176,10 +176,10 @@ class SpecialStatistics extends SpecialPage {
 								SpecialPage::getTitleFor( 'Activeusers' ),
 								$this->msg( 'listgrouprights-members' )->escaped()
 							),
-						$this->getLanguage()->formatNum( $this->activeUsers ),
+						$this->getLanguage()->formatNum( $this->activewiki_Users ),
 						array( 'class' => 'mw-statistics-users-active' ),
 						'statistics-users-active-desc',
-						$this->getLanguage()->formatNum( $wgActiveUserDays ) );
+						$this->getLanguage()->formatNum( $wgActivewiki_UserDays ) );
 	}
 
 	private function getGroupStats() {
@@ -216,12 +216,12 @@ class SpecialStatistics extends SpecialPage {
 			);
 			# Add a class when a usergroup contains no members to allow hiding these rows
 			$classZero = '';
-			$countUsers = SiteStats::numberingroup( $groupname );
-			if( $countUsers == 0 ) {
+			$countwiki_Users = SiteStats::numberingroup( $groupname );
+			if( $countwiki_Users == 0 ) {
 				$classZero = ' statistics-group-zero';
 			}
 			$text .= $this->formatRow( $grouppage . ' ' . $grouplink,
-				$this->getLanguage()->formatNum( $countUsers ),
+				$this->getLanguage()->formatNum( $countwiki_Users ),
 				array( 'class' => 'statistics-group-' . Sanitizer::escapeClass( $group ) . $classZero )  );
 		}
 		return $text;

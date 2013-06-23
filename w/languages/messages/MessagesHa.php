@@ -11,7 +11,7 @@
  */
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'A shaya zaruruwa',
 'tog-justify' => 'A daidaita sakin layuka',
 'tog-hideminor' => 'A ɓoye ƙananan gyare-gyare na baya-bayan nan',
@@ -226,7 +226,7 @@ $messages = array(
 Mafarin haka yawanci shi ne mahaɗi mai zuwa ga shafin da aka soke ko aka gusar.
 
 In ba haka ba ne, to kun takalo wata tangarɗa a safuwai kin.
-Don Allah a aika ruhoto zuwa ga [[Special:ListUsers/sysop|administrator]], tare da nuna URL kin.',
+Don Allah a aika ruhoto zuwa ga [[Special:Listwiki_Users/sysop|administrator]], tare da nuna URL kin.',
 'missingarticle-rev' => '(lambar zubi: $1)',
 'badtitletext' => "Kan shafin da aka nema bai da ma'ana, ko kango ne, ko kuma wani kai ne na tsakanin harsuna ko shire-shire da bai da mahaɗi mai kyau.
 Tana yiyuwa yana da harafi ko haruffa da ba su karɓuwa cikin kanu.",
@@ -366,7 +366,7 @@ Ku gwada tare da amfani da \"all:\" don bincikar duka shafunan (har da shafunan 
 'mypreferences' => 'Saituttukana',
 'searchresultshead' => 'Nema',
 
-# User rights
+# wiki_User rights
 'userrights-reason' => 'Dalili:',
 
 # Groups
@@ -374,7 +374,7 @@ Ku gwada tare da amfani da \"all:\" don bincikar duka shafunan (har da shafunan 
 
 'grouppage-sysop' => '{{ns:project}}:Masu hukunci',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => "Rajistan bayar da izini ga ma'aikata",
 
 # Associated actions - in the sentence "You do not have permission to X"
@@ -480,7 +480,7 @@ Ku gwada tare da amfani da \"all:\" don bincikar duka shafunan (har da shafunan 
 'linksearch-ns' => 'Sararin suna:',
 'linksearch-ok' => 'Nema',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusers-submit' => 'Nuna',
 
 # Special:Log/newusers

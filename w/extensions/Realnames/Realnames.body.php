@@ -48,7 +48,7 @@ class ExtRealnames {
    * A cache of realnames for given users
    * @since 2011-09-16, 0.1
    */
-  // this used to be a cache of User objects as $users
+  // this used to be a cache of wiki_User objects as $users
   protected static $realnames = array();
 
   /**
@@ -73,7 +73,7 @@ class ExtRealnames {
 
     wfDebugLog('realnames', __METHOD__.': '.print_r($m,true));
 
-    // we do not currently do any checks on Bare replacements, a User: find is
+    // we do not currently do any checks on Bare replacements, a wiki_User: find is
     // always valid but we could add one in the future, and the debug
     // information is still conveniant and keeps things consistent with checkLink
 
@@ -209,7 +209,7 @@ class ExtRealnames {
     }
 
     // always catch this one
-    $namespaces = array('User:', 'User talk:');
+    $namespaces = array('wiki_User:', 'wiki_User talk:');
 
     // add in user specified ones
     $namespaces = array_merge($namespaces, array_values($wgRealnamesNamespaces));
@@ -262,7 +262,7 @@ class ExtRealnames {
       wfDebugLog('realnames', __METHOD__.": searching article title...");
 
       // special user page handling
-      if (in_array($title->getNamespace(), array(NS_USER, NS_USER_TALK))) { // User:
+      if (in_array($title->getNamespace(), array(NS_USER, NS_USER_TALK))) { // wiki_User:
         // swap out the specific username from title
         // this overcomes the problem lookForBare has with spaces and underscores in names
         $out->setPagetitle(static::lookForBare($out->getPageTitle(),'/'.static::getNamespacePrefixes().'\s*('.$title->getText().')(?:\/.+)?/'));
@@ -297,7 +297,7 @@ class ExtRealnames {
    * @note requires MediaWiki 1.7.0
    */
   public static function hookPersonalUrls(&$personal_urls, &$title) {
-    global $wgUser, $wgRealnamesReplacements;
+    global $wgwiki_User, $wgRealnamesReplacements;
 
     if ($wgRealnamesReplacements['personnal'] === TRUE) {
       wfDebugLog('realnames', __METHOD__.": searching personnal urls...");
@@ -308,7 +308,7 @@ class ExtRealnames {
         $m = array(
           'all' => $personal_urls['userpage']['text'],
           'username' => $personal_urls['userpage']['text'],
-          'realname' => $wgUser->getRealname(),
+          'realname' => $wgwiki_User->getRealname(),
         );
         $personal_urls['userpage']['text'] = static::replace($m);
       }
@@ -318,13 +318,13 @@ class ExtRealnames {
   } // function
 
   /**
-   * scan and replace plain usernames of the form User:username into real names.
+   * scan and replace plain usernames of the form wiki_User:username into real names.
    * @param[in] \string text to scan
    * @param[in] \string pattern to match, \bool false for default
    * @return \string with realnames replaced in
    * @since 2011-09-16, 0.1
    * @bug we have problems with users with underscores (they become spaces) or spaces,
-   *    we tend to just strip the User: and leave the username, but we only modify the
+   *    we tend to just strip the wiki_User: and leave the username, but we only modify the
    *    first word so some weird style might screw it up (2011-09-17, ofb)
    */
   protected static function lookForBare($text,$pattern=false) {
@@ -381,7 +381,7 @@ class ExtRealnames {
         $realname = $m['realname'];
       } else {
         // time to do a lookup
-        $user = User::newFromName( $m['username'] );
+        $user = wiki_User::newFromName( $m['username'] );
 
         if (!is_object($user)) {
           wfDebugLog('realnames', __METHOD__.": skipped, invalid user: ".$m['username']);

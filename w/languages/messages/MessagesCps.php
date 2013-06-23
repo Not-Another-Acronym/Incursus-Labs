@@ -13,7 +13,7 @@
  */
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Kuritan sa idalum ang mga link',
 'tog-justify' => 'Tadlungon ang mga talata',
 'tog-hideminor' => 'Itago ang mga gamay nga ginliwat sang mini lang ginbag-o',
@@ -351,7 +351,7 @@ Naghatag sang mini nga rason ang tagadumala nga nagkandado sini: $1',
 Kinaandan tungod ini sa pagsunod sa isa ka wala sa panahon nga kinatuhay ukon tabid nga pangkasaysayan sa isa ka pahina nga napaksi.
 
 Kung indi mini ang kaso, ayhan nakakita ikaw sang depekto sa software.
-Palihog isugid ini sa isa ka [[Special:ListUsers/sysop|administrator]], samtang ginahatag ang URL.',
+Palihog isugid ini sa isa ka [[Special:Listwiki_Users/sysop|administrator]], samtang ginahatag ang URL.',
 'missingarticle-rev' => '(pagbag-o#: $1)',
 'missingarticle-diff' => '(Ginkala-in: $1, $2)',
 'readonly_lag' => 'Otomatiko nga ginkandaduhan samtang ang serbidor sang alila nga database ginakwa pakadto sa pinakapuno',
@@ -397,7 +397,7 @@ Para sa mga pagtransleyt, palihog konsidera gamit ang [http://translatewiki.net/
 $2',
 'namespaceprotected' => "Wala ka sang permiso nga magliwat sang mga pahina nga ara sa namespace nga '''$1'''.",
 'ns-specialprotected' => 'Indi pwede bag-uhon ang mga pinasahi nga pahina.',
-'titleprotected' => 'Naprotektahan ang mini nga titulo halin sa pag-ubra ni [[User:$1|$1]].
+'titleprotected' => 'Naprotektahan ang mini nga titulo halin sa pag-ubra ni [[wiki_User:$1|$1]].
 Mini ang ginhatag nga kabangdanan "\'\'$2\'\'".',
 
 # Virus scanner
@@ -408,7 +408,7 @@ Mini ang ginhatag nga kabangdanan "\'\'$2\'\'".',
 # Login and logout pages
 'logouttext' => "'''Nakagwa ka na.'''
 
-Pwede mo mapadayon usar ang {{SITENAME}}, ukon pwede ka [[Special:UserLogin|lmagsulod liwat]] bilang pareho ukon la-in nga manug-usar.
+Pwede mo mapadayon usar ang {{SITENAME}}, ukon pwede ka [[Special:wiki_UserLogin|lmagsulod liwat]] bilang pareho ukon la-in nga manug-usar.
 Tandaan nga ang iban nga pahina magapadayon nga ipakita nga nakasulod ka man gyapon kuno abi, asta panason mo ang cache sang imo browser.",
 'welcomecreation' => '==Malipayon nga pag-abot, $1! ==
 Nahimo na ang imo account.
@@ -611,7 +611,7 @@ Tistingan mo i-prefiks ang imo pamangkot upod sang ''tanan:'' para makita mo ang
 
 'grouppage-sysop' => '{{ns:project}}:Mga manugdumala',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Lista sang mga karapatan sang manug-usar',
 
 # Associated actions - in the sentence "You do not have permission to X"

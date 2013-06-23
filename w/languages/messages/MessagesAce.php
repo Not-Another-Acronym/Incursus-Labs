@@ -140,9 +140,9 @@ $specialPageAliases = array(
 	'Unusedtemplates'           => array( 'Templat_hana_soe_nguy' ),
 	'Unwatchedpages'            => array( 'On_hana_soe_kalon' ),
 	'Upload'                    => array( 'Pasoe' ),
-	'Userlogin'                 => array( 'Tamong_log' ),
-	'Userlogout'                => array( 'Teubiet_log' ),
-	'Userrights'                => array( 'Khut_(hak)_ureueng_nguy' ),
+	'wiki_Userlogin'                 => array( 'Tamong_log' ),
+	'wiki_Userlogout'                => array( 'Teubiet_log' ),
+	'wiki_Userrights'                => array( 'Khut_(hak)_ureueng_nguy' ),
 	'Version'                   => array( 'Seunalen' ),
 	'Wantedcategories'          => array( 'Kawan_nyang_geuh\'eut' ),
 	'Wantedfiles'               => array( 'Beureukaih_nyang_geuh\'eut' ),
@@ -154,7 +154,7 @@ $specialPageAliases = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Bôh garéh yup bak hubông:',
 'tog-justify' => 'Peurata paragraf',
 'tog-hideminor' => 'Peusom neuandam bacut bak neuubah paléng barô',
@@ -487,7 +487,7 @@ Basis data geupeuhase salah "$3: $4".',
 
 Nyoë biasajih sabab hubông useuëng u geunantoë away nyang ka teusampôh.
 
-Meunyo kön nyoë sababjih, Droëneuh kadang ka neuteumèë saboh bug lam software. Neutulông peugah bhah nyoë bak salah sidroë [[Special:ListUsers/sysop|Nyang urôh]], ngön neupeugah alamat URL nyang neusaweuë.',
+Meunyo kön nyoë sababjih, Droëneuh kadang ka neuteumèë saboh bug lam software. Neutulông peugah bhah nyoë bak salah sidroë [[Special:Listwiki_Users/sysop|Nyang urôh]], ngön neupeugah alamat URL nyang neusaweuë.',
 'missingarticle-rev' => '(revisi#: $1)',
 'internalerror' => 'Salah bak dalam',
 'internalerror_info' => 'Salah bak dalam: $1',
@@ -522,7 +522,7 @@ Nan Droeneuh ka teupeugot. Neuato laju [[Special:Preferences|peue nyang neugalak
 'loginsuccess' => "'''Droëneuh  jinoë ka neutamong di {{SITENAME}} sibagoë \"\$1\".'''",
 'nosuchuser' => 'Hana ureuëng nguy ngön nan "$1".
 Nan ureuëng nguy jipeubida harah rayek.
-Tulông neuparéksa keulayi neuija Droëneuh, atawa [[Special:UserLogin/signup|neudapeuta barô]].',
+Tulông neuparéksa keulayi neuija Droëneuh, atawa [[Special:wiki_UserLogin/signup|neudapeuta barô]].',
 'nosuchusershort' => 'Hana ureuëng nguy ngön nan "$1".
 Préksa keulayi neu’ija Droëneuh.',
 'nouserspecified' => 'Neupasoë nan Droëneuh.',
@@ -603,7 +603,7 @@ atawa <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}
 'template-protected' => '(geulindông)',
 'template-semiprotected' => '(siteungoh-lindông)',
 'hiddencategories' => 'Ôn nyoë nakeuh anggèëta nibak {{PLURAL:$1|1 kawan teusom |$1 kawan teusom}}:',
-'nocreatetext' => '{{SITENAME}} ka jikot bak peugöt ôn barô. Ji Droëneuh   jeuët neuriwang teuma ngön neu’andam ôn nyang ka na, atawa [[Special:UserLogin|neutamong atawa neudapeuta]].',
+'nocreatetext' => '{{SITENAME}} ka jikot bak peugöt ôn barô. Ji Droëneuh   jeuët neuriwang teuma ngön neu’andam ôn nyang ka na, atawa [[Special:wiki_UserLogin|neutamong atawa neudapeuta]].',
 'permissionserrorstext-withaction' => 'Droëneuh hana hak tamöng keu $2, muroë {{PLURAL:$1|choë|choë}} nyoë:',
 'recreate-moveddeleted-warn' => "'''Ingat: Droëneuh neupeugöt ulang saboh ôn nyang ka tom geusampôh. ''',
 
@@ -723,7 +723,7 @@ Surat-e droeneuh h'an geupeugah keu ureueng nyan.",
 
 'grouppage-sysop' => '{{ns:project}}:Ureuëng urôh',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Log neuubah hak peuhah',
 
 # Associated actions - in the sentence "You do not have permission to X"

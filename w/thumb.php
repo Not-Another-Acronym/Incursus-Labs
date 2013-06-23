@@ -155,7 +155,7 @@ function wfStreamThumb( array $params ) {
 
 	// Check permissions if there are read restrictions
 	$varyHeader = array();
-	if ( !in_array( 'read', User::getGroupPermissions( array( '*' ) ), true ) ) {
+	if ( !in_array( 'read', wiki_User::getGroupPermissions( array( '*' ) ), true ) ) {
 		if ( !$img->getTitle() || !$img->getTitle()->userCan( 'read' ) ) {
 			wfThumbError( 403, 'Access denied. You do not have permission to access ' .
 				'the source file.' );

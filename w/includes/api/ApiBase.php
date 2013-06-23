@@ -187,7 +187,7 @@ abstract class ApiBase extends ContextSource {
 	/**
 	 * Create a new RequestContext object to use e.g. for calls to other parts
 	 * the software.
-	 * The object will have the WebRequest and the User object set to the ones
+	 * The object will have the WebRequest and the wiki_User object set to the ones
 	 * used in this instance.
 	 *
 	 * @deprecated since 1.19 use getContext to get the current context
@@ -199,7 +199,7 @@ abstract class ApiBase extends ContextSource {
 	}
 
 	/**
-	 * Set warning section for this module. Users should monitor this
+	 * Set warning section for this module. wiki_Users should monitor this
 	 * section to notice any changes in API. Multiple calls to this
 	 * function will result in the warning messages being separated by
 	 * newlines
@@ -1065,7 +1065,7 @@ abstract class ApiBase extends ContextSource {
 			return array();
 		}
 
-		// This is a bit awkward, but we want to avoid calling canApiHighLimits() because it unstubs $wgUser
+		// This is a bit awkward, but we want to avoid calling canApiHighLimits() because it unstubs $wgwiki_User
 		$valuesList = explode( '|', $value, self::LIMIT_SML2 + 1 );
 		$sizeLimit = count( $valuesList ) > self::LIMIT_SML1 && $this->mMainModule->canApiHighLimits() ?
 				self::LIMIT_SML2 : self::LIMIT_SML1;
@@ -1259,7 +1259,7 @@ abstract class ApiBase extends ContextSource {
 		'mailnologin' => array( 'code' => 'cantsend', 'info' => "You are not logged in, you do not have a confirmed e-mail address, or you are not allowed to send e-mail to other users, so you cannot send e-mail" ),
 		'ipbblocked' => array( 'code' => 'ipbblocked', 'info' => 'You cannot block or unblock users while you are yourself blocked' ),
 		'ipbnounblockself' => array( 'code' => 'ipbnounblockself', 'info' => 'You are not allowed to unblock yourself' ),
-		'usermaildisabled' => array( 'code' => 'usermaildisabled', 'info' => "User email has been disabled" ),
+		'usermaildisabled' => array( 'code' => 'usermaildisabled', 'info' => "wiki_User email has been disabled" ),
 		'blockedemailuser' => array( 'code' => 'blockedfrommail', 'info' => "You have been blocked from sending e-mail" ),
 		'notarget' => array( 'code' => 'notarget', 'info' => "You have not specified a valid target for this action" ),
 		'noemail' => array( 'code' => 'noemail', 'info' => "The user has not specified a valid e-mail address, or has chosen not to receive e-mail from other users" ),
@@ -1283,7 +1283,7 @@ abstract class ApiBase extends ContextSource {
 		'invalidtitle' => array( 'code' => 'invalidtitle', 'info' => "Bad title \"\$1\"" ),
 		'nosuchpageid' => array( 'code' => 'nosuchpageid', 'info' => "There is no page with ID \$1" ),
 		'nosuchrevid' => array( 'code' => 'nosuchrevid', 'info' => "There is no revision with ID \$1" ),
-		'nosuchuser' => array( 'code' => 'nosuchuser', 'info' => "User \"\$1\" doesn't exist" ),
+		'nosuchuser' => array( 'code' => 'nosuchuser', 'info' => "wiki_User \"\$1\" doesn't exist" ),
 		'invaliduser' => array( 'code' => 'invaliduser', 'info' => "Invalid username \"\$1\"" ),
 		'invalidexpiry' => array( 'code' => 'invalidexpiry', 'info' => "Invalid expiry time \"\$1\"" ),
 		'pastexpiry' => array( 'code' => 'pastexpiry', 'info' => "Expiry time \"\$1\" is in the past" ),
@@ -1466,7 +1466,7 @@ abstract class ApiBase extends ContextSource {
 	 * '' if the module doesn't require a salt,
 	 * else false if the module doesn't need a token
 	 * You have also to override needsToken()
-	 * Value is passed to User::getEditToken
+	 * Value is passed to wiki_User::getEditToken
 	 * @return bool|string|array
 	 */
 	public function getTokenSalt() {
@@ -1477,11 +1477,11 @@ abstract class ApiBase extends ContextSource {
 	 * Gets the user for whom to get the watchlist
 	 *
 	 * @param $params array
-	 * @return User
+	 * @return wiki_User
 	 */
-	public function getWatchlistUser( $params ) {
+	public function getWatchlistwiki_User( $params ) {
 		if ( !is_null( $params['owner'] ) && !is_null( $params['token'] ) ) {
-			$user = User::newFromName( $params['owner'], false );
+			$user = wiki_User::newFromName( $params['owner'], false );
 			if ( !($user && $user->getId()) ) {
 				$this->dieUsage( 'Specified user does not exist', 'bad_wlowner' );
 			}

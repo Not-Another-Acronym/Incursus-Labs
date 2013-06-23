@@ -5,9 +5,9 @@
 ( function ( mw, $ ) {
 
 	/**
-	 * User object
+	 * wiki_User object
 	 */
-	function User( options, tokens ) {
+	function wiki_User( options, tokens ) {
 		var user, callbacks;
 
 		/* Private Members */
@@ -75,10 +75,10 @@
 		/**
 		 * Gets the current user's name.
 		 *
-		 * @return Mixed: User name string or null if users is anonymous
+		 * @return Mixed: wiki_User name string or null if users is anonymous
 		 */
 		this.getName = function () {
-			return mw.config.get( 'wgUserName' );
+			return mw.config.get( 'wgwiki_UserName' );
 		};
 
 		/**
@@ -110,7 +110,7 @@
 		 * This ID is ephemeral for everyone, staying in their browser only until they close
 		 * their browser.
 		 *
-		 * @return String: User name or random session ID
+		 * @return String: wiki_User name or random session ID
 		 */
 		this.sessionId = function () {
 			var sessionId = $.cookie( 'mediaWiki.user.sessionId' );
@@ -128,7 +128,7 @@
 		 * expiration time is reset each time the ID is queried, so in most cases this ID will
 		 * persist until the browser's cookies are cleared or the user doesn't visit for 1 year.
 		 *
-		 * @return String: User name or random session ID
+		 * @return String: wiki_User name or random session ID
 		 */
 		this.id = function() {
 			var id,
@@ -246,6 +246,6 @@
 
 	// Extend the skeleton mw.user from mediawiki.js
 	// This is kind of ugly but we're stuck with this for b/c reasons
-	mw.user = new User( mw.user.options, mw.user.tokens );
+	mw.user = new wiki_User( mw.user.options, mw.user.tokens );
 
 }( mediaWiki, jQuery ) );

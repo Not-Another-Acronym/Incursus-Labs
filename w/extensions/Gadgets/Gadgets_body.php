@@ -16,7 +16,7 @@ class GadgetHooks {
 	 * ArticleSaveComplete hook handler.
 	 *
 	 * @param $article Article
-	 * @param $user User
+	 * @param $user wiki_User
 	 * @param $text String: New page text
 	 * @return bool
 	 */
@@ -30,7 +30,7 @@ class GadgetHooks {
 	}
 
 	/**
-	 * UserGetDefaultOptions hook handler
+	 * wiki_UserGetDefaultOptions hook handler
 	 * @param $defaultOptions Array of default preference keys and values
 	 * @return bool
 	 */
@@ -56,7 +56,7 @@ class GadgetHooks {
 
 	/**
 	 * GetPreferences hook handler.
-	 * @param $user User
+	 * @param $user wiki_User
 	 * @param $preferences Array: Preference descriptions
 	 * @return bool
 	 */
@@ -364,7 +364,7 @@ class Gadget {
 	/**
 	 * Checks whether this gadget is enabled for given user
 	 *
-	 * @param $user User: user to check against
+	 * @param $user wiki_User: user to check against
 	 * @return Boolean
 	 */
 	public function isEnabled( $user ) {
@@ -374,7 +374,7 @@ class Gadget {
 	/**
 	 * Checks whether given user has permissions to use this gadget
 	 *
-	 * @param $user User: user to check against
+	 * @param $user wiki_User: user to check against
 	 * @return Boolean
 	 */
 	public function isAllowed( $user ) {

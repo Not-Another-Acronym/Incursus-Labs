@@ -289,7 +289,7 @@ $messages = array(
 
 'grouppage-sysop' => '{{ns:project}}:𐍃𐌴𐌹𐌳𐍉𐍆𐌰𐌸𐍃',
 
-# User rights log
+# wiki_User rights log
 'rightslog'  => 'Niutandis stutjanlog',
 'rightsnone' => '(ni áinshun)',
 

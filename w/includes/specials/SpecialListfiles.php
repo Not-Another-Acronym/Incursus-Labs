@@ -59,7 +59,7 @@ class SpecialListFiles extends IncludableSpecialPage {
 class ImageListPager extends TablePager {
 	var $mFieldNames = null;
 	var $mQueryConds = array();
-	var $mUserName = null;
+	var $mwiki_UserName = null;
 	var $mSearch = '';
 	var $mIncluding = false;
 
@@ -71,8 +71,8 @@ class ImageListPager extends TablePager {
 		if ( $userName ) {
 			$nt = Title::newFromText( $userName, NS_USER );
 			if ( !is_null( $nt ) ) {
-				$this->mUserName = $nt->getText();
-				$this->mQueryConds['img_user_text'] = $this->mUserName;
+				$this->mwiki_UserName = $nt->getText();
+				$this->mQueryConds['img_user_text'] = $this->mwiki_UserName;
 			}
 		}
 
@@ -181,7 +181,7 @@ class ImageListPager extends TablePager {
 			$userIds[] = $row->img_user;
 		}
 		# Do a link batch query for names and userpages
-		UserCache::singleton()->doQuery( $userIds, array( 'userpage' ), __METHOD__ );
+		wiki_UserCache::singleton()->doQuery( $userIds, array( 'userpage' ), __METHOD__ );
 	}
 
 	function formatValue( $field, $value ) {
@@ -211,7 +211,7 @@ class ImageListPager extends TablePager {
 				}
 			case 'img_user_text':
 				if ( $this->mCurrentRow->img_user ) {
-					$name = User::whoIs( $this->mCurrentRow->img_user );
+					$name = wiki_User::whoIs( $this->mCurrentRow->img_user );
 					$link = Linker::link(
 						Title::makeTitle( NS_USER, $name ),
 						htmlspecialchars( $name )
@@ -241,7 +241,7 @@ class ImageListPager extends TablePager {
 					'id' 		=> 'mw-ilsearch',
 			) );
 		}
-		$inputForm['username'] = Html::input( 'user', $this->mUserName, 'text', array(
+		$inputForm['username'] = Html::input( 'user', $this->mwiki_UserName, 'text', array(
 			'size' 		=> '40',
 			'maxlength' => '255',
 			'id' 		=> 'mw-listfiles-user',
@@ -270,10 +270,10 @@ class ImageListPager extends TablePager {
 
 	function getPagingQueries() {
 		$queries = parent::getPagingQueries();
-		if ( !is_null( $this->mUserName ) ) {
+		if ( !is_null( $this->mwiki_UserName ) ) {
 			# Append the username to the query string
 			foreach ( $queries as &$query ) {
-				$query['user'] = $this->mUserName;
+				$query['user'] = $this->mwiki_UserName;
 			}
 		}
 		return $queries;
@@ -281,8 +281,8 @@ class ImageListPager extends TablePager {
 
 	function getDefaultQuery() {
 		$queries = parent::getDefaultQuery();
-		if ( !isset( $queries['user'] ) && !is_null( $this->mUserName ) ) {
-			$queries['user'] = $this->mUserName;
+		if ( !isset( $queries['user'] ) && !is_null( $this->mwiki_UserName ) ) {
+			$queries['user'] = $this->mwiki_UserName;
 		}
 		return $queries;
 	}

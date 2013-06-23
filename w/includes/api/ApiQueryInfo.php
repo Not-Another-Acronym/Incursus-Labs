@@ -112,70 +112,70 @@ class ApiQueryInfo extends ApiQueryBase {
 		// We could check for $title->userCan('edit') here,
 		// but that's too expensive for this purpose
 		// and would break caching
-		global $wgUser;
-		if ( !$wgUser->isAllowed( 'edit' ) ) {
+		global $wgwiki_User;
+		if ( !$wgwiki_User->isAllowed( 'edit' ) ) {
 			return false;
 		}
 
 		// The token is always the same, let's exploit that
 		if ( !isset( ApiQueryInfo::$cachedTokens[ 'edit' ] ) ) {
-			ApiQueryInfo::$cachedTokens[ 'edit' ] = $wgUser->getEditToken();
+			ApiQueryInfo::$cachedTokens[ 'edit' ] = $wgwiki_User->getEditToken();
 		}
 
 		return ApiQueryInfo::$cachedTokens[ 'edit' ];
 	}
 
 	public static function getDeleteToken( $pageid, $title ) {
-		global $wgUser;
-		if ( !$wgUser->isAllowed( 'delete' ) ) {
+		global $wgwiki_User;
+		if ( !$wgwiki_User->isAllowed( 'delete' ) ) {
 			return false;
 		}
 
 		// The token is always the same, let's exploit that
 		if ( !isset( ApiQueryInfo::$cachedTokens[ 'delete' ] ) ) {
-			ApiQueryInfo::$cachedTokens[ 'delete' ] = $wgUser->getEditToken();
+			ApiQueryInfo::$cachedTokens[ 'delete' ] = $wgwiki_User->getEditToken();
 		}
 
 		return ApiQueryInfo::$cachedTokens[ 'delete' ];
 	}
 
 	public static function getProtectToken( $pageid, $title ) {
-		global $wgUser;
-		if ( !$wgUser->isAllowed( 'protect' ) ) {
+		global $wgwiki_User;
+		if ( !$wgwiki_User->isAllowed( 'protect' ) ) {
 			return false;
 		}
 
 		// The token is always the same, let's exploit that
 		if ( !isset( ApiQueryInfo::$cachedTokens[ 'protect' ] ) ) {
-			ApiQueryInfo::$cachedTokens[ 'protect' ] = $wgUser->getEditToken();
+			ApiQueryInfo::$cachedTokens[ 'protect' ] = $wgwiki_User->getEditToken();
 		}
 
 		return ApiQueryInfo::$cachedTokens[ 'protect' ];
 	}
 
 	public static function getMoveToken( $pageid, $title ) {
-		global $wgUser;
-		if ( !$wgUser->isAllowed( 'move' ) ) {
+		global $wgwiki_User;
+		if ( !$wgwiki_User->isAllowed( 'move' ) ) {
 			return false;
 		}
 
 		// The token is always the same, let's exploit that
 		if ( !isset( ApiQueryInfo::$cachedTokens[ 'move' ] ) ) {
-			ApiQueryInfo::$cachedTokens[ 'move' ] = $wgUser->getEditToken();
+			ApiQueryInfo::$cachedTokens[ 'move' ] = $wgwiki_User->getEditToken();
 		}
 
 		return ApiQueryInfo::$cachedTokens[ 'move' ];
 	}
 
 	public static function getBlockToken( $pageid, $title ) {
-		global $wgUser;
-		if ( !$wgUser->isAllowed( 'block' ) ) {
+		global $wgwiki_User;
+		if ( !$wgwiki_User->isAllowed( 'block' ) ) {
 			return false;
 		}
 
 		// The token is always the same, let's exploit that
 		if ( !isset( ApiQueryInfo::$cachedTokens[ 'block' ] ) ) {
-			ApiQueryInfo::$cachedTokens[ 'block' ] = $wgUser->getEditToken();
+			ApiQueryInfo::$cachedTokens[ 'block' ] = $wgwiki_User->getEditToken();
 		}
 
 		return ApiQueryInfo::$cachedTokens[ 'block' ];
@@ -187,56 +187,56 @@ class ApiQueryInfo extends ApiQueryBase {
 	}
 
 	public static function getEmailToken( $pageid, $title ) {
-		global $wgUser;
-		if ( !$wgUser->canSendEmail() || $wgUser->isBlockedFromEmailUser() ) {
+		global $wgwiki_User;
+		if ( !$wgwiki_User->canSendEmail() || $wgwiki_User->isBlockedFromEmailwiki_User() ) {
 			return false;
 		}
 
 		// The token is always the same, let's exploit that
 		if ( !isset( ApiQueryInfo::$cachedTokens[ 'email' ] ) ) {
-			ApiQueryInfo::$cachedTokens[ 'email' ] = $wgUser->getEditToken();
+			ApiQueryInfo::$cachedTokens[ 'email' ] = $wgwiki_User->getEditToken();
 		}
 
 		return ApiQueryInfo::$cachedTokens[ 'email' ];
 	}
 
 	public static function getImportToken( $pageid, $title ) {
-		global $wgUser;
-		if ( !$wgUser->isAllowedAny( 'import', 'importupload' ) ) {
+		global $wgwiki_User;
+		if ( !$wgwiki_User->isAllowedAny( 'import', 'importupload' ) ) {
 			return false;
 		}
 
 		// The token is always the same, let's exploit that
 		if ( !isset( ApiQueryInfo::$cachedTokens[ 'import' ] ) ) {
-			ApiQueryInfo::$cachedTokens[ 'import' ] = $wgUser->getEditToken();
+			ApiQueryInfo::$cachedTokens[ 'import' ] = $wgwiki_User->getEditToken();
 		}
 
 		return ApiQueryInfo::$cachedTokens[ 'import' ];
 	}
 
 	public static function getWatchToken( $pageid, $title ) {
-		global $wgUser;
-		if ( !$wgUser->isLoggedIn() ) {
+		global $wgwiki_User;
+		if ( !$wgwiki_User->isLoggedIn() ) {
 			return false;
 		}
 
 		// The token is always the same, let's exploit that
 		if ( !isset( ApiQueryInfo::$cachedTokens[ 'watch' ] ) ) {
-			ApiQueryInfo::$cachedTokens[ 'watch' ] = $wgUser->getEditToken( 'watch' );
+			ApiQueryInfo::$cachedTokens[ 'watch' ] = $wgwiki_User->getEditToken( 'watch' );
 		}
 
 		return ApiQueryInfo::$cachedTokens[ 'watch' ];
 	}
 
 	public static function getOptionsToken( $pageid, $title ) {
-		global $wgUser;
-		if ( !$wgUser->isLoggedIn() ) {
+		global $wgwiki_User;
+		if ( !$wgwiki_User->isLoggedIn() ) {
 			return false;
 		}
 
 		// The token is always the same, let's exploit that
 		if ( !isset( ApiQueryInfo::$cachedTokens[ 'options' ] ) ) {
-			ApiQueryInfo::$cachedTokens[ 'options' ] = $wgUser->getEditToken();
+			ApiQueryInfo::$cachedTokens[ 'options' ] = $wgwiki_User->getEditToken();
 		}
 
 		return ApiQueryInfo::$cachedTokens[ 'options' ];

@@ -16,8 +16,8 @@ $namespaceNames = array(
 	NS_MEDIA            => 'Medya',
 	NS_SPECIAL          => 'Spesial',
 	NS_TALK             => 'Nkɔmbɔ',
-	NS_USER             => 'User',
-	NS_USER_TALK        => 'User_nkɔmbɔ',
+	NS_USER             => 'wiki_User',
+	NS_USER_TALK        => 'wiki_User_nkɔmbɔ',
 	NS_PROJECT_TALK     => '$1_nkɔmbɔ',
 	NS_FILE             => 'Fayl',
 	NS_FILE_TALK        => 'Fayl_nkɔmbɔ',
@@ -32,7 +32,7 @@ $namespaceNames = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Twa lenk nyina ase:',
 'tog-justify' => 'Gyastefae mparagraf',
 'tog-hideminor' => 'Suma nsesae a wɔakɔ so a wɔnnkyɛree koraa',

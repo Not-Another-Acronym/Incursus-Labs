@@ -230,7 +230,7 @@ class MWHttpRequest {
 			$this->timeout = $wgHTTPTimeout;
 		}
 		if( isset( $options['userAgent'] ) ) {
-			$this->setUserAgent( $options['userAgent'] );
+			$this->setwiki_UserAgent( $options['userAgent'] );
 		}
 
 		$members = array( "postData", "proxy", "noProxy", "sslVerifyHost", "caInfo",
@@ -341,8 +341,8 @@ class MWHttpRequest {
 	 * Set the user agent
 	 * @param $UA string
 	 */
-	public function setUserAgent( $UA ) {
-		$this->setHeader( 'User-Agent', $UA );
+	public function setwiki_UserAgent( $UA ) {
+		$this->setHeader( 'wiki_User-Agent', $UA );
 	}
 
 	/**
@@ -438,8 +438,8 @@ class MWHttpRequest {
 			$this->setCallback( array( $this, 'read' ) );
 		}
 
-		if ( !isset( $this->reqHeaders['User-Agent'] ) ) {
-			$this->setUserAgent( Http::userAgent() );
+		if ( !isset( $this->reqHeaders['wiki_User-Agent'] ) ) {
+			$this->setwiki_UserAgent( Http::userAgent() );
 		}
 	}
 
@@ -714,7 +714,7 @@ class CurlHttpRequest extends MWHttpRequest {
 		if ( isset( $this->reqHeaders['Referer'] ) ) {
 			$this->curlOptions[CURLOPT_REFERER] = $this->reqHeaders['Referer'];
 		}
-		$this->curlOptions[CURLOPT_USERAGENT] = $this->reqHeaders['User-Agent'];
+		$this->curlOptions[CURLOPT_USERAGENT] = $this->reqHeaders['wiki_User-Agent'];
 
 		$this->curlOptions[CURLOPT_SSL_VERIFYHOST] = $this->sslVerifyHost ? 2 : 0;
 		$this->curlOptions[CURLOPT_SSL_VERIFYPEER] = $this->sslVerifyCert;

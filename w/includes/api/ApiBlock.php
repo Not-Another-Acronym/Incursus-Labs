@@ -81,7 +81,7 @@ class ApiBlock extends ApiBase {
 			'CreateAccount' => $params['nocreate'],
 			'AutoBlock' => $params['autoblock'],
 			'DisableEmail' => $params['noemail'],
-			'HideUser' => $params['hidename'],
+			'Hidewiki_User' => $params['hidename'],
 			'DisableUTEdit' => !$params['allowusertalk'],
 			'AlreadyBlocked' => $params['reblock'],
 			'Watch' => $params['watchuser'],
@@ -96,7 +96,7 @@ class ApiBlock extends ApiBase {
 
 		list( $target, /*...*/ ) = SpecialBlock::getTargetAndType( $params['user'] );
 		$res['user'] = $params['user'];
-		$res['userID'] = $target instanceof User ? $target->getId() : 0;
+		$res['userID'] = $target instanceof wiki_User ? $target->getId() : 0;
 
 		$block = Block::newFromTarget( $target );
 		if( $block instanceof Block ){
@@ -170,7 +170,7 @@ class ApiBlock extends ApiBase {
 
 	public function getParamDescription() {
 		return array(
-			'user' => 'Username, IP address or IP range you want to block',
+			'user' => 'wiki_Username, IP address or IP range you want to block',
 			'token' => 'A block token previously obtained through prop=info',
 			'gettoken' => 'If set, a block token will be returned, and no other action will be taken',
 			'expiry' => 'Relative expiry time, e.g. \'5 months\' or \'2 weeks\'. If set to \'infinite\', \'indefinite\' or \'never\', the block will never expire.',

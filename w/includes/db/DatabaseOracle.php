@@ -249,7 +249,7 @@ class DatabaseOracle extends DatabaseBase {
 		}
 
 		$this->close();
-		$this->mUser = $user;
+		$this->mwiki_User = $user;
 		$this->mPassword = $password;
 		// changed internal variables functions
 		// mServer now holds the TNS endpoint
@@ -274,13 +274,13 @@ class DatabaseOracle extends DatabaseBase {
 		$session_mode = $this->mFlags & DBO_SYSDBA ? OCI_SYSDBA : OCI_DEFAULT;
 		wfSuppressWarnings();
 		if ( $this->mFlags & DBO_DEFAULT ) {
-			$this->mConn = oci_new_connect( $this->mUser, $this->mPassword, $this->mServer, $this->defaultCharset, $session_mode );
+			$this->mConn = oci_new_connect( $this->mwiki_User, $this->mPassword, $this->mServer, $this->defaultCharset, $session_mode );
 		} else {
-			$this->mConn = oci_connect( $this->mUser, $this->mPassword, $this->mServer, $this->defaultCharset, $session_mode );
+			$this->mConn = oci_connect( $this->mwiki_User, $this->mPassword, $this->mServer, $this->defaultCharset, $session_mode );
 		}
 		wfRestoreWarnings();
 
-		if ( $this->mUser != $this->mDBname ) {
+		if ( $this->mwiki_User != $this->mDBname ) {
 			//change current schema in session
 			$this->selectDB( $this->mDBname );
 		}
@@ -1058,7 +1058,7 @@ class DatabaseOracle extends DatabaseBase {
 
 	function selectDB( $db ) {
 		$this->mDBname = $db;
-		if ( $db == null || $db == $this->mUser ) {
+		if ( $db == null || $db == $this->mwiki_User ) {
 			return true;
 		}
 		$sql = 'ALTER SESSION SET CURRENT_SCHEMA=' . strtoupper($db);

@@ -7,7 +7,7 @@ wiki at http://www.mediawiki.org/
 
 Primary classes:
 
-  User
+  wiki_User
     Encapsulates the state of the user viewing/using the site. Can be queried
     for things like the user's settings, name, etc. Handles the details of
     getting and saving to the "user" table of the database, and dealing with
@@ -44,10 +44,10 @@ Primary classes:
     called from various other places when needed (most notably,
     OutputPage::addWikiText()). The StandardSkin object is a complete
     implementation, and is meant to be subclassed with other skins that may
-    override some of its functions. The User object contains a reference to a
+    override some of its functions. The wiki_User object contains a reference to a
     skin (according to that user's preference), and so rather than having a
-    global skin object we just rely on the global User and get the skin with
-    $wgUser->getSkin().
+    global skin object we just rely on the global wiki_User and get the skin with
+    $wgwiki_User->getSkin().
     See also skin.txt.
 
   Language

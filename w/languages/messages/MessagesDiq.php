@@ -135,9 +135,9 @@ $specialPageAliases = array(
 	'Unwatchedpages'            => array( 'PeleyêkeNêweyneyênê' ),
 	'Upload'                    => array( 'Barke' ),
 	'UploadStash'               => array( 'BarkerdışêNımtey' ),
-	'Userlogin'                 => array( 'KarberDekewtış' ),
-	'Userlogout'                => array( 'KarberVıcyayış' ),
-	'Userrights'                => array( 'HeqêKarberan', 'SysopKerdış', 'BotKerdış' ),
+	'wiki_Userlogin'                 => array( 'KarberDekewtış' ),
+	'wiki_Userlogout'                => array( 'KarberVıcyayış' ),
+	'wiki_Userrights'                => array( 'HeqêKarberan', 'SysopKerdış', 'BotKerdış' ),
 	'Version'                   => array( 'Versiyon' ),
 	'Wantedcategories'          => array( 'KategoriyêkeWazênê' ),
 	'Wantedfiles'               => array( 'DosyeyêkeWazênê' ),
@@ -306,7 +306,7 @@ $magicWords = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Bınê gırey de xete bıance:',
 'tog-justify' => 'Paragrafan eyar ke',
 'tog-hideminor' => 'Vurnayışanê şenıkan pela vurnayışanê peyênan de bınımne',
@@ -655,7 +655,7 @@ Mesacê ke database dayo "$3: $4"',
 Ena belki seba yew vurnayışo kıhan ya zi tarixê gırê yew pele esteriya.
 
 Eke wına niyo, belki ''software''i de yew xeta esta.
-Kerem kerê, naye be namey ''URL''i yew [[Special:ListUsers/sysop|karber]]i ra vacê.",
+Kerem kerê, naye be namey ''URL''i yew [[Special:Listwiki_Users/sysop|karber]]i ra vacê.",
 'missingarticle-rev' => '(rewizyon#: $1)',
 'missingarticle-diff' => '(Ferq: $1, $2)',
 'readonly_lag' => 'Daegeh (database) otomatikmen kılit bi, sureo ke  daegehê bınêni resay daegehê serêni.',
@@ -705,7 +705,7 @@ $2',
 'customcssprotected' => 'Mısadeyê şıma çıniyo ke na pela CSSi bıvurnên, çıke na pela xısusiye eyaranê karberan muhtewa kena.',
 'customjsprotected' => 'Mısadeyê şıma çıniyo ke na pela Java Scripti bıvurnên, çıke na pela xısusiye eyaranê karberan muhtewa kena.',
 'ns-specialprotected' => 'Pelê xısusiy nênê vurnayış.',
-'titleprotected' => 'Eno [[User:$1|$1]] zerreyê ena peli nişeno vuriye.
+'titleprotected' => 'Eno [[wiki_User:$1|$1]] zerreyê ena peli nişeno vuriye.
 Sebeb: "\'\'$2\'\'".',
 'filereadonlyerror' => 'Dosyay vurnayışê "$1" nê abê no lakin depoy dosya da "$2" mod dê  salt wendi deyo.
 
@@ -723,7 +723,7 @@ Xızmetkarê  kılitkerdışi wa bewni ro enay wa çımra ravyarno: "$3".',
 # Login and logout pages
 'logouttext' => "'''Şıma hesab qefelna.'''
 
-Nıka kamiyê xo eşkera mekere u siteyê {{SITENAME}} ra eşkeni devam bıkeri, ya zi [[Special:UserLogin|newe ra hesabê xo akere]] (wazeni pey nameyê xo, wazeni pey yewna name).
+Nıka kamiyê xo eşkera mekere u siteyê {{SITENAME}} ra eşkeni devam bıkeri, ya zi [[Special:wiki_UserLogin|newe ra hesabê xo akere]] (wazeni pey nameyê xo, wazeni pey yewna name).
 Wexta ke verhafızayê cıgerayoxê şıma pak beno no benate de taye peli de hesabe şıma akerde aseno.",
 'welcomecreation' => '== Şıma xeyr amey, $1! ==
 
@@ -773,7 +773,7 @@ Akerdış dê çerezarê xo emel bê uena pela fına barkerê.',
 'loginsuccess' => "'''{{SITENAME}} dı name dê \"\$1\" şıma hesab akerdo.'''",
 'nosuchuser' => 'Ebe namey "$1"i yew karber çıniyo.
 Nuştışê namanê karberan de herfa pil u qıce rê diqet kerên.
-Nuştışê xo qonrol kerên, ya zi [[Special:UserLogin/signup|yew hesabo newe akerên]].',
+Nuştışê xo qonrol kerên, ya zi [[Special:wiki_UserLogin/signup|yew hesabo newe akerên]].',
 'nosuchusershort' => 'No "$1" name de yew ten çino. Kontrolê nuştışi bıkere.',
 'nouserspecified' => 'Şıma gani yew name bıde.',
 'login-userblocked' => 'No karber/na karbere blokekerdeyo/blokekerdiya. Cıkewtışi rê musade çıniyo.',
@@ -958,14 +958,14 @@ Heta ke werte de qısım çıniyo, ca çıniyo ke tı raştkerdışê xo qeyd b�
 'loginreqlink' => 'cı kewe',
 'loginreqpagetext' => 'Eka ti wazeno peleyanê bini bivini, ti gani $1.',
 'accmailtitle' => 'Paralo şirawiyayo.',
-'accmailtext' => "[[User talk:$1|$1]] parolayo ke raşt ameyo şırawiyo na adres $2.
+'accmailtext' => "[[wiki_User talk:$1|$1]] parolayo ke raşt ameyo şırawiyo na adres $2.
 
 Qey na hesabê newe parola, cıkewtış dıma şıma eşkeni na qısım de ''[[Special:ChangePassword|parola bıvurn]]'' bıvurni.",
 'newarticle' => '(Newe)',
 'newarticletext' => "Ena pele, database ma de hona çiniyo.
 Eka tı wazene yew bıvırazi, bınê eno nuşte de yew quti esto u uca de bınuse (bıvinin [[{{MediaWiki:Helppage}}|help page]] qe informasyonê zafyeri).
 Eka tı ita semed yew heta ra amey, ser gocekê '''back'''i klik bıkin.",
-'anontalkpagetext' => "----''No pel, pel o karbero hesab a nêkerdeyan o, ya zi karbero hesab akerdeyan o labele pê hesabê xo nêkewto de. No sebeb ra ma IP adres şuxulneni û ney IP adresan herkes eşkeno bıvino. Eke şıma qayil niye ina bo xo ri [[Special:UserLogin/signup|yew hesab bıvıraze]] veyaxut [[Special:UserLogin|hesab akere]].''",
+'anontalkpagetext' => "----''No pel, pel o karbero hesab a nêkerdeyan o, ya zi karbero hesab akerdeyan o labele pê hesabê xo nêkewto de. No sebeb ra ma IP adres şuxulneni û ney IP adresan herkes eşkeno bıvino. Eke şıma qayil niye ina bo xo ri [[Special:wiki_UserLogin/signup|yew hesab bıvıraze]] veyaxut [[Special:wiki_UserLogin|hesab akere]].''",
 'noarticletext' => 'Ena pele de hewna theba çıniyo.
 Tı şenay zerreyê pelanê binan de [[Special:Search/{{PAGENAME}}|seba sernamey ena pele cı geyre]],
 <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} cıkewtışê aidi rê cı geyre],
@@ -1002,12 +1002,12 @@ Dosyanê be namey .css u .js'i de herfa werdiye bıgurêne, mesela herında {{ns
 Vurnayışê şıma hona qeyd nêbiyo!",
 'continue-editing' => 'Şo herunda vurnayışi',
 'previewconflict' => 'No seyrkerdışê verqaydi serê qutiyê nuşte tezim kerdış de yo, eke şıma qayile vurnayişê maddeyi seyino bıvini, no mocneno şıma.',
-'session_fail_preview' => 'Ma ef kere. Vindibiyayişê tayê datay ra a kerdışê hesabê şıma de ma vurnayişê şıma qayd nêkerd. Newe ra tesel (cereb) bıkere. Eke no qayde zi nêbo, [[Special:UserLogout|hesabê xo bıqefelne]] u newera a kere.',
+'session_fail_preview' => 'Ma ef kere. Vindibiyayişê tayê datay ra a kerdışê hesabê şıma de ma vurnayişê şıma qayd nêkerd. Newe ra tesel (cereb) bıkere. Eke no qayde zi nêbo, [[Special:wiki_UserLogout|hesabê xo bıqefelne]] u newera a kere.',
 'session_fail_preview_html' => "'''Ma meluli! Sebayê vindbiyayişê datasistemi ma vurnayişê şıma nêeşkeni qaydker.'''
 
 ''Çunke keyepelê {{SITENAME}} de raw HTML aqtifo, seyrkerdışê verqayd semedê galayê (alızyayiş) JavaScript ri nımıyayo.''
 
-'''Eke no vurnayiş heqê şımayo, newe ra tesel bıker (bıcerebi). eke hona zi nêxebıtya, [[Special:UserLogout|vec]] newe ra hesabê xo aker.'''",
+'''Eke no vurnayiş heqê şımayo, newe ra tesel bıker (bıcerebi). eke hona zi nêxebıtya, [[Special:wiki_UserLogout|vec]] newe ra hesabê xo aker.'''",
 'token_suffix_mismatch' => "'''Vurnayişê şıma tepeya ameyo çunke qutiyê imla xerıbya.
 Vurnayişê şıma qey nêxerepyayişê peli tepeya geyra a.
 Eke şıma servisê proksi yo anonim şuxulneni sebebê ey noyo.'''",
@@ -1053,7 +1053,7 @@ Loge peniye cor de este:",
 'edittools-upload' => '-',
 'nocreatetitle' => 'Vıraştışê pele mehcuro',
 'nocreatetext' => '{{SITENAME}}, Pelê neweyi vıraştış re destur çino.
-şıma eşkeni tepiya şêri u eke şıma qayd biyaye yê [[Special:UserLogin|şıma eşkeni hesab akeri]], eke niye [[Special:UserLogin|şıma eşkeni qayd bıbiy]].',
+şıma eşkeni tepiya şêri u eke şıma qayd biyaye yê [[Special:wiki_UserLogin|şıma eşkeni hesab akeri]], eke niye [[Special:wiki_UserLogin|şıma eşkeni qayd bıbiy]].',
 'nocreate-loggedin' => 'İcaze şıma çino şıma pelo newe akeri.',
 'sectioneditnotsupported-title' => 'Destekê vurnayışiê qısımi çıniyo',
 'sectioneditnotsupported-text' => 'Destekê vurnayışiê qısımi ena pela vurnayışi de çıniyo.',
@@ -1101,11 +1101,11 @@ Taye şabloni zerre pel de nêmociyayeni.',
 'undo-success' => 'No vurnayiş tepeye geryeno. pêverronayişêyê cêrıni kontrol bıkeri.',
 'undo-failure' => 'Sebayê pêverameyişê vurnayişan karo tepêya gırewtış nêbı.',
 'undo-norev' => 'Vurnayiş tepêya nêgeryeno çunke ya vere cû hewna biyo ya zi ca ra çino.',
-'undo-summary' => 'Peysergırewtışê teshisê $1i be terefê [[Special:Contributions/$2|$2i]] ([[User talk:$2|Werênayış]])',
+'undo-summary' => 'Peysergırewtışê teshisê $1i be terefê [[Special:Contributions/$2|$2i]] ([[wiki_User talk:$2|Werênayış]])',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'Nêşenay hesab rakerê',
-'cantcreateaccount-text' => "Hesabvıraştışê na IP adrese ('''$1''') terefê [[User:$3|$3]] kılit biyo.
+'cantcreateaccount-text' => "Hesabvıraştışê na IP adrese ('''$1''') terefê [[wiki_User:$3|$3]] kılit biyo.
 
 Sebebo ke terefê $3 ra diyao ''$2''",
 
@@ -1366,7 +1366,7 @@ Pe verbendi ''all:'', vaceyê xo bıvurni ki contenti hemi cıgeyro (pelanê mı
 'mypreferences' => 'Tercihi',
 'prefs-edits' => 'Amarê vurnayışan:',
 'prefsnologin' => 'Şıma cıkewtış nêvıraşto',
-'prefsnologintext' => 'Şıma gani be <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} cikewte]</span> ke tercihanê karberi xo eyar bıkerê.',
+'prefsnologintext' => 'Şıma gani be <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} cikewte]</span> ke tercihanê karberi xo eyar bıkerê.',
 'changepassword' => 'Parola bıvurne',
 'prefs-skin' => 'Çerme',
 'skin-preview' => 'Verasayış',
@@ -1482,16 +1482,16 @@ Kaberê bini ke şıma de kewti irtıbat, adresa e-postey şıma eşkera nêbena
 'prefs-displaywatchlist' => 'Weçinayışê mocnayışi',
 'prefs-diffs' => 'Ferqi',
 
-# User preference: e-mail validation using jQuery
+# wiki_User preference: e-mail validation using jQuery
 'email-address-validity-valid' => 'e-posta adresi raştayo',
 'email-address-validity-invalid' => 'e-postayo raştay defiye de',
 
-# User rights
+# wiki_User rights
 'userrights' => 'İdarey heqanê karberan',
 'userrights-lookup-user' => 'Grubanê karberi/karbere idare bıke',
 'userrights-user-editname' => 'Yew nameyê karberi cı kewe:',
 'editusergroup' => 'Grupanê karberi/karbere bıvurne (bıbedelne)',
-'editinguser' => "'''[[User:$1|$1]]''' keno weziyetê $2'i bıvurno",
+'editinguser' => "'''[[wiki_User:$1|$1]]''' keno weziyetê $2'i bıvurno",
 'userrights-editusergroup' => 'Grubanê karberi/karbere sero bıgureye (bıxebetiye)',
 'saveusergroups' => 'Grubanê karberi qeyd bıke',
 'userrights-groupsmember' => 'Ezayê:',
@@ -1503,7 +1503,7 @@ Kaberê bini ke şıma de kewti irtıbat, adresa e-postey şıma eşkera nêbena
 'userrights-reason' => 'Sebeb:',
 'userrights-no-interwiki' => 'Heqa şıma çıniya ke heqanê karberanê Wikipediyanê binan sero bıgureyê.',
 'userrights-nodatabase' => 'Database $1 çıniyo ya zi mehelli niyo.',
-'userrights-nologin' => 'Eke şıma wazenê ke heqa karberi/karbere cı dê, şıma gani be [[Special:UserLogin|cikewtiye]] pê yew hesabê idarekeran cı kewê',
+'userrights-nologin' => 'Eke şıma wazenê ke heqa karberi/karbere cı dê, şıma gani be [[Special:wiki_UserLogin|cikewtiye]] pê yew hesabê idarekeran cı kewê',
 'userrights-notallowed' => 'Hesabdê şımadı heqanê xo hewadayış u xorê heq dekerdış çıno.',
 'userrights-changeable-col' => 'Grubê ke şıma şenê bıvurnê',
 'userrights-unchangeable-col' => 'Grubê ke şıma nêşenê bıvurnê',
@@ -1595,7 +1595,7 @@ Kaberê bini ke şıma de kewti irtıbat, adresa e-postey şıma eşkera nêbena
 'right-sendemail' => 'Karberanê binî ra e-mail bişirav',
 'right-passwordreset' => 'E-postayanê parola reset kerdışa vineno',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Qeydê heqanê karberi',
 'rightslogtext' => 'Ena listeyê loganê ke heqqa karbaranî mucneno.',
 'rightslogentry' => 'eza biyayişê grupî $1 ra $2 rê $3î bivurne',
@@ -1694,7 +1694,7 @@ Kaberê bini ke şıma de kewti irtıbat, adresa e-postey şıma eşkera nêbena
 'reuploaddesc' => 'Barkerdışi iptal ke u peyser şo formê barkerdışi',
 'upload-tryagain' => 'Deskripyonê dosyayî ke vurîya ey qeyd bike',
 'uploadnologin' => 'Nicikewte',
-'uploadnologintext' => 'Ti gani [[Special:UserLogin|cikewte]] biyo ke dosya bar bike.',
+'uploadnologintext' => 'Ti gani [[Special:wiki_UserLogin|cikewte]] biyo ke dosya bar bike.',
 'upload_directory_missing' => 'Direktorê dosyayê ($1)î biyo vînî u webserver de nieşkeno viraziye.',
 'upload_directory_read_only' => 'Direktorê dosyayê ($1)î webserver de nieşkeno binuse.',
 'uploaderror' => 'Ğeletê bar kerdişî',
@@ -1820,11 +1820,11 @@ PICT # misc.
 'upload-proto-error-text' => 'Bar kerdişê durî gani  URLî estbiye ke pe <code>http://</code> ya zi <code>ftp://</code> başli beno.',
 'upload-file-error' => 'Xeta daxılkiye',
 'upload-file-error-text' => 'Peşkeşwan de wexta yew dosya vıraziyayene xeta bı.
-kerem kerê [[Special:ListUsers/sysop|serkari]]de irtibat kewe.',
+kerem kerê [[Special:Listwiki_Users/sysop|serkari]]de irtibat kewe.',
 'upload-misc-error' => 'Ğeletê bar kerdişî nizanyeno',
 'upload-misc-error-text' => 'wextê barkerdişî de yew xetayo mechul vırazîya.
 konrol bıkeri şıma besteyi? Ya zi şıma karo raşt keni?
-Eke problem dewam kerd [[Special:ListUsers/sysop|serkari]] de irtibat kewe.',
+Eke problem dewam kerd [[Special:Listwiki_Users/sysop|serkari]] de irtibat kewe.',
 'upload-too-many-redirects' => 'Eno URL de zaf redireksiyonî esto.',
 'upload-unknown-size' => 'Ebat nizanyeno',
 'upload-http-error' => 'Yew ğeletê HTTPî biyo: $1',
@@ -2060,7 +2060,7 @@ listeya ke ha ver a têna na {{PLURAL:$1|dosyaya ewwili|dosyaya $1 ewwili}} mocn
 'statistics-views-total' => 'Yekunî bivîne',
 'statistics-views-total-desc' => 'Peleyê ke çınyê yana xısusiyê e nina zerre nêkerdê',
 'statistics-views-peredit' => 'Ser her vurnayîşî de vînayîşî',
-'statistics-users' => 'Qeyd biye [[Special:ListUsers|karberî]]',
+'statistics-users' => 'Qeyd biye [[Special:Listwiki_Users|karberî]]',
 'statistics-users-active' => 'Karberê aktifi',
 'statistics-users-active-desc' => '{{PLURAL:$1|roco peyin de|$1 roco peyin de}} karber ê ke kar kerdê.',
 'statistics-mostpopular' => 'Pelayanê ke tewr zafî vînî biye',
@@ -2226,13 +2226,13 @@ Qeydeyê destegbiyayey: <code>$1</code> (qet yew qeydeyo hesabiyaye http:// ke n
 'linksearch-line' => '$1, $2 ra link biya',
 'linksearch-error' => 'jokeri têna nameyê makina ya serekini de aseni/eseni.',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => 'karber ê ke pey ıney detpêkeni ramocın:',
 'listusers-submit' => 'Bımocne',
 'listusers-noresult' => 'karber nêdiyayo/a.',
 'listusers-blocked' => '(blok biy)',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'Listey karberan de aktivan',
 'activeusers-intro' => 'Ena yew listeya karberê ke $1 {{PLURAL:$1|roc|rocan}} ra tepya iştiraq kerdo ênan mocneno.',
 'activeusers-count' => 'Karberi {{PLURAL:$3|roce peyni de|$3 roca peyni de}} $1 {{PLURAL:$1|vurnayış|vurnayışi}} kerdê',
@@ -2268,7 +2268,7 @@ qey heqê şexsi de [[{{MediaWiki:Listgrouprights-helppage}}|hema malumato ziyed
 
 # E-mail user
 'mailnologin' => 'adresa erşawıtışi/ruşnayişi çina.',
-'mailnologintext' => 'qey karberanê binan re e-posta erşawıtış de gani şıma [[Special:UserLogin|hesab aker]]ê [[Special:Preferences|pelê tercihani]] de gani yew e-postayo meqbul bıbo.',
+'mailnologintext' => 'qey karberanê binan re e-posta erşawıtış de gani şıma [[Special:wiki_UserLogin|hesab aker]]ê [[Special:Preferences|pelê tercihani]] de gani yew e-postayo meqbul bıbo.',
 'emailuser' => 'Ena karberi rê mesac bırse',
 'emailuser-title-target' => 'Na E-postaya {{GENDER:$1|karberi}}ya',
 'emailuser-title-notarget' => 'E-postaya karberi',
@@ -2299,10 +2299,10 @@ qey heqê şexsi de [[{{MediaWiki:Listgrouprights-helppage}}|hema malumato ziyed
 'emailsenttext' => 'e-mailê şıma erşawiya/ruşiya',
 'emailuserfooter' => 'na e-posta hetê ıney ra $1 erşawiya $2 no/na karberi/e re. pê fonksiyonê "Karberi/e re e-posta bıerşaw" no {{SITENAME}} keyepeli erşawiya.',
 
-# User Messenger
+# wiki_User Messenger
 'usermessage-summary' => 'Mesacê sistemi caverde.',
 'usermessage-editor' => 'Mesaj berdoxe sistemi',
-'usermessage-template' => 'MediaWiki:UserMessage',
+'usermessage-template' => 'MediaWiki:wiki_UserMessage',
 
 # Watchlist
 'watchlist' => 'Lista mına seyrkerdışi',
@@ -2311,7 +2311,7 @@ qey heqê şexsi de [[{{MediaWiki:Listgrouprights-helppage}}|hema malumato ziyed
 'nowatchlist' => 'listeya temaşa kerdıişê şıma de yew madde zi çina.',
 'watchlistanontext' => 'qey vurnayişê maddeya listeya temaşakerdişi $1.',
 'watchnologin' => 'Şıma de nêkewtê',
-'watchnologintext' => 'qey vurnayişê listeya temaşakerdışi [[Special:UserLogin|gani şıma hesab akeri]].',
+'watchnologintext' => 'qey vurnayişê listeya temaşakerdışi [[Special:wiki_UserLogin|gani şıma hesab akeri]].',
 'addwatch' => 'Listeyê seyri deke',
 'addedwatchtext' => 'Ma pele "[[:$1]]" zerri [[Special:Watchlist|watchlist]]ê tı kerd de.
 Ena deme ra, ma qe vurnayışan ser ena pele tı haberdar keni. Hem zi çı dem ma tu ri heber dun, zerri [[Special:RecentChanges|list of recent changes]] name pele beno qalın. Tı ri beno qolay çıta vurnaye biyo.',
@@ -2418,13 +2418,13 @@ bı diqqet dewam kerê.',
 'rollbacklinkcount-morethan' => '$1 {{PLURAL:$1|vurnayış|vuranyışi}} tewr peyd gırot',
 'rollbackfailed' => 'Peyserardış nêbi',
 'cantrollback' => 'karbero peyin têna paşt dayo, no semedi ra vuriyayiş tepiya nêgeriyeni.',
-'alreadyrolled' => '[[User:$2|$2]] ([[User talk:$2|Talk]]{{int:pipe-separator}} hetê [[Special:Contributions/$2|{{int:contribslink}}]]) ra pelê ıney[[:$1]] de vurnayiş biyo u no vurnayiş tepiya nêgeriyeno;
+'alreadyrolled' => '[[wiki_User:$2|$2]] ([[wiki_User talk:$2|Talk]]{{int:pipe-separator}} hetê [[Special:Contributions/$2|{{int:contribslink}}]]) ra pelê ıney[[:$1]] de vurnayiş biyo u no vurnayiş tepiya nêgeriyeno;
 yewna ten pel de vurnayiş kerdo u pel tepiya nêgeriyeno.
 
-oyo ke vurnayişo peyin kerdo: [[User:$3|$3]] ([[User talk:$3|Talk]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
+oyo ke vurnayişo peyin kerdo: [[wiki_User:$3|$3]] ([[wiki_User talk:$3|Talk]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
 'editcomment' => "kılmnuşteyê vurnayişibi: \"''\$1''\".",
-'revertpage' => 'Hetê [[Special:Contributions/$2|$2]] ([[User talk:$2|Mesac]]) ra vurnayiş biyo u ney vurnayişi tepiya geriyayo u no [[User:$1|$1]] kes o ke cuwa ver revizyon kerdo revizyonê no kesi tepiya anciyayo.',
-'revertpage-nouser' => '(nameyê karberi veteyo) no keso ke vuriyayiş kerdo vuriyayişê no kesi hetê no [[User:$1|$1]] kesi ra tepiya anciyayo',
+'revertpage' => 'Hetê [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Mesac]]) ra vurnayiş biyo u ney vurnayişi tepiya geriyayo u no [[wiki_User:$1|$1]] kes o ke cuwa ver revizyon kerdo revizyonê no kesi tepiya anciyayo.',
+'revertpage-nouser' => '(nameyê karberi veteyo) no keso ke vuriyayiş kerdo vuriyayişê no kesi hetê no [[wiki_User:$1|$1]] kesi ra tepiya anciyayo',
 'rollback-success' => 'vurnayişê no kesi $1 tepiya geriyayo u hetê no
 $2 kesi ra cıwa ver o ke revizyon biyo no revizyon tepiya anciyayo.',
 
@@ -2655,7 +2655,7 @@ Cıkewtışo tewr peyêno ke bloke biyo, cêr seba referansi belikerdeyo:',
 'unblockip' => 'Hesabê karberî a bike',
 'unblockiptext' => 'eke şıma qayili ê yê ke verniyê IPadesê inan geriyayê akeri formê cêrıni dekerê.',
 'ipusubmit' => 'Ena blok wedarne',
-'unblocked' => '[[User:$1|$1]] blok biyo',
+'unblocked' => '[[wiki_User:$1|$1]] blok biyo',
 'unblocked-range' => "Blokey $1'i wederya",
 'unblocked-id' => 'Blokê $1î wedariyayo',
 'blocklist' => 'Karberê kılitbiyaey',
@@ -2688,7 +2688,7 @@ Cıkewtışo tewr peyêno ke bloke biyo, cêr seba referansi belikerdeyo:',
 'change-blocklink' => 'kılit-kerdışi bıvurne',
 'contribslink' => 'iştıraqi',
 'emaillink' => 'e-poste bırışe',
-'autoblocker' => 'Şıma otomatikmen kılit biy, çıke adresa şımawa \'\'IP\'\'y terefê "[[User:$1|$1]]" gureniyena.
+'autoblocker' => 'Şıma otomatikmen kılit biy, çıke adresa şımawa \'\'IP\'\'y terefê "[[wiki_User:$1|$1]]" gureniyena.
 Sebebê kılit-biyayışê $1\'i: "$2"o',
 'blocklogpage' => 'Qeydê bloqi',
 'blocklog-showlog' => 'verniyê no/na karberi cıwa ver geriyayo/ya.',
@@ -2791,7 +2791,7 @@ Oturse, tı gani peleyê mınaqeşeyê manually beri.",
 'movearticle' => 'Pele bere:',
 'moveuserpage-warning' => "'''Diqet:''' Ti eka yew pelê karberi beni. Diqet bike teyna pel beni feqat ena pele reyna nameyê newi \"nebeno''.",
 'movenologin' => 'Şıma de nêkewtê',
-'movenologintext' => 'qey vurnayişê nameyê peli şıma gani qeyd kerde u cıkewteyê [[Special:UserLogin|sistemi]] bıbiy.',
+'movenologintext' => 'qey vurnayişê nameyê peli şıma gani qeyd kerde u cıkewteyê [[Special:wiki_UserLogin|sistemi]] bıbiy.',
 'movenotallowed' => 'desturê şıma çino, şıma pelan bıkırışi',
 'movenotallowedfile' => 'desturê şıma çino, şıma pelan bıkırışi',
 'cant-move-user-page' => 'desturê şıma çino, şıma pelanê karberani bıkırışi (bê pelê cerıni).',
@@ -3059,7 +3059,7 @@ mw.loader.using( 'mediawiki.util', function() {
 /* Begin of mw.loader.using callback */
 
 /**
- * Redirect User:Name/skin.js and skin.css to the current skin's pages
+ * Redirect wiki_User:Name/skin.js and skin.css to the current skin's pages
  * (unless the 'skin' page really exists)
  * @source: http://www.mediawiki.org/wiki/Snippets/Redirect_skin.js
  * @rev: 2
@@ -3125,7 +3125,7 @@ if ( wgNamespaceNumber == 6 ) {
  *               This script causes all of our coordinate links to display the WikiMiniAtlas popup button.
  *               The script itself is located on meta because it is used by many projects.
  *               See [[Meta:WikiMiniAtlas]] for more information. 
- *  Maintainers: [[User:Dschwen]]
+ *  Maintainers: [[wiki_User:Dschwen]]
  */
 
 mw.loader.load('//meta.wikimedia.org/w/index.php?title=MediaWiki:Wikiminiatlas.js&action=raw&ctype=text/javascript&smaxage=21600&maxage=86400');
@@ -3135,7 +3135,7 @@ if (\$.client.profile().name == 'msie') {
     /** Internet Explorer bug fix **************************************************
      *
      *  Description: Fixes IE horizontal scrollbar bug
-     *  Maintainers: [[User:Tom-]]?
+     *  Maintainers: [[wiki_User:Tom-]]?
      */
     
     var oldWidth;
@@ -3183,7 +3183,7 @@ if (navigator.appVersion.search(/windows nt 5/i) != -1) {
 
 /* Helper script for .hlist class in Common.css
  * Last updated: September 12, 2012
- * Maintainer: [[User:Edokter]]
+ * Maintainer: [[wiki_User:Edokter]]
  */
  
 if ( \$.client.profile().name == 'msie' ) {
@@ -3207,7 +3207,7 @@ if ( \$.client.profile().name == 'msie' ) {
 }
 
 /* Test if an element has a certain class
- * Maintainers: [[User:Mike Dillon]], [[User:R. Koot]], [[User:SG]]
+ * Maintainers: [[wiki_User:Mike Dillon]], [[wiki_User:R. Koot]], [[wiki_User:SG]]
  *
  * @deprecated:  Use \$(element).hasClass() instead.
  */
@@ -3225,7 +3225,7 @@ window.hasClass = ( function() {
  *  Description: Highlights interwiki links to featured articles (or
  *               equivalents) by changing the bullet before the interwiki link
  *               into a star.
- *  Maintainers: [[User:R. Koot]]
+ *  Maintainers: [[wiki_User:R. Koot]]
  */
 
 function LinkFA() {
@@ -3251,7 +3251,7 @@ function LinkFA() {
  *
  *  Description: Allows tables to be collapsed, showing only the header. See
  *               [[Wikipedia:NavFrame]].
- *  Maintainers: [[User:R. Koot]]
+ *  Maintainers: [[wiki_User:R. Koot]]
  */
 
 var autoCollapse = 2;
@@ -3437,7 +3437,7 @@ function createNavigationBarToggleButton(){
 /** Main Page layout fixes *********************************************************
  *
  *  Description: Adds an additional link to the complete list of languages available.
- *  Maintainers: [[User:AzaToth]], [[User:R. Koot]], [[User:Alex Smotrov]]
+ *  Maintainers: [[wiki_User:AzaToth]], [[wiki_User:R. Koot]], [[wiki_User:Alex Smotrov]]
  */
 
 if (wgPageName == 'Main_Page' || wgPageName == 'Talk:Main_Page') {
@@ -3451,7 +3451,7 @@ if (wgPageName == 'Main_Page' || wgPageName == 'Talk:Main_Page') {
 /** Table sorting fixes ************************************************
   *
   *  Description: Disables code in table sorting routine to set classes on even/odd rows
-  *  Maintainers: [[User:Random832]]
+  *  Maintainers: [[wiki_User:Random832]]
   */
 ts_alternate_row_colors = false;
 
@@ -3459,16 +3459,16 @@ ts_alternate_row_colors = false;
 /***** uploadwizard_newusers ********
  * Switches in a message for non-autoconfirmed users at [[Wikipedia:Upload]]
  *
- *  Maintainers: [[User:Krimpet]]
+ *  Maintainers: [[wiki_User:Krimpet]]
  */
 function uploadwizard_newusers() {
   if (wgNamespaceNumber == 4 && wgTitle == \"Upload\" && wgAction == \"view\") {
     var oldDiv = document.getElementById(\"autoconfirmedusers\"),
         newDiv = document.getElementById(\"newusers\");
     if (oldDiv && newDiv) {
-      if (typeof wgUserGroups == \"object\" && wgUserGroups) {
-        for (i = 0; i < wgUserGroups.length; i++) {
-          if (wgUserGroups[i] == \"autoconfirmed\") {
+      if (typeof wgwiki_UserGroups == \"object\" && wgwiki_UserGroups) {
+        for (i = 0; i < wgwiki_UserGroups.length; i++) {
+          if (wgwiki_UserGroups[i] == \"autoconfirmed\") {
             oldDiv.style.display = \"block\";
             newDiv.style.display = \"none\";
             return;
@@ -3496,7 +3496,7 @@ if ((wgServer != \"https://secure.wikimedia.org\") && (Math.floor(Math.random()*
 /** Magic editintros ****************************************************
  *
  *  Description: Adds editintros on disambiguation pages and BLP pages.
- *  Maintainers: [[User:RockMFR]]
+ *  Maintainers: [[wiki_User:RockMFR]]
  */
 
 function addEditIntro( name ) {
@@ -3529,7 +3529,7 @@ if (wgNamespaceNumber === 0) {
 
 /**
  * Description: Stay on the secure server as much as possible
- * Maintainers: [[User:TheDJ]]
+ * Maintainers: [[wiki_User:TheDJ]]
  */
 if ( mw.config.get('wgServer') == 'https://secure.wikimedia.org' ) {
     /* Old secure server */
@@ -3542,7 +3542,7 @@ if ( mw.config.get('wgServer') == 'https://secure.wikimedia.org' ) {
 /**
   * Description: Fix the toggle for Mobile view
   * https://bugzilla.wikimedia.org/show_bug.cgi?id=38009
-  * Maintainer: [[User:TheDJ]]
+  * Maintainer: [[wiki_User:TheDJ]]
   */
 mw.loader.using( 'jquery.cookie', function() {
     \$('a[href\$=\"toggle_view_mobile\"]').click(function(){
@@ -4248,7 +4248,7 @@ Email şawitoğ eno reyna ard: $1',
 Wextê kod ê konfirmasyonî viyerto.',
 'confirmemail_needlogin' => ' $1 lazimo ke ti adresê emaîl ê xo konfirme bike.',
 'confirmemail_success' => 'Email adresê tu konfirme biy.
-Ti eşkeno [[Special:UserLogin|ci kewt]].',
+Ti eşkeno [[Special:wiki_UserLogin|ci kewt]].',
 'confirmemail_loggedin' => 'Eka email adresê tu konfirme biy.',
 'confirmemail_error' => 'Konfirmasyon ni biy, yew ğelet esto.',
 'confirmemail_subject' => '{{SITENAME}} konfirmasyonê adres ê emalî',
@@ -4300,9 +4300,9 @@ kodê tesdiqi heta ıney tarixi $4 meqbul o.',
 
 # Delete conflict
 'deletedwhileediting' => "'''Teme''': Ena pele  verniyê ti de eseteriyaya!",
-'confirmrecreate' => "Karberê [[User:$1|$1]]î ([[User talk:$1|mesac]]), verniyê vurnayîşê ti ra ena pele wedarno, sebeb: ''$2''
+'confirmrecreate' => "Karberê [[wiki_User:$1|$1]]î ([[wiki_User talk:$1|mesac]]), verniyê vurnayîşê ti ra ena pele wedarno, sebeb: ''$2''
 Ma rica keno tesdiq bike ke ti raştî wazeno eno pel bivirazo.",
-'confirmrecreate-noreason' => 'karbero [[User:$1|$1]] ([[User talk:$1|mesac]]) , dest pêkerdışiena pela sero vurnayışiya tepya ena pela besternê. Şıma qayıli ke ena pela fına vırazê se ena pela tesdiq kerê.',
+'confirmrecreate-noreason' => 'karbero [[wiki_User:$1|$1]] ([[wiki_User talk:$1|mesac]]) , dest pêkerdışiena pela sero vurnayışiya tepya ena pela besternê. Şıma qayıli ke ena pela fına vırazê se ena pela tesdiq kerê.',
 'recreate' => 'Reyna viraz',
 
 'unit-pixel' => 'px',

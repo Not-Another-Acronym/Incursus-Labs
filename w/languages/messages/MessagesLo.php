@@ -73,8 +73,8 @@ $specialPageAliases = array(
 	'Unusedimages'              => array( 'ຮູບທີ່ບໍ່ໄດ້ໃຊ້' ),
 	'Unusedtemplates'           => array( 'ແມ່ແບບທີ່ບໍ່ໄດ້ໃຊ້' ),
 	'Upload'                    => array( 'ອັປໂຫຼດໄຟລ໌' ),
-	'Userlogin'                 => array( 'ເຊັນເຂົ້າ' ),
-	'Userlogout'                => array( 'ເຊັນອອກ' ),
+	'wiki_Userlogin'                 => array( 'ເຊັນເຂົ້າ' ),
+	'wiki_Userlogout'                => array( 'ເຊັນອອກ' ),
 	'Wantedcategories'          => array( 'ໝວດທີ່ຕ້ອງການ' ),
 	'Wantedpages'               => array( 'ໜ້າທີ່ຕ້ອງການ', 'ລິງກ໌ທີ່້ເສຍ' ),
 	'Watchlist'                 => array( 'ຕິດຕາມ' ),
@@ -95,7 +95,7 @@ $digitTransformTable = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'ຂີດເສັ້ນກ້ອງລິງກ໌:',
 'tog-hideminor' => 'ເຊື່ອງການດັດແກ້ເລັກນ້ອຍ ໃນ ການປ່ຽນແປງຫຼ້າສຸດ',
 'tog-hidepatrolled' => 'ເຊື່ອງ ການລາດຕະເວນດັດແກ້ ໃນ ການດັດແກ້ຫຼ້າສຸດ',
@@ -437,11 +437,11 @@ $messages = array(
 'template-protected' => '(ປົກປ້ອງ)',
 'template-semiprotected' => '(ເຄິ່ງປົກປ້ອງ)',
 'nocreatetext' => '{{SITENAME}} ໄດ້ຈຳກັດການສ້າງໜ້າໃໝ່.
-ທ່ານສາມາດກັບໄປ ດັດແກ້ ໜ້າທີ່ມີແລ້ວ ຫຼື [[Special:UserLogin|ເຊັນເຂົ້າ ຫຼື ສ້າງບັນຊີ]].',
+ທ່ານສາມາດກັບໄປ ດັດແກ້ ໜ້າທີ່ມີແລ້ວ ຫຼື [[Special:wiki_UserLogin|ເຊັນເຂົ້າ ຫຼື ສ້າງບັນຊີ]].',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'ບໍ່ສາມາດສ້າງ ບັນຊີ ໄດ້',
-'cantcreateaccount-text' => "ການສ້າງບັນຊີ ຈາກ IP ນີ້ (<b>$1</b>) ໄດ້ຖືກຫ້າມ ໂດຍ [[User:$3|$3]].
+'cantcreateaccount-text' => "ການສ້າງບັນຊີ ຈາກ IP ນີ້ (<b>$1</b>) ໄດ້ຖືກຫ້າມ ໂດຍ [[wiki_User:$3|$3]].
 
 ເຫດຜົນ ໃຫ້ໄວ້ ໂດຍ $3 ແມ່ນ ''$2''",
 
@@ -535,8 +535,8 @@ $messages = array(
 'email' => 'ອີເມລ',
 'prefs-help-email' => '* ອີເມລ (ເລືອກໄດ້): ໃຫ້ຜູ້ອື່ນ ສາມາດຕິດຕໍ່ຫາ ທ່ານ ຜ່ານ ໜ້າຜູ້ໃຊ້ ຫຼື ໜ້າສົນທະນາຜູ້ໃຊ້ ຂອງ ທ່ານ ໂດຍ ບໍ່ຈຳເປັນຕ້ອງ ເປີດເຜີຍ ອີເມລຂອງທ່ານ.',
 
-# User rights
-'editinguser' => 'ຜູ້ໃຊ້ <b>$1</b> ພວມດັດແກ້ ([[User talk:$1|{{int:talkpagelinktext}}]] | [[Special:Contributions/$1|{{int:contribslink}}]])',
+# wiki_User rights
+'editinguser' => 'ຜູ້ໃຊ້ <b>$1</b> ພວມດັດແກ້ ([[wiki_User talk:$1|{{int:talkpagelinktext}}]] | [[Special:Contributions/$1|{{int:contribslink}}]])',
 
 # Recent changes
 'nchanges' => '$1 {{PLURAL:$1|ການປ່ຽນແປງ|ການປ່ຽນແປງ}}',
@@ -683,7 +683,7 @@ Also see [[Special:WantedCategories|wanted categories]].',
 # Special:LinkSearch
 'linksearch' => 'ຄົ້ນຫາການເຊື່ອມຕໍ່ຫາເວັບ',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusers-submit' => 'ສະແດງ',
 
 # Special:Log/newusers
@@ -808,7 +808,7 @@ Also see [[Special:WantedCategories|wanted categories]].',
 'ipblocklist' => 'ລາຍການ ທີ່ຢູ່ IP ແລະ ຊື່ຜູ້ໃຊ້ ທີ່ຖືກຫ້າມ',
 'blocklink' => 'ຫ້າມ',
 'contribslink' => 'ປະກອບສ່ວນ',
-'autoblocker' => 'ຫ້າມໂດຍອັດຕາໂນມັດ ຍ້ອນ ທີ່ຢູ່ IP ຂອງທ່ານ ຖືກໃຊ້ໂດຍ "[[User:$1|$1]]" ໃນໄລຍະຫຼັງ. ເຫດຜົນໃນການຫ້າມ  $1 ແມ່ນ : "$2"',
+'autoblocker' => 'ຫ້າມໂດຍອັດຕາໂນມັດ ຍ້ອນ ທີ່ຢູ່ IP ຂອງທ່ານ ຖືກໃຊ້ໂດຍ "[[wiki_User:$1|$1]]" ໃນໄລຍະຫຼັງ. ເຫດຜົນໃນການຫ້າມ  $1 ແມ່ນ : "$2"',
 'blocklogpage' => 'ບັນທຶກການຫ້າມ',
 'blocklogentry' => 'ໄດ້ຫ້າມ "[[$1]]" ຈົນຮອດ $2 $3',
 

@@ -26,9 +26,9 @@
 class Revision implements IDBAccessObject {
 	protected $mId;
 	protected $mPage;
-	protected $mUserText;
-	protected $mOrigUserText;
-	protected $mUser;
+	protected $mwiki_UserText;
+	protected $mOrigwiki_UserText;
+	protected $mwiki_User;
 	protected $mMinorEdit;
 	protected $mTimestamp;
 	protected $mDeleted;
@@ -316,7 +316,7 @@ class Revision implements IDBAccessObject {
 		$fields = array_merge(
 			self::selectFields(),
 			self::selectPageFields(),
-			self::selectUserFields()
+			self::selectwiki_UserFields()
 		);
 		$options = array( 'LIMIT' => 1 );
 		if ( ( $flags & self::READ_LOCKING ) == self::READ_LOCKING ) {
@@ -405,7 +405,7 @@ class Revision implements IDBAccessObject {
 	 * Return the list of user fields that should be selected from user table
 	 * @return array
 	 */
-	public static function selectUserFields() {
+	public static function selectwiki_UserFields() {
 		return array( 'user_name' );
 	}
 
@@ -444,7 +444,7 @@ class Revision implements IDBAccessObject {
 			$this->mPage      = intval( $row->rev_page );
 			$this->mTextId    = intval( $row->rev_text_id );
 			$this->mComment   =         $row->rev_comment;
-			$this->mUser      = intval( $row->rev_user );
+			$this->mwiki_User      = intval( $row->rev_user );
 			$this->mMinorEdit = intval( $row->rev_minor_edit );
 			$this->mTimestamp =         $row->rev_timestamp;
 			$this->mDeleted   = intval( $row->rev_deleted );
@@ -485,22 +485,22 @@ class Revision implements IDBAccessObject {
 			}
 
 			// Use user_name for users and rev_user_text for IPs...
-			$this->mUserText = null; // lazy load if left null
-			if ( $this->mUser == 0 ) {
-				$this->mUserText = $row->rev_user_text; // IP user
+			$this->mwiki_UserText = null; // lazy load if left null
+			if ( $this->mwiki_User == 0 ) {
+				$this->mwiki_UserText = $row->rev_user_text; // IP user
 			} elseif ( isset( $row->user_name ) ) {
-				$this->mUserText = $row->user_name; // logged-in user
+				$this->mwiki_UserText = $row->user_name; // logged-in user
 			}
-			$this->mOrigUserText = $row->rev_user_text;
+			$this->mOrigwiki_UserText = $row->rev_user_text;
 		} elseif( is_array( $row ) ) {
 			// Build a new revision to be saved...
-			global $wgUser; // ugh
+			global $wgwiki_User; // ugh
 
 			$this->mId        = isset( $row['id']         ) ? intval( $row['id']         ) : null;
 			$this->mPage      = isset( $row['page']       ) ? intval( $row['page']       ) : null;
 			$this->mTextId    = isset( $row['text_id']    ) ? intval( $row['text_id']    ) : null;
-			$this->mUserText  = isset( $row['user_text']  ) ? strval( $row['user_text']  ) : $wgUser->getName();
-			$this->mUser      = isset( $row['user']       ) ? intval( $row['user']       ) : $wgUser->getId();
+			$this->mwiki_UserText  = isset( $row['user_text']  ) ? strval( $row['user_text']  ) : $wgwiki_User->getName();
+			$this->mwiki_User      = isset( $row['user']       ) ? intval( $row['user']       ) : $wgwiki_User->getId();
 			$this->mMinorEdit = isset( $row['minor_edit'] ) ? intval( $row['minor_edit'] ) : 0;
 			$this->mTimestamp = isset( $row['timestamp']  ) ? strval( $row['timestamp']  ) : wfTimestampNow();
 			$this->mDeleted   = isset( $row['deleted']    ) ? intval( $row['deleted']    ) : 0;
@@ -637,17 +637,17 @@ class Revision implements IDBAccessObject {
 	 *      Revision::FOR_PUBLIC       to be displayed to all users
 	 *      Revision::FOR_THIS_USER    to be displayed to the given user
 	 *      Revision::RAW              get the ID regardless of permissions
-	 * @param $user User object to check for, only if FOR_THIS_USER is passed
+	 * @param $user wiki_User object to check for, only if FOR_THIS_USER is passed
 	 *              to the $audience parameter
 	 * @return Integer
 	 */
-	public function getUser( $audience = self::FOR_PUBLIC, User $user = null ) {
+	public function getUser( $audience = self::FOR_PUBLIC, wiki_User $user = null ) {
 		if( $audience == self::FOR_PUBLIC && $this->isDeleted( self::DELETED_USER ) ) {
 			return 0;
 		} elseif( $audience == self::FOR_THIS_USER && !$this->userCan( self::DELETED_USER, $user ) ) {
 			return 0;
 		} else {
-			return $this->mUser;
+			return $this->mwiki_User;
 		}
 	}
 
@@ -656,8 +656,8 @@ class Revision implements IDBAccessObject {
 	 *
 	 * @return String
 	 */
-	public function getRawUser() {
-		return $this->mUser;
+	public function getRawwiki_User() {
+		return $this->mwiki_User;
 	}
 
 	/**
@@ -669,17 +669,17 @@ class Revision implements IDBAccessObject {
 	 *      Revision::FOR_PUBLIC       to be displayed to all users
 	 *      Revision::FOR_THIS_USER    to be displayed to the given user
 	 *      Revision::RAW              get the text regardless of permissions
-	 * @param $user User object to check for, only if FOR_THIS_USER is passed
+	 * @param $user wiki_User object to check for, only if FOR_THIS_USER is passed
 	 *              to the $audience parameter
 	 * @return string
 	 */
-	public function getUserText( $audience = self::FOR_PUBLIC, User $user = null ) {
+	public function getUserText( $audience = self::FOR_PUBLIC, wiki_User $user = null ) {
 		if( $audience == self::FOR_PUBLIC && $this->isDeleted( self::DELETED_USER ) ) {
 			return '';
 		} elseif( $audience == self::FOR_THIS_USER && !$this->userCan( self::DELETED_USER, $user ) ) {
 			return '';
 		} else {
-			return $this->getRawUserText();
+			return $this->getRawwiki_UserText();
 		}
 	}
 
@@ -688,16 +688,16 @@ class Revision implements IDBAccessObject {
 	 *
 	 * @return String
 	 */
-	public function getRawUserText() {
-		if ( $this->mUserText === null ) {
-			$this->mUserText = User::whoIs( $this->mUser ); // load on demand
-			if ( $this->mUserText === false ) {
+	public function getRawwiki_UserText() {
+		if ( $this->mwiki_UserText === null ) {
+			$this->mwiki_UserText = wiki_User::whoIs( $this->mwiki_User ); // load on demand
+			if ( $this->mwiki_UserText === false ) {
 				# This shouldn't happen, but it can if the wiki was recovered
 				# via importing revs and there is no user table entry yet.
-				$this->mUserText = $this->mOrigUserText;
+				$this->mwiki_UserText = $this->mOrigwiki_UserText;
 			}
 		}
-		return $this->mUserText;
+		return $this->mwiki_UserText;
 	}
 
 	/**
@@ -709,11 +709,11 @@ class Revision implements IDBAccessObject {
 	 *      Revision::FOR_PUBLIC       to be displayed to all users
 	 *      Revision::FOR_THIS_USER    to be displayed to the given user
 	 *      Revision::RAW              get the text regardless of permissions
-	 * @param $user User object to check for, only if FOR_THIS_USER is passed
+	 * @param $user wiki_User object to check for, only if FOR_THIS_USER is passed
 	 *              to the $audience parameter
 	 * @return String
 	 */
-	function getComment( $audience = self::FOR_PUBLIC, User $user = null ) {
+	function getComment( $audience = self::FOR_PUBLIC, wiki_User $user = null ) {
 		if( $audience == self::FOR_PUBLIC && $this->isDeleted( self::DELETED_COMMENT ) ) {
 			return '';
 		} elseif( $audience == self::FOR_THIS_USER && !$this->userCan( self::DELETED_COMMENT, $user ) ) {
@@ -750,7 +750,7 @@ class Revision implements IDBAccessObject {
 		$this->mUnpatrolled = $dbr->selectField( 'recentchanges',
 			'rc_id',
 			array( // Add redundant user,timestamp condition so we can use the existing index
-				'rc_user_text'  => $this->getRawUserText(),
+				'rc_user_text'  => $this->getRawwiki_UserText(),
 				'rc_timestamp'  => $dbr->timestamp( $this->getTimestamp() ),
 				'rc_this_oldid' => $this->getId(),
 				'rc_patrolled'  => 0
@@ -787,11 +787,11 @@ class Revision implements IDBAccessObject {
 	 *      Revision::FOR_PUBLIC       to be displayed to all users
 	 *      Revision::FOR_THIS_USER    to be displayed to the given user
 	 *      Revision::RAW              get the text regardless of permissions
-	 * @param $user User object to check for, only if FOR_THIS_USER is passed
+	 * @param $user wiki_User object to check for, only if FOR_THIS_USER is passed
 	 *              to the $audience parameter
 	 * @return String
 	 */
-	public function getText( $audience = self::FOR_PUBLIC, User $user = null ) {
+	public function getText( $audience = self::FOR_PUBLIC, wiki_User $user = null ) {
 		if( $audience == self::FOR_PUBLIC && $this->isDeleted( self::DELETED_TEXT ) ) {
 			return '';
 		} elseif( $audience == self::FOR_THIS_USER && !$this->userCan( self::DELETED_TEXT, $user ) ) {
@@ -1053,8 +1053,8 @@ class Revision implements IDBAccessObject {
 				'rev_text_id'    => $this->mTextId,
 				'rev_comment'    => $this->mComment,
 				'rev_minor_edit' => $this->mMinorEdit ? 1 : 0,
-				'rev_user'       => $this->mUser,
-				'rev_user_text'  => $this->mUserText,
+				'rev_user'       => $this->mwiki_User,
+				'rev_user_text'  => $this->mwiki_UserText,
 				'rev_timestamp'  => $dbw->timestamp( $this->mTimestamp ),
 				'rev_deleted'    => $this->mDeleted,
 				'rev_len'        => $this->mSize,
@@ -1197,10 +1197,10 @@ class Revision implements IDBAccessObject {
 	 * @param $field Integer:one of self::DELETED_TEXT,
 	 *                              self::DELETED_COMMENT,
 	 *                              self::DELETED_USER
-	 * @param $user User object to check, or null to use $wgUser
+	 * @param $user wiki_User object to check, or null to use $wgwiki_User
 	 * @return Boolean
 	 */
-	public function userCan( $field, User $user = null ) {
+	public function userCan( $field, wiki_User $user = null ) {
 		return self::userCanBitfield( $this->mDeleted, $field, $user );
 	}
 
@@ -1213,10 +1213,10 @@ class Revision implements IDBAccessObject {
 	 * @param $field Integer: one of self::DELETED_TEXT = File::DELETED_FILE,
 	 *                               self::DELETED_COMMENT = File::DELETED_COMMENT,
 	 *                               self::DELETED_USER = File::DELETED_USER
-	 * @param $user User object to check, or null to use $wgUser
+	 * @param $user wiki_User object to check, or null to use $wgwiki_User
 	 * @return Boolean
 	 */
-	public static function userCanBitfield( $bitfield, $field, User $user = null ) {
+	public static function userCanBitfield( $bitfield, $field, wiki_User $user = null ) {
 		if( $bitfield & $field ) { // aspect is deleted
 			if ( $bitfield & self::DELETED_RESTRICTED ) {
 				$permission = 'suppressrevision';
@@ -1227,8 +1227,8 @@ class Revision implements IDBAccessObject {
 			}
 			wfDebug( "Checking for $permission due to $field match on $bitfield\n" );
 			if ( $user === null ) {
-				global $wgUser;
-				$user = $wgUser;
+				global $wgwiki_User;
+				$user = $wgwiki_User;
 			}
 			return $user->isAllowed( $permission );
 		} else {

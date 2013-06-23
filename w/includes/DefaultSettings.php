@@ -404,7 +404,7 @@ $wgImgAuthPublicTest = true;
  *                       Short thumbnail names only have the width, parameters, and the extension.
  *
  * ForeignDBRepo:
- *   - dbType, dbServer, dbUser, dbPassword, dbName, dbFlags
+ *   - dbType, dbServer, dbwiki_User, dbPassword, dbName, dbFlags
  *                      equivalent to the corresponding member of $wgDBservers
  *   - tablePrefix       Table prefix, the foreign wiki's $wgDBprefix
  *   - hasSharedCache    True if the wiki's shared cache is accessible via the local $wgMemc
@@ -1027,7 +1027,7 @@ $wgXMLMimeTypes = array(
  * Limit images on image description pages to a user-selectable limit. In order
  * to reduce disk usage, limits can only be selected from a list.
  * The user preference is saved as an array offset in the database, by default
- * the offset is set with $wgDefaultUserOptions['imagesize']. Make sure you
+ * the offset is set with $wgDefaultwiki_UserOptions['imagesize']. Make sure you
  * change it if you alter the array (see bug 8858).
  * This is the list of settings the user can choose from:
  */
@@ -1175,7 +1175,7 @@ $wgEnableEmail = true;
  * Set to true to enable user-to-user e-mail.
  * This can potentially be abused, as it's hard to track.
  */
-$wgEnableUserEmail = true;
+$wgEnablewiki_UserEmail = true;
 
 /**
  * Set to true to put the sending user's email in a Reply-To header
@@ -1185,7 +1185,7 @@ $wgEnableUserEmail = true;
  * which can cause problems with SPF validation and leak recipient addressses
  * when bounces are sent to the sender.
  */
-$wgUserEmailUseReplyTo = false;
+$wgwiki_UserEmailUseReplyTo = false;
 
 /**
  * Minimum time, in hours, which must elapse between password reminder
@@ -1201,7 +1201,7 @@ $wgNewPasswordExpiry = 3600 * 24 * 7;
 /**
  * The time, in seconds, when an email confirmation email expires
  */
-$wgUserEmailConfirmationTokenExpiry = 7 * 24 * 60 * 60;
+$wgwiki_UserEmailConfirmationTokenExpiry = 7 * 24 * 60 * 60;
 
 /**
  * SMTP Mode.
@@ -1255,7 +1255,7 @@ $wgEnotifWatchlist = false;
  * Allow users to enable email notification ("enotif") when someone edits their
  * user talk page.
  */
-$wgEnotifUserTalk = false;
+$wgEnotifwiki_UserTalk = false;
 
 /**
  * Set the Reply-to address in notifications to the editor's address, if user
@@ -1297,9 +1297,9 @@ $wgEnotifUseRealName = false;
 
 /**
  * Array of usernames who will be sent a notification email for every change
- * which occurs on a wiki. Users will not be notified of their own changes.
+ * which occurs on a wiki. wiki_Users will not be notified of their own changes.
  */
-$wgUsersNotifiedOnAllChanges = array();
+$wgwiki_UsersNotifiedOnAllChanges = array();
 
 
 /** @} */ # end of email settings
@@ -2228,7 +2228,7 @@ $wgBrowserBlackList = array(
 	 * - Mozilla/4.0 (compatible; MSIE 5.23; Mac_PowerPC)
 	 * - [...]
 	 *
-	 * @link http://en.wikipedia.org/w/index.php?title=User%3A%C6var_Arnfj%F6r%F0_Bjarmason%2Ftestme&diff=12356041&oldid=12355864
+	 * @link http://en.wikipedia.org/w/index.php?title=wiki_User%3A%C6var_Arnfj%F6r%F0_Bjarmason%2Ftestme&diff=12356041&oldid=12355864
 	 * @link http://en.wikipedia.org/wiki/Template%3AOS9
 	 */
 	'/^Mozilla\/4\.0 \(compatible; MSIE \d+\.\d+; Mac_PowerPC\)/',
@@ -2588,21 +2588,21 @@ $wgHandheldForIPhone = false;
  * This enables a lot of neat customizations, but may
  * increase security risk to users and server load.
  */
-$wgAllowUserJs = false;
+$wgAllowwiki_UserJs = false;
 
 /**
  * Allow user Cascading Style Sheets (CSS)?
  * This enables a lot of neat customizations, but may
  * increase security risk to users and server load.
  */
-$wgAllowUserCss = false;
+$wgAllowwiki_UserCss = false;
 
 /**
  * Allow user-preferences implemented in CSS?
  * This allows users to customise the site appearance to a greater
  * degree; disabling it will improve page load times.
  */
-$wgAllowUserCssPrefs = true;
+$wgAllowwiki_UserCssPrefs = true;
 
 /** Use the site's Javascript page? */
 $wgUseSiteJs = true;
@@ -3173,7 +3173,7 @@ $wgMaxRedirects = 1;
  * Array of invalid page redirect targets.
  * Attempting to create a redirect to any of the pages in this array
  * will make the redirect fail.
- * Userlogout is hard-coded, so it does not need to be listed here.
+ * wiki_Userlogout is hard-coded, so it does not need to be listed here.
  * (bug 10569) Disallow Mypage and Mytalk as well.
  *
  * As of now, this only checks special pages. Redirects to pages in
@@ -3453,16 +3453,16 @@ $wgHitcounterUpdateFreq = 1;
 
 /**
  * How many days user must be idle before he is considered inactive. Will affect
- * the number shown on Special:Statistics and Special:ActiveUsers special page.
+ * the number shown on Special:Statistics and Special:Activewiki_Users special page.
  * You might want to leave this as the default value, to provide comparable
  * numbers between different wikis.
  */
-$wgActiveUserDays = 30;
+$wgActivewiki_UserDays = 30;
 
 /** @} */ # End of statistics }
 
 /************************************************************************//**
- * @name   User accounts, authentication
+ * @name   wiki_User accounts, authentication
  * @{
  */
 
@@ -3493,7 +3493,7 @@ $wgMaxSigChars = 255;
 
 /**
  * Maximum number of bytes in username. You want to run the maintenance
- * script ./maintenance/checkUsernames.php once you have changed this value.
+ * script ./maintenance/checkwiki_Usernames.php once you have changed this value.
  */
 $wgMaxNameChars = 255;
 
@@ -3501,7 +3501,7 @@ $wgMaxNameChars = 255;
  * Array of usernames which may not be registered or logged in from
  * Maintenance scripts can still use these
  */
-$wgReservedUsernames = array(
+$wgReservedwiki_Usernames = array(
 	'MediaWiki default', // Default 'Main Page' and MediaWiki: message pages
 	'Conversion script', // Used for the old Wikipedia software upgrade
 	'Maintenance script', // Maintenance scripts which perform editing, image import script
@@ -3516,10 +3516,10 @@ $wgReservedUsernames = array(
  * Settings added to this array will override the default globals for the user
  * preferences used by anonymous visitors and newly created accounts.
  * For instance, to disable section editing links:
- * $wgDefaultUserOptions ['editsection'] = 0;
+ * $wgDefaultwiki_UserOptions ['editsection'] = 0;
  *
  */
-$wgDefaultUserOptions = array(
+$wgDefaultwiki_UserOptions = array(
 	'ccmeonemails'            => 0,
 	'cols'                    => 80,
 	'date'                    => 'default',
@@ -3599,18 +3599,18 @@ $wgHiddenPrefs = array();
  * This is used in a regular expression character class during
  * registration (regex metacharacters like / are escaped).
  */
-$wgInvalidUsernameCharacters = '@';
+$wgInvalidwiki_UsernameCharacters = '@';
 
 /**
  * Character used as a delimiter when testing for interwiki userrights
- * (In Special:UserRights, it is possible to modify users on different
+ * (In Special:wiki_UserRights, it is possible to modify users on different
  * databases if the delimiter is used, e.g. "Someuser@enwiki").
  *
  * It is recommended that you have this delimiter in
- * $wgInvalidUsernameCharacters above, or you will not be able to
- * modify the user rights of those users via Special:UserRights
+ * $wgInvalidwiki_UsernameCharacters above, or you will not be able to
+ * modify the user rights of those users via Special:wiki_UserRights
  */
-$wgUserrightsInterwikiDelimiter = '@';
+$wgwiki_UserrightsInterwikiDelimiter = '@';
 
 /**
  * Use some particular type of external authentication.  The specific
@@ -3619,7 +3619,7 @@ $wgUserrightsInterwikiDelimiter = '@';
  *
  * null indicates no external authentication is to be used.  Otherwise,
  * $wgExternalAuthType must be the name of a non-abstract class that extends
- * ExternalUser.
+ * Externalwiki_User.
  *
  * Core authentication modules can be found in includes/extauth/.
  */
@@ -3680,7 +3680,7 @@ $wgSecureLogin = false;
 /** @} */ # end user accounts }
 
 /************************************************************************//**
- * @name   User rights, access control and monitoring
+ * @name   wiki_User rights, access control and monitoring
  * @{
  */
 
@@ -3733,7 +3733,7 @@ $wgBlockDisablesLogin = false;
  * $wgWhitelistRead = array ( "Main Page", "Wikipedia:Help");
  * @endcode
  *
- * Special:Userlogin and Special:ChangePassword are always whitelisted.
+ * Special:wiki_Userlogin and Special:ChangePassword are always whitelisted.
  *
  * @note This will only work if $wgGroupPermissions['*']['read'] is false --
  * see below. Otherwise, ALL pages are accessible, regardless of this setting.
@@ -3806,7 +3806,7 @@ $wgGroupPermissions['user']['sendemail']        = true;
 // Implicit group for accounts that pass $wgAutoConfirmAge
 $wgGroupPermissions['autoconfirmed']['autoconfirmed'] = true;
 
-// Users with bot privilege can have their edits hidden
+// wiki_Users with bot privilege can have their edits hidden
 // from various log pages by default
 $wgGroupPermissions['bot']['bot']              = true;
 $wgGroupPermissions['bot']['autoconfirmed']    = true;
@@ -4061,7 +4061,7 @@ $wgAutopromoteOnceLogInRC = true;
 
 /**
  * $wgAddGroups and $wgRemoveGroups can be used to give finer control over who
- * can assign which groups at Special:Userrights.
+ * can assign which groups at Special:wiki_Userrights.
  *
  * @par Example:
  * Bureaucrats can add any group:
@@ -4224,7 +4224,7 @@ $wgRateLimitsExcludedIPs = array();
 
 /**
  * Log IP addresses in the recentchanges table; can be accessed only by
- * extensions (e.g. CheckUser) or a DB admin
+ * extensions (e.g. Checkwiki_User) or a DB admin
  */
 $wgPutIPinRC = true;
 
@@ -4985,7 +4985,7 @@ $wgRC2UDPOmitBots = false;
  * This is really a temporary hack around an index install bug on some Wikipedias.
  * Kill it once fixed.
  */
-$wgEnableNewpagesUserFilter = true;
+$wgEnableNewpageswiki_UserFilter = true;
 
 /** Use RC Patrolling to check for vandalism */
 $wgUseRCPatrol = true;
@@ -5043,9 +5043,9 @@ $wgFeedClasses = array(
 $wgAdvertisedFeedTypes = array( 'atom' );
 
 /** Show watching users in recent changes, watchlist and page history views */
-$wgRCShowWatchingUsers = false; # UPO
+$wgRCShowWatchingwiki_Users = false; # UPO
 /** Show watching users in Page views */
-$wgPageShowWatchingUsers = false;
+$wgPageShowWatchingwiki_Users = false;
 /** Show the amount of changed characters in recent changes */
 $wgRCShowChangedSize = true;
 
@@ -5161,7 +5161,7 @@ $wgImportSources = array();
  * Can use this to create an incoming "transwiki"-style queue.
  * Set to numeric key, not the name.
  *
- * Users may override this in the Special:Import dialog.
+ * wiki_Users may override this in the Special:Import dialog.
  */
 $wgImportTargetNamespace = null;
 
@@ -5468,7 +5468,7 @@ $wgLogTypes = array(
 
 /**
  * This restricts log access to those who have a certain right
- * Users without this will not see it in the option menu and can not view it
+ * wiki_Users without this will not see it in the option menu and can not view it
  * Restricted logs are not added to recent changes
  * Logs should remain non-transcludable
  * Format: logtype => permissiontype
@@ -5597,7 +5597,7 @@ $wgLogActionsHandlers = array(
 /**
  * Maintain a log of newusers at Log/newusers?
  */
-$wgNewUserLog = true;
+$wgNewwiki_UserLog = true;
 
 /** @} */ # end logging }
 
@@ -5646,8 +5646,8 @@ $wgSpecialPageGroups = array(
 	'Unwatchedpages'            => 'maintenance',
 	'Fewestrevisions'           => 'maintenance',
 
-	'Userlogin'                 => 'login',
-	'Userlogout'                => 'login',
+	'wiki_Userlogin'                 => 'login',
+	'wiki_Userlogout'                => 'login',
 	'CreateAccount'             => 'login',
 
 	'Recentchanges'             => 'changes',
@@ -5672,7 +5672,7 @@ $wgSpecialPageGroups = array(
 	'Emailuser'                 => 'users',
 	'Listadmins'                => 'users',
 	'Listbots'                  => 'users',
-	'Userrights'                => 'users',
+	'wiki_Userrights'                => 'users',
 	'Block'                     => 'users',
 	'Unblock'                   => 'users',
 	'Preferences'               => 'users',
@@ -5825,7 +5825,7 @@ $wgNamespaceRobotPolicies = array();
  * @code
  * $wgArticleRobotPolicies = array(
  * 		'Main Page' => 'noindex,follow',
- * 		'User:Bob' => 'index,follow',
+ * 		'wiki_User:Bob' => 'index,follow',
  * );
  * @endcode
  *
@@ -5851,10 +5851,10 @@ $wgArticleRobotPolicies = array();
  *
  * @par Example:
  * @code
- *   $wgExemptFromUserRobotsControl = array( NS_MAIN, NS_TALK, NS_PROJECT );
+ *   $wgExemptFromwiki_UserRobotsControl = array( NS_MAIN, NS_TALK, NS_PROJECT );
  * @endcode
  */
-$wgExemptFromUserRobotsControl = null;
+$wgExemptFromwiki_UserRobotsControl = null;
 
 /** @} */ # End robot policy }
 

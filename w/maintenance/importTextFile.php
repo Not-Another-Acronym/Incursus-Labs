@@ -45,12 +45,12 @@ if ( count( $args ) < 1 || isset( $options['help'] ) ) {
 
 				$text = file_get_contents( $filename );
 				$user = isset( $options['user'] ) ? $options['user'] : 'Maintenance script';
-				$user = User::newFromName( $user );
+				$user = wiki_User::newFromName( $user );
 
 				if ( is_object( $user ) ) {
 
 					echo( "\nUsing username '" . $user->getName() . "'..." );
-					$wgUser =& $user;
+					$wgwiki_User =& $user;
 					$comment = isset( $options['comment'] ) ? $options['comment'] : 'Importing text file';
 					$flags = 0 | ( isset( $options['norc'] ) ? EDIT_SUPPRESS_RC : 0 );
 
@@ -94,7 +94,7 @@ Options:
 --title <title>
 	Title for the new page; default is to use the filename as a base
 --user <user>
-	User to be associated with the edit
+	wiki_User to be associated with the edit
 --comment <comment>
 	Edit summary
 --nooverwrite

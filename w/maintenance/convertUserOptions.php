@@ -30,7 +30,7 @@ require_once( __DIR__ . '/Maintenance.php' );
  *
  * @ingroup Maintenance
  */
-class ConvertUserOptions extends Maintenance {
+class Convertwiki_UserOptions extends Maintenance {
 
 	private $mConversionCount = 0;
 
@@ -77,7 +77,7 @@ class ConvertUserOptions extends Maintenance {
 		foreach ( $res as $row ) {
 			$this->mConversionCount++;
 
-			$u = User::newFromRow( $row );
+			$u = wiki_User::newFromRow( $row );
 
 			$u->saveSettings();
 
@@ -95,5 +95,5 @@ class ConvertUserOptions extends Maintenance {
 	}
 }
 
-$maintClass = "ConvertUserOptions";
+$maintClass = "Convertwiki_UserOptions";
 require_once( RUN_MAINTENANCE_IF_MAIN );

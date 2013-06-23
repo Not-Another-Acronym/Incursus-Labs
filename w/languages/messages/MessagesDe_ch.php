@@ -20,7 +20,7 @@ $fallback = 'de';
 $separatorTransformTable = array( ',' => "'", '.' => ',' );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-hideminor' => 'Kleine Änderungen in den «Letzten Änderungen» ausblenden',
 'tog-hidepatrolled' => 'Kontrollierte Änderungen in den «Letzten Änderungen» ausblenden',
 'tog-newpageshidepatrolled' => 'Kontrollierte Seiten bei den «Neuen Seiten» ausblenden',
@@ -55,7 +55,7 @@ Die Datenbank meldete den Fehler: «<tt>$3: $4</tt>».',
 
 Die Seite ist möglicherweise gelöscht oder verschoben worden.
 
-Falls dies nicht  zutrifft, hast du eventuell einen Fehler in der Software gefunden. Bitte melde dies einem [[Special:ListUsers/sysop|Administrator]] unter Nennung der URL.',
+Falls dies nicht  zutrifft, hast du eventuell einen Fehler in der Software gefunden. Bitte melde dies einem [[Special:Listwiki_Users/sysop|Administrator]] unter Nennung der URL.',
 'fileappenderrorread' => '«$1» konnte während des Hinzufügens nicht gelesen werden.',
 'fileappenderror' => 'Konnte «$1» nicht an «$2» anhängen.',
 'filecopyerror' => 'Die Datei «$1» konnte nicht nach «$2» kopiert werden.',
@@ -74,7 +74,7 @@ Bitte versuche es in ein paar Minuten erneut.',
 Änderungen auf dieser Seite wirken sich auf die Benutzeroberfläche aus.
 Ziehe bitte im Fall von Übersetzungen in Betracht, diese bei [//translatewiki.net/wiki/Main_Page?setlang=de-ch translatewiki.net], der Lokalisierungsplattform für MediaWiki, durchzuführen.",
 'titleprotected' => "Eine Seite mit diesem Namen kann nicht angelegt werden.
-Die Sperre wurde durch [[User:$1|$1]] mit der Begründung ''«$2»'' eingerichtet.",
+Die Sperre wurde durch [[wiki_User:$1|$1]] mit der Begründung ''«$2»'' eingerichtet.",
 'filereadonlyerror' => 'Die Datei «$1» kann nicht verändert werden, da auf das Dateirepositorium «$2» nur Lesezugriff möglich ist.
 
 Der Administrator, der den Schreibzugriff sperrte, gab folgenden Grund an: «$3».',
@@ -82,7 +82,7 @@ Der Administrator, der den Schreibzugriff sperrte, gab folgenden Grund an: «$3�
 # Login and logout pages
 'loginsuccess' => 'Du bist jetzt als «$1» bei {{SITENAME}} angemeldet.',
 'nosuchuser' => 'Der Benutzername «$1» existiert nicht.
-Überprüfe die Schreibweise (Gross-/Kleinschreibung beachten) oder [[Special:UserLogin/signup|melde dich als neuer Benutzer an]].',
+Überprüfe die Schreibweise (Gross-/Kleinschreibung beachten) oder [[Special:wiki_UserLogin/signup|melde dich als neuer Benutzer an]].',
 'nosuchusershort' => 'Der Benutzername «$1» ist nicht vorhanden. Bitte überprüfe die Schreibweise.',
 'passwordremindertext' => 'Jemand mit der IP-Adresse $1, wahrscheinlich du selbst, hat ein neues Passwort für die Anmeldung bei {{SITENAME}} ($4) angefordert.
 
@@ -141,7 +141,7 @@ Du kannst die «E-Mail an diesen Benutzer»-Funktion nicht nutzen, solange keine
 Deine aktuelle IP-Adresse ist $3, und die Sperr-ID ist $5.
 Bitte füge alle Informationen jeder Anfrage hinzu, die du stellst.",
 'confirmedittext' => 'Du musst deine E-Mail-Adresse erst bestätigen, bevor du Bearbeitungen durchführen kannst. Bitte ergänze und bestätige dein E-Mail in den [[Special:Preferences|Einstellungen]].',
-'accmailtext' => 'Ein zufällig generiertes Passwort für [[User talk:$1|$1]] wurde an $2 versandt.
+'accmailtext' => 'Ein zufällig generiertes Passwort für [[wiki_User talk:$1|$1]] wurde an $2 versandt.
 
 Das Passwort für dieses neue Benutzerkonto kann auf der Spezialseite «[[Special:ChangePassword|Passwort ändern]]» geändert werden.',
 'userpage-userdoesnotexist' => 'Das Benutzerkonto «<nowiki>$1</nowiki>» ist nicht vorhanden. Bitte prüfe, ob du diese Seite wirklich erstellen/bearbeiten willst.',
@@ -223,7 +223,7 @@ Du hast darauf keinen Zugriff.',
 'right-override-export-depth' => 'Exportiere Seiten einschliesslich verlinkter Seiten bis zu einer Tiefe von 5',
 'right-passwordreset' => 'Passwort eines Benutzers zurücksetzen und das dazu verschickte E-Mail einsehen',
 
-# User rights log
+# wiki_User rights log
 'rightslogentry' => 'änderte die Benutzerrechte für «$1» von «$2» auf «$3»',
 'rightslogentry-autopromote' => 'wurde automatisch von «$2» nach «$3» zugeordnet',
 
@@ -412,7 +412,7 @@ Im [[Special:Log/delete|Lösch-Logbuch]] findest du eine Übersicht der gelösch
 # Block/unblock
 'ipb-confirmhideuser' => 'Du bist gerade dabei, einen Benutzer im Modus «Benutzer verstecken» zu sperren. Dies führt dazu, dass der Benutzername in allen Listen und Logbüchern unterdrückt wird. Möchtest du das wirklich tun?',
 'ipb-blocklist-contribs' => 'Benutzerbeiträge von «$1»',
-'autoblocker' => 'Automatische Sperre, da du eine gemeinsame IP-Adresse mit [[User:$1|$1]] benutzt. Grund der Benutzersperre: «$2».',
+'autoblocker' => 'Automatische Sperre, da du eine gemeinsame IP-Adresse mit [[wiki_User:$1|$1]] benutzt. Grund der Benutzersperre: «$2».',
 'blocklogentry' => 'sperrte «[[$1]]» für den Zeitraum: $2 $3',
 'reblock-logentry' => 'änderte die Sperre von «[[$1]]» für den Zeitraum: $2 $3',
 'unblocklogentry' => 'hob die Sperre von «$1» auf',

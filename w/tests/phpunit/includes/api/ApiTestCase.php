@@ -9,7 +9,7 @@ abstract class ApiTestCase extends MediaWikiLangTestCase {
 	protected $apiContext;
 
 	function setUp() {
-		global $wgContLang, $wgAuth, $wgMemc, $wgRequest, $wgUser, $wgServer;
+		global $wgContLang, $wgAuth, $wgMemc, $wgRequest, $wgwiki_User, $wgServer;
 
 		parent::setUp();
 		self::$apiUrl = $wgServer . wfScript( 'api' );
@@ -19,28 +19,28 @@ abstract class ApiTestCase extends MediaWikiLangTestCase {
 		$wgRequest = new FauxRequest( array() );
 
 		self::$users = array(
-			'sysop' => new TestUser(
+			'sysop' => new Testwiki_User(
 				'Apitestsysop',
 				'Api Test Sysop',
 				'api_test_sysop@example.com',
 				array( 'sysop' )
 			),
-			'uploader' => new TestUser(
+			'uploader' => new Testwiki_User(
 				'Apitestuser',
-				'Api Test User',
+				'Api Test wiki_User',
 				'api_test_user@example.com',
 				array()
 			)
 		);
 
-		$wgUser = self::$users['sysop']->user;
+		$wgwiki_User = self::$users['sysop']->user;
 
 		$this->apiContext = new ApiTestContext();
 
 	}
 
-	protected function doApiRequest( Array $params, Array $session = null, $appendModule = false, User $user = null ) {
-		global $wgRequest, $wgUser;
+	protected function doApiRequest( Array $params, Array $session = null, $appendModule = false, wiki_User $user = null ) {
+		global $wgRequest, $wgwiki_User;
 
 		if ( is_null( $session ) ) {
 			# re-use existing global session by default
@@ -49,14 +49,14 @@ abstract class ApiTestCase extends MediaWikiLangTestCase {
 
 		# set up global environment
 		if ( $user ) {
-			$wgUser = $user;
+			$wgwiki_User = $user;
 		}
 
 		$wgRequest = new FauxRequest( $params, true, $session );
 		RequestContext::getMain()->setRequest( $wgRequest );
 
 		# set up local environment
-		$context = $this->apiContext->newTestContext( $wgRequest, $wgUser );
+		$context = $this->apiContext->newTestContext( $wgRequest, $wgwiki_User );
 
 		$module = new ApiMain( $context, true );
 
@@ -82,9 +82,9 @@ abstract class ApiTestCase extends MediaWikiLangTestCase {
 	 * request, without actually requesting a "real" edit token
 	 * @param $params Array: key-value API params
 	 * @param $session Array|null: session array
-	 * @param $user User|null A User object for the context
+	 * @param $user wiki_User|null A wiki_User object for the context
 	 */
-	protected function doApiRequestWithToken( Array $params, Array $session = null, User $user = null ) {
+	protected function doApiRequestWithToken( Array $params, Array $session = null, wiki_User $user = null ) {
 		global $wgRequest;
 
 		if ( $session === null ) {
@@ -95,7 +95,7 @@ abstract class ApiTestCase extends MediaWikiLangTestCase {
 			// add edit token to fake session
 			$session['wsEditToken'] = $session['wsToken'];
 			// add token to request parameters
-			$params['token'] = md5( $session['wsToken'] ) . User::EDIT_TOKEN_SUFFIX;
+			$params['token'] = md5( $session['wsToken'] ) . wiki_User::EDIT_TOKEN_SUFFIX;
 			return $this->doApiRequest( $params, $session, false, $user );
 		} else {
 			throw new Exception( "request data not in right format" );
@@ -130,18 +130,18 @@ abstract class ApiTestCase extends MediaWikiLangTestCase {
 	}
 }
 
-class UserWrapper {
+class wiki_UserWrapper {
 	public $userName, $password, $user;
 
 	public function __construct( $userName, $password, $group = '' ) {
 		$this->userName = $userName;
 		$this->password = $password;
 
-		$this->user = User::newFromName( $this->userName );
+		$this->user = wiki_User::newFromName( $this->userName );
 		if ( !$this->user->getID() ) {
-			$this->user = User::createNew( $this->userName, array(
+			$this->user = wiki_User::createNew( $this->userName, array(
 				"email" => "test@example.com",
-				"real_name" => "Test User" ) );
+				"real_name" => "Test wiki_User" ) );
 		}
 		$this->user->setPassword( $this->password );
 
@@ -173,14 +173,14 @@ class ApiTestContext extends RequestContext {
 	 * Returns a DerivativeContext with the request variables in place
 	 *
 	 * @param $request WebRequest request object including parameters and session
-	 * @param $user User or null
+	 * @param $user wiki_User or null
 	 * @return DerivativeContext
 	 */
-	public function newTestContext( WebRequest $request, User $user = null ) {
+	public function newTestContext( WebRequest $request, wiki_User $user = null ) {
 		$context = new DerivativeContext( $this );
 		$context->setRequest( $request );
 		if ( $user !== null ) {
-			$context->setUser( $user );
+			$context->setwiki_User( $user );
 		}
 		return $context;
 	}

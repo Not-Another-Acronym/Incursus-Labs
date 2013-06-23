@@ -76,7 +76,7 @@ See the GNU General Public License for more details.
 
 You should have received <doclink href=Copying>a copy of the GNU General Public License</doclink> along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA. or [http://www.gnu.org/copyleft/gpl.html read it online].",
 	'config-sidebar'                  => "* [//www.mediawiki.org MediaWiki home]
-* [//www.mediawiki.org/wiki/Help:Contents User's Guide]
+* [//www.mediawiki.org/wiki/Help:Contents wiki_User's Guide]
 * [//www.mediawiki.org/wiki/Manual:Contents Administrator's Guide]
 * [//www.mediawiki.org/wiki/Manual:FAQ FAQ]
 ----
@@ -187,7 +187,7 @@ If you are using shared web hosting, your hosting provider will either give you 
 If you wish to create database account as part of the installation process, please supply an account with SYSDBA role as database account for installation and specify the desired credentials for the web-access account, otherwise you can either create the web-access account manually and supply only that account (if it has required permissions to create the schema objects) or supply two different accounts, one with create privileges and a restricted one for web access.
 
 Script for creating an account with required privileges can be found in \"maintenance/oracle/\" directory of this installation. Keep in mind that using a restricted account will disable all maintenance capabilities with the default account.",
-	'config-db-install-account'       => 'User account for installation',
+	'config-db-install-account'       => 'wiki_User account for installation',
 	'config-db-username'              => 'Database username:',
 	'config-db-password'              => 'Database password:',
 	'config-db-password-empty'        => 'Please enter a password for the new database user: $1.
@@ -198,7 +198,7 @@ This is not the username of the MediaWiki account; this is the username for your
 This is not the password for the MediaWiki account; this is the password for your database.',
 	'config-db-install-help'          => 'Enter the username and password that will be used to connect to the database during the installation process.',
 	'config-db-account-lock'          => 'Use the same username and password during normal operation',
-	'config-db-wiki-account'          => 'User account for normal operation',
+	'config-db-wiki-account'          => 'wiki_User account for normal operation',
 	'config-db-wiki-help'             => 'Enter the username and password that will be used to connect to the database during normal wiki operation.
 If the account does not exist, and the installation account has sufficient privileges, this user account will be created with the minimum privileges required to operate the wiki.',
 	'config-db-prefix'                => 'Database table prefix:',
@@ -271,7 +271,7 @@ Check the host, username and password and try again.',
 	'config-invalid-schema'           => 'Invalid schema for MediaWiki "$1".
 Use only ASCII letters (a-z, A-Z), numbers (0-9) and underscores (_).',
 	'config-db-sys-create-oracle' => 'Installer only supports using a SYSDBA account for creating a new account.',
-	'config-db-sys-user-exists-oracle' => 'User account "$1" already exists. SYSDBA can only be used for creating of a new account!',
+	'config-db-sys-user-exists-oracle' => 'wiki_User account "$1" already exists. SYSDBA can only be used for creating of a new account!',
 	'config-postgres-old'             => 'PostgreSQL $1 or later is required, you have $2.',
 	'config-sqlite-name-help'         => 'Choose a name that identifies your wiki.
 Do not use spaces or hyphens.
@@ -390,7 +390,7 @@ Please provide an e-mail address if you wish to subscribe to the mailing list.',
 You can now skip the remaining configuration and install the wiki right now.',
 	'config-optional-continue'        => 'Ask me more questions.',
 	'config-optional-skip'            => "I'm bored already, just install the wiki.",
-	'config-profile'                  => 'User rights profile:',
+	'config-profile'                  => 'wiki_User rights profile:',
 	'config-profile-wiki'             => 'Traditional wiki',
 	'config-profile-no-anon'          => 'Account creation required',
 	'config-profile-fishbowl'         => 'Authorized editors only',
@@ -407,7 +407,7 @@ A wiki with '''{{int:config-profile-no-anon}}''' provides extra accountability, 
 The '''{{int:config-profile-fishbowl}}''' scenario allows approved users to edit, but the public can view the pages, including history.
 A '''{{int:config-profile-private}}''' only allows approved users to view pages, with the same group allowed to edit.
 
-More complex user rights configurations are available after installation, see the [//www.mediawiki.org/wiki/Manual:User_rights relevant manual entry].",
+More complex user rights configurations are available after installation, see the [//www.mediawiki.org/wiki/Manual:wiki_User_rights relevant manual entry].",
 	'config-license'                  => 'Copyright and license:',
 	'config-license-none'             => 'No license footer',
 	'config-license-cc-by-sa'         => 'Creative Commons Attribution Share Alike',
@@ -510,7 +510,7 @@ The account you specified for installation is not a superuser and is not a membe
 
 MediaWiki currently requires that the tables be owned by the web user. Please specify another web account name, or click "back" and specify a suitably privileged install user.',
 	'config-install-user'             => 'Creating database user',
-	'config-install-user-alreadyexists' => 'User "$1" already exists',
+	'config-install-user-alreadyexists' => 'wiki_User "$1" already exists',
 	'config-install-user-create-failed' => 'Creating user "$1" failed: $2',
 	'config-install-user-grant-failed'  => 'Granting permission to user "$1" failed: $2',
 	'config-install-user-missing'     => 'The specified user "$1" does not exist.',
@@ -552,7 +552,7 @@ When that has been done, you can '''[$2 enter your wiki]'''.",
 	'config-help' => 'help',
 	'config-nofile'     => 'File "$1" could not be found. Has it been deleted?',
 	'mainpagetext'      => "'''MediaWiki has been successfully installed.'''",
-	'mainpagedocfooter' => "Consult the [//meta.wikimedia.org/wiki/Help:Contents User's Guide] for information on using the wiki software.
+	'mainpagedocfooter' => "Consult the [//meta.wikimedia.org/wiki/Help:Contents wiki_User's Guide] for information on using the wiki software.
 
 == Getting started ==
 * [//www.mediawiki.org/wiki/Manual:Configuration_settings Configuration settings list]
@@ -960,7 +960,7 @@ As dit gedoen is, kan u '''[u $2 wiki besoek]'''.", # Fuzzy
 	'config-download-localsettings' => 'Laai LocalSettings.php af',
 	'config-help' => 'hulp',
 	'mainpagetext' => "'''MediaWiki is suksesvol geïnstalleer.'''",
-	'mainpagedocfooter' => "Konsulteer '''[//meta.wikimedia.org/wiki/Help:Contents User's Guide]''' vir inligting oor hoe om die wikisagteware te gebruik.
+	'mainpagedocfooter' => "Konsulteer '''[//meta.wikimedia.org/wiki/Help:Contents wiki_User's Guide]''' vir inligting oor hoe om die wikisagteware te gebruik.
 
 == Hoe om te Begin ==
 * [//www.mediawiki.org/wiki/Manual:Configuration_settings Configuration settings list]
@@ -987,7 +987,7 @@ $messages['aln'] = array(
  */
 $messages['am'] = array(
 	'mainpagetext' => "'''MediaWiki በትክክል ማስገባቱ ተከናወነ።'''",
-	'mainpagedocfooter' => "ስለ ዊኪ ሶፍትዌር ጥቅም ለመረዳት፣ [//meta.wikimedia.org/wiki/Help:Contents User's Guide] ያንብቡ።
+	'mainpagedocfooter' => "ስለ ዊኪ ሶፍትዌር ጥቅም ለመረዳት፣ [//meta.wikimedia.org/wiki/Help:Contents wiki_User's Guide] ያንብቡ።
 
 == ለመጀመር ==
 
@@ -1199,7 +1199,7 @@ $messages['bar'] = array(
  */
 $messages['bcc'] = array(
 	'mainpagetext' => "'''مدیا وی کی گون موفقیت نصب بوت.'''",
-	'mainpagedocfooter' => "مشورت کنیت گون  [//meta.wikimedia.org/wiki/Help:Contents User's Guide] په گشیترین اطلاعات په استفاده چه برنامه ویکی.
+	'mainpagedocfooter' => "مشورت کنیت گون  [//meta.wikimedia.org/wiki/Help:Contents wiki_User's Guide] په گشیترین اطلاعات په استفاده چه برنامه ویکی.
 
 == شروع بیت ==
 * [//www.mediawiki.org/wiki/Manual:Configuration_settings Configuration settings list]
@@ -1211,7 +1211,7 @@ $messages['bcc'] = array(
  */
 $messages['bcl'] = array(
 	'mainpagetext' => "'''Instalado na an MediaWiki.'''",
-	'mainpagedocfooter' => "Konsultarón tabì an [//meta.wikimedia.org/wiki/Help:Contents User's Guide] para sa impormasyon sa paggamit nin progama kaining wiki.
+	'mainpagedocfooter' => "Konsultarón tabì an [//meta.wikimedia.org/wiki/Help:Contents wiki_User's Guide] para sa impormasyon sa paggamit nin progama kaining wiki.
 
 == Pagpopoon ==
 
@@ -1631,7 +1631,7 @@ chmod a+w $3</pre>',
 Сцэнар '''{{int:config-profile-fishbowl}}''' дазваляе рэдагаваць зацьверджаным удзельнікам, але ўсе могуць праглядаць старонкі іх гісторыю.
 '''{{int:config-profile-private}}''' дазваляе праглядаць і рэдагаваць старонкі толькі зацьверджаным удзельнікам.
 
-Больш складаныя правы ўдзельнікаў даступныя пасьля ўсталяваньня, глядзіце [//www.mediawiki.org/wiki/Manual:User_rights адпаведную старонку дакумэнтацыі].",
+Больш складаныя правы ўдзельнікаў даступныя пасьля ўсталяваньня, глядзіце [//www.mediawiki.org/wiki/Manual:wiki_User_rights адпаведную старонку дакумэнтацыі].",
 	'config-license' => 'Аўтарскія правы і ліцэнзія:',
 	'config-license-none' => 'Без інфармацыі пра ліцэнзію',
 	'config-license-cc-by-sa' => 'Creative Commons Attribution Share Alike',
@@ -2155,7 +2155,7 @@ chmod a+w $3</pre>',
 Уики, което е '''{{int:config-profile-fishbowl}}''' позволява на всички да преглеждат страниците, но само предварително одобрени редактори могат да редактират съдържанието.
 В '''{{int:config-profile-private}}''' само предварително одобрени потребители могат да четат и редактират съдържанието.
 
-Детайлно обяснение на конфигурациите на потребителските права е достъпно след инсталацията в [//www.mediawiki.org/wiki/Manual:User_rights Наръчника за потребителски права].",
+Детайлно обяснение на конфигурациите на потребителските права е достъпно след инсталацията в [//www.mediawiki.org/wiki/Manual:wiki_User_rights Наръчника за потребителски права].",
 	'config-license' => 'Авторски права и лиценз:',
 	'config-license-none' => 'Без лиценз',
 	'config-license-cc-by-sa' => 'Криейтив Комънс Признание-Споделяне на споделеното',
@@ -2995,7 +2995,7 @@ $messages['cps'] = array(
  */
 $messages['crh-cyrl'] = array(
 	'mainpagetext' => "'''MediaWiki мувафакъиетнен къурулды.'''",
-	'mainpagedocfooter' => "Бу викининъ ёл-ёругъыны [//meta.wikimedia.org/wiki/Help:Contents User's Guide къулланыджы къылавузындан] огренип оласынъыз.
+	'mainpagedocfooter' => "Бу викининъ ёл-ёругъыны [//meta.wikimedia.org/wiki/Help:Contents wiki_User's Guide къулланыджы къылавузындан] огренип оласынъыз.
 
 == Базы файдалы сайтлар ==
 * [//www.mediawiki.org/wiki/Manual:Configuration_settings Олуджы сазламалар джедвели];
@@ -3007,7 +3007,7 @@ $messages['crh-cyrl'] = array(
  */
 $messages['crh-latn'] = array(
 	'mainpagetext' => "'''MediaWiki muvafaqiyetnen quruldı.'''",
-	'mainpagedocfooter' => "Bu vikiniñ yol-yoruğını [//meta.wikimedia.org/wiki/Help:Contents User's Guide qullanıcı qılavuzından] ögrenip olasıñız.
+	'mainpagedocfooter' => "Bu vikiniñ yol-yoruğını [//meta.wikimedia.org/wiki/Help:Contents wiki_User's Guide qullanıcı qılavuzından] ögrenip olasıñız.
 
 == Bazı faydalı saytlar ==
 * [//www.mediawiki.org/wiki/Manual:Configuration_settings Olucı sazlamalar cedveli];
@@ -3410,7 +3410,7 @@ Na wiki, kde je '''{{int:config-profile-no-anon}}''', se lépe řídí zodpověd
 Profil '''{{int:config-profile-fishbowl}}''' umožňuje schváleným uživatelům editovat, ale veřejnost si může stránky prohlížet včetně jejich historie.
 '''{{int:config-profile-private}}''' dovoluje stránky prohlížet jen schváleným uživatelům, kteří je i mohou editovat.
 
-Po instalaci je možná komplexní konfigurace uživatelských práv; vizte [//www.mediawiki.org/wiki/Manual:User_rights odpovídající stránku příručky].",
+Po instalaci je možná komplexní konfigurace uživatelských práv; vizte [//www.mediawiki.org/wiki/Manual:wiki_User_rights odpovídající stránku příručky].",
 	'config-license' => 'Autorská práva a licence:',
 	'config-license-none' => 'Bez patičky s licencí',
 	'config-license-cc-by-sa' => 'Creative Commons Uveďte autora-Zachovejte licenci',
@@ -4004,7 +4004,7 @@ Allerdings finden etliche Menschen Wikis auch mit anderen Bearbeitungskonzepten 
 Ein '''{{int:config-profile-wiki}}''' ermöglicht es jedermann, sogar ohne über ein Benutzerkonto zu verfügen, Bearbeitungen vorzunehmen.
 Ein Wiki bei dem die '''{{int:config-profile-no-anon}}''' ist, fordert von den Benutzern eine höhere Verantwortung für ihre Bearbeitungen ein, könnte allerdings Personen abschrecken, die nur gelegentlich Bearbeitungen vornehmen wollen. Ein Wiki für '''{{int:config-profile-fishbowl}}''' gestattet es nur bestimmten Benutzern, Bearbeitungen vorzunehmen. Allerdings kann dabei die Allgemeinheit die Seiten immer noch betrachten und Änderungen nachvollziehen. Ein '''{{int:config-profile-private}}''' gestattet es nur ausgewählten Benutzern, Seiten zu betrachten sowie zu bearbeiten.
 
-Komplexere Konzepte zur Zugriffssteuerung können erst nach abgeschlossenem Installationsvorgang eingerichtet werden. Hierzu gibt es weitere Informationen auf der Website mit der [//www.mediawiki.org/wiki/Manual:User_rights entsprechenden Anleitung].",
+Komplexere Konzepte zur Zugriffssteuerung können erst nach abgeschlossenem Installationsvorgang eingerichtet werden. Hierzu gibt es weitere Informationen auf der Website mit der [//www.mediawiki.org/wiki/Manual:wiki_User_rights entsprechenden Anleitung].",
 	'config-license' => 'Lizenz:',
 	'config-license-none' => 'Keine Lizenzangabe in der Fußzeile',
 	'config-license-cc-by-sa' => 'Creative Commons „Namensnennung, Weitergabe unter gleichen Bedingungen“',
@@ -4188,7 +4188,7 @@ $messages['diq'] = array(
 	'config-page-readme' => 'Mı bıwane',
 	'config-restart' => 'E, fına dest pekê',
 	'config-sidebar' => "* [//www.mediawiki.org MediaWiki keye]
-* [//www.mediawiki.org/wiki/Help:Contents User's Şınasiye]
+* [//www.mediawiki.org/wiki/Help:Contents wiki_User's Şınasiye]
 * [//www.mediawiki.org/wiki/Manual:Contents Xizmetkara şınasiye]
 * [//www.mediawiki.org/wiki/Manual:FAQ Peşti]
 ----
@@ -4233,7 +4233,7 @@ $messages['diq'] = array(
  */
 $messages['dsb'] = array(
 	'mainpagetext' => "'''MediaWiki jo se wuspěšnje instalěrowało.'''",
-	'mainpagedocfooter' => "Pomoc pśi wužywanju softwary wiki namakajoš pód [//meta.wikimedia.org/wiki/Help:Contents User's Guide].
+	'mainpagedocfooter' => "Pomoc pśi wužywanju softwary wiki namakajoš pód [//meta.wikimedia.org/wiki/Help:Contents wiki_User's Guide].
 
 == Na zachopjenje ==
 
@@ -4259,7 +4259,7 @@ $messages['dtp'] = array(
  */
 $messages['el'] = array(
 	'mainpagetext' => "'''To λογισμικό MediaWiki εγκαταστάθηκε με επιτυχία.'''",
-	'mainpagedocfooter' => 'Περισσότερες πληροφορίες σχετικά με τη χρήση και με τη ρύθμιση παραμέτρων θα βρείτε στους συνδέσμους: [//meta.wikimedia.org/wiki/MediaWiki_localisation Οδηγίες για τροποποίηση του περιβάλλοντος εργασίας] και [//meta.wikimedia.org/wiki/MediaWiki_User%27s_Guide Εγχειρίδιο χρήστη].',
+	'mainpagedocfooter' => 'Περισσότερες πληροφορίες σχετικά με τη χρήση και με τη ρύθμιση παραμέτρων θα βρείτε στους συνδέσμους: [//meta.wikimedia.org/wiki/MediaWiki_localisation Οδηγίες για τροποποίηση του περιβάλλοντος εργασίας] και [//meta.wikimedia.org/wiki/MediaWiki_wiki_User%27s_Guide Εγχειρίδιο χρήστη].',
 );
 
 /** Esperanto (Esperanto)
@@ -4278,7 +4278,7 @@ $messages['eo'] = array(
 	'config-page-install' => 'Instali',
 	'config-page-complete' => 'Farita!',
 	'mainpagetext' => "'''MediaWiki estis sukcese instalita.'''",
-	'mainpagedocfooter' => "Konsultu la [//meta.wikimedia.org/wiki/MediaWiki_User%27s_Guide User's Guide] por informo pri uzado de vikia programaro.
+	'mainpagedocfooter' => "Konsultu la [//meta.wikimedia.org/wiki/MediaWiki_wiki_User%27s_Guide wiki_User's Guide] por informo pri uzado de vikia programaro.
 
 ==Kiel komenci==
 
@@ -4687,7 +4687,7 @@ Un wiki con '''{{int:config-profile-no-anon}}''' ofrece rendición de cuentas ad
 El escenario '''{{int:config-profile-fishbowl}}''' permite editar a los usuarios autorizados, pero el público puede ver las páginas, incluyendo el historial.
 Un '''{{int:config-profile-private}}''' sólo permite ver páginas a los usuarios autorizados, el mismo grupo al que le está permitido editar.
 
-Configuraciones más complejas de derechos de usuario están disponibles después de la instalación, consulte [//www.mediawiki.org/wiki/Manual:User_rights esta entrada en el manual].",
+Configuraciones más complejas de derechos de usuario están disponibles después de la instalación, consulte [//www.mediawiki.org/wiki/Manual:wiki_User_rights esta entrada en el manual].",
 	'config-license' => 'Copyright and licencia:',
 	'config-license-none' => 'Pie sin licencia',
 	'config-license-cc-by-sa' => 'Creative Commons Reconocimiento Compartir Igual',
@@ -4871,7 +4871,7 @@ $messages['et'] = array(
 	'config-install-step-failed' => 'ebaõnnestus',
 	'mainpagetext' => "'''MediaWiki tarkvara on edukalt paigaldatud.'''",
 	'mainpagedocfooter' => 'Juhiste saamiseks kasutamise ning konfigureerimise kohta vaata palun inglisekeelset [//meta.wikimedia.org/wiki/MediaWiki_localisation dokumentatsiooni liidese kohaldamisest]
-ning [//meta.wikimedia.org/wiki/MediaWiki_User%27s_Guide kasutusjuhendit].',
+ning [//meta.wikimedia.org/wiki/MediaWiki_wiki_User%27s_Guide kasutusjuhendit].',
 );
 
 /** Basque (euskara)
@@ -4967,7 +4967,7 @@ $messages['eu'] = array(
  */
 $messages['ext'] = array(
 	'mainpagetext' => "'''MeyaGüiqui s'á istalau satihatoriamenti.'''",
-	'mainpagedocfooter' => "Consurta la [//meta.wikimedia.org/wiki/Help:Contents User's Guide] pa sabel mas al tentu el huncionamientu el software güiqui.
+	'mainpagedocfooter' => "Consurta la [//meta.wikimedia.org/wiki/Help:Contents wiki_User's Guide] pa sabel mas al tentu el huncionamientu el software güiqui.
 
 == Esminciandu ==
 
@@ -5211,7 +5211,7 @@ Voit ohittaa jäljellä olevat määritykset ja asentaa wikin juuri nyt.',
 	'config-download-localsettings' => 'Lataa LocalSettings.php',
 	'config-help' => 'ohje',
 	'mainpagetext' => "'''MediaWiki on onnistuneesti asennettu.'''",
-	'mainpagedocfooter' => "Lisätietoja käytöstä on sivulla [//meta.wikimedia.org/wiki/Help:Contents User's Guide].
+	'mainpagedocfooter' => "Lisätietoja käytöstä on sivulla [//meta.wikimedia.org/wiki/Help:Contents wiki_User's Guide].
 
 === Lisäohjeita ===
 
@@ -5639,7 +5639,7 @@ Vous avez donc le choix.
 '''{{int:config-profile-fishbowl}}''' autorise la modification par les utilisateurs approuvés, mais le public peut toujours lire les pages et leur historique.
 '''{{int:config-profile-private}}''' n’autorise que les utilisateurs approuvés à voir et modifier les pages.
 
-Des configurations de droits d’utilisateurs plus complexes sont disponibles après l'installation, voir la [//www.mediawiki.org/wiki/Manual:User_rights page correspondante du manuel].",
+Des configurations de droits d’utilisateurs plus complexes sont disponibles après l'installation, voir la [//www.mediawiki.org/wiki/Manual:wiki_User_rights page correspondante du manuel].",
 	'config-license' => "Droits d'auteur et licence :",
 	'config-license-none' => 'Aucune licence en bas de page',
 	'config-license-cc-by-sa' => "Creative Commons attribution partage à l'identique",
@@ -6005,14 +6005,14 @@ $messages['ga'] = array(
 	'config-help' => 'Cuidiú',
 	'mainpagetext' => "'''D'éirigh le suiteáil MediaWiki.'''",
 	'mainpagedocfooter' => 'Féach ar [//meta.wikimedia.org/wiki/MediaWiki_localisation doiciméid um conas an chomhéadán a athrú]
-agus an [//meta.wikimedia.org/wiki/MediaWiki_User%27s_Guide Lámhleabhar úsáideora] chun cabhair úsáide agus fíoraíochta a fháil.',
+agus an [//meta.wikimedia.org/wiki/MediaWiki_wiki_User%27s_Guide Lámhleabhar úsáideora] chun cabhair úsáide agus fíoraíochta a fháil.',
 );
 
 /** Gagauz (Gagauz)
  */
 $messages['gag'] = array(
 	'mainpagetext' => "'''MediaWiki başarılan kuruldu.'''",
-	'mainpagedocfooter' => "Vikilän iş uurunda bilgi almaa için [//meta.wikimedia.org/wiki/Help:Contents User's Guide] sayfasına bakınız
+	'mainpagedocfooter' => "Vikilän iş uurunda bilgi almaa için [//meta.wikimedia.org/wiki/Help:Contents wiki_User's Guide] sayfasına bakınız
 
 == Eni başlayanlar için ==
 
@@ -6455,7 +6455,7 @@ A opción '''{{int:config-profile-no-anon}}''' proporciona un control maior, per
 O escenario '''{{int:config-profile-fishbowl}}''' restrinxe a edición aos usuarios aprobados, pero o público pode ollar as páxinas, incluíndo os historiais.
 O tipo '''{{int:config-profile-private}}''' só deixa que os usuarios aprobados vexan e editen as páxinas.
 
-Hai dispoñibles configuracións de dereitos de usuario máis complexas despois da instalación; bótelle un ollo a [//www.mediawiki.org/wiki/Manual:User_rights esta entrada no manual].",
+Hai dispoñibles configuracións de dereitos de usuario máis complexas despois da instalación; bótelle un ollo a [//www.mediawiki.org/wiki/Manual:wiki_User_rights esta entrada no manual].",
 	'config-license' => 'Dereitos de autor e licenza:',
 	'config-license-none' => 'Sen licenza ao pé',
 	'config-license-cc-by-sa' => 'Creative Commons recoñecemento compartir igual',
@@ -7170,7 +7170,7 @@ chmod a+w $3</pre></div>',
 בתסריט '''{{int:config-profile-fishbowl}}''' רק משתמשים שקיבלו אישור יכולים לערוך, אבל כל הגולשים יכולים לקרוא את הדפים ואת גרסאותיהם הקודמות.
 ב'''{{int:config-profile-private}}''' רק משתמשים שקיבלו אישור יכולים לקרוא ולערוך דפים.
 
-הגדרות מורכבות של הרשאות אפשריות אחרי ההתקנה, ר׳ את [//www.mediawiki.org/wiki/Manual:User_rights הפרק על הנושא הזה בספר ההדרכה].",
+הגדרות מורכבות של הרשאות אפשריות אחרי ההתקנה, ר׳ את [//www.mediawiki.org/wiki/Manual:wiki_User_rights הפרק על הנושא הזה בספר ההדרכה].",
 	'config-license' => 'זכויות יוצרים ורישיון:',
 	'config-license-none' => 'ללא כותרת תחתית עם רישיון',
 	'config-license-cc-by-sa' => 'קריאייטיב קומונז–ייחוס–שיתוף זהה',
@@ -7340,7 +7340,7 @@ $messages['hi'] = array(
  */
 $messages['hif-latn'] = array(
 	'mainpagetext' => "'''MediaWiki ke safalta se install kar dewa gais hai.'''",
-	'mainpagedocfooter' => "Wiki software ke use kare ke aur jaankari ke khatir [//meta.wikimedia.org/wiki/Help:Contents User's Guide] ke dekho.
+	'mainpagedocfooter' => "Wiki software ke use kare ke aur jaankari ke khatir [//meta.wikimedia.org/wiki/Help:Contents wiki_User's Guide] ke dekho.
 
 == Getting started ==
 * [//www.mediawiki.org/wiki/Manual:Configuration_settings Configuration settings list]
@@ -7353,7 +7353,7 @@ $messages['hif-latn'] = array(
  */
 $messages['hil'] = array(
 	'mainpagetext' => "'''Ang MediaWiki madinalag-on nga na-instala.'''",
-	'mainpagedocfooter' => " Magkonsulta sa [//meta.wikimedia.org/wiki/Help:Contents User's Guide] para sa mga impormasyon sa paggamit sang wiki nga software.
+	'mainpagedocfooter' => " Magkonsulta sa [//meta.wikimedia.org/wiki/Help:Contents wiki_User's Guide] para sa mga impormasyon sa paggamit sang wiki nga software.
 
 == Pag-umpisa ==
 * [//www.mediawiki.org/wiki/Manual:Configuration_settings Lista sang mga konpigorasyon sang pagkay-o]
@@ -7366,7 +7366,7 @@ $messages['hil'] = array(
 $messages['hr'] = array(
 	'mainpagetext' => "'''Softver MediaWiki je uspješno instaliran.'''",
 	'mainpagedocfooter' => 'Pogledajte [//meta.wikimedia.org/wiki/MediaWiki_localisation dokumentaciju o prilagodbi sučelja]
-i [//meta.wikimedia.org/wiki/MediaWiki_User%27s_Guide Vodič za suradnike] za pomoć pri uporabi i podešavanju.',
+i [//meta.wikimedia.org/wiki/MediaWiki_wiki_User%27s_Guide Vodič za suradnike] za pomoć pri uporabi i podešavanju.',
 );
 
 /** Upper Sorbian (hornjoserbsce)
@@ -8108,7 +8108,7 @@ Választhatsz!
 
 Lehetőség van arra is, hogy '''{{lc:{{int:config-profile-fishbowl}}}}''' módosíthassák a lapokat, de a nyilvánosság ekkor megtekintheti a lapokat és azok laptörténetét is. '''{{int:config-profile-private}}''' esetén csak az engedélyezett szerkesztők tekinthetik meg a lapokat, és ugyanez a csoport szerkeszthet.
 
-Telepítés után jóval összetettebb jogosultságrendszer állítható össze, további információ a [//www.mediawiki.org/wiki/Manual:User_rights kézikönyv kapcsolódó bejegyzésében].",
+Telepítés után jóval összetettebb jogosultságrendszer állítható össze, további információ a [//www.mediawiki.org/wiki/Manual:wiki_User_rights kézikönyv kapcsolódó bejegyzésében].",
 	'config-license' => 'Szerzői jog és licenc:',
 	'config-license-none' => 'Nincs licencjelzés',
 	'config-license-cc-by-sa' => 'Creative Commons Nevezd meg! - Így add tovább!',
@@ -8246,7 +8246,7 @@ Ha végeztél a fájl elhelyezésével, '''[$2 beléphetsz a wikibe]'''.",
 	'config-download-localsettings' => 'LocalSettings.php letöltése',
 	'config-help' => 'segítség',
 	'mainpagetext' => "'''A MediaWiki telepítése sikeresen befejeződött.'''",
-	'mainpagedocfooter' => "Ha segítségre van szükséged a wikiszoftver használatához, akkor keresd fel a [//meta.wikimedia.org/wiki/Help:Contents User's Guide] oldalt.
+	'mainpagedocfooter' => "Ha segítségre van szükséged a wikiszoftver használatához, akkor keresd fel a [//meta.wikimedia.org/wiki/Help:Contents wiki_User's Guide] oldalt.
 
 == Alapok (angol nyelven) ==
 * [//www.mediawiki.org/wiki/Manual:Configuration_settings Beállítások listája]
@@ -8325,7 +8325,7 @@ Ez tartalmazza az összes beállítást.
 '''Megjegyzés''': Ha ezt most nem teszi meg, és kilép, a generált fájl nem lesz elérhető a későbbiekben.
 
 Ha ezzel készen van, '''[$2 beléphet a wikibe]'''.", # Fuzzy
-	'mainpagedocfooter' => "Ha segítségre van szüksége a wikiszoftver használatához, akkor keresse fel a [//meta.wikimedia.org/wiki/Help:Contents User's Guide] oldalt.
+	'mainpagedocfooter' => "Ha segítségre van szüksége a wikiszoftver használatához, akkor keresse fel a [//meta.wikimedia.org/wiki/Help:Contents wiki_User's Guide] oldalt.
 
 == Alapok (angol nyelven) ==
 * [//www.mediawiki.org/wiki/Manual:Configuration_settings Beállítások listája]
@@ -8337,7 +8337,7 @@ Ha ezzel készen van, '''[$2 beléphet a wikibe]'''.", # Fuzzy
  */
 $messages['hy'] = array(
 	'mainpagetext' => "'''«MediaWiki» ծրագիրը հաջողությամբ տեղադրվեց։'''",
-	'mainpagedocfooter' => "Այցելեք [//meta.wikimedia.org/wiki/Help:Contents User's Guide]՝ վիքի ծրագրային ապահովման օգտագործման մասին տեղեկությունների համար։
+	'mainpagedocfooter' => "Այցելեք [//meta.wikimedia.org/wiki/Help:Contents wiki_User's Guide]՝ վիքի ծրագրային ապահովման օգտագործման մասին տեղեկությունների համար։
 
 == Որոշ օգտակար ռեսուրսներ ==
 
@@ -8741,7 +8741,7 @@ Un wiki con '''{{int:config-profile-no-anon}}''' attribue additional responsabil
 Le scenario '''{{int:config-profile-fishbowl}}''' permitte al usatores approbate de modificar, ma le publico pote vider le paginas, includente lor historia.
 Un '''{{int:config-profile-private}}''' permitte solmente al usatores approbate de vider le paginas e de modificar los.
 
-Configurationes de derectos de usator plus complexe es disponibile post installation, vide le [//www.mediawiki.org/wiki/Manual:User_rights pertinente section del manual].",
+Configurationes de derectos de usator plus complexe es disponibile post installation, vide le [//www.mediawiki.org/wiki/Manual:wiki_User_rights pertinente section del manual].",
 	'config-license' => 'Copyright e licentia:',
 	'config-license-none' => 'Nulle licentia in pede de paginas',
 	'config-license-cc-by-sa' => 'Creative Commons Attribution Share Alike',
@@ -9270,7 +9270,7 @@ Namun, berbagai kegunaan lain dari MediaWiki telah ditemukan, dan kadang tidak m
 '''{{int:config-profile-fishbowl}}''' memungkinkan pengguna yang disetujui untuk menyunting, tetapi publik dapat melihat halaman, termasuk riwayatnya.
 '''{{int:config-profile-private}}''' hanya memungkinkan pengguna yang disetujui untuk melihat dan menyunting halaman.
 
-Konfigurasi hak pengguna yang lebih kompleks tersedia setelah instalasi. Lihat [//www.mediawiki.org/wiki/Manual:User_rights/id entri manual terkait].",
+Konfigurasi hak pengguna yang lebih kompleks tersedia setelah instalasi. Lihat [//www.mediawiki.org/wiki/Manual:wiki_User_rights/id entri manual terkait].",
 	'config-license' => 'Hak cipta dan lisensi:',
 	'config-license-none' => 'Tidak ada lisensi',
 	'config-license-cc-by-sa' => 'Creative Commons Atribusi Berbagi Serupa',
@@ -10028,7 +10028,7 @@ MediaWikiでは、最近の更新を確認し、神経質な、もしくは悪�
 '''{{int:config-profile-fishbowl}}'''のウィキは、承認された利用者が編集でき、一方、一般の人はページ（とその履歴）を閲覧できます。
 '''{{int:config-profile-private}}'''は、承認された利用者のみがページを閲覧でき、そのグループが編集できます。
 
-より複雑な利用者権限の設定は、インストール後に設定できます。詳細は[//www.mediawiki.org/wiki/Manual:User_rights 関連するマニュアル]をご覧ください。",
+より複雑な利用者権限の設定は、インストール後に設定できます。詳細は[//www.mediawiki.org/wiki/Manual:wiki_User_rights 関連するマニュアル]をご覧ください。",
 	'config-license' => '著作権とライセンス:',
 	'config-license-none' => 'ライセンスのフッターを付けない',
 	'config-license-cc-by-sa' => 'クリエイティブ・コモンズ 表示-継承',
@@ -10168,7 +10168,7 @@ $3
  */
 $messages['jam'] = array(
 	'mainpagetext' => "'''MediaWiki don instaal soksesful.'''",
-	'mainpagedocfooter' => "Kansolt di [//meta.wikimedia.org/wiki/Help:Contents User's Guide] fi infamieshan ou fi yuuz di wiki saafwier.
+	'mainpagedocfooter' => "Kansolt di [//meta.wikimedia.org/wiki/Help:Contents wiki_User's Guide] fi infamieshan ou fi yuuz di wiki saafwier.
 
 == Taatop ==
 * [//www.mediawiki.org/wiki/Manual:Configuration_settings Configuration settings list]
@@ -10181,14 +10181,14 @@ $messages['jam'] = array(
  */
 $messages['jut'] = array(
 	'mainpagetext' => "'''MediaWiki er nu installeret.'''",
-	'mainpagedocfooter' => "Se vores engelskspråĝede [//meta.wikimedia.org/wiki/MediaWiki_localisation dokumentåsje tilpasnenge'm åf æ brugergrænseflade] og [//meta.wikimedia.org/wiki/MediaWiki_User%27s_Guide æ brugervejlednenge] før åplysnenger åpsætnenge'm og anvendelse.",
+	'mainpagedocfooter' => "Se vores engelskspråĝede [//meta.wikimedia.org/wiki/MediaWiki_localisation dokumentåsje tilpasnenge'm åf æ brugergrænseflade] og [//meta.wikimedia.org/wiki/MediaWiki_wiki_User%27s_Guide æ brugervejlednenge] før åplysnenger åpsætnenge'm og anvendelse.",
 );
 
 /** Javanese (Basa Jawa)
  */
 $messages['jv'] = array(
 	'mainpagetext' => "'''Prangkat empuk wiki wis suksès dipasang.'''",
-	'mainpagedocfooter' => "Mangga maca [//meta.wikimedia.org/wiki/Help:Contents User's Guide] kanggo katrangan luwih langkung prakara panggunan prangkat empuk wiki
+	'mainpagedocfooter' => "Mangga maca [//meta.wikimedia.org/wiki/Help:Contents wiki_User's Guide] kanggo katrangan luwih langkung prakara panggunan prangkat empuk wiki
 == Miwiti panggunan  ==
 * [//www.mediawiki.org/wiki/Manual:Configuration_settings Daftar pangaturan préférènsi]
 * [//www.mediawiki.org/wiki/Manual:FAQ MediaWiki FAQ]
@@ -10806,7 +10806,7 @@ MyISAM 데이터베이스는 InnoDB 데이터베이스보다 더 자주 손실�
 
 '''{{int:config-profile-fishbowl}}''' 같은 경우는 승인된 사용자만 편집할 수 있지만, 대중은 역사를 포함하여 페이지를 볼 수 있습니다. '''{{int:config-profile-private}}'''는 승인된 사용자만 같은 그룹에서 편집할 수 있고 볼 수 있습니다.
 
-더 복잡한 사용자 권한을 설정하여 설치한 후 사용할 수 있도록 하려면 [//www.mediawiki.org/wiki/Manual:User_rights 관련 매뉴얼 항목]을 참고하세요.",
+더 복잡한 사용자 권한을 설정하여 설치한 후 사용할 수 있도록 하려면 [//www.mediawiki.org/wiki/Manual:wiki_User_rights 관련 매뉴얼 항목]을 참고하세요.",
 	'config-license' => '저작권 및 라이선스:',
 	'config-license-none' => '라이선스 바닥글 없음',
 	'config-license-cc-by-sa' => '크리에이티브 커먼즈 저작자표시-동일조건변경허락',
@@ -10965,7 +10965,7 @@ $3
  */
 $messages['krc'] = array(
 	'mainpagetext' => "'''«MediaWiki» тыйыншлы салынды.'''",
-	'mainpagedocfooter' => "Бу вики бла къалай ишлерге ангылатхан информацияны [//meta.wikimedia.org/wiki/Help:Contents_User's_Guide къошулуучугъа юретиуде] табаргъа боллукъду.
+	'mainpagedocfooter' => "Бу вики бла къалай ишлерге ангылатхан информацияны [//meta.wikimedia.org/wiki/Help:Contents_wiki_User's_Guide къошулуучугъа юретиуде] табаргъа боллукъду.
 
 == Файдалы ресурсла ==
 * [//www.mediawiki.org/wiki/Manual:Configuration_settings тюрлендириулени списогу (ингил.)];
@@ -11381,7 +11381,7 @@ Esu häß De de Wahl:
 
 '''{{int:config-profile-private}}''' kann nur lässe, wäh en et Wiki zohjelohße es, un desellve Jropp kann uch schrieve.
 
-Noch ander un un opwändijere Enshtellunge för de Rääschte sin müjjelesch, wann et Wiki ens aam Loufe es. Loor Der doför de [//www.mediawiki.org/wiki/Manual:User_rights zopaß Hölp em Handbooch] aan.",
+Noch ander un un opwändijere Enshtellunge för de Rääschte sin müjjelesch, wann et Wiki ens aam Loufe es. Loor Der doför de [//www.mediawiki.org/wiki/Manual:wiki_User_rights zopaß Hölp em Handbooch] aan.",
 	'config-license' => 'Urhävverrääsch un Lizänz:',
 	'config-license-none' => 'Kein Fooßreih övver de Lizänz',
 	'config-license-cc-by-sa' => '<i lang="en">Creative Commons</i> Der Name moß jenannt sin, et Wiggerjävve es zohjelohße onger dersellve Bedengunge',
@@ -11874,7 +11874,7 @@ $messages['lv'] = array(
  */
 $messages['lzh'] = array(
 	'mainpagetext' => "'''共筆臺已立'''",
-	'mainpagedocfooter' => "欲識維基，見[//meta.wikimedia.org/wiki/Help:Contents User's Guide]
+	'mainpagedocfooter' => "欲識維基，見[//meta.wikimedia.org/wiki/Help:Contents wiki_User's Guide]
 
 == 始 ==
 
@@ -11901,7 +11901,7 @@ $messages['lzz'] = array(
  */
 $messages['mai'] = array(
 	'mainpagetext' => "'''मीडियाविकी नीक जकाँ प्रस्थापित भेल।'''",
-	'mainpagedocfooter' => "सम्पर्क करू [//meta.wikimedia.org/wiki/Help:Contents User's Guide] विकी तंत्रांशक प्रयोगक जानकारी लेल।
+	'mainpagedocfooter' => "सम्पर्क करू [//meta.wikimedia.org/wiki/Help:Contents wiki_User's Guide] विकी तंत्रांशक प्रयोगक जानकारी लेल।
 
 ==प्रारम्भ कोना करी==
 * [//www.mediawiki.org/wiki/Manual:Configuration_settings Configuration settings list]
@@ -12394,7 +12394,7 @@ chmod a+w $3</pre>',
 '''{{int:config-profile-fishbowl}}''' — може да уредуваат само уредници што имаат добиено дозвола за тоа, но јавноста може да ги гледа страниците, вклучувајќи ја нивната историја.
 '''{{int:config-profile-private}}''' — страниците се видливи и уредливи само за овластени корисници.
 
-По инсталацијата имате на избор и посложени кориснички права и поставки. Погледајте во [//www.mediawiki.org/wiki/Manual:User_rights прирачникот].",
+По инсталацијата имате на избор и посложени кориснички права и поставки. Погледајте во [//www.mediawiki.org/wiki/Manual:wiki_User_rights прирачникот].",
 	'config-license' => 'Авторски права и лиценца:',
 	'config-license-none' => 'Без подножје за лиценца',
 	'config-license-cc-by-sa' => 'Creative Commons НаведиИзвор СподелиПодИстиУслови',
@@ -13250,7 +13250,7 @@ En wiki med '''{{int:config-profile-no-anon}}''' tilbyr ekstra ansvarlighet, men
 '''{{int:config-profile-fishbowl}}'''-scenariet tillater godkjente brukere å redigere, mens publikum kan se sider, og også historikken.
 En '''{{int:config-profile-private}}''' tillater kun godkjente brukere å se sider, den samme gruppen som får lov til å redigere dem.
 
-Mer komplekse konfigurasjoner av brukerrettigheter er tilgjengelig etter installasjon, se det [//www.mediawiki.org/wiki/Manual:User_rights relevante manualavsnittet].",
+Mer komplekse konfigurasjoner av brukerrettigheter er tilgjengelig etter installasjon, se det [//www.mediawiki.org/wiki/Manual:wiki_User_rights relevante manualavsnittet].",
 	'config-license' => 'Opphavsrett og lisens:',
 	'config-license-none' => 'Ingen lisensbunntekst',
 	'config-license-cc-by-sa' => 'Creative Commons Navngivelse Del på samme vilkår',
@@ -13328,7 +13328,7 @@ For mer informasjon om denne funksjonen, inklusive instruksjoner om hvordan man 
 $messages['nds'] = array(
 	'mainpagetext' => "'''De MediaWiki-Software is mit Spood installeert worrn.'''",
 	'mainpagedocfooter' => 'Kiek de [//meta.wikimedia.org/wiki/MediaWiki_localisation Dokumentatschoon för dat Anpassen vun de Brukerböversiet]
-un dat [//meta.wikimedia.org/wiki/MediaWiki_User%27s_Guide Brukerhandbook] för Hülp to de Bruuk un Konfiguratschoon.',
+un dat [//meta.wikimedia.org/wiki/MediaWiki_wiki_User%27s_Guide Brukerhandbook] för Hülp to de Bruuk un Konfiguratschoon.',
 );
 
 /** Nedersaksisch (Nedersaksisch)
@@ -13762,7 +13762,7 @@ Een wiki met '''{{int:config-profile-no-anon}}\" biedt extra verantwoordelijkhei
 Het scenario '''{{int:config-profile-fishbowl}}''' laat gebruikers waarvoor dat is ingesteld bewerkt, maar andere gebruikers kunnen alleen pagina's bekijken, inclusief de bewerkingsgeschiedenis.
 In een '''{{int:config-profile-private}}''' kunnen alleen goedgekeurde gebruikers pagina's bekijken en bewerken.
 
-Meer complexe instellingen voor gebruikersrechten zijn te maken na de installatie; hierover is meer te lezen in de [//www.mediawiki.org/wiki/Manual:User_rights handleiding].",
+Meer complexe instellingen voor gebruikersrechten zijn te maken na de installatie; hierover is meer te lezen in de [//www.mediawiki.org/wiki/Manual:wiki_User_rights handleiding].",
 	'config-license' => 'Auteursrechten en licentie:',
 	'config-license-none' => 'Geen licentie in de voettekst',
 	'config-license-cc-by-sa' => 'Creative Commons Naamsvermelding-Gelijk delen',
@@ -14017,7 +14017,7 @@ $messages['pa'] = array(
  */
 $messages['pam'] = array(
 	'mainpagetext' => "'''Melaus ing pamipalyari ning MediaWiki.'''",
-	'mainpagedocfooter' => "Basan me ing [//meta.wikimedia.org/wiki/Help:Contents User's Guide] para king impormasiun keng pamangamit ning wiki software.
+	'mainpagedocfooter' => "Basan me ing [//meta.wikimedia.org/wiki/Help:Contents wiki_User's Guide] para king impormasiun keng pamangamit ning wiki software.
 
 == Pamagumpisa ==
 * [//www.mediawiki.org/wiki/Manual:Configuration_settings Configuration settings list]
@@ -14443,7 +14443,7 @@ Wiki z '''{{int:config-profile-no-anon}}''' zawiera dodatkowe funkcje rozliczani
 Scenariusz '''{{int:config-profile-fishbowl}}''' umożliwia zatwierdzonym użytkownikom edycję, ale wyświetlanie stron jest powszechnie dostępne, włącznie z historią.
 Ustawienie '''{{int:config-profile-private}}'' ' pozwala na wyświetlanie stron tylko zatwierdzonym użytkownikom, ta sama grupa może edytować.
 
-Bardziej skomplikowane konfiguracje uprawnień użytkowników są dostępne po zakończeniu instalacji, zobacz [//www.mediawiki.org/wiki/Manual:User_rights odpowiednią część podręcznika].",
+Bardziej skomplikowane konfiguracje uprawnień użytkowników są dostępne po zakończeniu instalacji, zobacz [//www.mediawiki.org/wiki/Manual:wiki_User_rights odpowiednią część podręcznika].",
 	'config-license' => 'Prawa autorskie i licencja',
 	'config-license-none' => 'Brak stopki z licencją',
 	'config-license-cc-by-sa' => 'Creative Commons – za uznaniem autora, na tych samych zasadach',
@@ -14913,7 +14913,7 @@ Na wiki con  '''{{int:config-profile-no-anon}}''' a dà pì 'd contròl, ma a pe
 Ël senari '''{{int:config-profile-fishbowl}}''' a përmët a j'utent aprovà ëd modifiché, ma ël pùblich a peul vëdde le pàgine, comprèisa la stòria.
 Un '''{{int:config-profile-private}}''' a përmët mach a j'utent aprovà ëd vëdde le pàgine, con la midema partìa ch'a peul modifiché.
 
-Configurassion ëd drit d'utent pi complicà a son disponìbij apress l'instalassion, vëdde la [//www.mediawiki.org/wiki/Manual:User_rights pàgina a pòsta dël manual].",
+Configurassion ëd drit d'utent pi complicà a son disponìbij apress l'instalassion, vëdde la [//www.mediawiki.org/wiki/Manual:wiki_User_rights pàgina a pòsta dël manual].",
 	'config-license' => "Drit d'autor e licensa",
 	'config-license-none' => 'Gnun-a licensa an nòta an bass',
 	'config-license-cc-by-sa' => 'Creative Commons atribussion an part uguaj',
@@ -15015,7 +15015,7 @@ A dovrà [$1 dëscarielo] e butelo ant la bas ëd l'instalassion ëd soa wiki (�
 Quand che a l'é stàit fàit, a peul '''[$2 intré an soa wiki]'''.", # Fuzzy
 	'config-help' => 'agiut',
 	'mainpagetext' => "'''MediaWiki a l'é staita anstalà a la përfession.'''",
-	'mainpagedocfooter' => "Che a varda la [//meta.wikimedia.org/wiki/Help:Contents User's Guide] për avèj dj'anformassion ant sël coma dovré ël programa dla wiki.
+	'mainpagedocfooter' => "Che a varda la [//meta.wikimedia.org/wiki/Help:Contents wiki_User's Guide] për avèj dj'anformassion ant sël coma dovré ël programa dla wiki.
 
 == Për anandiesse a travajé ==
 * [//www.mediawiki.org/wiki/Manual:Configuration_settings Lista dij paràmeter ëd configurassion]
@@ -15493,7 +15493,7 @@ Uma wiki com '''{{int:config-profile-no-anon}}''' atribui mais responsabilidade,
 Um cenário '''{{int:config-profile-fishbowl}}''' permite que os utilizadores aprovados editem, mas que o público visione as páginas, incluindo o historial das mesmas.
 Uma '''{{int:config-profile-private}}''' só permite que os utilizadores aprovados visionem as páginas e as editem.
 
-Após a instalação, estarão disponíveis mais configurações de privilégios. Consulte [//www.mediawiki.org/wiki/Manual:User_rights a entrada relevante no Manual].",
+Após a instalação, estarão disponíveis mais configurações de privilégios. Consulte [//www.mediawiki.org/wiki/Manual:wiki_User_rights a entrada relevante no Manual].",
 	'config-license' => 'Direitos de autor e licença:',
 	'config-license-none' => 'Sem rodapé com a licença',
 	'config-license-cc-by-sa' => 'Creative Commons - Atribuição - Partilha nos Mesmos Termos',
@@ -15746,7 +15746,7 @@ Se você não pretende usar um logotipo, deixe este campo em branco.', # Fuzzy
  */
 $messages['qu'] = array(
 	'mainpagetext' => "'''MediaWiki nisqa llamp'u kaqqa aypaylla takyachisqañam.'''",
-	'mainpagedocfooter' => "Wiki llamp'u kaqmanta willasunaykipaqqa [//meta.wikimedia.org/wiki/Help:Contents Ruraqpaq yanapana] ''(User's Guide)'' sutiyuq p'anqata qhaway.
+	'mainpagedocfooter' => "Wiki llamp'u kaqmanta willasunaykipaqqa [//meta.wikimedia.org/wiki/Help:Contents Ruraqpaq yanapana] ''(wiki_User's Guide)'' sutiyuq p'anqata qhaway.
 
 == Qallarichkaspa ==
 
@@ -15836,7 +15836,7 @@ $messages['roa-tara'] = array(
 	'config-install-step-failed' => 'fallite',
 	'config-help' => 'ajute',
 	'mainpagetext' => "'''MediaUicchi ha state 'nstallete.'''",
-	'mainpagedocfooter' => "Vè vide [//meta.wikimedia.org/wiki/Help:Contents User's Guide] pe l'mbormaziune sus a cumme s'ause 'u softuer wiki.
+	'mainpagedocfooter' => "Vè vide [//meta.wikimedia.org/wiki/Help:Contents wiki_User's Guide] pe l'mbormaziune sus a cumme s'ause 'u softuer wiki.
 
 == Pe accumenzà ==
 * [//www.mediawiki.org/wiki/Manual:Configuration_settings Liste pe le configuraziune]
@@ -16245,7 +16245,7 @@ chmod a+w $3</pre>',
 
 Сценарий '''«{{int:config-profile-fishbowl}}»''' разрешает редактирование только определённым участникам, но общедоступным остаётся просмотр страниц, в том числе просмотр истории изменения. В режиме '''«{{int:config-profile-private}}»''' просмотр страниц разрешён только определённым пользователям, какая-то их часть может иметь также права на редактирование.
 
-Более сложные схемы разграничения прав можно настроить после установки, см. [//www.mediawiki.org/wiki/Manual:User_rights соответствующее руководство].",
+Более сложные схемы разграничения прав можно настроить после установки, см. [//www.mediawiki.org/wiki/Manual:wiki_User_rights соответствующее руководство].",
 	'config-license' => 'Авторские права и лицензии:',
 	'config-license-none' => 'Не указывать лицензию в колонтитуле внизу страницы',
 	'config-license-cc-by-sa' => 'Creative Commons Attribution Share Alike',
@@ -16806,7 +16806,7 @@ Vnesite ime dovoljenja ročno.',
 	'config-help' => 'pomoč',
 	'mainpagetext' => "'''Programje MediaWiki je bilo uspešno nameščeno.'''",
 	'mainpagedocfooter' => 'Za uporabo in pomoč pri nastavitvi, prosimo, preglejte [//meta.wikimedia.org/wiki/MediaWiki_localisation dokumentacijo za prilagajanje vmesnika]
-in [//meta.wikimedia.org/wiki/MediaWiki_User%27s_Guide Uporabniški priročnik].',
+in [//meta.wikimedia.org/wiki/MediaWiki_wiki_User%27s_Guide Uporabniški priročnik].',
 );
 
 /** Lower Silesian (Schläsch)
@@ -16828,7 +16828,7 @@ $messages['sli'] = array(
  */
 $messages['so'] = array(
 	'mainpagetext' => "'''MediaWiki Si fiican oo kuugu install gareeyay.'''",
-	'mainpagedocfooter' => "Meeshaan ka akhriso sidii aad u isticmaali leheed brogramka wiki [//meta.wikimedia.org/wiki/Help:Contents User's Guide]  .
+	'mainpagedocfooter' => "Meeshaan ka akhriso sidii aad u isticmaali leheed brogramka wiki [//meta.wikimedia.org/wiki/Help:Contents wiki_User's Guide]  .
 == Bilaaw ==
 * [//www.mediawiki.org/wiki/Manual:Configuration_settings Configuration settings list]
 * [//www.mediawiki.org/wiki/Manual:FAQ MediaWiki FAQ]
@@ -16968,7 +16968,7 @@ $messages['stq'] = array(
  */
 $messages['su'] = array(
 	'mainpagetext' => "'''''Software'' MediaWiki geus diinstal.'''",
-	'mainpagedocfooter' => "Mangga tingal ''[//meta.wikimedia.org/wiki/MediaWiki_localisation documentation on customizing the interface]'' jeung [//meta.wikimedia.org/wiki/MediaWiki_User%27s_Guide Tungtunan Pamaké] pikeun pitulung maké jeung konfigurasi.",
+	'mainpagedocfooter' => "Mangga tingal ''[//meta.wikimedia.org/wiki/MediaWiki_localisation documentation on customizing the interface]'' jeung [//meta.wikimedia.org/wiki/MediaWiki_wiki_User%27s_Guide Tungtunan Pamaké] pikeun pitulung maké jeung konfigurasi.",
 );
 
 /** Swedish (svenska)
@@ -17756,7 +17756,7 @@ Ang isang wiki na mayroong '''{{int:config-profile-no-anon}}''' ay nagbibigay ng
 Ang tagpo na '''{{int:config-profile-fishbowl}}''' ay nagpapahintulot lamang sa pinayagang mga tagagamit na makatingin ng mga pahina, na kapiling ang pangkat na pinayagang  makapamatnugot.
 Ang isang '''{{int:config-profile-private}}''' ay nagpapahintulot lamang sa pinayagang mga tagagamit na makatingin ng mga pahina, na kapiling ang pangkat na pinayagang makapamatnugot.
 
-Ang mas masasalimuot na mga kaayusan ng mga karapatan ng tagagamit ay makukuha pagkaraan ng pagluluklok, tingnan ang [//www.mediawiki.org/wiki/Manual:User_rights may kaugnayang kinamay na lahok].",
+Ang mas masasalimuot na mga kaayusan ng mga karapatan ng tagagamit ay makukuha pagkaraan ng pagluluklok, tingnan ang [//www.mediawiki.org/wiki/Manual:wiki_User_rights may kaugnayang kinamay na lahok].",
 	'config-license' => 'Karapatang-ari at lisensiya:',
 	'config-license-none' => 'Walang talababa ng lisensiya',
 	'config-license-cc-by-sa' => 'Malikhaing Pangkaraniwang Pagtukoy Pamamahaging Magkatulad',
@@ -17901,7 +17901,7 @@ Kapag nagawa na iyan, maaari ka nang '''[$2 pumasok sa wiki mo]'''.",
 	'config-help' => 'saklolo',
 	'config-nofile' => 'Hindi matagpuan ang talaksang "$1". Binura na ba ito?',
 	'mainpagetext' => "'''Matagumpay na ininstala ang MediaWiki.'''",
-	'mainpagedocfooter' => "Silipin ang [//meta.wikimedia.org/wiki/Help:Contents Patnubay sa Tagagamit] (''\"User's Guide\"'') para sa kaalaman sa paggamit ng wiking ''software''.
+	'mainpagedocfooter' => "Silipin ang [//meta.wikimedia.org/wiki/Help:Contents Patnubay sa Tagagamit] (''\"wiki_User's Guide\"'') para sa kaalaman sa paggamit ng wiking ''software''.
 
 == Pagsisimula ==
 
@@ -18197,7 +18197,7 @@ $messages['vo'] = array(
 $messages['vro'] = array(
 	'mainpagetext' => "'''MediaWiki tarkvara paika säet.'''",
 	'mainpagedocfooter' => 'Vikitarkvara pruukmisõ kotsilõ loeq mano:
-* [//meta.wikimedia.org/wiki/MediaWiki_User%27s_Guide MediaWiki pruukmisoppus (inglüse keelen)].
+* [//meta.wikimedia.org/wiki/MediaWiki_wiki_User%27s_Guide MediaWiki pruukmisoppus (inglüse keelen)].
 * [//www.mediawiki.org/wiki/Manual:Configuration_settings Säädmiisi oppus (inglüse keelen)]
 * [//www.mediawiki.org/wiki/Manual:FAQ MediaWiki kõgõ küsütümbäq küsümiseq (inglüse keelen)]
 * [https://lists.wikimedia.org/mailman/listinfo/mediawiki-announce E-postilist, minka andas teedäq MediaWiki vahtsist kujõst].',
@@ -18215,7 +18215,7 @@ $messages['wa'] = array(
  */
 $messages['war'] = array(
 	'mainpagetext' => "'''Malinamposon an pag-instalar han MediaWiki.'''",
-	'mainpagedocfooter' => "Kitaa an [//meta.wikimedia.org/wiki/Help:Contents User's Guide] para hin impormasyon ha paggamit han wiki nga softweyr.
+	'mainpagedocfooter' => "Kitaa an [//meta.wikimedia.org/wiki/Help:Contents wiki_User's Guide] para hin impormasyon ha paggamit han wiki nga softweyr.
 
 == Ha pagtikang==
 * [//www.mediawiki.org/wiki/Manual:Configuration_settings Configuration settings list]
@@ -18289,7 +18289,7 @@ $messages['yi'] = array(
  */
 $messages['yo'] = array(
 	'mainpagetext' => "'''MediaWiki ti jẹ́ gbígbékọ́sínú láyọrísírere.'''",
-	'mainpagedocfooter' => "Ẹ ṣàbẹ̀wò sí [//meta.wikimedia.org/wiki/Help:Contents User's Guide] fún ìfitólétí nípa líló atòlànà wíkì.
+	'mainpagedocfooter' => "Ẹ ṣàbẹ̀wò sí [//meta.wikimedia.org/wiki/Help:Contents wiki_User's Guide] fún ìfitólétí nípa líló atòlànà wíkì.
 
 == Láti bẹ̀rẹ̀ ==
 *  [//www.mediawiki.org/wiki/Manual:Configuration_settings Configuration settings list]
@@ -18637,7 +18637,7 @@ chmod a+w $3</pre>',
 
 '''{{int:config-profile-fishbowl}}'''模式只允许获批准的用户编辑，但对公众开放页面浏览（包括历史记录）。'''{{int:config-profile-private}}'''则只允许获批准的用户浏览、编辑页面。
 
-安装完成后，您还可以对用户权限进行更多、更复杂的配置，参见[//www.mediawiki.org/wiki/Manual:User_rights 相关的使用手册]。",
+安装完成后，您还可以对用户权限进行更多、更复杂的配置，参见[//www.mediawiki.org/wiki/Manual:wiki_User_rights 相关的使用手册]。",
 	'config-license' => '版权和许可证：',
 	'config-license-none' => '页脚无许可证',
 	'config-license-cc-by-sa' => '知识共享署名-相同方式分享',
@@ -19076,7 +19076,7 @@ chmod a+w $3</pre>',
 
 '''{{int:config-profile-fishbowl}}'''模式只允許獲批准的用戶編輯，但對公眾開放頁面瀏覽（包括歷史記錄）。'''{{int:config-profile-private}}'''則只允許獲批准的用戶瀏覽、編輯頁面。
 
-安裝完成後，您還可以對用戶權限進行更多、更複雜的配置，參見[//www.mediawiki.org/wiki/Manual:User_rights 相關的使用手冊]。",
+安裝完成後，您還可以對用戶權限進行更多、更複雜的配置，參見[//www.mediawiki.org/wiki/Manual:wiki_User_rights 相關的使用手冊]。",
 	'config-license' => '版權和許可證：',
 	'config-license-none' => '頁腳無許可證',
 	'config-license-cc-by-sa' => '知識共享署名-相同方式分享',

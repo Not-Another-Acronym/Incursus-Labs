@@ -45,7 +45,7 @@ class SpecialJavaScriptTest extends SpecialPage {
 		$out = $this->getOutput();
 
 		$this->setHeaders();
-		$out->disallowUserJs();
+		$out->disallowwiki_UserJs();
 
 		// Abort early if we're disabled
 		if ( $wgEnableJavaScriptTest !== true ) {

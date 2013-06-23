@@ -143,9 +143,9 @@ $specialPageAliases = array(
 	'Unwatchedpages'            => array( 'Trang_chưa_theo_dõi' ),
 	'Upload'                    => array( 'Tải_lên' ),
 	'UploadStash'               => array( 'Hàng_đợi_tải_lên' ),
-	'Userlogin'                 => array( 'Đăng_nhập' ),
-	'Userlogout'                => array( 'Đăng_xuất' ),
-	'Userrights'                => array( 'Quyền_thành_viên' ),
+	'wiki_Userlogin'                 => array( 'Đăng_nhập' ),
+	'wiki_Userlogout'                => array( 'Đăng_xuất' ),
+	'wiki_Userrights'                => array( 'Quyền_thành_viên' ),
 	'Version'                   => array( 'Phiên_bản' ),
 	'Wantedcategories'          => array( 'Thể_loại_cần_thiết' ),
 	'Wantedfiles'               => array( 'Tập_tin_cần_thiết' ),
@@ -296,7 +296,7 @@ $linkTrail = "/^([a-zàâçéèêîôûäëïöüùÇÉÂÊÎÔÛÄËÏÖÜÀÈ�
 $separatorTransformTable = array( ',' => '.', '.' => ',' );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Gạch chân liên kết:',
 'tog-justify' => 'Căn đều hai bên đoạn văn',
 'tog-hideminor' => 'Ẩn sửa đổi nhỏ trong thay đổi gần đây',
@@ -638,7 +638,7 @@ Quản lý viên khóa nó đã đưa ra lời giải thích sau: $1',
 Điều này thường xảy ra do nhấn vào liên kết khác biệt phiên bản đã quá lâu hoặc liên kết lịch sử của một trang đã bị xóa.
 
 Nếu không phải lý do trên, có thể bạn đã gặp phải một lỗi của phần mềm.
-Xin hãy báo nó cho một [[Special:ListUsers/sysop|bảo quản viên]], trong đó ghi lại địa chỉ URL.',
+Xin hãy báo nó cho một [[Special:Listwiki_Users/sysop|bảo quản viên]], trong đó ghi lại địa chỉ URL.',
 'missingarticle-rev' => '(số phiên bản: $1)',
 'missingarticle-diff' => '(Khác: $1, $2)',
 'readonly_lag' => 'Cơ sở dữ liệu bị khóa tự động trong khi các máy chủ cập nhật thông tin của nhau.',
@@ -683,7 +683,7 @@ $2',
 'customcssprotected' => 'Bạn không có quyền sửa đổi trang CSS này vì nó chứa các tùy chọn cá nhân của một thành viên khác.',
 'customjsprotected' => 'Bạn không có quyền sửa đổi trang JavaScript này vì nó chứa các tùy chọn cá nhân của một thành viên khác.',
 'ns-specialprotected' => 'Không thể sửa chữa các trang trong không gian tên {{ns:special}}.',
-'titleprotected' => "Tựa đề này đã bị [[User:$1|$1]] khóa không cho tạo ra.
+'titleprotected' => "Tựa đề này đã bị [[wiki_User:$1|$1]] khóa không cho tạo ra.
 Lý do được cung cấp là ''$2''.",
 'filereadonlyerror' => 'Không thể sửa đổi tập tin “$1” vì kho tập tin “$2” đang ở chế độ chỉ-đọc.
 
@@ -701,7 +701,7 @@ Bảo quản viên khóa nó đưa lý do là: “$3”.',
 # Login and logout pages
 'logouttext' => "'''Bạn đã đăng xuất.'''
 
-Bạn có thể tiếp tục dùng {{SITENAME}} một cách vô danh, hoặc bạn có thể [[Special:UserLogin|đăng nhập lại]] dưới cùng tên người dùng này hoặc một tên người dùng khác. Xin lưu ý rằng một vài trang có thể vẫn hiển thị như khi bạn còn đăng nhập, cho đến khi bạn xóa vùng nhớ đệm (''cache'') của trình duyệt.",
+Bạn có thể tiếp tục dùng {{SITENAME}} một cách vô danh, hoặc bạn có thể [[Special:wiki_UserLogin|đăng nhập lại]] dưới cùng tên người dùng này hoặc một tên người dùng khác. Xin lưu ý rằng một vài trang có thể vẫn hiển thị như khi bạn còn đăng nhập, cho đến khi bạn xóa vùng nhớ đệm (''cache'') của trình duyệt.",
 'welcomecreation' => '== Chào mừng, $1! ==
 Tài khoản của bạn đã được mở.
 Hãy nhớ thay đổi [[Special:Preferences|tùy chọn cá nhân {{SITENAME}}]] của bạn.',
@@ -743,7 +743,7 @@ Hãy chắc chắn bạn đã bật lên cookie, làm mới trang này, và th�
 'loginsuccess' => "'''Bạn đã đăng nhập vào {{SITENAME}} với tên “$1”.'''",
 'nosuchuser' => 'Không có thành viên nào có tên “$1”.
 Tên người dùng có phân biệt chữ hoa chữ thường.
-Hãy kiểm tra lại chính tả, hoặc [[Special:UserLogin/signup|mở tài khoản mới]].',
+Hãy kiểm tra lại chính tả, hoặc [[Special:wiki_UserLogin/signup|mở tài khoản mới]].',
 'nosuchusershort' => 'Không có thành viên nào có tên “$1”. Xin hãy kiểm tra lại chính tả.',
 'nouserspecified' => 'Bạn phải chỉ định một tên người dùng.',
 'login-userblocked' => 'Thành viên này đã bị cấm. Không cho phép đăng nhập.',
@@ -938,7 +938,7 @@ Có thể nó đã bị di chuyển hoặc xóa đi trong khi bạn đang xem tr
 'loginreqlink' => 'đăng nhập',
 'loginreqpagetext' => 'Bạn phải $1 mới có quyền xem các trang khác.',
 'accmailtitle' => 'Đã gửi mật khẩu.',
-'accmailtext' => "Một mật khẩu được tạo ngẫu nhiên cho [[User talk:$1|$1]] đã được gửi đến $2.
+'accmailtext' => "Một mật khẩu được tạo ngẫu nhiên cho [[wiki_User talk:$1|$1]] đã được gửi đến $2.
 
 Có thể đổi mật khẩu cho tài khoản mới này tại trang ''[[Special:ChangePassword|đổi mật khẩu]]'' sau khi đã đăng nhập.",
 'newarticle' => '(Mới)',
@@ -946,7 +946,7 @@ Có thể đổi mật khẩu cho tài khoản mới này tại trang ''[[Specia
 'anontalkpagetext' => "----''Đây là trang thảo luận của một người dùng vô danh chưa tạo tài khoản hoặc có tài khoản nhưng không đăng nhập.
 Do đó chúng ta phải dùng một dãy số gọi là địa chỉ IP để xác định anh/chị ta.
 Một địa chỉ IP như vậy có thể có nhiều người cùng dùng chung.
-Nếu bạn là một thành viên vô danh và cảm thấy rằng có những lời bàn luận không thích hợp đang nhắm vào bạn, xin hãy [[Special:UserLogin/signup|tạo tài khoản]] hoặc [[Special:UserLogin|đăng nhập]] để tránh sự nhầm lẫn về sau với những thành viên vô danh khác.''",
+Nếu bạn là một thành viên vô danh và cảm thấy rằng có những lời bàn luận không thích hợp đang nhắm vào bạn, xin hãy [[Special:wiki_UserLogin/signup|tạo tài khoản]] hoặc [[Special:wiki_UserLogin|đăng nhập]] để tránh sự nhầm lẫn về sau với những thành viên vô danh khác.''",
 'noarticletext' => 'Trang này hiện chưa có nội dung.
 Bạn có thể [[Special:Search/{{PAGENAME}}|tìm kiếm tựa trang này]] trong các trang khác, <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} tìm trong các nhật trình liên quan],
 hoặc [{{fullurl:{{FULLPAGENAME}}|action=edit}} sửa đổi trang này]</span>.',
@@ -982,13 +982,13 @@ Các thay đổi của bạn vẫn chưa được lưu!",
 'previewconflict' => 'Phần xem thử này là kết quả của văn bản trong vùng soạn thảo phía trên và nó sẽ xuất hiện như vậy nếu bạn chọn lưu trang.',
 'session_fail_preview' => "'''Những sửa đổi của bạn chưa được lưu giữ do mất dữ liệu về phiên làm việc.
 Xin hãy thử lần nữa.
-Nếu vẫn không thành công, hãy thử [[Special:UserLogout|đăng xuất]] rồi đăng nhập lại.'''",
+Nếu vẫn không thành công, hãy thử [[Special:wiki_UserLogout|đăng xuất]] rồi đăng nhập lại.'''",
 'session_fail_preview_html' => "'''Những sửa đổi của bạn chưa được lưu giữ do mất dữ liệu về phiên làm việc.'''
 
 ''Do {{SITENAME}} cho phép dùng mã HTML, trang xem thử được ẩn đi để đề phòng bị tấn công bằng JavaScript.''
 
 '''Nếu sửa đổi này là đúng đắn, xin hãy thử lần nữa.
-Nếu vẫn không thành công, bạn hãy thử [[Special:UserLogout|đăng xuất]] rồi đăng nhập lại.'''",
+Nếu vẫn không thành công, bạn hãy thử [[Special:wiki_UserLogout|đăng xuất]] rồi đăng nhập lại.'''",
 'token_suffix_mismatch' => "'''Sửa đổi của bạn bị hủy bỏ vì trình duyệt của bạn lẫn lộn các ký tự dấu trong số hiệu
 sửa đổi. Việc hủy bỏ này nhằm tránh nội dung trang bị hỏng.
 Điều này thường xảy ra khi bạn sử dụng một dịch vụ proxy vô danh trên web có vấn đề.'''",
@@ -1035,7 +1035,7 @@ Thông tin mới nhất trong nhật trình được ghi dưới đây để ti�
 'edittools' => '<!-- Văn bản dưới đây sẽ xuất hiện phía dưới mẫu sửa đổi và tải lên. -->',
 'nocreatetitle' => 'Khả năng tạo trang bị hạn chế',
 'nocreatetext' => '{{SITENAME}} đã hạn chế khả năng tạo trang mới.
-Bạn có thể quay trở lại và sửa đổi các trang đã có, hoặc [[Special:UserLogin|đăng nhập hoặc tạo tài khoản]].',
+Bạn có thể quay trở lại và sửa đổi các trang đã có, hoặc [[Special:wiki_UserLogin|đăng nhập hoặc tạo tài khoản]].',
 'nocreate-loggedin' => 'Bạn không có quyền tạo trang mới.',
 'sectioneditnotsupported-title' => 'Không hỗ trợ sửa đổi đề mục',
 'sectioneditnotsupported-text' => 'Trang sửa đổi này không hỗ trợ sửa đổi đề mục.',
@@ -1085,11 +1085,11 @@ Những giá trị này sẽ bị bỏ đi.',
 'undo-success' => 'Các sửa đổi có thể được lùi lại. Xin hãy kiểm tra phần so sánh bên dưới để xác nhận lại những gì bạn muốn làm, sau đó lưu thay đổi ở dưới để hoàn tất việc lùi lại sửa đổi.',
 'undo-failure' => 'Sửa đổi không thể phục hồi vì đã có những sửa đổi mới ở sau.',
 'undo-norev' => 'Sửa đổi không thể hồi phục vì nó không tồn tại hoặc đã bị xóa.',
-'undo-summary' => 'Đã lùi lại sửa đổi $1 của [[Special:Contributions/$2|$2]] ([[User talk:$2|Thảo luận]])',
+'undo-summary' => 'Đã lùi lại sửa đổi $1 của [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Thảo luận]])',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'Không thể mở tài khoản',
-'cantcreateaccount-text' => "Chức năng tài tạo khoản từ địa chỉ IP này ('''$1''') đã bị [[User:$3|$3]] cấm.
+'cantcreateaccount-text' => "Chức năng tài tạo khoản từ địa chỉ IP này ('''$1''') đã bị [[wiki_User:$3|$3]] cấm.
 
 Lý do được $3 đưa ra là ''$2''",
 
@@ -1349,7 +1349,7 @@ Xem chi tiết trong [{{fullurl:{{#Special:Log}}/delete|page={{FULLPAGENAMEE}}}}
 'mypreferences' => 'Tùy chọn',
 'prefs-edits' => 'Số lần sửa đổi:',
 'prefsnologin' => 'Chưa đăng nhập',
-'prefsnologintext' => 'Bạn phải <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} đăng nhập]</span> để thiết lập tùy chọn cá nhân.',
+'prefsnologintext' => 'Bạn phải <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} đăng nhập]</span> để thiết lập tùy chọn cá nhân.',
 'changepassword' => 'Đổi mật khẩu',
 'prefs-skin' => 'Hình dạng',
 'skin-preview' => 'Xem thử',
@@ -1462,16 +1462,16 @@ Nếu bạn đồng ý cung cấp, nó sẽ dùng để ghi nhận công lao c�
 'prefs-displaywatchlist' => 'Tùy chọn hiển thị',
 'prefs-diffs' => 'Khác biệt',
 
-# User preference: e-mail validation using jQuery
+# wiki_User preference: e-mail validation using jQuery
 'email-address-validity-valid' => 'Có vẻ hợp lệ',
 'email-address-validity-invalid' => 'Yêu cầu địa chỉ hợp lệ!',
 
-# User rights
+# wiki_User rights
 'userrights' => 'Quản lý quyền thành viên',
 'userrights-lookup-user' => 'Quản lý nhóm thành viên',
 'userrights-user-editname' => 'Nhập tên thành viên:',
 'editusergroup' => 'Sửa nhóm thành viên',
-'editinguser' => "Thay đổi quyền hạn của thành viên '''[[User:$1|$1]]''' $2",
+'editinguser' => "Thay đổi quyền hạn của thành viên '''[[wiki_User:$1|$1]]''' $2",
 'userrights-editusergroup' => 'Sửa nhóm thành viên',
 'saveusergroups' => 'Lưu nhóm thành viên',
 'userrights-groupsmember' => 'Thuộc nhóm:',
@@ -1483,7 +1483,7 @@ Nếu bạn đồng ý cung cấp, nó sẽ dùng để ghi nhận công lao c�
 'userrights-reason' => 'Lý do:',
 'userrights-no-interwiki' => 'Bạn không có quyền thay đổi quyền hạn của thành viên tại các wiki khác.',
 'userrights-nodatabase' => 'Cơ sở dữ liệu $1 không tồn tại hoặc nằm ở bên ngoài.',
-'userrights-nologin' => 'Bạn phải [[Special:UserLogin|đăng nhập]] vào một tài khoản có quyền quản lý để gán quyền cho thành viên.',
+'userrights-nologin' => 'Bạn phải [[Special:wiki_UserLogin|đăng nhập]] vào một tài khoản có quyền quản lý để gán quyền cho thành viên.',
 'userrights-notallowed' => 'Tài khoản của bạn không có quyền gán hoặc bãi miễn quyền cho thành viên.',
 'userrights-changeable-col' => 'Những nhóm bạn có thể thay đổi',
 'userrights-unchangeable-col' => 'Những nhóm bạn không thể thay đổi',
@@ -1574,7 +1574,7 @@ Nếu bạn đồng ý cung cấp, nó sẽ dùng để ghi nhận công lao c�
 'right-sendemail' => 'Gửi thư điện tử cho thành viên khác',
 'right-passwordreset' => 'Xem các thư điện tử đặt lại mật khẩu',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Nhật trình cấp quyền thành viên',
 'rightslogtext' => 'Đây là nhật trình lưu những thay đổi đối với các quyền hạn thành viên.',
 'rightslogentry' => 'đã đổi các nhóm liên kết của thành viên $1 từ $2 thành $3',
@@ -1671,7 +1671,7 @@ Các trang trong [[Special:Watchlist|danh sách bạn theo dõi]] được '''t�
 'reuploaddesc' => 'Hủy tác vụ tải và quay lại mẫu tải tập tin lên',
 'upload-tryagain' => 'Lưu miêu tả tập tin được sửa đổi',
 'uploadnologin' => 'Chưa đăng nhập',
-'uploadnologintext' => 'Bạn phải [[Special:UserLogin|đăng nhập]] để tải tập tin lên.',
+'uploadnologintext' => 'Bạn phải [[Special:wiki_UserLogin|đăng nhập]] để tải tập tin lên.',
 'upload_directory_missing' => 'Thư mục tải lên ($1) không có hoặc máy chủ web không thể tạo được.',
 'upload_directory_read_only' => 'Máy chủ không thể sửa đổi thư mục tải lên ($1) được.',
 'uploaderror' => 'Lỗi khi tải lên',
@@ -1802,11 +1802,11 @@ $1',
 'upload-proto-error-text' => 'Phải đưa vào URL bắt đầu với <code>http://</code> hay <code>ftp://</code> để tải lên tập tin từ trang web khác.',
 'upload-file-error' => 'Lỗi nội bộ',
 'upload-file-error-text' => 'Có lỗi nội bộ khi tạo tập tin tạm trên máy chủ.
-Xin hãy liên hệ với một [[Special:ListUsers/sysop|bảo quản viên]].',
+Xin hãy liên hệ với một [[Special:Listwiki_Users/sysop|bảo quản viên]].',
 'upload-misc-error' => 'Có lỗi lạ khi tải lên',
 'upload-misc-error-text' => 'Có lỗi lạ khi tải lên.
 Xin hãy xác nhận lại địa chỉ URL là hợp lệ và có thể truy cập được không rồi thử lại lần nữa.
-Nếu vẫn còn bị lỗi, xin hãy liên hệ với một [[Special:ListUsers/sysop|bảo quản viên]].',
+Nếu vẫn còn bị lỗi, xin hãy liên hệ với một [[Special:Listwiki_Users/sysop|bảo quản viên]].',
 'upload-too-many-redirects' => 'URL có quá nhiều chuyển hướng',
 'upload-unknown-size' => 'Không rõ kích thước',
 'upload-http-error' => 'Xảy ra lỗi HTTP: $1',
@@ -2044,7 +2044,7 @@ Hãy nhớ kiểm tra các liên kết khác đến bản mẫu trước khi xó
 'statistics-views-total' => 'Số lần xem tổng cộng',
 'statistics-views-total-desc' => 'Không bao gồm số lần xem các trang không tồn tại và các trang đặc biệt',
 'statistics-views-peredit' => 'Số lần xem trên một sửa đổi',
-'statistics-users' => 'Số [[Special:ListUsers|thành viên]] có tài khoản',
+'statistics-users' => 'Số [[Special:Listwiki_Users|thành viên]] có tài khoản',
 'statistics-users-active' => 'Số thành viên tích cực',
 'statistics-users-active-desc' => 'Những thành viên đã hoạt động trong {{PLURAL:$1|ngày|$1 ngày}} qua',
 'statistics-mostpopular' => 'Các trang được xem nhiều nhất',
@@ -2207,13 +2207,13 @@ Xem thêm [[Special:WantedCategories|thể loại cần thiết]].',
 'linksearch-line' => '$1 được liên kết từ $2',
 'linksearch-error' => "Chỉ được sử dụng ký tự đại diện (''wildcard'') vào đầu tên miền (''hostname'').",
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => 'Hiển thị thành viên bắt đầu từ:',
 'listusers-submit' => 'Xem',
 'listusers-noresult' => 'Không thấy thành viên.',
 'listusers-blocked' => '(bị cấm)',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'Danh sách thành viên tích cực',
 'activeusers-intro' => 'Dánh sách này liệt kê các thành viên đã hoạt động cách nào đó trong $1 ngày qua.',
 'activeusers-count' => '$1 {{PLURAL:$1|sửa đổi|sửa đổi}} trong {{PLURAL:$3|ngày|$3 ngày}} gần đây',
@@ -2247,7 +2247,7 @@ Có [[{{MediaWiki:Listgrouprights-helppage}}|thông tin thêm]] về từng nhó
 
 # E-mail user
 'mailnologin' => 'Không có địa chỉ gửi thư',
-'mailnologintext' => 'Bạn phải [[Special:UserLogin|đăng nhập]] và khai báo một địa chỉ thư điện tử hợp lệ trong phần [[Special:Preferences|tùy chọn cá nhân]] thì mới gửi được thư cho người khác.',
+'mailnologintext' => 'Bạn phải [[Special:wiki_UserLogin|đăng nhập]] và khai báo một địa chỉ thư điện tử hợp lệ trong phần [[Special:Preferences|tùy chọn cá nhân]] thì mới gửi được thư cho người khác.',
 'emailuser' => 'Gửi thư cho người này',
 'emailuser-title-target' => '{{GENDER:$1}}Gửi thư cho người dùng này',
 'emailuser-title-notarget' => 'Gửi thư cho người dùng',
@@ -2278,7 +2278,7 @@ Có [[{{MediaWiki:Listgrouprights-helppage}}|thông tin thêm]] về từng nhó
 'emailsenttext' => 'Thư của bạn đã được gửi.',
 'emailuserfooter' => 'Thư điện tử này được $1 gửi đến $2 thông qua chức năng “Gửi thư cho người này” của {{SITENAME}}.',
 
-# User Messenger
+# wiki_User Messenger
 'usermessage-summary' => 'Đang để lại thông báo hệ thống.',
 'usermessage-editor' => 'Trình thông báo hệ thống',
 
@@ -2289,7 +2289,7 @@ Có [[{{MediaWiki:Listgrouprights-helppage}}|thông tin thêm]] về từng nhó
 'nowatchlist' => 'Danh sách theo dõi của bạn không có gì.',
 'watchlistanontext' => 'Xin hãy $1 để xem hay sửa đổi các trang được theo dõi.',
 'watchnologin' => 'Chưa đăng nhập',
-'watchnologintext' => 'Bạn phải [[Special:UserLogin|đăng nhập]] mới sửa đổi được danh sách theo dõi.',
+'watchnologintext' => 'Bạn phải [[Special:wiki_UserLogin|đăng nhập]] mới sửa đổi được danh sách theo dõi.',
 'addwatch' => 'Thêm vào danh sách theo dõi',
 'addedwatchtext' => 'Trang “[[:$1]]” đã vào [[Special:Watchlist|danh sách theo dõi]] của bạn.
 Những sửa đổi đối với trang này và trang thảo luận của nó sẽ được liệt kê ở đấy.',
@@ -2401,12 +2401,12 @@ hãy cẩn trọng khi thực hiện.',
 'rollbackfailed' => 'Lùi sửa đổi không thành công',
 'cantrollback' => 'Không lùi sửa đổi được;
 người viết trang cuối cùng cũng là tác giả duy nhất của trang này.',
-'alreadyrolled' => 'Không thể lùi tất cả sửa đổi cuối của [[User:$2|$2]] ([[User talk:$2|thảo luận]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]) tại [[:$1]]; ai đó đã thực hiện sửa đổi hoặc thực hiện lùi tất cả rồi.
+'alreadyrolled' => 'Không thể lùi tất cả sửa đổi cuối của [[wiki_User:$2|$2]] ([[wiki_User talk:$2|thảo luận]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]) tại [[:$1]]; ai đó đã thực hiện sửa đổi hoặc thực hiện lùi tất cả rồi.
 
-Sửa đổi cuối cùng tại trang do [[User:$3|$3]] ([[User talk:$3|thảo luận]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]) thực hiện.',
+Sửa đổi cuối cùng tại trang do [[wiki_User:$3|$3]] ([[wiki_User talk:$3|thảo luận]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]) thực hiện.',
 'editcomment' => "Tóm lược sửa đổi: “''$1''”.",
-'revertpage' => 'Đã hủy sửa đổi của [[Special:Contributions/$2|$2]] ([[User talk:$2|Thảo luận]]) quay về phiên bản của [[User:$1|$1]]',
-'revertpage-nouser' => 'Lùi sửa đổi của (tên người dùng đã xóa) quay lại phiên bản cuối của [[User:$1|$1]]',
+'revertpage' => 'Đã hủy sửa đổi của [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Thảo luận]]) quay về phiên bản của [[wiki_User:$1|$1]]',
+'revertpage-nouser' => 'Lùi sửa đổi của (tên người dùng đã xóa) quay lại phiên bản cuối của [[wiki_User:$1|$1]]',
 'rollback-success' => 'Đã hủy sửa đổi của $1;
 quay về phiên bản cuối của $2.',
 
@@ -2639,7 +2639,7 @@ Xem lại những lần cấm tại [[Special:BlockList|danh sách cấm]].',
 'unblockip' => 'Bỏ cấm thành viên',
 'unblockiptext' => 'Sử dụng mẫu sau để phục hồi lại quyền sửa đổi đối với một địa chỉ IP hoặc tên thành viên đã bị cấm trước đó.',
 'ipusubmit' => 'Bỏ cấm',
-'unblocked' => '[[User:$1|$1]] đã hết bị cấm',
+'unblocked' => '[[wiki_User:$1|$1]] đã hết bị cấm',
 'unblocked-range' => '$1 đã được bỏ cấm',
 'unblocked-id' => '$1 đã hết bị cấm',
 'blocklist' => 'Những người dùng bị cấm',
@@ -2672,7 +2672,7 @@ Xem lại những lần cấm tại [[Special:BlockList|danh sách cấm]].',
 'change-blocklink' => 'đổi mức cấm',
 'contribslink' => 'đóng góp',
 'emaillink' => 'gửi thư điện tử',
-'autoblocker' => 'Bạn bị tự động cấm vì địa chỉ IP của bạn vừa rồi đã được “[[User:$1|$1]]” sử dụng. Lý do đưa ra cho việc cấm $1 là: ”$2”',
+'autoblocker' => 'Bạn bị tự động cấm vì địa chỉ IP của bạn vừa rồi đã được “[[wiki_User:$1|$1]]” sử dụng. Lý do đưa ra cho việc cấm $1 là: ”$2”',
 'blocklogpage' => 'Nhật trình cấm',
 'blocklog-showlog' => 'Thành viên này trước đây đã bị cấm. Nhật trình cấm được ghi ra ở đây để tiện theo dõi:',
 'blocklog-showsuppresslog' => 'Thành viên trước đây đã từng bị cấm và ẩn đi. Nhật trình ẩn được ghi dưới đây để tiện theo dõi:',
@@ -2767,7 +2767,7 @@ Trong những trường hợp đó, bạn phải di chuyển hoặc hợp nhất
 'movearticle' => 'Di chuyển trang:',
 'moveuserpage-warning' => "'''Cảnh báo:''' Bạn sắp di chuyển trang cá nhân của người dùng. Xin lưu ý rằng chỉ có trang này sẽ được di chuyển, còn người dùng sẽ ''không'' đổi tên.",
 'movenologin' => 'Chưa đăng nhập',
-'movenologintext' => 'Bạn phải là thành viên đã mở tài khoản và [[Special:UserLogin|đăng nhập]] mới di chuyển trang được.',
+'movenologintext' => 'Bạn phải là thành viên đã mở tài khoản và [[Special:wiki_UserLogin|đăng nhập]] mới di chuyển trang được.',
 'movenotallowed' => 'Bạn không có quyền di chuyển trang.',
 'movenotallowedfile' => 'Bạn không có đủ quyền để di chuyển tập tin.',
 'cant-move-user-page' => 'Bạn không có quyền di chuyển trang cá nhân (ngoại trừ trang con).',
@@ -3744,10 +3744,10 @@ Mã xác nhận này sẽ hết hạn vào $4.',
 
 # Delete conflict
 'deletedwhileediting' => "'''Cảnh báo''': Trang này đã bị xóa sau khi bắt đầu sửa đổi!",
-'confirmrecreate' => "Thành viên [[User:$1|$1]] ([[User talk:$1|thảo luận]]) đã xóa trang này sau khi bạn bắt đầu sửa đổi trang với lý do:
+'confirmrecreate' => "Thành viên [[wiki_User:$1|$1]] ([[wiki_User talk:$1|thảo luận]]) đã xóa trang này sau khi bạn bắt đầu sửa đổi trang với lý do:
 : ''$2''
 Xin hãy xác nhận bạn thực sự muốn tạo lại trang này.",
-'confirmrecreate-noreason' => 'Người dùng [[User:$1|$1]] ([[User talk:$1|talk]]) xóa trang này sau khi bạn bắt đầu sửa đổi nó. Bạn có chắc chắn muốn tạo lại trang này không?',
+'confirmrecreate-noreason' => 'Người dùng [[wiki_User:$1|$1]] ([[wiki_User talk:$1|talk]]) xóa trang này sau khi bạn bắt đầu sửa đổi nó. Bạn có chắc chắn muốn tạo lại trang này không?',
 'recreate' => 'Tạo ra lại',
 
 # action=purge

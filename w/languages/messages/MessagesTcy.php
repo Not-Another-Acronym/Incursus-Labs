@@ -15,7 +15,7 @@
 $fallback = 'kn';
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'ಲಿಂಕ್’ಲೆದ ತಿರ್ತ್ ಗೆರೆ(ಅಂಡರ್ ಲೈನ್) ಪಾಡ್’ಲೆ',
 'tog-justify' => 'ಪಾರಗ್ರಾಫ್’ದ ಕಡೆನ್ ಸರಿ ಮಲ್ಪುಲೆ',
 'tog-hideminor' => 'ಎಲ್ಯೆಲ್ಯ ಬದಲಾವಣೆಲೆನ್ ದೆಂಗಾಲೆ',
@@ -325,7 +325,7 @@ $messages = array(
 ಡಿಲೀಟ್ ಮಲ್ತಿನ ಪುಟೊಕು ಸಂಪರ್ಕ ಕೊರ್ಪುನ ಇತಿಹಾಸ ಲಿಂಕ್ ಅತ್ತ್’ನ್ಡ ವ್ಯತ್ಯಾಸ ಲಿಂಕ್’ನ್ ಒತ್ತುನೆರ್ದಾದ್ ಈ ದೋಷ ಸಾಧಾರಣವಾದ್ ಬರ್ಪುಂಡು.
 
 ಒಂಜಿ ವೇಳೆ ಅಂಚ ಆದಿಜ್ಜಿಂಡ, ಉಂದು ಒಂಜಿ ಸಾಫ್ಟ್-ವೇರ್ ದೋಷ ಆದುಪ್ಪು.
-ಇಂದೆನ್  [[Special:ListUsers/sysop|ವಿಕಿ-ಅಧಿಕಾರಿಗ್]] ತೆರಿಪಾಲೆ.',
+ಇಂದೆನ್  [[Special:Listwiki_Users/sysop|ವಿಕಿ-ಅಧಿಕಾರಿಗ್]] ತೆರಿಪಾಲೆ.',
 'missingarticle-rev' => '(ಮರು-ಆವೃತ್ತಿ#: $1)',
 'internalerror' => 'ಆ೦ತರಿಕ ದೋಷ',
 'internalerror_info' => 'ಆಂತರಿಕ ದೋಷ: $1',
@@ -398,7 +398,7 @@ $messages = array(
 'noname' => 'ಈರ್ ಸರಿಯಾಯಿನ ಬಳಕೆದಾರ ಪುದರ್ ಕೊರ್ತಿಜ್ಜರ್.',
 'loginsuccesstitle' => 'ಲಾಗ್ ಇನ್ ಯಶಸ್ವಿಯಾತ್‘ಂಡ್',
 'loginsuccess' => 'ಲಾಗ್ ಇನ್ ಯಶಸ್ವಿಯಾತ್‘ಂಡ್". {{SITENAME}}  "$1".\'\'\'',
-'nosuchuser' => '!!"$1"ಪುದರ್‘ದ ವಾ ಸದಸ್ಯೆರ್‘ಲಾ ಇಜ್ಜೆರ್, ಅಕ್ಷರ ಸರಿಯಾದ ತೂಲೆ ಅಥವಾ  [[Special:UserLogin/signup|ಪೊಸ ಸದಸ್ಯತ್ವ  ಖಾತೆನ್ ಸೃಷ್ಟಿ ಮಲ್ಪುಲೆ]].',
+'nosuchuser' => '!!"$1"ಪುದರ್‘ದ ವಾ ಸದಸ್ಯೆರ್‘ಲಾ ಇಜ್ಜೆರ್, ಅಕ್ಷರ ಸರಿಯಾದ ತೂಲೆ ಅಥವಾ  [[Special:wiki_UserLogin/signup|ಪೊಸ ಸದಸ್ಯತ್ವ  ಖಾತೆನ್ ಸೃಷ್ಟಿ ಮಲ್ಪುಲೆ]].',
 'nosuchusershort' => '!!"$1"ಪುದರ್‘ದ ವಾ ಸದಸ್ಯೆರ್‘ಲಾ ಇಜ್ಜೆರ್, ಅಕ್ಷರ ಸರಿಯಾದ ತೂಲೆ.',
 'nouserspecified' => 'ಈರ್ ಒಂಜಿ ಸದಸ್ಯತ್ವದ ಪುದರ್ ಸೂಚನೆ ಮಲ್ಪೊಡು.',
 'login-userblocked' => 'ಈ ಸದಸ್ಯರೆನ ಖಾತೆನ್ ತಡೆ ಪತ್ತ್‘ದುಂಡು. ಲಾಗ್ ಇನ್ ಮಲ್ಪರೆ ಆಪುಜ್ಜಿ.',
@@ -639,7 +639,7 @@ $messages = array(
 'right-delete' => 'ಪುಟೊಕುಲೆನ್ ಮಾಜಾಲೆ',
 'right-undelete' => 'ಪುಟೊನ್ ಮಾಜಾವಡೆ',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'ಸದಸ್ಯೆರ್ನ ಹಕ್ಕು ದಾಖಲೆ',
 
 # Associated actions - in the sentence "You do not have permission to X"

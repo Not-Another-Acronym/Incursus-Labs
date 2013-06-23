@@ -10,7 +10,7 @@ class ArticleTablesTest extends MediaWikiLangTestCase {
 
 		$title = Title::newFromText( 'Bug 14404' );
 		$page = WikiPage::factory( $title );
-		$user = new User();
+		$user = new wiki_User();
 		$user->mRights = array( 'createpage', 'edit', 'purge' );
 		$wgLanguageCode = 'es';
 		$wgContLang = Language::factory( 'es' );

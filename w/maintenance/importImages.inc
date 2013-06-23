@@ -115,7 +115,7 @@ function getFileCommentFromSourceWiki( $wiki_host, $file ) {
 	return html_entity_decode( $matches[1] );
 }
 
-function getFileUserFromSourceWiki( $wiki_host, $file ) {
+function getFilewiki_UserFromSourceWiki( $wiki_host, $file ) {
 	$url = $wiki_host . '/api.php?action=query&format=xml&titles=File:' . rawurlencode( $file ) . '&prop=imageinfo&&iiprop=user';
 	$body = Http::get( $url );
 	if ( preg_match( '#<ii user="([^"]*)" />#', $body, $matches ) == 0 ) {

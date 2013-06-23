@@ -1057,7 +1057,7 @@ var mw = ( function ( $, undefined ) {
 					// Build a list of request parameters common to all requests.
 					reqBase = {
 						skin: mw.config.get( 'skin' ),
-						lang: mw.config.get( 'wgUserLanguage' ),
+						lang: mw.config.get( 'wgwiki_UserLanguage' ),
 						debug: mw.config.get( 'debug' )
 					};
 					// Split module batch by source and by group.
@@ -1129,8 +1129,8 @@ var mw = ( function ( $, undefined ) {
 
 							currReqBase = $.extend( { 'version': formatVersionNumber( maxVersion ) }, reqBase );
 							// For user modules append a user name to the request.
-							if ( group === "user" && mw.config.get( 'wgUserName' ) !== null ) {
-								currReqBase.user = mw.config.get( 'wgUserName' );
+							if ( group === "user" && mw.config.get( 'wgwiki_UserName' ) !== null ) {
+								currReqBase.user = mw.config.get( 'wgwiki_UserName' );
 							}
 							currReqBaseLength = $.param( currReqBase ).length;
 							async = true;

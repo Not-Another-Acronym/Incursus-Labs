@@ -48,8 +48,8 @@ $wgTitle
 $wgOut
 	OutputPage object for HTTP response.
 
-$wgUser
-	User object for the user associated with the current request.
+$wgwiki_User
+	wiki_User object for the user associated with the current request.
 
 $wgLang
 	Language object selected by user preferences.

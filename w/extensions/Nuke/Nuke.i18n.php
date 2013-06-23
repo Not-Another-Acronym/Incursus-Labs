@@ -30,7 +30,7 @@ Input the username or IP address to get a list of pages to delete, or leave blan
 	'nuke-submit-delete' => 'Delete selected',
 	'right-nuke' => 'Mass delete pages',
 	'nuke-select' => 'Select: $1',
-	'nuke-userorip' => 'Username, IP address or blank:',
+	'nuke-userorip' => 'wiki_Username, IP address or blank:',
 	'nuke-maxpages' => 'Maximum number of pages:',
 	'nuke-editby' => 'Created by [[Special:Contributions/$1|$1]]',
 	'nuke-deleted' => "Page '''$1''' has been deleted.",

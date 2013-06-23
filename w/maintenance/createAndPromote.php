@@ -36,7 +36,7 @@ class CreateAndPromote extends Maintenance {
 		$this->mDescription = "Create a new user account";
 		$this->addOption( "sysop", "Grant the account sysop rights" );
 		$this->addOption( "bureaucrat", "Grant the account bureaucrat rights" );
-		$this->addArg( "username", "Username of new user" );
+		$this->addArg( "username", "wiki_Username of new user" );
 		$this->addArg( "password", "Password to set" );
 	}
 
@@ -44,9 +44,9 @@ class CreateAndPromote extends Maintenance {
 		$username = $this->getArg( 0 );
 		$password = $this->getArg( 1 );
 
-		$this->output( wfWikiID() . ": Creating and promoting User:{$username}..." );
+		$this->output( wfWikiID() . ": Creating and promoting wiki_User:{$username}..." );
 
-		$user = User::newFromName( $username );
+		$user = wiki_User::newFromName( $username );
 		if ( !is_object( $user ) ) {
 			$this->error( "invalid username.", true );
 		} elseif ( 0 != $user->idForName() ) {

@@ -101,9 +101,9 @@ $specialPageAliases = array(
 	'Unusedimages'              => array( 'OtekiGefre' ),
 	'Unusedtemplates'           => array( 'OtekiAnkra' ),
 	'Upload'                    => array( 'Uploti' ),
-	'Userlogin'                 => array( 'Kon' ),
-	'Userlogout'                => array( 'Gwe' ),
-	'Userrights'                => array( 'Masyinlesi' ),
+	'wiki_Userlogin'                 => array( 'Kon' ),
+	'wiki_Userlogout'                => array( 'Gwe' ),
+	'wiki_Userrights'                => array( 'Masyinlesi' ),
 	'Version'                   => array( 'Si' ),
 	'Wantedcategories'          => array( 'WinsiGuru' ),
 	'Wantedpages'               => array( 'WinsiPeprewoysi' ),
@@ -153,7 +153,7 @@ $magicWords = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Poti strepi ondro den miti:',
 'tog-justify' => 'Fiti na ala tu sey',
 'tog-hideminor' => 'Kibri pikin kenki ini laste kenki',
@@ -435,7 +435,7 @@ A kan taki a abi wan noso moro karakter san no bun fu kebroiki gi nen.',
 'protectedpagetext' => 'A papira disi sroto gi kenki.',
 'viewsourcetext' => 'Yu kan luku nanga kopi a source fu a papira disi:',
 'ns-specialprotected' => 'Spesrutu papira no kan kenki.',
-'titleprotected' => "[[User:$1|$1]] sroto a meki fu wan papira nanga a nen disi
+'titleprotected' => "[[wiki_User:$1|$1]] sroto a meki fu wan papira nanga a nen disi
 Fu san ede: ''$2''.",
 
 # Login and logout pages
@@ -584,7 +584,7 @@ Yu e pramisi unu dati na yu skrifi disi yusrefi, noso yu teki en puru fu wan fri
 'template-protected' => '(a sroto)',
 'template-semiprotected' => '(sroto wan pisi)',
 'nocreatetext' => '{{SITENAME}} puru den primisi fu meki nyun papira.
-Yu kan go baka fu kenki papira di de kba, noso yu kan [[Special:UserLogin|psa kon noso meki wan account]].',
+Yu kan go baka fu kenki papira di de kba, noso yu kan [[Special:wiki_UserLogin|psa kon noso meki wan account]].',
 'recreate-moveddeleted-warn' => "'''Warskow: yu e meki wan papira, di ben puru fu dyaso kaba, baka.'''
 
 Denki fosi efu na wan bun sani fu meki a papira disi baka. A log buku fu puru sori dyaso gi yepi:",
@@ -701,11 +701,11 @@ A kan ben trowe efu dribi.
 'prefs-help-email' => 'E-mail nen no de ferplekti, ma a e gi trawan a okasi fu kontakti yu na tapu yu kebroikiman papira noso na tapu yu taki papira, sondro fu sori suma na yu fu tru.',
 'prefs-help-email-required' => 'Wan e-mail nen de fanowdu gi disi.',
 
-# User rights
+# wiki_User rights
 'userrights-lookup-user' => 'Masyinguru kenki',
 'userrights-user-editname' => 'Wan masyinnen gi:',
 'editusergroup' => 'Masyinguru kenki',
-'editinguser' => "Kenki fu lesi fu '''[[User:$1|$1]]''' ([[User talk:$1|{{int:talkpagelinktext}}]] | [[Special:Contributions/$1|{{int:contribslink}}]])",
+'editinguser' => "Kenki fu lesi fu '''[[wiki_User:$1|$1]]''' ([[wiki_User talk:$1|{{int:talkpagelinktext}}]] | [[Special:Contributions/$1|{{int:contribslink}}]])",
 'userrights-editusergroup' => 'Masyinguru kenki',
 'saveusergroups' => 'Masyinguru oponaki',
 'userrights-groupsmember' => 'Masyin fu:',
@@ -729,7 +729,7 @@ A kan ben trowe efu dribi.
 'grouppage-sysop' => '{{ns:project}}:Admin',
 'grouppage-bureaucrat' => '{{ns:project}}:Burokrati',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Log buku fu kebroikiman leti',
 'rightsnone' => '(no)',
 
@@ -942,7 +942,7 @@ Papira ini [[Special:Watchlist|yu Tan Luku réy]] '''fatu'''.",
 'deletedcontributions' => 'Trowe kenki fu masyin',
 'deletedcontributions-title' => 'Trowe kenki fu masyin',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => 'Masyin libi si fu:',
 'listusers-submit' => 'Libi si',
 'listusers-noresult' => 'No masyin dyaso.',

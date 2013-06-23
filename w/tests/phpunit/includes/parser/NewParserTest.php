@@ -71,7 +71,7 @@ class NewParserTest extends MediaWikiTestCase {
 		$tmpGlobals['parserMemc'] = wfGetParserCacheStorage();
 
 		// $tmpGlobals['wgContLang'] = new StubContLang;
-		$tmpGlobals['wgUser'] = new User;
+		$tmpGlobals['wgwiki_User'] = new wiki_User;
 		$context = new RequestContext();
 		$tmpGlobals['wgLang'] = $context->getLanguage();
 		$tmpGlobals['wgOut'] = $context->getOutput();
@@ -175,7 +175,7 @@ class NewParserTest extends MediaWikiTestCase {
 		# Clear the message cache
 		MessageCache::singleton()->clear();
 
-		$user = User::newFromId( 0 );
+		$user = wiki_User::newFromId( 0 );
 		LinkCache::singleton()->clear(); # Avoids the odd failure at creating the nullRevision
 
 		# Upload DB table entries for files.
@@ -362,7 +362,7 @@ class NewParserTest extends MediaWikiTestCase {
 
 		$GLOBALS['wgMemc'] = new EmptyBagOStuff;
 		$GLOBALS['wgOut'] = $context->getOutput();
-		$GLOBALS['wgUser'] = $context->getUser();
+		$GLOBALS['wgwiki_User'] = $context->getUser();
 
 		global $wgHooks;
 
@@ -617,8 +617,8 @@ class NewParserTest extends MediaWikiTestCase {
 
 		ini_set( 'memory_limit', $this->memoryLimit * 1048576 );
 
-		$user = new User;
-		$opts = ParserOptions::newFromUser( $user );
+		$user = new wiki_User;
+		$opts = ParserOptions::newFromwiki_User( $user );
 		$title = Title::makeTitle( NS_MAIN, 'Parser_test' );
 
 		$id = 1;

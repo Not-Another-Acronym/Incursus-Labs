@@ -30,7 +30,7 @@ class DoubleRedirectJob extends Job {
 	var $reason, $redirTitle, $destTitleText;
 
 	/**
-	 * @var User
+	 * @var wiki_User
 	 */
 	static $user;
 
@@ -137,15 +137,15 @@ class DoubleRedirectJob extends Job {
 		}
 
 		# Save it
-		global $wgUser;
-		$oldUser = $wgUser;
-		$wgUser = $this->getUser();
+		global $wgwiki_User;
+		$oldwiki_User = $wgwiki_User;
+		$wgwiki_User = $this->getUser();
 		$article = WikiPage::factory( $this->title );
 		$reason = wfMessage( 'double-redirect-fixed-' . $this->reason,
 			$this->redirTitle->getPrefixedText(), $newTitle->getPrefixedText()
 		)->inContentLanguage()->text();
 		$article->doEdit( $newText, $reason, EDIT_UPDATE | EDIT_SUPPRESS_RC, false, $this->getUser() );
-		$wgUser = $oldUser;
+		$wgwiki_User = $oldwiki_User;
 
 		return true;
 	}
@@ -191,11 +191,11 @@ class DoubleRedirectJob extends Job {
 
 	/**
 	 * Get a user object for doing edits, from a request-lifetime cache
-	 * @return User
+	 * @return wiki_User
 	 */
 	function getUser() {
 		if ( !self::$user ) {
-			self::$user = User::newFromName( wfMessage( 'double-redirect-fixer' )->inContentLanguage()->text(), false );
+			self::$user = wiki_User::newFromName( wfMessage( 'double-redirect-fixer' )->inContentLanguage()->text(), false );
 			# FIXME: newFromName could return false on a badly configured wiki.
 			if ( !self::$user->isLoggedIn() ) {
 				self::$user->addToDatabase();

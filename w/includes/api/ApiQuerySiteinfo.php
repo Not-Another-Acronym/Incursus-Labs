@@ -67,7 +67,7 @@ class ApiQuerySiteinfo extends ApiQueryBase {
 					$fit = $this->appendStatistics( $p );
 					break;
 				case 'usergroups':
-					$fit = $this->appendUserGroups( $p, $params['numberingroup'] );
+					$fit = $this->appendwiki_UserGroups( $p, $params['numberingroup'] );
 					break;
 				case 'extensions':
 					$fit = $this->appendExtensions( $p );
@@ -370,13 +370,13 @@ class ApiQuerySiteinfo extends ApiQueryBase {
 		$data['edits'] = intval( SiteStats::edits() );
 		$data['images'] = intval( SiteStats::images() );
 		$data['users'] = intval( SiteStats::users() );
-		$data['activeusers'] = intval( SiteStats::activeUsers() );
+		$data['activeusers'] = intval( SiteStats::activewiki_Users() );
 		$data['admins'] = intval( SiteStats::numberingroup( 'sysop' ) );
 		$data['jobs'] = intval( SiteStats::jobs() );
 		return $this->getResult()->addValue( 'query', $property, $data );
 	}
 
-	protected function appendUserGroups( $property, $numberInGroup ) {
+	protected function appendwiki_UserGroups( $property, $numberInGroup ) {
 		global $wgGroupPermissions, $wgAddGroups, $wgRemoveGroups, $wgGroupsAddToSelf, $wgGroupsRemoveFromSelf;
 
 		$data = array();

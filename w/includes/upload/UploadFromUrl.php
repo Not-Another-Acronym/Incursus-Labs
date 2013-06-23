@@ -39,7 +39,7 @@ class UploadFromUrl extends UploadBase {
 	 * user is not allowed, return the name of the user right as a string. If
 	 * the user is allowed, have the parent do further permissions checking.
 	 *
-	 * @param $user User
+	 * @param $user wiki_User
 	 *
 	 * @return bool|string
 	 */
@@ -129,12 +129,12 @@ class UploadFromUrl extends UploadBase {
 	 * @return bool
 	 */
 	public static function isValidRequest( $request ) {
-		global $wgUser;
+		global $wgwiki_User;
 
 		$url = $request->getVal( 'wpUploadFileURL' );
 		return !empty( $url )
 			&& Http::isValidURI( $url )
-			&& $wgUser->isAllowed( 'upload_by_url' );
+			&& $wgwiki_User->isAllowed( 'upload_by_url' );
 	}
 
 	/**
@@ -262,7 +262,7 @@ class UploadFromUrl extends UploadBase {
 	/**
 	 * Wrapper around the parent function in order to defer checking protection
 	 * until we are sure that the file can actually be uploaded
-	 * @param $user User
+	 * @param $user wiki_User
 	 * @return bool|mixed
 	 */
 	public function verifyTitlePermissions( $user ) {
@@ -278,7 +278,7 @@ class UploadFromUrl extends UploadBase {
 	 * @param $comment string
 	 * @param $pageText string
 	 * @param $watch bool
-	 * @param $user User
+	 * @param $user wiki_User
 	 * @return Status
 	 */
 	public function performUpload( $comment, $pageText, $watch, $user ) {
@@ -295,7 +295,7 @@ class UploadFromUrl extends UploadBase {
 	 * @param $comment
 	 * @param $pageText
 	 * @param $watch
-	 * @param $user User
+	 * @param $user wiki_User
 	 * @return String
 	 */
 	protected function insertJob( $comment, $pageText, $watch, $user ) {

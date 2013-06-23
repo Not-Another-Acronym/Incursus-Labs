@@ -12,7 +12,7 @@
  */
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-hideminor' => 'Ɣla tɔtrɔ suewo le tɔtrɔ yeyeawo me',
 'tog-watchcreations' => 'Tsɔ axa siwo gɔme medze la kpe ɖe axa siwo ŋu nyeƒe ŋku le la ŋu',
 'tog-watchdefault' => 'Tsɔ axa siwo ŋu metrɔ asi le la kpe ɖe axa siwo ŋu nyeƒe ŋku le la ŋu',

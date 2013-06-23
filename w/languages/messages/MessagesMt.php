@@ -128,9 +128,9 @@ $specialPageAliases = array(
 	'Unusedtemplates'           => array( 'MudelliMhuxUżati' ),
 	'Unwatchedpages'            => array( 'PaġniMhuxOsservati' ),
 	'Upload'                    => array( 'Tella\'' ),
-	'Userlogin'                 => array( 'UtentDħul' ),
-	'Userlogout'                => array( 'UtentĦruġ' ),
-	'Userrights'                => array( 'DrittijietUtent' ),
+	'wiki_Userlogin'                 => array( 'UtentDħul' ),
+	'wiki_Userlogout'                => array( 'UtentĦruġ' ),
+	'wiki_Userrights'                => array( 'DrittijietUtent' ),
 	'Version'                   => array( 'Verżjoni' ),
 	'Wantedcategories'          => array( 'KategorijiRikjesti' ),
 	'Wantedfiles'               => array( 'FajlsRikjesti' ),
@@ -272,7 +272,7 @@ $magicWords = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Ħoloq sottolinjati:',
 'tog-justify' => 'Iġġustifika l-paragrafi',
 'tog-hideminor' => 'Aħbi l-modifiki minuri fit-tibdil riċenti',
@@ -608,7 +608,7 @@ L-amministratur li għalqu offra din l-ispjegazzjoni: $1',
 
 Is-soltu dan jiġri meta l-paġna terġa\' tiġi msejjħa, billi tibda mill-kronoloġija jew mill-konfront bejn ir-reviżjonijiet, link għal paġna mħassra, ma\' konfront bejn reviżjonijiet ineżistenti jew konfront bejn reviżjonijiet imnaddfa mill-kronoloġija.
 
-Jekk din mhix ir-raġuni, wisq probabli sibt problema fis-software. Jekk jogħġbok irraporta dan lil [[Special:ListUsers/sysop|amministratur]], u agħmel nota tal-URL.',
+Jekk din mhix ir-raġuni, wisq probabli sibt problema fis-software. Jekk jogħġbok irraporta dan lil [[Special:Listwiki_Users/sysop|amministratur]], u agħmel nota tal-URL.',
 'missingarticle-rev' => '(reviżjoni#: $1)',
 'missingarticle-diff' => '(Diff: $1, $2)',
 'readonly_lag' => "Id-databażi ġiet awtomatikament magħluqa sakemm id-databażi inferjuri tas-server jilħqu ma' dak superjuri",
@@ -653,7 +653,7 @@ $2',
 'customcssprotected' => "M'għandekx il-permessi neċessarji sabiex timmodifika din il-paġna tas-CSS, minħabba li għandha tqegħid personali ta' utent ieħor.",
 'customjsprotected' => "M'għandekx il-permessi neċessarji sabiex timmodifika din il-paġna tal-JavaScript, minħabba li għandha tqegħid personali ta' utent ieħor.",
 'ns-specialprotected' => 'Il-paġni speċjali ma jistgħux jiġu mmodifikati.',
-'titleprotected' => "Dan it-titlu ġie protett mill-ħolqien minn [[User:$1|$1]].
+'titleprotected' => "Dan it-titlu ġie protett mill-ħolqien minn [[wiki_User:$1|$1]].
 Ir-raġuni li ġiet mogħtija kienet ''$2''.",
 
 # Virus scanner
@@ -664,7 +664,7 @@ Ir-raġuni li ġiet mogħtija kienet ''$2''.",
 # Login and logout pages
 'logouttext' => "'''Bħalissa tinsab barra mill-kont tiegħek.'''
 
-Tista' tkompli tuża' {{SITENAME}} bħala utent anonimu, jew tista' terġa [[Special:UserLogin|tidħol]] bħala l-istess utent jew wieħed differenti.
+Tista' tkompli tuża' {{SITENAME}} bħala utent anonimu, jew tista' terġa [[Special:wiki_UserLogin|tidħol]] bħala l-istess utent jew wieħed differenti.
 Kun af li ċerti paġni jistgħu jkomplu jidhru bħallikieku l-illogjar 'l barra mill-kont qatt ma seħħ, sakemm ma tħassarx il-cache tal-browser.",
 'welcomecreation' => "== Merħba, $1! ==
 Il-kont tiegħek ġie maħluq.<br />
@@ -704,7 +704,7 @@ Tinsiex tippersonalizza l-[[Special:Preferences|preferenzi]] ta' {{SITENAME}}.",
 'loginsuccess' => "'''Irnexxielek taqbad mas-server ta' {{SITENAME}} bl-isem tal-utent \"\$1\".'''",
 'nosuchuser' => 'M\'hemm l-ebda utent bl-isem ta\' "$1".<br />
 L-ismijiet tal-utenti huma sensittivi fuq kif jinkitbu.<br />
-Jekk jogħġbok kun żġur li ktibtu sew, jew minflok [[Special:UserLogin/signup|oħloq kont ġdid]].',
+Jekk jogħġbok kun żġur li ktibtu sew, jew minflok [[Special:wiki_UserLogin/signup|oħloq kont ġdid]].',
 'nosuchusershort' => 'M\'hemm l-ebda utent bl-isem "$1".
 Agħmel żġur li ktibta sew.',
 'nouserspecified' => 'Trid tispeċifika isem tal-utent.',
@@ -897,7 +897,7 @@ Seta' ġara li din ġiet immexxiha jew imħassra waqt li kont qed tara l-paġna.
 'loginreqlink' => 'li tidħol fil-kont tiegħek',
 'loginreqpagetext' => "Int trid ikollhok $1 sabiex tkun tista' tara paġni oħrajn.",
 'accmailtitle' => 'Il-password intbagħtet.',
-'accmailtext' => "Password ġenerata każwalment għal [[User talk:$1|$1]] intbagħtet lil $2.<br />
+'accmailtext' => "Password ġenerata każwalment għal [[wiki_User talk:$1|$1]] intbagħtet lil $2.<br />
 
 Il-password għal dan il-kont il-ġdid tista' titbiddel fil-paġna għat-''[[Special:ChangePassword|tibdil tal-password]]''.",
 'newarticle' => '(Ġdid)',
@@ -907,7 +907,7 @@ Jekk wasalt hawn biż-żball, agħfas il-buttuna '''lura''' (''back'') fuq il-br
 'anontalkpagetext' => "----''Din hija l-paġna ta' diskussjoni ta' utent anonimu li għadu ma ħoloqx kont, jew inkella li ma jużahx.
 Għaldaqstant biex nidentifikawh ikollna nużaw l-indirizz tal-IP tiegħu/tagħha.
 L-istess indirizz tal-IP jista' jkun użat minn bosta utenti differenti.
-Jekk int utent anonimu u tħoss li qiegħed tirċievi kummenti irrelevanti jew li ma jagħmlux sens, jekk jogħġbok [[Special:UserLogin|idħol fil-kont tiegħek]] jew [[Special:UserLogin/signup|oħloq wieħed]] sabiex tevita li fil-futur tiġi konfuż ma' utenti anonimi oħra.''",
+Jekk int utent anonimu u tħoss li qiegħed tirċievi kummenti irrelevanti jew li ma jagħmlux sens, jekk jogħġbok [[Special:wiki_UserLogin|idħol fil-kont tiegħek]] jew [[Special:wiki_UserLogin/signup|oħloq wieħed]] sabiex tevita li fil-futur tiġi konfuż ma' utenti anonimi oħra.''",
 'noarticletext' => "Bħalissa m'hemm l-ebda test f'din il-paġna.
 Inti tista' [[Special:Search/{{PAGENAME}}|tfittex it-titlu ta' din il-paġna]] f'paġni oħra, jew <span class=\"plainlinks\">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} tfittex ir-reġistri relatati], jew [{{fullurl:{{FULLPAGENAME}}|action=edit}} timmodifika din il-paġna]</span>.",
 'noarticletext-nopermission' => "Bħalissa m'hemm l-ebda test f'din il-paġna. Inti tista' [[Special:Search/{{PAGENAME}}|tfittex għal dan it-titlu tal-paġna]] f'paġni oħra, jew <span class=\"plainlinks\">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} fittex ir-reġistri relatati]</span>.",
@@ -940,12 +940,12 @@ It-tibdiliet tiegħek għadhom ma ġewx salvati!",
 'continue-editing' => 'Mur fil-kaxxa tal-editjar',
 'previewconflict' => "Din il-previżjoni turi l-kliem li jinsab fiż-żona ta' modifika superjuri u turi kif tidher kieku l-paġna kella tiġi modifikata.",
 'session_fail_preview' => "'''Jiddispjaċina imma l-modifika tiegħek ma setgħetx tiġi pproċessata minħabba li ntilfet l-informazzjoni tas-sessjoni.
-Jekk jogħġbok, erġa' pprova. Jekk xorta tibqa' ma taħdimx, ipprova [[Special:UserLogout|oħroġ]] u erġa' idħol.'''",
+Jekk jogħġbok, erġa' pprova. Jekk xorta tibqa' ma taħdimx, ipprova [[Special:wiki_UserLogout|oħroġ]] u erġa' idħol.'''",
 'session_fail_preview_html' => "'''Jiddispjaċina imma l-modifika tiegħek ma setgħetx tiġi pproċessata minħabba li ntilfet l-informazzjoni tas-sessjoni.'''
 
 ''Peress li {{#ifeq: {{SITENAME}} | translatewiki.net | fuq {{SITENAME}} | fil-{{SITENAME}}}} huwa possibbli l-użu tal-HTML mingħajr limitazzjonijiet (''raw HTML''), id-dehra proviżorja tiġi moħbija bħala prekawzjoni kontra l-attakki tal-JavaScript.''
 
-'''Jekk dan huwa attentat leġittmu ta' modifika, jekk jogħġbok erġa' pprova. Jekk tibqa' ma taħdimx, ipprova [[Special:UserLogout|oħroġ]] u erġa' idħol.'''",
+'''Jekk dan huwa attentat leġittmu ta' modifika, jekk jogħġbok erġa' pprova. Jekk tibqa' ma taħdimx, ipprova [[Special:wiki_UserLogout|oħroġ]] u erġa' idħol.'''",
 'token_suffix_mismatch' => "'''Il-modifika tiegħek ma ġietx aċċettata minħabba li klijent tiegħek tertaq l-karratri tal-ortografija fit-token tal-modifika.
 Din il-modifika ma ġietx aċċettata sabiex ma jkunx hemm żballji fit-test tal-paġna. Dan xi kultant jiġri minħabba li qiegħed tuża servizz difettuż anonimu li huwa bbażat fuq il-web ta' prokura.'''",
 'edit_form_incomplete' => "'''Ċerti parti tal-formola tal-modifika ma laħqux is-server; iċċekkja jekk il-modifiki tiegħek humiex intatti u erġa' pprova.'''",
@@ -995,7 +995,7 @@ L-aħħar daħla fir-reġistru hija disponibbli hawn taħt għar-referenza:",
 'edittools' => '<!-- Kliem hawnhekk jidher taħt l-formuli tal-modifika u postjar. -->',
 'nocreatetitle' => 'Il-ħolqien tal-paġna ġie miżmum',
 'nocreatetext' => "{{SITENAME}} limitat l-abbilitá tal-ħolqien ta' paġni ġodda.
-Tista' tmur lura u tagħmel modifiki ta' paġni eżistenti, inkella [[Special:UserLogin|idħol jew oħloq kont ġdid]].",
+Tista' tmur lura u tagħmel modifiki ta' paġni eżistenti, inkella [[Special:wiki_UserLogin|idħol jew oħloq kont ġdid]].",
 'nocreate-loggedin' => "M'għandekx permess li toħloq paġni ġodda.",
 'sectioneditnotsupported-title' => 'L-immodifikar tas-sezzjonijiet mhuwiex sostnut',
 'sectioneditnotsupported-text' => "L-immodifikar ta' sezzjonijiet f'din il-paġna mhuwiex sostnut.",
@@ -1036,11 +1036,11 @@ Dawn l-argumenti tħallew barra.",
 'undo-success' => "Din il-modifika tista' tiġi mneħħija. Jekk jogħġbok verifika il-paragun t'hawn taħt u verifika li dan huwa dak li trid int, imbgħad salva l-bidliet t'hawn taħt sabiex tlesti l-proċedura ta' tneħħija.",
 'undo-failure' => "Huwa impossibbli li tiġi annullata l-modifika, minħabba kunflitt ta' modifiki intermedji.",
 'undo-norev' => 'Il-modifika ma tistax tiġi annullata peress li ma teżistix jew inkella għax ġiet diġà imħassra.',
-'undo-summary' => "Neħħi r-reviżjoni $1 ta' [[Special:Contributions/$2|$2]] ([[User talk:$2|Diskussjoni]])",
+'undo-summary' => "Neħħi r-reviżjoni $1 ta' [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Diskussjoni]])",
 
 # Account creation failure
 'cantcreateaccounttitle' => 'Il-kont ma jistax jinħoloq',
-'cantcreateaccount-text' => "Ħolqien tal-kont minn dan l-indirizz IP ('''$1''') ġie imblukkat minn [[User:$3|$3]].
+'cantcreateaccount-text' => "Ħolqien tal-kont minn dan l-indirizz IP ('''$1''') ġie imblukkat minn [[wiki_User:$3|$3]].
 
 Ir-raġuni li ngħatat minħabba l-blokk mingħand $3 kienet ''$2''",
 
@@ -1294,7 +1294,7 @@ Innota però li l-werreja tal-kontenut ta' {{SITENAME}} f'dawn is-siti, jistgħu
 'mypreferences' => 'Preferenzi',
 'prefs-edits' => "Numru ta' modifiki:",
 'prefsnologin' => 'Għadek ma dħaltx ġewwa',
-'prefsnologintext' => 'Sabiex tkun tista\' tippersonalizza l-preferenzi huwa neċessarju li tidħol fil-<span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} kont]</span>.',
+'prefsnologintext' => 'Sabiex tkun tista\' tippersonalizza l-preferenzi huwa neċessarju li tidħol fil-<span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} kont]</span>.',
 'changepassword' => 'Ibdel il-password',
 'prefs-skin' => 'Aspett grafiku (skin)',
 'skin-preview' => 'dehra proviżorja',
@@ -1403,16 +1403,16 @@ Hawnhekk hawn valur iġġenerat b'mod każwali li inti tista' tuża: $1",
 'prefs-displaywatchlist' => "Opzjonijiet ta' viżwalizazzjoni",
 'prefs-diffs' => 'Differenzi',
 
-# User preference: e-mail validation using jQuery
+# wiki_User preference: e-mail validation using jQuery
 'email-address-validity-valid' => 'L-indirizz elettroniku jidher validu',
 'email-address-validity-invalid' => 'Daħħal indirizz elettroniku validu',
 
-# User rights
+# wiki_User rights
 'userrights' => 'Ġestjoni tad-drittijiet tal-utent',
 'userrights-lookup-user' => 'Ġestjoni tal-gruppi tal-utent',
 'userrights-user-editname' => 'Daħħal isem tal-utent:',
 'editusergroup' => 'Immodifika l-gruppi tal-utent',
-'editinguser' => "Modifika tad-drittijiet tal-utent '''[[User:$1|$1]]''' $2",
+'editinguser' => "Modifika tad-drittijiet tal-utent '''[[wiki_User:$1|$1]]''' $2",
 'userrights-editusergroup' => 'Immodifika l-gruppi tal-utent',
 'saveusergroups' => 'Salva l-gruppi tal-utent',
 'userrights-groupsmember' => "Membru ta':",
@@ -1424,7 +1424,7 @@ Hawnhekk hawn valur iġġenerat b'mod każwali li inti tista' tuża: $1",
 'userrights-reason' => 'Raġuni:',
 'userrights-no-interwiki' => "M'għandekx permess tagħmel modifiki fid-drittijiet tal-utenti fuq siti oħrajn.",
 'userrights-nodatabase' => 'Id-Database $1 ma jeżistix jew inkella mhux database lokali.',
-'userrights-nologin' => "Sabiex tkun tista' tagħti drittijiet lill-utenti hemm bżonn li [[Special:UserLogin|tidħol]] bħala amministratur.",
+'userrights-nologin' => "Sabiex tkun tista' tagħti drittijiet lill-utenti hemm bżonn li [[Special:wiki_UserLogin|tidħol]] bħala amministratur.",
 'userrights-notallowed' => "Il-kont tiegħek m'għandux il-permessi neċessarji li jżid jew ineħħi drittijiet tal-utent.",
 'userrights-changeable-col' => "Gruppi li tista' tbiddel",
 'userrights-unchangeable-col' => 'Gruppi li ma tistax tbiddel',
@@ -1515,7 +1515,7 @@ Hawnhekk hawn valur iġġenerat b'mod każwali li inti tista' tuża: $1",
 'right-sendemail' => 'Jibgħat ittri-e lil utenti oħra',
 'right-passwordreset' => 'Jara l-messaġġi tal-impostazzjoni mill-ġdid tal-password',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Drittijiet tal-utenti',
 'rightslogtext' => "Dan huwa r-reġistru tal-modifiki ta' drittijiet tal-utenti.",
 'rightslogentry' => "biddel is-sħubija ta' $1 minn $2 għal $3",
@@ -1610,7 +1610,7 @@ Hawnhekk hawn valur iġġenerat b'mod każwali li inti tista' tuża: $1",
 'reuploaddesc' => 'Mur lura għal formula',
 'upload-tryagain' => 'Ibgħat id-deskrizzjoni tal-fajl irranġat',
 'uploadnologin' => 'Għadek ma dħaltx ġewwa',
-'uploadnologintext' => "Sabiex il-fajl jiġu ''uploaded'' inti trid tkun [[Special:UserLogin|dħalt]] b'kont reġistrat.",
+'uploadnologintext' => "Sabiex il-fajl jiġu ''uploaded'' inti trid tkun [[Special:wiki_UserLogin|dħalt]] b'kont reġistrat.",
 'upload_directory_missing' => "Id-Direttorju tal-''upload'' ($1) huwa nieqes u ma jistax jiġi maħluq mill-''webserver''.",
 'upload_directory_read_only' => "Il-''Webserver'' m'għandux il-mezzi sabiex jikteb fil-direttorju tal-''upload'' ($1).",
 'uploaderror' => "Problema fl-''upload''",
@@ -1739,11 +1739,11 @@ $1',
 'upload-proto-error-text' => "Għal upload remote huwa neċessarju tispeċifika l-URL li jibda' b'<code>http://</code> jew <code>ftp://</code>.",
 'upload-file-error' => 'Problema interna',
 'upload-file-error-text' => "Kien hemm problema interna waqt il-ħolqien ta' fajl temporanju fuq is-server.<br />
-Jekk jogħġbok ikkuntatja lil xi [[Special:ListUsers/sysop|amministratur]].",
+Jekk jogħġbok ikkuntatja lil xi [[Special:Listwiki_Users/sysop|amministratur]].",
 'upload-misc-error' => 'Problema tal-upload mhux magħrufa',
 'upload-misc-error-text' => "Waqt li l-fajl kien qed jittella', ġiet verifikata problema mhux magħrufha.<br />
 Ivverifika li l-URL huwa validu u aċċessibbli, u erġa' pprova.<br />
-Jekk il-problema tkompli tippersisti, ikkuntatja lil xi [[Special:ListUsers/sysop|amministratur]].",
+Jekk il-problema tkompli tippersisti, ikkuntatja lil xi [[Special:Listwiki_Users/sysop|amministratur]].",
 'upload-too-many-redirects' => 'Il-URL kienet tinkludi diversi rindirizzi',
 'upload-unknown-size' => 'Dimensjoni mhux magħrufa',
 'upload-http-error' => 'Qam żball HTTP: $1',
@@ -1941,7 +1941,7 @@ Daħħal: tip/sottotip, eż. <code>image/jpeg</code>.",
 'statistics-views-total' => "Total ta' viżti",
 'statistics-views-total-desc' => 'Viżti lejn paġni li ma jeżistux u paġna speċjali mhumiex inklużi.',
 'statistics-views-peredit' => 'Viżti għal kull modifika',
-'statistics-users' => '[[Special:ListUsers|Utenti]] reġistrati',
+'statistics-users' => '[[Special:Listwiki_Users|Utenti]] reġistrati',
 'statistics-users-active' => 'Utenti attivi',
 'statistics-users-active-desc' => 'Utenti li wettqu azzjoni fl-aħħar {{PLURAL:$1|ġurnata|$1 ġurnata}}',
 'statistics-mostpopular' => 'Il-paġni l-aktar miżjura',
@@ -2106,13 +2106,13 @@ Protokolli aċċettati: <code>$1</code>',
 'linksearch-line' => '$1 hija marbuta mill-paġna $2',
 'linksearch-error' => 'Il-metakarattri jistgħu jintużaw biss fil-bidu tal-indirizz.',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => 'Uri utenti li jibdew minn:',
 'listusers-submit' => 'Uri',
 'listusers-noresult' => 'L-ebda utent ma nstab.',
 'listusers-blocked' => '(imblukkat)',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'Lista tal-utenti attivi',
 'activeusers-intro' => "Din hija lista ta' utenti li kellhom xi tip ta' attività f'dawn l-aħħar $1 {{PLURAL:$1|ġurnata|ġurnata}}.",
 'activeusers-count' => '$1 {{PLURAL:$1|modifika|modifika}} fl-aħħar {{PLURAL:$3|jum|$3 jum}}',
@@ -2146,7 +2146,7 @@ Jista' jkun hemm [[{{MediaWiki:Listgrouprights-helppage}}|aktar informazzjoni]] 
 
 # E-mail user
 'mailnologin' => 'L-Ebda indirizz tal-posta',
-'mailnologintext' => "Sabiex tkun tista' tibgħat posta elettronika 'l utenti oħrajn huwa neċessarju li [[Special:UserLogin|tidħol fis-sit]] bħalha utent reġistrat u jkollhok indirizz validu fil-[[Special:Preferences|preferenzi]] tiegħek.",
+'mailnologintext' => "Sabiex tkun tista' tibgħat posta elettronika 'l utenti oħrajn huwa neċessarju li [[Special:wiki_UserLogin|tidħol fis-sit]] bħalha utent reġistrat u jkollhok indirizz validu fil-[[Special:Preferences|preferenzi]] tiegħek.",
 'emailuser' => 'Ikteb lil dan l-utent',
 'emailuser-title-notarget' => 'Ibgħat ittre lil utent',
 'emailpage' => 'Ibgħat messaġġ lil dan l-utent bil-posta elettronika',
@@ -2176,7 +2176,7 @@ L-indirizz elettroniku li daħħalt fil-[[Special:Preferences|preferenzi]] jidhe
 'emailsenttext' => 'Il-messaġġ bil-posta elettronika intbagħat.',
 'emailuserfooter' => 'Din il-posta elettronika intbgħattet minn $1 lil $2 bil-"Utent tal-posta elettronika" funżjoni ta\' {{SITENAME}}.',
 
-# User Messenger
+# wiki_User Messenger
 'usermessage-summary' => 'Messaġġ tas-sistema',
 'usermessage-editor' => 'Messaġġier tas-sistema',
 
@@ -2187,7 +2187,7 @@ L-indirizz elettroniku li daħħalt fil-[[Special:Preferences|preferenzi]] jidhe
 'nowatchlist' => "Il-lista ta' osservazzjoni tiegħek hija vojta.",
 'watchlistanontext' => "Sabiex tara u timmodifika l-lista ta' osservazzjoni tiegħek, hemm bżonn li $1.",
 'watchnologin' => 'Għadek ma dħaltx ġewwa',
-'watchnologintext' => "Biex tagħmel modifika fil-lista t'osservazzjoni speċjali huwa neċessarju li l-ewwel [[Special:UserLogin|tidħol]] fil-kont tiegħek.",
+'watchnologintext' => "Biex tagħmel modifika fil-lista t'osservazzjoni speċjali huwa neċessarju li l-ewwel [[Special:wiki_UserLogin|tidħol]] fil-kont tiegħek.",
 'addwatch' => "Żid mal-lista ta' osservazzjonijiet",
 'addedwatchtext' => 'Il-paġna "[[:$1]]" ġiet miżjuda mal-[[Special:Watchlist|lista ta\' osservazzjonijiet]] tiegħek.
 Kwalunkwe modifika li ssir fil-futur, kemm fuq din il-paġna u fil-paġna ta\' diskussjoni tagħha, tiġi elenkata hemmhekk.',
@@ -2293,12 +2293,12 @@ Tħassara tista' toħloq problema ta' funżjoni fid-database ta' {{SITENAME}}; m
 'rollbacklink' => 'rollback',
 'rollbackfailed' => 'Rollback ma ħadmitx',
 'cantrollback' => 'Impossibli tħassar il-modifiki; l-utent li wettaqhom huwa l-unika li għamel kontributi lil din il-paġna.',
-'alreadyrolled' => "Mhuwiex possibbli li tneħħi l-modifiki ta' [[User:$2|$2]] ([[User talk:$2|diskussjoni]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]) fil-paġna [[:$1]]; utent ieħor diġà immodifika din il-paġna jew inkella reġġa' lura.
+'alreadyrolled' => "Mhuwiex possibbli li tneħħi l-modifiki ta' [[wiki_User:$2|$2]] ([[wiki_User talk:$2|diskussjoni]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]) fil-paġna [[:$1]]; utent ieħor diġà immodifika din il-paġna jew inkella reġġa' lura.
 
-L-iktar modifika riċenti fuq dil-paġna saret minn [[User:$3|$3]] ([[User talk:$3|diskussjoni]]).",
+L-iktar modifika riċenti fuq dil-paġna saret minn [[wiki_User:$3|$3]] ([[wiki_User talk:$3|diskussjoni]]).",
 'editcomment' => "It-taqsira tal-modifika kienet: \"''\$1''\".",
-'revertpage' => "Modifiki mneħħa minn [[Special:Contributions/$2|$2]] ([[User talk:$2|Talk]]) għall-aħħar verżjoni ta' [[User:$1|$1]]",
-'revertpage-nouser' => "Modifiki annullati minn (isem tal-utent imneħħi) għall-aħħar reviżjoni ta' [[User:$1|$1]]",
+'revertpage' => "Modifiki mneħħa minn [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Talk]]) għall-aħħar verżjoni ta' [[wiki_User:$1|$1]]",
+'revertpage-nouser' => "Modifiki annullati minn (isem tal-utent imneħħi) għall-aħħar reviżjoni ta' [[wiki_User:$1|$1]]",
 'rollback-success' => "Modifiki mneħħa ta' $1;
 Modifikata lura għall-aħħar verżjoni ta' $2.",
 
@@ -2525,7 +2525,7 @@ Ara l-[[Special:BlockList|lista tal-blokki]] sabiex tara l-blokki attivi.',
 'unblockip' => 'Żblokkja l-utent',
 'unblockiptext' => "Uża l-formola t'hawn taħt sabiex tirkupra l-aċċess tal-ktiba 'l utent jew indirizz tal-IP imblukkat.",
 'ipusubmit' => 'Żblokkja dan l-indirizz',
-'unblocked' => 'L-utent [[User:$1|$1]] ġie żblokkjat',
+'unblocked' => 'L-utent [[wiki_User:$1|$1]] ġie żblokkjat',
 'unblocked-range' => '$1 ġie żblukkat',
 'unblocked-id' => 'Il-blokk $1 tneħħa',
 'blocklist' => 'Utenti mblukkati',
@@ -2558,7 +2558,7 @@ Ara l-[[Special:BlockList|lista tal-blokki]] sabiex tara l-blokki attivi.',
 'change-blocklink' => 'biddel il-blokk',
 'contribslink' => 'kontributi',
 'emaillink' => 'ibgħat ittra-e',
-'autoblocker' => 'Blokkat awtomatikament minħabba li l-indirizz tal-IP ġie użat mill-utent "[[User:$1|$1]]". Ir-Raġuni li ġiet mogħtija għall-imblokk ta\' $1 kienet: "$2":',
+'autoblocker' => 'Blokkat awtomatikament minħabba li l-indirizz tal-IP ġie użat mill-utent "[[wiki_User:$1|$1]]". Ir-Raġuni li ġiet mogħtija għall-imblokk ta\' $1 kienet: "$2":',
 'blocklogpage' => 'Blokki',
 'blocklog-showlog' => 'Dan l-utent ġie imblukkat qabel. Ir-reġistru tal-blokki jinsab hawn taħt bħala referenza:',
 'blocklog-showsuppresslog' => 'Dan l-utent ġie imblukkat u moħbi qabel. Ir-reġistru tal-blokki jinsab hawn taħt bħala referenza:',
@@ -2648,7 +2648,7 @@ F'dawn il-każi, inti trid iċaqlaq jew tagħqad il-paġna manwalment jekk dan h
 'movearticle' => 'Ċaqlaq il-paġna:',
 'moveuserpage-warning' => "'''Twissija:''' Inti se tmexxi paġna tal-utent. Kun af li hi l-paġna biss li se titmexxa. L-utent ''mhux'' se jitmexxa.",
 'movenologin' => 'Aċċess mhux imwettaq',
-'movenologintext' => "Trid [[Special:UserLogin|tidħol]] bħalha utent reġistrat sabiex tkun tista' iċaqlaq din il-paġna.",
+'movenologintext' => "Trid [[Special:wiki_UserLogin|tidħol]] bħalha utent reġistrat sabiex tkun tista' iċaqlaq din il-paġna.",
 'movenotallowed' => "Inti m'għandekx il-permessi meħtieġa sabiex tmexxi l-paġni.",
 'movenotallowedfile' => "M'għandekx il-permessi neċessarji sabiex tmexxi fajls.",
 'cant-move-user-page' => "M'għandekx il-permessi neċessarji sabiex tmexxi paġni tal-utent (sottopaġni esklużi).",
@@ -3478,7 +3478,7 @@ Messaġġ tal-problema tal-ippostjar: $1",
 'confirmemail_invalid' => "Kodiċi ta' konfermazzjoni invalida.
 Il-kodiċi setgħat tkun skadiet.",
 'confirmemail_needlogin' => 'Huwa neċessarju $1 biex tikkonferma l-indirizz propju tal-posta elettronika.',
-'confirmemail_success' => "L-indirizz tal-posta elettronika tiegħek ġie konfermat. Issa tista' [[Special:UserLogin|tidħol fil-kont tiegħek]] u tgawdi bis-sħiħ din il-wiki.",
+'confirmemail_success' => "L-indirizz tal-posta elettronika tiegħek ġie konfermat. Issa tista' [[Special:wiki_UserLogin|tidħol fil-kont tiegħek]] u tgawdi bis-sħiħ din il-wiki.",
 'confirmemail_loggedin' => 'L-indirizz tal-posta elettronika tiegħek ġie ikkonfermat.',
 'confirmemail_error' => 'Problema fis-salvataġġ tal-konferma.',
 'confirmemail_subject' => '{{SITENAME}}: rikjesta tal-konferma tal-indirizz',
@@ -3528,10 +3528,10 @@ Dan il-kodiċi ta\' konferma se jiskadi fil-$4.',
 
 # Delete conflict
 'deletedwhileediting' => "'''Twissija''': Din il-paġna ġiet imħassra wara li int bdejt timmodifikaha!",
-'confirmrecreate' => "L-Utent [[User:$1|$1]] ([[User talk:$1|diskussjoni]]) ħassar din il-paġna wara li bdejt tagħmel il-modifiki bir-raġuni:
+'confirmrecreate' => "L-Utent [[wiki_User:$1|$1]] ([[wiki_User talk:$1|diskussjoni]]) ħassar din il-paġna wara li bdejt tagħmel il-modifiki bir-raġuni:
 : ''$2''
 Jekk jogħġbok konferma jekk vera trid terġa' toħloq din il-paġna.",
-'confirmrecreate-noreason' => "L-utent [[User:$1|$1]] ([[User talk:$1|diskussjoni]]) ħassar din il-paġna wara li inti bdejt timmodifikaha. Jekk jogħġbok ikkonferma jekk tixtieqx li terġa' toħloq din il-paġna.",
+'confirmrecreate-noreason' => "L-utent [[wiki_User:$1|$1]] ([[wiki_User talk:$1|diskussjoni]]) ħassar din il-paġna wara li inti bdejt timmodifikaha. Jekk jogħġbok ikkonferma jekk tixtieqx li terġa' toħloq din il-paġna.",
 'recreate' => "Erġa' oħloq",
 
 # action=purge

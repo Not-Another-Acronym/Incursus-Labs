@@ -1,6 +1,6 @@
 <?php
 /**
- * @defgroup Watchlist Users watchlist handling
+ * @defgroup Watchlist wiki_Users watchlist handling
  */
 
 /**
@@ -67,7 +67,7 @@ class SpecialEditWatchlist extends UnlistedSpecialPage {
 		if( $this->getUser()->isAnon() ) {
 			$out->setPageTitle( $this->msg( 'watchnologin' ) );
 			$llink = Linker::linkKnown(
-				SpecialPage::getTitleFor( 'Userlogin' ),
+				SpecialPage::getTitleFor( 'wiki_Userlogin' ),
 				$this->msg( 'loginreqlink' )->escaped(),
 				array(),
 				array( 'returnto' => $this->getTitle()->getPrefixedText() )
@@ -84,8 +84,8 @@ class SpecialEditWatchlist extends UnlistedSpecialPage {
 			)->rawParams( SpecialEditWatchlist::buildTools( null ) ) );
 
 		# B/C: $mode used to be waaay down the parameter list, and the first parameter
-		# was $wgUser
-		if( $mode instanceof User ){
+		# was $wgwiki_User
+		if( $mode instanceof wiki_User ){
 			$args = func_get_args();
 			if( count( $args >= 4 ) ){
 				$mode = $args[3];
@@ -343,7 +343,7 @@ class SpecialEditWatchlist extends UnlistedSpecialPage {
 		$user = $this->getUser();
 		foreach ( $this->badItems as $row ) {
 			list( $title, $namespace, $dbKey ) = $row;
-			wfDebug( "User {$user->getName()} has broken watchlist item ns($namespace):$dbKey, "
+			wfDebug( "wiki_User {$user->getName()} has broken watchlist item ns($namespace):$dbKey, "
 				. ( $title ? 'cleaning up' : 'deleting' ) . ".\n"
 			);
 

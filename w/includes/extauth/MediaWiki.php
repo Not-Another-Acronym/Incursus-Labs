@@ -26,7 +26,7 @@
  * This class supports authentication against an external MediaWiki database,
  * probably any version back to 1.5 or something.  Example configuration:
  *
- *   $wgExternalAuthType = 'ExternalUser_MediaWiki';
+ *   $wgExternalAuthType = 'Externalwiki_User_MediaWiki';
  *   $wgExternalAuthConf = array(
  *       'DBtype' => 'mysql',
  *       'DBserver' => 'localhost',
@@ -42,14 +42,14 @@
  * probably has bugs.  Kind of hard to reuse code when things might rely on who 
  * knows what configuration globals.
  *
- * If either wiki uses the UserComparePasswords hook, password authentication 
+ * If either wiki uses the wiki_UserComparePasswords hook, password authentication 
  * might fail unexpectedly unless they both do the exact same validation.  
  * There may be other corner cases like this where this will fail, but it 
  * should be unlikely.
  *
- * @ingroup ExternalUser
+ * @ingroup Externalwiki_User
  */
-class ExternalUser_MediaWiki extends ExternalUser {
+class Externalwiki_User_MediaWiki extends Externalwiki_User {
 	private $mRow;
 
 	/**
@@ -65,7 +65,7 @@ class ExternalUser_MediaWiki extends ExternalUser {
 		# We might not need the 'usable' bit, but let's be safe.  Theoretically 
 		# this might return wrong results for old versions, but it's probably 
 		# good enough.
-		$name = User::getCanonicalName( $name, 'usable' );
+		$name = wiki_User::getCanonicalName( $name, 'usable' );
 
 		if ( !is_string( $name ) ) {
 			return false;
@@ -130,9 +130,9 @@ class ExternalUser_MediaWiki extends ExternalUser {
 	}
 
 	public function authenticate( $password ) {
-		# This might be wrong if anyone actually uses the UserComparePasswords hook 
+		# This might be wrong if anyone actually uses the wiki_UserComparePasswords hook 
 		# (on either end), so don't use this if you those are incompatible.
-		return User::comparePasswords( $this->mRow->user_password, $password,
+		return wiki_User::comparePasswords( $this->mRow->user_password, $password,
 			$this->mRow->user_id );	
 	}
 

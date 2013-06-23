@@ -103,7 +103,7 @@ class SkinTemplate extends Skin {
 	 *
 	 * @param $out OutputPage
 	 */
-	function setupSkinUserCss( OutputPage $out ) {
+	function setupSkinwiki_UserCss( OutputPage $out ) {
 		$out->addModuleStyles( array( 'mediawiki.legacy.shared', 'mediawiki.legacy.commonPrint' ) );
 	}
 
@@ -134,7 +134,7 @@ class SkinTemplate extends Skin {
 		global $wgXhtmlDefaultNamespace, $wgXhtmlNamespaces, $wgHtml5Version;
 		global $wgDisableCounters, $wgSitename, $wgLogo, $wgHideInterlanguageLinks;
 		global $wgMaxCredits, $wgShowCreditsIfMax;
-		global $wgPageShowWatchingUsers;
+		global $wgPageShowWatchingwiki_Users;
 		global $wgArticlePath, $wgScriptPath, $wgServer;
 
 		wfProfileIn( __METHOD__ );
@@ -286,18 +286,18 @@ class SkinTemplate extends Skin {
 		$tpl->setRef( 'userpageurl', $this->userpageUrlDetails['href'] );
 		$tpl->set( 'userlang', $userLangCode );
 
-		// Users can have their language set differently than the
+		// wiki_Users can have their language set differently than the
 		// content of the wiki. For these users, tell the web browser
 		// that interface elements are in a different language.
 		$tpl->set( 'userlangattributes', '' );
 		$tpl->set( 'specialpageattributes', '' ); # obsolete
 
 		if ( $userLangCode !== $wgContLang->getHtmlCode() || $userLangDir !== $wgContLang->getDir() ) {
-			$escUserlang = htmlspecialchars( $userLangCode );
-			$escUserdir = htmlspecialchars( $userLangDir );
+			$escwiki_Userlang = htmlspecialchars( $userLangCode );
+			$escwiki_Userdir = htmlspecialchars( $userLangDir );
 			// Attributes must be in double quotes because htmlspecialchars() doesn't
 			// escape single quotes
-			$attrs = " lang=\"$escUserlang\" dir=\"$escUserdir\"";
+			$attrs = " lang=\"$escwiki_Userlang\" dir=\"$escwiki_Userdir\"";
 			$tpl->set( 'userlangattributes', $attrs );
 		}
 
@@ -321,7 +321,7 @@ class SkinTemplate extends Skin {
 					}
 				}
 
-				if ( $wgPageShowWatchingUsers ) {
+				if ( $wgPageShowWatchingwiki_Users ) {
 					$dbr = wfGetDB( DB_SLAVE );
 					$num = $dbr->selectField( 'watchlist', 'COUNT(*)',
 						array( 'wl_title' => $title->getDBkey(), 'wl_namespace' => $title->getNamespace() ),
@@ -605,7 +605,7 @@ class SkinTemplate extends Skin {
 			);
 			$personal_urls['logout'] = array(
 				'text' => $this->msg( 'userlogout' )->text(),
-				'href' => self::makeSpecialUrl( 'Userlogout',
+				'href' => self::makeSpecialUrl( 'wiki_Userlogout',
 					// userlogout link must always contain an & character, otherwise we might not be able
 					// to detect a buggy precaching proxy (bug 17790)
 					$title->isSpecial( 'Preferences' ) ? 'noreturnto' : $returnto
@@ -626,14 +626,14 @@ class SkinTemplate extends Skin {
 			$login_id = $this->showIPinHeader() ? 'anonlogin' : 'login';
 			$login_url = array(
 				'text' => $this->msg( $loginlink )->text(),
-				'href' => self::makeSpecialUrl( 'Userlogin', $returnto, $proto ),
-				'active' => $title->isSpecial( 'Userlogin' ) && ( $loginlink == 'nav-login-createaccount' || !$is_signup ),
+				'href' => self::makeSpecialUrl( 'wiki_Userlogin', $returnto, $proto ),
+				'active' => $title->isSpecial( 'wiki_Userlogin' ) && ( $loginlink == 'nav-login-createaccount' || !$is_signup ),
 				'class' => $wgSecureLogin ? 'link-https' : ''
 			);
 			$createaccount_url = array(
 				'text' => $this->msg( 'createaccount' )->text(),
-				'href' => self::makeSpecialUrl( 'Userlogin', "$returnto&type=signup", $proto ),
-				'active' => $title->isSpecial( 'Userlogin' ) && $is_signup,
+				'href' => self::makeSpecialUrl( 'wiki_Userlogin', "$returnto&type=signup", $proto ),
+				'active' => $title->isSpecial( 'wiki_Userlogin' ) && $is_signup,
 				'class' => $wgSecureLogin ? 'link-https' : ''
 			);
 
@@ -794,7 +794,7 @@ class SkinTemplate extends Skin {
 		// parameters
 		$action = $request->getVal( 'action', 'view' );
 
-		$userCanRead = $title->quickUserCan( 'read', $user );
+		$userCanRead = $title->quickwiki_UserCan( 'read', $user );
 
 		$preventActiveTabs = false;
 		wfRunHooks( 'SkinTemplatePreventOtherActiveTabs', array( &$this, &$preventActiveTabs ) );
@@ -848,7 +848,7 @@ class SkinTemplate extends Skin {
 				wfProfileIn( __METHOD__ . '-edit' );
 
 				// Checks if user can edit the current page if it exists or create it otherwise
-				if ( $title->quickUserCan( 'edit', $user ) && ( $title->exists() || $title->quickUserCan( 'create', $user ) ) ) {
+				if ( $title->quickwiki_UserCan( 'edit', $user ) && ( $title->exists() || $title->quickwiki_UserCan( 'create', $user ) ) ) {
 					// Builds CSS class for talk page links
 					$isTalkClass = $isTalk ? ' istalk' : '';
 					// Whether the user is editing the page
@@ -901,7 +901,7 @@ class SkinTemplate extends Skin {
 						'rel' => 'archives',
 					);
 
-					if ( $title->quickUserCan( 'delete', $user ) ) {
+					if ( $title->quickwiki_UserCan( 'delete', $user ) ) {
 						$content_navigation['actions']['delete'] = array(
 							'class' => ( $onPage && $action == 'delete' ) ? 'selected' : false,
 							'text' => wfMessageFallback( "$skname-action-delete", 'delete' )->setContext( $this->getContext() )->text(),
@@ -909,7 +909,7 @@ class SkinTemplate extends Skin {
 						);
 					}
 
-					if ( $title->quickUserCan( 'move', $user ) ) {
+					if ( $title->quickwiki_UserCan( 'move', $user ) ) {
 						$moveTitle = SpecialPage::getTitleFor( 'Movepage', $title->getPrefixedDBkey() );
 						$content_navigation['actions']['move'] = array(
 							'class' => $this->getTitle()->isSpecial( 'Movepage' ) ? 'selected' : false,
@@ -935,7 +935,7 @@ class SkinTemplate extends Skin {
 					}
 				}
 
-				if ( $title->getNamespace() !== NS_MEDIAWIKI && $title->quickUserCan( 'protect', $user ) ) {
+				if ( $title->getNamespace() !== NS_MEDIAWIKI && $title->quickwiki_UserCan( 'protect', $user ) ) {
 					$mode = $title->isProtected() ? 'unprotect' : 'protect';
 					$content_navigation['actions'][$mode] = array(
 						'class' => ( $onPage && $action == $mode ) ? 'selected' : false,
@@ -1173,27 +1173,27 @@ class SkinTemplate extends Skin {
 			}
 		}
 
-		$user = $this->getRelevantUser();
+		$user = $this->getRelevantwiki_User();
 		if ( $user ) {
-			$rootUser = $user->getName();
+			$rootwiki_User = $user->getName();
 
 			$nav_urls['contributions'] = array(
-				'href' => self::makeSpecialUrlSubpage( 'Contributions', $rootUser )
+				'href' => self::makeSpecialUrlSubpage( 'Contributions', $rootwiki_User )
 			);
 
 			$nav_urls['log'] = array(
-				'href' => self::makeSpecialUrlSubpage( 'Log', $rootUser )
+				'href' => self::makeSpecialUrlSubpage( 'Log', $rootwiki_User )
 			);
 
 			if ( $this->getUser()->isAllowed( 'block' ) ) {
 				$nav_urls['blockip'] = array(
-					'href' => self::makeSpecialUrlSubpage( 'Block', $rootUser )
+					'href' => self::makeSpecialUrlSubpage( 'Block', $rootwiki_User )
 				);
 			}
 
-			if ( $this->showEmailUser( $user ) ) {
+			if ( $this->showEmailwiki_User( $user ) ) {
 				$nav_urls['emailuser'] = array(
-					'href' => self::makeSpecialUrlSubpage( 'Emailuser', $rootUser )
+					'href' => self::makeSpecialUrlSubpage( 'Emailuser', $rootwiki_User )
 				);
 			}
 		}

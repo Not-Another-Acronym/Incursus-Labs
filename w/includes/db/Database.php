@@ -223,7 +223,7 @@ abstract class DatabaseBase implements DatabaseType {
 	protected $mDoneWrites = false;
 	protected $mPHPError = false;
 
-	protected $mServer, $mUser, $mPassword, $mDBname;
+	protected $mServer, $mwiki_User, $mPassword, $mDBname;
 
 	protected $mConn = null;
 	protected $mOpened = false;
@@ -665,7 +665,7 @@ abstract class DatabaseBase implements DatabaseType {
 	 * an extension, et cetera). Do not use this to connect to the MediaWiki
 	 * database. Example uses in core:
 	 * @see LoadBalancer::reallyOpenConnection()
-	 * @see ExternalUser_MediaWiki::initFromCond()
+	 * @see Externalwiki_User_MediaWiki::initFromCond()
 	 * @see ForeignDBRepo::getMasterDB()
 	 * @see WebInstaller_DBConnect::execute()
 	 *
@@ -839,9 +839,9 @@ abstract class DatabaseBase implements DatabaseType {
 		}
 
 		# Add a comment for easy SHOW PROCESSLIST interpretation
-		global $wgUser;
-		if ( is_object( $wgUser ) && $wgUser->isItemLoaded( 'name' ) ) {
-			$userName = $wgUser->getName();
+		global $wgwiki_User;
+		if ( is_object( $wgwiki_User ) && $wgwiki_User->isItemLoaded( 'name' ) ) {
+			$userName = $wgwiki_User->getName();
 			if ( mb_strlen( $userName ) > 15 ) {
 				$userName = mb_substr( $userName, 0, 15 ) . '...';
 			}

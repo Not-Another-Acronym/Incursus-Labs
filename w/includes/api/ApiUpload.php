@@ -373,7 +373,7 @@ class ApiUpload extends ApiBase {
 	/**
 	 * Checks that the user has permissions to perform this upload.
 	 * Dies with usage message on inadequate permissions.
-	 * @param $user User The user to check.
+	 * @param $user wiki_User The user to check.
 	 */
 	protected function checkPermissions( $user ) {
 		// Check whether the user has the appropriate permissions to upload anyway

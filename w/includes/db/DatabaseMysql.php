@@ -79,7 +79,7 @@ class DatabaseMysql extends DatabaseBase {
 		}
 		$this->close();
 		$this->mServer = $server;
-		$this->mUser = $user;
+		$this->mwiki_User = $user;
 		$this->mPassword = $password;
 		$this->mDBname = $dbName;
 
@@ -129,7 +129,7 @@ class DatabaseMysql extends DatabaseBase {
 			}
 			wfLogDBError( "Error connecting to {$this->mServer}: $error\n" );
 			wfDebug( "DB connection error\n" .
-				"Server: $server, User: $user, Password: " .
+				"Server: $server, wiki_User: $user, Password: " .
 				substr( $password, 0, 3 ) . "..., error: " . $error . "\n" );
 
 			wfProfileOut( __METHOD__ );
@@ -487,7 +487,7 @@ class DatabaseMysql extends DatabaseBase {
 		mysql_close( $this->mConn );
 		$this->mOpened = false;
 		$this->mConn = false;
-		$this->open( $this->mServer, $this->mUser, $this->mPassword, $this->mDBname );
+		$this->open( $this->mServer, $this->mwiki_User, $this->mPassword, $this->mDBname );
 		return true;
 	}
 
@@ -545,7 +545,7 @@ class DatabaseMysql extends DatabaseBase {
 			 *
 			 * Relay log I/O thread does not select databases.
 			 */
-			if ( $row->User == 'system user' &&
+			if ( $row->wiki_User == 'system user' &&
 				$row->State != 'Waiting for master to send event' &&
 				$row->State != 'Connecting to master' &&
 				$row->State != 'Queueing master event to the relay log' &&

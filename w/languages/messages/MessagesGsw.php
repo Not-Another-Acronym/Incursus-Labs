@@ -114,9 +114,9 @@ $specialPageAliases = array(
 	'Unusedtemplates'           => array( 'Vorlage_wo_nit_brucht_wäre' ),
 	'Unwatchedpages'            => array( 'Syte_wu_nit_beobachtet_wäre' ),
 	'Upload'                    => array( 'Uffelade' ),
-	'Userlogin'                 => array( 'Amälde' ),
-	'Userlogout'                => array( 'Abmälde' ),
-	'Userrights'                => array( 'Benutzerrächt' ),
+	'wiki_Userlogin'                 => array( 'Amälde' ),
+	'wiki_Userlogout'                => array( 'Abmälde' ),
+	'wiki_Userrights'                => array( 'Benutzerrächt' ),
 	'Wantedcategories'          => array( 'Kategorie_wo_gwinscht_sin' ),
 	'Wantedfiles'               => array( 'Dateie_wo_fähle' ),
 	'Wantedpages'               => array( 'Syte_wo_gwinscht_sin' ),
@@ -133,7 +133,7 @@ $magicWords = array(
 $linkTrail = '/^([äöüßa-z]+)(.*)$/sDu';
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Links unterstryche',
 'tog-justify' => 'Tekscht als Blocksatz',
 'tog-hideminor' => 'Keini «chlyni Änderige» aazeige',
@@ -474,7 +474,7 @@ Grund vu dr Sperrig: $1',
 
 Die Syte isch villicht glescht oder verschobe wore.
 
-Wänn s des nit isch, hesch villicht e Fähler in dr Software gfunde. Bitte mäld des eme [[Special:ListUsers/sysop|Ammann]] un gib d URL derzue aa.',
+Wänn s des nit isch, hesch villicht e Fähler in dr Software gfunde. Bitte mäld des eme [[Special:Listwiki_Users/sysop|Ammann]] un gib d URL derzue aa.',
 'missingarticle-rev' => '(Versionsnummere: $1)',
 'missingarticle-diff' => '(Unterschid zwische Versione: $1, $2)',
 'readonly_lag' => 'D Datebank isch automatisch gperrt wore, wil di verteilte Datebankserver (Sklave) mien mit em Hauptdatebankserver (Meischter) abgliche wäre.',
@@ -510,7 +510,7 @@ Abfrog: $2',
 'viewsourcetext' => 'Quelltext vo dere Syte:',
 'viewyourtext' => "Du chasch dr Quälltext vu '''Dyre Bearbeitig''' vu däre Syte aaluege un kopiere:",
 'protectedinterface' => 'In däre Syte het s Text fir s Sproch-Interface vu dr Software un si isch gsperrt, zum Missbruch z verhindre.',
-'editinginterface' => "'''Obacht:''' Du bisch e Syten am Verändere, wu zum User.Interface ghert. Wänn Du die Syte veränderesch, no änderet sich s User-Interface au fir di andere Benutzer vu däm Wiki. Fir Ibersetzige lueg bitte, eb Du doodefir s [//translatewiki.net/wiki/Main_Page?setlang=gsw Translatewiki] witt bruuche, s MediaWiki-Lokalisierigsprojäkt.",
+'editinginterface' => "'''Obacht:''' Du bisch e Syten am Verändere, wu zum wiki_User.Interface ghert. Wänn Du die Syte veränderesch, no änderet sich s wiki_User-Interface au fir di andere Benutzer vu däm Wiki. Fir Ibersetzige lueg bitte, eb Du doodefir s [//translatewiki.net/wiki/Main_Page?setlang=gsw Translatewiki] witt bruuche, s MediaWiki-Lokalisierigsprojäkt.",
 'sqlhidden' => '(SQL-Abfrog verschteckt)',
 'cascadeprotected' => 'Die Syte isch fir s Bearbeite gsperrt. Si isch yybunde in {{PLURAL:$1|die Syte, wu do chunnt|die Syte, wu do chemme}} , wu mit ere Kaskadesperroption gschitzt {{PLURAL:$1|isch|sin}}:
 $2',
@@ -519,7 +519,7 @@ $2',
 'customjsprotected' => 'Du bisch nid berächtigt, die Javaskript-Syte z bearbeite, wel si zue dr persenlige Yystellige vun eme andere Benutzer ghert.',
 'ns-specialprotected' => 'Spezialsyte chenne nid bearbeitet wäre.',
 'titleprotected' => "E Syte mit däm Name cha nid aaglait wäre.
-Die Sperri isch dur [[User:$1|$1]] yygrichtet wore mit dr Begrindig ''„$2“''.",
+Die Sperri isch dur [[wiki_User:$1|$1]] yygrichtet wore mit dr Begrindig ''„$2“''.",
 'filereadonlyerror' => 'D Datei „$1“ cha nit gänderet wäre, wel uf s Dateirepositorium „$2“ nume Läsezuegriff megli isch.
 
 Dr Administrator, wu dr Schrybzuegriff gsperrt het, het dää Grund aagee: „$3“.',
@@ -536,7 +536,7 @@ Dr Administrator, wu dr Schrybzuegriff gsperrt het, het dää Grund aagee: „$3
 # Login and logout pages
 'logouttext' => "'''Du bisch jetz abgmäldet.'''
 
-Du chasch {{SITENAME}} wyter anonym bruche, oder Du chasch di [[Special:UserLogin|wider aamälde]] mit em glyche oder eme andere Benutzername.
+Du chasch {{SITENAME}} wyter anonym bruche, oder Du chasch di [[Special:wiki_UserLogin|wider aamälde]] mit em glyche oder eme andere Benutzername.
 
 Ochat: s cha syy, ass bstimmti Syte eso aazeigt wäre, wie wänn Du allno aagmäldet wärsch, bis Du dr Zwischespycher vu Dyym Browser glescht hesch.",
 'welcomecreation' => '==Willcho, $1!==
@@ -580,7 +580,7 @@ S mueß sichergstellt syy, ass Cookies aktiviert sin. Derno ddie Syte nomol lade
 'loginsuccess' => "'''Du bisch jetz als \"\$1\" bi {{SITENAME}} aagmäldet.'''",
 'nosuchuser' => 'Dr Benutzername "$1" git s nit.
 
-Iberprief d Schrybwys, oder mäld Di as [[Special:UserLogin/signup|neje Benutzer aa]].',
+Iberprief d Schrybwys, oder mäld Di as [[Special:wiki_UserLogin/signup|neje Benutzer aa]].',
 'nosuchusershort' => 'S git kei Benutzername „$1“. Bitte iberprief d Schrybwys.',
 'nouserspecified' => 'Bitte gib e Benutzername yy.',
 'login-userblocked' => 'Dää Benutzer isch gsperrt. Aamäldig nit erlaubt.',
@@ -774,14 +774,14 @@ S cha syy, ass er verschoben oder glescht woren isch, derwylscht Du d Syte aaglu
 'loginreqlink' => 'aamälde',
 'loginreqpagetext' => 'Du muesch Di $1, zum Syte chenne läse.',
 'accmailtitle' => 'S Passwort isch verschickt worre.',
-'accmailtext' => 'E zuefällig generiert Passwort fir [[User talk:$1|$1]] isch an $2 gschickt wore.
+'accmailtext' => 'E zuefällig generiert Passwort fir [[wiki_User talk:$1|$1]] isch an $2 gschickt wore.
 
 S Passwort fir des nej Benutzerkonto cha uf dr Spezialsyte „[[Special:ChangePassword|Passwort ändere]]“ gänderet wäre.',
 'newarticle' => '(Nej)',
 'newarticletext' => "Du bisch eme Link nogange zuen ere Syte, wu s nid git.
 Zum die Syte aalege, chasch do in däm Chaschte unte aafange schrybe (lueg [[{{MediaWiki:Helppage}}|Hilfe]] fir meh Informatione).
 Wänn do nid hesch welle aane goh, no druck in Dyynem Browser uf '''Zruck'''.",
-'anontalkpagetext' => "----''Des isch e Diskussionssyte vun eme anonyme Benutzer, wu kei Zuegang aagleit het oder wu ne nit bruucht. Sälleweg mien mir di numerisch IP-Adräss bruuche zum ihn oder si z identifiziere. So ne IP-Adräss cha au vu mehrere Benutzer teilt wäre. Wenn Du ne anonyme Benutzer bisch un s Gfiel hesch, ass do irrelevanti Kommentar an di grichtet wäre, derno [[Special:UserLogin/signup|leg e Konto aa]] oder [[Special:UserLogin|mäld di aa]] zum in Zuekumft Verwirrige mit andere anonyme Benutzer z vermyyde.''",
+'anontalkpagetext' => "----''Des isch e Diskussionssyte vun eme anonyme Benutzer, wu kei Zuegang aagleit het oder wu ne nit bruucht. Sälleweg mien mir di numerisch IP-Adräss bruuche zum ihn oder si z identifiziere. So ne IP-Adräss cha au vu mehrere Benutzer teilt wäre. Wenn Du ne anonyme Benutzer bisch un s Gfiel hesch, ass do irrelevanti Kommentar an di grichtet wäre, derno [[Special:wiki_UserLogin/signup|leg e Konto aa]] oder [[Special:wiki_UserLogin|mäld di aa]] zum in Zuekumft Verwirrige mit andere anonyme Benutzer z vermyyde.''",
 'noarticletext' => 'Uf däre Syte het s no kei Täxt. Du chasch uf andere Syte [[Special:Search/{{PAGENAME}}|dä Yytrag sueche]], <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} dr Logbuechyytrag sueche, wo dezue ghert],
 oder [{{fullurl:{{FULLPAGENAME}}|action=edit}} die Syte bearbeite]</span>.',
 'noarticletext-nopermission' => 'In däre Syte het s zur Zyt no kei Text.
@@ -821,14 +821,14 @@ Die Syte isch nonig gspycheret wore!",
 'previewconflict' => 'Die Vorschau zeigt dr Inhalt vum obere Täxtfäld. Eso siht dr Artikel us, wän Du jetz uf Spychere drucksch.',
 'session_fail_preview' => "'''Dyyni Bearbeitig het nid chenne gspycheret wäre, wel Sitzigsdate verlore gange sin.
 Bitte versuech s nomol. Derzue drucksch unter däre Täxtvorschau nomol uf „Syte spychere“.
-Wänn s Problem blybt, [[Special:UserLogout|mäld Di ab]] un derno wider aa.'''",
+Wänn s Problem blybt, [[Special:wiki_UserLogout|mäld Di ab]] un derno wider aa.'''",
 'session_fail_preview_html' => "'''Dyyni Bearbeitig het nid chenne gspycheret wäre, wel Sitzigsdate verlore gange sin.'''
 
 ''Wel in {{SITENAME}} s Spychere vun ere reine HTML aktiviert isch, isch d Vorschau usbländet wore, zum JavaScript-Attacke z verhindere.''
 
 '''
 Bitte versuech s nomol. Derzue drucksch unter däre Täxtvorschau nomol uf „Syte spicherne“.
-Wänn s Problem blybt, [[Special:UserLogout|mäld Di ab]] un derno wider aa.'''",
+Wänn s Problem blybt, [[Special:wiki_UserLogout|mäld Di ab]] un derno wider aa.'''",
 'token_suffix_mismatch' => "'''Dyyni Bearbeitig isch zruckgwise wore, wel Dyy Browser Zeiche im Bearbeite-Token verstimmlet het.
 S Spichere cha dr Inhalt vu dr Syte hii mache. Des git s e mänkmol, wänn eber e anonyme Proxy-Dienscht brucht, wu Fähler macht.'''",
 'edit_form_incomplete' => "'''Dr Inhalt vum Bearbeitigsformular isch nit vollständig zum Server chuu. Bitte prief Dyy Bearbeitigen uf Vollständigkeit un versuech s nomol.'''",
@@ -875,7 +875,7 @@ As Referänz wird do dr letscht Logbuechyytrag aagee:",
 'edittools' => '<!-- Dää Text wird unter em "Ändere"-Formular un bim "Uffelade"-Formular aagzeigt. -->',
 'nocreatetitle' => 'S Aalege vu neje Syte isch yygschränkt.',
 'nocreatetext' => "Uf {{SITENAME}} isch d Erstellig vo nöue Syten ygschränkt.
-Du chasch nur Syten ändere, wo's scho git, oder muesch di [[Special:UserLogin|amälde]].",
+Du chasch nur Syten ändere, wo's scho git, oder muesch di [[Special:wiki_UserLogin|amälde]].",
 'nocreate-loggedin' => 'Du bisch nid berächtigt, neji Syte aazlege.',
 'sectioneditnotsupported-title' => 'Abschnitt bearbeite wird nit unterstitzt',
 'sectioneditnotsupported-text' => 'Abschnitt bearbeite wird uf däre Syte nit unterstitzt.',
@@ -921,11 +921,11 @@ S {{PLURAL:$2|derf nid meh wie ein Ufruef|derfe nid meh wie $1 Ufruef}} gee.',
 'undo-success' => 'Zum die Änderig ruckgängig z mache, kontrollier bitte d Bearbeitig in dr Verglichsaasicht un druck derno uf „Syte spichere“.',
 'undo-failure' => 'D Änderig het nid chenne ruckgängig gmacht wäre, wel dää Abschnitt mittlerwyli gänderet woren isch.',
 'undo-norev' => 'D Bearbeitig het nid chenne ruckgängig gmacht wäre, wel si nid vorhande oder glescht isch.',
-'undo-summary' => 'D Änderig $1 vu [[Special:Contributions/$2|$2]] ([[User talk:$2|Diskussion]]) isch ruckgängig gmacht wore.',
+'undo-summary' => 'D Änderig $1 vu [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Diskussion]]) isch ruckgängig gmacht wore.',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'Benutzerkonto cha nid aagleit wäre.',
-'cantcreateaccount-text' => "S Aalege vu me Benutzerkonto vu dr IP-Adräss '''($1)''' isch dur [[User:$3|$3]] gsperrt wore.
+'cantcreateaccount-text' => "S Aalege vu me Benutzerkonto vu dr IP-Adräss '''($1)''' isch dur [[wiki_User:$3|$3]] gsperrt wore.
 
 Grund vu dr Sperri: ''$2''",
 
@@ -1181,7 +1181,7 @@ Einzelheite chasch im [{{fullurl:{{#Special:Log}}/delete|page={{FULLPAGENAMEE}}}
 'mypreferences' => 'Yystellige',
 'prefs-edits' => 'Aazahl vu dr Bearbeitige:',
 'prefsnologin' => 'Nid aagmäldet',
-'prefsnologintext' => 'Du muesch <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} aagmäldet]</span> sy, für Benutzerystellige chönne z ändere',
+'prefsnologintext' => 'Du muesch <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} aagmäldet]</span> sy, für Benutzerystellige chönne z ändere',
 'changepassword' => 'Passwort ändere',
 'prefs-skin' => 'Benutzeroberflechi',
 'skin-preview' => 'Vorschou',
@@ -1291,16 +1291,16 @@ Des cha nimmi ruckgängig gmacht wäre.',
 'prefs-displaywatchlist' => 'Aazeigoptione',
 'prefs-diffs' => 'Versionsverglych',
 
-# User preference: e-mail validation using jQuery
+# wiki_User preference: e-mail validation using jQuery
 'email-address-validity-valid' => 'Siht giltig uus',
 'email-address-validity-invalid' => 'S brucht e giltigi Adräss!',
 
-# User rights
+# wiki_User rights
 'userrights' => 'Benutzerrächtsverwaltig',
 'userrights-lookup-user' => 'Verwalt d Gruppezuegherigkeit',
 'userrights-user-editname' => 'Benutzername:',
 'editusergroup' => 'Ändere vo Benutzerrächt',
-'editinguser' => "Am Ändere vu dr Benutzerrächt vu '''[[User:$1|$1]]''' $2",
+'editinguser' => "Am Ändere vu dr Benutzerrächt vu '''[[wiki_User:$1|$1]]''' $2",
 'userrights-editusergroup' => 'Bearbeit d Gruppezuegherigkeit vum Benutzer',
 'saveusergroups' => 'Spychere d Gruppezuegherigkeit',
 'userrights-groupsmember' => 'Mitgliid vu:',
@@ -1311,7 +1311,7 @@ Des cha nimmi ruckgängig gmacht wäre.',
 'userrights-reason' => 'Grund:',
 'userrights-no-interwiki' => 'Du hesch nit d Berächtigung, Benutzerrächt in andere Wiki z ändere.',
 'userrights-nodatabase' => 'D Datebank $1 git s nit oder si isch nit lokal.',
-'userrights-nologin' => 'Du muesch Di mit eme Ammanne-Benutzerkonto [[Special:UserLogin|aamälde]], zum Benutzerrächt z ändere.',
+'userrights-nologin' => 'Du muesch Di mit eme Ammanne-Benutzerkonto [[Special:wiki_UserLogin|aamälde]], zum Benutzerrächt z ändere.',
 'userrights-notallowed' => 'Du hesch nit d Berächtigung zum Benutzerrächt vergee.',
 'userrights-changeable-col' => 'Gruppezuegherigkeit, wu Du chasch ändere',
 'userrights-unchangeable-col' => 'Gruppezuegherigkeit, wu Du nit chasch ändere',
@@ -1402,7 +1402,7 @@ Des cha nimmi ruckgängig gmacht wäre.',
 'right-sendemail' => 'E-Mail an anderi Benutzer schicke',
 'right-passwordreset' => 'Passwort vun eme Benutzer zruggsetze',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Benutzerrächt-Logbuech',
 'rightslogtext' => 'Des ischs Logbuech vun de Änderunge on Bnutzerrechte.',
 'rightslogentry' => 'het d Benutzerrächt fir „$1“ vu „$2“ uf „$3“ gänderet',
@@ -1499,7 +1499,7 @@ Sytene, wo zu dyre [[Special:Watchlist|Beobachtigslischte]] ghöre, erschyne '''
 'reuploaddesc' => 'Abbrächen un zrugg zue dr Syte "Uffelade"',
 'upload-tryagain' => 'Gändereti Dateibschryybig abschicke',
 'uploadnologin' => 'Nit aagmäldet',
-'uploadnologintext' => 'Si mien [[Special:UserLogin|aagmäldet syy]], zum Dateie uffelade z chenne.',
+'uploadnologintext' => 'Si mien [[Special:wiki_UserLogin|aagmäldet syy]], zum Dateie uffelade z chenne.',
 'upload_directory_missing' => 'S Upload-Verzeichnis ($1) fählt un het au dur dr Netzserver nit chenne aagleit wäre.',
 'upload_directory_read_only' => 'Dr Netzserver het kei Schryybrächt fir s Upload-Verzeichnis ($1).',
 'uploaderror' => 'Fähler bim Uffelade',
@@ -1617,11 +1617,11 @@ $1',
 'upload-proto-error-text' => 'D URL muess mit <code>http://</code> oder <code>ftp://</code> aafange.',
 'upload-file-error' => 'Interne Fähler',
 'upload-file-error-text' => 'Bim Aalege vun ere temporäre Datei uf em Server isch e interne Fähler uftrette.
-Bitte informier e [[Special:ListUsers/sysop|Ammann]].',
+Bitte informier e [[Special:Listwiki_Users/sysop|Ammann]].',
 'upload-misc-error' => 'Nit bekannte Fähler bim Uffelade',
 'upload-misc-error-text' => 'Bim Uffelade isch e nit bekannte Fähler uftrette.
 Prief d URL uf Fähler un dr Online-Status vu dr Syte un versuech s no mol.
-Wänn s Problem alno uftritt, informier e [[Special:ListUsers/sysop|Ammann]].',
+Wänn s Problem alno uftritt, informier e [[Special:Listwiki_Users/sysop|Ammann]].',
 'upload-too-many-redirects' => 'In dr URL het s zvyl Wyterleitige',
 'upload-unknown-size' => 'Nit bekannti Greßi',
 'upload-http-error' => 'E HTTP-Fähler isch ufträtte: $1',
@@ -1854,7 +1854,7 @@ Iberprief anderi Link zue dr Vorlage, voreb Du die leschesch.',
 'statistics-views-total' => 'Sytenufruef insgsamt',
 'statistics-views-total-desc' => 'Ufruef vu Syte un Spezialsyte, wu s nit git, wäre nit berucksichtigt',
 'statistics-views-peredit' => 'Sytenufruef pro Bearbeitig',
-'statistics-users' => 'Regischtrierti [[Special:ListUsers|Benutzer]]',
+'statistics-users' => 'Regischtrierti [[Special:Listwiki_Users|Benutzer]]',
 'statistics-users-active' => 'Aktivi Benutzer',
 'statistics-users-active-desc' => 'Benutzer mit Bearbeitige {{PLURAL:$1|in dr letschte 24 Stund|in dr letschte $1 Täg}}',
 'statistics-mostpopular' => 'Am meischte aagluegti Syte',
@@ -2019,13 +2019,13 @@ Lueg au d Lischt vu dr [[Special:WantedCategories|gwinschte Kategorie]].',
 'linksearch-line' => '$1 isch vo $2 verknüpft',
 'linksearch-error' => 'Platzhalter chönne numme am Aafang verwändet werre.',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => 'Zeig Benutzer ab:',
 'listusers-submit' => 'Zeig',
 'listusers-noresult' => 'Kei Benutzer gfunde.',
 'listusers-blocked' => '(gsperrt)',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'Lischt vu dr aktive Benutzer',
 'activeusers-intro' => 'Des isch e Lischt vu Benutzer, wu irgedebis bearbeitet hän {{PLURAL:$1|am letschte Tag|in dr letschte $1 Täg}}.',
 'activeusers-count' => '$1 {{PLURAL:$1|Bearbeitig|Bearbeitige}} {{PLURAL:$3|am letschte Tag|in dr letschte $3 Täg}}',
@@ -2059,7 +2059,7 @@ Zuesätzligi Informatione iber einzelni Rächt git s [[{{MediaWiki:Listgrouprigh
 
 # E-mail user
 'mailnologin' => 'Du bisch nid aagmäldet oder hesch keis Mail aaggä',
-'mailnologintext' => 'Du muesch [[Special:UserLogin|aagmäldet syy]] un e bstätigti E-Mail-Adräss in Dyyne [[Special:Preferences|Yystellige]] aagee ha, fir dass epper anderem es E-Mail chasch schicke.',
+'mailnologintext' => 'Du muesch [[Special:wiki_UserLogin|aagmäldet syy]] un e bstätigti E-Mail-Adräss in Dyyne [[Special:Preferences|Yystellige]] aagee ha, fir dass epper anderem es E-Mail chasch schicke.',
 'emailuser' => 'Es Mail schrybe',
 'emailuser-title-target' => 'E-Mail an {{GENDER:$1|dää Benutzer|die Benutzeri}} schicke',
 'emailuser-title-notarget' => 'E-Mail an Benutzer',
@@ -2090,7 +2090,7 @@ As Absender wird d E-Mail-Adräss us Dyyne [[Special:Preferences|Yystellige]] yy
 'emailsenttext' => 'Dys E-Mail isch verschickt worde.',
 'emailuserfooter' => 'Die E-Mail isch vum {{SITENAME}}-Benutzer „$1“ an „$2“ gschickt wore.',
 
-# User Messenger
+# wiki_User Messenger
 'usermessage-summary' => 'Systemnochricht gspycheret.',
 'usermessage-editor' => 'System-Messenger',
 
@@ -2101,7 +2101,7 @@ As Absender wird d E-Mail-Adräss us Dyyne [[Special:Preferences|Yystellige]] yy
 'nowatchlist' => 'Du hesch ke Yträg uf dyre Beobachtigslischte.',
 'watchlistanontext' => 'Du muesch Di $1 go Dyyni Beobachtungslischt z säh oder go Yytreg uf ere bearbeite.',
 'watchnologin' => 'Du bisch nit aagmäldet',
-'watchnologintext' => 'Du muesch [[Special:UserLogin|aagmäldet]] syy, zum Dyyni Beobachtigssyte z bearbeite.',
+'watchnologintext' => 'Du muesch [[Special:wiki_UserLogin|aagmäldet]] syy, zum Dyyni Beobachtigssyte z bearbeite.',
 'addwatch' => 'zue de Beobachtigslischte derzue tue',
 'addedwatchtext' => "D Syte \"[[:\$1]]\" stoht jetz uf Dyyre [[Special:Watchlist|Beobachtigslischt]].
 Neji Änderige an dr Syte oder dr Diskussionssyte drvo chasch jetz dert säh. Usserdem sin die Änderige uf dr [[Special:RecentChanges|letschte Änderige]] '''fett''' gschribe, ass De si schnäller findsch.
@@ -2208,12 +2208,12 @@ Im $2 het s e Lischt vu dr letschte Leschige.',
 'rollbacklinkcount-morethan' => 'Meh wie {{PLURAL:$1|ei Version|$1 Versione}} zrucksetze',
 'rollbackfailed' => 'S Zrucksetze het nit funktioniert',
 'cantrollback' => 'D Änderig cha nit zruckgsetzt wäre, wel s keini friejere Autore git.',
-'alreadyrolled' => 'Cha d Änderig uf [[:$1]] wu vu [[User:$2|$2]] ([[User talk:$2|Diskussion]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]) gmacht wore sin, zruckneh, wel e andere Benutzer in dr Zwischenzyt s scho zruckgsetzt het oder suscht ebis an däre Syte gänderet het.
+'alreadyrolled' => 'Cha d Änderig uf [[:$1]] wu vu [[wiki_User:$2|$2]] ([[wiki_User talk:$2|Diskussion]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]) gmacht wore sin, zruckneh, wel e andere Benutzer in dr Zwischenzyt s scho zruckgsetzt het oder suscht ebis an däre Syte gänderet het.
 
-Di letscht Änderig het [[User:$3|$3]] ([[User talk:$3|Diskussion]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]) gmacht.',
+Di letscht Änderig het [[wiki_User:$3|$3]] ([[wiki_User talk:$3|Diskussion]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]) gmacht.',
 'editcomment' => "D Änderigszämmefassig isch: „''$1''“.",
-'revertpage' => 'Ruckgängig gmacht zue dr letschte Änderig vo [[Special:Contributions/$2|$2]] ([[User talk:$2|Diskussion]]) mit de letzte Version vo [[User:$1|$1]] widerhergstellt',
-'revertpage-nouser' => 'Bearbeitige ruckgängig gmacht vu (Benutzername uusegnuu), letschti Fassig vu [[User:$1|$1]] widerhärgstellt',
+'revertpage' => 'Ruckgängig gmacht zue dr letschte Änderig vo [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Diskussion]]) mit de letzte Version vo [[wiki_User:$1|$1]] widerhergstellt',
+'revertpage-nouser' => 'Bearbeitige ruckgängig gmacht vu (Benutzername uusegnuu), letschti Fassig vu [[wiki_User:$1|$1]] widerhärgstellt',
 'rollback-success' => 'D Änderige vu $1 sin ruckgängig gmacht wore un di letscht Version vu $2 isch widerhärgstellt wore.',
 
 # Edit tokens
@@ -2441,7 +2441,7 @@ Go d Sperri ufhebe lueg d [[Special:BlockList|Lisch vu allene aktive Sperrine]].
 'unblockip' => 'IP-Adräss frejgee',
 'unblockiptext' => 'Mit däm Formular chasch e IP-Adräss oder e Benutzer frejgee.',
 'ipusubmit' => 'Die Sperri useneh',
-'unblocked' => '[[User:$1|$1]] isch frejgee wore',
+'unblocked' => '[[wiki_User:$1|$1]] isch frejgee wore',
 'unblocked-range' => 'D Sperri fir $1 isch ufghobe',
 'unblocked-id' => 'Sperr-ID $1 isch freijgee wore',
 'blocklist' => 'Gsperrti Benutzer',
@@ -2474,7 +2474,7 @@ Go d Sperri ufhebe lueg d [[Special:BlockList|Lisch vu allene aktive Sperrine]].
 'change-blocklink' => 'Sperri ändere',
 'contribslink' => 'Byträg',
 'emaillink' => 'E-Mail abschicke',
-'autoblocker' => 'Automatischi Sperri, wel Du e gmeinsami IP-Adräss mit [[User:$1|Benutzer:$1]] bruchsch. Grund: „$2“.',
+'autoblocker' => 'Automatischi Sperri, wel Du e gmeinsami IP-Adräss mit [[wiki_User:$1|Benutzer:$1]] bruchsch. Grund: „$2“.',
 'blocklogpage' => 'Sperrigs-Protokoll',
 'blocklog-showlog' => 'Dää Benutzer isch schon emol gsperrt wore. S Sperrine-Logbuech git s do as Referänz:',
 'blocklog-showsuppresslog' => 'Dää Benutzer isch schon emol gsperrt wore un syyni Bearbeitige sin uusblädet wore. S Uusbländigs-Logbuech git s do as Referänz:',
@@ -2555,7 +2555,7 @@ I söttigne Fäll müessti d Diskussionssyten allefalls vo Hand kopiert wärde."
 'movearticle' => 'Artikel verschiebe',
 'moveuserpage-warning' => "'''Warnig:''' Du bis am Verschiebe vun ere Benutzersyte. Bitte gib Achtig, ass doderdur nume die Syte verschobe wird, aber dr Benutzer '''nit''' umgnännt wird.",
 'movenologin' => 'Du bisch nid aagmäldet',
-'movenologintext' => 'Du muesch e regischtrierte Benutzer syy un Di [[Special:UserLogin|aamälde]] go die Syte verschiebe.',
+'movenologintext' => 'Du muesch e regischtrierte Benutzer syy un Di [[Special:wiki_UserLogin|aamälde]] go die Syte verschiebe.',
 'movenotallowed' => 'Du derfsch kei Syte verschiebe.',
 'movenotallowedfile' => 'Du derfsch kei Dateie verschiebe.',
 'cant-move-user-page' => 'Du derfsch kei Benutzersyte verschiebe (mit Usnaam vo Untersyte).',
@@ -3424,11 +3424,11 @@ Dää Bstetigungscode isch giltig bis am $4.',
 
 # Delete conflict
 'deletedwhileediting' => "'''Obacht''': Die Syte isch glescht wore, nochdäm Du aagfange hesch si z bearbeite!",
-'confirmrecreate' => "Benutzer [[User:$1|$1]] ([[User talk:$1|Diskussion]]) het die Syte glescht, nochdäm Du aagfange hesch si z bearbeite.
+'confirmrecreate' => "Benutzer [[wiki_User:$1|$1]] ([[wiki_User talk:$1|Diskussion]]) het die Syte glescht, nochdäm Du aagfange hesch si z bearbeite.
 D Begrindig isch gsi:
 :''$2''
 Bitte bstätig, ass Du die Syte wirkli wit nej aalege.",
-'confirmrecreate-noreason' => 'Benutzer [[User:$1|$1]] ([[User talk:$1|Diskussion]]) het die Syte glescht, nochdäm Du aagfange hesch si z bearbeite. Bitte bstätig, ass Du die Syte wirkli wit nej aalege.',
+'confirmrecreate-noreason' => 'Benutzer [[wiki_User:$1|$1]] ([[wiki_User talk:$1|Diskussion]]) het die Syte glescht, nochdäm Du aagfange hesch si z bearbeite. Bitte bstätig, ass Du die Syte wirkli wit nej aalege.',
 'recreate' => 'Nomol aalege',
 
 # action=purge

@@ -16,7 +16,7 @@
 $fallback = 'zh-hans';
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => '链接下划线：',
 'tog-justify' => '对齐段落',
 'tog-hideminor' => '来许近段辰光个改动里向拿细改动囥脱',
@@ -333,7 +333,7 @@ $1',
 
 箇一般性是由于点击了链向旧有差异或历史个链接，而原有修订已拨删除导致个。
 
-如果情况弗是箇能介，侬作兴寻着仔软件个一只内部错误。请拿URL地址记录下来，并向[[Special:ListUsers/sysop|管理员]]报告。',
+如果情况弗是箇能介，侬作兴寻着仔软件个一只内部错误。请拿URL地址记录下来，并向[[Special:Listwiki_Users/sysop|管理员]]报告。',
 'missingarticle-rev' => '（修订#：$1）',
 'missingarticle-diff' => '（两样：$1、$2）',
 'readonly_lag' => '从数据库服务器垃拉从主服务器上更新，数据库已经拨自动锁定',
@@ -372,7 +372,7 @@ $1',
 $2',
 'namespaceprotected' => "侬无没编辑'''$1'''名字空间里向页面个权限。",
 'ns-specialprotected' => '特殊页编辑是弗来三个。',
-'titleprotected' => "箇只标题已经拨[[User:$1|$1]]保护以防止创建。理由是''$2''。",
+'titleprotected' => "箇只标题已经拨[[wiki_User:$1|$1]]保护以防止创建。理由是''$2''。",
 
 # Virus scanner
 'virus-badscanner' => "设置问题：未知个反病毒扫描器：''$1''",
@@ -382,7 +382,7 @@ $2',
 # Login and logout pages
 'logouttext' => "侬已经登出哉。'''
 
-侬可以继续匿名使用{{SITENAME}} ，也可以再次以相同或者两样个用户名[[Special:UserLogin|登录]]。
+侬可以继续匿名使用{{SITENAME}} ，也可以再次以相同或者两样个用户名[[Special:wiki_UserLogin|登录]]。
 注意，有眼页面作兴还是会搭侬登出前头一样显示，一脚到侬清除浏览器缓存。",
 'welcomecreation' => '== 欢迎侬， $1！ ==
 
@@ -417,7 +417,7 @@ $2',
 'noname' => '用户名无效。',
 'loginsuccesstitle' => '登录成功',
 'loginsuccess' => "'''侬现在以 \"\$1\" 个身份登录到{{SITENAME}}。 '''",
-'nosuchuser' => '寻弗着用户“$1”。用户名是大小写敏感外加区分繁简体个。请检查拼写，或者[[Special:UserLogin/signup|开只新账户]]。',
+'nosuchuser' => '寻弗着用户“$1”。用户名是大小写敏感外加区分繁简体个。请检查拼写，或者[[Special:wiki_UserLogin/signup|开只新账户]]。',
 'nosuchusershort' => '无没叫“$1”个用户。请检查侬个输入。',
 'nouserspecified' => '侬必须选个用户名。',
 'login-userblocked' => '箇个用户拨封锁拉许。弗允许登录。',
@@ -549,14 +549,14 @@ $2',
 'loginreqlink' => '登录',
 'loginreqpagetext' => '侬必须$1再好查看其它页面。',
 'accmailtitle' => '密码已发送哉。',
-'accmailtext' => "已经为[[User talk:$1|$1]] 产生只随机密码，并且已经发送到$2。
+'accmailtext' => "已经为[[wiki_User talk:$1|$1]] 产生只随机密码，并且已经发送到$2。
 
 登录之后，侬可以垃拉 ''[[Special:ChangePassword|箇只页面]]''更改密码。",
 'newarticle' => '（新）',
 'newarticletext' => "倷跟仔链接来着一个还弗勒里个页面。
 要创建该页面呢，就勒下底个框框里向开始写（[[{{MediaWiki:Helppage}}|帮助页面]]浪有更加多个信息）。
 要是倷是弗用心到该搭个说话，只要点击倷浏览器个'''返回'''揿钮。",
-'anontalkpagetext' => "---- ''箇是一个还弗曾建立账户个匿名用户个讨论页, 箇咾我伲只好用IP地址来搭渠联络。该IP地址可能由几名用户共享。如果侬是一名匿名用户并认为箇只页面高头个评语搭侬弗搭界，请 [[Special:UserLogin/signup|创建新账户]]或[[Special:UserLogin|登录]]来避免垃拉将来搭其他匿名用户混淆。''",
+'anontalkpagetext' => "---- ''箇是一个还弗曾建立账户个匿名用户个讨论页, 箇咾我伲只好用IP地址来搭渠联络。该IP地址可能由几名用户共享。如果侬是一名匿名用户并认为箇只页面高头个评语搭侬弗搭界，请 [[Special:wiki_UserLogin/signup|创建新账户]]或[[Special:wiki_UserLogin|登录]]来避免垃拉将来搭其他匿名用户混淆。''",
 'noarticletext' => '箇只页面目前呒没内容。侬可以垃拉其他页面高头[[Special:Search/{{PAGENAME}}|搜索此页标题]]、<span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} 搜索相关日志]或[{{fullurl:{{FULLPAGENAME}}|action=edit}} 编辑此页]。</span>',
 'noarticletext-nopermission' => '箇只页面目前呒没内容，侬可以垃拉其它页[[Special:Search/{{PAGENAME}}|搜索此页标题]]，
 或<span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} 搜索有关日志]</span>。',
@@ -580,12 +580,12 @@ $2',
 'note' => "'''注意：'''",
 'previewnote' => "'''该个还只是预览；改动还朆保存！'''",
 'previewconflict' => '箇个预览显示了上头文字编辑区里向个内容。渠会得垃拉侬保存之后出现。',
-'session_fail_preview' => "'''弗好意思！由于会话数据落失，我伲弗好处理侬个编辑。'''请重试。如果再次失败，请尝试[[Special:UserLogout|登出]]之后重新登录。",
+'session_fail_preview' => "'''弗好意思！由于会话数据落失，我伲弗好处理侬个编辑。'''请重试。如果再次失败，请尝试[[Special:wiki_UserLogout|登出]]之后重新登录。",
 'session_fail_preview_html' => "'''弗好意思！我伲弗好处理侬垃拉进程数据落失辰光个编辑。'''
 
 ''由于{{SITENAME}}允许使用原始个 HTML，为著防范 JavaScript 攻击，预览已畀隐藏。''
 
-'''如果这是一次合法的编辑，请重新进行尝试。'''如果还不行，请 [[Special:UserLogout|退出]]并重新登录。",
+'''如果这是一次合法的编辑，请重新进行尝试。'''如果还不行，请 [[Special:wiki_UserLogout|退出]]并重新登录。",
 'token_suffix_mismatch' => "'''由于侬用户端里向个编辑令牌毁损仔一些标点符号字元，为防止编辑个文字损坏，侬个编辑已经畀回头。'''
 箇种情况通常出现垃拉使用含有交关bug、以网络为主个匿名代理服务个辰光。",
 'editing' => '正在编辑$1',
@@ -629,7 +629,7 @@ $2',
 'template-semiprotected' => '（半保护垃许）',
 'hiddencategories' => '箇只页面是属于$1个隐藏分类个成员：',
 'nocreatetitle' => '创建页面受限',
-'nocreatetext' => '{{SITENAME}}限制了创建新页面功能。侬可以返回并编辑已有个页面，或者[[Special:UserLogin|登录或创建新账户]]。',
+'nocreatetext' => '{{SITENAME}}限制了创建新页面功能。侬可以返回并编辑已有个页面，或者[[Special:wiki_UserLogin|登录或创建新账户]]。',
 'nocreate-loggedin' => '侬呒没权限创建新页面。',
 'sectioneditnotsupported-title' => '段落编辑弗支持',
 'sectioneditnotsupported-text' => '此页面弗支持编辑段落。',
@@ -672,11 +672,11 @@ $2',
 请检查下头个比较，确定侬确实想撤销，然后保存下底个更改完成撤销编辑。',
 'undo-failure' => '由于相互冲突个中途编辑，箇只编辑弗好撤销。',
 'undo-norev' => '由于其修订版本弗存在或已删除，此编辑弗好撤销。',
-'undo-summary' => '撤销由[[Special:Contributions/$2|$2]]（[[User talk:$2|对话]]）作出个修订$1',
+'undo-summary' => '撤销由[[Special:Contributions/$2|$2]]（[[wiki_User talk:$2|对话]]）作出个修订$1',
 
 # Account creation failure
 'cantcreateaccounttitle' => '呒处建立帐户',
-'cantcreateaccount-text' => "从箇只IP地址 （<b>$1</b>） 创建账户已经畀[[User:$3|$3]]禁止。
+'cantcreateaccount-text' => "从箇只IP地址 （<b>$1</b>） 创建账户已经畀[[wiki_User:$3|$3]]禁止。
 
 $3封禁个原因是''$2''",
 
@@ -918,7 +918,7 @@ $1",
 'mypreferences' => '个人设置',
 'prefs-edits' => '编辑数量：',
 'prefsnologin' => '朆登录',
-'prefsnologintext' => '侬必须先<span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} 登录]</span>再好设置个人参数。',
+'prefsnologintext' => '侬必须先<span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} 登录]</span>再好设置个人参数。',
 'changepassword' => '改密码',
 'prefs-skin' => '皮肤',
 'skin-preview' => '预览',
@@ -983,7 +983,7 @@ $1",
 侬也可以让别人家通过侬个用户页或者讨论页来联系侬。',
 'prefs-help-email-required' => '需要电子邮件地址。',
 
-# User rights
+# wiki_User rights
 'userrights-user-editname' => '输入用户名:',
 
 # Groups
@@ -1000,7 +1000,7 @@ $1",
 'grouppage-sysop' => '{{ns:project}}:管理员',
 'grouppage-bureaucrat' => '{{ns:project}}:行政员',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => '用户权限日志',
 'rightsnone' => '（呒）',
 
@@ -1046,7 +1046,7 @@ $1",
 'upload' => '上载文物',
 'uploadbtn' => '上载文件',
 'uploadnologin' => '朆登录',
-'uploadnologintext' => '倷板定要[[Special:UserLogin|登录]]仔再好上载文件。',
+'uploadnologintext' => '倷板定要[[Special:wiki_UserLogin|登录]]仔再好上载文件。',
 'uploaderror' => '上载出错',
 'uploadtext' => "拿下头只表格来上载文件。要查看或者搜寻之前上载个图片个说法，请到[[Special:FileList|已上载文件列表]]，上载搭仔删脱也记录勒拉[[Special:Log/upload|上载日志]]里向。
 
@@ -1189,7 +1189,7 @@ $1",
 # Special:LinkSearch
 'linksearch' => '外部链接',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusers-submit' => '显示',
 
 # Special:Log/newusers
@@ -1252,7 +1252,7 @@ $1",
 'rollback_short' => '恢复',
 'rollbacklink' => '恢复',
 'rollbackfailed' => '恢复失败',
-'revertpage' => '恢复[[Special:Contributions/$2|$2]] （[[User talk:$2|讲张]]）个改动；恢复到[[User:$1|$1]]个上一版本',
+'revertpage' => '恢复[[Special:Contributions/$2|$2]] （[[wiki_User talk:$2|讲张]]）个改动；恢复到[[wiki_User:$1|$1]]个上一版本',
 
 # Protect
 'protectlogpage' => '保护日志',
@@ -1367,7 +1367,7 @@ $1",
 垃拉箇星情况下头，侬必须手工移动或合并页面。",
 'movearticle' => '页面移动:',
 'movenologin' => '朆登录',
-'movenologintext' => '倷板定要是已登记用户且勒拉[[Special:UserLogin|登录]]状态下头再好拿页面捅荡。',
+'movenologintext' => '倷板定要是已登记用户且勒拉[[Special:wiki_UserLogin|登录]]状态下头再好拿页面捅荡。',
 'newtitle' => '新标题:',
 'move-watch' => '监控来源以及目标页',
 'movepagebtn' => '页面移动',
@@ -1554,7 +1554,7 @@ Variants for Chinese language
 'scarytranscludetoolong' => '[对呒起，URL太长了]',
 
 # Delete conflict
-'confirmrecreate' => "用户[[User:$1|$1]] （[[User talk:$1|讲张]]）勒拉倷开始编辑该页面之后拿俚删脱，理由是： : ''$2'' 请拿定章程，倷阿是真个要重建该页面。",
+'confirmrecreate' => "用户[[wiki_User:$1|$1]] （[[wiki_User talk:$1|讲张]]）勒拉倷开始编辑该页面之后拿俚删脱，理由是： : ''$2'' 请拿定章程，倷阿是真个要重建该页面。",
 
 # action=purge
 'confirm_purge_button' => '确定',

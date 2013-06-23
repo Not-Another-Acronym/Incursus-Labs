@@ -55,7 +55,7 @@ $namespaceAliases = array(
 $linkTrail = '/^([a-zʻʼ“»]+)(.*)$/sDu';
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Havolalarning tagiga chizish:',
 'tog-justify' => "Matnni sahifaning eni bo'yicha tekislash",
 'tog-hideminor' => "Yangi oʻzgarishlar ro'yxatida kichik tahrirlarni yashirish",
@@ -509,7 +509,7 @@ Agar bu sahifaga xatolik sabab kelib qolgan boʻlsangiz brauzeringizning '''orqa
 'anontalkpagetext' => "----''Ushbu munozara sahifasi hali hisob yozuvini yaratmagan, yoki undan foydalanmaydigan anonim ishtirokchiga tegishli.
 Shu sababli tenglashtirish uchun raqamli IP-manzildan foydalaniladi.
 Ushbu manzilning oʻzi bir nechta boshqa ishtirokchilarga ham mos kelishi mumkin.
-Agar siz anonim ishtirokchi boʻlsangiz va siz oʻzingizga yoʻnaltirilmagan xabar oldim deb taxmin qilsangiz, iltimos, boshqa anonim ishtirokchilar bilan mumkin boʻlgan chalkashliklarni chetlab oʻtish uchun [[Special:UserLogin/signup|hisob yozuvi yarating]] yoki [[Special:UserLogin|tizimga kiring]].''",
+Agar siz anonim ishtirokchi boʻlsangiz va siz oʻzingizga yoʻnaltirilmagan xabar oldim deb taxmin qilsangiz, iltimos, boshqa anonim ishtirokchilar bilan mumkin boʻlgan chalkashliklarni chetlab oʻtish uchun [[Special:wiki_UserLogin/signup|hisob yozuvi yarating]] yoki [[Special:wiki_UserLogin|tizimga kiring]].''",
 'noarticletext' => 'Bu sahifada hozircha hech qanday matn yoʻq. Siz bu sarlavhani boshqa sahifalardan [[Special:Search/{{PAGENAME}}|qidirishingiz]], <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} tegishli qaydlarga qarashingiz] yoki bu sahifani [{{fullurl:{{FULLPAGENAME}}|action=edit}} tahrirlashingiz]</span> mumkin.',
 'clearyourcache' => "'''Eslatma.''' Saqlaganingizdan so'ng o'zgarishlarni ko'rish uchun siz o'z brauzeringiz keshini tozalashingizga to'gri kelishi mumkin.
 * '''Firefox / Safari:''' ''Shift'' tugmasini bosgan holda, ''Yangilash'' unsurlar darchasini bosing, yoki ''Ctrl-F5'' yoki ''Ctrl-R'' (Macda ''⌘-R'') ni bosing
@@ -538,7 +538,7 @@ Bundan tashqari, siz ushbu ma'lumotlarni o'zingiz yozgan bo'lishingiz yoki ruxsa
 'hiddencategories' => 'Ushbu sahifa {{PLURAL:$1|1 yashirin turkum|$1 yashirin turkumlar}}ga kiradi:',
 'nocreatetitle' => 'Sahifalarni yaratish cheklangan',
 'nocreatetext' => 'Ushbu saytda yangi sahifalar yaratish taqiqlagan.
-Ortga qaytib, mavjud sahifani tahrirlashingiz yoki [[Special:UserLogin|tizimga kirishingiz]] mumkin.',
+Ortga qaytib, mavjud sahifani tahrirlashingiz yoki [[Special:wiki_UserLogin|tizimga kirishingiz]] mumkin.',
 'nocreate-loggedin' => "Sizda yangi sahifalar yaratishga ruxsat yo'q.",
 'sectioneditnotsupported-title' => "Bo'limlarni tahrirlash imkoniyati yo'q",
 'sectioneditnotsupported-text' => "Ushbu sahifada bo'limlarni tahrirlash imkoniyati yo'q.",
@@ -561,7 +561,7 @@ Ayrim andozalar qo'shilmaydi.",
 'post-expand-template-argument-category' => "Andozalarning to'ldirilmagan o'zgaruvchilariga ega sahifalar",
 
 # "Undo" feature
-'undo-summary' => '[[Special:Contributions/$2|$2]] tomonidan qilingan $1 tahriri qaytarildi ([[User talk:$2|mun.]])',
+'undo-summary' => '[[Special:Contributions/$2|$2]] tomonidan qilingan $1 tahriri qaytarildi ([[wiki_User talk:$2|mun.]])',
 
 # History pages
 'viewpagelogs' => 'Ushbu sahifaga doir qaydlarni koʻrsat',
@@ -809,7 +809,7 @@ Agar siz uni ko'rsatsangiz, undan sahifa tahriri kim tomonidan kiritilganligini 
 'prefs-displaywatchlist' => 'Tasvirlash moslamalari',
 'prefs-diffs' => 'Versiyalar farqi',
 
-# User rights
+# wiki_User rights
 'editusergroup' => 'Foydalanuvchi guruxlarni taxrirlash',
 'userrights-groupsmember' => 'Aʼzolik:',
 'userrights-groupsmember-auto' => "Noaniq a'zo",
@@ -845,7 +845,7 @@ Agar siz uni ko'rsatsangiz, undan sahifa tahriri kim tomonidan kiritilganligini 
 'right-read' => "Sahifalarni o'qish",
 'right-edit' => 'Sahifalarni tahrirlash',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => "Ishtirokchi huquqlari bo'yicha qaydlar",
 'rightslogentry' => "ishtirokchi $1ning guruhlardagi a'zoligini $2dan $3ga o'zgartirdi",
 
@@ -1047,13 +1047,13 @@ Also see [[Special:WantedCategories|wanted categories]].',
 'linksearch-ok' => 'Qidirish',
 'linksearch-line' => '$2 ichidan $1 ga havola',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => 'Quyidagidan boshlanuvchi foydalanuvchilarni koʻrsatish:',
 'listusers-submit' => 'Koʻrsatish',
 'listusers-noresult' => 'Foydalanuvchilar topilmadi.',
 'listusers-blocked' => '(chetlashtirilgan)',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'Faol foydalanuvchilar roʻyxati',
 'activeusers-from' => 'Quyidagidan boshlanuvchi foydalanuvchilarni koʻrsatish:',
 'activeusers-hidebots' => 'Botlarni yashirish',
@@ -1096,7 +1096,7 @@ Also see [[Special:WantedCategories|wanted categories]].',
 'emailsent' => "Xat jo'natildi",
 'emailsenttext' => "Sizning elektron maktubingiz jo'natildi.",
 
-# User Messenger
+# wiki_User Messenger
 'usermessage-summary' => 'Tizimli xabar qoldirish.',
 'usermessage-editor' => 'Tizimli etkazish',
 
@@ -1193,7 +1193,7 @@ Yaqinda sodir etilgan yoʻqotishlar uchun $2ni koʻring.',
 'rollbacklinkcount' => '$1 {{PLURAL:$1| ta tahrir}}ni eski holiga keltirish',
 'rollbacklinkcount-morethan' => '$1 {{PLURAL:$1| tadan koʻp tahrir}}ni eski holiga keltirish',
 'rollbackfailed' => 'Eski holiga keltirishda xatolik',
-'revertpage' => '[[Special:Contributions/$2|$2]] ([[User talk:$2|munozara]]) tahrirlari [[User:$1|$1]] versiyasiga qaytarildi',
+'revertpage' => '[[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|munozara]]) tahrirlari [[wiki_User:$1|$1]] versiyasiga qaytarildi',
 
 # Edit tokens
 'sessionfailure-title' => 'Seansda xatolik',
@@ -1328,7 +1328,7 @@ Yaqinda sodir etilgan yoʻqotishlar uchun $2ni koʻring.',
 'ipb-unblock-addr' => '$1dan toʻsiqni olish',
 'unblockip' => 'Foydalanuvchidan to‘siqni olib tashlash',
 'ipusubmit' => 'Ushbu chetlashtirishni olib tashlash',
-'unblocked' => '[[User:$1|$1]]dan to‘siq olib tashlandi',
+'unblocked' => '[[wiki_User:$1|$1]]dan to‘siq olib tashlandi',
 'unblocked-range' => '$1dan to‘siq olib tashlandi',
 'blocklist' => 'Chetlashtirilgan foydalanuvchilar',
 'ipblocklist' => 'Chetlashtirilgan foydalanuvchilar',

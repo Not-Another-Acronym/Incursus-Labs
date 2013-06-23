@@ -29,7 +29,7 @@ $specialPageAliases = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-watchlisthidebots' => '監視列表中隱藏機械人的編輯',
 
 # Dates
@@ -101,7 +101,7 @@ $messages = array(
 'recentchanges-label-bot' => '這次編輯是由機械人進行',
 'rcshowhidebots'          => '$1機械人的編輯',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers-hidebots' => '隱藏機械人',
 
 # Block/unblock

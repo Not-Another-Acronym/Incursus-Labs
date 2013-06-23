@@ -137,7 +137,7 @@ class SiteStats {
 	/**
 	 * @return int
 	 */
-	static function activeUsers() {
+	static function activewiki_Users() {
 		self::load();
 		return self::$row->ss_active_users;
 	}
@@ -337,28 +337,28 @@ class SiteStatsUpdate implements DeferrableUpdate {
 	 * @return bool|mixed
 	 */
 	public static function cacheUpdate( $dbw ) {
-		global $wgActiveUserDays;
+		global $wgActivewiki_UserDays;
 		$dbr = wfGetDB( DB_SLAVE, array( 'SpecialStatistics', 'vslow' ) );
 		# Get non-bot users than did some recent action other than making accounts.
 		# If account creation is included, the number gets inflated ~20+ fold on enwiki.
-		$activeUsers = $dbr->selectField(
+		$activewiki_Users = $dbr->selectField(
 			'recentchanges',
 			'COUNT( DISTINCT rc_user_text )',
 			array(
 				'rc_user != 0',
 				'rc_bot' => 0,
 				'rc_log_type != ' . $dbr->addQuotes( 'newusers' ) . ' OR rc_log_type IS NULL',
-				'rc_timestamp >= ' . $dbr->addQuotes( $dbr->timestamp( wfTimestamp( TS_UNIX ) - $wgActiveUserDays*24*3600 ) ),
+				'rc_timestamp >= ' . $dbr->addQuotes( $dbr->timestamp( wfTimestamp( TS_UNIX ) - $wgActivewiki_UserDays*24*3600 ) ),
 			),
 			__METHOD__
 		);
 		$dbw->update(
 			'site_stats',
-			array( 'ss_active_users' => intval( $activeUsers ) ),
+			array( 'ss_active_users' => intval( $activewiki_Users ) ),
 			array( 'ss_row_id' => 1 ),
 			__METHOD__
 		);
-		return $activeUsers;
+		return $activewiki_Users;
 	}
 
 	protected function doUpdatePendingDeltas() {
@@ -467,7 +467,7 @@ class SiteStatsInit {
 	private $db;
 
 	// Various stats
-	private $mEdits, $mArticles, $mPages, $mUsers, $mViews, $mFiles = 0;
+	private $mEdits, $mArticles, $mPages, $mwiki_Users, $mViews, $mFiles = 0;
 
 	/**
 	 * Constructor
@@ -537,8 +537,8 @@ class SiteStatsInit {
 	 * @return Integer
 	 */
 	public function users() {
-		$this->mUsers = $this->db->selectField( 'user', 'COUNT(*)', '', __METHOD__ );
-		return $this->mUsers;
+		$this->mwiki_Users = $this->db->selectField( 'user', 'COUNT(*)', '', __METHOD__ );
+		return $this->mwiki_Users;
 	}
 
 	/**
@@ -569,10 +569,10 @@ class SiteStatsInit {
 	 * @param $options Array of options, may contain the following values
 	 * - update Boolean: whether to update the current stats (true) or write fresh (false) (default: false)
 	 * - views Boolean: when true, do not update the number of page views (default: true)
-	 * - activeUsers Boolean: whether to update the number of active users (default: false)
+	 * - activewiki_Users Boolean: whether to update the number of active users (default: false)
 	 */
 	public static function doAllAndCommit( $database, array $options = array() ) {
-		$options += array( 'update' => false, 'views' => true, 'activeUsers' => false );
+		$options += array( 'update' => false, 'views' => true, 'activewiki_Users' => false );
 
 		// Grab the object and count everything
 		$counter = new SiteStatsInit( $database );
@@ -596,7 +596,7 @@ class SiteStatsInit {
 		}
 
 		// Count active users if need be
-		if( $options['activeUsers'] ) {
+		if( $options['activewiki_Users'] ) {
 			SiteStatsUpdate::cacheUpdate( wfGetDB( DB_MASTER ) );
 		}
 	}
@@ -630,7 +630,7 @@ class SiteStatsInit {
 			'ss_total_edits' => $this->mEdits,
 			'ss_good_articles' => $this->mArticles,
 			'ss_total_pages' => $this->mPages,
-			'ss_users' => $this->mUsers,
+			'ss_users' => $this->mwiki_Users,
 			'ss_images' => $this->mFiles
 		);
 		$conds = array( 'ss_row_id' => 1 );

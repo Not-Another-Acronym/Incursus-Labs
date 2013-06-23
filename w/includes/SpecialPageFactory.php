@@ -82,10 +82,10 @@ class SpecialPageFactory {
 		'Listredirects'             => 'ListredirectsPage',
 
 		// Login/create account
-		'Userlogin'                 => 'LoginForm',
+		'wiki_Userlogin'                 => 'LoginForm',
 		'CreateAccount'             => 'SpecialCreateAccount',
 
-		// Users and rights
+		// wiki_Users and rights
 		'Block'                     => 'SpecialBlock',
 		'Unblock'                   => 'SpecialUnblock',
 		'BlockList'                 => 'SpecialBlockList',
@@ -95,11 +95,11 @@ class SpecialPageFactory {
 		'Preferences'               => 'SpecialPreferences',
 		'Contributions'             => 'SpecialContributions',
 		'Listgrouprights'           => 'SpecialListGroupRights',
-		'Listusers'                 => 'SpecialListUsers' ,
+		'Listusers'                 => 'SpecialListwiki_Users' ,
 		'Listadmins'                => 'SpecialListAdmins',
 		'Listbots'                  => 'SpecialListBots',
-		'Activeusers'               => 'SpecialActiveUsers',
-		'Userrights'                => 'UserrightsPage',
+		'Activeusers'               => 'SpecialActivewiki_Users',
+		'wiki_Userrights'                => 'wiki_UserrightsPage',
 		'EditWatchlist'             => 'SpecialEditWatchlist',
 
 		// Recent changes and logs
@@ -154,7 +154,7 @@ class SpecialPageFactory {
 		// Unlisted / redirects
 		'Blankpage'                 => 'SpecialBlankpage',
 		'Blockme'                   => 'SpecialBlockme',
-		'Emailuser'                 => 'SpecialEmailUser',
+		'Emailuser'                 => 'SpecialEmailwiki_User',
 		'JavaScriptTest'            => 'SpecialJavaScriptTest',
 		'Movepage'                  => 'MovePageForm',
 		'Mycontributions'           => 'SpecialMycontributions',
@@ -164,7 +164,7 @@ class SpecialPageFactory {
 		'PermanentLink'             => 'SpecialPermanentLink',
 		'Revisiondelete'            => 'SpecialRevisionDelete',
 		'Specialpages'              => 'SpecialSpecialpages',
-		'Userlogout'                => 'SpecialUserlogout',
+		'wiki_Userlogout'                => 'Specialwiki_Userlogout',
 	);
 
 	private static $mAliases;
@@ -358,15 +358,15 @@ class SpecialPageFactory {
 	 * Return categorised listable special pages which are available
 	 * for the current user, and everyone.
 	 *
-	 * @param $user User object to check permissions, $wgUser will be used
+	 * @param $user wiki_User object to check permissions, $wgwiki_User will be used
 	 *              if not provided
 	 * @return Array( String => Specialpage )
 	 */
-	public static function getUsablePages( User $user = null ) {
+	public static function getUsablePages( wiki_User $user = null ) {
 		$pages = array();
 		if ( $user === null ) {
-			global $wgUser;
-			$user = $wgUser;
+			global $wgwiki_User;
+			$user = $wgwiki_User;
 		}
 		foreach ( self::getList() as $name => $rec ) {
 			$page = self::getPage( $name );
@@ -403,14 +403,14 @@ class SpecialPageFactory {
 	 * @return Array( String => Specialpage )
 	 */
 	public static function getRestrictedPages() {
-		global $wgUser;
+		global $wgwiki_User;
 		$pages = array();
 		foreach ( self::getList() as $name => $rec ) {
 			$page = self::getPage( $name );
 			if (
 				$page->isListed()
 				&& $page->isRestricted()
-				&& $page->userCanExecute( $wgUser )
+				&& $page->userCanExecute( $wgwiki_User )
 			) {
 				$pages[$name] = $page;
 			}
@@ -503,7 +503,7 @@ class SpecialPageFactory {
 	 * successful or false if there was no such special page, or a title object
 	 * if it was a redirect.
 	 *
-	 * Also saves the current $wgTitle, $wgOut, $wgRequest, $wgUser and $wgLang
+	 * Also saves the current $wgTitle, $wgOut, $wgRequest, $wgwiki_User and $wgLang
 	 * variables so that the special page will get the context it'd expect on a
 	 * normal request, and then restores them to their previous values after.
 	 *
@@ -513,20 +513,20 @@ class SpecialPageFactory {
 	 * @return String: HTML fragment
 	 */
 	static function capturePath( Title $title, IContextSource $context ) {
-		global $wgOut, $wgTitle, $wgRequest, $wgUser, $wgLang;
+		global $wgOut, $wgTitle, $wgRequest, $wgwiki_User, $wgLang;
 
 		// Save current globals
 		$oldTitle = $wgTitle;
 		$oldOut = $wgOut;
 		$oldRequest = $wgRequest;
-		$oldUser = $wgUser;
+		$oldwiki_User = $wgwiki_User;
 		$oldLang = $wgLang;
 
 		// Set the globals to the current context
 		$wgTitle = $title;
 		$wgOut = $context->getOutput();
 		$wgRequest = $context->getRequest();
-		$wgUser = $context->getUser();
+		$wgwiki_User = $context->getUser();
 		$wgLang = $context->getLanguage();
 
 		// The useful part
@@ -536,7 +536,7 @@ class SpecialPageFactory {
 		$wgTitle = $oldTitle;
 		$wgOut = $oldOut;
 		$wgRequest = $oldRequest;
-		$wgUser = $oldUser;
+		$wgwiki_User = $oldwiki_User;
 		$wgLang = $oldLang;
 
 		return $ret;

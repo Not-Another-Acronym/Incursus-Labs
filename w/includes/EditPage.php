@@ -58,7 +58,7 @@ class EditPage {
 	const AS_HOOK_ERROR_EXPECTED       = 212;
 
 	/**
-	 * Status: User is blocked from editting this page
+	 * Status: wiki_User is blocked from editting this page
 	 */
 	const AS_BLOCKED_PAGE_FOR_USER     = 215;
 
@@ -68,7 +68,7 @@ class EditPage {
 	const AS_CONTENT_TOO_BIG           = 216;
 
 	/**
-	 * Status: User cannot edit? (not used)
+	 * Status: wiki_User cannot edit? (not used)
 	 */
 	const AS_USER_CANNOT_EDIT          = 217;
 
@@ -146,12 +146,12 @@ class EditPage {
 	const AS_SPAM_ERROR                = 232;
 
 	/**
-	 * Status: anonymous user is not allowed to upload (User::isAllowed('upload') == false)
+	 * Status: anonymous user is not allowed to upload (wiki_User::isAllowed('upload') == false)
 	 */
 	const AS_IMAGE_REDIRECT_ANON       = 233;
 
 	/**
-	 * Status: logged in user is not allowed to upload (User::isAllowed('upload') == false)
+	 * Status: logged in user is not allowed to upload (wiki_User::isAllowed('upload') == false)
 	 */
 	const AS_IMAGE_REDIRECT_LOGGED     = 234;
 
@@ -297,7 +297,7 @@ class EditPage {
 	 * the newly-edited page.
 	 */
 	function edit() {
-		global $wgOut, $wgRequest, $wgUser;
+		global $wgOut, $wgRequest, $wgwiki_User;
 		// Allow extensions to modify/prevent this form or submission
 		if ( !wfRunHooks( 'AlternateEdit', array( $this ) ) ) {
 			return;
@@ -345,9 +345,9 @@ class EditPage {
 
 		$permErrors = $this->getEditPermissionErrors();
 		if ( $permErrors ) {
-			wfDebug( __METHOD__ . ": User can't edit\n" );
+			wfDebug( __METHOD__ . ": wiki_User can't edit\n" );
 			// Auto-block user's IP if the account was "hard" blocked
-			$wgUser->spreadAnyEditBlock();
+			$wgwiki_User->spreadAnyEditBlock();
 
 			$this->displayPermissionsError( $permErrors );
 
@@ -407,12 +407,12 @@ class EditPage {
 	 * @return array
 	 */
 	protected function getEditPermissionErrors() {
-		global $wgUser;
-		$permErrors = $this->mTitle->getUserPermissionsErrors( 'edit', $wgUser );
+		global $wgwiki_User;
+		$permErrors = $this->mTitle->getUserPermissionsErrors( 'edit', $wgwiki_User );
 		# Can this title be created?
 		if ( !$this->mTitle->exists() ) {
 			$permErrors = array_merge( $permErrors,
-				wfArrayDiff2( $this->mTitle->getUserPermissionsErrors( 'create', $wgUser ), $permErrors ) );
+				wfArrayDiff2( $this->mTitle->getUserPermissionsErrors( 'create', $wgwiki_User ), $permErrors ) );
 		}
 		# Ignore some permissions errors when a user is just previewing/viewing diffs
 		$remove = array();
@@ -509,7 +509,7 @@ class EditPage {
 	 * @return bool
 	 */
 	protected function previewOnOpen() {
-		global $wgRequest, $wgUser, $wgPreviewOnOpenNamespaces;
+		global $wgRequest, $wgwiki_User, $wgPreviewOnOpenNamespaces;
 		if ( $wgRequest->getVal( 'preview' ) == 'yes' ) {
 			// Explicit override from request
 			return true;
@@ -519,7 +519,7 @@ class EditPage {
 		} elseif ( $this->section == 'new' ) {
 			// Nothing *to* preview for new sections
 			return false;
-		} elseif ( ( $wgRequest->getVal( 'preload' ) !== null || $this->mTitle->exists() ) && $wgUser->getOption( 'previewonfirst' ) ) {
+		} elseif ( ( $wgRequest->getVal( 'preload' ) !== null || $this->mTitle->exists() ) && $wgwiki_User->getOption( 'previewonfirst' ) ) {
 			// Standard preference behaviour
 			return true;
 		} elseif ( !$this->mTitle->exists() &&
@@ -535,7 +535,7 @@ class EditPage {
 
 	/**
 	 * Checks whether the user entered a skin name in uppercase,
-	 * e.g. "User:Example/Monobook.css" instead of "monobook.css"
+	 * e.g. "wiki_User:Example/Monobook.css" instead of "monobook.css"
 	 *
 	 * @return bool
 	 */
@@ -568,7 +568,7 @@ class EditPage {
 	 * @param $request WebRequest
 	 */
 	function importFormData( &$request ) {
-		global $wgLang, $wgUser;
+		global $wgLang, $wgwiki_User;
 
 		wfProfileIn( __METHOD__ );
 
@@ -668,11 +668,11 @@ class EditPage {
 
 			# Don't force edit summaries when a user is editing their own user or talk page
 			if ( ( $this->mTitle->mNamespace == NS_USER || $this->mTitle->mNamespace == NS_USER_TALK ) &&
-				$this->mTitle->getText() == $wgUser->getName() )
+				$this->mTitle->getText() == $wgwiki_User->getName() )
 			{
 				$this->allowBlankSummary = true;
 			} else {
-				$this->allowBlankSummary = $request->getBool( 'wpIgnoreBlankSummary' ) || !$wgUser->getOption( 'forceeditsummary' );
+				$this->allowBlankSummary = $request->getBool( 'wpIgnoreBlankSummary' ) || !$wgwiki_User->getOption( 'forceeditsummary' );
 			}
 
 			$this->autoSumm = $request->getText( 'wpAutoSummary' );
@@ -745,22 +745,22 @@ class EditPage {
 	 * @return bool -- if the requested section is valid
 	 */
 	function initialiseForm() {
-		global $wgUser;
+		global $wgwiki_User;
 		$this->edittime = $this->mArticle->getTimestamp();
 		$this->textbox1 = $this->getContent( false );
 		// activate checkboxes if user wants them to be always active
 		# Sort out the "watch" checkbox
-		if ( $wgUser->getOption( 'watchdefault' ) ) {
+		if ( $wgwiki_User->getOption( 'watchdefault' ) ) {
 			# Watch all edits
 			$this->watchthis = true;
-		} elseif ( $wgUser->getOption( 'watchcreations' ) && !$this->mTitle->exists() ) {
+		} elseif ( $wgwiki_User->getOption( 'watchcreations' ) && !$this->mTitle->exists() ) {
 			# Watch creations
 			$this->watchthis = true;
-		} elseif ( $wgUser->isWatched( $this->mTitle ) ) {
+		} elseif ( $wgwiki_User->isWatched( $this->mTitle ) ) {
 			# Already watched
 			$this->watchthis = true;
 		}
-		if ( $wgUser->getOption( 'minordefault' ) && !$this->isNew ) {
+		if ( $wgwiki_User->getOption( 'minordefault' ) && !$this->isNew ) {
 			$this->minoredit = true;
 		}
 		if ( $this->textbox1 === false ) {
@@ -928,7 +928,7 @@ class EditPage {
 	 * @return String
 	 */
 	protected function getPreloadedText( $preload ) {
-		global $wgUser, $wgParser;
+		global $wgwiki_User, $wgParser;
 
 		if ( !empty( $this->mPreloadText ) ) {
 			return $this->mPreloadText;
@@ -954,7 +954,7 @@ class EditPage {
 			$page = WikiPage::factory( $title );
 		}
 
-		$parserOptions = ParserOptions::newFromUser( $wgUser );
+		$parserOptions = ParserOptions::newFromwiki_User( $wgwiki_User );
 		return $wgParser->getPreloadText( $page->getRawText(), $title, $parserOptions );
 	}
 
@@ -966,10 +966,10 @@ class EditPage {
 	 * @private
 	 */
 	function tokenOk( &$request ) {
-		global $wgUser;
+		global $wgwiki_User;
 		$token = $request->getVal( 'wpEditToken' );
-		$this->mTokenOk = $wgUser->matchEditToken( $token );
-		$this->mTokenOkExceptSuffix = $wgUser->matchEditTokenNoSuffix( $token );
+		$this->mTokenOk = $wgwiki_User->matchEditToken( $token );
+		$this->mTokenOkExceptSuffix = $wgwiki_User->matchEditTokenNoSuffix( $token );
 		return $this->mTokenOk;
 	}
 
@@ -978,11 +978,11 @@ class EditPage {
 	 * @return bool false if output is done, true if the rest of the form should be displayed
 	 */
 	function attemptSave() {
-		global $wgUser, $wgOut;
+		global $wgwiki_User, $wgOut;
 
 		$resultDetails = false;
 		# Allow bots to exempt some edits from bot flagging
-		$bot = $wgUser->isAllowed( 'bot' ) && $this->bot;
+		$bot = $wgwiki_User->isAllowed( 'bot' ) && $this->bot;
 		$status = $this->internalAttemptSave( $resultDetails, $bot );
 		// FIXME: once the interface for internalAttemptSave() is made nicer, this should use the message in $status
 		if ( $status->value == self::AS_SUCCESS_UPDATE || $status->value == self::AS_SUCCESS_NEW_ARTICLE ) {
@@ -1035,7 +1035,7 @@ class EditPage {
 				return false;
 
 			case self::AS_BLOCKED_PAGE_FOR_USER:
-				throw new UserBlockedError( $wgUser->getBlock() );
+				throw new wiki_UserBlockedError( $wgwiki_User->getBlock() );
 
 			case self::AS_IMAGE_REDIRECT_ANON:
 			case self::AS_IMAGE_REDIRECT_LOGGED:
@@ -1079,7 +1079,7 @@ class EditPage {
 	 * AS_CONTENT_TOO_BIG and AS_BLOCKED_PAGE_FOR_USER. All that stuff needs to be cleaned up some time.
 	 */
 	function internalAttemptSave( &$result, $bot = false ) {
-		global $wgUser, $wgRequest, $wgParser, $wgMaxArticleSize;
+		global $wgwiki_User, $wgRequest, $wgParser, $wgMaxArticleSize;
 
 		$status = Status::newGood();
 
@@ -1098,8 +1098,8 @@ class EditPage {
 		# Check image redirect
 		if ( $this->mTitle->getNamespace() == NS_FILE &&
 			Title::newFromRedirect( $this->textbox1 ) instanceof Title &&
-			!$wgUser->isAllowed( 'upload' ) ) {
-				$code = $wgUser->isAnon() ? self::AS_IMAGE_REDIRECT_ANON : self::AS_IMAGE_REDIRECT_LOGGED;
+			!$wgwiki_User->isAllowed( 'upload' ) ) {
+				$code = $wgwiki_User->isAnon() ? self::AS_IMAGE_REDIRECT_ANON : self::AS_IMAGE_REDIRECT_LOGGED;
 				$status->setResult( false, $code );
 
 				wfProfileOut( __METHOD__ . '-checks' );
@@ -1141,9 +1141,9 @@ class EditPage {
 			return $status;
 		}
 
-		if ( $wgUser->isBlockedFrom( $this->mTitle, false ) ) {
+		if ( $wgwiki_User->isBlockedFrom( $this->mTitle, false ) ) {
 			// Auto-block user's IP if the account was "hard" blocked
-			$wgUser->spreadAnyEditBlock();
+			$wgwiki_User->spreadAnyEditBlock();
 			# Check block state against master, thus 'false'.
 			$status->setResult( false, self::AS_BLOCKED_PAGE_FOR_USER );
 			wfProfileOut( __METHOD__ . '-checks' );
@@ -1161,8 +1161,8 @@ class EditPage {
 			return $status;
 		}
 
-		if ( !$wgUser->isAllowed( 'edit' ) ) {
-			if ( $wgUser->isAnon() ) {
+		if ( !$wgwiki_User->isAllowed( 'edit' ) ) {
+			if ( $wgwiki_User->isAnon() ) {
 				$status->setResult( false, self::AS_READ_ONLY_PAGE_ANON );
 				wfProfileOut( __METHOD__ . '-checks' );
 				wfProfileOut( __METHOD__ );
@@ -1183,7 +1183,7 @@ class EditPage {
 			wfProfileOut( __METHOD__ );
 			return $status;
 		}
-		if ( $wgUser->pingLimiter() ) {
+		if ( $wgwiki_User->pingLimiter() ) {
 			$status->fatal( 'actionthrottledtext' );
 			$status->value = self::AS_RATE_LIMITED;
 			wfProfileOut( __METHOD__ . '-checks' );
@@ -1284,7 +1284,7 @@ class EditPage {
 			if ( $timestamp != $this->edittime ) {
 				$this->isConflict = true;
 				if ( $this->section == 'new' ) {
-					if ( $this->mArticle->getUserText() == $wgUser->getName() &&
+					if ( $this->mArticle->getUserText() == $wgwiki_User->getName() &&
 						$this->mArticle->getComment() == $this->summary ) {
 						// Probably a duplicate submission of a new comment.
 						// This can happen when squid resends a request after
@@ -1295,7 +1295,7 @@ class EditPage {
 						$this->isConflict = false;
 						wfDebug( __METHOD__ . ": conflict suppressed; new section\n" );
 					}
-				} elseif ( $this->section == '' && Revision::userWasLastToEdit( DB_MASTER,  $this->mTitle->getArticleID(), $wgUser->getId(), $this->edittime ) ) {
+				} elseif ( $this->section == '' && Revision::userWasLastToEdit( DB_MASTER,  $this->mTitle->getArticleID(), $wgwiki_User->getId(), $this->edittime ) ) {
 					# Suppress edit conflict with self, except for section edits where merging is required.
 					wfDebug( __METHOD__ . ": Suppressing edit conflict, same user.\n" );
 					$this->isConflict = false;
@@ -1476,14 +1476,14 @@ class EditPage {
 	 * Commit the change of watch status
 	 */
 	protected function commitWatch() {
-		global $wgUser;
-		if ( $wgUser->isLoggedIn() && $this->watchthis != $wgUser->isWatched( $this->mTitle ) ) {
+		global $wgwiki_User;
+		if ( $wgwiki_User->isLoggedIn() && $this->watchthis != $wgwiki_User->isWatched( $this->mTitle ) ) {
 			$dbw = wfGetDB( DB_MASTER );
 			$dbw->begin( __METHOD__ );
 			if ( $this->watchthis ) {
-				WatchAction::doWatch( $this->mTitle, $wgUser );
+				WatchAction::doWatch( $this->mTitle, $wgwiki_User );
 			} else {
-				WatchAction::doUnwatch( $this->mTitle, $wgUser );
+				WatchAction::doUnwatch( $this->mTitle, $wgwiki_User );
 			}
 			$dbw->commit( __METHOD__ );
 		}
@@ -1586,11 +1586,11 @@ class EditPage {
 	}
 
 	function setHeaders() {
-		global $wgOut, $wgUser;
+		global $wgOut, $wgwiki_User;
 
 		$wgOut->addModules( 'mediawiki.action.edit' );
 
-		if ( $wgUser->getOption( 'uselivepreview', false ) ) {
+		if ( $wgwiki_User->getOption( 'uselivepreview', false ) ) {
 			$wgOut->addModules( 'mediawiki.action.edit.preview' );
 		}
 		// Bug #19334: textarea jumps when editing articles in IE8
@@ -1622,7 +1622,7 @@ class EditPage {
 	 * Show all applicable editing introductions
 	 */
 	protected function showIntro() {
-		global $wgOut, $wgUser;
+		global $wgOut, $wgwiki_User;
 		if ( $this->suppressIntro ) {
 			return;
 		}
@@ -1657,9 +1657,9 @@ class EditPage {
 		if ( $namespace == NS_USER || $namespace == NS_USER_TALK ) {
 			$parts = explode( '/', $this->mTitle->getText(), 2 );
 			$username = $parts[0];
-			$user = User::newFromName( $username, false /* allow IP users*/ );
-			$ip = User::isIP( $username );
-			if ( !( $user && $user->isLoggedIn() ) && !$ip ) { # User does not exist
+			$user = wiki_User::newFromName( $username, false /* allow IP users*/ );
+			$ip = wiki_User::isIP( $username );
+			if ( !( $user && $user->isLoggedIn() ) && !$ip ) { # wiki_User does not exist
 				$wgOut->wrapWikiMsg( "<div class=\"mw-userpage-userdoesnotexist error\">\n$1\n</div>",
 					array( 'userpage-userdoesnotexist', wfEscapeWikiText( $username ) ) );
 			} elseif ( $user->isBlocked() ) { # Show log extract if the user is currently blocked
@@ -1681,7 +1681,7 @@ class EditPage {
 		}
 		# Try to add a custom edit intro, or use the standard one if this is not possible.
 		if ( !$this->showCustomIntro() && !$this->mTitle->exists() ) {
-			if ( $wgUser->isLoggedIn() ) {
+			if ( $wgwiki_User->isLoggedIn() ) {
 				$wgOut->wrapWikiMsg( "<div class=\"mw-newarticletext\">\n$1\n</div>", 'newarticletext' );
 			} else {
 				$wgOut->wrapWikiMsg( "<div class=\"mw-newarticletextanon\">\n$1\n</div>", 'newarticletextanon' );
@@ -1725,7 +1725,7 @@ class EditPage {
 	 *     during form output near the top, for captchas and the like.
 	 */
 	function showEditForm( $formCallback = null ) {
-		global $wgOut, $wgUser;
+		global $wgOut, $wgwiki_User;
 
 		wfProfileIn( __METHOD__ );
 
@@ -1749,7 +1749,7 @@ class EditPage {
 
 		$wgOut->addHTML( $this->editFormPageTop );
 
-		if ( $wgUser->getOption( 'previewontop' ) ) {
+		if ( $wgwiki_User->getOption( 'previewontop' ) ) {
 			$this->displayPreviewArea( $previewOutput, true );
 		}
 
@@ -1838,7 +1838,7 @@ class EditPage {
 
 		$wgOut->addHTML( $this->editFormTextBeforeContent );
 
-		if ( !$this->isCssJsSubpage && $showToolbar && $wgUser->getOption( 'showtoolbar' ) ) {
+		if ( !$this->isCssJsSubpage && $showToolbar && $wgwiki_User->getOption( 'showtoolbar' ) ) {
 			$wgOut->addHTML( EditPage::getEditToolbar() );
 		}
 
@@ -1879,7 +1879,7 @@ class EditPage {
 
 		$wgOut->addHTML( $this->editFormTextBottom . "\n</form>\n" );
 
-		if ( !$wgUser->getOption( 'previewontop' ) ) {
+		if ( !$wgwiki_User->getOption( 'previewontop' ) ) {
 			$this->displayPreviewArea( $previewOutput, false );
 		}
 
@@ -1903,7 +1903,7 @@ class EditPage {
 	}
 
 	protected function showHeader() {
-		global $wgOut, $wgUser, $wgMaxArticleSize, $wgLang;
+		global $wgOut, $wgwiki_User, $wgMaxArticleSize, $wgLang;
 
 		if ( $this->mTitle->isTalkPage() ) {
 			$wgOut->addWikiMsg( 'talkpagetext' );
@@ -2001,7 +2001,7 @@ class EditPage {
 
 		if ( wfReadOnly() ) {
 			$wgOut->wrapWikiMsg( "<div id=\"mw-read-only-warning\">\n$1\n</div>", array( 'readonlywarning', wfReadOnlyReason() ) );
-		} elseif ( $wgUser->isAnon() ) {
+		} elseif ( $wgwiki_User->isAnon() ) {
 			if ( $this->formtype != 'preview' ) {
 				$wgOut->wrapWikiMsg( "<div id=\"mw-anon-edit-warning\">\n$1</div>", 'anoneditwarning' );
 			} else {
@@ -2179,7 +2179,7 @@ HTML
 	}
 
 	protected function showFormAfterText() {
-		global $wgOut, $wgUser;
+		global $wgOut, $wgwiki_User;
 		/**
 		 * To make it harder for someone to slip a user a page
 		 * which submits an edit form to the wiki without their
@@ -2192,7 +2192,7 @@ HTML
 		 * include the constant suffix to prevent editing from
 		 * broken text-mangling proxies.
 		 */
-		$wgOut->addHTML( "\n" . Html::hidden( "wpEditToken", $wgUser->getEditToken() ) . "\n" );
+		$wgOut->addHTML( "\n" . Html::hidden( "wpEditToken", $wgwiki_User->getEditToken() ) . "\n" );
 	}
 
 	/**
@@ -2256,7 +2256,7 @@ HTML
 	}
 
 	protected function showTextbox( $content, $name, $customAttribs = array() ) {
-		global $wgOut, $wgUser;
+		global $wgOut, $wgwiki_User;
 
 		$wikitext = $this->safeUnicodeOutput( $content );
 		if ( strval( $wikitext ) !== '' ) {
@@ -2270,8 +2270,8 @@ HTML
 		$attribs = $customAttribs + array(
 			'accesskey' => ',',
 			'id'   => $name,
-			'cols' => $wgUser->getIntOption( 'cols' ),
-			'rows' => $wgUser->getIntOption( 'rows' ),
+			'cols' => $wgwiki_User->getIntOption( 'cols' ),
+			'rows' => $wgwiki_User->getIntOption( 'rows' ),
 			'style' => '' // avoid php notices when appending preferences (appending allows customAttribs['style'] to still work
 		);
 
@@ -2334,7 +2334,7 @@ HTML
 	 * save and then make a comparison.
 	 */
 	function showDiff() {
-		global $wgUser, $wgContLang, $wgParser, $wgOut;
+		global $wgwiki_User, $wgContLang, $wgParser, $wgOut;
 
 		$oldtitlemsg = 'currentrev';
 		# if message does not exist, show diff against the preloaded default
@@ -2351,8 +2351,8 @@ HTML
 
 		wfRunHooks( 'EditPageGetDiffText', array( $this, &$newtext ) );
 
-		$popts = ParserOptions::newFromUserAndLang( $wgUser, $wgContLang );
-		$newtext = $wgParser->preSaveTransform( $newtext, $this->mTitle, $wgUser, $popts );
+		$popts = ParserOptions::newFromwiki_UserAndLang( $wgwiki_User, $wgContLang );
+		$newtext = $wgParser->preSaveTransform( $newtext, $this->mTitle, $wgwiki_User, $popts );
 
 		if ( $oldtext !== false  || $newtext != '' ) {
 			$oldtitle = wfMessage( $oldtitlemsg )->parse();
@@ -2581,7 +2581,7 @@ HTML
 	 * @return string
 	 */
 	function getPreviewText() {
-		global $wgOut, $wgUser, $wgParser, $wgRawHtml, $wgLang;
+		global $wgOut, $wgwiki_User, $wgParser, $wgRawHtml, $wgLang;
 
 		wfProfileIn( __METHOD__ );
 
@@ -2660,7 +2660,7 @@ HTML
 
 			wfRunHooks( 'EditPageGetPreviewText', array( $this, &$toparse ) );
 
-			$toparse = $wgParser->preSaveTransform( $toparse, $this->mTitle, $wgUser, $parserOptions );
+			$toparse = $wgParser->preSaveTransform( $toparse, $this->mTitle, $wgwiki_User, $parserOptions );
 			$parserOutput = $wgParser->parse( $toparse, $this->mTitle, $parserOptions );
 
 			$rt = Title::newFromRedirectArray( $this->textbox1 );
@@ -2894,7 +2894,7 @@ HTML
 	 * @return array
 	 */
 	public function getCheckboxes( &$tabindex, $checked ) {
-		global $wgUser;
+		global $wgwiki_User;
 
 		$checkboxes = array();
 
@@ -2902,7 +2902,7 @@ HTML
 		if ( !$this->isNew ) {
 			$checkboxes['minor'] = '';
 			$minorLabel = wfMessage( 'minoredit' )->parse();
-			if ( $wgUser->isAllowed( 'minoredit' ) ) {
+			if ( $wgwiki_User->isAllowed( 'minoredit' ) ) {
 				$attribs = array(
 					'tabindex'  => ++$tabindex,
 					'accesskey' => wfMessage( 'accesskey-minoredit' )->text(),
@@ -2918,7 +2918,7 @@ HTML
 
 		$watchLabel = wfMessage( 'watchthis' )->parse();
 		$checkboxes['watch'] = '';
-		if ( $wgUser->isLoggedIn() ) {
+		if ( $wgwiki_User->isLoggedIn() ) {
 			$attribs = array(
 				'tabindex'  => ++$tabindex,
 				'accesskey' => wfMessage( 'accesskey-watch' )->text(),
@@ -3021,9 +3021,9 @@ HTML
 	 */
 	function blockedPage() {
 		wfDeprecated( __METHOD__, '1.19' );
-		global $wgUser;
+		global $wgwiki_User;
 
-		throw new UserBlockedError( $wgUser->getBlock() );
+		throw new wiki_UserBlockedError( $wgwiki_User->getBlock() );
 	}
 
 	/**
@@ -3138,9 +3138,9 @@ HTML
 	function checkUnicodeCompliantBrowser() {
 		global $wgBrowserBlackList, $wgRequest;
 
-		$currentbrowser = $wgRequest->getHeader( 'User-Agent' );
+		$currentbrowser = $wgRequest->getHeader( 'wiki_User-Agent' );
 		if ( $currentbrowser === false ) {
-			// No User-Agent header sent? Trust it by default...
+			// No wiki_User-Agent header sent? Trust it by default...
 			return true;
 		}
 

@@ -307,7 +307,7 @@ class InfoAction extends FormlessAction {
 		// Page creator
 		$pageInfo['header-edits'][] = array(
 			$this->msg( 'pageinfo-firstuser' ),
-			Linker::revUserTools( $firstRev )
+			Linker::revwiki_UserTools( $firstRev )
 		);
 
 		// Date of page creation
@@ -324,7 +324,7 @@ class InfoAction extends FormlessAction {
 		// Latest editor
 		$pageInfo['header-edits'][] = array(
 			$this->msg( 'pageinfo-lastuser' ),
-			Linker::revUserTools( $this->page->getRevision() )
+			Linker::revwiki_UserTools( $this->page->getRevision() )
 		);
 
 		// Date of latest edit
@@ -419,7 +419,7 @@ class InfoAction extends FormlessAction {
 	 * Returns page counts that would be too "expensive" to retrieve by normal means.
 	 *
 	 * @param $title Title object
-	 * @param $user User object
+	 * @param $user wiki_User object
 	 * @return array
 	 */
 	protected static function pageCounts( $title, $user ) {

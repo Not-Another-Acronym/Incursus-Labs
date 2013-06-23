@@ -97,7 +97,7 @@ interface iAuthPlugin {
 	/**
 	 * Modify options in the login template.
 	 *
-	 * @param $template UserLoginTemplate object.
+	 * @param $template wiki_UserLoginTemplate object.
 	 * @public
 	 */
 	public function modifyUITemplate( &$template );
@@ -124,13 +124,13 @@ interface iAuthPlugin {
 	 * For instance, you might pull the email address or real name from the
 	 * external user database.
 	 *
-	 * The User object is passed by reference so it can be modified; don't
+	 * The wiki_User object is passed by reference so it can be modified; don't
 	 * forget the & on your function declaration.
 	 *
-	 * @param User $user
+	 * @param wiki_User $user
 	 * @public
 	 */
-	public function updateUser( &$user );
+	public function updatewiki_User( &$user );
 
 	/**
 	 * Return true if the wiki should create a new local account automatically
@@ -163,7 +163,7 @@ interface iAuthPlugin {
 	 *
 	 * Return true if successful.
 	 *
-	 * @param $user User object.
+	 * @param $user wiki_User object.
 	 * @param $password String: password.
 	 * @return bool
 	 * @public
@@ -174,7 +174,7 @@ interface iAuthPlugin {
 	 * Update user information in the external authentication database.
 	 * Return true if successful.
 	 *
-	 * @param $user User object.
+	 * @param $user wiki_User object.
 	 * @return bool
 	 * @public
 	 */
@@ -192,14 +192,14 @@ interface iAuthPlugin {
 	 * Add a user to the external authentication database.
 	 * Return true if successful.
 	 *
-	 * @param User $user - only the name should be assumed valid at this point
+	 * @param wiki_User $user - only the name should be assumed valid at this point
 	 * @param string $password
 	 * @param string $email
 	 * @param string $realname
 	 * @return bool
 	 * @public
 	 */
-	public function addUser( $user, $password, $email='', $realname='' );
+	public function addwiki_User( $user, $password, $email='', $realname='' );
 
 	/**
 	 * Return true to prevent logins that don't authenticate here from being
@@ -217,14 +217,14 @@ interface iAuthPlugin {
 	 * For instance, you might pull the email address or real name from the
 	 * external user database.
 	 *
-	 * The User object is passed by reference so it can be modified; don't
+	 * The wiki_User object is passed by reference so it can be modified; don't
 	 * forget the & on your function declaration.
 	 *
-	 * @param $user User object.
+	 * @param $user wiki_User object.
 	 * @param $autocreate bool True if user is being autocreated on login
 	 * @public
 	 */
-	public function initUser( &$user, $autocreate=false );
+	public function initwiki_User( &$user, $autocreate=false );
 
 	/**
 	 * If you want to munge the case of an account name before the final

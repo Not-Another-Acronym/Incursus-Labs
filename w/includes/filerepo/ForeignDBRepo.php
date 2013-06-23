@@ -28,7 +28,7 @@
  */
 class ForeignDBRepo extends LocalRepo {
 	# Settings
-	var $dbType, $dbServer, $dbUser, $dbPassword, $dbName, $dbFlags,
+	var $dbType, $dbServer, $dbwiki_User, $dbPassword, $dbName, $dbFlags,
 		$tablePrefix, $hasSharedCache;
 
 	# Other stuff
@@ -43,7 +43,7 @@ class ForeignDBRepo extends LocalRepo {
 		parent::__construct( $info );
 		$this->dbType = $info['dbType'];
 		$this->dbServer = $info['dbServer'];
-		$this->dbUser = $info['dbUser'];
+		$this->dbwiki_User = $info['dbwiki_User'];
 		$this->dbPassword = $info['dbPassword'];
 		$this->dbName = $info['dbName'];
 		$this->dbFlags = $info['dbFlags'];
@@ -59,7 +59,7 @@ class ForeignDBRepo extends LocalRepo {
 			$this->dbConn = DatabaseBase::factory( $this->dbType,
 				array(
 					'host' => $this->dbServer,
-					'user'   => $this->dbUser,
+					'user'   => $this->dbwiki_User,
 					'password' => $this->dbPassword,
 					'dbname' => $this->dbName,
 					'flags' => $this->dbFlags,

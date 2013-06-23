@@ -159,9 +159,9 @@ $specialPageAliases = array(
 	'Unwatchedpages'            => array( 'HojasSinKudiadas' ),
 	'Upload'                    => array( 'KargarDosya' ),
 	'UploadStash'               => array( 'Muchedumbre_de_kargamientos' ),
-	'Userlogin'                 => array( 'Entrada_del_usador' ),
-	'Userlogout'                => array( 'Salida_del_usador' ),
-	'Userrights'                => array( 'DerechosUsadores' ),
+	'wiki_Userlogin'                 => array( 'Entrada_del_usador' ),
+	'wiki_Userlogout'                => array( 'Salida_del_usador' ),
+	'wiki_Userrights'                => array( 'DerechosUsadores' ),
 	'Version'                   => array( 'Versión' ),
 	'Wantedcategories'          => array( 'KatēggoríasDemandadas' ),
 	'Wantedfiles'               => array( 'DosyasDemandadas' ),
@@ -182,7 +182,7 @@ $magicWords = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Suliñar los atamientos:',
 'tog-justify' => 'Arrimar los paraggrafos de dos vandas',
 'tog-hideminor' => 'Esconder los trocamientos chiquiticos en la hoja de los "trocamientos freskos"',
@@ -472,7 +472,7 @@ $messages = array(
 En lo más muńcho, esto se cavza de un "dif" anakróniko ou de un atamiento á la storia de una hoja que s\'efaçó.
 
 Si esto no es el cavso, puede ser que topates una chincha en el lojikal.
-Si puede ser mete un [[Special:ListUsers/sysop|administrador]] en corriente y también ànota la URL.',
+Si puede ser mete un [[Special:Listwiki_Users/sysop|administrador]] en corriente y también ànota la URL.',
 'missingarticle-rev' => '(nº. de revisión: $1)',
 'missingarticle-diff' => '(Dif.: $1, $2)',
 'filecopyerror' => 'No se pudo copiar el arxiv "$1" a "$2".',
@@ -751,7 +751,7 @@ Las búsquedas producen más o munco a buscar biervos comunes como «la» o «de
 'right-minoredit' => 'Marcar trocamientos como "chiquiticos"',
 'right-delete' => 'Efassar hojas',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Trocamientos de profil de usuario',
 
 # Associated actions - in the sentence "You do not have permission to X"

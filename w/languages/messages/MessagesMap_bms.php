@@ -15,7 +15,7 @@
 $fallback = 'jv, id';
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Garisen ngisoré pranala:',
 'tog-justify' => 'Ratakna paragraf',
 'tog-hideminor' => 'Umpetna suntingan cilik nang owahan anyar',
@@ -351,7 +351,7 @@ Administrator sing ngunci kiye aweh katerangan kaya kiye: $1',
 Kiye biasanye jalaran pranala daluwarsa maring revisi sedurunge sekang kaca sing wis dibusak.
 
 Angger dudu kuwe sebabe, Rika ndeyan nemokna "bug" nang software. 
-Monggo dilaporna maring [[Special:ListUsers/sysop|administrator]], karo nyebutna URL sing dituju.
+Monggo dilaporna maring [[Special:Listwiki_Users/sysop|administrator]], karo nyebutna URL sing dituju.
 
 A',
 'missingarticle-rev' => '(révisi#: $1)',
@@ -402,7 +402,7 @@ $2',
 'customcssprotected' => 'Rika ora duwe izin nggo nyunting kaca CSS kiye, jalaran isine pengaturan pribadine panganggo sejen.',
 'customjsprotected' => 'Rika ora duwe izin nggo nyunting kaca JavaScript kiye, jalaran isine pengaturan pribadine panganggo sejen.',
 'ns-specialprotected' => 'Kaca astaiwa ora teyeng disunting.',
-'titleprotected' => 'Judul kiye wis direksa ora olih digawe nang [[User:$1|$1]].
+'titleprotected' => 'Judul kiye wis direksa ora olih digawe nang [[wiki_User:$1|$1]].
 Alesane yakuwe "\'\'$2\'\'".',
 
 # Virus scanner
@@ -413,7 +413,7 @@ Alesane yakuwe "\'\'$2\'\'".',
 # Login and logout pages
 'logouttext' => "'''Rika uwis metu log sekang sistem.'''
 
-Rika teyeng terus nggunakna {{SITENAME}} kanthi anonim, utawa Rika teyeng [[Special:UserLogin|mlebu log maning]] nganggo jeneng panganggo sing padha utawa sejene.
+Rika teyeng terus nggunakna {{SITENAME}} kanthi anonim, utawa Rika teyeng [[Special:wiki_UserLogin|mlebu log maning]] nganggo jeneng panganggo sing padha utawa sejene.
 Digatekna ya, nek ana kaca sing esih terus nidokna nek rika esih mlebu log nnganti Rika mbusak singgahan nang panjelajah web-e Rika.",
 'welcomecreation' => '== Sugeng rawuh, $1! ==
 
@@ -460,7 +460,7 @@ Pastekna Rika uwis ngaktifna ''cookies'', trus baleni muat kaca kiye maning lan 
 'loginsuccess' => "'''Rika sekiye mlebu log nang {{SITENAME}} nganggo jeneng \"\$1\".'''",
 'nosuchuser' => 'Ora ana panganggo sing jenenge "$1".
 Jeneng panganggo kuwe mbedakna kapitalisasi.
-Priksa maning ejaane Rika, utawa [[Special:UserLogin/signup|gawe akun anyar]]',
+Priksa maning ejaane Rika, utawa [[Special:wiki_UserLogin/signup|gawe akun anyar]]',
 'nosuchusershort' => 'Ora ana panganggo sing jenenge "$1".
 Jajal dipriksa maning ejaane Rika.',
 'nouserspecified' => 'Rika kudu nglebokna jeneng panganggo.',
@@ -619,7 +619,7 @@ Kiye ndeyan anu uwis dipindah utawa dibusek dong Rika lagi ndeleng kaca kiye.',
 'loginreqlink' => 'mlebu log',
 'loginreqpagetext' => 'Rika kudu $1 ben teyeng ndeleng kaca liyane.',
 'accmailtitle' => 'Tembung sandhi wis dikirim.',
-'accmailtext' => "Tembung sandhi acak kanggo [[User talk:$1|$1]] wis digawe lan dikirim maring $2.
+'accmailtext' => "Tembung sandhi acak kanggo [[wiki_User talk:$1|$1]] wis digawe lan dikirim maring $2.
 
 Tembung sandhi kanggo akun anyarkiye teyeng diganti nang kaca ''[[Special:ChangePassword|ganti tembung sandhi]]'' seuwise mlebu log.",
 'newarticle' => '(Anyar)',
@@ -656,13 +656,13 @@ Owahane Rika durung disimpen!",
 'previewconflict' => 'Pratayang kiye nidokna teks nang bagiyan dhuwur kotak suntingan teks kaya sing bakal katon nek Rika nyimpen.',
 'session_fail_preview' => "'''Nuwun sèwu, suntingan Rika ora teyeng diolah jalaran dhata sèsi kabusak.
 Monggo dijajal sepisan maning. 
-Angger tetep ora teyeng, jajal [[Special:UserLogout|metu log]] disit lan mlebu log maning.",
+Angger tetep ora teyeng, jajal [[Special:wiki_UserLogout|metu log]] disit lan mlebu log maning.",
 'session_fail_preview_html' => "'''Nuwun sèwu! Kita ora teyeng mrosès suntingan Rika jalaran data sési ilang.'''
 
 ''Jalaran {{SITENAME}} ngidina panrapan HTML mentah, pratayang diumpetna minangka penggakan marang serangan Javascript.''
 
 '''Angger kiye kuwe upaya suntingan sing sah, monggo dijajal maning.'''
-Nek esih tetep ora kasil, jajalen [[Special:UserLogout|metu log]] lan mlebu log maning.",
+Nek esih tetep ora kasil, jajalen [[Special:wiki_UserLogout|metu log]] lan mlebu log maning.",
 'editing' => 'Nyunting $1',
 'editingsection' => 'Nyunting $1 (bagiyan)',
 'protectedpagewarning' => "'''Pénget:  Kaca kiye wis dikunci dadi mung panganggo sing nduwé hak aksès pangurus baé sing teyeng nyunting.'''
@@ -677,7 +677,7 @@ Entri cathetan pungkasan disadiakna nang ngisor kanggo referensi:",
 'hiddencategories' => 'Kaca kiye kuwe anggota sekang {{PLURAL:$1|1 kategori sing diumpetna|$1 kategori-kategori sing diumpetna}}:',
 'nocreatetitle' => 'Panggawéan kaca anyar diwatesi',
 'nocreatetext' => '{{SITENAME}} wis mbatesi panggawean kaca anyar.
-Rika teyeng mbalik lan nyunting kaca sing wis ana, utawa [[Special:UserLogin|mlebu utawa gawe akun]]',
+Rika teyeng mbalik lan nyunting kaca sing wis ana, utawa [[Special:wiki_UserLogin|mlebu utawa gawe akun]]',
 'nocreate-loggedin' => 'Rika ora duwe hak akses nggo gawe kaca anyar.',
 'sectioneditnotsupported-title' => 'Panyuntingan bagiya ora didukung',
 'permissionserrorstext-withaction' => 'Rika ora duwé hak aksès kanggo $2, jalaran {{PLURAL:$1|alesan|alesan}} nang ngisor kiye:',
@@ -713,11 +713,11 @@ Sawetara cithakan bakal ora dipelokna.",
 Monggo priksa perbandingan nang ngisor kiye ngo mastekna nek kiye pancen sing Rika arep lakoni, lan banjur simpen pangowahan kuwe nggo ngrampungna pambatalan suntingan.',
 'undo-failure' => 'Suntingan kiye ora teyeng dibatalna jalaran ana konflik panyuntingan antara.',
 'undo-norev' => 'Suntingan kiye ora teyeng dibatalna jalaran wis ora ana utawa anu wis dibusek.',
-'undo-summary' => 'Mbatalna revisi $1 sekang [[Special:Contributions/$2|$2]] ([[User talk:$2|dopokan]])',
+'undo-summary' => 'Mbatalna revisi $1 sekang [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|dopokan]])',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'Ora teyeng gawe akun',
-'cantcreateaccount-text' => "Ngawe akun sekang alamat IP kiye ('''$1''') wis diblokir nang [[User:$3|$3]].
+'cantcreateaccount-text' => "Ngawe akun sekang alamat IP kiye ('''$1''') wis diblokir nang [[wiki_User:$3|$3]].
 
 Alesane miturut $3 yakuwe ''$2''",
 
@@ -927,7 +927,7 @@ Ningen Rika kudu eling nek indeks Google kanggo {{SITENAME}} bisa baen isine anu
 'mypreferences' => 'Preferensi',
 'prefs-edits' => 'Jumlah suntingan:',
 'prefsnologin' => 'Durung mlebu log',
-'prefsnologintext' => 'Rika kudu <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}}| mlebu log disit]</span> kanggo ngowahi préferènsine Rika.',
+'prefsnologintext' => 'Rika kudu <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}}| mlebu log disit]</span> kanggo ngowahi préferènsine Rika.',
 'changepassword' => 'Ganti tembung sandhi',
 'prefs-skin' => 'Kulit',
 'skin-preview' => 'Pratayang',
@@ -1040,16 +1040,16 @@ Aja kuatir, alamat imele Rika ora ditidokna dong pangganggo sejen ngontak Rika.'
 'prefs-displaywatchlist' => 'Opsi tampilan',
 'prefs-diffs' => 'Prabédan',
 
-# User preference: e-mail validation using jQuery
+# wiki_User preference: e-mail validation using jQuery
 'email-address-validity-valid' => 'Alamatimel ketone wis sah',
 'email-address-validity-invalid' => 'Monggo dilebokna alamat imel sing bener',
 
-# User rights
+# wiki_User rights
 'userrights' => 'Manajemen hak panganggo',
 'userrights-lookup-user' => 'Ngatur kelompok panganggo',
 'userrights-user-editname' => 'Lebokna jeneng panganggo:',
 'editusergroup' => 'Sunting kelompok panganggo',
-'editinguser' => "Ngganti hak akses nggo pangganggo '''[[User:$1|$1]]''' $2",
+'editinguser' => "Ngganti hak akses nggo pangganggo '''[[wiki_User:$1|$1]]''' $2",
 'userrights-editusergroup' => 'Sunting kelompok panganggo',
 'saveusergroups' => 'Simpen kelompok panganggo',
 'userrights-groupsmember' => 'Anggota sekang:',
@@ -1057,7 +1057,7 @@ Aja kuatir, alamat imele Rika ora ditidokna dong pangganggo sejen ngontak Rika.'
 'userrights-reason' => 'Alesan:',
 'userrights-no-interwiki' => 'Rika ora duwe hak kanggo ngowahi hak panganggo nang wiki liyane.',
 'userrights-nodatabase' => 'Basis data $1 ora ana utawa ora lokal.',
-'userrights-nologin' => 'Rika kudu [[Special:UserLogin|mlebu log]] nganggo akun pangurus ben teyeng ngowahi hak panganggo.',
+'userrights-nologin' => 'Rika kudu [[Special:wiki_UserLogin|mlebu log]] nganggo akun pangurus ben teyeng ngowahi hak panganggo.',
 'userrights-notallowed' => 'Akune Rika ora duwe hak kanggo nambah utawa ngilangna hak panganggo.',
 'userrights-changeable-col' => 'Grup sing teyeng Rika owahi',
 'userrights-unchangeable-col' => 'Grup sing ora teyeng Rika owahi',
@@ -1145,7 +1145,7 @@ Aja kuatir, alamat imele Rika ora ditidokna dong pangganggo sejen ngontak Rika.'
 'right-override-export-depth' => "Ekspor kaca sisan karo kaca sing kagandheng gutul lapisan (''depth'') kaping 5",
 'right-sendemail' => 'Ngirim imel maring panganggo liyane',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Log pangowahan hak akses panganggo',
 'rightslogtext' => 'Kiye log pangowahan maring hak-hak panganggo.',
 'rightslogentry' => 'Ngganti kaanggotaan kelompok nggo $1 sekang $2 dadi $3',
@@ -1231,7 +1231,7 @@ Kaca-kaca sing mlebu [[Special:Watchlist|pangawasane Rika]] ditandani ''kandel''
 'reuploaddesc' => 'Ora sida ngunggah lan bali ming formulir pangunggahan',
 'upload-tryagain' => 'Kirimna keterangan berkas sing wis diowaih',
 'uploadnologin' => 'Durung mlebu log',
-'uploadnologintext' => 'Rika kudu [[Special:UserLogin|mlebu log]] nek arep ngunggah berkas.',
+'uploadnologintext' => 'Rika kudu [[Special:wiki_UserLogin|mlebu log]] nek arep ngunggah berkas.',
 'upload_directory_missing' => 'Direktori pangunggahan ($1) ilang lan ora teyeng digawe nang server web.',
 'upload_directory_read_only' => 'Direktori pangunggahan ($1) ora teyeng ditulis nang server web.',
 'uploaderror' => 'kesalahan pangunggahan',
@@ -1321,7 +1321,7 @@ Deskripsi sekang [$2 kaca deskripsine] ditidokna nang ngisor kiye.',
 'statistics-views-total' => 'Jumlah penampilan kaca',
 'statistics-views-total-desc' => 'Tampilan maring kaca sing ora-ana lan kaca astamiwa ora dilebokna',
 'statistics-views-peredit' => 'Jumlah tampilan saben suntingan',
-'statistics-users' => 'Jumlah [[Special:ListUsers|panganggo sing kedaftar]]',
+'statistics-users' => 'Jumlah [[Special:Listwiki_Users|panganggo sing kedaftar]]',
 'statistics-users-active' => 'Jumlah panganggo aktif',
 'statistics-users-active-desc' => 'Panganggo sing nglakokna aktivitas nang {{PLURAL:$1|dina|$1 dina}} pungkasan',
 'statistics-mostpopular' => 'Kaca sing paling akèh dideleng',
@@ -1522,13 +1522,13 @@ kudu ngati-ati.',
 'rollbackfailed' => 'Pambalèkan gagal dilakoni',
 'cantrollback' => 'Ora teyeng mbatalna suntingan;
 kontributor pungkasane kuwe siji-sijine sing nulis artikel kiye.',
-'alreadyrolled' => 'Ora teyeng mbalekna suntingan pungkasan [[:$1]] sekang [[User:$2|$2]] ([[User talk:$2|talk]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]);
+'alreadyrolled' => 'Ora teyeng mbalekna suntingan pungkasan [[:$1]] sekang [[wiki_User:$2|$2]] ([[wiki_User talk:$2|talk]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]);
 wis ana wong sejen sing nyunting utawa mbalekna artikel kuwe.
 
-Suntingan pungkasan kaca kiye digawe nang [[User:$3|$3]] ([[User talk:$3|talk]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
+Suntingan pungkasan kaca kiye digawe nang [[wiki_User:$3|$3]] ([[wiki_User talk:$3|talk]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
 'editcomment' => "Ringkesan suntingan yakuwe: \"''\$1''\".",
-'revertpage' => 'Suntingane [[Special:Contributions/$2|$2]] ([[User talk:$2|dhiskusi]]) dibalekna maring vèrsi pungkasan sekang [[User:$1|$1]]',
-'revertpage-nouser' => 'Mbalekna suntingan sekang (jeneng panganggo dibusek) ming revisi pungkasan sekang [[User:$1|$1]]',
+'revertpage' => 'Suntingane [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|dhiskusi]]) dibalekna maring vèrsi pungkasan sekang [[wiki_User:$1|$1]]',
+'revertpage-nouser' => 'Mbalekna suntingan sekang (jeneng panganggo dibusek) ming revisi pungkasan sekang [[wiki_User:$1|$1]]',
 'rollback-success' => 'Mbalekna suntingane $1;
 dibalekna ming revisi pungkasan sekang $2.',
 

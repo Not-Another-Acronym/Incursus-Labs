@@ -57,7 +57,7 @@ $specialPageAliases = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Gleecher unnerleine:',
 'tog-hideminor' => 'Gleene Enneringe verschwinne losse',
 'tog-watchdefault' => 'Vun mir gennerte Ardickele watsche',
@@ -273,7 +273,7 @@ Guck aa [[Special:Version|Versionsblatt]]',
 
 Des Blatt iss verleicht glescht adder gezoge warre.
 
-Wenns des net iss, hoscht verleicht en Fehler in de Daadebank gfunne. Bitte meld des an en [[Special:ListUsers/sysop|Verwalter]] unn gebb die URL dezu aa.',
+Wenns des net iss, hoscht verleicht en Fehler in de Daadebank gfunne. Bitte meld des an en [[Special:Listwiki_Users/sysop|Verwalter]] unn gebb die URL dezu aa.',
 'missingarticle-rev' => '(Version: $1)',
 'missingarticle-diff' => '(Unnerschidd zwische Versione: $1, $2)',
 'internalerror' => 'Interner Fehler',
@@ -352,7 +352,7 @@ Paesswatt fer nau: $2',
 'template-semiprotected' => '(geschitzt fer neie Yuuser)',
 
 # "Undo" feature
-'undo-summary' => 'Enneringe $1 vun [[Special:Contributions/$2|$2]] ([[User talk:$2|Dischbedutt]]) losgmacht.',
+'undo-summary' => 'Enneringe $1 vun [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Dischbedutt]]) losgmacht.',
 
 # History pages
 'revisionasof' => 'Version vum $2, $3 Uhr',
@@ -459,7 +459,7 @@ Paesswatt fer nau: $2',
 'prefs-signature' => 'Unnerschrift',
 'prefs-diffs' => 'Unnerschidd vun Versione',
 
-# User rights
+# wiki_User rights
 'userrights-editusergroup' => 'Mitgliedschaft vun Yuuser ennere',
 'userrights-groupsmember' => 'Mitglied vun:',
 'userrights-reason' => 'Grund:',
@@ -488,7 +488,7 @@ Paesswatt fer nau: $2',
 'right-writeapi' => 'Yuus vun write API',
 'right-delete' => 'Bledder lesche',
 
-# User rights log
+# wiki_User rights log
 'rightsnone' => '(ken)',
 
 # Associated actions - in the sentence "You do not have permission to X"
@@ -661,11 +661,11 @@ Paesswatt fer nau: $2',
 'linksearch-ns' => 'Blatznaame:',
 'linksearch-ok' => 'Uffgucke',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusers-submit' => 'Zeig',
 'listusers-noresult' => 'Ken Yuuser gfunne.',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers-hidebots' => 'Waddefresser verschwinne losse',
 'activeusers-hidesysops' => 'Verwalter verschwinne losse',
 

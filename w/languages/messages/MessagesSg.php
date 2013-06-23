@@ -14,7 +14,7 @@
 $fallback = 'fr';
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Gbënëngö-gbê',
 'tog-justify' => 'Lôngbi yângâ tî âsurä',
 'tog-hideminor' => 'Hônde âkêtê lönzïngö-sû sô asï fadê na yâ tî gbâsû',
@@ -247,8 +247,8 @@ $messages = array(
 'prefs-rc' => 'Tanga ti yé so a gbion ya ni',
 'yournick' => 'Nyîmbâ:',
 
-# User rights
-'editinguser' => "Mo fa na mbi nyîmbâ '''[[User:$1|$1]]''' $2",
+# wiki_User rights
+'editinguser' => "Mo fa na mbi nyîmbâ '''[[wiki_User:$1|$1]]''' $2",
 
 # Recent changes
 'recentchanges' => 'Ndângbâ sänzëmä',

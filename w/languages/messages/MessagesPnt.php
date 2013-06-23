@@ -58,7 +58,7 @@ $dateFormats = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Υπογράμμιση συνδεσμίων:',
 'tog-justify' => 'Στοίχισην παραγραφίων',
 'tog-editondblclick' => 'Άλλαγμαν σελιδίων με διπλόν κλικ (JavaScript)',
@@ -309,7 +309,7 @@ $messages = array(
 
 Αούτο έχ\' αιτίαν ανενημέρωτον σύνδεσμον "διαφ" γιά σύνδεσμον ιστορικίου που δεκνίζ\' σε σελίδαν που εβζινέθεν.
 Αν \'κ έινεν αούτον, επορεί ν\' εύρετεν σφάλμαν σο software.
-Άμα επορείτε, αναφέρετε ατό σε [[Special:ListUsers/sysop|γιαρίφ]] και δότε τον URL.',
+Άμα επορείτε, αναφέρετε ατό σε [[Special:Listwiki_Users/sysop|γιαρίφ]] και δότε τον URL.',
 'missingarticle-rev' => '(μορφήν#: $1)',
 'missingarticle-diff' => '(Δεαφ: $1, $2)',
 'internalerror' => 'Σφάλμαν απές μερέαν',
@@ -378,7 +378,7 @@ $messages = array(
 'loginsuccess' => "'''Εσήβετεν σο {{SITENAME}} με τ'όνεμαν \"\$1\".'''",
 'nosuchuser' => 'Αδαπές \'κ εχ\' χρήστεν με τ\' όνομαν "$1".
 Τερέστεν τα γράμματα τη ονοματί, τερέστεν τα τρανογράμματα και τα μικρογράμματα να είναι τογρία.
-Τερέστεν την ορθογραφίαν ή [[Special:UserLogin/signup|ποισέστεν καινούρεον λογαρίαν]].',
+Τερέστεν την ορθογραφίαν ή [[Special:wiki_UserLogin/signup|ποισέστεν καινούρεον λογαρίαν]].',
 'nosuchusershort' => "Αδαπές 'κ εχ' χρήστεν με τ' όνομαν \"\$1\".
 Τ'όνομαν γραφέστεν ατο τογρία.",
 'nouserspecified' => "Πρέπ' να ψιλίζετε έναν όνεμαν.",
@@ -491,7 +491,7 @@ $messages = array(
 'loginreqlink' => 'εσέβεμαν',
 'loginreqpagetext' => 'Επρέπ να $1 για να τερείτε άλλα σελίδας.',
 'accmailtitle' => 'Το σημάδι εστάλθεν.',
-'accmailtext' => "Το σημάδι για τον/την [[User talk:$1|$1]] εστάλθεν σο $2.
+'accmailtext' => "Το σημάδι για τον/την [[wiki_User talk:$1|$1]] εστάλθεν σο $2.
 
 Το σημάδι για το καινούρεον την λογαρίαν επορείς να αλλάζεις ασα την σελίδαν ''[[Special:ChangePassword|άλλαξον λογαρίαν]]'' με τ' έμπαζμανεσουν.",
 'newarticle' => '(Καινούρεον)',
@@ -524,7 +524,7 @@ $messages = array(
 'template-semiprotected' => '(ημψά-ασπαλιγμένον)',
 'hiddencategories' => "Αούτο η σελίδαν ανήκ' σα {{PLURAL:$1|1 κρυμμένον κατηγορία|$1 κρυμμένα κατηγορίας}}:",
 'nocreatetext' => "Σο {{SITENAME}} περιορίσκουτον το ποίσεμα σελιδίων.
-'Πορείτε να κλώσκεστε οπίς και ν' αλλάζετε έναν παλαιόν σελίδαν ή να [[Special:UserLogin|εμπάτε ή να εφτάτε λογαρίαν]].",
+'Πορείτε να κλώσκεστε οπίς και ν' αλλάζετε έναν παλαιόν σελίδαν ή να [[Special:wiki_UserLogin|εμπάτε ή να εφτάτε λογαρίαν]].",
 'permissionserrorstext-withaction' => "'Κ έχετε την άδειαν για $2, για {{PLURAL:$1|τ'αφκά το λόγον|τ'αφκά τοι λόγους}}:",
 'recreate-moveddeleted-warn' => "'''Ωρία: Εφτάτε αξάν μίαν σελίδαν ντ' ενεσβύεν οψεκές.'''
 
@@ -667,7 +667,7 @@ $messages = array(
 'prefs-signature' => 'Υπογραφή',
 'prefs-diffs' => 'Διαφοράς',
 
-# User rights
+# wiki_User rights
 'userrights-groupsmember' => 'Μέλος τη:',
 
 # Groups
@@ -708,7 +708,7 @@ $messages = array(
 'right-import' => "Έμπαζμαν σελιδίων ασ' άλλα βίκι",
 'right-siteadmin' => 'Ασπάλισον κι άνοιξον τη βάση δογμενίων',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Αρχείον δικαιωματίων',
 'rightsnone' => '(τιδέν)',
 
@@ -763,7 +763,7 @@ $messages = array(
 'uploadbtn' => 'Φόρτωσον αρχείον',
 'reuploaddesc' => 'Στα! Μην εφτάς το φόρτεμαν! Δέβα οπίς ση σελίδαν φωρτεματί!',
 'uploadnologin' => "'Κ είστουν απές. Εμπάτε σην λογαρίανεσουν.",
-'uploadnologintext' => "Πρεπ' σην σελίδαν [[Special:UserLogin|απές]] να είσνε (log in) για πορείτε να φορτώνετε αρχεία.",
+'uploadnologintext' => "Πρεπ' σην σελίδαν [[Special:wiki_UserLogin|απές]] να είσνε (log in) για πορείτε να φορτώνετε αρχεία.",
 'uploaderror' => 'Έντον λάθος σο φόρτωμαν',
 'uploadlog' => 'αρχείον με τα φορτώματα',
 'uploadlogpage' => 'Αρχείον ανεβασματίων',
@@ -942,7 +942,7 @@ $messages = array(
 'linksearch-ns' => 'Περιοχή ονοματίων:',
 'linksearch-ok' => 'Αράεμαν',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusers-submit' => 'Δείξον',
 
 # Special:Log/newusers

@@ -6,11 +6,11 @@ define( 'NS_UNITTEST_TALK', 5601 );
 /**
  * @group Database
  */
-class UserTest extends MediaWikiTestCase {
+class wiki_UserTest extends MediaWikiTestCase {
 	protected $savedGroupPermissions, $savedRevokedPermissions;
 
 	/**
-	 * @var User
+	 * @var wiki_User
 	 */
 	protected $user;
 
@@ -21,7 +21,7 @@ class UserTest extends MediaWikiTestCase {
 		$this->savedRevokedPermissions = $GLOBALS['wgRevokePermissions'];
 
 		$this->setUpPermissionGlobals();
-		$this->setUpUser();
+		$this->setUpwiki_User();
 	}
 	private function setUpPermissionGlobals() {
 		global $wgGroupPermissions, $wgRevokePermissions;
@@ -43,8 +43,8 @@ class UserTest extends MediaWikiTestCase {
 			'runtest' => true,
 		);
 	}
-	private function setUpUser() {
-		$this->user = new User;
+	private function setUpwiki_User() {
+		$this->user = new wiki_User;
 		$this->user->addGroup( 'unittesters' );
 	}
 
@@ -56,27 +56,27 @@ class UserTest extends MediaWikiTestCase {
 	}
 
 	public function testGroupPermissions() {
-		$rights = User::getGroupPermissions( array( 'unittesters' ) );
+		$rights = wiki_User::getGroupPermissions( array( 'unittesters' ) );
 		$this->assertContains( 'runtest', $rights );
 		$this->assertNotContains( 'writetest', $rights );
 		$this->assertNotContains( 'modifytest', $rights );
 		$this->assertNotContains( 'nukeworld', $rights );
 
-		$rights = User::getGroupPermissions( array( 'unittesters', 'testwriters' ) );
+		$rights = wiki_User::getGroupPermissions( array( 'unittesters', 'testwriters' ) );
 		$this->assertContains( 'runtest', $rights );
 		$this->assertContains( 'writetest', $rights );
 		$this->assertContains( 'modifytest', $rights );
 		$this->assertNotContains( 'nukeworld', $rights );
 	}
 	public function testRevokePermissions() {
-		$rights = User::getGroupPermissions( array( 'unittesters', 'formertesters' ) );
+		$rights = wiki_User::getGroupPermissions( array( 'unittesters', 'formertesters' ) );
 		$this->assertNotContains( 'runtest', $rights );
 		$this->assertNotContains( 'writetest', $rights );
 		$this->assertNotContains( 'modifytest', $rights );
 		$this->assertNotContains( 'nukeworld', $rights );
 	}
 
-	public function testUserPermissions() {
+	public function testwiki_UserPermissions() {
 		$rights = $this->user->getRights();
 		$this->assertContains( 'runtest', $rights );
 		$this->assertNotContains( 'writetest', $rights );
@@ -88,7 +88,7 @@ class UserTest extends MediaWikiTestCase {
 	 * @dataProvider provideGetGroupsWithPermission
 	 */
 	public function testGetGroupsWithPermission( $expected, $right ) {
-		$result = User::getGroupsWithPermission( $right );
+		$result = wiki_User::getGroupsWithPermission( $right );
 		sort( $result );
 		sort( $expected );
 
@@ -117,13 +117,13 @@ class UserTest extends MediaWikiTestCase {
 	}
 
 	/**
-	 * @dataProvider provideUserNames
+	 * @dataProvider providewiki_UserNames
 	 */
-	public function testIsValidUserName( $username, $result, $message ) {
-		$this->assertEquals( $this->user->isValidUserName( $username ), $result, $message );
+	public function testIsValidwiki_UserName( $username, $result, $message ) {
+		$this->assertEquals( $this->user->isValidwiki_UserName( $username ), $result, $message );
 	}
 
-	public function provideUserNames() {
+	public function providewiki_UserNames() {
 		return array(
 			array( '', false, 'Empty string' ),
 			array( ' ', false, 'Blank space' ),
@@ -131,7 +131,7 @@ class UserTest extends MediaWikiTestCase {
 			array( 'Ab/cd', false,  'Contains slash' ),
 			array( 'Ab cd' , true, 'Whitespace' ),
 			array( '192.168.1.1', false,  'IP' ),
-			array( 'User:Abcd', false, 'Reserved Namespace' ),
+			array( 'wiki_User:Abcd', false, 'Reserved Namespace' ),
 			array( '12abcd232' , true  , 'Starts with Numbers' ),
 			array( '?abcd' , true,  'Start with ? mark' ),
 			array( '#abcd', false, 'Start with #' ),
@@ -147,8 +147,8 @@ class UserTest extends MediaWikiTestCase {
 	 * Extensions and core
 	 */
 	public function testAllRightsWithMessage() {
-		//Getting all user rights, for core: User::$mCoreRights, for extensions: $wgAvailableRights
-		$allRights = User::getAllRights();
+		//Getting all user rights, for core: wiki_User::$mCoreRights, for extensions: $wgAvailableRights
+		$allRights = wiki_User::getAllRights();
 		$allMessageKeys = Language::getMessageKeysFor( 'en' );
 
 		$rightsWithMessage = array();

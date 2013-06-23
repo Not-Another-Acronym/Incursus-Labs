@@ -72,7 +72,7 @@ class UploadStash {
 	 * (should replace it eventually).
 	 *
 	 * @param $repo FileRepo
-	 * @param $user User (default null)
+	 * @param $user wiki_User (default null)
 	 */
 	public function __construct( FileRepo $repo, $user = null ) {
 		// this might change based on wiki's configuration.
@@ -83,8 +83,8 @@ class UploadStash {
 		if ( $user ) {
 			$this->user = $user;
 		} else {
-			global $wgUser;
-			$this->user = $wgUser;
+			global $wgwiki_User;
+			$this->user = $wgwiki_User;
 		}
 
 		if ( is_object( $this->user ) ) {

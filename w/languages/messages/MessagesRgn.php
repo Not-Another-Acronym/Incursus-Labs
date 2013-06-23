@@ -14,7 +14,7 @@
 $fallback = 'it';
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Link cun la sotliniadura',
 'tog-justify' => 'Paràgraf: giustifiché',
 'tog-hideminor' => 'Nascond al mudefghi znini int la pàgina "Ultum mudèfghi"',
@@ -252,7 +252,7 @@ $messages = array(
 Quest é suzed d'solit in te méntr d'un cuntrol d'do version vèci intla storia d'una pàgina. E' pò esar suzest parchè l'è stè cjamé un culegamént a una pàgina scanzleda o parchè l'è stè cjamé un cunfront d'dò versiòn ch'j n'esést piò.
 
 S' u n'è brisa acsè, t'é scvert par chès un bug int'é software.
-Par piasé, fa raport a un [[Special:ListUsers/sysop|aministrador]] cun la nota de l'indirezzi dla pàgina.",
+Par piasé, fa raport a un [[Special:Listwiki_Users/sysop|aministrador]] cun la nota de l'indirezzi dla pàgina.",
 'missingarticle-rev' => '(revision n°: $1)',
 'badtitletext' => "La pàgina ch' t'ê cmandè, l'è vuda, sbaglieda o ta l'ê scrètta cun dal lettar particulèri. Oppure, ê pò dès ch'u j sèja un eror inter-lèngua o inter-wiki. Guèrda ben cus t'e scrètt: êt druvè dal lettar cu n' s pò druvè in t'j nom dal pàgin?",
 'viewsource' => "Guèrda e' codiz surgént",
@@ -380,7 +380,7 @@ Lezenda: '''({{int:cur}})''' = difarenzi cun la versiòn d'adès; '''({{int:last
 
 'grouppage-sysop' => '{{ns:project}}:Aministradór',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => "Dirètt d'j navigador",
 
 # Associated actions - in the sentence "You do not have permission to X"

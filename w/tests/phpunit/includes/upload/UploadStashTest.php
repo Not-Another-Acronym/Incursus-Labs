@@ -4,7 +4,7 @@
  */
 class UploadStashTest extends MediaWikiTestCase {
 	/**
-	 * @var Array of UploadStashTestUser
+	 * @var Array of UploadStashTestwiki_User
 	 */
 	public static $users;
 
@@ -16,15 +16,15 @@ class UploadStashTest extends MediaWikiTestCase {
 		file_put_contents( $this->bug29408File, "\x00" );
 
 		self::$users = array(
-			'sysop' => new TestUser(
+			'sysop' => new Testwiki_User(
 				'Uploadstashtestsysop',
 				'Upload Stash Test Sysop',
 				'upload_stash_test_sysop@example.com',
 				array( 'sysop' )
 			),
-			'uploader' => new TestUser(
+			'uploader' => new Testwiki_User(
 				'Uploadstashtestuser',
-				'Upload Stash Test User',
+				'Upload Stash Test wiki_User',
 				'upload_stash_test_user@example.com',
 				array()
 			)
@@ -32,8 +32,8 @@ class UploadStashTest extends MediaWikiTestCase {
 	}
 
 	public function testBug29408() {
-		global $wgUser;
-		$wgUser = self::$users['uploader']->user;
+		global $wgwiki_User;
+		$wgwiki_User = self::$users['uploader']->user;
 
 		$repo = RepoGroup::singleton()->getLocalRepo();
 		$stash = new UploadStash( $repo );

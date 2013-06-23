@@ -334,9 +334,9 @@ $specialPageAliases = array(
 	'Unwatchedpages'            => array( 'NietGevolgdePaginas', 'Niet-GevolgdePagina’s', 'Niet-GevolgdePagina\'s' ),
 	'Upload'                    => array( 'Uploaden' ),
 	'UploadStash'               => array( 'TijdelijkeUpload' ),
-	'Userlogin'                 => array( 'Aanmelden', 'Inloggen' ),
-	'Userlogout'                => array( 'Afmelden', 'Uitloggen' ),
-	'Userrights'                => array( 'Gebruikersrechten', 'Gebruikerrechten' ),
+	'wiki_Userlogin'                 => array( 'Aanmelden', 'Inloggen' ),
+	'wiki_Userlogout'                => array( 'Afmelden', 'Uitloggen' ),
+	'wiki_Userrights'                => array( 'Gebruikersrechten', 'Gebruikerrechten' ),
 	'Version'                   => array( 'Softwareversie', 'Versie' ),
 	'Wantedcategories'          => array( 'GevraagdeCategorieën' ),
 	'Wantedfiles'               => array( 'GevraagdeBestanden' ),
@@ -350,7 +350,7 @@ $specialPageAliases = array(
 $linkTrail = '/^([a-zäöüïëéèà]+)(.*)$/sDu';
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Koppelingen onderstrepen:',
 'tog-justify' => "Alinea's uitvullen",
 'tog-hideminor' => 'Kleine wijzigingen verbergen in recente wijzigingen',
@@ -692,7 +692,7 @@ De beheerder heeft de volgende reden opgegeven: $1',
 Dit kan voorkomen als u een verouderde koppeling naar het verschil tussen twee versies van een pagina volgt of een versie opvraagt die is verwijderd.
 
 Als dit niet het geval is, hebt u wellicht een fout in de software gevonden.
-Maak hiervan melding bij een [[Special:ListUsers/sysop|beheerder]] van {{SITENAME}} en vermeld daarbij de URL van deze pagina.',
+Maak hiervan melding bij een [[Special:Listwiki_Users/sysop|beheerder]] van {{SITENAME}} en vermeld daarbij de URL van deze pagina.',
 'missingarticle-rev' => '(versienummer: $1)',
 'missingarticle-diff' => '(Wijziging: $1, $2)',
 'readonly_lag' => 'De database is automatisch vergrendeld terwijl de ondergeschikte databaseservers synchroniseren met de hoofdserver.',
@@ -745,7 +745,7 @@ $2",
 'customcssprotected' => 'U kunt deze CSS-pagina niet bewerken, omdat die persoonlijke instellingen van een andere gebruiker bevat.',
 'customjsprotected' => 'U kunt deze JavaScriptpagina niet bewerken, omdat die persoonlijke instellingen van een andere gebruiker bevat.',
 'ns-specialprotected' => 'Pagina\'s in de naamruimte "{{ns:special}}" kunnen niet bewerkt worden.',
-'titleprotected' => "Het aanmaken van deze pagina is beveiligd door [[User:$1|$1]].
+'titleprotected' => "Het aanmaken van deze pagina is beveiligd door [[wiki_User:$1|$1]].
 De gegeven reden is ''$2''.",
 'filereadonlyerror' => 'Het was niet mogelijk het bestand "$1" aan te passen omdat de bestandsrepository "$2" op dit moment alleen-lezen is.
 
@@ -763,7 +763,7 @@ De opgegeven reden is "\'\'$3\'\'".',
 # Login and logout pages
 'logouttext' => "'''U bent nu afgemeld.'''
 
-U kunt {{SITENAME}} nu anoniem gebruiken of weer [[Special:UserLogin|aanmelden]] als dezelfde of een andere gebruiker.
+U kunt {{SITENAME}} nu anoniem gebruiken of weer [[Special:wiki_UserLogin|aanmelden]] als dezelfde of een andere gebruiker.
 Mogelijk worden nog een aantal pagina's weergegeven alsof u aangemeld bent totdat u de cache van uw browser leegt.",
 'welcomecreation' => '== Welkom, $1! ==
 Uw gebruiker is geregistreerd.
@@ -810,7 +810,7 @@ Zorg ervoor dat u cookies hebt ingeschakeld, herlaad deze pagina en probeer het 
 'loginsuccess' => "'''U bent nu aangemeld bij {{SITENAME}} als \"\$1\".'''",
 'nosuchuser' => 'De gebruiker "$1" bestaat niet.
 Gebruikersnamen zijn hoofdlettergevoelig.
-Controleer de schrijfwijze of [[Special:UserLogin/signup|maak een nieuwe gebruiker aan]].',
+Controleer de schrijfwijze of [[Special:wiki_UserLogin/signup|maak een nieuwe gebruiker aan]].',
 'nosuchusershort' => 'De gebruiker "$1" bestaat niet.
 Controleer de schrijfwijze.',
 'nouserspecified' => 'Geef een gebruikersnaam op.',
@@ -1021,7 +1021,7 @@ Wellicht is het verplaatst of verwijderd terwijl u de pagina aan het bekijken wa
 'loginreqlink' => 'aanmelden',
 'loginreqpagetext' => "U moet zich $1 om andere pagina's te kunnen bekijken.",
 'accmailtitle' => 'Wachtwoord verzonden.',
-'accmailtext' => "Een willekeurig wachtwoord voor [[User talk:$1|$1]] is naar $2 gestuurd.
+'accmailtext' => "Een willekeurig wachtwoord voor [[wiki_User talk:$1|$1]] is naar $2 gestuurd.
 
 Het wachtwoord voor deze nieuwe gebruiker kan gewijzigd worden via de pagina ''[[Special:ChangePassword|Wachtwoord wijzigen]]'' na het aanmelden.",
 'newarticle' => '(Nieuw)',
@@ -1032,7 +1032,7 @@ Gebruik de knop '''vorige''' in uw browser als u hier per ongeluk terecht bent g
 Daarom wordt het IP-adres ter identificatie gebruikt.
 Het is mogelijk dat meerdere personen hetzelfde IP-adres gebruiken.
 Mogelijk ontvangt u hier berichten die niet voor u bedoeld zijn.
-Als u dat wilt voorkomen, [[Special:UserLogin/signup|registreer u]] of [[Special:UserLogin|meld u aan]] om verwarring met andere anonieme gebruikers te voorkomen.''",
+Als u dat wilt voorkomen, [[Special:wiki_UserLogin/signup|registreer u]] of [[Special:wiki_UserLogin|meld u aan]] om verwarring met andere anonieme gebruikers te voorkomen.''",
 'noarticletext' => 'Deze pagina bevat geen tekst.
 U kunt [[Special:Search/{{PAGENAME}}|naar deze term zoeken]] in andere pagina\'s, <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} de logboeken doorzoeken] of [{{fullurl:{{FULLPAGENAME}}|action=edit}} deze pagina bewerken]</span>.',
 'noarticletext-nopermission' => 'Deze pagina bevat geen tekst.
@@ -1072,13 +1072,13 @@ Uw tekst is niet opgeslagen!",
 'previewconflict' => 'Deze voorvertoning geeft aan hoe de tekst in het bovenste veld eruit ziet als u deze opslaat.',
 'session_fail_preview' => "'''Uw bewerking is niet verwerkt, omdat de sessiegegevens verloren zijn gegaan.
 Probeer het opnieuw.
-Als het dan nog niet lukt, [[Special:UserLogout|meld u zich dan af]] en weer aan.'''",
+Als het dan nog niet lukt, [[Special:wiki_UserLogout|meld u zich dan af]] en weer aan.'''",
 'session_fail_preview_html' => "'''Uw bewerking is niet verwerkt, omdat de sessiegegevens verloren zijn gegaan.'''
 
 ''Omdat in {{SITENAME}} ruwe HTML is ingeschakeld, is een voorvertoning niet mogelijk als bescherming tegen aanvallen met JavaScript.''
 
 '''Als dit een legitieme bewerking is, probeer het dan opnieuw.'''
-Als het dan nog niet lukt, [[Special:UserLogout|meld u zich dan af]] en weer aan.",
+Als het dan nog niet lukt, [[Special:wiki_UserLogout|meld u zich dan af]] en weer aan.",
 'token_suffix_mismatch' => "'''Uw bewerking is geweigerd, omdat uw browser de leestekens in het bewerkingstoken onjuist heeft behandeld.'''
 De bewerking is geweigerd om verminking van de paginatekst te voorkomen.
 Dit gebeurt soms als er een webgebaseerde proxydienst wordt gebruikt die fouten bevat.",
@@ -1130,7 +1130,7 @@ De laatste logboekregel staat hieronder:",
 'edittools' => '<!-- Deze tekst wordt weergegeven onder bewerkings- en uploadformulieren. -->',
 'nocreatetitle' => "Het aanmaken van pagina's is beperkt",
 'nocreatetext' => "{{SITENAME}} heeft de mogelijkheid om nieuwe pagina's te maken beperkt.
-U kunt reeds bestaande pagina's wijzigen of u kunt [[Special:UserLogin|zich aanmelden of registreren]].",
+U kunt reeds bestaande pagina's wijzigen of u kunt [[Special:wiki_UserLogin|zich aanmelden of registreren]].",
 'nocreate-loggedin' => "U hebt geen rechten om nieuwe pagina's te maken.",
 'sectioneditnotsupported-title' => 'Het is niet mogelijk om paragrafen te bewerken',
 'sectioneditnotsupported-text' => 'Het is op deze pagina niet mogelijk om paragrafen te bewerken.',
@@ -1182,11 +1182,11 @@ Hieronder staat de tekst waarin de wijziging ongedaan is gemaakt.
 Controleer voor het opslaan of het resultaat gewenst is.',
 'undo-failure' => 'De wijziging kan niet ongedaan gemaakt worden vanwege andere strijdige wijzigingen.',
 'undo-norev' => 'De bewerking kon niet ongedaan gemaakt worden, omdat die niet bestaat of is verwijderd.',
-'undo-summary' => 'Versie $1 van [[Special:Contributions/$2|$2]] ([[User talk:$2|overleg]]) ongedaan gemaakt',
+'undo-summary' => 'Versie $1 van [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|overleg]]) ongedaan gemaakt',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'Registreren is mislukt.',
-'cantcreateaccount-text' => "Registreren vanaf dit IP-adres ('''$1''') is geblokkeerd door [[User:$3|$3]].
+'cantcreateaccount-text' => "Registreren vanaf dit IP-adres ('''$1''') is geblokkeerd door [[wiki_User:$3|$3]].
 
 De door $3 opgegeven reden is ''$2''",
 
@@ -1451,7 +1451,7 @@ De gegevens over {{SITENAME}} zijn mogelijk niet bijgewerkt.',
 'mypreferences' => 'Voorkeuren',
 'prefs-edits' => 'Aantal bewerkingen:',
 'prefsnologin' => 'Niet aangemeld',
-'prefsnologintext' => 'U moet <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} aangemeld]</span> zijn om uw voorkeuren te kunnen instellen.',
+'prefsnologintext' => 'U moet <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} aangemeld]</span> zijn om uw voorkeuren te kunnen instellen.',
 'changepassword' => 'Wachtwoord wijzigen',
 'prefs-skin' => 'Vormgeving',
 'skin-preview' => 'Voorvertoning',
@@ -1565,16 +1565,16 @@ Als u deze opgeeft, kan deze naam gebruikt worden om u erkenning te geven voor u
 'prefs-displaywatchlist' => 'Weergaveopties',
 'prefs-diffs' => 'Verschillen',
 
-# User preference: e-mail validation using jQuery
+# wiki_User preference: e-mail validation using jQuery
 'email-address-validity-valid' => 'Het e-mailadres lijkt geldig',
 'email-address-validity-invalid' => 'Geef een geldig e-mailadres op',
 
-# User rights
+# wiki_User rights
 'userrights' => 'Gebruikersrechtenbeheer',
 'userrights-lookup-user' => 'Gebruikersgroepen beheren',
 'userrights-user-editname' => 'Voer een gebruikersnaam in:',
 'editusergroup' => 'Gebruikersgroepen wijzigen',
-'editinguser' => "Bezig met wijzigen van de gebruikersrechten van gebruiker '''[[User:$1|$1]]''' $2",
+'editinguser' => "Bezig met wijzigen van de gebruikersrechten van gebruiker '''[[wiki_User:$1|$1]]''' $2",
 'userrights-editusergroup' => 'Gebruikersgroepen wijzigen',
 'saveusergroups' => 'Gebruikersgroepen opslaan',
 'userrights-groupsmember' => 'Lid van:',
@@ -1586,7 +1586,7 @@ Als u deze opgeeft, kan deze naam gebruikt worden om u erkenning te geven voor u
 'userrights-reason' => 'Reden:',
 'userrights-no-interwiki' => "U hebt geen rechten om gebruikersrechten op andere wiki's te wijzigen.",
 'userrights-nodatabase' => 'De database $1 bestaat niet of is geen lokale database.',
-'userrights-nologin' => 'U moet [[Special:UserLogin|aangemeld]] zijn met een gebruiker met de juiste rechten om gebruikersrechten toe te wijzen.',
+'userrights-nologin' => 'U moet [[Special:wiki_UserLogin|aangemeld]] zijn met een gebruiker met de juiste rechten om gebruikersrechten toe te wijzen.',
 'userrights-notallowed' => 'U hebt geen rechten om gebruikersrechten toe te voegen of te verwijderen.',
 'userrights-changeable-col' => 'Groepen die u kunt beheren',
 'userrights-unchangeable-col' => 'Groepen die u niet kunt beheren',
@@ -1677,7 +1677,7 @@ Als u deze opgeeft, kan deze naam gebruikt worden om u erkenning te geven voor u
 'right-sendemail' => 'E-mail versturen aan andere gebruikers',
 'right-passwordreset' => 'E-mails voor wachtwoord opnieuw instellen bekijken',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Gebruikersrechtenlogboek',
 'rightslogtext' => 'Hieronder staan de wijzigingen in gebruikersrechten.',
 'rightslogentry' => 'heeft de gebruikersrechten voor $1 gewijzigd van $2 naar $3',
@@ -1774,7 +1774,7 @@ Pagina's die op [[Special:Watchlist|uw volglijst]] staan worden '''vet''' weerge
 'reuploaddesc' => 'Upload annuleren en terugkeren naar het uploadformulier',
 'upload-tryagain' => 'Bestandsbeschrijving bijwerken',
 'uploadnologin' => 'Niet aangemeld',
-'uploadnologintext' => 'U moet [[Special:UserLogin|aangemeld]] zijn om bestanden te kunnen uploaden.',
+'uploadnologintext' => 'U moet [[Special:wiki_UserLogin|aangemeld]] zijn om bestanden te kunnen uploaden.',
 'upload_directory_missing' => 'De uploadmap ($1) is niet aanwezig en kon niet aangemaakt worden door de webserver.',
 'upload_directory_read_only' => 'De webserver kan niet schrijven in de uploadmap ($1).',
 'uploaderror' => 'Uploadfout',
@@ -1918,11 +1918,11 @@ Ga terug naar het [[Special:Upload/stash/$1|uploadformulier]] om dit probleem te
 'upload-proto-error-text' => "Uploads via deze methode vereisen URL's die beginnen met <code>http://</code> of <code>ftp://</code>.",
 'upload-file-error' => 'Interne fout',
 'upload-file-error-text' => 'Er is een interne fout opgetreden tijdens het aanmaken van een tijdelijk bestaan op de server.
-Neem contact op met een [[Special:ListUsers/sysop|systeembeheerder]].',
+Neem contact op met een [[Special:Listwiki_Users/sysop|systeembeheerder]].',
 'upload-misc-error' => 'Onbekende uploadfout',
 'upload-misc-error-text' => 'Er is tijdens het uploaden een onbekende fout opgetreden.
 Controleer of de URL correct en beschikbaar is en probeer het opnieuw.
-Als het probleem aanhoudt, neem dan contact op met een [[Special:ListUsers/sysop|systeembeheerder]].',
+Als het probleem aanhoudt, neem dan contact op met een [[Special:Listwiki_Users/sysop|systeembeheerder]].',
 'upload-too-many-redirects' => 'De URL bevatte te veel doorverwijzingen',
 'upload-unknown-size' => 'Onbekende grootte',
 'upload-http-error' => 'Er is een HTTP-fout opgetreden: $1',
@@ -2164,7 +2164,7 @@ Vergeet niet de "Koppelingen naar deze pagina" te controleren alvorens deze sjab
 'statistics-views-total' => "Totaal aantal weergegeven pagina's",
 'statistics-views-total-desc' => "Het bekijken van niet-bestaande pagina's en speciale pagina's is niet inbegrepen",
 'statistics-views-peredit' => "Weergegeven pagina's per bewerking",
-'statistics-users' => 'Geregistreerde [[Special:ListUsers|gebruikers]]',
+'statistics-users' => 'Geregistreerde [[Special:Listwiki_Users|gebruikers]]',
 'statistics-users-active' => 'Actieve gebruikers',
 'statistics-users-active-desc' => 'Gebruikers die in de afgelopen {{PLURAL:$1|dag|$1 dagen}} een handeling hebben uitgevoerd',
 'statistics-mostpopular' => "Meest bekeken pagina's",
@@ -2336,13 +2336,13 @@ Ondersteunde protocollen: <code>$1</code> (wordt "http://"als er geen protocol w
 'linksearch-line' => '$1 heeft een koppeling in $2',
 'linksearch-error' => 'Wildcards zijn alleen toegestaan aan het begin van een hostnaam.',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => 'Gebruikers bekijken vanaf:',
 'listusers-submit' => 'Weergeven',
 'listusers-noresult' => 'Geen gebruiker gevonden.',
 'listusers-blocked' => '(geblokkeerd)',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'Aanwezige gebruikers',
 'activeusers-intro' => 'Dit is een lijst met gebruikers die enige activiteit hebben laten zien in de afgelopen {{PLURAL:$1|dag|$1 dagen}}.',
 'activeusers-count' => '$1 recente {{PLURAL:$1|handeling|handelingen}} in de {{PLURAL:$3|afgelopen dag|laatste $3 dagen}}',
@@ -2376,7 +2376,7 @@ Er kan [[{{MediaWiki:Listgrouprights-helppage}}|extra informatie]] over individu
 
 # E-mail user
 'mailnologin' => 'Geen verzendadres beschikbaar',
-'mailnologintext' => 'U moet [[Special:UserLogin|aangemeld]] zijn en een geldig e-mailadres in uw [[Special:Preferences|voorkeuren]] vermelden om andere gebruikers te kunnen e-mailen.',
+'mailnologintext' => 'U moet [[Special:wiki_UserLogin|aangemeld]] zijn en een geldig e-mailadres in uw [[Special:Preferences|voorkeuren]] vermelden om andere gebruikers te kunnen e-mailen.',
 'emailuser' => 'Deze gebruiker e-mailen',
 'emailuser-title-target' => 'Deze {{GENDER:$1|gebruiker}} e-mailen',
 'emailuser-title-notarget' => 'Gebruiker e-mailen',
@@ -2408,7 +2408,7 @@ De ontvanger kan dus direct naar u reageren.',
 'emailsenttext' => 'Uw e-mail is verzonden.',
 'emailuserfooter' => 'Deze e-mail is verstuurd door $1 aan $2 door de functie "Deze gebruiker e-mailen" van {{SITENAME}}.',
 
-# User Messenger
+# wiki_User Messenger
 'usermessage-summary' => 'Systeembericht achtergelaten',
 'usermessage-editor' => 'Systeembericht',
 
@@ -2419,7 +2419,7 @@ De ontvanger kan dus direct naar u reageren.',
 'nowatchlist' => 'Uw volglijst is leeg.',
 'watchlistanontext' => 'Om uw volglijst te bekijken of te bewerken moet u zich $1.',
 'watchnologin' => 'U bent niet aangemeld',
-'watchnologintext' => 'U dient [[Special:UserLogin|aangemeld]] te zijn om uw volglijst te bewerken.',
+'watchnologintext' => 'U dient [[Special:wiki_UserLogin|aangemeld]] te zijn om uw volglijst te bewerken.',
 'addwatch' => 'Toevoegen aan volglijst',
 'addedwatchtext' => 'De pagina "[[:$1]]" is toegevoegd aan uw [[Special:Watchlist|volglijst]].
 Toekomstige bewerkingen van deze pagina en de bijbehorende overlegpagina worden daar weergegeven.',
@@ -2529,13 +2529,13 @@ Wees voorzichtig.',
 'rollbacklinkcount-morethan' => 'Meer dan {{PLURAL:$1|één bewerking|$1 bewerkingen}} terugdraaien',
 'rollbackfailed' => 'Ongedaan maken van wijzigingen mislukt.',
 'cantrollback' => 'Ongedaan maken van wijzigingen onmogelijk: deze pagina heeft slechts 1 auteur.',
-'alreadyrolled' => 'Het is niet mogelijk om de bewerking van de pagina [[:$1]] door [[User:$2|$2]] ([[User talk:$2|overleg]]{{int:pipe-separator}}[[Special:Contributions/$2|bijdragen]]) ongedaan te maken.
+'alreadyrolled' => 'Het is niet mogelijk om de bewerking van de pagina [[:$1]] door [[wiki_User:$2|$2]] ([[wiki_User talk:$2|overleg]]{{int:pipe-separator}}[[Special:Contributions/$2|bijdragen]]) ongedaan te maken.
 Iemand anders heeft deze pagina al bewerkt of hersteld naar een eerdere versie.
 
-De meest recente bewerking is gemaakt door [[User:$3|$3]] ([[User talk:$3|overleg]]{{int:pipe-separator}}[[Special:Contributions/$3|bijdragen]]).',
+De meest recente bewerking is gemaakt door [[wiki_User:$3|$3]] ([[wiki_User talk:$3|overleg]]{{int:pipe-separator}}[[Special:Contributions/$3|bijdragen]]).',
 'editcomment' => "De bewerkingssamenvatting was: \"''\$1''\".",
-'revertpage' => 'Wijzigingen door [[Special:Contributions/$2|$2]] ([[User talk:$2|Overleg]]) hersteld tot de laatste versie door [[User:$1|$1]]',
-'revertpage-nouser' => 'Wijzigingen door (gebruikersnaam verwijderd) teruggedraaid naar de laatste versie door [[User:$1|$1]]',
+'revertpage' => 'Wijzigingen door [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Overleg]]) hersteld tot de laatste versie door [[wiki_User:$1|$1]]',
+'revertpage-nouser' => 'Wijzigingen door (gebruikersnaam verwijderd) teruggedraaid naar de laatste versie door [[wiki_User:$1|$1]]',
 'rollback-success' => 'De wijzigingen door $1 zijn teruggedraaid.
 De laatste versie van $2 is hersteld.',
 
@@ -2771,7 +2771,7 @@ Zie de [[Special:BlockList|blokkadelijst]] voor recente blokkades.',
 'unblockip' => 'Gebruiker deblokkeren',
 'unblockiptext' => 'Gebruik het onderstaande formulier om opnieuw schrijftoegang te geven aan een geblokkeerde gebruiker of IP-adres.',
 'ipusubmit' => 'Blokkade opheffen',
-'unblocked' => 'Blokkade van [[User:$1|$1]] is opgeheven',
+'unblocked' => 'Blokkade van [[wiki_User:$1|$1]] is opgeheven',
 'unblocked-range' => '$1 is gedeblokkeerd',
 'unblocked-id' => 'Blokkade $1 is opgeheven',
 'blocklist' => 'Geblokkeerde gebruikers',
@@ -2804,7 +2804,7 @@ Zie de [[Special:BlockList|blokkadelijst]] voor recente blokkades.',
 'change-blocklink' => 'blokkade wijzigen',
 'contribslink' => 'bijdragen',
 'emaillink' => 'e-mail verzenden',
-'autoblocker' => "Automatisch geblokkeerd omdat het IP-adres overeenkomt met dat van [[User:\$1|\$1]], die geblokkeerd is om de volgende reden: \"'''\$2'''\"",
+'autoblocker' => "Automatisch geblokkeerd omdat het IP-adres overeenkomt met dat van [[wiki_User:\$1|\$1]], die geblokkeerd is om de volgende reden: \"'''\$2'''\"",
 'blocklogpage' => 'Blokkeerlogboek',
 'blocklog-showlog' => 'Deze gebruiker is voorheen geblokkeerd geweest.
 Het blokkeerlogboek wordt hieronder ter referentie weergegeven:',
@@ -2908,7 +2908,7 @@ In die gevallen moet u de pagina handmatig hernoemen of samenvoegen.",
 'movearticle' => 'Te hernoemen pagina:',
 'moveuserpage-warning' => "'''Waarschuwing:''' u gaat een gebruikerspagina hernoemen. Houd er rekening mee dat alleen de pagina wordt hernoemd, ''niet'' de gebruiker.",
 'movenologin' => 'Niet aangemeld',
-'movenologintext' => 'U moet [[Special:UserLogin|aangemeld]] zijn om een pagina te hernoemen.',
+'movenologintext' => 'U moet [[Special:wiki_UserLogin|aangemeld]] zijn om een pagina te hernoemen.',
 'movenotallowed' => "U hebt geen rechten om pagina's te hernoemen.",
 'movenotallowedfile' => 'U hebt geen rechten om bestanden te hernoemen.',
 'cant-move-user-page' => "U hebt geen rechten om gebruikerspagina's te hernoemen (met uitzondering van subpagina's).",
@@ -3788,7 +3788,7 @@ Het e-mailprogramma meldde: $1',
 Mogelijk is de code verlopen.',
 'confirmemail_needlogin' => 'U moet $1 om uw e-mailadres te bevestigen.',
 'confirmemail_success' => 'Uw e-mailadres is bevestigd.
-U kunt zich nu [[Special:UserLogin|aanmelden]] en de wiki gebruiken.',
+U kunt zich nu [[Special:wiki_UserLogin|aanmelden]] en de wiki gebruiken.',
 'confirmemail_loggedin' => 'Uw e-mailadres is nu bevestigd.',
 'confirmemail_error' => 'Er is iets verkeerd gegaan tijdens het opslaan van uw bevestiging.',
 'confirmemail_subject' => 'Bevestiging e-mailadres voor {{SITENAME}}',
@@ -3838,10 +3838,10 @@ De bevestigingscode vervalt op $4.',
 
 # Delete conflict
 'deletedwhileediting' => "'''Let op''': deze pagina is verwijderd terwijl u bezig was met uw bewerking!",
-'confirmrecreate' => "Nadat u begonnen bent met uw wijziging heeft [[User:$1|$1]] ([[User talk:$1|overleg]]) deze pagina verwijderd met opgave van de volgende reden:
+'confirmrecreate' => "Nadat u begonnen bent met uw wijziging heeft [[wiki_User:$1|$1]] ([[wiki_User talk:$1|overleg]]) deze pagina verwijderd met opgave van de volgende reden:
 : ''$2''
 Bevestig dat u de pagina opnieuw wilt aanmaken.",
-'confirmrecreate-noreason' => 'Nadat u begonnen bent met uw wijziging heeft [[User:$1|$1]] ([[User talk:$1|overleg]]) deze pagina verwijderd.
+'confirmrecreate-noreason' => 'Nadat u begonnen bent met uw wijziging heeft [[wiki_User:$1|$1]] ([[wiki_User talk:$1|overleg]]) deze pagina verwijderd.
 Bevestig dat u de pagina opnieuw wilt aanmaken.',
 'recreate' => 'Opnieuw aanmaken',
 

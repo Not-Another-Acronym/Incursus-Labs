@@ -559,7 +559,7 @@ class WikiPage extends Page implements IDBAccessObject {
 	 *
 	 * @param $audience Integer: one of:
 	 *      Revision::FOR_PUBLIC       to be displayed to all users
-	 *      Revision::FOR_THIS_USER    to be displayed to $wgUser
+	 *      Revision::FOR_THIS_USER    to be displayed to $wgwiki_User
 	 *      Revision::RAW              get the text regardless of permissions
 	 * @return String|bool The text of the current revision. False on failure
 	 */
@@ -608,7 +608,7 @@ class WikiPage extends Page implements IDBAccessObject {
 	/**
 	 * @param $audience Integer: one of:
 	 *      Revision::FOR_PUBLIC       to be displayed to all users
-	 *      Revision::FOR_THIS_USER    to be displayed to $wgUser
+	 *      Revision::FOR_THIS_USER    to be displayed to $wgwiki_User
 	 *      Revision::RAW              get the text regardless of permissions
 	 * @return int user ID for the user that made the last article revision
 	 */
@@ -622,18 +622,18 @@ class WikiPage extends Page implements IDBAccessObject {
 	}
 
 	/**
-	 * Get the User object of the user who created the page
+	 * Get the wiki_User object of the user who created the page
 	 * @param $audience Integer: one of:
 	 *      Revision::FOR_PUBLIC       to be displayed to all users
-	 *      Revision::FOR_THIS_USER    to be displayed to $wgUser
+	 *      Revision::FOR_THIS_USER    to be displayed to $wgwiki_User
 	 *      Revision::RAW              get the text regardless of permissions
-	 * @return User|null
+	 * @return wiki_User|null
 	 */
 	public function getCreator( $audience = Revision::FOR_PUBLIC ) {
 		$revision = $this->getOldestRevision();
 		if ( $revision ) {
 			$userName = $revision->getUserText( $audience );
-			return User::newFromName( $userName, false );
+			return wiki_User::newFromName( $userName, false );
 		} else {
 			return null;
 		}
@@ -642,7 +642,7 @@ class WikiPage extends Page implements IDBAccessObject {
 	/**
 	 * @param $audience Integer: one of:
 	 *      Revision::FOR_PUBLIC       to be displayed to all users
-	 *      Revision::FOR_THIS_USER    to be displayed to $wgUser
+	 *      Revision::FOR_THIS_USER    to be displayed to $wgwiki_User
 	 *      Revision::RAW              get the text regardless of permissions
 	 * @return string username of the user that made the last article revision
 	 */
@@ -658,7 +658,7 @@ class WikiPage extends Page implements IDBAccessObject {
 	/**
 	 * @param $audience Integer: one of:
 	 *      Revision::FOR_PUBLIC       to be displayed to all users
-	 *      Revision::FOR_THIS_USER    to be displayed to $wgUser
+	 *      Revision::FOR_THIS_USER    to be displayed to $wgwiki_User
 	 *      Revision::RAW              get the text regardless of permissions
 	 * @return string Comment stored for the last article revision
 	 */
@@ -876,7 +876,7 @@ class WikiPage extends Page implements IDBAccessObject {
 	/**
 	 * Get a list of users who have edited this article, not including the user who made
 	 * the most recent revision, which you can get from $article->getUser() if you want it
-	 * @return UserArrayFromResult
+	 * @return wiki_UserArrayFromResult
 	 */
 	public function getContributors() {
 		# @todo FIXME: This is expensive; cache this info somewhere.
@@ -921,7 +921,7 @@ class WikiPage extends Page implements IDBAccessObject {
 		);
 
 		$res = $dbr->select( $tables, $fields, $conds, __METHOD__, $options, $jconds );
-		return new UserArrayFromResult( $res );
+		return new wiki_UserArrayFromResult( $res );
 	}
 
 	/**
@@ -1034,9 +1034,9 @@ class WikiPage extends Page implements IDBAccessObject {
 
 	/**
 	 * Do standard deferred updates after page view
-	 * @param $user User The relevant user
+	 * @param $user wiki_User The relevant user
 	 */
-	public function doViewUpdates( User $user ) {
+	public function doViewUpdates( wiki_User $user ) {
 		global $wgDisableCounters;
 		if ( wfReadOnly() ) {
 			return;
@@ -1392,7 +1392,7 @@ class WikiPage extends Page implements IDBAccessObject {
 	 * auto-detection due to MediaWiki's performance-optimised locking strategy.
 	 *
 	 * @param bool|int $baseRevId int the revision ID this edit was based off, if any
-	 * @param $user User the user doing the edit
+	 * @param $user wiki_User the user doing the edit
 	 *
 	 * @throws MWException
 	 * @return Status object. Possible errors:
@@ -1411,7 +1411,7 @@ class WikiPage extends Page implements IDBAccessObject {
 	 *  Compatibility note: this function previously returned a boolean value indicating success/failure
 	 */
 	public function doEdit( $text, $summary, $flags = 0, $baseRevId = false, $user = null ) {
-		global $wgUser, $wgUseAutomaticEditSummaries, $wgUseRCPatrol, $wgUseNPPatrol;
+		global $wgwiki_User, $wgUseAutomaticEditSummaries, $wgUseRCPatrol, $wgUseNPPatrol;
 
 		# Low-level sanity check
 		if ( $this->mTitle->getText() === '' ) {
@@ -1420,7 +1420,7 @@ class WikiPage extends Page implements IDBAccessObject {
 
 		wfProfileIn( __METHOD__ );
 
-		$user = is_null( $user ) ? $wgUser : $user;
+		$user = is_null( $user ) ? $wgwiki_User : $user;
 		$status = Status::newGood( array() );
 
 		// Load the data from the master database if needed.
@@ -1641,10 +1641,10 @@ class WikiPage extends Page implements IDBAccessObject {
 	/**
 	 * Get parser options suitable for rendering the primary article wikitext
 	 *
-	 * @param IContextSource|User|string $context One of the following:
-	 *        - IContextSource: Use the User and the Language of the provided
+	 * @param IContextSource|wiki_User|string $context One of the following:
+	 *        - IContextSource: Use the wiki_User and the Language of the provided
 	 *          context
-	 *        - User: Use the provided User object and $wgLang for the language,
+	 *        - wiki_User: Use the provided wiki_User object and $wgLang for the language,
 	 *          so use an IContextSource object if possible.
 	 *        - 'canonical': Canonical options (anonymous user with default
 	 *          preferences and content language).
@@ -1655,10 +1655,10 @@ class WikiPage extends Page implements IDBAccessObject {
 
 		if ( $context instanceof IContextSource ) {
 			$options = ParserOptions::newFromContext( $context );
-		} elseif ( $context instanceof User ) { // settings per user (even anons)
-			$options = ParserOptions::newFromUser( $context );
+		} elseif ( $context instanceof wiki_User ) { // settings per user (even anons)
+			$options = ParserOptions::newFromwiki_User( $context );
 		} else { // canonical settings
-			$options = ParserOptions::newFromUserAndLang( new User, $wgContLang );
+			$options = ParserOptions::newFromwiki_UserAndLang( new wiki_User, $wgContLang );
 		}
 
 		if ( $this->getTitle()->isConversionTable() ) {
@@ -1676,9 +1676,9 @@ class WikiPage extends Page implements IDBAccessObject {
 	 * Returns a stdclass with source, pst and output members
 	 * @return bool|object
 	 */
-	public function prepareTextForEdit( $text, $revid = null, User $user = null ) {
-		global $wgParser, $wgContLang, $wgUser;
-		$user = is_null( $user ) ? $wgUser : $user;
+	public function prepareTextForEdit( $text, $revid = null, wiki_User $user = null ) {
+		global $wgParser, $wgContLang, $wgwiki_User;
+		$user = is_null( $user ) ? $wgwiki_User : $user;
 		// @TODO fixme: check $user->getId() here???
 		if ( $this->mPreparedEdit
 			&& $this->mPreparedEdit->newText == $text
@@ -1688,7 +1688,7 @@ class WikiPage extends Page implements IDBAccessObject {
 			return $this->mPreparedEdit;
 		}
 
-		$popts = ParserOptions::newFromUserAndLang( $user, $wgContLang );
+		$popts = ParserOptions::newFromwiki_UserAndLang( $user, $wgContLang );
 		wfRunHooks( 'ArticlePrepareTextForEdit', array( $this, $popts ) );
 
 		$edit = (object)array();
@@ -1712,7 +1712,7 @@ class WikiPage extends Page implements IDBAccessObject {
 	 *
 	 * @private
 	 * @param $revision Revision object
-	 * @param $user User object that did the revision
+	 * @param $user wiki_User object that did the revision
 	 * @param $options Array of options, following indexes are used:
 	 * - changed: boolean, whether the revision changed the content (default true)
 	 * - created: boolean, whether the revision created the page (default false)
@@ -1721,7 +1721,7 @@ class WikiPage extends Page implements IDBAccessObject {
 	 *     revision, only used in changed is true and created is false
 	 *   - null: don't change the article count
 	 */
-	public function doEditUpdates( Revision $revision, User $user, array $options = array() ) {
+	public function doEditUpdates( Revision $revision, wiki_User $user, array $options = array() ) {
 		global $wgEnableParserCache;
 
 		wfProfileIn( __METHOD__ );
@@ -1802,10 +1802,10 @@ class WikiPage extends Page implements IDBAccessObject {
 			&& !( $revision->isMinor() && $user->isAllowed( 'nominornewtalk' ) )
 		) {
 			if ( wfRunHooks( 'ArticleEditUpdateNewTalk', array( &$this ) ) ) {
-				$other = User::newFromName( $shortTitle, false );
+				$other = wiki_User::newFromName( $shortTitle, false );
 				if ( !$other ) {
 					wfDebug( __METHOD__ . ": invalid username\n" );
-				} elseif ( User::isIP( $shortTitle ) ) {
+				} elseif ( wiki_User::isIP( $shortTitle ) ) {
 					// An anonymous user
 					$other->setNewtalk( true, $revision );
 				} elseif ( $other->isLoggedIn() ) {
@@ -1835,11 +1835,11 @@ class WikiPage extends Page implements IDBAccessObject {
 	 * are not updated, caches are not flushed.
 	 *
 	 * @param $text String: text submitted
-	 * @param $user User The relevant user
+	 * @param $user wiki_User The relevant user
 	 * @param $comment String: comment submitted
 	 * @param $minor Boolean: whereas it's a minor modification
 	 */
-	public function doQuickEdit( $text, User $user, $comment = '', $minor = 0 ) {
+	public function doQuickEdit( $text, wiki_User $user, $comment = '', $minor = 0 ) {
 		wfProfileIn( __METHOD__ );
 
 		$dbw = wfGetDB( DB_MASTER );
@@ -1865,10 +1865,10 @@ class WikiPage extends Page implements IDBAccessObject {
 	 * @param $reason String
 	 * @param &$cascade Integer. Set to false if cascading protection isn't allowed.
 	 * @param $expiry Array: per restriction type expiration
-	 * @param $user User The user updating the restrictions
+	 * @param $user wiki_User The user updating the restrictions
 	 * @return Status
 	 */
-	public function doUpdateRestrictions( array $limit, array $expiry, &$cascade, $reason, User $user ) {
+	public function doUpdateRestrictions( array $limit, array $expiry, &$cascade, $reason, wiki_User $user ) {
 		global $wgContLang;
 
 		if ( wfReadOnly() ) {
@@ -2113,11 +2113,11 @@ class WikiPage extends Page implements IDBAccessObject {
 	 * @param $id int article ID
 	 * @param $commit boolean defaults to true, triggers transaction end
 	 * @param &$error Array of errors to append to
-	 * @param $user User The deleting user
+	 * @param $user wiki_User The deleting user
 	 * @return boolean true if successful
 	 */
 	public function doDeleteArticle(
-		$reason, $suppress = false, $id = 0, $commit = true, &$error = '', User $user = null
+		$reason, $suppress = false, $id = 0, $commit = true, &$error = '', wiki_User $user = null
 	) {
 		$status = $this->doDeleteArticleReal( $reason, $suppress, $id, $commit, $error, $user );
 		return $status->isGood();
@@ -2134,15 +2134,15 @@ class WikiPage extends Page implements IDBAccessObject {
 	 *        the suppression log instead of the deletion log
 	 * @param $commit boolean defaults to true, triggers transaction end
 	 * @param &$error Array of errors to append to
-	 * @param $user User The deleting user
+	 * @param $user wiki_User The deleting user
 	 * @return Status: Status object; if successful, $status->value is the log_id of the
 	 *                 deletion log entry. If the page couldn't be deleted because it wasn't
 	 *                 found, $status is a non-fatal 'cannotdelete' error
 	 */
 	public function doDeleteArticleReal(
-		$reason, $suppress = false, $id = 0, $commit = true, &$error = '', User $user = null
+		$reason, $suppress = false, $id = 0, $commit = true, &$error = '', wiki_User $user = null
 	) {
-		global $wgUser;
+		global $wgwiki_User;
 
 		wfDebug( __METHOD__ . "\n" );
 
@@ -2153,7 +2153,7 @@ class WikiPage extends Page implements IDBAccessObject {
 			return $status;
 		}
 
-		$user = is_null( $user ) ? $wgUser : $user;
+		$user = is_null( $user ) ? $wgwiki_User : $user;
 		if ( ! wfRunHooks( 'ArticleDelete', array( &$this, &$user, &$reason, &$error, &$status ) ) ) {
 			if ( $status->isOK() ) {
 				// Hook aborted but didn't set a fatal status
@@ -2301,14 +2301,14 @@ class WikiPage extends Page implements IDBAccessObject {
 	 *    'alreadyrolled' : 'current' (rev)
 	 *    success        : 'summary' (str), 'current' (rev), 'target' (rev)
 	 *
-	 * @param $user User The user performing the rollback
+	 * @param $user wiki_User The user performing the rollback
 	 * @return array of errors, each error formatted as
 	 *   array(messagekey, param1, param2, ...).
 	 * On success, the array is empty.  This array can also be passed to
 	 * OutputPage::showPermissionsErrorPage().
 	 */
 	public function doRollback(
-		$fromP, $summary, $token, $bot, &$resultDetails, User $user
+		$fromP, $summary, $token, $bot, &$resultDetails, wiki_User $user
 	) {
 		$resultDetails = null;
 
@@ -2346,10 +2346,10 @@ class WikiPage extends Page implements IDBAccessObject {
 	 * @param $bot Boolean: If true, mark all reverted edits as bot.
 	 *
 	 * @param $resultDetails Array: contains result-specific array of additional values
-	 * @param $guser User The user performing the rollback
+	 * @param $guser wiki_User The user performing the rollback
 	 * @return array
 	 */
-	public function commitRollback( $fromP, $summary, $bot, &$resultDetails, User $guser ) {
+	public function commitRollback( $fromP, $summary, $bot, &$resultDetails, wiki_User $guser ) {
 		global $wgUseRCPatrol, $wgContLang;
 
 		$dbw = wfGetDB( DB_MASTER );
@@ -2366,7 +2366,7 @@ class WikiPage extends Page implements IDBAccessObject {
 		}
 
 		$from = str_replace( '_', ' ', $fromP );
-		# User name given should match up with the top revision.
+		# wiki_User name given should match up with the top revision.
 		# If the user was deleted then $from should be empty.
 		if ( $from != $current->getUserText() ) {
 			$resultDetails = array( 'current' => $current );
@@ -2379,8 +2379,8 @@ class WikiPage extends Page implements IDBAccessObject {
 
 		# Get the last edit not by this guy...
 		# Note: these may not be public values
-		$user = intval( $current->getRawUser() );
-		$user_text = $dbw->addQuotes( $current->getRawUserText() );
+		$user = intval( $current->getRawwiki_User() );
+		$user_text = $dbw->addQuotes( $current->getRawwiki_UserText() );
 		$s = $dbw->selectRow( 'revision',
 			array( 'rev_id', 'rev_timestamp', 'rev_deleted' ),
 			array( 'rev_page' => $current->getPage(),
@@ -2534,9 +2534,9 @@ class WikiPage extends Page implements IDBAccessObject {
 			$update->doUpdate();
 		}
 
-		# User talk pages
+		# wiki_User talk pages
 		if ( $title->getNamespace() == NS_USER_TALK ) {
-			$user = User::newFromName( $title->getText(), false );
+			$user = wiki_User::newFromName( $title->getText(), false );
 			if ( $user ) {
 				$user->setNewtalk( false );
 			}
@@ -2894,8 +2894,8 @@ class WikiPage extends Page implements IDBAccessObject {
 	 */
 	public function createUpdates( $rev ) {
 		wfDeprecated( __METHOD__, '1.18' );
-		global $wgUser;
-		$this->doEditUpdates( $rev, $wgUser, array( 'created' => true ) );
+		global $wgwiki_User;
+		$this->doEditUpdates( $rev, $wgwiki_User, array( 'created' => true ) );
 	}
 
 	/**
@@ -2904,21 +2904,21 @@ class WikiPage extends Page implements IDBAccessObject {
 	 *
 	 * @deprecated in 1.19; use Parser::preSaveTransform() instead
 	 * @param $text String article contents
-	 * @param $user User object: user doing the edit
+	 * @param $user wiki_User object: user doing the edit
 	 * @param $popts ParserOptions object: parser options, default options for
 	 *               the user loaded if null given
 	 * @return string article contents with altered wikitext markup (signatures
 	 * 	converted, {{subst:}}, templates, etc.)
 	 */
-	public function preSaveTransform( $text, User $user = null, ParserOptions $popts = null ) {
-		global $wgParser, $wgUser;
+	public function preSaveTransform( $text, wiki_User $user = null, ParserOptions $popts = null ) {
+		global $wgParser, $wgwiki_User;
 
 		wfDeprecated( __METHOD__, '1.19' );
 
-		$user = is_null( $user ) ? $wgUser : $user;
+		$user = is_null( $user ) ? $wgwiki_User : $user;
 
 		if ( $popts === null ) {
-			$popts = ParserOptions::newFromUser( $user );
+			$popts = ParserOptions::newFromwiki_User( $user );
 		}
 
 		return $wgParser->preSaveTransform( $text, $this->mTitle, $user, $popts );
@@ -2954,15 +2954,15 @@ class WikiPage extends Page implements IDBAccessObject {
 	 * @param $reason String
 	 * @param &$cascade Integer. Set to false if cascading protection isn't allowed.
 	 * @param $expiry Array: per restriction type expiration
-	 * @param $user User The user updating the restrictions
+	 * @param $user wiki_User The user updating the restrictions
 	 * @return bool true on success
 	 */
 	public function updateRestrictions(
-		$limit = array(), $reason = '', &$cascade = 0, $expiry = array(), User $user = null
+		$limit = array(), $reason = '', &$cascade = 0, $expiry = array(), wiki_User $user = null
 	) {
-		global $wgUser;
+		global $wgwiki_User;
 
-		$user = is_null( $user ) ? $wgUser : $user;
+		$user = is_null( $user ) ? $wgwiki_User : $user;
 
 		return $this->doUpdateRestrictions( $limit, $expiry, $cascade, $reason, $user )->isOK();
 	}
@@ -2972,8 +2972,8 @@ class WikiPage extends Page implements IDBAccessObject {
 	 */
 	public function quickEdit( $text, $comment = '', $minor = 0 ) {
 		wfDeprecated( __METHOD__, '1.18' );
-		global $wgUser;
-		$this->doQuickEdit( $text, $wgUser, $comment, $minor );
+		global $wgwiki_User;
+		$this->doQuickEdit( $text, $wgwiki_User, $comment, $minor );
 	}
 
 	/**
@@ -2981,8 +2981,8 @@ class WikiPage extends Page implements IDBAccessObject {
 	 */
 	public function viewUpdates() {
 		wfDeprecated( __METHOD__, '1.18' );
-		global $wgUser;
-		return $this->doViewUpdates( $wgUser );
+		global $wgwiki_User;
+		return $this->doViewUpdates( $wgwiki_User );
 	}
 
 	/**
@@ -2992,8 +2992,8 @@ class WikiPage extends Page implements IDBAccessObject {
 	 */
 	public function useParserCache( $oldid ) {
 		wfDeprecated( __METHOD__, '1.18' );
-		global $wgUser;
-		return $this->isParserCacheUsed( ParserOptions::newFromUser( $wgUser ), $oldid );
+		global $wgwiki_User;
+		return $this->isParserCacheUsed( ParserOptions::newFromwiki_User( $wgwiki_User ), $oldid );
 	}
 }
 

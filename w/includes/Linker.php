@@ -310,7 +310,7 @@ class Linker {
 	 */
 	private static function linkAttribs( $target, $attribs, $options ) {
 		wfProfileIn( __METHOD__ );
-		global $wgUser;
+		global $wgwiki_User;
 		$defaults = array();
 
 		if ( !in_array( 'noclasses', $options ) ) {
@@ -327,7 +327,7 @@ class Linker {
 			}
 
 			if ( !in_array( 'broken', $options ) ) { # Avoid useless calls to LinkCache (see r50387)
-				$colour = self::getLinkColour( $target, $wgUser->getStubThreshold() );
+				$colour = self::getLinkColour( $target, $wgwiki_User->getStubThreshold() );
 				if ( $colour !== '' ) {
 					$classes[] = $colour; # mw-redirect or stub
 				}
@@ -398,10 +398,10 @@ class Linker {
 	 * @deprecated since 1.17
 	 */
 	static function makeSizeLinkObj( $size, $nt, $text = '', $query = '', $trail = '', $prefix = '' ) {
-		global $wgUser;
+		global $wgwiki_User;
 		wfDeprecated( __METHOD__, '1.17' );
 
-		$threshold = $wgUser->getStubThreshold();
+		$threshold = $wgwiki_User->getStubThreshold();
 		$colour = ( $size < $threshold ) ? 'stub' : '';
 		// @todo FIXME: Replace deprecated makeColouredLinkObj by link()
 		return self::makeColouredLinkObj( $nt, $colour, $text, $query, $trail, $prefix );
@@ -605,7 +605,7 @@ class Linker {
 			if ( isset( $fp['thumbnail'] ) || isset( $fp['framed'] ) || isset( $fp['frameless'] ) || !$hp['width'] ) {
 				global $wgThumbLimits, $wgThumbUpright;
 				if ( !isset( $widthOption ) || !isset( $wgThumbLimits[$widthOption] ) ) {
-					$widthOption = User::getDefaultOption( 'thumbsize' );
+					$widthOption = wiki_User::getDefaultOption( 'thumbsize' );
 				}
 
 				// Reduce width for upright images when parameter 'upright' is used
@@ -1019,11 +1019,11 @@ class Linker {
 	 * Make user link (or user contributions for unregistered users)
 	 * @param $userId   Integer: user id in database.
 	 * @param $userName String: user name in database.
-	 * @param $altUserName String: text to display instead of the user name (optional)
+	 * @param $altwiki_UserName String: text to display instead of the user name (optional)
 	 * @return String: HTML fragment
-	 * @since 1.19 Method exists for a long time. $altUserName was added in 1.19.
+	 * @since 1.19 Method exists for a long time. $altwiki_UserName was added in 1.19.
 	 */
-	public static function userLink( $userId, $userName, $altUserName = false ) {
+	public static function userLink( $userId, $userName, $altwiki_UserName = false ) {
 		if ( $userId == 0 ) {
 			$page = SpecialPage::getTitleFor( 'Contributions', $userName );
 		} else {
@@ -1032,7 +1032,7 @@ class Linker {
 
 		return self::link(
 			$page,
-			htmlspecialchars( $altUserName !== false ? $altUserName : $userName ),
+			htmlspecialchars( $altwiki_UserName !== false ? $altwiki_UserName : $userName ),
 			array( 'class' => 'mw-userlink' )
 		);
 	}
@@ -1051,7 +1051,7 @@ class Linker {
 	public static function userToolLinks(
 		$userId, $userText, $redContribsWhenNoEdits = false, $flags = 0, $edits = null
 	) {
-		global $wgUser, $wgDisableAnonTalk, $wgLang;
+		global $wgwiki_User, $wgDisableAnonTalk, $wgLang;
 		$talkable = !( $wgDisableAnonTalk && 0 == $userId );
 		$blockable = !( $flags & self::TOOL_LINKS_NOBLOCK );
 		$addEmailLink = $flags & self::TOOL_LINKS_EMAIL && $userId;
@@ -1064,7 +1064,7 @@ class Linker {
 			// check if the user has an edit
 			$attribs = array();
 			if ( $redContribsWhenNoEdits ) {
-				$count = !is_null( $edits ) ? $edits : User::edits( $userId );
+				$count = !is_null( $edits ) ? $edits : wiki_User::edits( $userId );
 				if ( $count == 0 ) {
 					$attribs['class'] = 'new';
 				}
@@ -1073,15 +1073,15 @@ class Linker {
 
 			$items[] = self::link( $contribsPage, wfMessage( 'contribslink' )->escaped(), $attribs );
 		}
-		if ( $blockable && $wgUser->isAllowed( 'block' ) ) {
+		if ( $blockable && $wgwiki_User->isAllowed( 'block' ) ) {
 			$items[] = self::blockLink( $userId, $userText );
 		}
 
-		if ( $addEmailLink && $wgUser->canSendEmail() ) {
+		if ( $addEmailLink && $wgwiki_User->canSendEmail() ) {
 			$items[] = self::emailLink( $userId, $userText );
 		}
 
-		wfRunHooks( 'UserToolLinksEdit', array( $userId, $userText, &$items ) );
+		wfRunHooks( 'wiki_UserToolLinksEdit', array( $userId, $userText, &$items ) );
 
 		if ( $items ) {
 			return wfMessage( 'word-separator' )->plain()
@@ -1144,7 +1144,7 @@ class Linker {
 	 * @param $isPublic Boolean: show only if all users can see it
 	 * @return String: HTML fragment
 	 */
-	public static function revUserLink( $rev, $isPublic = false ) {
+	public static function revwiki_UserLink( $rev, $isPublic = false ) {
 		if ( $rev->isDeleted( Revision::DELETED_USER ) && $isPublic ) {
 			$link = wfMessage( 'rev-deleted-user' )->escaped();
 		} elseif ( $rev->userCan( Revision::DELETED_USER ) ) {
@@ -1165,7 +1165,7 @@ class Linker {
 	 * @param $isPublic Boolean: show only if all users can see it
 	 * @return string HTML
 	 */
-	public static function revUserTools( $rev, $isPublic = false ) {
+	public static function revwiki_UserTools( $rev, $isPublic = false ) {
 		if ( $rev->isDeleted( Revision::DELETED_USER ) && $isPublic ) {
 			$link = wfMessage( 'rev-deleted-user' )->escaped();
 		} elseif ( $rev->userCan( Revision::DELETED_USER ) ) {
@@ -1843,7 +1843,7 @@ class Linker {
 				} else {
 					$protected = '';
 				}
-				if ( $titleObj->quickUserCan( 'edit' ) ) {
+				if ( $titleObj->quickwiki_UserCan( 'edit' ) ) {
 					$editLink = self::link(
 						$titleObj,
 						wfMessage( 'editlink' )->text(),
@@ -1996,12 +1996,12 @@ class Linker {
 	 * if possible, otherwise the timestamp-based ID which may break after
 	 * undeletion.
 	 *
-	 * @param User $user
+	 * @param wiki_User $user
 	 * @param Revision $rev
 	 * @param Revision $title
 	 * @return string HTML fragment
 	 */
-	public static function getRevDeleteLink( User $user, Revision $rev, Title $title ) {
+	public static function getRevDeleteLink( wiki_User $user, Revision $rev, Title $title ) {
 		$canHide = $user->isAllowed( 'deleterevision' );
 		if ( !$canHide && !( $rev->getVisibility() && $user->isAllowed( 'deletedhistory' ) ) ) {
 			return '';

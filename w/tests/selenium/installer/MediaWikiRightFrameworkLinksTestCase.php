@@ -32,10 +32,10 @@ require_once (__DIR__.'/'.'MediaWikiInstallationCommonFunction.php');
 
 /**
  * Test Case ID   : 14, 15, 16, 17 (http://www.mediawiki.org/wiki/New_installer/Test_plan)
- * Test Case Name : User selects 'Read me' link.
- *                  User selects 'Release notes' link.
- *                  User selects 'Copying' link.
- *                  User selects 'Upgrading' link.
+ * Test Case Name : wiki_User selects 'Read me' link.
+ *                  wiki_User selects 'Release notes' link.
+ *                  wiki_User selects 'Copying' link.
+ *                  wiki_User selects 'Upgrading' link.
  * Version        : MediaWiki 1.18alpha
 */
 

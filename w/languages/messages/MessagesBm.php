@@ -14,7 +14,7 @@
 $fallback = 'fr';
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-hideminor' => 'Yɛlɛmaliw kura fitini dogo',
 
 # Dates

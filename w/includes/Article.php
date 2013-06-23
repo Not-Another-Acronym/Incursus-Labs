@@ -1,6 +1,6 @@
 <?php
 /**
- * User interface for page actions.
+ * wiki_User interface for page actions.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -51,7 +51,7 @@ class Article extends Page {
 	protected $mPage;
 
 	/**
-	 * ParserOptions object for $wgUser articles
+	 * ParserOptions object for $wgwiki_User articles
 	 * @var ParserOptions $mParserOptions
 	 */
 	public $mParserOptions;
@@ -495,7 +495,7 @@ class Article extends Page {
 		if ( $outputPage->isPrintable() ) {
 			$parserOptions->setIsPrintable( true );
 			$parserOptions->setEditSection( false );
-		} elseif ( !$this->isCurrent() || !$this->getTitle()->quickUserCan( 'edit', $user ) ) {
+		} elseif ( !$this->isCurrent() || !$this->getTitle()->quickwiki_UserCan( 'edit', $user ) ) {
 			$parserOptions->setEditSection( false );
 		}
 
@@ -931,7 +931,7 @@ class Article extends Page {
 	 * Show the footer section of an ordinary page view
 	 */
 	public function showViewFooter() {
-		# check if we're displaying a [[User talk:x.x.x.x]] anonymous talk page
+		# check if we're displaying a [[wiki_User talk:x.x.x.x]] anonymous talk page
 		if ( $this->getTitle()->getNamespace() == NS_USER_TALK && IP::isValid( $this->getTitle()->getText() ) ) {
 			$this->getContext()->getOutput()->addWikiMsg( 'anontalkpagetext' );
 		}
@@ -955,7 +955,7 @@ class Article extends Page {
 		$user = $this->getContext()->getUser();
 		$rcid = $request->getVal( 'rcid' );
 
-		if ( !$rcid || !$this->getTitle()->quickUserCan( 'patrol', $user ) ) {
+		if ( !$rcid || !$this->getTitle()->quickwiki_UserCan( 'patrol', $user ) ) {
 			return;
 		}
 
@@ -992,10 +992,10 @@ class Article extends Page {
 		if ( $this->getTitle()->getNamespace() == NS_USER || $this->getTitle()->getNamespace() == NS_USER_TALK ) {
 			$parts = explode( '/', $this->getTitle()->getText() );
 			$rootPart = $parts[0];
-			$user = User::newFromName( $rootPart, false /* allow IP users*/ );
-			$ip = User::isIP( $rootPart );
+			$user = wiki_User::newFromName( $rootPart, false /* allow IP users*/ );
+			$ip = wiki_User::isIP( $rootPart );
 
-			if ( !($user && $user->isLoggedIn()) && !$ip ) { # User does not exist
+			if ( !($user && $user->isLoggedIn()) && !$ip ) { # wiki_User does not exist
 				$outputPage->wrapWikiMsg( "<div class=\"mw-userpage-userdoesnotexist error\">\n\$1\n</div>",
 					array( 'userpage-userdoesnotexist-view', wfEscapeWikiText( $rootPart ) ) );
 			} elseif ( $user->isBlocked() ) { # Show log extract if the user is currently blocked
@@ -1045,8 +1045,8 @@ class Article extends Page {
 		} elseif ( $this->getTitle()->getNamespace() === NS_MEDIAWIKI ) {
 			// Use the default message text
 			$text = $this->getTitle()->getDefaultMessageText();
-		} elseif ( $this->getTitle()->quickUserCan( 'create', $this->getContext()->getUser() )
-			&& $this->getTitle()->quickUserCan( 'edit', $this->getContext()->getUser() )
+		} elseif ( $this->getTitle()->quickwiki_UserCan( 'create', $this->getContext()->getUser() )
+			&& $this->getTitle()->quickwiki_UserCan( 'edit', $this->getContext()->getUser() )
 		) {
 			$text = wfMessage( 'noarticletext' )->plain();
 		} else {
@@ -1136,7 +1136,7 @@ class Article extends Page {
 		$tdtime = $language->userTime( $timestamp, $user );
 
 		# Show user links if allowed to see them. If hidden, then show them only if requested...
-		$userlinks = Linker::revUserTools( $revision, !$unhide );
+		$userlinks = Linker::revwiki_UserTools( $revision, !$unhide );
 
 		$infomsg = $current && !wfMessage( 'revision-info-current' )->isDisabled()
 			? 'revision-info-current'
@@ -1613,10 +1613,10 @@ class Article extends Page {
 	 * @since 1.16 (r52326) for LiquidThreads
 	 *
 	 * @param $oldid mixed integer Revision ID or null
-	 * @param $user User The relevant user
+	 * @param $user wiki_User The relevant user
 	 * @return ParserOutput or false if the given revsion ID is not found
 	 */
-	public function getParserOutput( $oldid = null, User $user = null ) {
+	public function getParserOutput( $oldid = null, wiki_User $user = null ) {
 		if ( $user === null ) {
 			$parserOptions = $this->getParserOptions();
 		} else {
@@ -1709,7 +1709,7 @@ class Article extends Page {
 	}
 
 	/**
-	 * User-interface handler for the "watch" action.
+	 * wiki_User-interface handler for the "watch" action.
 	 * Requires Request to pass a token as of 1.18.
 	 * @deprecated since 1.18
 	 */
@@ -1732,7 +1732,7 @@ class Article extends Page {
 	}
 
 	/**
-	 * User interface handler for the "unwatch" action.
+	 * wiki_User interface handler for the "unwatch" action.
 	 * Requires Request to pass a token as of 1.18.
 	 * @deprecated since 1.18
 	 */
@@ -1829,10 +1829,10 @@ class Article extends Page {
 	 * @param $expiry array
 	 * @param $cascade bool
 	 * @param $reason string
-	 * @param $user User
+	 * @param $user wiki_User
 	 * @return Status
 	 */
-	public function doUpdateRestrictions( array $limit, array $expiry, &$cascade, $reason, User $user ) {
+	public function doUpdateRestrictions( array $limit, array $expiry, &$cascade, $reason, wiki_User $user ) {
 		return $this->mPage->doUpdateRestrictions( $limit, $expiry, $cascade, $reason, $user );
 	}
 
@@ -1865,10 +1865,10 @@ class Article extends Page {
 	 * @param $token
 	 * @param $bot
 	 * @param $resultDetails
-	 * @param $user User
+	 * @param $user wiki_User
 	 * @return array
 	 */
-	public function doRollback( $fromP, $summary, $token, $bot, &$resultDetails, User $user = null ) {
+	public function doRollback( $fromP, $summary, $token, $bot, &$resultDetails, wiki_User $user = null ) {
 		$user = is_null( $user ) ? $this->getContext()->getUser() : $user;
 		return $this->mPage->doRollback( $fromP, $summary, $token, $bot, $resultDetails, $user );
 	}
@@ -1878,10 +1878,10 @@ class Article extends Page {
 	 * @param $summary
 	 * @param $bot
 	 * @param $resultDetails
-	 * @param $guser User
+	 * @param $guser wiki_User
 	 * @return array
 	 */
-	public function commitRollback( $fromP, $summary, $bot, &$resultDetails, User $guser = null ) {
+	public function commitRollback( $fromP, $summary, $bot, &$resultDetails, wiki_User $guser = null ) {
 		$guser = is_null( $guser ) ? $this->getContext()->getUser() : $guser;
 		return $this->mPage->commitRollback( $fromP, $summary, $bot, $resultDetails, $guser );
 	}

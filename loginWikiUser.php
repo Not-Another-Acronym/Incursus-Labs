@@ -1,22 +1,29 @@
 <?php
+	$old_cwd = getcwd();
+	chdir("../w/");
+	global $IP, $haclgIP, $haclgNamespaceIndex, $wgExtraNamespaces, $wgNamespaceAliases,
+		$wgAutoloadClasses, $wgObjectCaches, $request, $wgRequest, $wgAuth,
+       		$wgNamespacesWithSubpages, $wgLanguageCode, $haclgContLang, $wgExtensionFunctions,
+		$wgExtensionMessagesFiles, $wgVersion, $user, $wgContLang, $wgLocalisationCacheConf;
+	$haclgIP = "../w/";
+	$IP = "../w/";
 	define( 'MW_NO_SETUP', true );
-	putenv("MW_INSTALL_PATH=../w/");
-	define( 'MW_API', true );
-    if ( isset( $_SERVER['MW_COMPILED'] ) ) {
-        require ( 'core/includes/WebStart.php' );
-		require ( 'core/includes/GlobalFunctions.php' );
+	set_include_path(get_include_path() . PATH_SEPARATOR . "/var/www/html/w" . PATH_SEPARATOR . "/var/www/html/phpBB");
+    	if ( isset( $_SERVER['MW_COMPILED'] ) ) {
+       		require_once ( 'core/includes/WebStart.php' );
+		require_once ( 'core/includes/GlobalFunctions.php' );
 	} else {
-        require ( '../w/includes/WebStart.php' );
-		require ( '../w/includes/GlobalFunctions.php' );
+	        require_once ( 'includes/WebStart.php' );
+		require_once ( 'includes/GlobalFunctions.php' );
 	}
 	$wgRequest = new WebRequest;
-	$wgMemc = wfGetMainCache();
+/*	$wgMemc = wfGetMainCache();
 	$messageMemc = wfGetMessageCacheStorage();
 	$parserMemc = wfGetParserCacheStorage();
-	$wgLangConvMemc = wfGetLangConverterCacheStorage();
+	$wgLangConvMemc = wfGetLangConverterCacheStorage();*/
 	$wgContLang = Language::factory( $wgLanguageCode );
 	$wgContLang->initEncoding();
-	$wgContLang->initContLang();
+	$wgContLang->initContLang();/*
 	$wgCanonicalNamespaceNames = array(
 		NS_MEDIA            => 'Media',
 		NS_SPECIAL          => 'Special',
@@ -35,24 +42,24 @@
 		NS_HELP_TALK        => 'Help_talk',
 		NS_CATEGORY         => 'Category',
 		NS_CATEGORY_TALK    => 'Category_talk',
-	);
-	$user = User::newFromSession();
+	);*/
+	$user = wiki_User::newFromSession();
    	if ( !$user->isAnon() ) {
-    	$user->doLogout(); // Logout mismatched user.
+    		$user->doLogout(); // Logout mismatched user.
    	}	
-    // If the login form returns NEED_TOKEN try once more with the right token
-    $trycount = 0;
-    $token = '';
-    $errormessage = '';
-    do {
-    	$tryagain = false;
-        // Submit a fake login form to authenticate the user.
-        $params = new FauxRequest( array(
+    	// If the login form returns NEED_TOKEN try once more with the right token
+	$trycount = 0;
+   	 $token = '';
+    	$errormessage = '';
+    	do {
+    		$tryagain = false;
+        	// Submit a fake login form to authenticate the user.
+        	$params = new FauxRequest( array(
         	'wpName' => $_POST["naa_loginname"],
-            'wpPassword' => $_POST["naa_password"],
-            'wpDomain' => '',
-            'wpLoginToken' => $token,
-            'wpRemember' => ''
+        	'wpPassword' => $_POST["naa_password"],
+		'wpDomain' => '',
+            	'wpLoginToken' => $token,
+            	'wpRemember' => ''
         ) );
         // Authenticate user data will automatically create new users.
         $loginForm = new LoginForm( $params );
@@ -102,5 +109,5 @@
    $cookieToken = $wgUser->mToken;
    $cookieUserID = $wgUser->mId;
    $cookieUserName = $wgUser->mName;
-
+        chdir($old_cwd);
 ?>

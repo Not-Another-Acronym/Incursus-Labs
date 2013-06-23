@@ -26,7 +26,7 @@ $digitTransformTable = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'འོག་ཐིག་འཐེན་པ།',
 'tog-justify' => 'ཚིག་གི་ཚད་སྙོམས་པ།',
 'tog-hideminor' => 'རྩོམ་སྒྲིག་ཆུང་ཚགས་སྦས་བ།',
@@ -508,7 +508,7 @@ $messages = array(
 'prefs-info' => 'རྨང་གཞིའི་གནས་ཚུལ།',
 'prefs-signature' => 'མིང་རྟགས།',
 
-# User rights
+# wiki_User rights
 'userrights-user-editname' => 'སྤྱོད་མིང་ཞིག་འཇུག་པ།',
 'editusergroup' => 'སྤྱོད་མིའི་ཚོ་ཁག་རྩོམ་སྒྲིག',
 'saveusergroups' => 'སྤྱོད་མིའི་ཚོ་ཁག་ཉར་ཚགས།',
@@ -530,7 +530,7 @@ $messages = array(
 'right-edit' => 'ཤོག་ངོས་རྩོམ་སྒྲིག',
 'right-delete' => 'ཤོག་ངོས་སུབ་པ།',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'སྤྱོད་མིའི་ཐོབ་ཐང་།',
 'rightsnone' => '(སྟོང་པ།)',
 

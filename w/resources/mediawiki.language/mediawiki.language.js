@@ -48,7 +48,7 @@ var language = {
 		if ( !forms || forms.length === 0 ) {
 			return '';
 		}
-		var pluralRules = mw.language.getData( mw.config.get( 'wgUserLanguage' ), 'pluralRules' );
+		var pluralRules = mw.language.getData( mw.config.get( 'wgwiki_UserLanguage' ), 'pluralRules' );
 		if ( !pluralRules ) {
 			// default fallback.
 			return ( count === 1 ) ? forms[0] : forms[1];
@@ -146,7 +146,7 @@ var language = {
 	 * @return {String}
 	 */
 	convertGrammar: function ( word, form ) {
-		var grammarForms = mw.language.getData( mw.config.get( 'wgUserLanguage' ), 'grammarForms' );
+		var grammarForms = mw.language.getData( mw.config.get( 'wgwiki_UserLanguage' ), 'grammarForms' );
 		if ( grammarForms && grammarForms[form] ) {
 			return grammarForms[form][word] || word;
 		}
@@ -154,7 +154,7 @@ var language = {
 	},
 
 	// Digit Transform Table, populated by language classes where applicable
-	digitTransformTable: mw.language.getData( mw.config.get( 'wgUserLanguage' ), 'digitTransformTable' )
+	digitTransformTable: mw.language.getData( mw.config.get( 'wgwiki_UserLanguage' ), 'digitTransformTable' )
 };
 
 $.extend( mw.language, language );

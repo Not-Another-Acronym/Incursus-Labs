@@ -18,7 +18,7 @@
 $fallback = 'es';
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Miñcewirilpe lasun',
 'tog-justify' => 'Xvrvmpe cijkantvkun',
 'tog-showtoolbar' => 'Pengelün kümeelün ñi chemkün (JavaScript duamyengey)',
@@ -251,7 +251,7 @@ $messages = array(
 
 Chi kiñe rakizuamün ta pünefalkülenuchi kalelu kam nülkükawlelu liftungepelu wülngiñ ñi rupañmael.
 
-Femnuale, welulkafuy feychi küzauwe. Feypimi tüfachi dungu kiñe [[Special:ListUsers/sysop|ngünefe]]. Wirituymi feychi URL.',
+Femnuale, welulkafuy feychi küzauwe. Feypimi tüfachi dungu kiñe [[Special:Listwiki_Users/sysop|ngünefe]]. Wirituymi feychi URL.',
 'missingarticle-rev' => '(malün ñi rakin: $1)',
 'filedeleteerror' => 'Pepiñamümüngelay "$1".',
 'filenotfound' => 'Pepipelafuy "$1".',
@@ -453,7 +453,7 @@ Rulpakünuy feychi kangelkülelu dungu.",
 'prefs-help-email' => 'Mülelay mi eluael feychi werküwe, welu zuamafimi wüñoeltuael tami nülawe ngoyünienngelu.',
 'prefs-help-email-others' => 'Müley kiñe lasun tami wülngiñ kam nütramkawe wülngiñ mew amulam werküwe mew. Tami werküwe ñi üy pengelngelay.',
 
-# User rights
+# wiki_User rights
 'userrights-user-editname' => 'Wirin kiñe üy kellufe mew:',
 
 # Groups
@@ -475,7 +475,7 @@ Rulpakünuy feychi kangelkülelu dungu.",
 'right-browsearchive' => 'kintun pakina ñamümüngelu',
 'right-undelete' => 'Wüñoñamümün kiñe pakina',
 
-# User rights log
+# wiki_User rights log
 'rightsnone' => 'chemnorume',
 
 # Associated actions - in the sentence "You do not have permission to X"
@@ -631,7 +631,7 @@ Fey ñi chumngen mülelu ($2 fey ñi chumngen wülngiñ) pengeli tüfa mew.',
 'linksearch-ok' => 'Kintun',
 'linksearch-line' => '$1 nülkükawlelu $2 mew',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusers-submit' => 'Pengelün',
 
 # Special:Log/newusers

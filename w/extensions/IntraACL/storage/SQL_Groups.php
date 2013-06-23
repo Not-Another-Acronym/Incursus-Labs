@@ -192,7 +192,7 @@ class IntraACL_SQL_Groups
      *         The ID of the user who is added to the group.
      *
      */
-    public function addUserToGroup($groupID, $userID) {
+    public function addwiki_UserToGroup($groupID, $userID) {
     }
 
     /**
@@ -218,7 +218,7 @@ class IntraACL_SQL_Groups
      *         The ID of the user who is removed from the group.
      *
      */
-    public function removeUserFromGroup($groupID, $userID) {
+    public function removewiki_UserFromGroup($groupID, $userID) {
     }
 
     /**

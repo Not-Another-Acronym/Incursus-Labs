@@ -27,7 +27,7 @@ $wgVectorFeatures = array(
 );
 
 // The Vector skin has a basic version of simple search, which is a prerequisite for the enhanced one
-$wgDefaultUserOptions['vector-simplesearch'] = 1;
+$wgDefaultwiki_UserOptions['vector-simplesearch'] = 1;
 
 // Enable bucket testing for new version of collapsible nav
 $wgCollapsibleNavBucketTest = false;

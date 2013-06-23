@@ -164,7 +164,7 @@ $messages = array(
 
 # Short words for each namespace, by default used in the namespace tab in monobook
 'nstab-main' => 'Tasna',
-'nstab-user' => 'Tasna n User',
+'nstab-user' => 'Tasna n wiki_User',
 'nstab-project' => 'Tasna usenfar',
 'nstab-image' => 'Asatul',
 'nstab-template' => 'Tamudemt',
@@ -285,7 +285,7 @@ tjadjid-anɣ Ɛawt ila qa d cekk ig yuran manaya, niɣ tesneɣlet-id zi ca n uɣ
 'template-protected' => '(twaḥḍa)',
 'template-semiprotected' => '(semi-protected)',
 'nocreatetext' => '{{SITENAME}} war iqqim ca itejja iwdan ad ggen Tasniwin timaynutin.
-tzemred addewred ɣar deffar, niɣ [[Special:UserLogin|Adeff niɣ egg amiḍan]].',
+tzemred addewred ɣar deffar, niɣ [[Special:wiki_UserLogin|Adeff niɣ egg amiḍan]].',
 'recreate-moveddeleted-warn' => "'''Ɣark: qac tegged Tasna ig itwaksen zzat uya.'''
 
 Ẓar aɣmis n umzruy n usfad n Tasna ya bac ad tsenad ma mliḥ ad tkemled aẓṛag.",
@@ -355,7 +355,7 @@ mala tucit-id, ataf Lxdant inec a tetwassan ila inec.',
 
 'grouppage-sysop' => '{{ns:project}}:inedbalen',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Aghmis n talghut n izrfan n usqdac',
 
 # Recent changes
@@ -511,7 +511,7 @@ Tasniwin di [[Special:Watchlist|your watchlist]] d '''tizurarin'''.",
 # Special:LinkSearch
 'linksearch-ok' => 'Tarzzut',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusers-submit' => 'Smmrad',
 
 # E-mail user

@@ -79,7 +79,7 @@ class HACLRight
     protected $mActions;        // int: A bit-field for the allowed actions.
     protected $mGroups;         // array(int): IDs of the groups for which this
                                 //             right applies
-    protected $mUsers;          // array(int): IDs of the users for which this
+    protected $mwiki_Users;          // array(int): IDs of the users for which this
                                 //             right applies
     protected $mDescription;    // string: A decription of this right
     protected $mOriginID;       // int: ID of the security descriptor or
@@ -100,7 +100,7 @@ class HACLRight
      *         internally stored as group IDs. Invalid values cause an exception.
      * @param array<int/string>/string $users
      *         An array or a string of comma separated of user names or IDs that
-     *         get this right. User names are converted and
+     *         get this right. wiki_User names are converted and
      *         internally stored as user IDs. Invalid values cause an exception.
      * @param string $description
      *         A description of this right
@@ -120,7 +120,7 @@ class HACLRight
         $this->mActions = $this->completeActions($actions);
 
         $this->setGroups($groups);
-        $this->setUsers($users);
+        $this->setwiki_Users($users);
 
         $this->mDescription = $description;
         $this->mOriginID    = $originID;
@@ -132,7 +132,7 @@ class HACLRight
     public function getRightID()        {return $this->mRightID;}
     public function getActions()        {return $this->mActions;}
     public function getGroups()         {return $this->mGroups;}
-    public function getUsers()          {return $this->mUsers;}
+    public function getUsers()          {return $this->mwiki_Users;}
     public function getDescription()    {return $this->mDescription;}
     public function getName()           {return $this->mName;}
     public function getOriginID()       {return $this->mOriginID;}
@@ -234,8 +234,8 @@ class HACLRight
      * in security descriptors (or predefined rights) which store who can modify
      * their content.
      *
-     * @param User/string/int $user
-     *         User-object, name of a user or ID of a user who wants to modify this
+     * @param wiki_User/string/int $user
+     *         wiki_User-object, name of a user or ID of a user who wants to modify this
      *         right. If <null>, the currently logged in user is assumed.
      *
      * @param boolean $throwException
@@ -265,8 +265,8 @@ class HACLRight
     /**
      * Checks if the given user has this right.
      *
-     * @param User/string/int $user
-     *         User-object, name of a user or ID of a user who wants to modify this
+     * @param wiki_User/string/int $user
+     *         wiki_User-object, name of a user or ID of a user who wants to modify this
      *         group. If <null>, the currently logged in user is assumed.
      *
      * @return boolean
@@ -280,16 +280,16 @@ class HACLRight
      *             ...if the right is not granted and an exception is requested
      *
      */
-    public function grantedForUser($user, $throwException = false)
+    public function grantedForwiki_User($user, $throwException = false)
     {
         // Get the ID of the user who wants to get this right
-        list($userID, $userName) = haclfGetUserID($user);
+        list($userID, $userName) = haclfGetwiki_UserID($user);
         // Check if the right is directly granted for the user
-        if (in_array($userID, $this->mUsers))
+        if (in_array($userID, $this->mwiki_Users))
             return true;
 
         // Check if this right is granted to registered users (ID = -1)
-        if ($userID > 0 && in_array(-1, $this->mUsers) || in_array(0, $this->mUsers))
+        if ($userID > 0 && in_array(-1, $this->mwiki_Users) || in_array(0, $this->mwiki_Users))
             return true;
 
         // Check if the user belongs to a group that gets this right
@@ -301,8 +301,8 @@ class HACLRight
             if (empty($userName))
             {
                 // only user id is given => retrieve the name of the user
-                $user = User::newFromId($userID);
-                $userName = ($user) ? $user->getId() : "(User-ID: $userID)";
+                $user = wiki_User::newFromId($userID);
+                $userName = ($user) ? $user->getId() : "(wiki_User-ID: $userID)";
             }
             throw new HACLRightException(HACLRightException::RIGHT_NOT_GRANTED,
                                          $this->mRightID, $userName);
@@ -360,32 +360,32 @@ class HACLRight
      *
      * @param array<int/string>/string $users
      *         An array or a string of comma separated of user names or IDs that
-     *      get this right. User names are converted and
+     *      get this right. wiki_User names are converted and
      *      internally stored as user IDs. Invalid values cause an exception.
      * @throws
      *         HACLException(HACLException::UNKNOWN_USER)
      *             ... if the user is invalid
      *
      */
-    public function setUsers($users) {
+    public function setwiki_Users($users) {
         if (empty($users)) {
-            $this->mUsers = array();
+            $this->mwiki_Users = array();
             return;
         }
         if (is_string($users)) {
-            // Users are given as comma separated string
+            // wiki_Users are given as comma separated string
             // Split into an array
             $users = explode(',', $users);
         }
         if (is_array($users)) {
-            $this->mUsers = $users;
+            $this->mwiki_Users = $users;
             for ($i = 0; $i < count($users); ++$i) {
                 $mu = $users[$i];
-                list($uid, $uname) = haclfGetUserID(trim($mu));
-                $this->mUsers[$i] = $uid;
+                list($uid, $uname) = haclfGetwiki_UserID(trim($mu));
+                $this->mwiki_Users[$i] = $uid;
             }
         } else {
-            $this->mUsers = array();
+            $this->mwiki_Users = array();
         }
     }
 
@@ -410,8 +410,8 @@ class HACLRight
      * Deletes this right from the database. All references to this right are
      * deleted as well.
      *
-     * @param User/string/int $user
-     *         User-object, name of a user or ID of a user who wants to delete this
+     * @param wiki_User/string/int $user
+     *         wiki_User-object, name of a user or ID of a user who wants to delete this
      *         group. If <null>, the currently logged in user is assumed.
      *
      * @throws

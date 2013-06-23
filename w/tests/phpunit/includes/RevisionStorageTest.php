@@ -310,7 +310,7 @@ class RevisionStorageTest extends MediaWikiTestCase {
 		$this->assertEquals( 'some testing text', $rev->getText() );
 	}
 
-	public function dataUserWasLastToEdit() {
+	public function datawiki_UserWasLastToEdit() {
 		return array(
 			array( #0
 				3, true, # actually the last edit
@@ -328,25 +328,25 @@ class RevisionStorageTest extends MediaWikiTestCase {
 	}
 
 	/**
-	 * @dataProvider dataUserWasLastToEdit
+	 * @dataProvider datawiki_UserWasLastToEdit
 	 */
-	public function testUserWasLastToEdit( $sinceIdx, $expectedLast ) {
-		$userA = \User::newFromName( "RevisionStorageTest_userA" );
-		$userB = \User::newFromName( "RevisionStorageTest_userB" );
+	public function testwiki_UserWasLastToEdit( $sinceIdx, $expectedLast ) {
+		$userA = \wiki_User::newFromName( "RevisionStorageTest_userA" );
+		$userB = \wiki_User::newFromName( "RevisionStorageTest_userB" );
 
 		if ( $userA->getId() === 0 ) {
-			$userA = \User::createNew( $userA->getName() );
+			$userA = \wiki_User::createNew( $userA->getName() );
 		}
 
 		if ( $userB->getId() === 0 ) {
-			$userB = \User::createNew( $userB->getName() );
+			$userB = \wiki_User::createNew( $userB->getName() );
 		}
 
 		$dbw = wfGetDB( DB_MASTER );
 		$revisions = array();
 
 		// create revisions -----------------------------
-		$page = WikiPage::factory( Title::newFromText( 'RevisionStorageTest_testUserWasLastToEdit' ) );
+		$page = WikiPage::factory( Title::newFromText( 'RevisionStorageTest_testwiki_UserWasLastToEdit' ) );
 
 		# zero
 		$revisions[0] = new Revision( array(

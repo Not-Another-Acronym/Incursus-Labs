@@ -71,9 +71,9 @@ interface IContextSource {
 	public function getOutput();
 
 	/**
-	 * Get the User object
+	 * Get the wiki_User object
 	 *
-	 * @return User
+	 * @return wiki_User
 	 */
 	public function getUser();
 

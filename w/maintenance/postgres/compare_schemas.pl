@@ -269,7 +269,7 @@ bool SMALLINT # Sigh
 };
 ## Allow specific exceptions to the above
 my $COLMAPOK = q{
-## User inputted text strings:
+## wiki_User inputted text strings:
 ar_comment      tinyblob       TEXT
 fa_description  tinyblob       TEXT
 img_description tinyblob       TEXT

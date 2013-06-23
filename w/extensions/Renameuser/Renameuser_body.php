@@ -1,6 +1,6 @@
 <?php
 if ( !defined( 'MEDIAWIKI' ) ) {
-	echo "RenameUser extension\n";
+	echo "Renamewiki_User extension\n";
 	exit( 1 );
 }
 
@@ -22,13 +22,13 @@ class SpecialRenameuser extends SpecialPage {
 	 * @param mixed $par Parameter passed to the page
 	 */
 	public function execute( $par ) {
-		global $wgOut, $wgUser, $wgRequest, $wgContLang;
+		global $wgOut, $wgwiki_User, $wgRequest, $wgContLang;
 		global $wgCapitalLinks;
 
 		$this->setHeaders();
 		$wgOut->addWikiMsg( 'renameuser-summary' );
 
-		if ( !$wgUser->isAllowed( 'renameuser' ) ) {
+		if ( !$wgwiki_User->isAllowed( 'renameuser' ) ) {
 			$wgOut->permissionRequired( 'renameuser' );
 			return;
 		}
@@ -38,7 +38,7 @@ class SpecialRenameuser extends SpecialPage {
 			return;
 		}
 
-		if( $wgUser->isBlocked() ){
+		if( $wgwiki_User->isBlocked() ){
 			$wgOut->blockedPage();
 		}
 
@@ -49,7 +49,7 @@ class SpecialRenameuser extends SpecialPage {
 		$newusername = Title::makeTitleSafe( NS_USER, $wgContLang->ucfirst( $wgRequest->getText( 'newusername' ) ) );
 		$oun = is_object( $oldusername ) ? $oldusername->getText() : '';
 		$nun = is_object( $newusername ) ? $newusername->getText() : '';
-		$token = $wgUser->editToken();
+		$token = $wgwiki_User->editToken();
 		$reason = $wgRequest->getText( 'reason' );
 
 		$move_checked = $wgRequest->getBool( 'movepages', !$wgRequest->wasPosted());
@@ -57,7 +57,7 @@ class SpecialRenameuser extends SpecialPage {
 
 		$warnings = array();
 		if ( $oun && $nun && !$wgRequest->getCheck( 'confirmaction' )  ) {
-			wfRunHooks( 'RenameUserWarning', array( $oun, $nun, &$warnings ) );
+			wfRunHooks( 'Renamewiki_UserWarning', array( $oun, $nun, &$warnings ) );
 		}
 
 		$wgOut->addHTML(
@@ -90,7 +90,7 @@ class SpecialRenameuser extends SpecialPage {
 				"</td>
 			</tr>"
 		);
-		if ( $wgUser->isAllowed( 'move' ) ) {
+		if ( $wgwiki_User->isAllowed( 'move' ) ) {
 			$wgOut->addHTML( "
 				<tr>
 					<td>&#160;
@@ -102,7 +102,7 @@ class SpecialRenameuser extends SpecialPage {
 				</tr>"
 			);
 
-			if ( $wgUser->isAllowed( 'suppressredirect' ) ) {
+			if ( $wgwiki_User->isAllowed( 'suppressredirect' ) ) {
 				$wgOut->addHTML( "
 					<tr>
 						<td>&#160;
@@ -178,7 +178,7 @@ class SpecialRenameuser extends SpecialPage {
 		} elseif ( $warnings ) {
 			# Let user read warnings
 			return;
-		} elseif ( !$wgRequest->wasPosted() || !$wgUser->matchEditToken( $wgRequest->getVal( 'token' ) ) ) {
+		} elseif ( !$wgRequest->wasPosted() || !$wgwiki_User->matchEditToken( $wgRequest->getVal( 'token' ) ) ) {
 			$wgOut->wrapWikiMsg( "<div class=\"errorbox\">$1</div>", 'renameuser-error-request' );
 			return;
 		} elseif ( !is_object( $oldusername ) ) {
@@ -195,8 +195,8 @@ class SpecialRenameuser extends SpecialPage {
 		}
 
 		// Suppress username validation of old username
-		$olduser = User::newFromName( $oldusername->getText(), false );
-		$newuser = User::newFromName( $newusername->getText(), 'creatable' );
+		$olduser = wiki_User::newFromName( $oldusername->getText(), false );
+		$newuser = wiki_User::newFromName( $newusername->getText(), 'creatable' );
 
 		// It won't be an object if for instance "|" is supplied as a value
 		if ( !is_object( $olduser ) ) {
@@ -204,7 +204,7 @@ class SpecialRenameuser extends SpecialPage {
 				array( 'renameusererrorinvalid', $oldusername->getText() ) );
 			return;
 		}
-		if ( !is_object( $newuser ) || !User::isCreatableName( $newuser->getName() ) ) {
+		if ( !is_object( $newuser ) || !wiki_User::isCreatableName( $newuser->getName() ) ) {
 			$wgOut->wrapWikiMsg( "<div class=\"errorbox\">$1</div>",
 				array( 'renameusererrorinvalid', $newusername->getText() ) );
 			return;
@@ -245,10 +245,10 @@ class SpecialRenameuser extends SpecialPage {
 		}
 
 		// Always get the edits count, it will be used for the log message
-		$contribs = User::edits( $uid );
+		$contribs = wiki_User::edits( $uid );
 
 		// Give other affected extensions a chance to validate or abort
-		if ( !wfRunHooks( 'RenameUserAbort', array( $uid, $oldusername->getText(), $newusername->getText() ) ) ) {
+		if ( !wfRunHooks( 'Renamewiki_UserAbort', array( $uid, $oldusername->getText(), $newusername->getText() ) ) ) {
 			return;
 		}
 
@@ -260,8 +260,8 @@ class SpecialRenameuser extends SpecialPage {
 
 		// If this user is renaming his/herself, make sure that Title::moveTo()
 		// doesn't make a bunch of null move edits under the old name!
-		if ( $wgUser->getId() == $uid ) {
-			$wgUser->setName( $newusername->getText() );
+		if ( $wgwiki_User->getId() == $uid ) {
+			$wgwiki_User->setName( $newusername->getText() );
 		}
 
 		// Log this rename
@@ -270,7 +270,7 @@ class SpecialRenameuser extends SpecialPage {
 			$wgContLang->formatNum( $contribs ), $reason ), $newusername->getText() );
 
 		// Move any user pages
-		if ( $wgRequest->getCheck( 'movepages' ) && $wgUser->isAllowed( 'move' ) ) {
+		if ( $wgRequest->getCheck( 'movepages' ) && $wgwiki_User->isAllowed( 'move' ) ) {
 			$dbr = wfGetDB( DB_SLAVE );
 
 			$pages = $dbr->select(
@@ -286,7 +286,7 @@ class SpecialRenameuser extends SpecialPage {
 
 			$suppressRedirect = false;
 
-			if ( $wgRequest->getCheck( 'suppressredirect' ) && $wgUser->isAllowed( 'suppressredirect' ) ) {
+			if ( $wgRequest->getCheck( 'suppressredirect' ) && $wgwiki_User->isAllowed( 'suppressredirect' ) ) {
 				$suppressRedirect = true;
 			}
 
@@ -408,7 +408,7 @@ class RenameuserSQL {
 		$this->tables['filearchive'] = array('fa_user_text','fa_user');
 		$this->tablesJob = array(); // Slow updates
 		// If this user has a large number of edits, use the jobqueue
-		if ( User::edits( $this->uid ) > RENAMEUSER_CONTRIBJOB ) {
+		if ( wiki_User::edits( $this->uid ) > RENAMEUSER_CONTRIBJOB ) {
 			$this->tablesJob['revision'] = array( 'rev_user_text', 'rev_user', 'rev_timestamp' );
 			$this->tablesJob['archive'] = array( 'ar_user_text', 'ar_user', 'ar_timestamp' );
 			$this->tablesJob['logging'] = array( 'log_user_text', 'log_user', 'log_timestamp' );
@@ -424,7 +424,7 @@ class RenameuserSQL {
 			$this->tables['recentchanges'] = array( 'rc_user_text', 'rc_user' );
 		}
 
-		wfRunHooks( 'RenameUserSQL', array( $this ) );
+		wfRunHooks( 'Renamewiki_UserSQL', array( $this ) );
 	}
 
 	/**
@@ -437,7 +437,7 @@ class RenameuserSQL {
 
 		$dbw = wfGetDB( DB_MASTER );
 		$dbw->begin();
-		wfRunHooks( 'RenameUserPreRename', array( $this->uid, $this->old, $this->new ) );
+		wfRunHooks( 'Renamewiki_UserPreRename', array( $this->uid, $this->old, $this->new ) );
 
 		// Rename and touch the user before re-attributing edits,
 		// this avoids users still being logged in and making new edits while
@@ -453,9 +453,9 @@ class RenameuserSQL {
 		}
 		// Reset token to break login with central auth systems.
 		// Again, avoids user being logged in with old name.
-		$user = User::newFromId( $this->uid );
-		$authUser = $wgAuth->getUserInstance( $user );
-		$authUser->resetAuthToken();
+		$user = wiki_User::newFromId( $this->uid );
+		$authwiki_User = $wgAuth->getUserInstance( $user );
+		$authwiki_User->resetAuthToken();
 
 		// Delete from memcached.
 		$wgMemc->delete( wfMemcKey( 'user', 'id', $this->uid ) );
@@ -486,7 +486,7 @@ class RenameuserSQL {
 			);
 		}
 
-		// Increase time limit (like CheckUser); this can take a while...
+		// Increase time limit (like Checkwiki_User); this can take a while...
 		if ( $this->tablesJob ) {
 			wfSuppressWarnings();
 			set_time_limit( 120 );
@@ -532,7 +532,7 @@ class RenameuserSQL {
 				if ( !$row ) {
 					# If there are any job rows left, add it to the queue as one job
 					if ( $jobParams['count'] > 0 ) {
-						$jobs[] = Job::factory( 'renameUser', $oldTitle, $jobParams );
+						$jobs[] = Job::factory( 'renamewiki_User', $oldTitle, $jobParams );
 					}
 					break;
 				}
@@ -547,7 +547,7 @@ class RenameuserSQL {
 				$jobParams['count']++;
 				# Once a job has $wgUpdateRowsPerJob rows, add it to the queue
 				if ( $jobParams['count'] >= $wgUpdateRowsPerJob ) {
-					$jobs[] = Job::factory( 'renameUser', $oldTitle, $jobParams );
+					$jobs[] = Job::factory( 'renamewiki_User', $oldTitle, $jobParams );
 					$jobParams['minTimestamp'] = '0';
 					$jobParams['maxTimestamp'] = '0';
 					$jobParams['count'] = 0;
@@ -567,9 +567,9 @@ class RenameuserSQL {
 		$wgMemc->delete( wfMemcKey( 'user', 'id', $this->uid ) );
 
 		// Clear caches and inform authentication plugins
-		$user = User::newFromId( $this->uid );
+		$user = wiki_User::newFromId( $this->uid );
 		$wgAuth->updateExternalDB( $user );
-		wfRunHooks( 'RenameUserComplete', array( $this->uid, $this->old, $this->new ) );
+		wfRunHooks( 'Renamewiki_UserComplete', array( $this->uid, $this->old, $this->new ) );
 
 		wfProfileOut( __METHOD__ );
 		return true;

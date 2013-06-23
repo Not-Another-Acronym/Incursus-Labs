@@ -52,28 +52,28 @@ class GenderCache {
 	 */
 	protected function getDefault() {
 		if ( $this->default === null ) {
-			$this->default = User::getDefaultOption( 'gender' );
+			$this->default = wiki_User::getDefaultOption( 'gender' );
 		}
 		return $this->default;
 	}
 
 	/**
 	 * Returns the gender for given username.
-	 * @param $username String or User: username
+	 * @param $username String or wiki_User: username
 	 * @param $caller String: the calling method
 	 * @return String
 	 */
 	public function getGenderOf( $username, $caller = '' ) {
-		global $wgUser;
+		global $wgwiki_User;
 
-		if( $username instanceof User ) {
+		if( $username instanceof wiki_User ) {
 			$username = $username->getName();
 		}
 
-		$username = self::normalizeUsername( $username );
+		$username = self::normalizewiki_Username( $username );
 		if ( !isset( $this->cache[$username] ) ) {
 
-			if ( $this->misses >= $this->missLimit && $wgUser->getName() !== $username ) {
+			if ( $this->misses >= $this->missLimit && $wgwiki_User->getName() !== $username ) {
 				if( $this->misses === $this->missLimit ) {
 					$this->misses++;
 					wfDebug( __METHOD__ . ": too many misses, returning default onwards\n" );
@@ -144,13 +144,13 @@ class GenderCache {
 
 		$usersToCheck = array();
 		foreach ( (array) $users as $value ) {
-			$name = self::normalizeUsername( $value );
+			$name = self::normalizewiki_Username( $value );
 			// Skip users whose gender setting we already know
 			if ( !isset( $this->cache[$name] ) ) {
 				// For existing users, this value will be overwritten by the correct value
 				$this->cache[$name] = $default;
 				// query only for valid names, which can be in the database
-				if( User::isValidUserName( $name ) ) {
+				if( wiki_User::isValidwiki_UserName( $name ) ) {
 					$usersToCheck[] = $name;
 				}
 			}
@@ -178,7 +178,7 @@ class GenderCache {
 		}
 	}
 
-	private static function normalizeUsername( $username ) {
+	private static function normalizewiki_Username( $username ) {
 		// Strip off subpages
 		$indexSlash = strpos( $username, '/' );
 		if ( $indexSlash !== false ) {

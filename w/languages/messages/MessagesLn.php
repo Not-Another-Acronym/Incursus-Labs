@@ -20,7 +20,7 @@ $linkPrefixExtension = true;
 $separatorTransformTable = array( ',' => "\xc2\xa0", '.' => ',' );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Kotíya sulimá na bikangisi:',
 'tog-showtoolbar' => 'Komɔ́nisa ndámbo-ndámbo (esengélí JavaScript)',
 'tog-rememberpassword' => 'Komíkundola bokitoli na molúki (ekosúkisa na {{PLURAL:$1|mokɔlɔ|mikɔlɔ}} $1)',
@@ -409,7 +409,7 @@ Ezalí listɛ́ ya nkásá gudi bizalí  na [[Special:SpecialPages|{{int:special
 
 'group-sysop-member' => 'Moyángeli',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Zuluná ya makokí ma basáleli',
 
 # Associated actions - in the sentence "You do not have permission to X"

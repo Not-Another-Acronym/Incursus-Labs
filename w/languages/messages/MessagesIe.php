@@ -121,9 +121,9 @@ $specialPageAliases = array(
 	'Unwatchedpages'            => array( 'Págines_desvigilat' ),
 	'Upload'                    => array( 'Cargar_file' ),
 	'UploadStash'               => array( 'Cargamente_stash_de_file' ),
-	'Userlogin'                 => array( 'Intrar' ),
-	'Userlogout'                => array( 'Surtida' ),
-	'Userrights'                => array( 'Jures_de_usator', 'Crear_administrator', 'Crear_machine' ),
+	'wiki_Userlogin'                 => array( 'Intrar' ),
+	'wiki_Userlogout'                => array( 'Surtida' ),
+	'wiki_Userrights'                => array( 'Jures_de_usator', 'Crear_administrator', 'Crear_machine' ),
 	'Wantedcategories'          => array( 'Categories_carit' ),
 	'Wantedfiles'               => array( 'Files_carit' ),
 	'Wantedpages'               => array( 'Págines_carit', 'Catenunes_ínperfect' ),
@@ -134,7 +134,7 @@ $specialPageAliases = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Ultracatenun:',
 'tog-justify' => 'Justificar paragrafes',
 'tog-hideminor' => 'Ocultar redactiones minori in nov changes',
@@ -401,7 +401,7 @@ Vider [[Special:Version|págine de version]].',
 Ti es usualmen causat per sequent un diferentie ne modernisat o catenun de historie por un págine que ha esset deletet.
 
 Si ti ne es li casu, vu posse have constatat un bug in li software.
-Pleser raporta it por un [[Special:ListUsers/sysop|administrator]], formant note de li URL.',
+Pleser raporta it por un [[Special:Listwiki_Users/sysop|administrator]], formant note de li URL.',
 'missingarticle-rev' => '(revision#: $1)',
 'unexpected' => 'Valor ínexpectat: "$1"="$2".',
 'badtitle' => 'Titul mal',
@@ -412,7 +412,7 @@ Function: $1<br />
 Question: $2',
 'viewsource' => 'Vider fonte',
 'viewsourcetext' => 'Vu posse vider e copiar li contenete de ti págine:',
-'titleprotected' => 'Ti titul ha esset gardat de creation per [[User:$1|$1]]. 
+'titleprotected' => 'Ti titul ha esset gardat de creation per [[wiki_User:$1|$1]]. 
 Li motive dat es "\'\'$2\'\'".',
 
 # Virus scanner
@@ -422,7 +422,7 @@ Li motive dat es "\'\'$2\'\'".',
 
 # Login and logout pages
 'logouttext' => "'''Vu ha terminat vor session.'''
-Vu posse continuar usar {{SITENAME}} anonimimen, o vu posse [[Special:UserLogin|aperter un session denov]] quam li sam usator o quam un diferent usator.
+Vu posse continuar usar {{SITENAME}} anonimimen, o vu posse [[Special:wiki_UserLogin|aperter un session denov]] quam li sam usator o quam un diferent usator.
 Nota que alcun págines posse continuar esser monstrat quam si vu esset registrat, til que vu vacua li cache de tui navigator.",
 'welcomecreation' => '== Benevenit, $1! == 
 Tui conto hat esset creat. 
@@ -570,7 +570,7 @@ Tis argumentes have esset omisset.",
 'undo-success' => 'Li redaction posse es desfat. Pleser controla li comparation sub verificar que ti es quo vu cari acter, e tande conservar li changes infra por terminar e desfar li redaction.',
 'undo-failure' => 'Li redaction ne posse esser desfat payand conflicte de redactiones.',
 'undo-norev' => 'Li redaction ne posse esser defat pro que it ne existe o esset deletet.',
-'undo-summary' => 'Desfat revision $1 per [[Special:Contributions/$2|$2]] ([[User talk:$2|discussion]])',
+'undo-summary' => 'Desfat revision $1 per [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|discussion]])',
 
 # History pages
 'viewpagelogs' => 'Vider diariumes por ti págine',
@@ -690,7 +690,7 @@ Vider li [[Special:IPBlockList|liste de bloc de IP]] por li liste de bloces e ba
 'prefs-help-email-others' => 'Vu posse anc optar por permisser altri contacter vu per e-mail complet che un catenun in tui págine de usator o págine de discussion.
 Tui adresse de e-mail ne es revelat quande altri usatores contacter vu.',
 
-# User rights
+# wiki_User rights
 'userrights' => 'Gerement de jures de usator',
 'userrights-lookup-user' => 'Gerer gruppes de usator',
 'userrights-user-editname' => 'Intrar un nómine de usator:',
@@ -704,7 +704,7 @@ Tui adresse de e-mail ne es revelat quande altri usatores contacter vu.',
 'userrights-reason' => 'Motive:',
 'userrights-no-interwiki' => 'Vu ne have permission por redacter jures de usator in altri wikis.',
 'userrights-nodatabase' => 'Funde de data $1 ne existe o ne es local.',
-'userrights-nologin' => 'Vu deve [[Special:UserLogin|registrar]] che un conto de administrator por atribuer jures de usator.',
+'userrights-nologin' => 'Vu deve [[Special:wiki_UserLogin|registrar]] che un conto de administrator por atribuer jures de usator.',
 'userrights-notallowed' => 'Tui conto ne have permission por atribuer jures de usator.',
 'userrights-changeable-col' => 'Gruppes que vu posse changear',
 'userrights-unchangeable-col' => 'Gruppes que vu ne posse changear',
@@ -720,7 +720,7 @@ Tui adresse de e-mail ne es revelat quande altri usatores contacter vu.',
 'grouppage-bureaucrat' => '{{ns:project}}:Burócrates',
 'grouppage-suppress' => '{{ns:project}}:Vigilatores',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Diarium de jures de usator',
 'rightsnone' => '(null)',
 
@@ -772,7 +772,7 @@ Págines in [[Special:Watchlist|tui liste de págines vigilat]] es '''nigri'''."
 'upload' => 'Cargar file',
 'uploadbtn' => 'Cargar file',
 'uploadnologin' => 'Vu ne ha intrat',
-'uploadnologintext' => 'Vu deve esser [[Special:UserLogin|registrat]] por cargar files.',
+'uploadnologintext' => 'Vu deve esser [[Special:wiki_UserLogin|registrat]] por cargar files.',
 'uploaderror' => 'Errore de cargament',
 'uploadtext' => "Usa li forme infra por cargar files.
 Por vider o serchar files cargat anteriorimen ear por li [[Special:FileList|liste de files cargat]], (re)cargamentes es anc registrat in li [[Special:Log/upload|diarium de cargament]], deletiones in li [[Special:Log/delete|diarium de deletion]].
@@ -813,11 +813,11 @@ $1',
 'upload-proto-error-text' => 'Cargament distant exige comense che <code>http://</code> o <code>ftp://</code>.',
 'upload-file-error' => 'Errore intern',
 'upload-file-error-text' => 'Un errore intern ocurret quande atentant crear un file temporari in li servitor.
-Pleser parla che un [[Special:ListUsers/sysop|administrator]].',
+Pleser parla che un [[Special:Listwiki_Users/sysop|administrator]].',
 'upload-misc-error' => 'Errore desconosset de cargament',
 'upload-misc-error-text' => 'Un errore desconosset ocurret durante li cargament.
 Pleser verificar que li URL es valid e accessibil e prova denov.
-Si li problema persister, parla che un [[Special:ListUsers/sysop|administrator]].',
+Si li problema persister, parla che un [[Special:Listwiki_Users/sysop|administrator]].',
 'upload-http-error' => 'Un errore HTTP ocurret: $1',
 
 # Some likely curl errors. More could be added from <http://curl.haxx.se/libcurl/c/libcurl-errors.html>
@@ -891,7 +891,7 @@ Li descrition es in li [$2 págine de descrition del file] ta e es monstrat in i
 'statistics-edits-average' => 'Valore medial de redactiones per págine',
 'statistics-views-total' => 'Total de vistas',
 'statistics-views-peredit' => 'Vider por redaction',
-'statistics-users' => '[[Special:ListUsers|Usatores]] registrat',
+'statistics-users' => '[[Special:Listwiki_Users|Usatores]] registrat',
 'statistics-users-active' => 'Usatores activ',
 'statistics-users-active-desc' => 'Usatores qui have efectuat un action in li ultim {{PLURAL:$1|die|dies}}',
 'statistics-mostpopular' => 'Págines max visitat',
@@ -984,10 +984,10 @@ Li descrition es in li [$2 págine de descrition del file] ta e es monstrat in i
 'usermaildisabled' => 'E-mail de usator desvalidat',
 'usermaildisabledtext' => 'Vu ne posse inviar e-mail por altri usatores in ti wiki',
 
-# User Messenger
+# wiki_User Messenger
 'usermessage-summary' => 'Abandonant missage del sistema',
 'usermessage-editor' => 'Missagero del sistema',
-'usermessage-template' => 'MediaWiki:UserMessage',
+'usermessage-template' => 'MediaWiki:wiki_UserMessage',
 
 # Watchlist
 'watchlist' => 'Liste de págines vigilat',
@@ -995,7 +995,7 @@ Li descrition es in li [$2 págine de descrition del file] ta e es monstrat in i
 'watchlistfor2' => 'Por $1 $2',
 'watchlistanontext' => 'Pleser $1 por vider o redacter articules in tui liste de págines vigilat.',
 'watchnologin' => 'Vu ne ha intrat',
-'watchnologintext' => 'Vu deve esser [[Special:UserLogin|registrat]] por redacter tui liste de págines vigilat.',
+'watchnologintext' => 'Vu deve esser [[Special:wiki_UserLogin|registrat]] por redacter tui liste de págines vigilat.',
 'addedwatchtext' => "Li págine ''[[$1]]'' ha esset adjuntet a vor [[Special:Watchlist|liste de sequet págines]]. Li proxim modificationes de ti ci págine e del associat págine de discussion va esser listat ci, e li págine va aperir '''aspessat''' in li [[Special:RecentChanges|liste de recent modificationes]] por esser trovat plu facilmen. Por supresser ti ci págine ex vor liste, ples claccar sur « Ne plu sequer » in li cadre de navigation.",
 'watch' => 'Vigilar',
 'watchthispage' => 'Vigilar ti págine',

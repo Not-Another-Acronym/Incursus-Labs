@@ -114,10 +114,10 @@ abstract class ContextSource implements IContextSource {
 	}
 
 	/**
-	 * Get the User object
+	 * Get the wiki_User object
 	 *
 	 * @since 1.18
-	 * @return User
+	 * @return wiki_User
 	 */
 	public function getUser() {
 		return $this->getContext()->getUser();

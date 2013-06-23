@@ -60,7 +60,7 @@ $dateFormats = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'လင့်ကို မျဉ်းသားသည့် ပုံစံ -',
 'tog-justify' => 'အတိုအရှည်ညှိထားသော စာပိုဒ်များ',
 'tog-hideminor' => 'လတ်တလော အပြောင်းအလဲများတွင် အရေးမကြီးသည်များကို ဝှက်ရန်',
@@ -353,7 +353,7 @@ $1',
 
 ယင်းသည် ဖျက်ထားပြီးသား diff သို့မဟုတ် မှတ်တမ်းလင့် တစ်ခုကြောင့် ဖြစ်လေ့ရှိသည်။
 
-ယင်းသို့မဟုတ်ပါက သင်သည် ဤဆော့ဝဲအတွင်းမှ အမှားတစ်ခုကို တွေ့နေခြင်းဖြစ်ကောင်းဖြစ်မည်။ ဤသည်ကို [[Special:ListUsers/sysop|administrator]] သို့ ကျေးဇူးပြု၍ သတင်းပို့ပေးပါ။ URL လင့်ကိုပါ ထည့်သွင်းဖော်ပြပေးပါရန်။',
+ယင်းသို့မဟုတ်ပါက သင်သည် ဤဆော့ဝဲအတွင်းမှ အမှားတစ်ခုကို တွေ့နေခြင်းဖြစ်ကောင်းဖြစ်မည်။ ဤသည်ကို [[Special:Listwiki_Users/sysop|administrator]] သို့ ကျေးဇူးပြု၍ သတင်းပို့ပေးပါ။ URL လင့်ကိုပါ ထည့်သွင်းဖော်ပြပေးပါရန်။',
 'missingarticle-rev' => '(တည်းဖြတ်မူ#: $1)',
 'missingarticle-diff' => '(ကွဲပြားချက် - $1, $2)',
 'internalerror' => 'အတွင်းပိုင်းအမှား',
@@ -377,7 +377,7 @@ $1',
 
 # Login and logout pages
 'logouttext' => 'သင်သည် လော့ဂ်အောက် လုပ်လိုက်ပြီဖြစ်သည်။
-သင့်အနေနှင့် ဤ {{SITENAME}} ဝက်ဘ်ဆိုက်ဒ်ကို အမည်မသိ အသုံးပြုသူ အနေနှင့် ဆက်လက် အသုံးပြုနိုင်သည်။ သို့မဟုတ် ယခင် အသုံးပြုသူ အမည် သို့ အသုံးပြုသူ အခြားအမည်တစ်ခုဖြင့် [[Special:UserLogin|နောက်တစ်ကြိမ် လော့ဂ်အင်ပြန်ဝင်]] နိုင်သည်။
+သင့်အနေနှင့် ဤ {{SITENAME}} ဝက်ဘ်ဆိုက်ဒ်ကို အမည်မသိ အသုံးပြုသူ အနေနှင့် ဆက်လက် အသုံးပြုနိုင်သည်။ သို့မဟုတ် ယခင် အသုံးပြုသူ အမည် သို့ အသုံးပြုသူ အခြားအမည်တစ်ခုဖြင့် [[Special:wiki_UserLogin|နောက်တစ်ကြိမ် လော့ဂ်အင်ပြန်ဝင်]] နိုင်သည်။
 သင်၏ ဘရောက်ဆာမှ cache ကို ရှင်းလင်းသည့် အချိန် အထိ အချို့သော စာမျက်နှာ များသည် သင် လော့ဂ်အင် ဝင်ထားစဉ်က အတိုင်းပင် ဆက်လက် ပြသနေမည်ဖြစ်သည်။',
 'welcomecreation' => '== မင်္ဂလာပါ $1! ==
 သင့်အကောင့်ကို ဖန်တီးပြီးပါပြီ။
@@ -822,11 +822,11 @@ Your e-mail address is not revealed when other users contact you.
 'prefs-displaywatchlist' => 'ပြသရန် ရွေးချယ်မှု',
 'prefs-diffs' => 'ကွဲပြားချက်',
 
-# User preference: e-mail validation using jQuery
+# wiki_User preference: e-mail validation using jQuery
 'email-address-validity-valid' => 'အီးမေးလိပ်စာ တရားဝင်ပုံပေါ်သည်',
 'email-address-validity-invalid' => 'တရားဝင်အီးမေးလိပ်စာတစ်ခု ထည့်ပါ',
 
-# User rights
+# wiki_User rights
 'userrights' => 'အသုံးပြုသူ၏ အခွင့်အရေးများကို စီမံခန့်ခွဲခြင်း',
 'userrights-lookup-user' => 'အသုံးပြုသူအုပ်စုကို စီမံရန်',
 'userrights-user-editname' => 'အသုံးပြုသူအမည်တစ်ခုကို ထည့်ပါ -',
@@ -898,7 +898,7 @@ Your e-mail address is not revealed when other users contact you.
 'right-userrights-interwiki' => 'အခြားဝီကီများမှ အသုံးပြုသူများ၏ အသုံးပြုသူအခွင့်အရေးများကို တည်းဖြတ်ရန်',
 'right-sendemail' => 'အခြားအသုံးပြုသူများကို အီးမေးပို့ရန်',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'အသုံးပြုသူ၏ အခွင့်အရေးများ မှတ်တမ်း',
 'rightslogtext' => 'ဤသည်မှာ အသုံးပြုသူအခွင့်အရေးများ၏ ပြောင်းလဲမှုများမှတ်တမ်းဖြစ်သည်။',
 'rightslogentry' => '$1 အတွက် အုပ်စုအသင်ဝင်ဖြစ်မှုကို အုပ်စု $2 မှ အုပ်စု $3 သို့ ပြောင်းလဲပြီး',
@@ -982,7 +982,7 @@ Your e-mail address is not revealed when other users contact you.
 'reuploaddesc' => 'Upload တင်နေခြင်းကို ဖျက်သိမ်းပြီး upload တင်သည့် ပုံစံသို့ ပြန်သွားရန်',
 'upload-tryagain' => 'ပြုပြင်ထားသောဖိုင်၏ ဖော်ပြချက်ကို ထည့်သွင်းရန်',
 'uploadnologin' => 'logged in ဝင်မထားပါ',
-'uploadnologintext' => 'ဖိုင်များကို Upload တင်ရန် [[Special:UserLogin|logged in ဝင်ပြီး]] ဖြစ်ရမည်။',
+'uploadnologintext' => 'ဖိုင်များကို Upload တင်ရန် [[Special:wiki_UserLogin|logged in ဝင်ပြီး]] ဖြစ်ရမည်။',
 'uploaderror' => 'အပ်လုပ်တင်ခြင်း အမှား',
 'upload-permitted' => 'ခွင့်ပြုထားသော ဖိုင်အမျိုးအစား - $1။',
 'upload-preferred' => 'အလေးပေးသော ဖိုင်အမျိုးအစား - $1။',
@@ -1153,7 +1153,7 @@ Your e-mail address is not revealed when other users contact you.
 'statistics-edits-average' => 'စာတစ်မျက်နှာလျှင် ပျမ်းမျှတည်းဖြတ်မှုနှုန်း',
 'statistics-views-total' => 'စုစုပေါင်းကို ကြည့်ရန်',
 'statistics-views-peredit' => 'တစ်မျက်နှာလျှင်တည်းဖြတ်မှုမည်မျှရှိသည်ကို ကြည့်ရန်',
-'statistics-users' => 'မှတ်ပုံတင်ထားသော [[Special:ListUsers|အသုံးပြုသူများ]]',
+'statistics-users' => 'မှတ်ပုံတင်ထားသော [[Special:Listwiki_Users|အသုံးပြုသူများ]]',
 'statistics-users-active' => 'လက်ရှိလုပ်ကိုင်နေသော အသုံးပြုသူများ',
 'statistics-mostpopular' => 'အများဆုံးကြည့်သော စာမျက်နှာများ',
 
@@ -1252,13 +1252,13 @@ Your e-mail address is not revealed when other users contact you.
 'linksearch-ok' => 'ရှာ​ဖွေ​ရန်​',
 'linksearch-line' => '$1 သည် $2 မှ လင့်ချိတ်ထားသည်',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => 'ဤမှစသော အသုံးပြုသူများကို ပြရန် -',
 'listusers-submit' => 'ပြ',
 'listusers-noresult' => 'အသုံးပြုသူ မတွေ့ပါ။',
 'listusers-blocked' => '(ပိတ်ပင်ထားသည်)',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'တက်ကြွလှုပ်ရှားသည့် အသုံးပြုသူစာရင်း',
 'activeusers-from' => 'ဤမှစသော အသုံးပြုသူများကို ပြရန် -',
 'activeusers-hidebots' => 'ဘော့များကို ဝှက်ရန်',
@@ -1480,7 +1480,7 @@ Your e-mail address is not revealed when other users contact you.
 'ipb-blocklist-contribs' => '$1 အတွက် ပံ့ပိုးမှုများ',
 'unblockip' => 'အသုံးပြုသူကို ပိတ်ပင်ထားရာမှ ပြန်ဖွင်ြ့ပေးရန်',
 'ipusubmit' => 'ဤပိတ်ပင်မှုကို ဖယ်ရှားရန်',
-'unblocked' => '[[User:$1|$1]] ကို ပိတ်ပင်ထားရာမှ ပြန်ဖွင့်ပေးလိုက်သည်',
+'unblocked' => '[[wiki_User:$1|$1]] ကို ပိတ်ပင်ထားရာမှ ပြန်ဖွင့်ပေးလိုက်သည်',
 'unblocked-id' => '$1 ကို ပိတ်ပင်ထားမှုကို ဖယ်ရှာလိုက်သည်',
 'ipblocklist' => 'ပိတ်ပင်ထားသော အသုံးပြုသူများ',
 'ipblocklist-legend' => 'ပိတ်ပင်ထားသော အသုံးပြုသူတစ်ဦးကို ရှာရန်',

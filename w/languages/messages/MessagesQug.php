@@ -37,7 +37,7 @@ $namespaceNames = array(
 $namespaceGenderAliases = array();
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Tinkikunana uraypi aspishpa rikuchina',
 'tog-justify' => 'Aspinakunata alli paktachina',
 'tog-hideminor' => 'mushuk killkaykunapak kamupi, uchilla killkaykunata pakana',
@@ -328,7 +328,7 @@ $1',
 'laggedslavemode' => "'''Rikupay''': Kay pankapi, shina kakpi, mushuk killkaykuna illankacha.",
 'missing-article' => "Hatun kamupi shuk killkayta mana tarin, shinapash chay killkayta tiyanami kan. Paypa chay shutima kan : «$1» $2.
 Icha shuk ñawpak pachamanta ''diff'' ñamana tiyanchu, icha kay tinkika shuk pichashka pankapa shutimi kan. 
-Mana shina kakpi, shuk [[Special:ListUsers/sysop|kamachyik]]man willapay, payta URL killkata willapay.",
+Mana shina kakpi, shuk [[Special:Listwiki_Users/sysop|kamachyik]]man willapay, payta URL killkata willapay.",
 'missingarticle-rev' => '(Killkay#: $1)',
 'internalerror' => 'Antawa ukupi pantay tiyarka',
 'internalerror_info' => 'Antawa ukupi pantay tiyarka: $1',
@@ -526,7 +526,7 @@ Shuk rurakkunaka kikinpa e-chaski ''dirección''ta mana yachankachu.",
 
 'grouppage-sysop' => '{{ns:project}}:Kamachik',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Rurakpa hayñikunapa kamu',
 
 # Associated actions - in the sentence "You do not have permission to X"

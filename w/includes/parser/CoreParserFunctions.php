@@ -313,7 +313,7 @@ class CoreParserFunctions {
 		$username = trim( $username );
 
 		// default
-		$gender = User::getDefaultOption( 'gender' );
+		$gender = wiki_User::getDefaultOption( 'gender' );
 
 		// allow prefix.
 		$title = Title::newFromText( $username );
@@ -323,7 +323,7 @@ class CoreParserFunctions {
 		}
 
 		// check parameter, or use the ParserOptions if in interface message
-		$user = User::newFromName( $username );
+		$user = wiki_User::newFromName( $username );
 		if ( $user ) {
 			$gender = GenderCache::singleton()->getGenderOf( $user, __METHOD__ );
 		} elseif ( $username === '' && $parser->getOptions()->getInterfaceMessage() ) {
@@ -413,7 +413,7 @@ class CoreParserFunctions {
 		return self::formatRaw( SiteStats::users(), $raw );
 	}
 	static function numberofactiveusers( $parser, $raw = null ) {
-		return self::formatRaw( SiteStats::activeUsers(), $raw );
+		return self::formatRaw( SiteStats::activewiki_Users(), $raw );
 	}
 	static function numberofarticles( $parser, $raw = null ) {
 		return self::formatRaw( SiteStats::articles(), $raw );

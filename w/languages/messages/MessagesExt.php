@@ -19,7 +19,7 @@ $namespaceNames = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Surrayal atihus:',
 'tog-justify' => 'Encahal párrafus',
 'tog-hideminor' => 'Açonchal eicionis chiqueninas en "úrtimus chambus"',
@@ -332,7 +332,7 @@ La razón dá pol el alministraol que pusu el tarugu es: $1',
 Estu sueli acontecel pol seguil un atiju antigu referenti a una página que á siu esborrá.
 
 Si ésti nu es el chascu, es possibri que aigas alcuentrau un marru nel software.
-Pol favol, contauta con un [[Special:ListUsers/sysop|çajoril]], mentandu la URL.',
+Pol favol, contauta con un [[Special:Listwiki_Users/sysop|çajoril]], mentandu la URL.',
 'missingarticle-rev' => '(revisión#: $1)',
 'missingarticle-diff' => '(Def: $1, $2)',
 'readonly_lag' => "S'á atarugau la basi e datus temporalmenti mentris los sirvioris se sincroniçan.",
@@ -367,7 +367,7 @@ Pa traucil, consiera gastal [//translatewiki.net/wiki/Main_Page?setlang=en trans
 $2',
 'namespaceprotected' => "Nu tiinis premisu pa eital páhinas nel \"espaciu e nombris\" '''\$1'''.",
 'ns-specialprotected' => 'Nu se puein eital las páhinas el {{ns:special}} "espaciu e nombris".',
-'titleprotected' => "Esti entítulu á siu atarugau pol [[User:$1|$1]].
+'titleprotected' => "Esti entítulu á siu atarugau pol [[wiki_User:$1|$1]].
 La razón es la siguienti: ''$2''.",
 
 # Virus scanner
@@ -377,7 +377,7 @@ La razón es la siguienti: ''$2''.",
 
 # Login and logout pages
 'logouttext' => "'''Cuenta afechá corretamenti.'''<br />
-Pueis acontinal gastandu {{SITENAME}} de holma anónima, u [[Special:UserLogin|entral ena tu cuenta]] con el mesmu ussuáriu, u con otru.
+Pueis acontinal gastandu {{SITENAME}} de holma anónima, u [[Special:wiki_UserLogin|entral ena tu cuenta]] con el mesmu ussuáriu, u con otru.
 Dati cuenta que hata que nu esborris el caché del tu escrucaol pué paecel que la tu cuenta acontina abierta n'angunas páginas.",
 'welcomecreation' => "== Bienviniu, $1! ==
 
@@ -413,7 +413,7 @@ Alcuerdati de chambal las tus [[Special:Preferences|preferéncias de {{SITENAME}
 'loginsuccesstitle' => 'Yeu, lo cúmu va esu?',
 'loginsuccess' => "'''Acabihas d'entral en {{SITENAME}} con el nombri \"\$1\".'''",
 'nosuchuser' => 'Nu dessisti dengún usuáriu anombrau "$1".
-Compreba que lo aigas escritu bien, u [[Special:UserLogin/signup|cria una cuenta nueva]].',
+Compreba que lo aigas escritu bien, u [[Special:wiki_UserLogin/signup|cria una cuenta nueva]].',
 'nosuchusershort' => 'Nu ai dengún usuáriu llamau "$1". Compreba qu\'esté bien escritu.',
 'nouserspecified' => "Ebis escribil un nombri d'usuáriu.",
 'wrongpassword' => 'La consínia escrebia nu es correta. Pol favol, preba otra vezi.',
@@ -538,7 +538,7 @@ Es posibri qu'aiga siu muau u esborrau mentris visoreabas la página.",
 'loginreqlink' => 'entral',
 'loginreqpagetext' => 'Ebis $1 pa vel otras páhinas.',
 'accmailtitle' => 'Consínia enviá.',
-'accmailtext' => 'Se t\'á enviau una consínia aleatória pa [[User talk:$1|$1]] a La consínia pa "$1" a $2.
+'accmailtext' => 'Se t\'á enviau una consínia aleatória pa [[wiki_User talk:$1|$1]] a La consínia pa "$1" a $2.
 
 Es possibri escambial la consínia de la cuenta entrandu ena tu cuenta, ena página d\'\'\'[[Special:ChangePassword|escambial consínia]]\'\'.',
 'newarticle' => '(Nuevu)',
@@ -546,7 +546,7 @@ Es possibri escambial la consínia de la cuenta entrandu ena tu cuenta, ena pág
 Si quieis crial esti artículu, escribi nel cuairu d'embahu
 (si t'es mestel, mira la [[{{MediaWiki:Helppage}}|páhina d'ayua]]).
 Si nu quieis crial esti artículu, solu tiinis que pursal nel botón \"'''atrás'''\" del tu escrucaol.",
-'anontalkpagetext' => "----''Esta es la caraba dun usuáriu anónimu qu'entovia nu á criau una cuenta, u nu la gasta, asínque tenemus que usal la su direción IP pa ientificalu. Una mesma direción IP puei sel gastá pol varius usuárius, polo que si creis que s'án derihiu a tí con cosas que nu vinin a cuentu, pol favol [[Special:UserLogin|cria una cuenta]] pa evital huturus pobremas con otrus usuárius anónimus.''",
+'anontalkpagetext' => "----''Esta es la caraba dun usuáriu anónimu qu'entovia nu á criau una cuenta, u nu la gasta, asínque tenemus que usal la su direción IP pa ientificalu. Una mesma direción IP puei sel gastá pol varius usuárius, polo que si creis que s'án derihiu a tí con cosas que nu vinin a cuentu, pol favol [[Special:wiki_UserLogin|cria una cuenta]] pa evital huturus pobremas con otrus usuárius anónimus.''",
 'noarticletext' => 'Entovia nu ai dengún testu escrebiu nesta páhina.
 Pueis [[Special:Search/{{PAGENAME}}|landeal el entítulu del artículu]] en otras páhinas,
 <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} search the related logs],
@@ -618,7 +618,7 @@ Embaju se muestra el rustriju d'acessu cumu referéncia:",
 'edittools' => '<!-- Esti testu apaicirá embahu los hormulárius d´eición i empuntu. -->',
 'nocreatetitle' => 'Criaeru e páhinas enlimitau',
 'nocreatetext' => 'Nu se premiti crial páhinas nuevas a usuárius anónimus.
-Pueis gorvel i eital anguna páhina ya desistenti, u [[Special:UserLogin|rustrilti]].',
+Pueis gorvel i eital anguna páhina ya desistenti, u [[Special:wiki_UserLogin|rustrilti]].',
 'nocreate-loggedin' => 'Nu tiés premissu pa crial nuevas páginas.',
 'permissionserrors' => 'Marrus colos premisus',
 'permissionserrorstext' => 'Nu t´está premitiu hazel esu, {{PLURAL:$1|pola siguienti razón|polas siguientis razonis}}:',
@@ -639,11 +639,11 @@ Ya dessisti.',
 'undo-success' => 'Se puei eshazel la eición. Enantis d´eshazel la eición, compreba la siguienti comparáncia pa verifical que realmenti es lo que quieis hazel, i altonci, emburaqui los chambus pa, d´esta horma, eshazel la eición.',
 'undo-failure' => 'Nu es posibri eshazel la eición ebiu a que otru usuáriu á realizau una eición entelmeya.',
 'undo-norev' => 'La eición nu pué sel eshecha ebiu a que nu dessisti, u hue esborrá',
-'undo-summary' => 'Eshazel revisión $1 de [[Special:Contributions/$2|$2]] ([[User talk:$2|Caraba]])',
+'undo-summary' => 'Eshazel revisión $1 de [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Caraba]])',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'Nu es posibri crial la cuenta',
-'cantcreateaccount-text' => "La criación de cuentas pol parti e la IP ('''$1''') á siu pará pol el usuáriu [[User:$3|$3]].
+'cantcreateaccount-text' => "La criación de cuentas pol parti e la IP ('''$1''') á siu pará pol el usuáriu [[wiki_User:$3|$3]].
 
 La razón dá pol $3 es ''$2''",
 
@@ -816,7 +816,7 @@ Asigurati e qu'esti chambu mantenga la continuiá el estorial la páhina.",
 'mypreferences' => 'Las mis preferéncias',
 'prefs-edits' => "Númiru d'eicionis:",
 'prefsnologin' => "Nu t'alcuentras rustriu",
-'prefsnologintext' => 'Ebis estal [[Special:UserLogin|rustriu]] pa chambal las tus preferéncias.',
+'prefsnologintext' => 'Ebis estal [[Special:wiki_UserLogin|rustriu]] pa chambal las tus preferéncias.',
 'changepassword' => 'Chambal consínia',
 'prefs-skin' => 'Aparéncia',
 'skin-preview' => 'Previsoreal',
@@ -887,12 +887,12 @@ Ebi tenel menus de $1 {{PLURAL:$1|caratel|carateris}}.',
 Amás premiti qu'otrus ussuárius contatin contigu pol mé la tu página d'ussuáriu u caraba, sin sel mestel muestral la tu entiá.",
 'prefs-help-email-required' => 'Es mestel la direción email.',
 
-# User rights
+# wiki_User rights
 'userrights' => "Alministral premisus d'usuárius",
 'userrights-lookup-user' => "Alministral grupus d'usuárius",
 'userrights-user-editname' => 'Escrebi un nombri d´usuáriu:',
 'editusergroup' => "Eital grupus d'usuárius",
-'editinguser' => "Chambandu los derechus del usuáriu '''[[User:$1|$1]]''' ([[User talk:$1|{{int:talkpagelinktext}}]]{{int:pipe-separator}}[[Special:Contributions/$1|{{int:contribslink}}]])",
+'editinguser' => "Chambandu los derechus del usuáriu '''[[wiki_User:$1|$1]]''' ([[wiki_User talk:$1|{{int:talkpagelinktext}}]]{{int:pipe-separator}}[[Special:Contributions/$1|{{int:contribslink}}]])",
 'userrights-editusergroup' => "Eital grupus d'usuárius",
 'saveusergroups' => "Emburacal grupus d'usuárius",
 'userrights-groupsmember' => 'Miembru e:',
@@ -903,7 +903,7 @@ Amás premiti qu'otrus ussuárius contatin contigu pol mé la tu página d'ussu�
 'userrights-reason' => 'Razón:',
 'userrights-no-interwiki' => 'Nu tienis premisu pa eital los derechus los usuárius en otras güiquis.',
 'userrights-nodatabase' => 'La basi e datus $1 nu desisti, u nu es local.',
-'userrights-nologin' => "Ebis [[Special:UserLogin|rustrilti]] con una cuenta d'alministraol pa puel asinal derechus a los usuárius.",
+'userrights-nologin' => "Ebis [[Special:wiki_UserLogin|rustrilti]] con una cuenta d'alministraol pa puel asinal derechus a los usuárius.",
 'userrights-notallowed' => "Nu tienis los permisus nesezárius p'asinal derechus a los usuárius.",
 'userrights-changeable-col' => 'Grupus que pueis chambal',
 'userrights-unchangeable-col' => 'Grupus que nu pueis chambal',
@@ -954,7 +954,7 @@ Amás premiti qu'otrus ussuárius contatin contigu pol mé la tu página d'ussu�
 'right-userrights' => 'Eital los derechus de tolos usuárius',
 'right-siteadmin' => 'Atarugal i desatarugal la basi e datus',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Rustrihu e derechus de los usuárius',
 'rightslogtext' => 'Esti es un rustrihu e chambus enus derechus los usuárius.',
 'rightslogentry' => 'chambó el grupu al que preteneci $1: de $2 a $3',
@@ -1023,7 +1023,7 @@ Las páhinas de la tu [[Special:Watchlist|lista e seguimientu]] están en '''neg
 'uploadbtn' => 'Empuntal archivu',
 'reuploaddesc' => 'Cancelal el empuntu i gorvel al hormuláriu.',
 'uploadnologin' => 'Nu estás rustriu',
-'uploadnologintext' => 'Ebis estal [[Special:UserLogin|rustriu]]
+'uploadnologintext' => 'Ebis estal [[Special:wiki_UserLogin|rustriu]]
 pa empuntal archivus.',
 'upload_directory_read_only' => "Nu puei escrebilsi nel diretoriu d'empuntu ($1) el sirviol.",
 'uploaderror' => 'Marru d´empuntu',
@@ -1099,11 +1099,11 @@ Si acontinas queriendu empuntal el archivu, vai alatrás i escambia el nombri el
 'upload-proto-error-text' => 'El empuntu remotu prehisa e "URLs" qu´esmiencin pol <code>http://</code> u <code>ftp://</code>.',
 'upload-file-error' => 'Marru entelnu',
 'upload-file-error-text' => "Á aconteciu un marru entelnu cuandu s'ententaba crial un ficheru temporal nel sirviol.
-Pol favol, contauta con angún [[Special:ListUsers/sysop|çajoril]].",
+Pol favol, contauta con angún [[Special:Listwiki_Users/sysop|çajoril]].",
 'upload-misc-error' => "Marru d'empuntu andarriu",
 'upload-misc-error-text' => 'Marru aconteciu al empuntal el archivu.
 Pol favol, compreba que la URL es vália i acesibri i enténtalu otra vedi.
-Si el pobrema acontina, contauta con un [[Special:ListUsers/sysop|çahoril]].',
+Si el pobrema acontina, contauta con un [[Special:Listwiki_Users/sysop|çahoril]].',
 
 # Some likely curl errors. More could be added from <http://curl.haxx.se/libcurl/c/libcurl-errors.html>
 'upload-curl-error6' => 'Nu se puei dil a la URL',
@@ -1219,7 +1219,7 @@ Pursa nel entítulu la coluna pa chambal el ordin.',
 'statistics-pages' => 'Páginas',
 'statistics-pages-desc' => 'Tolas páginas nel wiki, encruyendu carabas, redirecionis...',
 'statistics-files' => 'Archivus empuntaus',
-'statistics-users' => '[[Special:ListUsers|Usuárius rustrius]]',
+'statistics-users' => '[[Special:Listwiki_Users|Usuárius rustrius]]',
 'statistics-users-active' => 'Ussuárius ativus',
 'statistics-users-active-desc' => 'Ussuárius que aigan hechu anguna ación {{PLURAL:$1|nel úrtimu dia|enus úrtimus $1 dias}}',
 'statistics-mostpopular' => 'Páhinas mas visoreás',
@@ -1340,7 +1340,7 @@ Also see [[Special:WantedCategories|wanted categories]].',
 'linksearch-ns' => 'Espáciu nombris:',
 'linksearch-ok' => 'Landeal',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => "Muestral usuárius qu'esmiencin pol:",
 'listusers-submit' => 'Muestral',
 'listusers-noresult' => 'Nu s´alcuentró dengún usuáriu.',
@@ -1361,7 +1361,7 @@ Also see [[Special:WantedCategories|wanted categories]].',
 
 # E-mail user
 'mailnologin' => 'Nu envial direción',
-'mailnologintext' => 'Ebis estal [[Special:UserLogin|rutrau]]
+'mailnologintext' => 'Ebis estal [[Special:wiki_UserLogin|rutrau]]
 i tenel una direción d´email correta enas tus [[Special:Preferences|preferéncias]]
 pa envial correus a otrus usuárius.',
 'emailuser' => 'Envial un email a esti usuáriu',
@@ -1391,7 +1391,7 @@ La direción email qu'aigas escrebiu enas tus preferéncias apaicirá cumu remit
 'nowatchlist' => 'La tu lista e seguimientu está vacia.',
 'watchlistanontext' => 'Pa vel u eital las entrás ena tu lista e seguimientu es mestel $1.',
 'watchnologin' => 'Nu estás rustriu',
-'watchnologintext' => 'Ebis [[Special:UserLogin|abril la tu cuenta]] pa puel hazel chambus ena tu lista e seguimientu.',
+'watchnologintext' => 'Ebis [[Special:wiki_UserLogin|abril la tu cuenta]] pa puel hazel chambus ena tu lista e seguimientu.',
 'addedwatchtext' => "S´á añiiu la páhina \"[[:\$1]]\" a la tu [[Special:Watchlist|lista e seguimientu]].
 Los huturus chambus de la páhina i ena su caraba se muestrarán aquí,
 i el su entítulu apaicirá en '''negrina''' ena [[Special:RecentChanges|lista d´úrtimus chambus]].
@@ -1490,11 +1490,11 @@ Consurta $2 pa vel los úrtimus esborraus.',
 'rollbacklink' => 'revertil',
 'rollbackfailed' => 'Marru revirtiendu',
 'cantrollback' => 'Nu se puei eshazel la eición; el úrtimu colabutaol es el únicu autol d´esta páhina.',
-'alreadyrolled' => 'Nu es posibri revertil la úrtima eición de [[:$1]], hecha pol [[User:$2|$2]] ([[User talk:$2|Caraba]]); alguien ya á eitau u revertiu la páhina.
+'alreadyrolled' => 'Nu es posibri revertil la úrtima eición de [[:$1]], hecha pol [[wiki_User:$2|$2]] ([[wiki_User talk:$2|Caraba]]); alguien ya á eitau u revertiu la páhina.
 
-La úrtima eición á siu hecha pol [[User:$3|$3]] ([[User talk:$3|Caraba]]).',
+La úrtima eición á siu hecha pol [[wiki_User:$3|$3]] ([[wiki_User talk:$3|Caraba]]).',
 'editcomment' => "La síntesis la eición hue: \"''\$1''\".",
-'revertpage' => 'Án siu revertias las eicionis de [[Special:Contributions/$2|$2]] ([[User talk:$2|Caraba]]); chambau a la úrtima velsión de [[User:$1|$1]]',
+'revertpage' => 'Án siu revertias las eicionis de [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Caraba]]); chambau a la úrtima velsión de [[wiki_User:$1|$1]]',
 'rollback-success' => 'Revertias las eicionis de $1; chambau a la úrtima velsión de $2.',
 
 # Edit tokens
@@ -1673,7 +1673,7 @@ Escrebi una razón concreta embahu (pol sabulugal, almientandu páhinas qu'aigan
 'unblockip' => 'Desatarugal usuáriu',
 'unblockiptext' => "Gasta el hormulariu d'embahu pa restablecel el acesu d'escritura a una direción IP u a un nombri d'usuáriu previamenti atarugau.",
 'ipusubmit' => 'Esborral esti tarugu',
-'unblocked' => 'El usuáriu [[User:$1|$1]] á siu desatarugau',
+'unblocked' => 'El usuáriu [[wiki_User:$1|$1]] á siu desatarugau',
 'unblocked-id' => 'S´á esborrau el tarugu $1',
 'ipblocklist' => "Lista de IP i nombris d'usuárius atarugaus",
 'ipblocklist-legend' => 'Landeal a un usuáriu atarugau',
@@ -1690,7 +1690,7 @@ Escrebi una razón concreta embahu (pol sabulugal, almientandu páhinas qu'aigan
 'unblocklink' => 'desatarugal',
 'change-blocklink' => 'chambal tarugu',
 'contribslink' => 'endirguis',
-'autoblocker' => 'Autu-atarugau ebiu a que la tu IP á siu gastá hazi pocu pol "[[User:$1|$1]]". La razón el tarugu de $1 es: "$2"',
+'autoblocker' => 'Autu-atarugau ebiu a que la tu IP á siu gastá hazi pocu pol "[[wiki_User:$1|$1]]". La razón el tarugu de $1 es: "$2"',
 'blocklogpage' => 'Rustrihu e tarugus',
 'blocklogentry' => 'atarugó a "[[$1]]" $3 duranti un praçu e "$2"',
 'unblocklogentry' => '$1 desatarugau',
@@ -1757,7 +1757,7 @@ pol favol, asigurati e qu'entiendis las consecuéncias enantis d'acontinal.",
 En dambus los dos chascus, si lo deseas, tendrás que movel u mestural la páhina manualmenti.",
 'movearticle' => 'Movel páhina:',
 'movenologin' => "Nu t'alcuentras rustriu",
-'movenologintext' => 'Ebis estal rustriu i [[Special:UserLogin|entral ena tu cuenta]] pa movel una páhina.',
+'movenologintext' => 'Ebis estal rustriu i [[Special:wiki_UserLogin|entral ena tu cuenta]] pa movel una páhina.',
 'movenotallowed' => 'Nu tinis premissu pa mual páginas.',
 'movenotallowedfile' => 'Nu tinis premissus pa mual archivus.',
 'newtitle' => 'Nuevu entítulu:',
@@ -2278,7 +2278,7 @@ El coigu de confirmación caucará a las $4.',
 
 # Delete conflict
 'deletedwhileediting' => 'Avisu: esta página á siu esborrá endispués de tu encetal a eitala!',
-'confirmrecreate' => "El usuáriu [[User:$1|$1]] ([[User talk:$1|caraba]]) á esborrau esta páhina aluspués de que prencipiaras a eitala, pola siguienti razón:
+'confirmrecreate' => "El usuáriu [[wiki_User:$1|$1]] ([[wiki_User talk:$1|caraba]]) á esborrau esta páhina aluspués de que prencipiaras a eitala, pola siguienti razón:
 : ''$2''
 Pol favol, confirma si rialmenti quieis gorvel a crial la páhina.",
 'recreate' => 'Gorvel a crial',

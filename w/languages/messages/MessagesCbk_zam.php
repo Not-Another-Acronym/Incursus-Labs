@@ -85,7 +85,7 @@ $messages = array(
 # Edit pages
 'blockedtitle' => 'El usuario es prohibido o bloqueado',
 'accmailtitle' => 'Enviao ya el contraseña.',
-'accmailtext' => "El contraseña que el sistema ya escogi automatico por usuario [[User talk:$1|$1]] enviado ya a $2.
+'accmailtext' => "El contraseña que el sistema ya escogi automatico por usuario [[wiki_User talk:$1|$1]] enviado ya a $2.
 
 El contraseña de este nuevo cuenta puede cambia na pagina ''[[Special:ChangePassword|cambia el contraseña]]'' despues el autenticacion.",
 

@@ -34,7 +34,7 @@ $namespaceNames = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Links ounderstreepn:',
 'tog-hideminor' => 'Klêne veranderiengn verdukn van juste veranderd',
 'tog-enotifrevealaddr' => 'Tôog min e-mailadres in e-mails',

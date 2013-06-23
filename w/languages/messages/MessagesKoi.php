@@ -196,7 +196,7 @@ $messages = array(
 
 # General errors
 'error' => 'Сорасьöм',
-'missing-article' => 'Мыччöт чукöрись эз шед сiя листбок, кöда сэтчин вöлi "$1" $2 ним увтын. Этадз аркмывлö унажыксö сэк, кöр вешшан бы важмöм ыстöт пыр сэтшöм листбок вылö, кöда вöлi вештöм.  Абу кö сiдз, наттьö программаын мыйкö нетырви керöм. Юöрт жö сы йылiсь миянлö татчö: [[Special:ListUsers/sysop|administrator]],  сы дырни эн вунöт пасйыны URL.',
+'missing-article' => 'Мыччöт чукöрись эз шед сiя листбок, кöда сэтчин вöлi "$1" $2 ним увтын. Этадз аркмывлö унажыксö сэк, кöр вешшан бы важмöм ыстöт пыр сэтшöм листбок вылö, кöда вöлi вештöм.  Абу кö сiдз, наттьö программаын мыйкö нетырви керöм. Юöрт жö сы йылiсь миянлö татчö: [[Special:Listwiki_Users/sysop|administrator]],  сы дырни эн вунöт пасйыны URL.',
 'missingarticle-rev' => '(версия#: $1)',
 'internalerror' => 'Пытшкас сорасьöм',
 'internalerror_info' => 'Пытшкас сорасьöм: $1',
@@ -385,7 +385,7 @@ $messages = array(
 
 'grouppage-sysop' => '{{ns:project}}:Веськöтлiссез',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Уджкерисьлö позяннэз сьöртi журнал',
 
 # Associated actions - in the sentence "You do not have permission to X"

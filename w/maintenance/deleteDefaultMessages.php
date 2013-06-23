@@ -38,7 +38,7 @@ class DeleteDefaultMessages extends Maintenance {
 	}
 
 	public function execute() {
-		global $wgUser;
+		global $wgwiki_User;
 
 		$this->output( "Checking existence of old default messages..." );
 		$dbr = wfGetDB( DB_SLAVE );
@@ -59,12 +59,12 @@ class DeleteDefaultMessages extends Maintenance {
 
 		# Deletions will be made by $user temporarly added to the bot group
 		# in order to hide it in RecentChanges.
-		$user = User::newFromName( 'MediaWiki default' );
+		$user = wiki_User::newFromName( 'MediaWiki default' );
 		if ( !$user ) {
 			$this->error( "Invalid username", true );
 		}
 		$user->addGroup( 'bot' );
-		$wgUser = $user;
+		$wgwiki_User = $user;
 
 		# Handle deletion
 		$this->output( "\n...deleting old default messages (this may take a long time!)...", 'msg' );

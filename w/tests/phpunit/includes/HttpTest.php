@@ -85,9 +85,9 @@ class HttpTest extends MediaWikiTestCase {
 			array( false,  'http:///example.org', 'Must have exactly two slashes, not three' ),
 
 			# (\w+:{0,1}\w*@)? - optional user:pass
-			array( true,  'http://user@host', 'Username provided' ),
-			array( true,  'http://user:@host', 'Username provided, no password' ),
-			array( true,  'http://user:pass@host', 'Username and password provided' ),
+			array( true,  'http://user@host', 'wiki_Username provided' ),
+			array( true,  'http://user:@host', 'wiki_Username provided, no password' ),
+			array( true,  'http://user:pass@host', 'wiki_Username and password provided' ),
 
 			# (\S+) - host part is made of anything not whitespaces
 			array( false, 'http://!"èèè¿¿¿~~\'', 'hostname is made of any non whitespace' ),

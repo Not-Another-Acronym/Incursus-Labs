@@ -106,9 +106,9 @@ $specialPageAliases = array(
 	'Unusedtemplates'           => array( 'NepoužitéŠablóny' ),
 	'Unwatchedpages'            => array( 'NesledovanéStránky' ),
 	'Upload'                    => array( 'NahranieSúboru' ),
-	'Userlogin'                 => array( 'PrihláseniePoužívateľa' ),
-	'Userlogout'                => array( 'OdhláseniePoužívateľa' ),
-	'Userrights'                => array( 'PrávaPoužívateľa' ),
+	'wiki_Userlogin'                 => array( 'PrihláseniePoužívateľa' ),
+	'wiki_Userlogout'                => array( 'OdhláseniePoužívateľa' ),
+	'wiki_Userrights'                => array( 'PrávaPoužívateľa' ),
 	'Version'                   => array( 'Verzia' ),
 	'Wantedcategories'          => array( 'ŽiadanéKategórie' ),
 	'Wantedfiles'               => array( 'ŽiadanéSúbory' ),
@@ -281,7 +281,7 @@ $separatorTransformTable = array(
 $linkTrail = '/^([a-záäčďéíľĺňóôŕšťúýž]+)(.*)$/sDu';
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Podčiarkovať odkazy:',
 'tog-justify' => 'Zarovnávať okraje odstavcov',
 'tog-hideminor' => 'V posledných úpravách nezobrazovať drobné úpravy',
@@ -622,7 +622,7 @@ Správca, ktorý nariadil uzamknutie, uvádza tento dôvod: $1',
 To sa zvyčajne stane, keď kliknete na zastaraný odkaz na rozdiel alebo do histórie stránky, ktorá bola zmazaná.
 
 Ak to tak nie je, je možné, že ste našli chybu v softvéri.
-Oznámte to prosím [[Special:ListUsers/sysop|správcovi]] a uveďte URL.',
+Oznámte to prosím [[Special:Listwiki_Users/sysop|správcovi]] a uveďte URL.',
 'missingarticle-rev' => '(č. revízie: $1)',
 'missingarticle-diff' => '(rozdiel: $1, $2)',
 'readonly_lag' => 'Databáza bola automaticky zamknutá pokým záložné databázové servery nedoženú hlavný server',
@@ -671,7 +671,7 @@ $2',
 'customcssprotected' => 'Nemáte právo upravovať túto CSS stránku, pretože obsahuje osobné nastavenie iného používateľa.',
 'customjsprotected' => 'Nemáte právo upravovať túto JavaScript stránku, pretože obsahuje osobné nastavenie iného používateľa.',
 'ns-specialprotected' => 'Stránky v mennom priestore {{ns:special}} nie je možné upravovať.',
-'titleprotected' => "Používateľ [[User:$1|$1]] zabránil vytváraniu stránky s týmto názvom.
+'titleprotected' => "Používateľ [[wiki_User:$1|$1]] zabránil vytváraniu stránky s týmto názvom.
 Udaný dôvod: ''$2''.",
 'filereadonlyerror' => 'Nebolo možné modifikovať súbor „$1“, pretože úložisko „$2“ je momentálne v režime len na čítanie.
 
@@ -689,7 +689,7 @@ Správca, ktorý ho zamkol ponúkol toto vysvetlenie: „$3“.',
 # Login and logout pages
 'logouttext' => "'''Práve ste sa odhlásili.'''
 
-Odteraz môžete používať {{GRAMMAR:akuzatív|{{SITENAME}}}} ako anonymný používateľ alebo sa môžete opäť [[Special:UserLogin|prihlásiť]] pod rovnakým alebo odlišným používateľským menom.
+Odteraz môžete používať {{GRAMMAR:akuzatív|{{SITENAME}}}} ako anonymný používateľ alebo sa môžete opäť [[Special:wiki_UserLogin|prihlásiť]] pod rovnakým alebo odlišným používateľským menom.
 Uvedomte si, že niektoré stránky sa môžu naďalej zobrazovať ako keby ste boli prihlásený, až kým nevymažete vyrovnávaciu pamäť vášho prehliadača.",
 'welcomecreation' => '== Vitaj, $1! ==
 
@@ -733,7 +733,7 @@ Ubezpečte sa, že máte povolené cookies, obnovte túto stránku a skúste to 
 'loginsuccess' => "'''Teraz ste prihlásený do {{GRAMMAR:genitív|{{SITENAME}}}} ako „$1“.'''",
 'nosuchuser' => 'Používateľské meno „$1“ neexistuje.
 V používateľských menách sa rozlišuje veľkosť písmen.
-Skontrolujte preklepy alebo sa [[Special:UserLogin/signup|zaregistrujte ako nový používateľ]].',
+Skontrolujte preklepy alebo sa [[Special:wiki_UserLogin/signup|zaregistrujte ako nový používateľ]].',
 'nosuchusershort' => 'V súčasnosti neexistuje používateľ s menom „$1“. Skontrolujte preklepy.',
 'nouserspecified' => 'Musíte uviesť meno používateľa.',
 'login-userblocked' => 'Tento používateľ je zablokovaný. Nie je mu dovolené prihlásiť sa.',
@@ -936,7 +936,7 @@ Možno bola presunutá alebo zmazaná odkedy ste si stránku zobrazili.',
 'loginreqlink' => 'prihlásiť',
 'loginreqpagetext' => 'Aby ste mohli prezerať ďalšie stránky, musíte sa $1.',
 'accmailtitle' => 'Heslo bolo odoslané.',
-'accmailtext' => "Náhodne vytvorené heslo pre používateľa [[User talk:$1|$1]] bolo poslané na $2.
+'accmailtext' => "Náhodne vytvorené heslo pre používateľa [[wiki_User talk:$1|$1]] bolo poslané na $2.
 
 Heslo tohto nového účtu je možné zmeniť na stránke ''[[Special:ChangePassword|zmena hesla]]'' po prihlásení.",
 'newarticle' => '(Nový)',
@@ -946,7 +946,7 @@ Stránku vytvoríte tak, že začnete písať do dolného poľa a potom stlačí
 Ak ste sa sem dostali nechtiac, iba kliknite na tlačidlo '''späť''' vo svojom prehliadači.",
 'anontalkpagetext' => "----''Toto je diskusná stránka anonymného používateľa, ktorý nemá vytvorené svoje konto alebo ho nepoužíva.
 Preto musíme na jeho identifikáciu použiť numerickú IP adresu. Je možné, že takúto IP adresu používajú viacerí používatelia.
-Ak ste anonymný používateľ a máte pocit, že vám boli adresované irelevantné diskusné príspevky, [[Special:UserLogin/signup|vytvorte si konto]] alebo sa [[Special:UserLogin|prihláste]], aby sa zamedzilo budúcim zámenám s inými anonymnými používateľmi.''",
+Ak ste anonymný používateľ a máte pocit, že vám boli adresované irelevantné diskusné príspevky, [[Special:wiki_UserLogin/signup|vytvorte si konto]] alebo sa [[Special:wiki_UserLogin|prihláste]], aby sa zamedzilo budúcim zámenám s inými anonymnými používateľmi.''",
 'noarticletext' => 'Na tejto stránke sa momentálne nenachádza žiadny text.
 Môžete [[Special:Search/{{PAGENAME}}|vyhľadávať názov tejto stránky]] v obsahu iných stránok,
 <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} vyhľadávať v súvisiacich záznamoch],
@@ -984,12 +984,12 @@ Zmeny ešte nie sú uložené!'''",
 'previewconflict' => 'Tento náhľad upravenej stránky zobrazuje text z horného poľa s textom tak, ako sa zobrazí potom, keď ju uložíte.',
 'session_fail_preview' => "'''Prepáčte, nemohli sme spracovať váš príspevok kvôli strate údajov relácie.
 Skúste to prosím ešte raz.
-Ak to nebude fungovať, skúste sa [[Special:UserLogout|odhlásiť]] a znovu prihlásiť.'''",
+Ak to nebude fungovať, skúste sa [[Special:wiki_UserLogout|odhlásiť]] a znovu prihlásiť.'''",
 'session_fail_preview_html' => "'''Prepáčte! Nemohli sme spracovať vašu úpravu kvôli strate údajov relácie.'''
 
 ''Pretože {{SITENAME}} má použitie HTML umožnené, náhľad sa nezobrazí (prevencia pred JavaScript útokmi).''
 
-'''Ak je toto legitímny pokus o úpravu, skúste to prosím znova. Ak to stále nefunguje, skúste sa [[Special:UserLogout|odhlásiť]] a znovu prihlásiť.'''",
+'''Ak je toto legitímny pokus o úpravu, skúste to prosím znova. Ak to stále nefunguje, skúste sa [[Special:wiki_UserLogout|odhlásiť]] a znovu prihlásiť.'''",
 'token_suffix_mismatch' => "'''Vaša úprava bola zamietnutá, pretože váš klient pokazil znaky s diakritikou v editačnom symbole (token). Úprava bola zamietnutá, aby sa zabránilo poškodeniu textu stránky. Toto sa občas stáva, keď používate chybnú anonymnú proxy službu cez webové rozhranie.'''",
 'edit_form_incomplete' => "'''Niektoré časti editačného formulára nedosiahli server. Prosím, znova skontrolujte, že vaše úpravy sú nepoškodené a skúste to znova.'''",
 'editing' => 'Úprava stránky $1',
@@ -1037,7 +1037,7 @@ Správca, ktorý ju zamkol, uviedol nasledovné vysvetlenie: $1",
 'edittools' => '<!-- Tento text sa zobrazí pod upravovacím a nahrávacím formulárom. -->',
 'nocreatetitle' => 'Tvorba nových stránok bola obmedzená',
 'nocreatetext' => 'Na {{GRAMMAR:lokál|{{SITENAME}}}} je tvorba nových stránok obmedzená.
-Teraz sa môžete vrátiť späť a upravovať existujúcu stránku alebo [[Special:UserLogin|sa prihlásiť alebo vytvoriť účet]].',
+Teraz sa môžete vrátiť späť a upravovať existujúcu stránku alebo [[Special:wiki_UserLogin|sa prihlásiť alebo vytvoriť účet]].',
 'nocreate-loggedin' => 'Nemáte povolenie vytvárať nové stránky.',
 'sectioneditnotsupported-title' => 'Úprava sekcie nie je podporovaná',
 'sectioneditnotsupported-text' => 'Táto stránka úprav nepodporuje úpravu sekcie.',
@@ -1087,11 +1087,11 @@ Tieto argumenty boli vynechané.',
 'undo-success' => 'Úpravu je možné vrátiť. Prosím skontrolujte tento rozdiel, čím overíte, že táto úprava je tá, ktorú chcete, a následne uložte zmeny, čím ukončíte vrátenie.',
 'undo-failure' => 'Úpravu nie je možné vrátiť kvôli konfliktným medziľahlým úpravám.',
 'undo-norev' => 'Túto úpravu nie je možné vrátiť, pretože neexistuje alebo bola zmazaná.',
-'undo-summary' => 'Revízia $1 používateľa [[Special:Contributions/$2|$2]] ([[User talk:$2|diskusia]]) bola vrátená',
+'undo-summary' => 'Revízia $1 používateľa [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|diskusia]]) bola vrátená',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'Nie je možné vytvoriť účet',
-'cantcreateaccount-text' => "Tvorbu účtov z tejto IP adresy ('''$1''') zablokoval [[User:$3|$3]].
+'cantcreateaccount-text' => "Tvorbu účtov z tejto IP adresy ('''$1''') zablokoval [[wiki_User:$3|$3]].
 
 Dôvod, ktorý $3 uviedol, je ''$2''",
 
@@ -1350,7 +1350,7 @@ Podrobnosti nájdete v [{{fullurl:{{#Special:Log}}/delete|page={{FULLPAGENAMEE}}
 'mypreferences' => 'Nastavenia',
 'prefs-edits' => 'Počet úprav:',
 'prefsnologin' => 'Nie ste prihlásený/á',
-'prefsnologintext' => 'Aby ste mohli zmeniť svoje nastavenia, musíte byť <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} prihlásený]</span>.',
+'prefsnologintext' => 'Aby ste mohli zmeniť svoje nastavenia, musíte byť <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} prihlásený]</span>.',
 'changepassword' => 'Zmeniť heslo',
 'prefs-skin' => 'Vzhľad',
 'skin-preview' => 'Náhľad',
@@ -1460,16 +1460,16 @@ Musí obsahovať menej ako $1 {{PLURAL:$1|znak|znaky|znakov}}.',
 'prefs-displaywatchlist' => 'Možnosti zobrazenia',
 'prefs-diffs' => 'Rozdiely',
 
-# User preference: e-mail validation using jQuery
+# wiki_User preference: e-mail validation using jQuery
 'email-address-validity-valid' => 'Formát e-mailovej adresa vyzerá byť správny',
 'email-address-validity-invalid' => 'Zadajte platnú e-mailovú adresu',
 
-# User rights
+# wiki_User rights
 'userrights' => 'Spravovanie používateľských práv',
 'userrights-lookup-user' => 'Spravovať skupiny používateľov',
 'userrights-user-editname' => 'Zadajte meno používateľa:',
 'editusergroup' => 'Upraviť skupinu používateľa',
-'editinguser' => "Zmena práv používateľa '''[[User:$1|$1]]''' $2",
+'editinguser' => "Zmena práv používateľa '''[[wiki_User:$1|$1]]''' $2",
 'userrights-editusergroup' => 'Upraviť skupiny používateľa',
 'saveusergroups' => 'Uložiť skupiny používateľa',
 'userrights-groupsmember' => 'Člen skupiny:',
@@ -1481,7 +1481,7 @@ Musí obsahovať menej ako $1 {{PLURAL:$1|znak|znaky|znakov}}.',
 'userrights-reason' => 'Dôvod:',
 'userrights-no-interwiki' => 'Nemáte oprávnenie upravovať práva používateľov na iných wiki.',
 'userrights-nodatabase' => 'Databáza $1 neexistuje alebo nie je lokálna.',
-'userrights-nologin' => 'Aby ste mohli prideľovať používateľom oprávnenia, musíte sa [[Special:UserLogin|prihlásiť]] s účtom správcu.',
+'userrights-nologin' => 'Aby ste mohli prideľovať používateľom oprávnenia, musíte sa [[Special:wiki_UserLogin|prihlásiť]] s účtom správcu.',
 'userrights-notallowed' => 'Váš účet nemá oprávnenie prideľovať alebo odoberať používateľom oprávnenia.',
 'userrights-changeable-col' => 'Skupiny, ktoré môžete zmeniť',
 'userrights-unchangeable-col' => 'Skupiny, ktoré nemôžete zmeniť',
@@ -1572,7 +1572,7 @@ Musí obsahovať menej ako $1 {{PLURAL:$1|znak|znaky|znakov}}.',
 'right-sendemail' => 'Posielať e-mail ostatným používateľom',
 'right-passwordreset' => 'Prezeranie e-mailov pre znovunastavovanie hesla',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Záznam používateľských práv',
 'rightslogtext' => 'Toto je záznam zmien práv používateľa.',
 'rightslogentry' => 'členstvo v skupine zmenené pre $1 z $2 na $3',
@@ -1669,7 +1669,7 @@ Stránky, ktoré sa nachádzajú vo vašom [[Special:Watchlist|zozname sledovan�
 'reuploaddesc' => 'Zrušiť nahrávanie a vrátiť sa späť na nahrávací formulár.',
 'upload-tryagain' => 'Poslať zmenený popis súboru',
 'uploadnologin' => 'Nie ste prihlásený',
-'uploadnologintext' => 'Musíte byť [[Special:UserLogin|prihlásený/á]], aby ste mohli nahrávať súbory.',
+'uploadnologintext' => 'Musíte byť [[Special:wiki_UserLogin|prihlásený/á]], aby ste mohli nahrávať súbory.',
 'upload_directory_missing' => 'Adresár pre nahrávanie ($1) chýba a webový server ho nedokáže vytvoriť.',
 'upload_directory_read_only' => 'Webový server nemôže zapisovať do adresára pre nahrávanie ($1).',
 'uploaderror' => 'Chyba pri nahrávaní',
@@ -1800,11 +1800,11 @@ $1',
 'upload-proto-error-text' => 'Vzdialené nahrávanie vyžaduje, aby URL začínali <code>http://</code> alebo <code>ftp://</code>.',
 'upload-file-error' => 'Vnútorná chyba',
 'upload-file-error-text' => 'Vyskytla sa vnútorná chyba pri pokuse vytvoriť dočasný súbor na serveri.
-Prosím, kontaktujte [[Special:ListUsers/sysop|správcu systému]].',
+Prosím, kontaktujte [[Special:Listwiki_Users/sysop|správcu systému]].',
 'upload-misc-error' => 'Neznáma chyba pri nahrávaní',
 'upload-misc-error-text' => 'Počas nahrávania sa vyskytla neznáma chyba.
 Prosím, overte, že URL je platný a dostupný a skúste znova.
-Ak problém pretrváva, kontaktujte [[Special:ListUsers/sysop|správcu systému]].',
+Ak problém pretrváva, kontaktujte [[Special:Listwiki_Users/sysop|správcu systému]].',
 'upload-too-many-redirects' => 'URL obsahoval príliš mnoho presmerovaní',
 'upload-unknown-size' => 'Neznáma veľkosť',
 'upload-http-error' => 'Vyskytla sa chyba HTTP: $1',
@@ -2036,7 +2036,7 @@ Možno chcete upraviť popis na jeho [$2 popisnej stránke súboru] tam.',
 'statistics-views-total' => 'Celkom zobrazení',
 'statistics-views-total-desc' => 'Zobrazenia neexistujúcich stránok a špeciálnych stránok nie sú zahrnuté',
 'statistics-views-peredit' => 'Zobrazení na úpravu',
-'statistics-users' => 'Registrovaných [[Special:ListUsers|používateľov]]',
+'statistics-users' => 'Registrovaných [[Special:Listwiki_Users|používateľov]]',
 'statistics-users-active' => 'Aktívnych používateľov',
 'statistics-users-active-desc' => 'Používatelia, ktorí za {{PLURAL:$1|posledný deň|posledné $1 dni|posledných $1 dní}} vykonali nejakú operáciu',
 'statistics-mostpopular' => 'Najčastejšie prezerané stránky',
@@ -2204,13 +2204,13 @@ Podporované protokoly: <code>$1</code> (ak protokol nie je uvedený, použije s
 'linksearch-line' => 'Na $1 odkazuje $2',
 'linksearch-error' => 'Zástupné znaky je možné použiť iba na začiatku názvu domény.',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => 'Zobraziť používateľov počnúc:',
 'listusers-submit' => 'Zobraziť',
 'listusers-noresult' => 'Neboli nájdení používatelia. Prosím, skontrolujte aj varianty s veľkými/malými písmenami.',
 'listusers-blocked' => '(zablokovaný)',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'Zoznam aktívnych používateľov',
 'activeusers-intro' => 'Toto je zoznam používateľov, ktorí $1 {{PLURAL:$1|za posledný 1 deň|za posledné $1 dni|za posledných $1 dní}} vykonali nejakú aktivitu.',
 'activeusers-count' => '$1 {{PLURAL:$1|úprava|úpravy|úprav}} za {{PLURAL:$3|posledný deň|posledné $3 dni|posledných $3 dní}}',
@@ -2244,7 +2244,7 @@ Môžete si prečítať [[{{MediaWiki:Listgrouprights-helppage}}|ďalšie inform
 
 # E-mail user
 'mailnologin' => 'Žiadna adresa na zaslanie',
-'mailnologintext' => 'Musíte byť [[Special:UserLogin|prihlásený]] a mať platnú e-mailovú adresu vo vašich [[Special:Preferences|nastaveniach]], aby ste mohli iným používateľom posielať e-maily.',
+'mailnologintext' => 'Musíte byť [[Special:wiki_UserLogin|prihlásený]] a mať platnú e-mailovú adresu vo vašich [[Special:Preferences|nastaveniach]], aby ste mohli iným používateľom posielať e-maily.',
 'emailuser' => 'E-mail tomuto používateľovi',
 'emailuser-title-target' => 'E-mail {{GENDER:$1|tomuto používateľovi|tejto používateľke}}',
 'emailuser-title-notarget' => 'E-mail používateľovi',
@@ -2275,7 +2275,7 @@ Mailová adresa, ktorú ste zadali vo svojich [[Special:Preferences|nastaveniach
 'emailsenttext' => 'Vaša e-mailová správa bola odoslaná.',
 'emailuserfooter' => 'Tento email poslal $1 používateľovi $2 pomocou funkcie „Email používateľovi” na {{GRAMMAR:lokál|{{SITENAME}}}}.',
 
-# User Messenger
+# wiki_User Messenger
 'usermessage-summary' => 'Zanechanie správy systému.',
 'usermessage-editor' => 'Správy systému',
 
@@ -2286,7 +2286,7 @@ Mailová adresa, ktorú ste zadali vo svojich [[Special:Preferences|nastaveniach
 'nowatchlist' => 'V zozname sledovaných stránok nemáte žiadne položky.',
 'watchlistanontext' => 'Prosím $1 pre prezeranie alebo úpravu vášho zoznamu sledovaných stránok.',
 'watchnologin' => 'Nie ste prihlásený/á',
-'watchnologintext' => 'Musíte byť [[Special:UserLogin|prihlásený/á]], aby ste mohli modifikovať vaše sledované stránky.',
+'watchnologintext' => 'Musíte byť [[Special:wiki_UserLogin|prihlásený/á]], aby ste mohli modifikovať vaše sledované stránky.',
 'addwatch' => 'Pridať do zoznamu sledovaných stránok',
 'addedwatchtext' => "Stránka [[:$1]] bola pridaná do zoznamu [[Special:Watchlist|sledovaných stránok]]. Budú tam uvedené ďalšie úpravy tejto stránky a jej diskusie a stránka bude zobrazená '''tučne''' v [[Special:RecentChanges|zozname posledných úprav]], aby ste ju ľahšie našli.",
 'removewatch' => 'Odstrániť zo zoznamu sledovaných',
@@ -2388,12 +2388,12 @@ Na $2 nájdete zoznam posledných zmazaní.',
 'rollbacklinkcount-morethan' => 'vrátiť viac ako $1 {{PLURAL:$1|úpravu|úprav}}',
 'rollbackfailed' => 'Rollback neúspešný',
 'cantrollback' => 'Nie je možné úpravu vrátiť späť, posledný autor je jediný autor tejto stránky.',
-'alreadyrolled' => 'Nemožno vrátiť späť poslednú úpravu [[:$1]] od [[User:$2|$2]] ([[User talk:$2|Diskusia]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]); niekto iný buď upravoval stránku alebo už vrátil úpravy späť.
+'alreadyrolled' => 'Nemožno vrátiť späť poslednú úpravu [[:$1]] od [[wiki_User:$2|$2]] ([[wiki_User talk:$2|Diskusia]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]); niekto iný buď upravoval stránku alebo už vrátil úpravy späť.
 
-Autorom poslednej úpravy je [[User:$3|$3]] ([[User talk:$3|Diskusia]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
+Autorom poslednej úpravy je [[wiki_User:$3|$3]] ([[wiki_User talk:$3|Diskusia]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
 'editcomment' => "Zhrnutie úpravy bolo: „''$1''“.",
-'revertpage' => 'Posledné úpravy používateľa [[Special:Contributions/$2|$2]] ([[User talk:$2|diskusia]]) vrátené; bola obnovená posledná úprava $1',
-'revertpage-nouser' => 'Vrátené úpravy (meno používateľa odstránené) na poslednú revíziu od [[User:$1|$1]]',
+'revertpage' => 'Posledné úpravy používateľa [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|diskusia]]) vrátené; bola obnovená posledná úprava $1',
+'revertpage-nouser' => 'Vrátené úpravy (meno používateľa odstránené) na poslednú revíziu od [[wiki_User:$1|$1]]',
 'rollback-success' => 'Úpravy $1 vrátené; obnovená posledná verzia od $2.',
 
 # Edit tokens
@@ -2623,7 +2623,7 @@ Nižšie uveďte konkrétny dôvod (napríklad uveďte konkrétne stránky, ktor
 'unblockiptext' => 'Použite tento formulár na obnovenie možnosti zápisov
 z/od momentálne zablokovanej IP adresy/používateľa.',
 'ipusubmit' => 'Zrušiť toto blokovanie',
-'unblocked' => '[[User:$1|$1]] bol odblokovaný',
+'unblocked' => '[[wiki_User:$1|$1]] bol odblokovaný',
 'unblocked-range' => '$1 bol odblokovaný',
 'unblocked-id' => 'Blokovanie $1 bolo odstránené',
 'blocklist' => 'Zablokovaní používatelia',
@@ -2656,7 +2656,7 @@ z/od momentálne zablokovanej IP adresy/používateľa.',
 'change-blocklink' => 'zmeniť blokovanie',
 'contribslink' => 'príspevky',
 'emaillink' => 'poslať email',
-'autoblocker' => 'Boli ste automaticky zablokovaný, pretože vašu IP adresu nedávno použil „[[User:$1|$1]]“.
+'autoblocker' => 'Boli ste automaticky zablokovaný, pretože vašu IP adresu nedávno použil „[[wiki_User:$1|$1]]“.
 Uvedený dôvod zablokovania používateľa $2 bol: „$2“',
 'blocklogpage' => 'Záznam blokovaní',
 'blocklog-showlog' => 'Tento používateľ bol v minulosti zablokovaný. Záznam blokovaní uvádza nasledovný dôvod:',
@@ -2763,7 +2763,7 @@ V takých prípadoch budete musieť, ak si to želáte, premiestniť alebo zlú�
 'movearticle' => 'Presunúť stránku',
 'moveuserpage-warning' => "'''Upozornenie:''' Chystáte sa presunúť používateľskú stránku. Pamätajte, že týmto presuniete iba stránku a používateľ ''nebude'' premenovaný.",
 'movenologin' => 'Nie ste prihlásený',
-'movenologintext' => 'Musíte byť registrovaný používateľ a [[Special:UserLogin|prihlásený]], aby ste mohli presunúť stránku.',
+'movenologintext' => 'Musíte byť registrovaný používateľ a [[Special:wiki_UserLogin|prihlásený]], aby ste mohli presunúť stránku.',
 'movenotallowed' => 'Nemáte povolenie presúvať stránky.',
 'movenotallowedfile' => 'Nemáte oprávnenie presúvať súbory.',
 'cant-move-user-page' => 'Nemáte povolenie presúvať koreňové stránky používateľov.',
@@ -3694,10 +3694,10 @@ Platnosť tohto potvrdzovacieho kódu vyprší $4.',
 
 # Delete conflict
 'deletedwhileediting' => "'''Upozornenie''': Táto stránka bola zmazaná potom ako ste začali s jej úpravami!",
-'confirmrecreate' => "Používateľ [[User:$1|$1]] ([[User talk:$1|diskusia]]) zmazal túto stránku potom, ako ste ju začali upravovať, s odôvodnením:
+'confirmrecreate' => "Používateľ [[wiki_User:$1|$1]] ([[wiki_User talk:$1|diskusia]]) zmazal túto stránku potom, ako ste ju začali upravovať, s odôvodnením:
 : ''$2''
 Prosím, potvrďte, že túto stránku chcete skutočne znovu vytvoriť.",
-'confirmrecreate-noreason' => 'Používateľ [[User:$1|$1]] ([[User talk:$1|diskusia]]) zmazal túto stránku potom, ako ste ju začali upravovať. Prosím, potvrďte, že túto stránku chcete skutočne znovu vytvoriť.',
+'confirmrecreate-noreason' => 'Používateľ [[wiki_User:$1|$1]] ([[wiki_User talk:$1|diskusia]]) zmazal túto stránku potom, ako ste ju začali upravovať. Prosím, potvrďte, že túto stránku chcete skutočne znovu vytvoriť.',
 'recreate' => 'Znova vytvoriť',
 
 # action=purge

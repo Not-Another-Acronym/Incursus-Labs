@@ -41,7 +41,7 @@ class LogPage {
 	var $type, $action, $comment, $params;
 
 	/**
-	 * @var User
+	 * @var wiki_User
 	 */
 	var $doer;
 
@@ -261,7 +261,7 @@ class LogPage {
 						foreach ( $params as &$param ) {
 							$groupArray = array_map( 'trim', explode( ',', $param ) );
 							foreach( $groupArray as &$group ) {
-								$group = User::getGroupMember( $group, $username );
+								$group = wiki_User::getGroupMember( $group, $username );
 							}
 							$param = $wgLang->listToText( $groupArray );
 						}
@@ -282,7 +282,7 @@ class LogPage {
 					$details = '';
 					array_unshift( $params, $titleLink );
 
-					// User suppression
+					// wiki_User suppression
 					if ( preg_match( '/^(block|suppress)\/(block|reblock)$/', $key ) ) {
 						if ( $skin ) {
 							$params[1] = '<span class="blockExpiry" dir="ltr" title="' . htmlspecialchars( $params[1] ). '">' .
@@ -350,7 +350,7 @@ class LogPage {
 	 * @return String
 	 */
 	protected static function getTitleLink( $type, $lang, $title, &$params ) {
-		global $wgContLang, $wgUserrightsInterwikiDelimiter;
+		global $wgContLang, $wgwiki_UserrightsInterwikiDelimiter;
 
 		if( !$lang ) {
 			return $title->getPrefixedText();
@@ -383,17 +383,17 @@ class LogPage {
 				} else {
 					// @todo Store the user identifier in the parameters
 					// to make this faster for future log entries
-					$id = User::idFromName( $title->getText() );
+					$id = wiki_User::idFromName( $title->getText() );
 					$titleLink = Linker::userLink( $id, $title->getText() )
 						. Linker::userToolLinks( $id, $title->getText(), false, Linker::TOOL_LINKS_NOBLOCK );
 				}
 				break;
 			case 'rights':
 				$text = $wgContLang->ucfirst( $title->getText() );
-				$parts = explode( $wgUserrightsInterwikiDelimiter, $text, 2 );
+				$parts = explode( $wgwiki_UserrightsInterwikiDelimiter, $text, 2 );
 
 				if ( count( $parts ) == 2 ) {
-					$titleLink = WikiMap::foreignUserLink( $parts[1], $parts[0],
+					$titleLink = WikiMap::foreignwiki_UserLink( $parts[1], $parts[0],
 						htmlspecialchars( $title->getPrefixedText() ) );
 
 					if ( $titleLink !== false ) {
@@ -445,7 +445,7 @@ class LogPage {
 	 * @param $target Title object
 	 * @param $comment String: description associated
 	 * @param $params Array: parameters passed later to wfMessage function
-	 * @param $doer User object: the user doing the action
+	 * @param $doer wiki_User object: the user doing the action
 	 *
 	 * @return int log_id of the inserted log entry
 	 */
@@ -469,10 +469,10 @@ class LogPage {
 		$this->params = LogPage::makeParamBlob( $params );
 
 		if ( $doer === null ) {
-			global $wgUser;
-			$doer = $wgUser;
+			global $wgwiki_User;
+			$doer = $wgwiki_User;
 		} elseif ( !is_object( $doer ) ) {
-			$doer = User::newFromId( $doer );
+			$doer = wiki_User::newFromId( $doer );
 		}
 
 		$this->doer = $doer;

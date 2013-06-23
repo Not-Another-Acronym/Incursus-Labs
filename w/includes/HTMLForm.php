@@ -2133,7 +2133,7 @@ class HTMLSelectAndOtherField extends HTMLSelectField {
 			if ( $list == 'other' ) {
 				$final = $text;
 			} elseif ( !in_array( $list, $this->mFlatOptions ) ) {
-				# User has spoofed the select form to give an option which wasn't
+				# wiki_User has spoofed the select form to give an option which wasn't
 				# in the original offer.  Sulk...
 				$final = $text;
 			} elseif ( $text == '' ) {

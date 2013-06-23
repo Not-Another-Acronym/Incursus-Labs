@@ -23,13 +23,13 @@
 
 /**
  * Backend functions for suppressing and unsuppressing all references to a given user,
- * used when blocking with HideUser enabled.  This was spun out of SpecialBlockip.php
+ * used when blocking with Hidewiki_User enabled.  This was spun out of SpecialBlockip.php
  * in 1.18; at some point it needs to be rewritten to either use RevisionDelete abstraction,
  * or at least schema abstraction.
  *
  * @ingroup RevisionDelete
  */
-class RevisionDeleteUser {
+class RevisionDeletewiki_User {
 
 	/**
 	 * Update *_deleted bitfields in various tables to hide or unhide usernames
@@ -39,7 +39,7 @@ class RevisionDeleteUser {
 	 * @param  $dbw null|DatabaseBase, if you happen to have one lying around
 	 * @return bool
 	 */
-	private static function setUsernameBitfields( $name, $userId, $op, $dbw ) {
+	private static function setwiki_UsernameBitfields( $name, $userId, $op, $dbw ) {
 		if ( !$userId || ( $op !== '|' && $op !== '&' ) ) {
 			return false; // sanity check
 		}
@@ -52,10 +52,10 @@ class RevisionDeleteUser {
 		# current bitfields with the inverse of Revision::DELETED_USER. The
 		# username bit is made to 0 (x & 0 = 0), while others are unchanged (x & 1 = x).
 		# The same goes for the sysop-restricted *_deleted bit.
-		$delUser = Revision::DELETED_USER | Revision::DELETED_RESTRICTED;
+		$delwiki_User = Revision::DELETED_USER | Revision::DELETED_RESTRICTED;
 		$delAction = LogPage::DELETED_ACTION | Revision::DELETED_RESTRICTED;
 		if( $op == '&' ) {
-			$delUser = "~{$delUser}";
+			$delwiki_User = "~{$delwiki_User}";
 			$delAction = "~{$delAction}";
 		}
 
@@ -66,14 +66,14 @@ class RevisionDeleteUser {
 		# Hide name from live edits
 		$dbw->update(
 			'revision',
-			array( "rev_deleted = rev_deleted $op $delUser" ),
+			array( "rev_deleted = rev_deleted $op $delwiki_User" ),
 			array( 'rev_user' => $userId ),
 			__METHOD__ );
 
 		# Hide name from deleted edits
 		$dbw->update(
 			'archive',
-			array( "ar_deleted = ar_deleted $op $delUser" ),
+			array( "ar_deleted = ar_deleted $op $delwiki_User" ),
 			array( 'ar_user_text' => $name ),
 			__METHOD__
 		);
@@ -81,7 +81,7 @@ class RevisionDeleteUser {
 		# Hide name from logs
 		$dbw->update(
 			'logging',
-			array( "log_deleted = log_deleted $op $delUser" ),
+			array( "log_deleted = log_deleted $op $delwiki_User" ),
 			array( 'log_user' => $userId, "log_type != 'suppress'" ),
 			__METHOD__
 		);
@@ -96,7 +96,7 @@ class RevisionDeleteUser {
 		# Hide name from RC
 		$dbw->update(
 			'recentchanges',
-			array( "rc_deleted = rc_deleted $op $delUser" ),
+			array( "rc_deleted = rc_deleted $op $delwiki_User" ),
 			array( 'rc_user_text' => $name ),
 			__METHOD__
 		);
@@ -110,7 +110,7 @@ class RevisionDeleteUser {
 		# Hide name from live images
 		$dbw->update(
 			'oldimage',
-			array( "oi_deleted = oi_deleted $op $delUser" ),
+			array( "oi_deleted = oi_deleted $op $delwiki_User" ),
 			array( 'oi_user_text' => $name ),
 			__METHOD__
 		);
@@ -118,7 +118,7 @@ class RevisionDeleteUser {
 		# Hide name from deleted images
 		$dbw->update(
 			'filearchive',
-			array( "fa_deleted = fa_deleted $op $delUser" ),
+			array( "fa_deleted = fa_deleted $op $delwiki_User" ),
 			array( 'fa_user_text' => $name ),
 			__METHOD__
 		);
@@ -126,11 +126,11 @@ class RevisionDeleteUser {
 		return true;
 	}
 
-	public static function suppressUserName( $name, $userId, $dbw = null ) {
-		return self::setUsernameBitfields( $name, $userId, '|', $dbw );
+	public static function suppresswiki_UserName( $name, $userId, $dbw = null ) {
+		return self::setwiki_UsernameBitfields( $name, $userId, '|', $dbw );
 	}
 
-	public static function unsuppressUserName( $name, $userId, $dbw = null ) {
-		return self::setUsernameBitfields( $name, $userId, '&', $dbw );
+	public static function unsuppresswiki_UserName( $name, $userId, $dbw = null ) {
+		return self::setwiki_UsernameBitfields( $name, $userId, '&', $dbw );
 	}
 }

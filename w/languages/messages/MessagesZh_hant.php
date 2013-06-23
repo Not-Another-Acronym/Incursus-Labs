@@ -190,9 +190,9 @@ $specialPageAliases = array(
 	'Unwatchedpages'            => array( '未被監視的頁面' ),
 	'Upload'                    => array( '上傳文件' ),
 	'UploadStash'               => array( '上傳藏匿' ),
-	'Userlogin'                 => array( '用戶登錄' ),
-	'Userlogout'                => array( '用戶登出' ),
-	'Userrights'                => array( '用戶權限' ),
+	'wiki_Userlogin'                 => array( '用戶登錄' ),
+	'wiki_Userlogout'                => array( '用戶登出' ),
+	'wiki_Userrights'                => array( '用戶權限' ),
 	'Version'                   => array( '版本信息' ),
 	'Wantedcategories'          => array( '待撰分類' ),
 	'Wantedfiles'               => array( '需要的文件' ),
@@ -211,7 +211,7 @@ $bookstoreList = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => '連結加底線：',
 'tog-justify' => '段落對齊',
 'tog-hideminor' => '隱藏最近更改中的小修改',
@@ -554,7 +554,7 @@ $1',
 通常這是由於修訂歷史頁上過時的連結到已經被刪除的頁面所導致的。
 
 果情況不是這樣，您可能找到了軟體內的一個臭蟲。
-請記錄下URL地址，並向[[Special:ListUsers/sysop|管理員]]報告',
+請記錄下URL地址，並向[[Special:Listwiki_Users/sysop|管理員]]報告',
 'missingarticle-rev' => '（修訂#: $1）',
 'missingarticle-diff' => '（差異: $1, $2）',
 'readonly_lag' => '附屬資料庫伺服器正在將快取更新到主伺服器，資料庫已被自動鎖定',
@@ -605,7 +605,7 @@ $2',
 'customcssprotected' => '你並無權限編輯此CSS頁面，因為它包含了其他用戶的個人設置。',
 'customjsprotected' => '你並無權限去編輯此JavaScript頁面，因為他包含了另一位用戶的個人設定。',
 'ns-specialprotected' => '特殊頁面是不可以編輯的。',
-'titleprotected' => "這個標題已經被[[User:$1|$1]]保護以防止建立。理由是''$2''。",
+'titleprotected' => "這個標題已經被[[wiki_User:$1|$1]]保護以防止建立。理由是''$2''。",
 'filereadonlyerror' => '無法修改文件「$1」因為文件庫「$2」處於唯讀模式。 ！
 管理員鎖定它的解釋是：「$3」。',
 'invalidtitle-knownnamespace' => '使用名字空間「$2」和文本「$3」的無效標題',
@@ -621,7 +621,7 @@ $2',
 # Login and logout pages
 'logouttext' => '您已經登出。
 
-您可以以匿名方式繼續使用{{SITENAME}}，或以相同或不同用戶身份[[Special:UserLogin|登入]]。
+您可以以匿名方式繼續使用{{SITENAME}}，或以相同或不同用戶身份[[Special:wiki_UserLogin|登入]]。
 請注意，如果你再次登入，此頁或會繼續顯示，直到您清除瀏覽器緩存。',
 'welcomecreation' => '== 歡迎，$1！ ==
 您的賬號已經建立。
@@ -663,7 +663,7 @@ $2',
 'loginsuccess' => '{{GENDER:|你|妳|你}}正在以"$1"的身份在{{SITENAME}}登入。',
 'nosuchuser' => '找不到用戶 "$1"。
 用戶名稱是有大小寫區分的。
-檢查您的拼寫，或者用下面的表格[[Special:UserLogin/signup|建立一個新賬號]]。',
+檢查您的拼寫，或者用下面的表格[[Special:wiki_UserLogin/signup|建立一個新賬號]]。',
 'nosuchusershort' => '沒有一個名為「$1」的用戶。請檢查您輸入的文字是否有錯誤。',
 'nouserspecified' => '{{GENDER:|你|妳|你}}需要指定一個用戶名。',
 'login-userblocked' => '這位用戶已被封鎖。不容許登入。',
@@ -848,14 +848,14 @@ $2
 'loginreqlink' => '登入',
 'loginreqpagetext' => '您必須$1才能檢視其它頁面。',
 'accmailtitle' => '密碼已寄出',
-'accmailtext' => "'[[User talk:$1|$1]]'的隨機產生密碼已經寄到 $2。
+'accmailtext' => "'[[wiki_User talk:$1|$1]]'的隨機產生密碼已經寄到 $2。
 
 這個新帳號的密碼可以在登入後的''[[Special:ChangePassword|更改密碼]]''頁面中更改。",
 'newarticle' => '（新）',
 'newarticletext' => '您進入了一個尚未建立的頁面。
 要建立該頁面，請在下面的編輯框中輸入內容（詳情參見[[{{MediaWiki:Helppage}}|幫助]]）。
 如果您是不小心來到此頁面，直接點擊您瀏覽器中的「返回」按鈕返回。',
-'anontalkpagetext' => "---- ''這是一個還未建立賬號的匿名用戶的對話頁。我們因此只能用IP地址來與他／她聯絡。該IP地址可能由幾名用戶共享。如果您是一名匿名用戶並認為本頁上的評語與您無關，請[[Special:UserLogin/signup|創建新賬號]]或[[Special:UserLogin|登入]]以避免在未來於其他匿名用戶混淆。''",
+'anontalkpagetext' => "---- ''這是一個還未建立賬號的匿名用戶的對話頁。我們因此只能用IP地址來與他／她聯絡。該IP地址可能由幾名用戶共享。如果您是一名匿名用戶並認為本頁上的評語與您無關，請[[Special:wiki_UserLogin/signup|創建新賬號]]或[[Special:wiki_UserLogin|登入]]以避免在未來於其他匿名用戶混淆。''",
 'noarticletext' => '此頁目前沒有內容，您可以在其它頁[[Special:Search/{{PAGENAME}}|搜尋此頁標題]]，
 <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} 搜尋有關日誌]，
 或[{{fullurl:{{FULLPAGENAME}}|action=edit}} 編輯此頁]</span>。',
@@ -895,12 +895,12 @@ $2
 'previewconflict' => '這個預覽顯示了上面文字編輯區中的內容。它將在{{GENDER:|你|妳|你}}選擇保存後出現。',
 'session_fail_preview' => "'''很抱歉！由於部份資料遺失，我們無法處理您的編輯。'''
 請再試一次。
-如果仍然失敗，請[[Special:UserLogout|登出]]後重新登入。",
+如果仍然失敗，請[[Special:wiki_UserLogout|登出]]後重新登入。",
 'session_fail_preview_html' => "'''抱歉！部份資料已遺失，我們無法處理您的編輯。'''
 
 ''由於{{SITENAME}}已經開放原始 HTML 碼，預覽已經隱藏以預防 JavaScript 的攻擊。''
 
-'''如果這個編輯過程沒有問題，請再試一次。如果仍然有問題，請[[Special:UserLogout|登出]]後再重新登入一次。'''",
+'''如果這個編輯過程沒有問題，請再試一次。如果仍然有問題，請[[Special:wiki_UserLogout|登出]]後再重新登入一次。'''",
 'token_suffix_mismatch' => "'''由於您用戶端中的編輯信符毀損了一些標點符號字元，為防止編輯的文字損壞，您的編輯已經被拒絕。'''
 這種情況通常出現於使用含有很多臭蟲、以網絡為主的匿名代理服務的時候。",
 'edit_form_incomplete' => '編輯表單的某些部分沒有到達伺服器 ；請檢查您的編輯內容是否完整並再試一次。',
@@ -950,7 +950,7 @@ $2
 'hiddencategories' => '這個頁面是屬於$1個隱藏分類的成員:',
 'edittools' => '<!-- 此處的文字將被顯示在編輯和上傳表單以下。 -->',
 'nocreatetitle' => '創建頁面受限',
-'nocreatetext' => '{{SITENAME}}限制了創建新頁面的功能。{{GENDER:|你|妳|你}}可以返回並編輯已有的頁面，或者[[Special:UserLogin|登錄或創建新賬戶]]。',
+'nocreatetext' => '{{SITENAME}}限制了創建新頁面的功能。{{GENDER:|你|妳|你}}可以返回並編輯已有的頁面，或者[[Special:wiki_UserLogin|登錄或創建新賬戶]]。',
 'nocreate-loggedin' => '您並無許可權去創建新頁面。',
 'sectioneditnotsupported-title' => '不支持段落編輯',
 'sectioneditnotsupported-text' => '此頁面不支持段落編輯。',
@@ -1000,11 +1000,11 @@ $2
 'undo-success' => '該編輯可以被撤銷。請檢查以下對比以核實這正是您想做的，然後儲存以下更改以完成撤銷編輯。',
 'undo-failure' => '由於中途的編輯不一致，此編輯不能撤銷。',
 'undo-norev' => '由於其修訂版本不存在或已刪除，此編輯不能撤銷。',
-'undo-summary' => '取消由[[Special:Contributions/$2|$2]] （[[User talk:$2|對話]]）所作出的修訂 $1',
+'undo-summary' => '取消由[[Special:Contributions/$2|$2]] （[[wiki_User talk:$2|對話]]）所作出的修訂 $1',
 
 # Account creation failure
 'cantcreateaccounttitle' => '無法建立帳號',
-'cantcreateaccount-text' => "從這個 IP 位址 （<b>$1</b>） 建立帳號已經被 [[User:$3|$3]] 禁止。
+'cantcreateaccount-text' => "從這個 IP 位址 （<b>$1</b>） 建立帳號已經被 [[wiki_User:$3|$3]] 禁止。
 
 當中被 $3 封禁的原因是 ''$2''",
 
@@ -1246,7 +1246,7 @@ $1",
 'mypreferences' => '偏好設定',
 'prefs-edits' => '編輯次數：',
 'prefsnologin' => '還未登入',
-'prefsnologintext' => '您必須先<span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} 登入]</span>才能設置個人參數。',
+'prefsnologintext' => '您必須先<span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} 登入]</span>才能設置個人參數。',
 'changepassword' => '更改密碼',
 'prefs-skin' => '外觀',
 'skin-preview' => '預覽',
@@ -1357,16 +1357,16 @@ $1",
 'prefs-displaywatchlist' => '顯示選項',
 'prefs-diffs' => '差異',
 
-# User preference: e-mail validation using jQuery
+# wiki_User preference: e-mail validation using jQuery
 'email-address-validity-valid' => '電子郵件地址有效',
 'email-address-validity-invalid' => '請提供一個有效的電子郵件地址',
 
-# User rights
+# wiki_User rights
 'userrights' => '用戶權限管理',
 'userrights-lookup-user' => '管理用戶群組',
 'userrights-user-editname' => '輸入用戶名:',
 'editusergroup' => '編輯用戶群組',
-'editinguser' => "更改用戶'''[[User:$1|$1]]''' 的用戶權限 $2",
+'editinguser' => "更改用戶'''[[wiki_User:$1|$1]]''' 的用戶權限 $2",
 'userrights-editusergroup' => '編輯用戶群組',
 'saveusergroups' => '保存用戶群組',
 'userrights-groupsmember' => '屬於：',
@@ -1378,7 +1378,7 @@ $1",
 'userrights-reason' => '原因：',
 'userrights-no-interwiki' => '您並沒有權限去編輯在其它wiki上的用戶權限。',
 'userrights-nodatabase' => '資料庫$1不存在或並非為本地的。',
-'userrights-nologin' => '您必須要以操作員賬戶[[Special:UserLogin|登入]]之後才可以指定用戶權限。',
+'userrights-nologin' => '您必須要以操作員賬戶[[Special:wiki_UserLogin|登入]]之後才可以指定用戶權限。',
 'userrights-notallowed' => '您的賬戶無權限來添加或刪除用戶權限。',
 'userrights-changeable-col' => '您可以更改的群組',
 'userrights-unchangeable-col' => '您不可以更改的群組',
@@ -1469,7 +1469,7 @@ $1",
 'right-sendemail' => '發電子郵件給其他用戶',
 'right-passwordreset' => '查看重置密碼郵件',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => '用戶權限日誌',
 'rightslogtext' => '以下記錄了用戶權限的更改記錄。',
 'rightslogentry' => '將 $1 的權限從 $2 改為 $3',
@@ -1566,7 +1566,7 @@ $1",
 'reuploaddesc' => '取消上載並返回上載表單',
 'upload-tryagain' => '提交修改後的檔案描述',
 'uploadnologin' => '未登入',
-'uploadnologintext' => '您必須先[[Special:UserLogin|登入]]
+'uploadnologintext' => '您必須先[[Special:wiki_UserLogin|登入]]
 才能上載檔案。',
 'upload_directory_missing' => '上傳目錄（$1）遺失，不能由網頁伺服器建立。',
 'upload_directory_read_only' => '上傳目錄（$1）不存在或無寫權限。',
@@ -1678,9 +1678,9 @@ $1',
 'upload-proto-error' => '協議錯誤',
 'upload-proto-error-text' => '遠程上傳要求 URL 以 <code>http://</code> 或 <code>ftp://</code> 開頭。',
 'upload-file-error' => '內部錯誤',
-'upload-file-error-text' => '當試圖在伺服器上創建臨時檔案時發生內部錯誤。請與[[Special:ListUsers/sysop|管理員]]聯繫。',
+'upload-file-error-text' => '當試圖在伺服器上創建臨時檔案時發生內部錯誤。請與[[Special:Listwiki_Users/sysop|管理員]]聯繫。',
 'upload-misc-error' => '未知的上傳錯誤',
-'upload-misc-error-text' => '在上傳時發生未知的錯誤。請驗証使用了正確並可訪問的 URL，然後進行重試。如果問題仍然存在，請與[[Special:ListUsers/sysop|管理員]]聯繫。',
+'upload-misc-error-text' => '在上傳時發生未知的錯誤。請驗証使用了正確並可訪問的 URL，然後進行重試。如果問題仍然存在，請與[[Special:Listwiki_Users/sysop|管理員]]聯繫。',
 'upload-too-many-redirects' => '在網址中有太多重新定向',
 'upload-unknown-size' => '未知的大小',
 'upload-http-error' => '已發生一個HTTP錯誤：$1',
@@ -1917,7 +1917,7 @@ $1',
 'statistics-views-total' => '檢視總數',
 'statistics-views-total-desc' => '不存在頁面和特殊頁面的查看數未計入',
 'statistics-views-peredit' => '每次編輯檢視數',
-'statistics-users' => '已註冊[[Special:ListUsers|用戶]]',
+'statistics-users' => '已註冊[[Special:Listwiki_Users|用戶]]',
 'statistics-users-active' => '活躍用戶',
 'statistics-users-active-desc' => '在前$1天中操作過的用戶',
 'statistics-mostpopular' => '被查閱次數最多的頁面',
@@ -2086,13 +2086,13 @@ Template:消除歧義',
 'linksearch-line' => '$1 連自 $2',
 'linksearch-error' => '萬用字元僅可在主機名稱的開頭使用。',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => '給定顯示用戶條件:',
 'listusers-submit' => '顯示',
 'listusers-noresult' => '找不到用戶。',
 'listusers-blocked' => '（已封禁）',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => '活躍用戶列表',
 'activeusers-intro' => '這個是在最近$1天之內有一些動作的用戶列表。',
 'activeusers-count' => '最近$3天內有$1次編輯',
@@ -2126,7 +2126,7 @@ Template:消除歧義',
 
 # E-mail user
 'mailnologin' => '無電郵地址',
-'mailnologintext' => '您必須先[[Special:UserLogin|登入]]
+'mailnologintext' => '您必須先[[Special:wiki_UserLogin|登入]]
 並在[[Special:Preferences|偏好設定]]
 中有一個有效的 e-mail 地址才可以電郵其他用戶。',
 'emailuser' => 'E-mail該用戶',
@@ -2159,7 +2159,7 @@ Template:消除歧義',
 'emailsenttext' => '您的電子郵件已經發出。',
 'emailuserfooter' => '這封電郵是由$1寄給$2經{{SITENAME}}的「電郵用戶」功能發出的。',
 
-# User Messenger
+# wiki_User Messenger
 'usermessage-summary' => '給系統消息。',
 'usermessage-editor' => '系統界面',
 
@@ -2170,7 +2170,7 @@ Template:消除歧義',
 'nowatchlist' => '您的監視列表為空。',
 'watchlistanontext' => '請$1以檢視或編輯您的監視列表。',
 'watchnologin' => '未登入',
-'watchnologintext' => '您必須先[[Special:UserLogin|登入]]，才能更改您的監視列表。',
+'watchnologintext' => '您必須先[[Special:wiki_UserLogin|登入]]，才能更改您的監視列表。',
 'addwatch' => '加至監視列表',
 'addedwatchtext' => '頁面「[[:$1]]」已加到您的[[Special:Watchlist|監視清單]]中。
 將來有關此頁面及其討論頁的任何修改將會在那裡列出。',
@@ -2278,12 +2278,12 @@ $UNWATCHURL
 'rollbacklinkcount-morethan' => '恢復多過 $1 次編輯',
 'rollbackfailed' => '無法恢復',
 'cantrollback' => '無法恢復編輯；最後的貢獻者是本文的唯一作者。',
-'alreadyrolled' => '無法回退由[[User:$2|$2]]（[[User talk:$2|討論]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]在[[:$1]]上的編輯；其他人已經編輯或者回退了該頁。
+'alreadyrolled' => '無法回退由[[wiki_User:$2|$2]]（[[wiki_User talk:$2|討論]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]在[[:$1]]上的編輯；其他人已經編輯或者回退了該頁。
 
-該頁最後的編輯者是[[User:$3|$3]]（[[User talk:$3|討論]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]）。',
+該頁最後的編輯者是[[wiki_User:$3|$3]]（[[wiki_User talk:$3|討論]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]）。',
 'editcomment' => "編輯摘要: \"''\$1''\"。",
-'revertpage' => '已恢復由[[Special:Contributions/$2|$2]]（[[User talk:$2|對話]]）的編輯至[[User:$1|$1]]的最後一個修訂版本',
-'revertpage-nouser' => '恢復由（移除了的用戶名）的編輯到[[User:$1|$1]]的最後一個修訂版本',
+'revertpage' => '已恢復由[[Special:Contributions/$2|$2]]（[[wiki_User talk:$2|對話]]）的編輯至[[wiki_User:$1|$1]]的最後一個修訂版本',
+'revertpage-nouser' => '恢復由（移除了的用戶名）的編輯到[[wiki_User:$1|$1]]的最後一個修訂版本',
 'rollback-success' => '已恢復$1的編輯；
 更改回$2的最後修訂版本。',
 
@@ -2512,7 +2512,7 @@ $1',
 'unblockip' => '解封用戶',
 'unblockiptext' => '用下面的表單來恢復先前被查封的IP位址或用戶的寫權限。',
 'ipusubmit' => '移除這個封鎖',
-'unblocked' => '[[User:$1|$1]] 的封禁已經解除。',
+'unblocked' => '[[wiki_User:$1|$1]] 的封禁已經解除。',
 'unblocked-range' => '$1已被解封',
 'unblocked-id' => '封禁 $1 已經被移除',
 'blocklist' => '封禁用戶',
@@ -2545,7 +2545,7 @@ $1',
 'change-blocklink' => '更改封禁',
 'contribslink' => '貢獻',
 'emaillink' => '傳送電郵',
-'autoblocker' => '因為您與“[[User:$1|$1]]”共享一個IP地址而被自動查封。
+'autoblocker' => '因為您與“[[wiki_User:$1|$1]]”共享一個IP地址而被自動查封。
 $1被封禁的理由是“$2”',
 'blocklogpage' => '查封日誌',
 'blocklog-showlog' => '這位用戶曾經被封鎖過。在下列提供封鎖記錄以便參考：',
@@ -2646,7 +2646,7 @@ $1被封禁的理由是“$2”',
 'movearticle' => '移動頁面:',
 'moveuserpage-warning' => "'''警告：'''您將會移動一個用戶頁面。請留意該頁面在移動後該用戶的名字是''不會''變更的。",
 'movenologin' => '未登入',
-'movenologintext' => '您必須是一名登記用戶並且[[Special:UserLogin|登入]]
+'movenologintext' => '您必須是一名登記用戶並且[[Special:wiki_UserLogin|登入]]
 後才可移動一個頁面。',
 'movenotallowed' => '您並沒有許可權去移動頁面。',
 'movenotallowedfile' => '您並沒有許可權去移動檔案。',
@@ -3527,7 +3527,7 @@ Variants for Chinese language
 郵件傳送員回應: $1',
 'confirmemail_invalid' => '無效的確認碼，該代碼可能已經過期。',
 'confirmemail_needlogin' => '您需要$1以確認您的郵箱位址。',
-'confirmemail_success' => '您的郵箱已經被確認。您現在可以[[Special:UserLogin|登錄]]並使用此網站了。',
+'confirmemail_success' => '您的郵箱已經被確認。您現在可以[[Special:wiki_UserLogin|登錄]]並使用此網站了。',
 'confirmemail_loggedin' => '您的郵箱位址現下已被確認。',
 'confirmemail_error' => '{{GENDER:|你|妳|你}}的確認過程發生錯誤。',
 'confirmemail_subject' => '{{SITENAME}}郵箱位址確認',
@@ -3578,10 +3578,10 @@ $5
 
 # Delete conflict
 'deletedwhileediting' => '警告: 此頁在您開始編輯之後已經被刪除﹗',
-'confirmrecreate' => "在您開始編輯這個頁面後，用戶[[User:$1|$1]] （[[User talk:$1|對話]]）以下列原因刪除了這個頁面：
+'confirmrecreate' => "在您開始編輯這個頁面後，用戶[[wiki_User:$1|$1]] （[[wiki_User talk:$1|對話]]）以下列原因刪除了這個頁面：
 : ''$2''
 請確認在您重新創建頁面前三思。",
-'confirmrecreate-noreason' => '在您開始編輯後，用戶[[User:$1|$1]] （[[User talk:$1|對話]]）刪除了這個頁面。請在重新創建頁面前三思。',
+'confirmrecreate-noreason' => '在您開始編輯後，用戶[[wiki_User:$1|$1]] （[[wiki_User talk:$1|對話]]）刪除了這個頁面。請在重新創建頁面前三思。',
 'recreate' => '重建',
 
 # action=purge

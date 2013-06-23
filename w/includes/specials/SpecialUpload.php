@@ -53,12 +53,12 @@ class SpecialUpload extends SpecialPage {
 	public $mLocalFile;
 	public $mUploadClicked;
 
-	/** User input variables from the "description" section **/
+	/** wiki_User input variables from the "description" section **/
 	public $mDesiredDestName;	// The requested target file name
 	public $mComment;
 	public $mLicense;
 
-	/** User input variables from the root section **/
+	/** wiki_User input variables from the root section **/
 	public $mIgnoreWarning;
 	public $mWatchThis;
 	public $mCopyrightStatus;
@@ -122,10 +122,10 @@ class SpecialUpload extends SpecialPage {
 	 * Handle permission checking elsewhere in order to be able to show
 	 * custom error messages.
 	 *
-	 * @param $user User object
+	 * @param $user wiki_User object
 	 * @return Boolean
 	 */
-	public function userCanExecute( User $user ) {
+	public function userCanExecute( wiki_User $user ) {
 		return UploadBase::isEnabled() && parent::userCanExecute( $user );
 	}
 
@@ -150,7 +150,7 @@ class SpecialUpload extends SpecialPage {
 
 		# Check blocks
 		if( $user->isBlocked() ) {
-			throw new UserBlockedError( $user->getBlock() );
+			throw new wiki_UserBlockedError( $user->getBlock() );
 		}
 
 		# Check whether we actually want to allow changing stuff

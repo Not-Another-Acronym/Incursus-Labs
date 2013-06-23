@@ -15,7 +15,7 @@
  */
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => "Koritan ang dalum kang manga ''link'':",
 'tog-justify' => 'Tururupungun ang kilid kang manga paragraph',
 'tog-hideminor' => "Tagoon ang gagmay nga ''edit'' sa mga bag-o nga ilis",
@@ -253,7 +253,7 @@ Lantawa sa [[Special:Version|version kang page]].',
 # Special:LinkSearch
 'linksearch-ok' => 'Sagap',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusers-submit' => 'Ipakita',
 
 # E-mail user

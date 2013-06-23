@@ -39,10 +39,10 @@ class SpecialChangePassword extends UnlistedSpecialPage {
 
 		$this->setHeaders();
 		$this->outputHeader();
-		$this->getOutput()->disallowUserJs();
+		$this->getOutput()->disallowwiki_UserJs();
 
 		$request = $this->getRequest();
-		$this->mUserName = trim( $request->getVal( 'wpName' ) );
+		$this->mwiki_UserName = trim( $request->getVal( 'wpName' ) );
 		$this->mOldpass = $request->getVal( 'wpPassword' );
 		$this->mNewpass = $request->getVal( 'wpNewPassword' );
 		$this->mRetype = $request->getVal( 'wpRetype' );
@@ -76,7 +76,7 @@ class SpecialChangePassword extends UnlistedSpecialPage {
 					$token = LoginForm::getLoginToken();
 					$data = array(
 						'action'       => 'submitlogin',
-						'wpName'       => $this->mUserName,
+						'wpName'       => $this->mwiki_UserName,
 						'wpDomain'     => $this->mDomain,
 						'wpLoginToken' => $token,
 						'wpPassword'   => $this->mNewpass,
@@ -113,8 +113,8 @@ class SpecialChangePassword extends UnlistedSpecialPage {
 		global $wgCookieExpiration;
 
 		$user = $this->getUser();
-		if ( !$this->mUserName ) {
-			$this->mUserName = $user->getName();
+		if ( !$this->mwiki_UserName ) {
+			$this->mwiki_UserName = $user->getName();
 		}
 		$rememberMe = '';
 		if ( !$user->isLoggedIn() ) {
@@ -136,7 +136,7 @@ class SpecialChangePassword extends UnlistedSpecialPage {
 		$extraFields = array();
 		wfRunHooks( 'ChangePasswordForm', array( &$extraFields ) );
 		$prettyFields = array(
-					array( 'wpName', 'username', 'text', $this->mUserName ),
+					array( 'wpName', 'username', 'text', $this->mwiki_UserName ),
 					array( 'wpPassword', $oldpassMsg, 'password', $this->mOldpass ),
 					array( 'wpNewPassword', 'newpassword', 'password', null ),
 					array( 'wpRetype', 'retypenew', 'password', null ),
@@ -150,7 +150,7 @@ class SpecialChangePassword extends UnlistedSpecialPage {
 					'action' => $this->getTitle()->getLocalUrl(),
 					'id' => 'mw-resetpass-form' ) ) . "\n" .
 			Html::hidden( 'token', $user->getEditToken() ) . "\n" .
-			Html::hidden( 'wpName', $this->mUserName ) . "\n" .
+			Html::hidden( 'wpName', $this->mwiki_UserName ) . "\n" .
 			Html::hidden( 'wpDomain', $this->mDomain ) . "\n" .
 			Html::hidden( 'returnto', $this->getRequest()->getVal( 'returnto' ) ) . "\n" .
 			$this->msg( 'resetpass_text' )->parseAsBlock() . "\n" .
@@ -180,7 +180,7 @@ class SpecialChangePassword extends UnlistedSpecialPage {
 				$attribs = array( 'id' => $name );
 				if ( $name == 'wpNewPassword' || $name == 'wpRetype' ) {
 					$attribs = array_merge( $attribs,
-						User::passwordChangeInputAttribs() );
+						wiki_User::passwordChangeInputAttribs() );
 				}
 				if ( $name == 'wpPassword' ) {
 					$attribs[] = 'autofocus';
@@ -206,9 +206,9 @@ class SpecialChangePassword extends UnlistedSpecialPage {
 	 * @throws PasswordError when cannot set the new password because requirements not met.
 	 */
 	protected function attemptReset( $newpass, $retype ) {
-		$user = User::newFromName( $this->mUserName );
+		$user = wiki_User::newFromName( $this->mwiki_UserName );
 		if( !$user || $user->isAnon() ) {
-			throw new PasswordError( $this->msg( 'nosuchusershort', $this->mUserName )->text() );
+			throw new PasswordError( $this->msg( 'nosuchusershort', $this->mwiki_UserName )->text() );
 		}
 
 		if( $newpass !== $retype ) {
@@ -216,7 +216,7 @@ class SpecialChangePassword extends UnlistedSpecialPage {
 			throw new PasswordError( $this->msg( 'badretype' )->text() );
 		}
 
-		$throttleCount = LoginForm::incLoginThrottle( $this->mUserName );
+		$throttleCount = LoginForm::incLoginThrottle( $this->mwiki_UserName );
 		if ( $throttleCount === true ) {
 			throw new PasswordError( $this->msg( 'login-throttled' )->text() );
 		}
@@ -228,7 +228,7 @@ class SpecialChangePassword extends UnlistedSpecialPage {
 
 		// Please reset throttle for successful logins, thanks!
 		if ( $throttleCount ) {
-			LoginForm::clearLoginThrottle( $this->mUserName );
+			LoginForm::clearLoginThrottle( $this->mwiki_UserName );
 		}
 
 		try {

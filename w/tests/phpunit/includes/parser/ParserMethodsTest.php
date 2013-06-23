@@ -20,9 +20,9 @@ class ParserMethodsTest extends MediaWikiLangTestCase {
 		global $wgParser;
 
 		$title = Title::newFromText( str_replace( '::', '__', __METHOD__ ) );
-		$user = new User();
+		$user = new wiki_User();
 		$user->setName( "127.0.0.1" );
-		$popts = ParserOptions::newFromUser( $user );
+		$popts = ParserOptions::newFromwiki_User( $user );
 		$text = $wgParser->preSaveTransform( $text, $title, $user, $popts );
 
 		$this->assertEquals( $expected, $text );

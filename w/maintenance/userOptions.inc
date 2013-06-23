@@ -118,7 +118,7 @@ class userOptions {
 
 	/** List default options and their value */
 	private function LISTER( ) {
-		$def = User::getDefaultOptions();
+		$def = wiki_User::getDefaultOptions();
 		ksort( $def );
 		$maxOpt = 0;
 		foreach ( $def as $opt => $value ) {
@@ -132,7 +132,7 @@ class userOptions {
 	/** List options usage */
 	private function USAGER( ) {
 		$ret = array();
-		$defaultOptions = User::getDefaultOptions();
+		$defaultOptions = wiki_User::getDefaultOptions();
 
 		// We list user by user_id from one of the slave database
 		$dbr = wfGetDB( DB_SLAVE );
@@ -144,7 +144,7 @@ class userOptions {
 
 		foreach ( $result as $id ) {
 
-			$user = User::newFromId( $id->user_id );
+			$user = wiki_User::newFromId( $id->user_id );
 
 			// Get the options and update stats
 			if ( $this->mAnOption ) {
@@ -194,7 +194,7 @@ class userOptions {
 
 		foreach ( $result as $id ) {
 
-			$user = User::newFromId( $id->user_id );
+			$user = wiki_User::newFromId( $id->user_id );
 
 			$curValue = $user->getOption( $this->mAnOption );
 			$username = $user->getName();
@@ -225,7 +225,7 @@ class userOptions {
 	 * @return array
 	 */
 	public static function getDefaultOptionsNames() {
-		$def = User::getDefaultOptions();
+		$def = wiki_User::getDefaultOptions();
 		$ret = array();
 		foreach ( $def as $optname => $defaultValue ) {
 			array_push( $ret, $optname );
@@ -277,7 +277,7 @@ USAGE;
 
 print <<<WARN
 The script is about to change the skin for ALL USERS in the database.
-Users with option <$this->mAnOption> = '$this->mOldValue' will be made to use '$this->mNewValue'.
+wiki_Users with option <$this->mAnOption> = '$this->mOldValue' will be made to use '$this->mNewValue'.
 
 Abort with control-c in the next five seconds....
 WARN;

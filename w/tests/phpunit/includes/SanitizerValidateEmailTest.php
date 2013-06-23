@@ -17,7 +17,7 @@ class SanitizerValidateEmailTest extends MediaWikiTestCase {
 		$this->checkEmail( $addr, false, $msg );
 	}
 
-	function testEmailWellKnownUserAtHostDotTldAreValid() {
+	function testEmailWellKnownwiki_UserAtHostDotTldAreValid() {
 		$this->valid( 'user@example.com' );
 		$this->valid( 'user@example.museum' );
 	}
@@ -27,7 +27,7 @@ class SanitizerValidateEmailTest extends MediaWikiTestCase {
 		$this->valid( 'user@Example.com' );
 		$this->valid( 'USER@eXAMPLE.com' );
 	}
-	function testEmailWithAPlusInUserName() {
+	function testEmailWithAPlusInwiki_UserName() {
 		$this->valid( 'user+sub@example.com' );
 		$this->valid( 'user+@example.com' );
 	}
@@ -43,7 +43,7 @@ class SanitizerValidateEmailTest extends MediaWikiTestCase {
 		$this->invalid( "user@host.com\t" );
 	}
 	function testEmailWithWhiteSpacesAreInvalids() {
-		$this->invalid( "User user@host" );
+		$this->invalid( "wiki_User user@host" );
 		$this->invalid( "first last@mycompany" );
 		$this->invalid( "firstlast@my company" );
 	}

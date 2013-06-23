@@ -153,9 +153,9 @@ $specialPageAliases = array(
 	'Unwatchedpages'            => array( '주시안되는문서' ),
 	'Upload'                    => array( '올리기', '파일올리기', '그림올리기' ),
 	'UploadStash'               => array( '올린비공개파일' ),
-	'Userlogin'                 => array( '로그인' ),
-	'Userlogout'                => array( '로그아웃' ),
-	'Userrights'                => array( '권한조정' ),
+	'wiki_Userlogin'                 => array( '로그인' ),
+	'wiki_Userlogout'                => array( '로그아웃' ),
+	'wiki_Userrights'                => array( '권한조정' ),
 	'Version'                   => array( '버전' ),
 	'Wantedcategories'          => array( '필요한분류' ),
 	'Wantedfiles'               => array( '필요한파일', '필요한그림' ),
@@ -344,7 +344,7 @@ $dateFormats = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => '링크에 밑줄 표시하기:',
 'tog-justify' => '문단 정렬하기',
 'tog-hideminor' => '최근 바뀜에서 사소한 편집을 숨기기',
@@ -685,7 +685,7 @@ URL을 잘못 입력하였거나, 잘못된 링크를 따라갔을 수 있습니
 
 삭제된 문서의 역사/비교 문서를 보려고 시도할 때 이러한 문제가 발생할 수 있습니다.
 
-또는, 프로그램 버그가 발생했을 수도 있습니다. [[Special:ListUsers/sysop|관리자]]에게 오류가 나는 URL을 알려주세요.',
+또는, 프로그램 버그가 발생했을 수도 있습니다. [[Special:Listwiki_Users/sysop|관리자]]에게 오류가 나는 URL을 알려주세요.',
 'missingarticle-rev' => '(판번호: $1)',
 'missingarticle-diff' => '(차이: $1, $2)',
 'readonly_lag' => '슬레이브 데이터베이스가 마스터 서버의 자료를 새로 고치는 중입니다. 데이터베이스가 자동으로 잠겨 있습니다.',
@@ -737,7 +737,7 @@ $2',
 'customcssprotected' => '여기에는 다른 사용자의 개인 설정이 포함되어 있기 때문에 이 CSS 문서를 편집할 수 없습니다.',
 'customjsprotected' => '여기에는 다른 사용자의 개인 설정이 포함되어 있기 때문에 이 자바스크립트 문서를 편집할 수 없습니다.',
 'ns-specialprotected' => '특수 문서는 편집할 수 없습니다.',
-'titleprotected' => '[[User:$1|$1]] 사용자가 문서 만들기를 금지했습니다.
+'titleprotected' => '[[wiki_User:$1|$1]] 사용자가 문서 만들기를 금지했습니다.
 이유는 다음과 같습니다. "$2"',
 'filereadonlyerror' => '"$2" 파일 저장소가 읽기 전용이기 때문에 "$1" 파일을 바꿀 수 없습니다.
 
@@ -755,7 +755,7 @@ $2',
 # Login and logout pages
 'logouttext' => "'''{{SITENAME}}에서 로그아웃했습니다.'''
 
-이대로 이름 없이 {{SITENAME}}을(를) 이용하거나, 방금 사용했던 계정이나 다른 계정으로 다시 [[Special:UserLogin|로그인]]해서 이용할 수 있습니다.
+이대로 이름 없이 {{SITENAME}}을(를) 이용하거나, 방금 사용했던 계정이나 다른 계정으로 다시 [[Special:wiki_UserLogin|로그인]]해서 이용할 수 있습니다.
 웹 브라우저의 캐시를 지우지 않으면 몇몇 문서에서 로그인이 되어 있는 것처럼 보일 수 있다는 점을 유의해 주세요.",
 'welcomecreation' => '== $1, 환영합니다! ==
 계정이 만들어졌습니다.
@@ -803,7 +803,7 @@ $2',
 'loginsuccess' => "'''{{SITENAME}}에 \"\$1\" 계정으로 로그인했습니다.'''",
 'nosuchuser' => '"$1" 사용자가 존재하지 않습니다.
 사용자 이름은 대소문자를 구별합니다. 철자가 맞는지 확인해주세요.
-[[Special:UserLogin/signup|새 계정을 만들 수도 있습니다]].',
+[[Special:wiki_UserLogin/signup|새 계정을 만들 수도 있습니다]].',
 'nosuchusershort' => '이름이 "$1"인 사용자는 없습니다.
 철자가 맞는지 확인하세요.',
 'nouserspecified' => '사용자 이름을 입력하지 않았습니다.',
@@ -1006,7 +1006,7 @@ $1 또는 [[{{MediaWiki:Grouppage-sysop}}|다른 관리자]]에게 차단에 대
 'loginreqlink' => '로그인',
 'loginreqpagetext' => '다른 문서를 보기 위해서는 $1해야 합니다.',
 'accmailtitle' => '비밀번호를 보냈습니다.',
-'accmailtext' => '[[User talk:$1|$1]] 사용자의 비밀번호가 임의로 만들어져 $2로 전송되었습니다.
+'accmailtext' => '[[wiki_User talk:$1|$1]] 사용자의 비밀번호가 임의로 만들어져 $2로 전송되었습니다.
 
 새 비밀번호는 로그인한 후 [[Special:ChangePassword|비밀번호를 바꿀]] 수 있습니다.',
 'newarticle' => '(새 문서)',
@@ -1017,7 +1017,7 @@ $1 또는 [[{{MediaWiki:Grouppage-sysop}}|다른 관리자]]에게 차단에 대
 여기는 계정을 만들지 않았거나 사용하고 있지 않은 익명 사용자를 위한 토론 문서입니다.
 익명 사용자를 구별하기 위해서는 숫자로 된 IP 주소를 사용해야만 합니다.
 IP 주소는 여러 사용자가 공유할 수 있습니다.
-자신과 관계없는 의견이 자신에게 남겨져 있어 불쾌하다고 생각하는 익명 사용자는 [[Special:UserLogin/signup|계정을 만들고]] [[Special:UserLogin|로그인 하여]] 나중에 다른 익명 사용자에게 줄 혼란을 줄일 수 있습니다.',
+자신과 관계없는 의견이 자신에게 남겨져 있어 불쾌하다고 생각하는 익명 사용자는 [[Special:wiki_UserLogin/signup|계정을 만들고]] [[Special:wiki_UserLogin|로그인 하여]] 나중에 다른 익명 사용자에게 줄 혼란을 줄일 수 있습니다.',
 'noarticletext' => '이 문서가 현재 존재하지 않습니다.
 이 문서와 제목이 비슷한 문서가 있는지 [[Special:Search/{{PAGENAME}}|찾거나]],
 이 문서에 관련된 <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} 기록]을 확인하거나,
@@ -1058,13 +1058,13 @@ IP 주소는 여러 사용자가 공유할 수 있습니다.
 'previewconflict' => '이 미리 보기는 저장할 때의 모습으로 위쪽 편집창의 문서를 반영합니다.',
 'session_fail_preview' => "'''세션 데이터가 없어져 편집을 저장하지 못했습니다.'''
 다시 시도하세요.
-다시 시도해도 되지 않으면 [[Special:UserLogout|로그아웃]]한 다음 다시 로그인하세요.",
+다시 시도해도 되지 않으면 [[Special:wiki_UserLogout|로그아웃]]한 다음 다시 로그인하세요.",
 'session_fail_preview_html' => "'''세션 데이터가 없어져 편집을 저장하지 못했습니다.'''
 
 {{SITENAME}}에서 HTML 입력을 허용하기 때문에, 자바스크립트 공격을 막기 위해 미리 보기는 숨겨져 있습니다.
 
 '''적합하게 편집을 시도했다면 다시 시도하세요'''
-다시 시도해도 되지 않으면 [[Special:UserLogout|로그아웃]]한 다음 다시 로그인하세요.",
+다시 시도해도 되지 않으면 [[Special:wiki_UserLogout|로그아웃]]한 다음 다시 로그인하세요.",
 'token_suffix_mismatch' => "'''저장하려는 내용의 문장 부호가 망가져 있습니다.'''
 문서 보호를 위해 해당 내용을 저장하지 않습니다.
 버그가 있는 익명 프록시 서비스 등을 사용할 때 이런 문제가 발생할 수 있습니다.",
@@ -1115,7 +1115,7 @@ IP 주소는 여러 사용자가 공유할 수 있습니다.
 'edittools' => '<!-- 이 문서는 편집 창과 파일 올리기 창에 출력됩니다. -->',
 'nocreatetitle' => '문서 만들기 제한',
 'nocreatetext' => '{{SITENAME}}에서 새로운 문서를 만드는 것은 제한되어 있습니다.
-이미 존재하는 다른 문서를 편집하거나, [[Special:UserLogin|로그인하거나 계정을 만들 수 있습니다]].',
+이미 존재하는 다른 문서를 편집하거나, [[Special:wiki_UserLogin|로그인하거나 계정을 만들 수 있습니다]].',
 'nocreate-loggedin' => '새 문서를 만들 권한이 없습니다.',
 'sectioneditnotsupported-title' => '부분 편집 지원 안됨',
 'sectioneditnotsupported-text' => '이 문서에서는 문단 편집을 지원하지 않습니다.',
@@ -1166,11 +1166,11 @@ $2개 보다 적게 써야 하지만 지금은 $1개를 쓰고 있습니다.",
 편집 되돌리기를 완료하려면 이 편집을 되돌리려면 아래의 바뀜 사항을 확인한 후 저장해주세요.',
 'undo-failure' => '중간의 다른 편집과 충돌하여 이 편집을 되돌릴 수 없습니다.',
 'undo-norev' => '문서가 없거나 삭제되었기 때문에 편집을 되돌릴 수 없습니다.',
-'undo-summary' => '[[Special:Contributions/$2|$2]] ([[User talk:$2|토론]]) 의 $1판 편집을 되돌림',
+'undo-summary' => '[[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|토론]]) 의 $1판 편집을 되돌림',
 
 # Account creation failure
 'cantcreateaccounttitle' => '계정을 만들 수 없음',
-'cantcreateaccount-text' => "현재 아이피 주소('''$1''')는 [[User:$3|$3]] 사용자에 의해 계정 만들기가 차단된 상태입니다.
+'cantcreateaccount-text' => "현재 아이피 주소('''$1''')는 [[wiki_User:$3|$3]] 사용자에 의해 계정 만들기가 차단된 상태입니다.
 
 차단 이유는 다음과 같습니다: $2",
 
@@ -1433,7 +1433,7 @@ $1",
 'mypreferences' => '환경 설정',
 'prefs-edits' => '편집 횟수:',
 'prefsnologin' => '로그인하지 않음',
-'prefsnologintext' => '사용자 환경 설정을 바꾸려면 먼저 <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} 로그인]</span>해야 합니다.',
+'prefsnologintext' => '사용자 환경 설정을 바꾸려면 먼저 <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} 로그인]</span>해야 합니다.',
 'changepassword' => '비밀번호 바꾸기',
 'prefs-skin' => '스킨',
 'skin-preview' => '미리 보기',
@@ -1548,16 +1548,16 @@ HTML 태그를 확인하세요.',
 'prefs-displaywatchlist' => '보이기 설정',
 'prefs-diffs' => '차이',
 
-# User preference: e-mail validation using jQuery
+# wiki_User preference: e-mail validation using jQuery
 'email-address-validity-valid' => '이메일 주소가 유효한 것으로 보입니다.',
 'email-address-validity-invalid' => '유효한 이메일 주소를 입력해주세요.',
 
-# User rights
+# wiki_User rights
 'userrights' => '사용자 권한 관리',
 'userrights-lookup-user' => '사용자 권한 관리',
 'userrights-user-editname' => '사용자 이름 입력:',
 'editusergroup' => '사용자 그룹 편집',
-'editinguser' => "'''[[User:$1|$1]]''' $2 사용자의 권한 바꾸기",
+'editinguser' => "'''[[wiki_User:$1|$1]]''' $2 사용자의 권한 바꾸기",
 'userrights-editusergroup' => '사용자 그룹 편집',
 'saveusergroups' => '사용자 권한 저장',
 'userrights-groupsmember' => '현재 권한:',
@@ -1569,7 +1569,7 @@ HTML 태그를 확인하세요.',
 'userrights-reason' => '이유:',
 'userrights-no-interwiki' => '다른 위키의 사용자 권한을 바꿀 권한이 없습니다.',
 'userrights-nodatabase' => '데이터베이스 $1이 존재하지 않거나 로컬에 있지 않습니다.',
-'userrights-nologin' => '사용자의 권한을 바꾸기 위해서는 반드시 관리자 계정으로 [[Special:UserLogin|로그인]]해야 합니다.',
+'userrights-nologin' => '사용자의 권한을 바꾸기 위해서는 반드시 관리자 계정으로 [[Special:wiki_UserLogin|로그인]]해야 합니다.',
 'userrights-notallowed' => '다른 사용자의 권한을 조정할 권한이 없습니다.',
 'userrights-changeable-col' => '바꿀 수 있는 권한',
 'userrights-unchangeable-col' => '바꿀 수 없는 권한',
@@ -1660,7 +1660,7 @@ HTML 태그를 확인하세요.',
 'right-sendemail' => '다른 사용자에게 이메일 보내기',
 'right-passwordreset' => '비밀번호 재설정 이메일을 보기',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => '사용자 권한 기록',
 'rightslogtext' => '사용자 권한 조정 기록입니다.',
 'rightslogentry' => '사용자가 $1의 권한을 $2에서 $3으로 바꾸었습니다',
@@ -1757,7 +1757,7 @@ HTML 태그를 확인하세요.',
 'reuploaddesc' => '올리기를 취소하고 올리기 양식으로 돌아가기',
 'upload-tryagain' => '수정된 파일 설명을 저장',
 'uploadnologin' => '로그인하지 않음',
-'uploadnologintext' => '파일을 올리려면 [[Special:UserLogin|로그인]]해야 합니다.',
+'uploadnologintext' => '파일을 올리려면 [[Special:wiki_UserLogin|로그인]]해야 합니다.',
 'upload_directory_missing' => '파일 올리기용 디렉터리($1)가 없고 웹 서버가 만들지 못했습니다.',
 'upload_directory_read_only' => '파일 저장 디렉터리($1)에 쓰기 권한이 없습니다.',
 'uploaderror' => '올리기 오류',
@@ -1897,11 +1897,11 @@ $1',
 'upload-proto-error-text' => '파일을 URL로 올리려면 <code>http://</code>이나 <code>ftp://</code>로 시작해야 합니다.',
 'upload-file-error' => '내부 오류',
 'upload-file-error-text' => '서버에 임시 파일을 만드는 과정에서 내부 오류가 발생했습니다.
-[[Special:ListUsers/sysop|관리자]]에게 연락해주세요.',
+[[Special:Listwiki_Users/sysop|관리자]]에게 연락해주세요.',
 'upload-misc-error' => '알 수 없는 파일 올리기 오류',
 'upload-misc-error-text' => '파일을 올리는 중 알 수 없는 오류가 발생했습니다.
 URL이 올바르고 접근 가능한지를 확인하고 다시 시도해주세요.
-문제가 계속되면 [[Special:ListUsers/sysop|관리자]]에게 연락해주세요.',
+문제가 계속되면 [[Special:Listwiki_Users/sysop|관리자]]에게 연락해주세요.',
 'upload-too-many-redirects' => 'URL이 너무 많은 넘겨주기에 연결되어 있습니다.',
 'upload-unknown-size' => '크기를 알 수 없음',
 'upload-http-error' => 'HTTP 오류 발생: $1',
@@ -2143,7 +2143,7 @@ URL이 맞고 해당 웹사이트가 작동하는지 확인해주세요.',
 'statistics-views-total' => '총 방문 수',
 'statistics-views-total-desc' => '존재하지 않는 문서나 특수 문서에 대한 방문수는 집계하지 않았습니다.',
 'statistics-views-peredit' => '편집당 방문 횟수',
-'statistics-users' => '등록된 [[Special:ListUsers|사용자]]',
+'statistics-users' => '등록된 [[Special:Listwiki_Users|사용자]]',
 'statistics-users-active' => '활동적인 사용자',
 'statistics-users-active-desc' => '최근 $1일 동안 활동한 사용자',
 'statistics-mostpopular' => '가장 많이 읽힌 문서',
@@ -2313,13 +2313,13 @@ URL이 맞고 해당 웹사이트가 작동하는지 확인해주세요.',
 'linksearch-line' => '$2에서 $1 을 링크하고 있습니다.',
 'linksearch-error' => '와일드카드는 주소의 처음 부분에만 사용될 수 있습니다.',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => '다음으로 시작하는 사용자 보기:',
 'listusers-submit' => '보기',
 'listusers-noresult' => '해당 사용자가 없습니다.',
 'listusers-blocked' => '(차단됨)',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => '활동적인 사용자 목록',
 'activeusers-intro' => '다음은 최근 $1일 동안 활동한 사용자의 목록입니다.',
 'activeusers-count' => '최근 {{PLURAL:$3|1일|$3일}} 사이의 {{PLURAL:$1|활동}} $1회',
@@ -2353,7 +2353,7 @@ URL이 맞고 해당 웹사이트가 작동하는지 확인해주세요.',
 
 # E-mail user
 'mailnologin' => '보낼 이메일 주소가 없음',
-'mailnologintext' => '다른 사용자에게 이메일을 보내려면 [[Special:UserLogin|로그인]]한 다음 [[Special:Preferences|사용자 환경 설정]]에서 자신의 이메일 주소를 저장해야 합니다.',
+'mailnologintext' => '다른 사용자에게 이메일을 보내려면 [[Special:wiki_UserLogin|로그인]]한 다음 [[Special:Preferences|사용자 환경 설정]]에서 자신의 이메일 주소를 저장해야 합니다.',
 'emailuser' => '이메일 보내기',
 'emailuser-title-target' => '이 {{GENDER:$1|사용자}} 이메일',
 'emailuser-title-notarget' => '사용자 이메일',
@@ -2384,10 +2384,10 @@ URL이 맞고 해당 웹사이트가 작동하는지 확인해주세요.',
 'emailsenttext' => '이메일을 보냈습니다.',
 'emailuserfooter' => '이 이메일은 {{SITENAME}}의 $1 사용자가 $2 사용자에게 "이메일 보내기" 기능을 통해 보냈습니다.',
 
-# User Messenger
+# wiki_User Messenger
 'usermessage-summary' => '시스템 메시지 남기기',
 'usermessage-editor' => '시스템 메신저',
-'usermessage-template' => 'MediaWiki:UserMessage',
+'usermessage-template' => 'MediaWiki:wiki_UserMessage',
 
 # Watchlist
 'watchlist' => '주시문서 목록',
@@ -2396,7 +2396,7 @@ URL이 맞고 해당 웹사이트가 작동하는지 확인해주세요.',
 'nowatchlist' => '주시하는 문서가 아직 없습니다.',
 'watchlistanontext' => '주시문서 목록을 보거나 고치려면 $1 하세요.',
 'watchnologin' => '로그인하지 않음',
-'watchnologintext' => '주시문서 목록을 고치려면 [[Special:UserLogin|로그인]]해야 합니다.',
+'watchnologintext' => '주시문서 목록을 고치려면 [[Special:wiki_UserLogin|로그인]]해야 합니다.',
 'addwatch' => '주시문서 목록에 추가',
 'addedwatchtext' => '"[[:$1]]" 문서를 [[Special:Watchlist|주시문서 목록]]에 추가했습니다.
 앞으로 이 문서나 관련된 토론 문서가 바뀌면 보일 것입니다.',
@@ -2507,13 +2507,13 @@ $UNWATCHURL
 'rollbackfailed' => '되돌리기 실패',
 'cantrollback' => '편집을 되돌릴 수 없습니다.
 문서를 편집한 사용자가 한명뿐입니다.',
-'alreadyrolled' => '[[:$1]]에서 [[User:$2|$2]] ([[User talk:$2|토론]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]])의 편집을 되돌릴 수 없습니다.
+'alreadyrolled' => '[[:$1]]에서 [[wiki_User:$2|$2]] ([[wiki_User talk:$2|토론]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]])의 편집을 되돌릴 수 없습니다.
 누군가가 이미 문서를 고치거나 되돌렸습니다.
 
-마지막으로 이 문서를 편집한 사용자는 [[User:$3|$3]] ([[User talk:$3|토론]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]])입니다.',
+마지막으로 이 문서를 편집한 사용자는 [[wiki_User:$3|$3]] ([[wiki_User talk:$3|토론]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]])입니다.',
 'editcomment' => '편집 요약: "$1"',
-'revertpage' => '[[Special:Contributions/$2|$2]]([[User talk:$2|토론]])의 편집을 [[User:$1|$1]]의 마지막 버전으로 되돌림',
-'revertpage-nouser' => '(사용자 이름 삭제됨)의 편집을 [[User:$1|$1]]의 마지막 편집으로 되돌림',
+'revertpage' => '[[Special:Contributions/$2|$2]]([[wiki_User talk:$2|토론]])의 편집을 [[wiki_User:$1|$1]]의 마지막 버전으로 되돌림',
+'revertpage-nouser' => '(사용자 이름 삭제됨)의 편집을 [[wiki_User:$1|$1]]의 마지막 편집으로 되돌림',
 'rollback-success' => '$1의 편집을 $2의 마지막 버전으로 되돌렸습니다.',
 
 # Edit tokens
@@ -2750,7 +2750,7 @@ $1',
 'unblockip' => '사용자 차단 해제',
 'unblockiptext' => '아래의 양식에 차단 해제하려는 IP 주소나 사용자 이름을 입력하세요.',
 'ipusubmit' => '차단 해제',
-'unblocked' => '[[User:$1|$1]] 사용자 차단 해제됨',
+'unblocked' => '[[wiki_User:$1|$1]] 사용자 차단 해제됨',
 'unblocked-range' => '$1 대역이 차단 해제되었습니다.',
 'unblocked-id' => '차단 $1 해제됨',
 'blocklist' => '차단된 사용자 목록',
@@ -2783,7 +2783,7 @@ $1',
 'change-blocklink' => '차단 설정 바꾸기',
 'contribslink' => '기여',
 'emaillink' => '이메일 보내기',
-'autoblocker' => '당신의 IP 주소는 최근에 "[[User:$1|$1]]" 사용자가 사용하였기 때문에 자동으로 차단되었습니다.
+'autoblocker' => '당신의 IP 주소는 최근에 "[[wiki_User:$1|$1]]" 사용자가 사용하였기 때문에 자동으로 차단되었습니다.
 $1 사용자가 차단된 이유는 다음과 같습니다: "$2"',
 'blocklogpage' => '차단 기록',
 'blocklog-showlog' => '이 사용자는 과거에 차단된 기록이 있습니다.
@@ -2887,7 +2887,7 @@ $1 사용자가 차단된 이유는 다음과 같습니다: "$2"',
 'movearticle' => '문서 이동하기',
 'moveuserpage-warning' => "'''경고:''' 사용자 문서를 옮기려 하고 있습니다. 사용자 문서만 이동되며 사용자 이름이 바뀌지 '''않는다'''는 점을 참고해주시기 바랍니다.",
 'movenologin' => '로그인하지 않음',
-'movenologintext' => '문서를 이동하려면 [[Special:UserLogin|로그인]]해야 합니다.',
+'movenologintext' => '문서를 이동하려면 [[Special:wiki_UserLogin|로그인]]해야 합니다.',
 'movenotallowed' => '문서를 이동할 권한이 없습니다.',
 'movenotallowedfile' => '파일을 이동할 권한이 없습니다.',
 'cant-move-user-page' => '사용자 문서를 이동할 권한이 없습니다(하위 문서는 예외).',
@@ -3778,7 +3778,7 @@ Variants for Chinese language
 인증 코드가 만료되었을 수도 있습니다.',
 'confirmemail_needlogin' => '이메일 주소를 인증하려면 $1이 필요합니다.',
 'confirmemail_success' => '이메일 주소가 인증되었습니다.
-이제 [[Special:UserLogin|로그인]]해서 위키를 사용하세요.',
+이제 [[Special:wiki_UserLogin|로그인]]해서 위키를 사용하세요.',
 'confirmemail_loggedin' => '이메일 주소가 인증되었습니다.',
 'confirmemail_error' => '인증을 저장하는 도중 오류가 발생했습니다.',
 'confirmemail_subject' => '{{SITENAME}} 이메일 주소 인증',
@@ -3834,10 +3834,10 @@ $5
 
 # Delete conflict
 'deletedwhileediting' => "'''경고''': 이 문서를 편집하던 중에 이 문서가 삭제되었습니다!",
-'confirmrecreate' => '[[User:$1|$1]] 사용자([[User talk:$1|토론]])가 당신이 편집하는 도중에 문서를 삭제했습니다. 삭제 이유는 다음과 같습니다:
+'confirmrecreate' => '[[wiki_User:$1|$1]] 사용자([[wiki_User talk:$1|토론]])가 당신이 편집하는 도중에 문서를 삭제했습니다. 삭제 이유는 다음과 같습니다:
 : $2
 문서를 다시 만들어야 하는지 확인해주세요.',
-'confirmrecreate-noreason' => '[[User:$1|$1]] 사용자([[User talk:$1|토론]])가 당신이 편집하는 도중에 문서를 삭제했습니다. 문서를 다시 만들어야 하는지 확인해주세요.',
+'confirmrecreate-noreason' => '[[wiki_User:$1|$1]] 사용자([[wiki_User talk:$1|토론]])가 당신이 편집하는 도중에 문서를 삭제했습니다. 문서를 다시 만들어야 하는지 확인해주세요.',
 'recreate' => '새로 만들기',
 
 # action=purge

@@ -22,7 +22,7 @@ $dateFormats = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-rememberpassword' => 'Giéu cī gá diêng-nō̤ gé diâng nguāi gì dióng-hô̤ gâe̤ng mĭk-mā (for a maximum of $1 {{PLURAL:$1|day|days}})',
 'tog-watchcreations' => 'Gă-tiĕng nguāi kŭi gì hiĕk-miêng gáu nguāi gì gáng-sê-dăng',
 'tog-watchdefault' => 'Gă-tiĕng nguāi siŭ-gāi gì hiĕk-miêng gáu nguāi gì gáng-sê-dăng',
@@ -227,7 +227,7 @@ Nṳ̄ gì dióng-hô̤ ī-gĭng kŭi hō̤ lāu. Dāng nṳ̄ â̤-sāi siŭ-g�
 'userlogin' => 'Láuk-diē / kŭi dióng-hô̤',
 'logout' => 'Láuk-chók',
 'userlogout' => 'Láuk-chók',
-'notloggedin' => 'Mò̤ [[Special:UserLogin|láuk-diē]]',
+'notloggedin' => 'Mò̤ [[Special:wiki_UserLogin|láuk-diē]]',
 'nologin' => "Gó muôi kŭi dióng-hô̤? '''$1'''.",
 'nologinlink' => 'Kŭi 1 ciáh sĭng dióng-hô̤',
 'createaccount' => 'Kŭi dióng-hô̤',
@@ -287,7 +287,7 @@ Nṳ̄ gì IP dê-cī â̤ ké̤ṳk gé diŏh ciā hiĕk-miêng siŭ-gāi lĭk-
 'accmailtext' => '"$1" gì mĭk-mā ī-gĭng gié ké̤ṳk $2 lāu.',
 'newarticle' => '(Sĭng)',
 'newarticletext' => "Nṳ̄ téng 1 ciáh lièng-giék lì gáu cī miêng gó muôi còng-câi gì hiĕk. Buóh kī-chiū piĕng-siā ciā hiĕk, chiāng diŏh â-dā̤ gì bēng-bēng diē-sié páh cê (chăng-kō̤ [[Help:Mŭk-liŏh]] liēu-gāi gáing sâ̤ séng-sék). Iŏk-sṳ̄ nṳ̄ huák-hiêng cê-gă giàng dâng gó̤, nâ dĭh áik báuk-lāng-ké (''browser'') gì \"'''duōng kó̤ sèng 1 hiĕk'''\" (''back'') cêu â̤-sāi lāu.",
-'anontalkpagetext' => "----''Cī tiŏng tō̤-lâung-hiĕk mò̤ gó-dêng gì dióng-hô̤, nâ ô 1 ciáh IP dê-cī. Chiāng cé̤ṳ-é: Kō̤-nèng ng-nié 1 ciáh nè̤ng sāi-ê̤ṳng cī ciáh IP dê-cī. Iŏk-sṳ̄ nṳ̄ gó muôi kŭi 1 ciáh dióng-hô̤ bêng-chiā giéng-gáe̤k ciā làu-uâ sê làu ké̤ṳk nṳ̄ gì, chiāng nṳ̄ [[Special:UserLogin|kŭi 1 ciáh dióng-hô̤ hĕ̤k-ciā láuk-diē]], cêu â̤ piáh-miēng ī-hâiu gái huák-sĕng cūng-kuāng ông-dà̤.''",
+'anontalkpagetext' => "----''Cī tiŏng tō̤-lâung-hiĕk mò̤ gó-dêng gì dióng-hô̤, nâ ô 1 ciáh IP dê-cī. Chiāng cé̤ṳ-é: Kō̤-nèng ng-nié 1 ciáh nè̤ng sāi-ê̤ṳng cī ciáh IP dê-cī. Iŏk-sṳ̄ nṳ̄ gó muôi kŭi 1 ciáh dióng-hô̤ bêng-chiā giéng-gáe̤k ciā làu-uâ sê làu ké̤ṳk nṳ̄ gì, chiāng nṳ̄ [[Special:wiki_UserLogin|kŭi 1 ciáh dióng-hô̤ hĕ̤k-ciā láuk-diē]], cêu â̤ piáh-miēng ī-hâiu gái huák-sĕng cūng-kuāng ông-dà̤.''",
 'noarticletext' => 'Ciā hiĕk-miêng gà̤-dēng mò̤ ùng-cê. Nṳ̄ â̤-sāi găk gì-tă hiĕk-miêng [[Special:Search̤/{{PAGENAME}}|sìng-tō̤ ĭ gì biĕu-dà̤]] hĕ̤k-ciā [{{fullurl:{{FULLPAGENAME}}|action=edit}} cê-gă siā].',
 'clearyourcache' => "'''Cé̤ṳ-é:''' Bō̤-còng cĭ hâiu, kō̤-nèng diŏh tĕ̤ng táh báuk-lāng-ké gì ká̤-chṳ̄ ciáh â̤ káng-giéng diŏh gāi-biéng. '''Mozilla / Firefox / Safari:''' áik ''Reload'' sèng-âu áik diâng ''Shift'', hĕ̤k-ciā áik ''Ctrl-Shift-R'' (Apple Mac sê ''Cmd-Shift-R''); '''IE:''' áik ''Refresh'' sèng-âu áik diâng ''Ctrl'', hĕ̤k-ciā áik ''Ctrl-F5''; '''Konqueror:''' nâ sāi áik ''Reload'', hĕ̤k-ciā áik ''F5''; '''Opera''' ê̤ṳng-hô buóh tĕ̤ng táh ká̤-chṳ̄, chiāng sāi gă-sĭ ''Tools→Preferences''.",
 'previewnote' => "'''Cé̤ṳ-é: Cuòi nâ sê ché káng ùng-cê gì iông-sék; nṳ̄ sū có̤ gì siŭ-gāi gó muôi bō̤-còng!'''",
@@ -316,7 +316,7 @@ Iŏk-guō nṳ̄ dĭk-ciék áik \"{{int:savearticle}}\", '''nâ ô''' gà̤-dē
 Nṳ̄ găi-dŏng sṳ̆-liòng lâ, sié lŏ̤h piĕng-cĭk ciā hiĕk-miêng ô gák céng-cháik mò̤. Ôi lāu că-sùng lê-biêng, ciā hiĕk-miêng gì chēng hiĕk nĭk-cé găk cŭ-uái â̤ tō̤ diŏh:",
 
 # "Undo" feature
-'undo-summary' => 'Chṳ̄-siĕu [[Special:Contributions/$2|$2]] ([[User talk:$2|Tō̤-lâung]]) gì $1 hô̤ siŭ-gāi',
+'undo-summary' => 'Chṳ̄-siĕu [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Tō̤-lâung]]) gì $1 hô̤ siŭ-gāi',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'Mò̤ nièng-ngài kŭi dióng-hô̤',
@@ -399,7 +399,7 @@ Siók-mìng: (dāng) = gâe̤ng dék sĭng bēng-buōng bī-piâng, (sèng) = g�
 'email' => 'Diêng-piĕ',
 'prefs-help-email' => '* Diêng-piĕ (kō̤-sōng): Â̤-kīng bĕk-nè̤ng mâ̤ báik nṳ̄ sĭng-hông cêu dĭk-ciék tŭng-guó nṳ̄ gì ê̤ṳng-hô-hiĕk hĕ̤k tō̤-lâung-hiĕk lièng-hiê nṳ̄.',
 
-# User rights
+# wiki_User rights
 'editusergroup' => 'Siŭ-gāi Ê̤ṳng-hô Cū',
 
 # Groups
@@ -441,7 +441,7 @@ Siók-mìng: (dāng) = gâe̤ng dék sĭng bēng-buōng bī-piâng, (sèng) = g�
 'uploadbtn' => 'Siông-duòng ùng-giông',
 'reuploaddesc' => 'Duōng kó̤ siông-duòng dăng-dăng.',
 'uploadnologin' => 'Mò̤ láuk-diē',
-'uploadnologintext' => 'Sĕng [[Special:UserLogin|láuk-diē]] ciáh â̤-sāi siông-duòng ùng-giông.',
+'uploadnologintext' => 'Sĕng [[Special:wiki_UserLogin|láuk-diē]] ciáh â̤-sāi siông-duòng ùng-giông.',
 'uploaderror' => 'Siông-duòng ô dâng',
 'uploadlog' => 'siông-duòng nĭk-cé',
 'uploadlogpage' => 'Siông-duòng nĭk-cé',
@@ -628,11 +628,11 @@ Iŏk-sṳ̄ nṳ̄ buóh-siōng téng nṳ̄ gáng-sê-dăng gà̤-dēng dṳ̀ 
 'rollbacklink' => 'duōng',
 'rollbackfailed' => 'Duōng mâ̤ kó̤',
 'cantrollback' => 'Mò̤ bâing-huák huòi-tó̤i siŭ-gāi; sèng 1 ciáh góng-hióng-ciā sê ciā hiĕk mì-ék gì cáuk-ciā.',
-'alreadyrolled' => 'Mò̤ nièng-ngài huòi-tó̤i [[User:$2|$2]] ([[User talk:$2|Tō̤-lâung]]) có̤i âu sū có̤ gì [[$1]] siŭ-gāi; bĕk-nè̤ng ī-gĭng siū-gái hĕ̤k-ciā huòi-tó̤i ciā hiĕk-miêng go̤ lāu.
+'alreadyrolled' => 'Mò̤ nièng-ngài huòi-tó̤i [[wiki_User:$2|$2]] ([[wiki_User talk:$2|Tō̤-lâung]]) có̤i âu sū có̤ gì [[$1]] siŭ-gāi; bĕk-nè̤ng ī-gĭng siū-gái hĕ̤k-ciā huòi-tó̤i ciā hiĕk-miêng go̤ lāu.
 
-Có̤i âu gì siŭ-gāi sê [[User:$3|$3]] ([[User talk:$3|Tō̤-lâung]]) sū có̤ gì.',
+Có̤i âu gì siŭ-gāi sê [[wiki_User:$3|$3]] ([[wiki_User talk:$3|Tō̤-lâung]]) sū có̤ gì.',
 'editcomment' => "Siŭ-gāi pàng-lâung sê: \"''\$1''\".",
-'revertpage' => '[[Special:Contributions/$2|$2]] ([[User talk:$2|Talk]]) sū có̤ gì siŭ-gāi duōng kó̤ [[User:$1|$1]] gì sèng 1 bĭk bēng-buōng',
+'revertpage' => '[[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Talk]]) sū có̤ gì siŭ-gāi duōng kó̤ [[wiki_User:$1|$1]] gì sèng 1 bĭk bēng-buōng',
 
 # Protect
 'protectlogpage' => 'Bō̤-hô nĭk-cé',
@@ -730,7 +730,7 @@ Có̤i âu gì siŭ-gāi sê [[User:$3|$3]] ([[User talk:$3|Tō̤-lâung]]) sū 
 'ipb-blocklist' => 'Káng hŭng-sō̤ dăng-dăng',
 'unblockip' => 'Gāi-hŭng ê̤ṳng-hô',
 'ipusubmit' => 'Gāi-hŭng ciā dê-cī',
-'unblocked' => '[[User:$1|$1]] ī-gĭng ké̤ṳk gāi-hŭng lāu',
+'unblocked' => '[[wiki_User:$1|$1]] ī-gĭng ké̤ṳk gāi-hŭng lāu',
 'ipblocklist' => 'Ké̤ṳk hŭng-sō̤ gì IP dê-cī gâe̤ng ê̤ṳng-hô-miàng gì dăng-dăng',
 'ipblocklist-legend' => 'Tō̤ siŏh ciáh ké̤ṳk hŭng-sō̤ gì ê̤ṳng-hô',
 'ipblocklist-submit' => 'Sìng-tō̤',
@@ -769,7 +769,7 @@ Cé̤ṳ-é, nâ ô găk sĭng dà̤-mĕ̤k gô-dā̤ mò̤ ùng-ciŏng (mò̤ b
 Nâ cūng-kuāng, nṳ̄ â̤-sāi cê-gă iè-dông hĕ̤k-ciā sê hăk-biáng hiĕk-miêng.",
 'movearticle' => 'Iè-dông ùng-ciŏng',
 'movenologin' => 'Muôi láuk-diē',
-'movenologintext' => 'Sĕng [[Special:UserLogin|láuk-diē]] ciáh â̤-sāi iè-dông hiĕk-miêng.',
+'movenologintext' => 'Sĕng [[Special:wiki_UserLogin|láuk-diē]] ciáh â̤-sāi iè-dông hiĕk-miêng.',
 'newtitle' => 'Gáu sĭng dà̤-mĕ̤k',
 'move-watch' => 'Gáng-sê ciā hiĕk',
 'movepagebtn' => 'Iè-dông hiĕk-miêng',

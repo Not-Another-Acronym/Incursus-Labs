@@ -36,7 +36,7 @@ $specialPageAliases = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Sulinia lias:',
 'tog-justify' => 'Ajusta paragrafes',
 'tog-hideminor' => 'Asconda editas minor en cambias resente',
@@ -294,7 +294,7 @@ $messages = array(
 'loginsuccesstitle' => 'Entra susedente',
 'loginsuccess' => "'''Tu ia entrada aora a {{SITENAME}} como \"\$1\".'''",
 'nosuchuser' => 'Es no usor con la nom "$1".
-Esamina la spele, o [[Special:UserLogin/signup|crea un conta nova]].',
+Esamina la spele, o [[Special:wiki_UserLogin/signup|crea un conta nova]].',
 'nosuchusershort' => 'Es no usor con esta nom "$1". Esamina la spele.',
 'nouserspecified' => 'Tu debe indica un nom de usor.',
 'wrongpassword' => 'La sinia de entra no es coreta. Per favore, atenta ancora.',
@@ -391,7 +391,7 @@ Tu ance promete a nos ce tu ia scriveda esta par tu mesma, o copiada esta de un 
 'template-protected' => '(protejeda)',
 'template-semiprotected' => '(proteje en parte)',
 'nocreatetext' => '{{SITENAME}} ave un restringe a la capas per crea pajes nova.
-Tu pote vade a retro e edita un paje esistente, o  [[Special:UserLogin|sinia per entra o crea un conta]].',
+Tu pote vade a retro e edita un paje esistente, o  [[Special:wiki_UserLogin|sinia per entra o crea un conta]].',
 'recreate-moveddeleted-warn' => "'''Avisa: Tu es recrea un paje ce ia es sutraed en la pasada.'''
 Tu debe pensa ce es bon continua edita esta paje.
 La arcivo de sutraes per esta paje es asi per conveni:",
@@ -478,7 +478,7 @@ La arcivo de sutraes per esta paje es asi per conveni:",
 'email' => 'Eposta',
 'prefs-help-realname' => 'Tu nom vera no es obligada, ma si tu vole dona tu nom vera, el va es usada per onora tu per tu labora.',
 
-# User rights
+# wiki_User rights
 'userrights' => 'Dirije de la diretos de usores',
 'saveusergroups' => 'Fisa la grupo de usores',
 
@@ -493,7 +493,7 @@ La arcivo de sutraes per esta paje es asi per conveni:",
 'grouppage-user' => '{{ns:project}}:Usores',
 'grouppage-sysop' => '{{ns:project}}:Dirijores',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Catalogo de diretos de usor',
 
 # Associated actions - in the sentence "You do not have permission to X"

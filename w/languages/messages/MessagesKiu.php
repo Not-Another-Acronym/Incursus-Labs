@@ -52,7 +52,7 @@ $namespaceAliases = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Bınê girey de xete bıonce:',
 'tog-justify' => 'Paragrafu ayar ke',
 'tog-hideminor' => 'Vurnayisunê senıku pela vurnayisunê peyênu de wedare',
@@ -393,7 +393,7 @@ Panga daeyu xetawa ke asnena "$3: $4"',
 Na belkia serba jü vurnaiso khan ya ki tarixê girê jü pelge esteriya.
 
 Eke nia niyo, belkia ''software''i de jü xeta esta.
-Kerem kerê, nae be namê ''URL''i jü [[Special:ListUsers/sysop|karber]]i ra vazê.",
+Kerem kerê, nae be namê ''URL''i jü [[Special:Listwiki_Users/sysop|karber]]i ra vazê.",
 'missingarticle-rev' => '(tekrar diyais#: $1)',
 'missingarticle-diff' => '(Ferq: $1, $2)',
 'readonly_lag' => "Panga daeyu otomatikman qapan biye ''slave-database-servers''i ra be hata ''master''i",
@@ -436,7 +436,7 @@ Serba çarnaişi, yardımê [//translatewiki.net/wiki/Main_Page?setlang=kiu tran
 'cascadeprotected' => 'Na pele esterıtene ra sıtar biya, çıke na zerrê {{PLURAL:$1|pela ke|pelunê ke}} dera/derê be "cascading" opsiyoni kılit biya, $2 de bena ra.',
 'namespaceprotected' => "'''$1''' ''namespace'' de desturê sıma be vurnaisê pelu çino.",
 'ns-specialprotected' => 'Pelê xususi nêvurrinê.',
-'titleprotected' => "No sername terefê [[User:$1|$1]]i ra, afernaene ra sıtar biyo.
+'titleprotected' => "No sername terefê [[wiki_User:$1|$1]]i ra, afernaene ra sıtar biyo.
 Sebebê ho ''$2'' dero.",
 
 # Virus scanner
@@ -447,7 +447,7 @@ Sebebê ho ''$2'' dero.",
 # Login and logout pages
 'logouttext' => "'''Sıma nıka cı ra veciyê.'''
 
-Sıma şikinê dızdêni {{SITENAME}} de dewam kerê, ya jê eyni karberi ya ki jê jüyê de bini [[Special:UserLogin|oncia cıkuyê]].
+Sıma şikinê dızdêni {{SITENAME}} de dewam kerê, ya jê eyni karberi ya ki jê jüyê de bini [[Special:wiki_UserLogin|oncia cıkuyê]].
 Beno ke taê peli sıma hona cıkote asnenê, hata ke sıma ''browser cache''ê ho kerd pak.",
 'welcomecreation' => '== Xêr amê, $1! ==
 Hesabê sıma vıraciya.
@@ -492,7 +492,7 @@ Ravêri ine rakerê u reyna bıcerrebnê.',
 'loginsuccess' => "'''Sıta {{SITENAME}} de ebe namê karberi \"\$1\" kota cı.'''",
 'nosuchuser' => 'Ebe namê "$1"i jü karber çino.
 Nustena namunê karberu de herfa pil u qıze rê diqet kerê.
-Nustena ho qonrol kerê, ya ki [[Special:UserLogin/signup|jü hesabo newe rakerê]].',
+Nustena ho qonrol kerê, ya ki [[Special:wiki_UserLogin/signup|jü hesabo newe rakerê]].',
 'nosuchusershort' => 'Karberê do ebe namê "$1" çino.
 Nustena cı qontrol ke.',
 'nouserspecified' => 'Gunê namê jü karberi bıdekernê.',
@@ -799,7 +799,7 @@ Diqet kerê, beno ke tedeestê {{SITENAME}} uza endi rozane niyê.",
 'mypreferences' => 'Tercihê mı',
 'prefs-edits' => 'Numra vurnaisun:',
 'prefsnologin' => 'Cı nêkota',
-'prefsnologintext' => 'Sıma gunê <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} cı kuyê]</span> ke dıma tercihunê karberi bınusnê.',
+'prefsnologintext' => 'Sıma gunê <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} cı kuyê]</span> ke dıma tercihunê karberi bınusnê.',
 'changepassword' => 'Parola bıvurne',
 'prefs-skin' => 'Çerme',
 'skin-preview' => 'Verqayt',
@@ -871,12 +871,12 @@ Kaberê bini ke şıma de kewti irtıbat, adresa e-postey şıma eşkera nêbena
 'prefs-signature' => 'İmza',
 'prefs-diffs' => 'Ferqi',
 
-# User rights
+# wiki_User rights
 'userrights' => 'İdarê hequnê karberi',
 'userrights-lookup-user' => 'Komunê karberun idare ke',
 'userrights-user-editname' => 'Jü namê karberi bıdê:',
 'editusergroup' => 'Komunê karberun bıvurne',
-'editinguser' => "Hequnê karberê '''[[User:$1|$1]]'''i vurnais ([[User talk:$1|{{int:talkpagelinktext}}]]{{int:pipe-separator}}[[Special:Contributions/$1|{{int:contribslink}}]])",
+'editinguser' => "Hequnê karberê '''[[wiki_User:$1|$1]]'''i vurnais ([[wiki_User talk:$1|{{int:talkpagelinktext}}]]{{int:pipe-separator}}[[Special:Contributions/$1|{{int:contribslink}}]])",
 'userrights-editusergroup' => 'Komunê karberun bıvurne',
 'saveusergroups' => 'Komunê karberun qeyd ke',
 'userrights-groupsmember' => 'Ezaê de:',
@@ -909,7 +909,7 @@ Kaberê bini ke şıma de kewti irtıbat, adresa e-postey şıma eşkera nêbena
 'right-delete' => 'Pelu bıestere',
 'right-undelete' => 'Esterıtena na pele peyser bıcê',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Qeydê hequnê karberi',
 'rightslogtext' => 'No jü qeydê vurnaisê hequnê karberio.',
 'rightslogentry' => 'selahiyetê $1i $2 ra vurniya be $3i',
@@ -972,7 +972,7 @@ Kaberê bini ke şıma de kewti irtıbat, adresa e-postey şıma eşkera nêbena
 'uploadbtn' => 'Dosya bar ke',
 'reuploaddesc' => 'Bar-kerdene bıtexelne u racêre ra formê bar-kerdene',
 'uploadnologin' => 'Ede cı nêkotê',
-'uploadnologintext' => 'Sıma gunê [[Special:UserLogin|cı kuyê]] ke dosyeun bar kerê.',
+'uploadnologintext' => 'Sıma gunê [[Special:wiki_UserLogin|cı kuyê]] ke dosyeun bar kerê.',
 'upload_directory_missing' => "İndeksê bar-kerdena ($1)i çino u terefê ''webserver''i ra nêşikino ke bıaferiyo.",
 'upload_directory_read_only' => "İndeksê bar-kerdena ($1)i terefê ''webserver''i nênuşino.",
 'uploaderror' => 'Xeta bar-kerdene',
@@ -1123,12 +1123,12 @@ Cêr [$2 pela arezekerdena dosya de] arezekerdene asnina.',
 'linksearch-ok' => 'Cıfeteliye',
 'linksearch-line' => '$1rê $2ra gırê diyo',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusers-submit' => 'Bıasne',
 'listusers-noresult' => 'Karber nêdiya.',
 'listusers-blocked' => '(kilıt biyo)',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'Lista karberunê fealu',
 
 # Special:Log/newusers
@@ -1318,7 +1318,7 @@ Tı şikina sewiya sevekiyaena na pele bıvurnê, hema yê nae sevekiyaena qedem
 'change-blocklink' => 'mani bıvurne',
 'contribslink' => 'iştıraqi',
 'emaillink' => 'e-poste bırusne',
-'autoblocker' => 'Sıma otomatikmen kılit biy, çıke adresa sımawa \'\'IP\'\'y terefê "[[User:$1|$1]]" gurenina.
+'autoblocker' => 'Sıma otomatikmen kılit biy, çıke adresa sımawa \'\'IP\'\'y terefê "[[wiki_User:$1|$1]]" gurenina.
 Sebebê kılit-biyaena $1\'i: "$2"o',
 'blocklogpage' => 'Protokolê kilıti',
 'blocklogentry' => '[[$1]] hata peyê $2 $3ine kilıt bi',

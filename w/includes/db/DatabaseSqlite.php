@@ -619,7 +619,7 @@ class DatabaseSqlite extends DatabaseBase {
 	}
 
 	/**
-	 * @return string User-friendly database information
+	 * @return string wiki_User-friendly database information
 	 */
 	public function getServerInfo() {
 		return wfMessage( self::getFulltextSearchModule() ? 'sqlite-has-fts' : 'sqlite-no-fts', $this->getServerVersion() )->text();

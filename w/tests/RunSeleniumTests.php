@@ -204,7 +204,7 @@ class SeleniumTester extends Maintenance {
 		$this->selenium->setBrowser( $this->getOption( 'testBrowser', $seleniumSettings['testBrowser'] ) );
 		$this->selenium->setPort( $this->getOption( 'port', $seleniumSettings['port'] ) );
 		$this->selenium->setHost( $this->getOption( 'host', $seleniumSettings['host'] ) );
-		$this->selenium->setUser( $this->getOption( 'username', $seleniumSettings['username'] ) );
+		$this->selenium->setwiki_User( $this->getOption( 'username', $seleniumSettings['username'] ) );
 		$this->selenium->setPass( $this->getOption( 'userPassword', $seleniumSettings['userPassword'] ) );
 		$this->selenium->setVerbose( $this->hasOption( 'verbose' ) );
 		$this->selenium->setJUnitLogFile( $this->getOption( 'jUnitLogFile', $seleniumSettings['jUnitLogFile'] ) );

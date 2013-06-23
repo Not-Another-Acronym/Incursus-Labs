@@ -15,7 +15,7 @@ class SpecialNuke extends SpecialPage {
 
 		if ( $this->getUser()->isBlocked() ) {
 			$block = $this->getUser()->getBlock();
-			throw new UserBlockedError( $block );
+			throw new wiki_UserBlockedError( $block );
 		}
 
 		if ( method_exists( $this, 'checkReadOnly' ) ) {
@@ -29,7 +29,7 @@ class SpecialNuke extends SpecialPage {
 
 		// Normalise name
 		if ( $target !== '' ) {
-			$user = User::newFromName( $target );
+			$user = wiki_User::newFromName( $target );
 			if ( $user ) $target = $user->getName();
 		}
 

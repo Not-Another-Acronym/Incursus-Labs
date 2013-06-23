@@ -609,7 +609,7 @@
 							this.order = this.count % 2;
 							this.count++;
 
-							// User only wants to sort on one column
+							// wiki_User only wants to sort on one column
 							if ( !e[config.sortMultiSortKey] ) {
 								// Flush the sort list
 								config.sortList = [];

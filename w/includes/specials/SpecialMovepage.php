@@ -138,7 +138,7 @@ class MovePageForm extends UnlistedSpecialPage {
 		$user = $this->getUser();
 
 		if ( count( $err ) == 1 && isset( $err[0][0] ) && $err[0][0] == 'articleexists'
-			&& $newTitle->quickUserCan( 'delete', $user )
+			&& $newTitle->quickwiki_UserCan( 'delete', $user )
 		) {
 			$out->addWikiMsg( 'delete_and_move_text', $newTitle->getPrefixedText() );
 			$movepagebtn = $this->msg( 'delete_and_move' )->text();

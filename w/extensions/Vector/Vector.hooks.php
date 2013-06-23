@@ -77,7 +77,7 @@ class VectorHooks {
 	/* Protected Static Methods */
 	
 	protected static function isEnabled( $name ) {
-		global $wgVectorFeatures, $wgUser;
+		global $wgVectorFeatures, $wgwiki_User;
 		
 		// Features with global set to true are always enabled
 		if ( !isset( $wgVectorFeatures[$name] ) || $wgVectorFeatures[$name]['global'] ) {
@@ -88,7 +88,7 @@ class VectorHooks {
 			if ( isset( self::$features[$name]['requirements'] ) ) {
 				foreach ( self::$features[$name]['requirements'] as $requirement => $value ) {
 					// Important! We really do want fuzzy evaluation here
-					if ( $wgUser->getOption( $requirement ) != $value ) {
+					if ( $wgwiki_User->getOption( $requirement ) != $value ) {
 						return false;
 					}
 				}
@@ -126,7 +126,7 @@ class VectorHooks {
 	 * 
 	 * Adds Vector-releated items to the preferences
 	 * 
-	 * @param $user User current user
+	 * @param $user wiki_User current user
 	 * @param $defaultPreferences array list of default user preference controls
 	 */
 	public static function getPreferences( $user, &$defaultPreferences ) {

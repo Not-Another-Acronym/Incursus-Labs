@@ -1,24 +1,24 @@
 <?php
 
 class PreferencesTest extends MediaWikiTestCase {
-	/** Array of User objects */
-	private $prefUsers;
+	/** Array of wiki_User objects */
+	private $prefwiki_Users;
 	private $context;
 
 	function __construct() {
 		parent::__construct();
 		global $wgEnableEmail;
 
-		$this->prefUsers['noemail'] = new User;
+		$this->prefwiki_Users['noemail'] = new wiki_User;
 
-		$this->prefUsers['notauth'] = new User;
-		$this->prefUsers['notauth']
+		$this->prefwiki_Users['notauth'] = new wiki_User;
+		$this->prefwiki_Users['notauth']
 			->setEmail( 'noauth@example.org' );
 
-		$this->prefUsers['auth']    = new User;
-		$this->prefUsers['auth']
+		$this->prefwiki_Users['auth']    = new wiki_User;
+		$this->prefwiki_Users['auth']
 			->setEmail( 'noauth@example.org' );
-		$this->prefUsers['auth']
+		$this->prefwiki_Users['auth']
 			->setEmailAuthenticationTimestamp( 1330946623 );
 
 		$this->context = new RequestContext;
@@ -32,7 +32,7 @@ class PreferencesTest extends MediaWikiTestCase {
 	 * Placeholder to verify bug 34302
 	 * @covers Preferences::profilePreferences
 	 */
-	function testEmailFieldsWhenUserHasNoEmail() {
+	function testEmailFieldsWhenwiki_UserHasNoEmail() {
 		$prefs = $this->prefsFor( 'noemail' );
 		$this->assertArrayHasKey( 'cssclass',
 			$prefs['emailaddress']
@@ -43,7 +43,7 @@ class PreferencesTest extends MediaWikiTestCase {
 	 * Placeholder to verify bug 34302
 	 * @covers Preferences::profilePreferences
 	 */
-	function testEmailFieldsWhenUserEmailNotAuthenticated() {
+	function testEmailFieldsWhenwiki_UserEmailNotAuthenticated() {
 		$prefs = $this->prefsFor( 'notauth' );
 		$this->assertArrayHasKey( 'cssclass',
 			$prefs['emailaddress']
@@ -54,7 +54,7 @@ class PreferencesTest extends MediaWikiTestCase {
 	 * Placeholder to verify bug 34302
 	 * @covers Preferences::profilePreferences
 	 */
-	function testEmailFieldsWhenUserEmailIsAuthenticated() {
+	function testEmailFieldsWhenwiki_UserEmailIsAuthenticated() {
 		$prefs = $this->prefsFor( 'auth' );
 		$this->assertArrayHasKey( 'cssclass',
 			$prefs['emailaddress']
@@ -66,7 +66,7 @@ class PreferencesTest extends MediaWikiTestCase {
 	function prefsFor( $user_key ) {
 		$preferences = array();
 		Preferences::profilePreferences(
-			$this->prefUsers[$user_key]
+			$this->prefwiki_Users[$user_key]
 			, $this->context
 			, $preferences
 		);

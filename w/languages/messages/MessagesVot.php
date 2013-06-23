@@ -18,7 +18,7 @@
 $fallback = 'fi';
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Link underlining',
 
 'underline-always' => 'Alõzii',
@@ -213,7 +213,7 @@ $messages = array(
 
 Ussassi se johtub ustaŕeloi sravńoi- vai istorilinkissä roocittulõõ cüľľelee.
 
-Kui cüsümüssessä ebõõ roocittu cülci, võib õlla õlõttõ löütännü ošipkaa sistemalla. Õõ nii üvä ilmuttõma cüľľee adressia vikii [[Special:ListUsers/sysop|praviťeľalõõ]].',
+Kui cüsümüssessä ebõõ roocittu cülci, võib õlla õlõttõ löütännü ošipkaa sistemalla. Õõ nii üvä ilmuttõma cüľľee adressia vikii [[Special:Listwiki_Users/sysop|praviťeľalõõ]].',
 'missingarticle-rev' => '(verzija: $1)',
 'badtitle' => 'Paha zagolofkka',
 'badtitletext' => 'Cüzüttü artikkelizagolofkka õli vilpilliin, tühjä vai väärii linkitettü ceelijeväliin vai vikiiväliin linkki.',
@@ -431,7 +431,7 @@ Proovvi lizät etsün alkuu ''all:'', nii ettsü etsib kõikkõõ sisältoo (taa
 'prefs-help-email' => 'E-mail eb õõ pakollin, ain se leeb vajallin, kui tüü unõhtattõ salain-sõnass.',
 'prefs-help-email-others' => 'Se lupabci muilõ õsa-võttajilõ võtta ühteüttä tejjeka tejje personaaliss lehocülless viittau kautta, ilma tejje e-mail’a tääotusõ vajaussa.',
 
-# User rights
+# wiki_User rights
 'userrights-reason' => 'Süü:',
 
 # Groups
@@ -444,7 +444,7 @@ Proovvi lizät etsün alkuu ''all:'', nii ettsü etsib kõikkõõ sisältoo (taa
 'grouppage-user' => '{{ns:project}}:Сäüttijäd',
 'grouppage-sysop' => '{{ns:project}}:Praviťeľad',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Cäütteminõikuslogi',
 'rightsnone' => '(eb õõ)',
 
@@ -594,7 +594,7 @@ Seness [$2 kuvauhsõ lehocülless] informaattsija on alapallõ annõttu.',
 'linksearch-ok' => 'Etsi',
 'linksearch-line' => 'Linki $1-sõ $2-ss',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusers-submit' => 'Näüt väľľää',
 
 # Special:Log/newusers

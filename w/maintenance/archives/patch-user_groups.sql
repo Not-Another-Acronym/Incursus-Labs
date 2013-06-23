@@ -1,5 +1,5 @@
 --
--- User permissions have been broken out to a separate table;
+-- wiki_User permissions have been broken out to a separate table;
 -- this allows sites with a shared user table to have different
 -- permissions assigned to a user in each project.
 --

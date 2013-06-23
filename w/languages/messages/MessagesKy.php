@@ -31,7 +31,7 @@ $namespaceNames = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Шилтемелердин алдын сызуу:',
 'tog-justify' => 'Тексти барактын жазысы боюнча түздөө',
 'tog-hideminor' => 'Соңку өзгөрүүлөрдөгү арасындагы майда өзгөрүүлөрдү жашыр',
@@ -351,7 +351,7 @@ $1',
 
 Бул сыяктуу абал өчүрүлгөн барактын өзгөрүүлөрдүн тарыхына эски шилтеме менен өткөндө учурайт.
 
-Эгерде башка себеби бар болсо, анда Сиз программалык жабдууда ката таптыңыз. Кичи пейилдикке, ушул URL көрсөтүп [[Special:ListUsers/sysop|администраторлордун]] бирине кабарлап коюңуз.',
+Эгерде башка себеби бар болсо, анда Сиз программалык жабдууда ката таптыңыз. Кичи пейилдикке, ушул URL көрсөтүп [[Special:Listwiki_Users/sysop|администраторлордун]] бирине кабарлап коюңуз.',
 'missingarticle-rev' => '(версия#: $1)',
 'missingarticle-diff' => '(айырмачылык: $1, $2)',
 'internalerror' => 'Ички ката',
@@ -526,7 +526,7 @@ IP дарегиңиз бул барактын оңдоо тарыхына жаз
 'loginreqtitle' => 'Авторизация талап кылынат',
 'loginreqlink' => 'Кирүү',
 'accmailtitle' => 'Сырсөз жөнөтүлдү.',
-'accmailtext' => ' [[User talk:$1|$1]] үчүн сырсөз $2 ге жөнөтүлдү.',
+'accmailtext' => ' [[wiki_User talk:$1|$1]] үчүн сырсөз $2 ге жөнөтүлдү.',
 'newarticle' => '(Жаңы)',
 'newarticletext' => "Сиз ачыла элек баракка шилтемени бастыңыз.
 Бул баракты ачуу үчүн, ылдый жактагы терезечеге жаза баштаңыз (кошумча маалымат алуу үчүн [[{{MediaWiki:Helppage}}|жардам барагы]] караңыз).
@@ -543,7 +543,7 @@ IP дарегиңиз бул барактын оңдоо тарыхына жаз
 'previewnote' => "'''Бул алдын ала көрүнүшү гана болгонун эсиңизге алыңыз.'''
 Өзгөртүүлөрүңүз сактала элек!",
 'continue-editing' => 'Өзгөртүүүлөрдү улантабыз',
-'session_fail_preview' => 'Кечиресиз, байланыш үзүлгөндүктөн сиздин өзгөртүүлөр сакталган жок. Дагы бир жолу аракет кылып көрүңүз. Болбосо, [[Special:UserLogout|logging out]] аткарып, кайра кирип көрүңүз.',
+'session_fail_preview' => 'Кечиресиз, байланыш үзүлгөндүктөн сиздин өзгөртүүлөр сакталган жок. Дагы бир жолу аракет кылып көрүңүз. Болбосо, [[Special:wiki_UserLogout|logging out]] аткарып, кайра кирип көрүңүз.',
 'editing' => 'Оңдоо $1',
 'creating' => '$1 түзүлүүдө',
 'editingsection' => '$1 (бөлүмү) оңдолууда',
@@ -812,11 +812,11 @@ HTML-тегдеринин тууралыгын текшериңиз.',
 'prefs-displaysearchoptions' => 'Көрсөтүүнүн ырастоолору',
 'prefs-displaywatchlist' => 'Көрсөтүүнүн ырастоолору',
 
-# User preference: e-mail validation using jQuery
+# wiki_User preference: e-mail validation using jQuery
 'email-address-validity-valid' => 'Эл. почтанын дареги анык көрүнөт',
 'email-address-validity-invalid' => 'Эл. почтанын анык дарегин киргизиңиз!',
 
-# User rights
+# wiki_User rights
 'userrights' => 'Катышуучулардын укуктарын башкаруу',
 'userrights-lookup-user' => 'Катышуучу топторун башкаруу',
 'userrights-user-editname' => 'Катышуучу атыңызды киргизиңиз:',
@@ -865,7 +865,7 @@ HTML-тегдеринин тууралыгын текшериңиз.',
 'right-suppressionlog' => 'Жеке журналдарды көрүү',
 'right-userrights' => 'Бүт катышуучулардын укуктарын оңдоо',
 
-# User rights log
+# wiki_User rights log
 'rightsnone' => '(жок)',
 
 # Associated actions - in the sentence "You do not have permission to X"
@@ -1087,12 +1087,12 @@ HTML-тегдеринин тууралыгын текшериңиз.',
 'linksearch-ok' => 'Издөө',
 'linksearch-line' => '$1-га $2-дан шилтеме берилди',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusers-submit' => 'Көрсөтүү',
 'listusers-noresult' => 'Катышуучу табылган жок.',
 'listusers-blocked' => '(блокировкаланды)',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'Активдүү катышуучулардын тизмеси',
 'activeusers-hidebots' => 'Ботторду жашыруу',
 'activeusers-hidesysops' => 'Администраторлорду жашыруу',

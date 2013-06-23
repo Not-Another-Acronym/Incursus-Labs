@@ -79,8 +79,8 @@ class ApiUnblock extends ApiBase {
 
 		$res['id'] = $block->getId();
 		$target = $block->getType() == Block::TYPE_AUTO ? '' : $block->getTarget();
-		$res['user'] = $target instanceof User ? $target->getName() : $target;
-		$res['userid'] = $target instanceof User ? $target->getId() : 0;
+		$res['user'] = $target instanceof wiki_User ? $target->getName() : $target;
+		$res['userid'] = $target instanceof wiki_User ? $target->getId() : 0;
 		$res['reason'] = $params['reason'];
 		$this->getResult()->addValue( null, $this->getModuleName(), $res );
 	}
@@ -112,7 +112,7 @@ class ApiUnblock extends ApiBase {
 		$p = $this->getModulePrefix();
 		return array(
 			'id' => "ID of the block you want to unblock (obtained through list=blocks). Cannot be used together with {$p}user",
-			'user' => "Username, IP address or IP range you want to unblock. Cannot be used together with {$p}id",
+			'user' => "wiki_Username, IP address or IP range you want to unblock. Cannot be used together with {$p}id",
 			'token' => "An unblock token previously obtained through prop=info",
 			'gettoken' => 'If set, an unblock token will be returned, and no other action will be taken',
 			'reason' => 'Reason for unblock',

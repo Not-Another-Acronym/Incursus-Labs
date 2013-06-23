@@ -25,7 +25,7 @@
 /**
  * Abstraction for resource loader modules which pull from wiki pages
  *
- * This can only be used for wiki pages in the MediaWiki and User namespaces,
+ * This can only be used for wiki pages in the MediaWiki and wiki_User namespaces,
  * because of its dependence on the functionality of
  * Title::isCssJsSubpage.
  */

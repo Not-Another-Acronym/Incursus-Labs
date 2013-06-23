@@ -207,7 +207,7 @@ class SpecialRevisionDelete extends UnlistedSpecialPage {
 		$this->checks = array(
 			array( $this->typeInfo['check-label'], 'wpHidePrimary', $this->typeInfo['deletion-bits'] ),
 			array( 'revdelete-hide-comment', 'wpHideComment', Revision::DELETED_COMMENT ),
-			array( 'revdelete-hide-user', 'wpHideUser', Revision::DELETED_USER )
+			array( 'revdelete-hide-user', 'wpHidewiki_User', Revision::DELETED_USER )
 		);
 		if( $user->isAllowed('suppressrevision') ) {
 			$this->checks[] = array( 'revdelete-hide-restricted',
@@ -358,7 +358,7 @@ class SpecialRevisionDelete extends UnlistedSpecialPage {
 	 * which will allow the user to choose new visibility settings.
 	 */
 	protected function showForm() {
-		$UserAllowed = true;
+		$wiki_UserAllowed = true;
 
 		if ( $this->typeName == 'logging' ) {
 			$this->getOutput()->addWikiMsg( 'logdelete-selected', $this->getLanguage()->formatNum( count($this->ids) ) );
@@ -378,7 +378,7 @@ class SpecialRevisionDelete extends UnlistedSpecialPage {
 				if( !$this->submitClicked ) {
 					throw new PermissionsError( 'suppressrevision' );
 				}
-				$UserAllowed = false;
+				$wiki_UserAllowed = false;
 			}
 			$numRevisions++;
 			$this->getOutput()->addHTML( $item->getHTML() );
@@ -393,7 +393,7 @@ class SpecialRevisionDelete extends UnlistedSpecialPage {
 		$this->addUsageText();
 
 		// Normal sysops can always see what they did, but can't always change it
-		if( !$UserAllowed ) return;
+		if( !$wiki_UserAllowed ) return;
 
 		// Show form if the user can submit
 		if( $this->mIsAllowed ) {

@@ -204,9 +204,9 @@ $specialPageAliases = array(
 	'Unusedtemplates'           => array( 'Nich bruukte Vörlagen' ),
 	'Unwatchedpages'            => array( 'Sieden op keen Oppasslist' ),
 	'Upload'                    => array( 'Hoochladen' ),
-	'Userlogin'                 => array( 'Anmellen' ),
-	'Userlogout'                => array( 'Afmellen' ),
-	'Userrights'                => array( 'Brukerrechten' ),
+	'wiki_Userlogin'                 => array( 'Anmellen' ),
+	'wiki_Userlogout'                => array( 'Afmellen' ),
+	'wiki_Userrights'                => array( 'Brukerrechten' ),
 	'Wantedcategories'          => array( 'Wünschte Kategorien' ),
 	'Wantedpages'               => array( 'Wünschte Sieden' ),
 	'Watchlist'                 => array( 'Oppasslist' ),
@@ -215,7 +215,7 @@ $specialPageAliases = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Verwies ünnerstrieken',
 'tog-justify' => 'Text as Blocksatz',
 'tog-hideminor' => 'Kene lütten Ännern in letzte Ännern wiesen',
@@ -551,7 +551,7 @@ As Grund för de Sparr is angeven: $1',
 
 Dat kann vörkamen, wenn een op en olen Lenk op den Ünnerscheed twischen twee Versionen oder to en ole Version klickt hett un de Sied al wegsmeten is.
 
-Wenn dat nich de Fall is, denn hest du villicht en Fehler in de Software funnen. Mell dat an en [[Special:ListUsers/sysop|Administrater]] un segg em ok de URL.',
+Wenn dat nich de Fall is, denn hest du villicht en Fehler in de Software funnen. Mell dat an en [[Special:Listwiki_Users/sysop|Administrater]] un segg em ok de URL.',
 'missingarticle-rev' => '(Versionsnr.: $1)',
 'missingarticle-diff' => '(Ünnerscheed: $1, $2)',
 'readonly_lag' => 'De Datenbank is automaatsch sperrt worrn, dat sik de opdeelten Datenbankservers mit den Hööft-Datenbankserver afglieken köönt.',
@@ -595,7 +595,7 @@ $2',
 'namespaceprotected' => "Du hest keen Rechten, Sieden in’n Naamruum '''$1''' to ännern.",
 'customcssprotected' => "Du hest keen Rechten, düsse CSS-Sied to bearbeiden, wieldat se de persöönlichen Instellen vun en annern Bruker to'n Inhaalt hett.",
 'ns-specialprotected' => 'Spezialsieden köönt nich ännert warrn.',
-'titleprotected' => "Disse Siet is gegen dat nee Opstellen vun [[User:$1|$1]] schuult worrn.
+'titleprotected' => "Disse Siet is gegen dat nee Opstellen vun [[wiki_User:$1|$1]] schuult worrn.
 As Grund is angeven: ''$2''.",
 
 # Virus scanner
@@ -606,7 +606,7 @@ As Grund is angeven: ''$2''.",
 # Login and logout pages
 'logouttext' => "'''Du büst nu afmellt.'''
 
-Du kannst {{SITENAME}} nu anonym wiederbruken oder di ünner dissen oder en annern Brukernaam wedder [[Special:UserLogin|anmellen]].
+Du kannst {{SITENAME}} nu anonym wiederbruken oder di ünner dissen oder en annern Brukernaam wedder [[Special:wiki_UserLogin|anmellen]].
 Denk dor an, dat welk Sieden ünner Ümstänn noch jümmer so wiest warrn köönt, as wenn du anmellt weerst. Dat ännert sik, wenn du den Cache vun dien Browser leddig maakst.",
 'welcomecreation' => '== Willkamen, $1! ==
 Dien Brukerkonto is nu inricht.
@@ -646,7 +646,7 @@ Sorg dor för, dat Cookies anstellt sünd. Denn laad de Sied noch wedder nee un 
 'loginsuccess' => 'Du büst nu as „$1“ bi {{SITENAME}} anmellt.',
 'nosuchuser' => 'Den Brukernaam „$1“ gifft dat nich.
 Brukernaams maakt en Ünnerscheed twischen groot un lütt schrevene Bookstaven.
-Kiek de Schrievwies na oder [[Special:UserLogin/signup|mell di as ne’en Bruker an]].',
+Kiek de Schrievwies na oder [[Special:wiki_UserLogin/signup|mell di as ne’en Bruker an]].',
 'nosuchusershort' => 'De Brukernaam „$1“ existeert nich. Prööv de Schrievwies.',
 'nouserspecified' => 'Du musst en Brukernaam angeven',
 'login-userblocked' => 'Disse Bruker is sperrt. Anmellen geiht nich.',
@@ -794,7 +794,7 @@ Villicht is he verschaven oder rutnahmen worrn, wieldes du de Sied ankeken hest.
 'loginreqlink' => 'anmellen',
 'loginreqpagetext' => 'Du musst di $1, dat du annere Sieden ankieken kannst.',
 'accmailtitle' => 'Passwoort is toschickt worrn.',
-'accmailtext' => "En tofällig Passwoord för [[User talk:$1|$1]] is $2 tostüürt worrn.
+'accmailtext' => "En tofällig Passwoord för [[wiki_User talk:$1|$1]] is $2 tostüürt worrn.
 
 Dat Passwoord för dit Brukerkonto kann na dat Anmellen ünner ''[[Special:ChangePassword|Passwoord ännern]]'' ännert warrn.",
 'newarticle' => '(Nee)',
@@ -804,7 +804,7 @@ Wenn du de Sied gornich ännern wullst, denn klick op den '''Trügg'''-Knoop in 
 'anontalkpagetext' => "---- ''Dit is de Diskuschoonssiet vun en nich anmellt Bruker, de noch keen Brukerkonto anleggt hett oder dat jüst nich bruukt.
 Wi mööt hier de numerische IP-Adress verwennen, üm den Bruker to identifizeern.
 So en Adress kann vun verscheden Brukern bruukt warrn.
-Wenn du en anonymen Bruker büst un meenst, dat disse Kommentaren nich an di richt sünd, denn [[Special:UserLogin/signup|legg di en Brukerkonto an]] oder [[Special:UserLogin|mell di an]], dat dat Problem nich mehr dor is.''",
+Wenn du en anonymen Bruker büst un meenst, dat disse Kommentaren nich an di richt sünd, denn [[Special:wiki_UserLogin/signup|legg di en Brukerkonto an]] oder [[Special:wiki_UserLogin|mell di an]], dat dat Problem nich mehr dor is.''",
 'noarticletext' => 'Dor is opstunns keen Text op disse Sied. Du kannst [[Special:Search/{{PAGENAME}}|na dissen Utdruck in annere Sieden söken]], <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} in de Logböker söken],
 oder [{{fullurl:{{FULLPAGENAME}}|action=edit}} disse Sied ännern]</span>.',
 'noarticletext-nopermission' => 'Disse Sied hett opstunns keen Text.
@@ -830,12 +830,12 @@ De jüngste Indrag in dat Sperr-Logbook wart ünnen wiest:',
 'previewnote' => "Dit is bloots en Vörschau, de Sied is noch nich spiekert!'''",
 'previewconflict' => 'Disse Vörschau wiest den Inholt vun dat Textfeld baven; so warrt de Siet utseihn, wenn du nu spiekerst.',
 'session_fail_preview' => "'''Deit uns leed! Wi kunnen dien Ännern nich spiekern. Diene Sitzungsdaten weren weg.
-Versöök dat noch wedder. Wenn dat noch jümmer nich geiht, denn versöök di [[Special:UserLogout|aftomellen]] un denn wedder antomellen.'''",
+Versöök dat noch wedder. Wenn dat noch jümmer nich geiht, denn versöök di [[Special:wiki_UserLogout|aftomellen]] un denn wedder antomellen.'''",
 'session_fail_preview_html' => "'''Deit uns leed! Wi kunnen dien Ännern nich spiekern, de Sitzungsdaten sünd verloren gahn.'''
 
 ''In {{SITENAME}} is dat Spiekern vun rein HTML verlöövt, dorvun is de Vörschau utblennt, dat JavaScript-Angrepen nich mööglich sünd.''
 
-'''Versöök dat noch wedder un klick noch wedder op „Siet spiekern“. Wenn dat Problem noch jümmer dor is, [[Special:UserLogout|mell di af]] un denn wedder an.'''",
+'''Versöök dat noch wedder un klick noch wedder op „Siet spiekern“. Wenn dat Problem noch jümmer dor is, [[Special:wiki_UserLogout|mell di af]] un denn wedder an.'''",
 'token_suffix_mismatch' => "'''Dien Ännern sünd afwiest worrn. Dien Browser hett welk Teken in de Kuntrull-Tekenreeg kaputt maakt.
 Wenn dat so spiekert warrt, kann dat angahn, dat noch mehr Teken in de Sied kaputt gaht.
 Dat kann to’n Bispeel dor vun kamen, dat du en anonymen Proxy-Deenst bruukst, de wat verkehrt maakt.'''",
@@ -879,7 +879,7 @@ Bruker mit Sysop-Rechten doran arbeiden könnt.'''",
 'hiddencategories' => 'Disse Siet steiht in {{PLURAL:$1|ene verstekene Kategorie|$1 verstekene Kategorien}}:',
 'edittools' => '<!-- Disse Text warrt ünner de Finstern för dat Ännern un Hoochladen wiest. -->',
 'nocreatetitle' => 'Opstellen vun ne’e Sieden is inschränkt.',
-'nocreatetext' => '{{SITENAME}} verlööft di dat Opstellen vun ne’e Sieden nich. Du kannst blot Sieden ännern, de al dor sünd, oder du musst di [[Special:UserLogin|anmellen]].',
+'nocreatetext' => '{{SITENAME}} verlööft di dat Opstellen vun ne’e Sieden nich. Du kannst blot Sieden ännern, de al dor sünd, oder du musst di [[Special:wiki_UserLogin|anmellen]].',
 'nocreate-loggedin' => 'Du hest keen Verlööf, ne’e Sieden antoleggen.',
 'permissionserrors' => 'Fehlers mit de Rechten',
 'permissionserrorstext' => 'Du hest keen Verlööf, dat to doon. De {{PLURAL:$1|Grund is|Grünn sünd}}:',
@@ -913,11 +913,11 @@ Nu {{PLURAL:$1|is dor een|sünd dor $1}}, wesen {{PLURAL:$2|dröff dat blot een|
 'undo-success' => 'De Ännern kann trüchdreiht warrn. Vergliek ünnen de Versionen, dat ok allens richtig is, un spieker de Sied denn af.',
 'undo-failure' => 'Kunn de Siet nich op de vörige Version trüchdreihn. De Afsnitt is twischendör al wedder ännert worrn.',
 'undo-norev' => 'De Ännern kunn nich trüchdreiht warrn, de gifft dat nich oder is wegsmeten worrn.',
-'undo-summary' => 'Ännern $1 vun [[Special:Contributions/$2|$2]] ([[User talk:$2|Diskuschoon]]) trüchdreiht.',
+'undo-summary' => 'Ännern $1 vun [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Diskuschoon]]) trüchdreiht.',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'Brukerkonto kann nich anleggt warrn',
-'cantcreateaccount-text' => "Dat Opstellen vun Brukerkonten vun de IP-Adress '''$1''' ut is vun [[User:$3|$3]] sperrt worrn.
+'cantcreateaccount-text' => "Dat Opstellen vun Brukerkonten vun de IP-Adress '''$1''' ut is vun [[wiki_User:$3|$3]] sperrt worrn.
 
 De Grund weer: ''$2''",
 
@@ -1138,7 +1138,7 @@ de aver nich jümmer den aktuellsten Stand weerspegelt.<p>',
 'mypreferences' => 'För mi Instellen',
 'prefs-edits' => 'Wo faken du in dit Wiki Sieden ännert hest:',
 'prefsnologin' => 'Nich anmellt',
-'prefsnologintext' => 'Du musst <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} anmellt]</span> wesen, dat du dien Instellen ännern kannst.',
+'prefsnologintext' => 'Du musst <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} anmellt]</span> wesen, dat du dien Instellen ännern kannst.',
 'changepassword' => 'Passwoort ännern',
 'prefs-skin' => 'Utsehn vun de Steed',
 'skin-preview' => 'Vörschau',
@@ -1242,15 +1242,15 @@ Dat kann nich wedder ungeschehn maakt warrn.',
 'prefs-displaywatchlist' => 'Weddergaav-Instellungen',
 'prefs-diffs' => 'Ünnerscheed',
 
-# User preference: e-mail validation using jQuery
+# wiki_User preference: e-mail validation using jQuery
 'email-address-validity-valid' => 'E-Mail-Adress lett good',
 
-# User rights
+# wiki_User rights
 'userrights' => 'Brukerrechten inrichten',
 'userrights-lookup-user' => 'Brukergruppen verwalten',
 'userrights-user-editname' => 'Brukernaam ingeven:',
 'editusergroup' => 'Brukergruppen ännern',
-'editinguser' => "Ännern vun Brukerrechten vun '''[[User:$1|$1]]''' ([[User talk:$1|{{int:talkpagelinktext}}]]{{int:pipe-separator}}[[Special:Contributions/$1|{{int:contribslink}}]])",
+'editinguser' => "Ännern vun Brukerrechten vun '''[[wiki_User:$1|$1]]''' ([[wiki_User talk:$1|{{int:talkpagelinktext}}]]{{int:pipe-separator}}[[Special:Contributions/$1|{{int:contribslink}}]])",
 'userrights-editusergroup' => 'Brukergruppen ännern',
 'saveusergroups' => 'Brukergruppen spiekern',
 'userrights-groupsmember' => 'Liddmaat vun:',
@@ -1260,7 +1260,7 @@ Dat kann nich wedder ungeschehn maakt warrn.',
 'userrights-reason' => 'Grund:',
 'userrights-no-interwiki' => 'Du hest nich de Rechten, Brukerrechten in annere Wikis to setten.',
 'userrights-nodatabase' => 'Datenbank $1 gifft dat nich oder is nich lokal.',
-'userrights-nologin' => 'Du musst mit en Administrater-Brukerkonto [[Special:UserLogin|anmellt]] wesen, dat du Brukerrechten ännern kannst.',
+'userrights-nologin' => 'Du musst mit en Administrater-Brukerkonto [[Special:wiki_UserLogin|anmellt]] wesen, dat du Brukerrechten ännern kannst.',
 'userrights-notallowed' => 'Du hest nich de Rechten, Brukerrechten to setten.',
 'userrights-changeable-col' => 'Gruppen, de du ännern kannst',
 'userrights-unchangeable-col' => 'Gruppen, de du nich ännern kannst',
@@ -1346,7 +1346,7 @@ Dat kann nich wedder ungeschehn maakt warrn.',
 'right-siteadmin' => 'Datenbank sperren un wedder apen maken',
 'right-override-export-depth' => 'Exporteer Sieden, lenkt Sieden inslaten bet to en Deepd vun 5',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Brukerrechten-Logbook',
 'rightslogtext' => 'In dit Logbook staht Ännern an de Brukerrechten.',
 'rightslogentry' => 'Grupp bi $1 vun $2 op $3 ännert.',
@@ -1436,7 +1436,7 @@ Dat kann nich wedder ungeschehn maakt warrn.',
 'uploadbtn' => 'Datei hoochladen',
 'reuploaddesc' => 'Trüch to de Hoochladen-Siet.',
 'uploadnologin' => 'Nich anmellt',
-'uploadnologintext' => 'Du musst [[Special:UserLogin|anmellt wesen]], dat du Datein hoochladen kannst.',
+'uploadnologintext' => 'Du musst [[Special:wiki_UserLogin|anmellt wesen]], dat du Datein hoochladen kannst.',
 'upload_directory_missing' => 'De Dateimapp för hoochladene Datein ($1) fehlt un de Webserver kunn ehr ok nich nee opstellen.',
 'upload_directory_read_only' => 'De Server kann nich in’n Orner för dat Hoochladen vun Datein ($1) schrieven.',
 'uploaderror' => 'Fehler bi dat Hoochladen',
@@ -1513,9 +1513,9 @@ Wenn du ehr liekers hoochladen wullt, gah trüch un laad de Datei ünner en anne
 'upload-proto-error' => 'Verkehrt Protokoll',
 'upload-proto-error-text' => 'De URL mutt mit <code>http://</code> oder <code>ftp://</code> anfangen.',
 'upload-file-error' => 'Internen Fehler',
-'upload-file-error-text' => 'Dat geev en internen Fehler bi dat Anleggen vun en temporäre Datei op’n Server. Segg man en [[Special:ListUsers/sysop|Administrater]] bescheed.',
+'upload-file-error-text' => 'Dat geev en internen Fehler bi dat Anleggen vun en temporäre Datei op’n Server. Segg man en [[Special:Listwiki_Users/sysop|Administrater]] bescheed.',
 'upload-misc-error' => 'Unbekannt Fehler bi dat Hoochladen',
-'upload-misc-error-text' => 'Bi dat Hoochladen geev dat en unbekannten Fehler. Kiek na, wat dor en Fehler in de URL is, wat de Websteed ok löppt un versöök dat denn noch wedder. Wenn dat Problem denn noch jümmer dor is, denn vertell dat en [[Special:ListUsers/sysop|System-Administrater]].',
+'upload-misc-error-text' => 'Bi dat Hoochladen geev dat en unbekannten Fehler. Kiek na, wat dor en Fehler in de URL is, wat de Websteed ok löppt un versöök dat denn noch wedder. Wenn dat Problem denn noch jümmer dor is, denn vertell dat en [[Special:Listwiki_Users/sysop|System-Administrater]].',
 
 # Some likely curl errors. More could be added from <http://curl.haxx.se/libcurl/c/libcurl-errors.html>
 'upload-curl-error6' => 'Kunn de URL nich kriegen',
@@ -1648,7 +1648,7 @@ Denk dor an, natokieken, wat nich noch annere Sieden na de Vörlagen wiest, ehrd
 'statistics-edits-average' => 'Dörsnittlich Ännern je Sied',
 'statistics-views-total' => 'Weddergeven Sieden alltohoop',
 'statistics-views-peredit' => 'Weddergeven Sieden je Ännern',
-'statistics-users' => 'Anmellt [[Special:ListUsers|Brukers]]',
+'statistics-users' => 'Anmellt [[Special:Listwiki_Users|Brukers]]',
 'statistics-users-active' => 'Aktive Brukers',
 'statistics-users-active-desc' => 'Brukers, de {{PLURAL:$1|in de vergahn 24 Stünnen|in de vergahn $1 Daag}} wat daan hebbt',
 'statistics-mostpopular' => 'opmehrst ankekene Sieden',
@@ -1796,13 +1796,13 @@ Kiek ok bi de [[Special:WantedCategories|wünschten Kategorien]].',
 'linksearch-line' => '$1 hett en Lenk vun $2',
 'linksearch-error' => 'Wildcards dröfft blot an’n Anfang vun de URL stahn.',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => 'Wies de Brukers, de anfangt mit:',
 'listusers-submit' => 'Wiesen',
 'listusers-noresult' => 'Keen Bruker funnen.',
 'listusers-blocked' => '(sperrt)',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'Aktive Brukers',
 'activeusers-intro' => 'Dit is en List von Brukers, de {{PLURAL:$1|den verleden Dag|de verleden $1 Daag}} aktiv wesen sünd.',
 'activeusers-count' => '$1 {{PLURAL:$1|Ännern|Ännern}} {{PLURAL:$3|den verleden Dag|in de verleden $3 Daag}}',
@@ -1836,7 +1836,7 @@ Mehr Informatschonen över enkelte Rechten staht ünner [[{{MediaWiki:Listgroupr
 
 # E-mail user
 'mailnologin' => 'Du büst nich anmellt.',
-'mailnologintext' => 'Du musst [[Special:UserLogin|anmellt wesen]] un in diene [[Special:Preferences|Instellungen]] en güllige E-Mail-Adress hebben, dat du annere Brukers E-Mails tostüren kannst.',
+'mailnologintext' => 'Du musst [[Special:wiki_UserLogin|anmellt wesen]] un in diene [[Special:Preferences|Instellungen]] en güllige E-Mail-Adress hebben, dat du annere Brukers E-Mails tostüren kannst.',
 'emailuser' => 'E-Mail an dissen Bruker',
 'emailpage' => 'E-Mail an Bruker',
 'emailpagetext' => 'Du kannst dissen Bruker mit dit Formular en E-Mail tostüren. As Afsenner warrt de E-Mail-Adress ut dien [[Special:Preferences|Instellen]] indragen, dat de Bruker di antern kann.',
@@ -1860,7 +1860,7 @@ Mehr Informatschonen över enkelte Rechten staht ünner [[{{MediaWiki:Listgroupr
 'emailsenttext' => 'Dien E-Mail is afsennt worrn.',
 'emailuserfooter' => 'Disse E-Mail hett $1 över de Funkschoon „{{int:emailuser}}“ vun {{SITENAME}} $2 tostüürt.',
 
-# User Messenger
+# wiki_User Messenger
 'usermessage-summary' => 'Systemnaricht trügglaten',
 
 # Watchlist
@@ -1870,7 +1870,7 @@ Mehr Informatschonen över enkelte Rechten staht ünner [[{{MediaWiki:Listgroupr
 'nowatchlist' => 'Du hest kene Indreeg op dien Oppasslist.',
 'watchlistanontext' => '$1, dat du dien Oppasslist ankieken oder ännern kannst.',
 'watchnologin' => 'Du büst nich anmellt',
-'watchnologintext' => 'Du must [[Special:UserLogin|anmellt]] wesen, wenn du dien Oppasslist ännern willst.',
+'watchnologintext' => 'Du must [[Special:wiki_UserLogin|anmellt]] wesen, wenn du dien Oppasslist ännern willst.',
 'addedwatchtext' => 'De Siet „<nowiki>$1</nowiki>“ is to diene [[Special:Watchlist|Oppasslist]] toföögt worrn.
 Ännern, de in Tokumst an disse Siet un an de tohörige Diskuschoonssiet maakt warrt, sünd dor op oplist un de Siet is op de [[Special:RecentChanges|List vun de letzten Ännern]] fett markt. Wenn du de Siet nich mehr op diene Oppasslist hebben willst, klick op „Nich mehr oppassen“.',
 'removedwatchtext' => 'De Sied „[[:$1]]“ is nich mehr op [[Special:Watchlist|dien Oppasslist]].',
@@ -1963,11 +1963,11 @@ Segg to, dat du över de Folgen Bescheed weetst un dat du in Övereenstimmen mit
 'rollbacklink' => 'Trüchnehmen',
 'rollbackfailed' => 'Trüchnahm hett kenen Spood',
 'cantrollback' => 'De Ännern kann nich trüchnahmen warrn; de letzte Autor is de eenzige.',
-'alreadyrolled' => 'Dat Trüchnehmen vun de Ännern an de Siet [[:$1]] vun [[User:$2|$2]] ([[User talk:$2|Diskuschoonssiet]]{{int:pipe-separator}}[[Special:Contributions/$2|Bidrääg]]) is nich mööglich, vun wegen dat dor en annere Ännern oder Trüchnahm wesen is.
+'alreadyrolled' => 'Dat Trüchnehmen vun de Ännern an de Siet [[:$1]] vun [[wiki_User:$2|$2]] ([[wiki_User talk:$2|Diskuschoonssiet]]{{int:pipe-separator}}[[Special:Contributions/$2|Bidrääg]]) is nich mööglich, vun wegen dat dor en annere Ännern oder Trüchnahm wesen is.
 
-De letzte Ännern is vun [[User:$3|$3]] ([[User talk:$3|Diskuschoon]]{{int:pipe-separator}}[[Special:Contributions/$3|Bidrääg]]).',
+De letzte Ännern is vun [[wiki_User:$3|$3]] ([[wiki_User talk:$3|Diskuschoon]]{{int:pipe-separator}}[[Special:Contributions/$3|Bidrääg]]).',
 'editcomment' => "De Ännerkommentar weer: „''$1''“.",
-'revertpage' => 'Ännern vun [[Special:Contributions/$2|$2]] ([[User talk:$2|Diskuschoon]]) rut un de Version vun [[User:$1]] wedderhaalt',
+'revertpage' => 'Ännern vun [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Diskuschoon]]) rut un de Version vun [[wiki_User:$1]] wedderhaalt',
 'rollback-success' => 'Ännern vun $1 trüchsett op letzte Version vun $2.',
 
 # Edit tokens
@@ -2174,7 +2174,7 @@ Op de [[Special:BlockList|IP-Blocklist]] is en List vun alle Blocks to finnen.',
 'unblockip' => 'IP-Adress freegeven',
 'unblockiptext' => 'Bruuk dat Formular, üm en blockte IP-Adress freetogeven.',
 'ipusubmit' => 'Disse Sperr opheven',
-'unblocked' => '[[User:$1|$1]] freegeven',
+'unblocked' => '[[wiki_User:$1|$1]] freegeven',
 'unblocked-id' => 'Sperr $1 freegeven',
 'ipblocklist' => 'Sparrte Brukers',
 'ipblocklist-legend' => 'Blockten Bruker finnen',
@@ -2268,7 +2268,7 @@ In disse Fäll musst du de Siet, wenn du dat willst, vun Hand schuven.",
 'movearticle' => 'Siet schuven',
 'movenologin' => 'Du büst nich anmellt',
 'movenologintext' => 'Du muttst en registreert Bruker un
-[[Special:UserLogin|anmellt]] ween,
+[[Special:wiki_UserLogin|anmellt]] ween,
 üm en Siet to schuven.',
 'movenotallowed' => 'Du hest nich de Rechten, Sieden to schuven.',
 'movenotallowedfile' => 'Du hest nich de Rechten, Datein to schuven.',
@@ -2900,7 +2900,7 @@ Wenn du dat nich sülvst wesen büst, denn folg den Lenk nich. De Bestätigungsk
 
 # Delete conflict
 'deletedwhileediting' => "'''Wohrschau''': Disse Siet is wegsmeten worrn, wieldes du ehr graad ännert hest!",
-'confirmrecreate' => "De Bruker [[User:$1|$1]] ([[User talk:$1|talk]]) hett disse Siet wegsmeten, nadem du dat Ännern anfungen hest. He hett as Grund schreven:
+'confirmrecreate' => "De Bruker [[wiki_User:$1|$1]] ([[wiki_User talk:$1|talk]]) hett disse Siet wegsmeten, nadem du dat Ännern anfungen hest. He hett as Grund schreven:
 : ''$2''
 Wist du de Siet würklich nee anleggen?",
 'recreate' => 'wedder nee anleggen',
