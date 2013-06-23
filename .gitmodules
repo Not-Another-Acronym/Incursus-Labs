@@ -1,0 +1,3 @@
+[submodule "ShipLib"]
+	path = ShipLib
+	url = https://github.com/fuzzysteve/Ship.js.git
