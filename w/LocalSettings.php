@@ -133,7 +133,7 @@ $wgResourceLoaderMaxQueryLength = 512;
 # Add more configuration options below.
 
 // PHPBB User Database Plugin. (Requires MySQL Database)
-require_once './extensions/Auth_phpBB.php';
+require_once getenv('MW_INSTALL_PATH') . 'extensions/Auth_phpBB.php';
  
 $wgAuth_Config = array(); // Clean.
  

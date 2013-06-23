@@ -153,123 +153,140 @@ class VectorTemplate extends BaseTemplate {
 		// Output HTML Page
 		$this->html( 'headelement' );
 ?>
-		<div id="mw-page-base" class="noprint"></div>
-		<div id="mw-head-base" class="noprint"></div>
-		<!-- content -->
-		<div id="content" class="mw-body">
-			<a id="top"></a>
-			<div id="mw-js-message" style="display:none;"<?php $this->html( 'userlangattributes' ) ?>></div>
-			<?php if ( $this->data['sitenotice'] ): ?>
-			<!-- sitenotice -->
-			<div id="siteNotice"><?php $this->html( 'sitenotice' ) ?></div>
-			<!-- /sitenotice -->
-			<?php endif; ?>
-			<!-- firstHeading -->
-			<h1 id="firstHeading" class="firstHeading"><span dir="auto"><?php $this->html( 'title' ) ?></span></h1>
-			<!-- /firstHeading -->
-			<!-- bodyContent -->
-			<div id="bodyContent">
-				<?php if ( $this->data['isarticle'] ): ?>
-				<!-- tagline -->
-				<div id="siteSub"><?php $this->msg( 'tagline' ) ?></div>
-				<!-- /tagline -->
-				<?php endif; ?>
-				<!-- subtitle -->
-				<div id="contentSub"<?php $this->html( 'userlangattributes' ) ?>><?php $this->html( 'subtitle' ) ?></div>
-				<!-- /subtitle -->
-				<?php if ( $this->data['undelete'] ): ?>
-				<!-- undelete -->
-				<div id="contentSub2"><?php $this->html( 'undelete' ) ?></div>
-				<!-- /undelete -->
-				<?php endif; ?>
-				<?php if( $this->data['newtalk'] ): ?>
-				<!-- newtalk -->
-				<div class="usermessage"><?php $this->html( 'newtalk' )  ?></div>
-				<!-- /newtalk -->
-				<?php endif; ?>
-				<?php if ( $this->data['showjumplinks'] ): ?>
-				<!-- jumpto -->
-				<div id="jump-to-nav" class="mw-jump">
-					<?php $this->msg( 'jumpto' ) ?>
-					<a href="#mw-head"><?php $this->msg( 'jumptonavigation' ) ?></a><?php $this->msg( 'comma-separator' ) ?>
-					<a href="#p-search"><?php $this->msg( 'jumptosearch' ) ?></a>
+		<div id="wrap">
+			<?PHP
+				$php = new Runkit_Sandbox();
+                $php->session_start();
+                $php->SERVER = $_SERVER;
+                $php->eval('
+                        define("IN_PHPBB", true);
+                        $_SERVER = $SERVER;
+                        chdir("' . getcwd()  .'");
+						ob_start();
+                        include("../header.php");
+						$out = ob_get_clean();
+                ');
+				print($php->out);
+			?>
+			<div style="position: relative;font-size: initial;">
+				<div id="mw-page-base" class="noprint"></div>
+				<div id="mw-head-base" class="noprint"></div>
+				<!-- content -->
+				<div id="content" class="mw-body">
+					<a id="top"></a>
+					<div id="mw-js-message" style="display:none;"<?php $this->html( 'userlangattributes' ) ?>></div>
+					<?php if ( $this->data['sitenotice'] ): ?>
+					<!-- sitenotice -->
+					<div id="siteNotice"><?php $this->html( 'sitenotice' ) ?></div>
+					<!-- /sitenotice -->
+					<?php endif; ?>
+					<!-- firstHeading -->
+					<h1 id="firstHeading" class="firstHeading"><span dir="auto"><?php $this->html( 'title' ) ?></span></h1>
+					<!-- /firstHeading -->
+					<!-- bodyContent -->
+					<div id="bodyContent">
+						<?php if ( $this->data['isarticle'] ): ?>
+						<!-- tagline -->
+						<div id="siteSub"><?php $this->msg( 'tagline' ) ?></div>
+						<!-- /tagline -->
+						<?php endif; ?>
+						<!-- subtitle -->
+						<div id="contentSub"<?php $this->html( 'userlangattributes' ) ?>><?php $this->html( 'subtitle' ) ?></div>
+						<!-- /subtitle -->
+						<?php if ( $this->data['undelete'] ): ?>
+						<!-- undelete -->
+						<div id="contentSub2"><?php $this->html( 'undelete' ) ?></div>
+						<!-- /undelete -->
+						<?php endif; ?>
+						<?php if( $this->data['newtalk'] ): ?>
+						<!-- newtalk -->
+						<div class="usermessage"><?php $this->html( 'newtalk' )  ?></div>
+						<!-- /newtalk -->
+						<?php endif; ?>
+						<?php if ( $this->data['showjumplinks'] ): ?>
+						<!-- jumpto -->
+						<div id="jump-to-nav" class="mw-jump">
+							<?php $this->msg( 'jumpto' ) ?>
+							<a href="#mw-head"><?php $this->msg( 'jumptonavigation' ) ?></a><?php $this->msg( 'comma-separator' ) ?>
+							<a href="#p-search"><?php $this->msg( 'jumptosearch' ) ?></a>
+						</div>
+						<!-- /jumpto -->
+						<?php endif; ?>
+						<!-- bodycontent -->
+						<?php $this->html( 'bodycontent' ) ?>
+						<!-- /bodycontent -->
+						<?php if ( $this->data['printfooter'] ): ?>
+						<!-- printfooter -->
+						<div class="printfooter">
+						<?php $this->html( 'printfooter' ); ?>
+						</div>
+						<!-- /printfooter -->
+						<?php endif; ?>
+						<?php if ( $this->data['catlinks'] ): ?>
+						<!-- catlinks -->
+						<?php $this->html( 'catlinks' ); ?>
+						<!-- /catlinks -->
+						<?php endif; ?>
+						<?php if ( $this->data['dataAfterContent'] ): ?>
+						<!-- dataAfterContent -->
+						<?php $this->html( 'dataAfterContent' ); ?>
+						<!-- /dataAfterContent -->
+						<?php endif; ?>
+						<div class="visualClear"></div>
+						<!-- debughtml -->
+						<?php $this->html( 'debughtml' ); ?>
+						<!-- /debughtml -->
+					</div>
+					<!-- /bodyContent -->
 				</div>
-				<!-- /jumpto -->
-				<?php endif; ?>
-				<!-- bodycontent -->
-				<?php $this->html( 'bodycontent' ) ?>
-				<!-- /bodycontent -->
-				<?php if ( $this->data['printfooter'] ): ?>
-				<!-- printfooter -->
-				<div class="printfooter">
-				<?php $this->html( 'printfooter' ); ?>
+				<!-- /content -->
+				<!-- header -->
+				<div id="mw-head" class="noprint">
+					<?php $this->renderNavigation( 'PERSONAL' ); ?>
+					<div id="left-navigation">
+						<?php $this->renderNavigation( array( 'NAMESPACES', 'VARIANTS' ) ); ?>
+					</div>
+					<div id="right-navigation">
+						<?php $this->renderNavigation( array( 'VIEWS', 'ACTIONS', 'SEARCH' ) ); ?>
+					</div>
 				</div>
-				<!-- /printfooter -->
-				<?php endif; ?>
-				<?php if ( $this->data['catlinks'] ): ?>
-				<!-- catlinks -->
-				<?php $this->html( 'catlinks' ); ?>
-				<!-- /catlinks -->
-				<?php endif; ?>
-				<?php if ( $this->data['dataAfterContent'] ): ?>
-				<!-- dataAfterContent -->
-				<?php $this->html( 'dataAfterContent' ); ?>
-				<!-- /dataAfterContent -->
-				<?php endif; ?>
-				<div class="visualClear"></div>
-				<!-- debughtml -->
-				<?php $this->html( 'debughtml' ); ?>
-				<!-- /debughtml -->
-			</div>
-			<!-- /bodyContent -->
-		</div>
-		<!-- /content -->
-		<!-- header -->
-		<div id="mw-head" class="noprint">
-			<?php $this->renderNavigation( 'PERSONAL' ); ?>
-			<div id="left-navigation">
-				<?php $this->renderNavigation( array( 'NAMESPACES', 'VARIANTS' ) ); ?>
-			</div>
-			<div id="right-navigation">
-				<?php $this->renderNavigation( array( 'VIEWS', 'ACTIONS', 'SEARCH' ) ); ?>
-			</div>
-		</div>
-		<!-- /header -->
-		<!-- panel -->
-			<div id="mw-panel" class="noprint">
-				<!-- logo -->
-					<div id="p-logo"><a style="background-image: url(<?php $this->text( 'logopath' ) ?>);" href="<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] ) ?>" <?php echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'p-logo' ) ) ?>></a></div>
-				<!-- /logo -->
-				<?php $this->renderPortals( $this->data['sidebar'] ); ?>
-			</div>
-		<!-- /panel -->
-		<!-- footer -->
-		<div id="footer"<?php $this->html( 'userlangattributes' ) ?>>
-			<?php foreach( $this->getFooterLinks() as $category => $links ): ?>
-				<ul id="footer-<?php echo $category ?>">
-					<?php foreach( $links as $link ): ?>
-						<li id="footer-<?php echo $category ?>-<?php echo $link ?>"><?php $this->html( $link ) ?></li>
+				<!-- /header -->
+				<!-- panel -->
+					<div id="mw-panel" class="noprint">
+						<!-- logo -->
+							<div id="p-logo"><a style="background-image: url(<?php $this->text( 'logopath' ) ?>);" href="<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] ) ?>" <?php echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'p-logo' ) ) ?>></a></div>
+						<!-- /logo -->
+						<?php $this->renderPortals( $this->data['sidebar'] ); ?>
+					</div>
+				<!-- /panel -->
+				<!-- footer -->
+				<div id="footer"<?php $this->html( 'userlangattributes' ) ?>>
+					<?php foreach( $this->getFooterLinks() as $category => $links ): ?>
+						<ul id="footer-<?php echo $category ?>">
+							<?php foreach( $links as $link ): ?>
+								<li id="footer-<?php echo $category ?>-<?php echo $link ?>"><?php $this->html( $link ) ?></li>
+							<?php endforeach; ?>
+						</ul>
 					<?php endforeach; ?>
-				</ul>
-			<?php endforeach; ?>
-			<?php $footericons = $this->getFooterIcons("icononly");
-			if ( count( $footericons ) > 0 ): ?>
-				<ul id="footer-icons" class="noprint">
-<?php			foreach ( $footericons as $blockName => $footerIcons ): ?>
-					<li id="footer-<?php echo htmlspecialchars( $blockName ); ?>ico">
-<?php				foreach ( $footerIcons as $icon ): ?>
-						<?php echo $this->getSkin()->makeFooterIcon( $icon ); ?>
-
-<?php				endforeach; ?>
-					</li>
-<?php			endforeach; ?>
-				</ul>
-			<?php endif; ?>
-			<div style="clear:both"></div>
+					<?php $footericons = $this->getFooterIcons("icononly");
+					if ( count( $footericons ) > 0 ): ?>
+						<ul id="footer-icons" class="noprint">
+		<?php			foreach ( $footericons as $blockName => $footerIcons ): ?>
+							<li id="footer-<?php echo htmlspecialchars( $blockName ); ?>ico">
+		<?php				foreach ( $footerIcons as $icon ): ?>
+								<?php echo $this->getSkin()->makeFooterIcon( $icon ); ?>
+		
+		<?php				endforeach; ?>
+							</li>
+		<?php			endforeach; ?>
+						</ul>
+					<?php endif; ?>
+					<div style="clear:both"></div>
+				</div>
+				<!-- /footer -->
+				<?php $this->printTrail(); ?>
+			</div>
 		</div>
-		<!-- /footer -->
-		<?php $this->printTrail(); ?>
-
 	</body>
 </html>
 <?php
