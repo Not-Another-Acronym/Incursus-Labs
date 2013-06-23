@@ -58,7 +58,7 @@ $bookstoreList = array(
 $fallback8bitEncoding = "windows-1251";
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Холбааны шыяры:',
 'tog-justify' => 'Арынның дооразының аайы-биле сөзүглелди дескилээри',
 'tog-hideminor' => 'Сөөлгү өскерлиишкиннер арында бичии өскерлиишкиннерни чажырар',
@@ -326,7 +326,7 @@ $messages = array(
 
 А шынында ындыг эвес болза, Силер программа хандырылгазының алдаанга душканыңар хөңнү.
 
-Ооң дугайында кайы-бир [[Special:ListUsers/sysop|удуртукчуларга]], мүн URL-ин айытпышаан, дамчыдыңарам.',
+Ооң дугайында кайы-бир [[Special:Listwiki_Users/sysop|удуртукчуларга]], мүн URL-ин айытпышаан, дамчыдыңарам.',
 'missingarticle-rev' => '(үндүрериниң саны: $1)',
 'missingarticle-diff' => '(Ылгал: $1, $2)',
 'internalerror' => 'Иштики алдаг',
@@ -448,7 +448,7 @@ Do not forget to change your [[Special:Preferences|{{SITENAME}} preferences]].',
 'nosuchsectiontitle' => 'Бо салбыр чок',
 'loginreqlink' => 'кирери',
 'accmailtitle' => 'Чажыт сөс чоргустунган.',
-'accmailtext' => "A randomly generated password for [[User talk:$1|$1]] has been sent to $2.
+'accmailtext' => "A randomly generated password for [[wiki_User talk:$1|$1]] has been sent to $2.
 
 The password for this new account can be changed on the ''[[Special:ChangePassword|change password]]'' page upon logging in.",
 'newarticle' => '(Чаа)',
@@ -633,9 +633,9 @@ It must not be more than $1 {{PLURAL:$1|character|characters}} long.',
 'prefs-signature' => 'Хол үжүү',
 'prefs-diffs' => 'Ылгалдар',
 
-# User rights
+# wiki_User rights
 'editusergroup' => 'Ажыглакчының бөлгүмнерни өскертири',
-'editinguser' => "Changing user rights of user '''[[User:$1|$1]]''' ([[User talk:$1|{{int:talkpagelinktext}}]]{{int:pipe-separator}}[[Special:Contributions/$1|{{int:contribslink}}]])",
+'editinguser' => "Changing user rights of user '''[[wiki_User:$1|$1]]''' ([[wiki_User talk:$1|{{int:talkpagelinktext}}]]{{int:pipe-separator}}[[Special:Contributions/$1|{{int:contribslink}}]])",
 'userrights-editusergroup' => 'Ажыглакчының бөлгүмнерни өскертири',
 'saveusergroups' => 'Ажыглакчының бөлгүмнерни шыгжаары',
 'userrights-reason' => 'Чылдагаан:',
@@ -674,7 +674,7 @@ It must not be more than $1 {{PLURAL:$1|character|characters}} long.',
 'right-editusercss' => 'Өске ажыглакчыларның CSS файлдарын өскертири.',
 'right-edituserjs' => 'Өске ажыглакчыларның JavaScript файлдарын өскертири.',
 
-# User rights log
+# wiki_User rights log
 'rightsnone' => '(чок)',
 
 # Associated actions - in the sentence "You do not have permission to X"
@@ -896,10 +896,10 @@ It must not be more than $1 {{PLURAL:$1|character|characters}} long.',
 'linksearch-ok' => 'Дилээри',
 'linksearch-line' => '$1-же $2-ден шөлүлге',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusers-submit' => 'Көргүзери',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers-hidebots' => 'Роботтарны чажырары',
 'activeusers-hidesysops' => 'Эргелекчыларны чажырары',
 

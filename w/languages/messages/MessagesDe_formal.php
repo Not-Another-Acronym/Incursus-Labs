@@ -30,7 +30,7 @@
 $fallback = 'de';
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-enotifrevealaddr' => 'Ihre E-Mail-Adresse in Benachrichtigungs-E-Mails anzeigen',
 
 'view-pool-error' => 'Entschuldigung, die Server sind im Moment überlastet.
@@ -53,7 +53,7 @@ Grund der Sperrung: $1',
 
 Die Seite ist möglicherweise gelöscht oder verschoben worden.
 
-Falls dies nicht der Fall ist, haben Sie eventuell einen Fehler in der Software gefunden. Bitte melden Sie dies einem [[Special:ListUsers/sysop|Administrator]] unter Nennung der URL.',
+Falls dies nicht der Fall ist, haben Sie eventuell einen Fehler in der Software gefunden. Bitte melden Sie dies einem [[Special:Listwiki_Users/sysop|Administrator]] unter Nennung der URL.',
 'actionthrottledtext' => 'Im Rahmen einer Anti-Spam-Maßnahme kann diese Aktion in einem kurzen Zeitabstand nur begrenzt oft ausgeführt werden. Diese Grenze haben Sie überschritten.
 Bitte versuchen Sie es in ein paar Minuten erneut.',
 'viewsourcetext' => 'Sie können den Quelltext dieser Seite betrachten und kopieren:',
@@ -71,7 +71,7 @@ Nutzen Sie bitte [//translatewiki.net/ translatewiki.net], das Lokalisierungspro
 # Login and logout pages
 'logouttext' => "'''Sie sind nun abgemeldet.'''
 
-Sie können {{SITENAME}} jetzt anonym weiternutzen, oder sich erneut unter demselben oder einem anderen Benutzernamen [[Special:UserLogin|anmelden]].
+Sie können {{SITENAME}} jetzt anonym weiternutzen, oder sich erneut unter demselben oder einem anderen Benutzernamen [[Special:wiki_UserLogin|anmelden]].
 Beachten Sie, dass einige Seiten noch anzeigen können, dass Sie angemeldet sind, solange Sie nicht Ihren Browsercache geleert haben.",
 'welcomecreation' => '== Willkommen, $1! ==
 
@@ -91,7 +91,7 @@ Sie haben Cookies deaktiviert, bitte aktivieren Sie diese und versuchen Sie es e
 'noname' => 'Sie müssen einen gültigen Benutzernamen angeben.',
 'loginsuccess' => 'Sie sind jetzt als „$1“ bei {{SITENAME}} angemeldet.',
 'nosuchuser' => 'Der Benutzername „$1“ existiert nicht.
-Überprüfen Sie die Schreibweise (Groß-/Kleinschreibung beachten) oder [[Special:UserLogin/signup|melden Sie sich als neuer Benutzer an]].',
+Überprüfen Sie die Schreibweise (Groß-/Kleinschreibung beachten) oder [[Special:wiki_UserLogin/signup|melden Sie sich als neuer Benutzer an]].',
 'nosuchusershort' => 'Der Benutzername „$1“ ist nicht vorhanden. Bitte überprüfen Sie die Schreibweise.',
 'nouserspecified' => 'Bitte geben Sie einen Benutzernamen an.',
 'wrongpassword' => 'Das Passwort ist falsch. Bitte versuchen Sie es erneut.',
@@ -197,7 +197,7 @@ Vermutlich wurde er verschoben oder gelöscht, nachdem Sie die Seite aufgerufen 
 'newarticletext' => "Sie sind einem Link zu einer Seite gefolgt, die nicht vorhanden ist.
 Um diese Seite anzulegen, tragen Sie Ihren Text in das untenstehende Bearbeitungsfeld ein (siehe die [[{{MediaWiki:Helppage}}|Hilfeseite]] für weitere Informationen).
 Sofern Sie fälschlicherweise hier sind, klicken Sie auf die Schaltfläche '''Zurück''' Ihres Browsers.",
-'anontalkpagetext' => "----''Diese Seite dient dazu, einem nicht angemeldeten Benutzer Nachrichten zu hinterlassen. Es wird seine IP-Adresse zur Identifizierung verwendet. IP-Adressen können von mehreren Benutzern gemeinsam verwendet werden. Wenn Sie mit den Kommentaren auf dieser Seite nichts anfangen können, richten sie sich vermutlich an einen früheren Inhaber Ihrer IP-Adresse und Sie können sie ignorieren. Sie können sich auch ein [[Special:UserLogin/signup|Benutzerkonto erstellen]] oder sich [[Special:UserLogin|anmelden]], um künftig Verwechslungen mit anderen anonymen Benutzern zu vermeiden.''",
+'anontalkpagetext' => "----''Diese Seite dient dazu, einem nicht angemeldeten Benutzer Nachrichten zu hinterlassen. Es wird seine IP-Adresse zur Identifizierung verwendet. IP-Adressen können von mehreren Benutzern gemeinsam verwendet werden. Wenn Sie mit den Kommentaren auf dieser Seite nichts anfangen können, richten sie sich vermutlich an einen früheren Inhaber Ihrer IP-Adresse und Sie können sie ignorieren. Sie können sich auch ein [[Special:wiki_UserLogin/signup|Benutzerkonto erstellen]] oder sich [[Special:wiki_UserLogin|anmelden]], um künftig Verwechslungen mit anderen anonymen Benutzern zu vermeiden.''",
 'noarticletext' => 'Diese Seite enthält momentan noch keinen Text.
 Sie können diesen Titel auf den anderen Seiten [[Special:Search/{{PAGENAME}}|suchen]],
 <span class="plainlinks">in den zugehörigen [{{fullurl:{{#special:Log}}|page={{FULLPAGENAMEE}}}} Logbüchern suchen] oder diese Seite [{{fullurl:{{FULLPAGENAME}}|action=edit}} bearbeiten]</span>.',
@@ -223,13 +223,13 @@ Sie können ihren Titel auf anderen Seiten [[Special:Search/{{PAGENAME}}|suchen]
 'previewconflict' => 'Diese Vorschau gibt den Inhalt des oberen Textfeldes wieder. So wird die Seite aussehen, wenn Sie jetzt speichern.',
 'session_fail_preview' => "'''Ihre Bearbeitung konnte nicht gespeichert werden, da Sitzungsdaten verloren gegangen sind.
 Bitte versuchen Sie es erneut, indem Sie unter der folgenden Textvorschau nochmals auf „Seite speichern“ klicken.
-Sollte das Problem bestehen bleiben, [[Special:UserLogout|melden Sie sich ab]] und danach wieder an.'''",
+Sollte das Problem bestehen bleiben, [[Special:wiki_UserLogout|melden Sie sich ab]] und danach wieder an.'''",
 'session_fail_preview_html' => "'''Ihre Bearbeitung konnte nicht gespeichert werden, da Sitzungsdaten verloren gegangen sind.'''
 
 ''Da in {{SITENAME}} das Speichern von reinem HTML aktiviert ist, wurde die Vorschau ausgeblendet, um JavaScript-Attacken vorzubeugen.''
 
 '''Bitte versuchen Sie es erneut, indem Sie unter der folgenden Textvorschau nochmals auf „Seite speichern“ klicken.
-Sollte das Problem bestehen bleiben, [[Special:UserLogout|melden Sie sich ab]] und danach wieder an.'''",
+Sollte das Problem bestehen bleiben, [[Special:wiki_UserLogout|melden Sie sich ab]] und danach wieder an.'''",
 'token_suffix_mismatch' => "'''Ihre Bearbeitung wurde zurückgewiesen, da Ihr Browser Zeichen im Bearbeiten-Token verstümmelt hat.
 Eine Speicherung kann den Seiteninhalt zerstören. Dies geschieht bisweilen durch die Benutzung eines anonymen Proxy-Dienstes, der fehlerhaft arbeitet.'''",
 'edit_form_incomplete' => "'''Der Inhalt des Bearbeitungsformulars hat den Server nicht vollständig erreicht. Bitte prüfen Sie Ihre Bearbeitungen auf Vollständigkeit und versuchen Sie es erneut.'''",
@@ -255,7 +255,7 @@ Er kann nicht gespeichert werden.",
 Sichern Sie den Text bitte lokal auf Ihrem Computer und versuchen Sie zu einem späteren Zeitpunkt, die Änderungen zu übertragen.'''
 
 Grund für die Sperre: $1",
-'nocreatetext' => 'Auf {{SITENAME}} wurde das Erstellen neuer Seiten eingeschränkt. Sie können bestehende Seiten ändern oder sich [[Special:UserLogin|anmelden]].',
+'nocreatetext' => 'Auf {{SITENAME}} wurde das Erstellen neuer Seiten eingeschränkt. Sie können bestehende Seiten ändern oder sich [[Special:wiki_UserLogin|anmelden]].',
 'nocreate-loggedin' => 'Sie haben nicht die erforderliche Berechtigung, um neue Seiten erstellen zu können.',
 'permissionserrorstext' => 'Sie sind nicht berechtigt, die Aktion auszuführen. {{PLURAL:$1|Grund|Gründe}}:',
 'permissionserrorstext-withaction' => 'Sie sind nicht berechtigt, $2.
@@ -325,7 +325,7 @@ Stellen Sie sicher, dass die Versionsgeschichte einer Seite historisch korrekt i
 'searchdisabled' => 'Die {{SITENAME}} Suche wurde deaktiviert. Sie können unterdessen mit Google suchen. Bitte bedenken Sie, dass der Suchindex von {{SITENAME}} veraltet sein kann.',
 
 # Preferences page
-'prefsnologintext' => 'Sie müssen <span class="plainlinks">[{{fullurl:{{#special:UserLogin}}|returnto=$1}} angemeldet]</span> sein, um Ihre Einstellungen ändern zu können.',
+'prefsnologintext' => 'Sie müssen <span class="plainlinks">[{{fullurl:{{#special:wiki_UserLogin}}|returnto=$1}} angemeldet]</span> sein, um Ihre Einstellungen ändern zu können.',
 'prefs-help-watchlist-token' => 'Das Ausfüllen dieses Feldes mit einem geheimen Schlüssel generiert einen RSS-Feed für Ihre Beobachtungsliste.
 Jeder, der diesen Schlüssel kennt, kann Ihre Beobachtungsliste einsehen. Wählen Sie also einen sicheren Wert.
 Hier ein zufällig generierter Wert, den Sie verwenden können: $1',
@@ -336,13 +336,13 @@ Dies kann nicht mehr rückgängig gemacht werden.',
 'prefs-help-email' => 'Die Angabe einer E-Mail-Adresse ist optional, ermöglicht aber die Zusendung eines Ersatzpasswortes, sofern Sie Ihr Passwort vergessen haben.',
 'prefs-help-email-others' => 'Mit anderen Benutzern können Sie auch über die Benutzerdiskussionsseiten Kontakt aufnehmen, ohne dass Sie Ihre Identität offenlegen müssen.',
 
-# User rights
+# wiki_User rights
 'userrights-groups-help' => 'Sie können die Gruppenzugehörigkeit dieses Benutzers ändern:
 * Ein markiertes Kästchen bedeutet, dass der Benutzer Mitglied dieser Gruppe ist.
 * Ein nichtmarkiertes Kästchen bedeutet, dass der Benutzer nicht Mitglied dieser Gruppe ist.
 * Ein * bedeutet, dass Sie das Benutzerrecht nach Erteilung nicht wieder zurücknehmen können (oder umgekehrt).',
 'userrights-no-interwiki' => 'Sie haben nicht die erforderliche Berechtigung, um Benutzerrechte in anderen Wikis ändern zu können.',
-'userrights-nologin' => 'Sie müssen sich mit einem Administrator-Benutzerkonto [[Special:UserLogin|anmelden]], um Benutzerrechte zu ändern.',
+'userrights-nologin' => 'Sie müssen sich mit einem Administrator-Benutzerkonto [[Special:wiki_UserLogin|anmelden]], um Benutzerrechte zu ändern.',
 'userrights-notallowed' => 'Sie verfügen nicht über die erforderlichen Berechtigungen, um Benutzerrechte vergeben oder entziehen zu können.',
 'userrights-changeable-col' => 'Gruppenzugehörigkeit, die Sie ändern dürfen',
 'userrights-unchangeable-col' => 'Gruppenzugehörigkeit, die Sie nicht ändern dürfen',
@@ -356,7 +356,7 @@ Dies kann nicht mehr rückgängig gemacht werden.',
 Seiten auf Ihrer [[Special:Watchlist|Beobachtungsliste]] sind '''fett''' dargestellt.",
 
 # Upload
-'uploadnologintext' => 'Sie müssen [[Special:UserLogin|angemeldet sein]], um Dateien hochladen zu können.',
+'uploadnologintext' => 'Sie müssen [[Special:wiki_UserLogin|angemeldet sein]], um Dateien hochladen zu können.',
 'uploadtext' => "Benutzen Sie dieses Formular, um neue Dateien hochzuladen.
 
 Gehen Sie zu der [[Special:FileList|Liste hochgeladener Dateien]], um vorhandene Dateien zu suchen und anzuzeigen. Siehe auch das [[Special:Log/upload|Datei-]] und [[Special:Log/delete|Lösch-Logbuch]].
@@ -397,10 +397,10 @@ Bitte überprüfen Sie die <code>file_uploads</code>-Einstellung.',
 Bitte geben Sie der Datei einen Namen, der den Inhalt besser beschreibt.",
 
 'upload-file-error-text' => 'Bei der Erstellung einer temporären Datei auf dem Server ist ein interner Fehler aufgetreten.
-Bitte informieren Sie einen [[Special:ListUsers/sysop|System-Administrator]].',
+Bitte informieren Sie einen [[Special:Listwiki_Users/sysop|System-Administrator]].',
 'upload-misc-error-text' => 'Beim Hochladen ist ein unbekannter Fehler aufgetreten.
 Prüfen Sie die URL auf Fehler, den Online-Status der Seite und versuchem Sie erneut.
-Wenn das Problem weiter besteht, informieren Sie einen [[Special:ListUsers/sysop|System-Administrator]].',
+Wenn das Problem weiter besteht, informieren Sie einen [[Special:Listwiki_Users/sysop|System-Administrator]].',
 
 # Special:UploadStash
 'uploadstash-badtoken' => 'Das Entfernen der vorab gespeicherten Dateien war erfolglos, vielleicht weil Ihre Sitzungsdaten abgelaufen sind. Bitte versuchen Sie es erneut.',
@@ -452,7 +452,7 @@ Bitte prüfen Sie, ob sie korrekt von der Quelle übertragen wurde.',
 'cachedspecial-viewing-cached-ts' => 'Sie sehen die gecachte Version dieser Seite, die möglicherweise nicht aktuell ist.',
 
 # E-mail user
-'mailnologintext' => 'Sie müssen [[Special:UserLogin|angemeldet sein]] und eine bestätigte E-Mail-Adresse in Ihren [[Special:Preferences|Einstellungen]] eingetragen haben, um anderen Benutzern E-Mails schicken zu können.',
+'mailnologintext' => 'Sie müssen [[Special:wiki_UserLogin|angemeldet sein]] und eine bestätigte E-Mail-Adresse in Ihren [[Special:Preferences|Einstellungen]] eingetragen haben, um anderen Benutzern E-Mails schicken zu können.',
 'emailpagetext' => 'Sie könnent dem Benutzer mit dem unten stehenden Formular eine E-Mail senden.
 Als Absender wird die E-Mail-Adresse aus ihren [[Special:Preferences|Einstellungen]] eingetragen, damit der Benutzer Ihnen antworten kann.',
 'emailccsubject' => 'Kopie Ihrer Nachricht an $1: $2',
@@ -462,7 +462,7 @@ Als Absender wird die E-Mail-Adresse aus ihren [[Special:Preferences|Einstellung
 'nowatchlist' => 'Es befinden sich keine Einträge auf Ihrer Beobachtungsliste.',
 'watchlistanontext' => 'Sie müssen sich $1, um Ihre Beobachtungsliste sehen oder Einträge auf ihr bearbeiten zu können.',
 'watchnologin' => 'Sie sind nicht angemeldet',
-'watchnologintext' => 'Sie müssen [[Special:UserLogin|angemeldet]] sein, um Ihre Beobachtungsliste bearbeiten zu können.',
+'watchnologintext' => 'Sie müssen [[Special:wiki_UserLogin|angemeldet]] sein, um Ihre Beobachtungsliste bearbeiten zu können.',
 'addedwatchtext' => 'Die Seite „[[:$1]]“ wurde zu Ihrer [[Special:Watchlist|Beobachtungsliste]] hinzugefügt.
 
 Spätere Änderungen an dieser Seite und der dazugehörigen Diskussionsseite werden dort gelistet und
@@ -538,7 +538,7 @@ Bitte geben Sie den Grund für die Sperre an.',
 'ipb-blockingself' => 'Sie sind gerade dabei, sich selbst zu sperren! Möchten Sie das wirklich tun?',
 'ipb-confirmhideuser' => 'Sie sind gerade dabei, einen Benutzer im Modus „Benutzer verstecken“ zu sperren. Dies führt dazu, dass der Benutzername in allen Listen und Logbüchern unterdrückt wird. Möchten Sie das wirklich tun?',
 'unblockiptext' => 'Mit diesem Formular können Sie eine IP-Adresse oder einen Benutzer freigeben.',
-'autoblocker' => 'Automatische Sperre, da Sie eine gemeinsame IP-Adresse mit [[User:$1|$1]] benutzen. Grund der Benutzersperre: „$2“.',
+'autoblocker' => 'Automatische Sperre, da Sie eine gemeinsame IP-Adresse mit [[wiki_User:$1|$1]] benutzen. Grund der Benutzersperre: „$2“.',
 'ipb-needreblock' => '„$1“ ist bereits gesperrt. Möchten Sie die Sperrparameter ändern?',
 'proxyblockreason' => 'Ihre IP-Adresse wurde gesperrt, da sie ein offener Proxy ist. Bitte kontaktieren Sie Ihren Internet-Provider oder Ihre Systemadministratoren und informieren Sie sie über dieses mögliche Sicherheitsproblem.',
 'cant-block-while-blocked' => 'Sie können keine anderen Benutzer sperren, während Sie selbst gesperrt sind.',
@@ -583,7 +583,7 @@ In diesen Fällen müssen Sie, falls gewünscht, den Inhalt der Seite von Hand v
 Bitte den '''neuen''' Titel unter '''Ziel''' eintragen, darunter die Umbenennung bitte '''begründen.'''",
 'moveuserpage-warning' => "'''Warnung:''' Sie sind dabei, eine Benutzerseite zu verschieben. Bitte bedenken Sie, dass dadurch nur die Benutzerseite verschoben, '''nicht''' aber der Benutzer umbenannt wird.",
 'movenologin' => 'Sie sind nicht angemeldet',
-'movenologintext' => 'Sie müssen ein registrierter Benutzer und [[Special:UserLogin|angemeldet]] sein, um eine Seite zu verschieben.',
+'movenologintext' => 'Sie müssen ein registrierter Benutzer und [[Special:wiki_UserLogin|angemeldet]] sein, um eine Seite zu verschieben.',
 'movenotallowed' => 'Sie haben nicht die erforderliche Berechtigung, um Seiten verschieben zu können.',
 'movenotallowedfile' => 'Sie haben nicht die erforderliche Berechtigung, um Dateien verschieben zu können.',
 'cant-move-user-page' => 'Sie haben nicht die erforderliche Berechtigung, Benutzerhauptseiten verschieben zu können.',
@@ -657,7 +657,7 @@ Bitte prüfen Sie die E-Mail-Adresse auf ungültige Zeichen.
 Rückmeldung des Mailservers: $1',
 'confirmemail_invalid' => 'Ungültiger Bestätigungscode. Möglicherweise ist der Bestätigungszeitraum verstrichen. Versuchen Sie bitte, die Bestätigung zu wiederholen.',
 'confirmemail_needlogin' => 'Sie müssen sich $1, um Ihre E-Mail-Adresse zu bestätigen.',
-'confirmemail_success' => 'Ihre E-Mail-Adresse wurde erfolgreich bestätigt. Sie können sich jetzt [[Special:UserLogin|anmelden]].',
+'confirmemail_success' => 'Ihre E-Mail-Adresse wurde erfolgreich bestätigt. Sie können sich jetzt [[Special:wiki_UserLogin|anmelden]].',
 'confirmemail_loggedin' => 'Ihre E-Mail-Adresse wurde erfolgreich bestätigt.',
 'confirmemail_error' => 'Es gab einen Fehler bei der Bestätigung Ihrer E-Mail-Adresse.',
 'confirmemail_body' => 'Hallo,
@@ -695,7 +695,7 @@ Dieser Bestätigungscode ist gültig bis $4.',
 'deletedwhileediting' => 'Achtung: Diese Seite wurde gelöscht, nachdem Sie angefangen haben sie zu bearbeiten!
 Im [{{fullurl:{{#special:Log}}|type=delete&page={{FULLPAGENAMEE}}}} Lösch-Logbuch] finden Sie den Grund für die Löschung.
 Wenn Sie die Seite speichern, wird sie neu angelegt.',
-'confirmrecreate' => "Benutzer [[User:$1|$1]] ([[User talk:$1|Diskussion]]) hat diese Seite gelöscht, nachdem Sie angefangen haben, sie zu bearbeiten. Die Begründung lautete:
+'confirmrecreate' => "Benutzer [[wiki_User:$1|$1]] ([[wiki_User talk:$1|Diskussion]]) hat diese Seite gelöscht, nachdem Sie angefangen haben, sie zu bearbeiten. Die Begründung lautete:
 : ''$2''
 Bitte bestätigen Sie, dass Sie diese Seite wirklich neu erstellen möchten.",
 

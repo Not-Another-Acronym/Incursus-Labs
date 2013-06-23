@@ -2,7 +2,7 @@
 /**
  * Custom job to perform updates on tables in busier environments
  */
-class RenameUserJob extends Job {
+class Renamewiki_UserJob extends Job {
 
 	/**
 	 * Constructor
@@ -11,7 +11,7 @@ class RenameUserJob extends Job {
 	 * @param array $params Job parameters
 	 */
 	public function __construct( $title, $params ) {
-		parent::__construct( 'renameUser', $title, $params );
+		parent::__construct( 'renamewiki_User', $title, $params );
 	}
 
 	/**
@@ -49,7 +49,7 @@ class RenameUserJob extends Job {
 		} elseif ( isset( $uniqueKey ) ) {
 			$conds[$uniqueKey] = $keyId;
 		} else {
-			wfDebug( 'RenameUserJob::run - invalid job row given' ); // this shouldn't happen
+			wfDebug( 'Renamewiki_UserJob::run - invalid job row given' ); // this shouldn't happen
 			return false;
 		}
 		# Update a chuck of rows!

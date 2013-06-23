@@ -810,11 +810,11 @@ class MessageCache {
 			$popts->setInterfaceMessage( $interface );
 			$popts->setTargetLanguage( $language );
 
-			$userlang = $popts->setUserLang( $language );
+			$userlang = $popts->setwiki_UserLang( $language );
 			$this->mInParser = true;
 			$message = $parser->transformMsg( $message, $popts, $title );
 			$this->mInParser = false;
-			$popts->setUserLang( $userlang );
+			$popts->setwiki_UserLang( $userlang );
 		}
 		return $message;
 	}

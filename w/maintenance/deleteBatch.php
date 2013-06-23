@@ -40,7 +40,7 @@ class DeleteBatch extends Maintenance {
 	public function __construct() {
 		parent::__construct();
 		$this->mDescription = "Deletes a batch of pages";
-		$this->addOption( 'u', "User to perform deletion", false, true );
+		$this->addOption( 'u', "wiki_User to perform deletion", false, true );
 		$this->addOption( 'r', "Reason to delete page", false, true );
 		$this->addOption( 'i', "Interval to sleep between deletions" );
 		$this->addArg( 'listfile', 'File with titles to delete, separated by newlines. ' .
@@ -48,7 +48,7 @@ class DeleteBatch extends Maintenance {
 	}
 
 	public function execute() {
-		global $wgUser;
+		global $wgwiki_User;
 
 		# Change to current working directory
 		$oldCwd = getcwd();
@@ -59,11 +59,11 @@ class DeleteBatch extends Maintenance {
 		$reason = $this->getOption( 'r', '' );
 		$interval = $this->getOption( 'i', 0 );
 
-		$user = User::newFromName( $username );
+		$user = wiki_User::newFromName( $username );
 		if ( !$user ) {
 			$this->error( "Invalid username", true );
 		}
-		$wgUser = $user;
+		$wgwiki_User = $user;
 
 		if ( $this->hasArg() ) {
 			$file = fopen( $this->getArg(), 'r' );

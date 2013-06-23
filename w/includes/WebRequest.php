@@ -639,7 +639,7 @@ class WebRequest {
 				"REQUEST_URI, HTTP_X_ORIGINAL_URL or SCRIPT_NAME. Report details " .
 				"of your web server configuration to http://bugzilla.wikimedia.org/" );
 		}
-		// User-agents should not send a fragment with the URI, but
+		// wiki_User-agents should not send a fragment with the URI, but
 		// if they do, and the web server passes it on to us, we
 		// need to strip it or we get false-positive redirect loops
 		// or weird output URLs
@@ -727,14 +727,14 @@ class WebRequest {
 	 * @return array first element is limit, second is offset
 	 */
 	public function getLimitOffset( $deflimit = 50, $optionname = 'rclimit' ) {
-		global $wgUser;
+		global $wgwiki_User;
 
 		$limit = $this->getInt( 'limit', 0 );
 		if( $limit < 0 ) {
 			$limit = 0;
 		}
 		if( ( $limit == 0 ) && ( $optionname != '' ) ) {
-			$limit = (int)$wgUser->getOption( $optionname );
+			$limit = (int)$wgwiki_User->getOption( $optionname );
 		}
 		if( $limit <= 0 ) {
 			$limit = $deflimit;

@@ -131,7 +131,7 @@
         private $_MySQL_Password;
 
         /**
-         * phpBB MySQL Username.
+         * phpBB MySQL wiki_Username.
          *
          * @var string
          */
@@ -279,14 +279,14 @@
     	 * NOTE: We are not allowed to add users to phpBB from the
     	 * wiki so this always returns false.
     	 *
-    	 * @param User $user - only the name should be assumed valid at this point
+    	 * @param wiki_User $user - only the name should be assumed valid at this point
     	 * @param string $password
     	 * @param string $email
     	 * @param string $realname
     	 * @return bool
     	 * @access public
     	 */
-    	public function addUser( $user, $password, $email='', $realname='' )
+    	public function addwiki_User( $user, $password, $email='', $realname='' )
     	{
     		return false;
     	}
@@ -421,7 +421,7 @@
             if (!$fresMySQLConnection_wiki)
             {
                 $this->mySQLError('There was a problem when connecting to the wiki database.<br />' .
-                                  'Check your Host, Username, and Password settings.<br />');
+                                  'Check your Host, wiki_Username, and Password settings.<br />');
             }
 
             // Select Database: This assumes the wiki and phpbb are in the same database.
@@ -522,16 +522,16 @@
     	 * For instance, you might pull the email address or real name from the
     	 * external user database.
     	 *
-    	 * The User object is passed by reference so it can be modified; don't
+    	 * The wiki_User object is passed by reference so it can be modified; don't
     	 * forget the & on your function declaration.
     	 *
     	 * NOTE: This gets the email address from PHPBB for the wiki account.
     	 *
-    	 * @param User $user
+    	 * @param wiki_User $user
     	 * @param $autocreate bool True if user is being autocreated on login
     	 * @access public
     	 */
-        public function initUser( &$user, $autocreate=false )
+        public function initwiki_User( &$user, $autocreate=false )
     	{
             // Connect to the database.
     		$fresMySQLConnection = $this->connect();
@@ -600,7 +600,7 @@
                  *  Last it returns TRUE or FALSE on if the user is in the wiki group.
                  */
 
-                // Get UserId
+                // Get wiki_UserId
                 mysql_query('SELECT @userId := `user_id` FROM `' . $this->_UserTB .
                             '` WHERE `loginname_clean` = \'' . $username . '\';', $fresMySQLConnection)
                             or die($this->mySQLError('Unable to get userID.'));
@@ -610,7 +610,7 @@
                             '` WHERE `group_name` = \'' . $WikiGrpName . '\';', $fresMySQLConnection)
                             or die($this->mySQLError('Unable to get wikiID.'));
 
-                // Check UserId and WikiId
+                // Check wiki_UserId and WikiId
                 mysql_query('SELECT @isThere := COUNT( * ) FROM `' . $this->_User_GroupTB .
                             '` WHERE `user_id` = @userId AND `group_id` = @wikiId and `user_pending` = 0;', $fresMySQLConnection)
                             or die($this->mySQLError('Unable to get validate user group.'));
@@ -627,13 +627,13 @@
                 {
                     if ($faryMySQLResult['result'] == 'true')
                     {
-                        return true; // User is in Wiki group.
+                        return true; // wiki_User is in Wiki group.
                     }
                 }
     	    }
             // Hook error message.
             $GLOBALS['wgHooks']['UserLoginForm'][] = array($this, 'onUserLoginForm', $this->_NoWikiError);
-            return false; // User is not in Wiki group.
+            return false; // wiki_User is not in Wiki group.
     	}
 
 
@@ -682,7 +682,7 @@
     	 * to find all the template options please let me know. I was only able
     	 * to find a few.
     	 *
-    	 * @param UserLoginTemplate $template
+    	 * @param wiki_UserLoginTemplate $template
     	 * @access public
     	 */
     	public function modifyUITemplate( &$template )
@@ -714,7 +714,7 @@
     	 * @param object $user
     	 * @return bool
     	 */
-    	public function onUserLoginComplete(&$user)
+    	public function onwiki_UserLoginComplete(&$user)
     	{
             // @ToDo: Add code here to auto log into the forum.
             return true;
@@ -731,7 +731,7 @@
     	 * @param object $template
     	 * @return bool
     	 */
-    	public function onUserLoginForm($errorMessage = false, $template)
+    	public function onwiki_UserLoginForm($errorMessage = false, $template)
     	{
     	    $template->data['link'] = $this->_LoginMessage;
 
@@ -750,9 +750,9 @@
     	 *
     	 * @param object $user
     	 */
-    	public function onUserLogout(&$user)
+    	public function onwiki_UserLogout(&$user)
     	{
-    	    // User logs out of the wiki we want to log them out of the form too.
+    	    // wiki_User logs out of the wiki we want to log them out of the form too.
     	    if (!isset($this->_SessionTB))
     	    {
     	        return true; // If the value is not set just return true and move on.
@@ -786,7 +786,7 @@
     	 *
     	 * NOTE: We only allow the user to change their password via phpBB.
     	 *
-    	 * @param $user User object.
+    	 * @param $user wiki_User object.
     	 * @param $password String: password.
     	 * @return bool
     	 * @access public
@@ -822,7 +822,7 @@
 		 * Update user information in the external authentication database.
 		 * Return true if successful.
 		 *
-		 * @param $user User object.
+		 * @param $user wiki_User object.
 		 * @return bool
 		 * @access public
 		 */
@@ -837,16 +837,16 @@
     	 * For instance, you might pull the email address or real name from the
     	 * external user database.
     	 *
-    	 * The User object is passed by reference so it can be modified; don't
+    	 * The wiki_User object is passed by reference so it can be modified; don't
     	 * forget the & on your function declaration.
     	 *
     	 * NOTE: Not useing right now.
     	 *
-    	 * @param User $user
+    	 * @param wiki_User $user
     	 * @access public
     	 * @return bool
     	 */
-    	public function updateUser( &$user )
+    	public function updatewiki_User( &$user )
     	{
     		return true;
     	}

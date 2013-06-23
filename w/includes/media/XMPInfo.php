@@ -520,7 +520,7 @@ class XMPInfo {
 				'mode'      => XMPReader::MODE_SEQ,
 				'validate'  => 'validateInteger',
 			),
-			'UserComment'       => array(
+			'wiki_UserComment'       => array(
 				'map_group' => 'exif',
 				'mode'      => XMPReader::MODE_LANG,
 			),

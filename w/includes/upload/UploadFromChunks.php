@@ -33,7 +33,7 @@ class UploadFromChunks extends UploadFromFile {
 	/**
 	 * Setup local pointers to stash, repo and user ( similar to UploadFromStash )
 	 *
-	 * @param $user User
+	 * @param $user wiki_User
 	 * @param $stash UploadStash
 	 * @param $repo FileRepo
 	 */
@@ -140,7 +140,7 @@ class UploadFromChunks extends UploadFromFile {
 	 * @param $comment string
 	 * @param $pageText string
 	 * @param $watch bool
-	 * @param $user User
+	 * @param $user wiki_User
 	 * @return Status
 	 */
 	public function performUpload( $comment, $pageText, $watch, $user ) {

@@ -29,7 +29,7 @@ if ( $IP === false ) {
 }
 require_once( "$IP/maintenance/Maintenance.php" );
 
-class RenameUserCleanup extends Maintenance {
+class Renamewiki_UserCleanup extends Maintenance {
 	public function __construct() {
 		parent::__construct();
 		$this->mDescription = "Maintenance script to finish incomplete rename user, in particular to reassign edits that were missed";
@@ -40,12 +40,12 @@ class RenameUserCleanup extends Maintenance {
 	}
 
 	public function execute() {
-		$this->output( "Rename User Cleanup starting...\n\n" );
-		$olduser = User::newFromName( $this->getOption( 'olduser' ) );
-		$newuser = User::newFromName( $this->getOption( 'newuser' ) );
+		$this->output( "Rename wiki_User Cleanup starting...\n\n" );
+		$olduser = wiki_User::newFromName( $this->getOption( 'olduser' ) );
+		$newuser = wiki_User::newFromName( $this->getOption( 'newuser' ) );
 		$olduid = $this->getOption( 'olduid' );
 
-		$this->checkUserExistence( $olduser, $newuser );
+		$this->checkwiki_UserExistence( $olduser, $newuser );
 		$this->checkRenameLog( $olduser, $newuser );
 
 		if ( $olduid ) {
@@ -59,10 +59,10 @@ class RenameUserCleanup extends Maintenance {
 	}
 
 	/**
-	 * @param $olduser User
-	 * @param $newuser User
+	 * @param $olduser wiki_User
+	 * @param $newuser wiki_User
 	 */
-	public function checkUserExistence( $olduser, $newuser ) {
+	public function checkwiki_UserExistence( $olduser, $newuser ) {
 		if ( !$newuser->getId() ) {
 			$this->error( "No such user: " . $this->getOption( 'newuser' ), true );
 			exit(1);
@@ -82,8 +82,8 @@ class RenameUserCleanup extends Maintenance {
 	}
 
 	/**
-	 * @param $olduser User
-	 * @param $newuser User
+	 * @param $olduser wiki_User
+	 * @param $newuser wiki_User
 	 */
 	public function checkRenameLog( $olduser, $newuser ) {
 		$dbr = wfGetDB( DB_SLAVE );
@@ -141,8 +141,8 @@ class RenameUserCleanup extends Maintenance {
 	}
 
 	/**
-	 * @param $olduser User
-	 * @param $newuser User
+	 * @param $olduser wiki_User
+	 * @param $newuser wiki_User
 	 * @param $uid
 	 */
 	public function doUpdates( $olduser, $newuser, $uid ) {
@@ -159,8 +159,8 @@ class RenameUserCleanup extends Maintenance {
 	 * @param $usernamefield
 	 * @param $useridfield
 	 * @param $timestampfield
-	 * @param $olduser User
-	 * @param $newuser User
+	 * @param $olduser wiki_User
+	 * @param $newuser wiki_User
 	 * @param $uid
 	 * @return int
 	 */
@@ -223,7 +223,7 @@ class RenameUserCleanup extends Maintenance {
 				$dbw->rollback();
 				exit(1);
 			}
-			//$contribs = User::edits( $olduser->getId() );
+			//$contribs = wiki_User::edits( $olduser->getId() );
 			$contribs = $dbw->selectField( $table, 'count(*)', $selectConds, __METHOD__ );
 			print "Updated $rowsDone edits; $contribs edits remaining to be re-attributed\n";
 		}
@@ -232,5 +232,5 @@ class RenameUserCleanup extends Maintenance {
 
 }
 
-$maintClass = "RenameUserCleanup";
+$maintClass = "Renamewiki_UserCleanup";
 require_once( RUN_MAINTENANCE_IF_MAIN );

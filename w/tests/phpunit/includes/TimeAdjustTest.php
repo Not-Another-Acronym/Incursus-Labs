@@ -18,7 +18,7 @@ class TimeAdjustTest extends MediaWikiLangTestCase {
 	}
 
 	# Test offset usage for a given language::userAdjust
-	function testUserAdjust() {
+	function testwiki_UserAdjust() {
 		global $wgLocalTZoffset, $wgContLang;
 
 		$wgContLang = $en = Language::factory( 'en' );
@@ -44,7 +44,7 @@ class TimeAdjustTest extends MediaWikiLangTestCase {
 			$this->assertEquals(
 				strval( $data[2] ),
 				strval( $en->userAdjust( $data[0], '' ) ),
-				"User adjust {$data[0]} by {$data[1]} minutes should give {$data[2]}"
+				"wiki_User adjust {$data[0]} by {$data[1]} minutes should give {$data[2]}"
 			);
 		}
 	}

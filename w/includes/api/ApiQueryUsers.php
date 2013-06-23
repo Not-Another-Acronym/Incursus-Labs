@@ -29,7 +29,7 @@
  *
  * @ingroup API
  */
-class ApiQueryUsers extends ApiQueryBase {
+class ApiQuerywiki_Users extends ApiQueryBase {
 
 	private $tokenFunctions, $prop;
 
@@ -55,21 +55,21 @@ class ApiQueryUsers extends ApiQueryBase {
 		}
 
 		$this->tokenFunctions = array(
-			'userrights' => array( 'ApiQueryUsers', 'getUserrightsToken' ),
+			'userrights' => array( 'ApiQuerywiki_Users', 'getUserrightsToken' ),
 		);
-		wfRunHooks( 'APIQueryUsersTokens', array( &$this->tokenFunctions ) );
+		wfRunHooks( 'APIQuerywiki_UsersTokens', array( &$this->tokenFunctions ) );
 		return $this->tokenFunctions;
 	}
 
 	/**
-	 * @param $user User
+	 * @param $user wiki_User
 	 * @return String
 	 */
 	public static function getUserrightsToken( $user ) {
-		global $wgUser;
+		global $wgwiki_User;
 		// Since the permissions check for userrights is non-trivial,
 		// don't bother with it here
-		return $wgUser->getEditToken( $user->getName() );
+		return $wgwiki_User->getEditToken( $user->getName() );
 	}
 
 	public function execute() {
@@ -86,7 +86,7 @@ class ApiQueryUsers extends ApiQueryBase {
 		$result = $this->getResult();
 		// Canonicalize user names
 		foreach ( $users as $u ) {
-			$n = User::getCanonicalName( $u );
+			$n = wiki_User::getCanonicalName( $u );
 			if ( $n === false || $n === '' ) {
 				$vals = array( 'name' => $u, 'invalid' => '' );
 				$fit = $result->addValue( array( 'query', $this->getModuleName() ),
@@ -107,7 +107,7 @@ class ApiQueryUsers extends ApiQueryBase {
 
 		if ( count( $goodNames ) ) {
 			$this->addTables( 'user' );
-			$this->addFields( User::selectFields() );
+			$this->addFields( wiki_User::selectFields() );
 			$this->addWhereFld( 'user_name', $goodNames );
 
 			if ( isset( $this->prop['groups'] ) || isset( $this->prop['rights'] ) ) {
@@ -116,13 +116,13 @@ class ApiQueryUsers extends ApiQueryBase {
 				$this->addFields( 'ug_group' );
 			}
 
-			$this->showHiddenUsersAddBlockInfo( isset( $this->prop['blockinfo'] ) );
+			$this->showHiddenwiki_UsersAddBlockInfo( isset( $this->prop['blockinfo'] ) );
 
 			$data = array();
 			$res = $this->select( __METHOD__ );
 
 			foreach ( $res as $row ) {
-				$user = User::newFromRow( $row );
+				$user = wiki_User::newFromRow( $row );
 				$name = $user->getName();
 
 				$data[$name]['userid'] = $user->getId();
@@ -153,12 +153,12 @@ class ApiQueryUsers extends ApiQueryBase {
 
 				if ( isset( $this->prop['rights'] ) ) {
 					if ( !isset( $data[$name]['rights'] ) ) {
-						$data[$name]['rights'] = User::getGroupPermissions( $user->getAutomaticGroups() );
+						$data[$name]['rights'] = wiki_User::getGroupPermissions( $user->getAutomaticGroups() );
 					}
 
 					if ( !is_null( $row->ug_group ) ) {
 						$data[$name]['rights'] = array_unique( array_merge( $data[$name]['rights'],
-							User::getGroupPermissions( array( $row->ug_group ) ) ) );
+							wiki_User::getGroupPermissions( array( $row->ug_group ) ) ) );
 					}
 				}
 				if ( $row->ipb_deleted ) {
@@ -202,17 +202,17 @@ class ApiQueryUsers extends ApiQueryBase {
 		foreach ( $goodNames as $u ) {
 			if ( !isset( $data[$u] ) ) {
 				$data[$u] = array( 'name' => $u );
-				$urPage = new UserrightsPage;
-				$iwUser = $urPage->fetchUser( $u );
+				$urPage = new wiki_UserrightsPage;
+				$iwwiki_User = $urPage->fetchwiki_User( $u );
 
-				if ( $iwUser instanceof UserRightsProxy ) {
+				if ( $iwwiki_User instanceof wiki_UserRightsProxy ) {
 					$data[$u]['interwiki'] = '';
 
 					if ( !is_null( $params['token'] ) ) {
 						$tokenFunctions = $this->getTokenFunctions();
 
 						foreach ( $params['token'] as $t ) {
-							$val = call_user_func( $tokenFunctions[$t], $iwUser );
+							$val = call_user_func( $tokenFunctions[$t], $iwwiki_User );
 							if ( $val === false ) {
 								$this->setWarning( "Action '$t' is not allowed for the current user" );
 							} else {
@@ -250,8 +250,8 @@ class ApiQueryUsers extends ApiQueryBase {
 	/**
 	* Gets all the groups that a user is automatically a member of (implicit groups)
 	*
-	* @deprecated since 1.20; call User::getAutomaticGroups() directly.
-	* @param $user User
+	* @deprecated since 1.20; call wiki_User::getAutomaticGroups() directly.
+	* @param $user wiki_User
 	* @return array
 	*/
 	public static function getAutoGroups( $user ) {
@@ -388,7 +388,7 @@ class ApiQueryUsers extends ApiQueryBase {
 	}
 
 	public function getHelpUrls() {
-		return 'https://www.mediawiki.org/wiki/API:Users';
+		return 'https://www.mediawiki.org/wiki/API:wiki_Users';
 	}
 
 	public function getVersion() {

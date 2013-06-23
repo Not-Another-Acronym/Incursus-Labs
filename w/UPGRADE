@@ -117,7 +117,7 @@ See RELEASE-NOTES for more details about new and changed options.
 
 == Upgrading from 1.7 or earlier ==
 
-$wgDefaultUserOptions now contains all the defaults, not only overrides.
+$wgDefaultwiki_UserOptions now contains all the defaults, not only overrides.
 If you're setting this as a complete array(), you may need to change it
 to set only specific items as recommended in DefaultSettings.php.
 
@@ -169,7 +169,7 @@ set:
 
 If $wgWhitelistRead is set, you must also disable the 'read' permission
 for it to take affect on anonymous users:
-  $wgWhitelistRead = array( "Main Page", "Special:Userlogin" );
+  $wgWhitelistRead = array( "Main Page", "Special:wiki_Userlogin" );
   $wgGroupPermissions['*']['read'] = false;
 
 Note that you can disable/enable several other permissions by modifying

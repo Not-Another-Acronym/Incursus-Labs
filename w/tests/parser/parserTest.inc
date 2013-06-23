@@ -136,7 +136,7 @@ class ParserTest {
 
 	static function setUp() {
 		global $wgParser, $wgParserConf, $IP, $messageMemc, $wgMemc,
-			$wgUser, $wgLang, $wgOut, $wgRequest, $wgStyleDirectory, $wgEnableParserCache,
+			$wgwiki_User, $wgLang, $wgOut, $wgRequest, $wgStyleDirectory, $wgEnableParserCache,
 			$wgNamespaceAliases, $wgNamespaceProtection, $wgLocalFileRepo,
 			$parserMemc, $wgThumbnailScriptPath, $wgScriptPath,
 			$wgArticlePath, $wgStyleSheetPath, $wgScript, $wgStylePath, $wgExtensionAssetsPath,
@@ -193,7 +193,7 @@ class ParserTest {
 		$parserMemc = wfGetParserCacheStorage();
 
 		// $wgContLang = new StubContLang;
-		$wgUser = new User;
+		$wgwiki_User = new wiki_User;
 		$context = new RequestContext;
 		$wgLang = $context->getLanguage();
 		$wgOut = $context->getOutput();
@@ -245,8 +245,8 @@ class ParserTest {
 
 		$numTotal = 0;
 		$numSuccess = 0;
-		$user = new User;
-		$opts = ParserOptions::newFromUser( $user );
+		$user = new wiki_User;
+		$opts = ParserOptions::newFromwiki_User( $user );
 		$title = Title::makeTitle( NS_MAIN, 'Parser_test' );
 
 		while ( true ) {
@@ -727,7 +727,7 @@ class ParserTest {
 		$GLOBALS['wgLang'] = $context->getLanguage();
 		$GLOBALS['wgOut'] = $context->getOutput();
 
-		$GLOBALS['wgUser'] = new User();
+		$GLOBALS['wgwiki_User'] = new wiki_User();
 
 		global $wgHooks;
 
@@ -859,7 +859,7 @@ class ParserTest {
 		MessageCache::singleton()->clear();
 
 		$this->uploadDir = $this->setupUploadDir();
-		$user = User::createNew( 'WikiSysop' );
+		$user = wiki_User::createNew( 'WikiSysop' );
 		$image = wfLocalFile( Title::makeTitle( NS_FILE, 'Foobar.jpg' ) );
 		$image->recordUpload2( '', 'Upload of some lame file', 'Some lame file', array(
 			'size'        => 12345,

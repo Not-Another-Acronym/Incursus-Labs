@@ -30,7 +30,7 @@ $namespaceNames = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => "Na'raya i inachetton:",
 'tog-hideminor' => "Nå'na' i mandikike' na tinilaika siha gi påhinan tinilaika gi halacha",
 'tog-extendwatchlist' => "Na'ladångkolu i listan pinilan para u na'annok i manaplikayon na tinilaika siha",
@@ -280,7 +280,7 @@ Tenga, masusesedi este yanggen un klik i ti fafacho\'cho\' na diff pat historia 
 
 Yanggen ti este i rason, buente mañodda\' hao "bug" gi "software".
 
-Pot fabot ripotta este para un [[Special:ListUsers/sysop|administrator]], ya un nota i URL.',
+Pot fabot ripotta este para un [[Special:Listwiki_Users/sysop|administrator]], ya un nota i URL.',
 'missingarticle-rev' => '(tinilaika#: $1)',
 'missingarticle-diff' => '(Dif: $1, $2)',
 'internalerror' => 'Linachi sanhalom',
@@ -296,7 +296,7 @@ Pot fabot ripotta este para un [[Special:ListUsers/sysop|administrator]], ya un 
 'viewsourcetext' => "Siña un li'e' yan kopia i code ni påhina:",
 'namespaceprotected' => "Ti nahong nibet-mu petmisu tumulaika i påhina siha ni mafa'na'an '''$1'''.",
 'ns-specialprotected' => 'Ti siña un tulaika i manespesiat na påhina.',
-'titleprotected' => "Prinetehi este na titulo ginen fina'tinas-ña as  [[User:$1|$1]].
+'titleprotected' => "Prinetehi este na titulo ginen fina'tinas-ña as  [[wiki_User:$1|$1]].
 Ha nå'i i rason ''$2''.",
 
 # Login and logout pages
@@ -460,7 +460,7 @@ Para un fa'tinas i påhina, fångge' gi sanpapa' na kahon (bisita i [[{{MediaW
 Anggen lachi finatto-mu mågi, yemme' i batunes '''back''' ni iyo-mu browser.",
 'anontalkpagetext' => "----''Este na påhinan kombetsasion muna'sesetbi taina'an ni ti ha fa'tinas kuenta-ña pat ti ha u'usa i kuenta. Entonses na in i'isa i numiron IP para in aidentifika gue'.
 Buente ha' na guåha unos kuantos na muna'sesetbi ni ma u'usa i enao na IP.
-An un muna'sesetbi taina'an hao ya manñiente hao na guåha na kommentu ti prisisu ni manadirihiyi hao, pot fabot [[Special:UserLogin|fa'tinas kuenta-mu pat log in]] para mansuhayi yinaoyao yan i otru na muna'sesetbi siha.''",
+An un muna'sesetbi taina'an hao ya manñiente hao na guåha na kommentu ti prisisu ni manadirihiyi hao, pot fabot [[Special:wiki_UserLogin|fa'tinas kuenta-mu pat log in]] para mansuhayi yinaoyao yan i otru na muna'sesetbi siha.''",
 'noarticletext' => 'Tåya\' tinige\'-ña este na påhina gi este na momento.
 Siña un [[Special:Search/{{PAGENAME}}|aligao este na titulon påhina]] gi halom otro na påhina siha, <span class="plainlinks">[{{fullurl:{{FULLPAGENAME}}|action=edit}} tulaika este na påhina]</span>.',
 'userpage-userdoesnotexist' => 'Ti marehistra i kuenata muna\'sesetbi "<nowiki>$1</nowiki>". Pot fabot chek kao malago\' hao un fa\'tinas/tulaika este na påhina.',
@@ -500,7 +500,7 @@ Un promette ham lokkue' na hågu ha' i tituge', pat un kopia ha' gi un lugat pub
 'template-protected' => '(maprotehi)',
 'hiddencategories' => "Miembron {{PLURAL:$1|1 manå'na' na kategoria|$1 na mannå'na' na kategoria}} este na påhina:",
 'nocreatetext' => "I nina'siña mama'tinas mannuebu na påhina machomma' gi {{SITENAME}}.
-Siña hao humanao tåtte ya tumulaika påhina ni guinaha, pat [[Special:UserLogin|log in pat un fa'tinas kuenta-mu]].",
+Siña hao humanao tåtte ya tumulaika påhina ni guinaha, pat [[Special:wiki_UserLogin|log in pat un fa'tinas kuenta-mu]].",
 'nocreate-loggedin' => "Ti nahon i nibet-mu petmisu mama'tinas nuebu na påhina gi {{SITENAME}}.",
 'permissionserrors' => 'Linache siha gi Petmisu',
 'permissionserrorstext' => "Ti nahong nibet-mu petmisu chumo'gue enao, pot i sigiente {{PLURAL:$1|na rason|na rason siha}}:",
@@ -521,7 +521,7 @@ Ti para u na'saonao palu na plantiyas.",
 
 # Account creation failure
 'cantcreateaccounttitle' => "Ti siña mama'tinas kuenta",
-'cantcreateaccount-text' => "Chinemma' mama'tinas kuenta ginen i IP ('''$1''') as [[User:$3|$3]].
+'cantcreateaccount-text' => "Chinemma' mama'tinas kuenta ginen i IP ('''$1''') as [[wiki_User:$3|$3]].
 
 Nina'i i rasion ''$2'' as $3",
 
@@ -673,7 +673,7 @@ Fanapunta na fana'an ti gus nuebu i listan-ñiha i guinahan {{SITENAME}}.",
 'mypreferences' => "I ga'ña-hu",
 'prefs-edits' => 'Numirun tinilaika:',
 'prefsnologin' => "Ti ma'log in",
-'prefsnologintext' => "Un nesisita [[Special:UserLogin|muna'log in]] para un tulaika i ga'ña-mu muna'sesetbi.",
+'prefsnologintext' => "Un nesisita [[Special:wiki_UserLogin|muna'log in]] para un tulaika i ga'ña-mu muna'sesetbi.",
 'changepassword' => 'Tulaika password',
 'prefs-skin' => 'Låssas',
 'skin-preview' => "Na'annok",
@@ -717,7 +717,7 @@ Yanggen un decidi mamo'lu, ma'usa ha' sempre para muna'i hao ni kreditu ni che'c
 'prefs-help-email' => "Ti nesesario i e-mail address, lao ha na'sede otru na taotao siha kumentusi hao ni påhina-mu muna'sesetbi/kombetsasion sin mana'annoki siha ni aidentifikasion-mu.",
 'prefs-help-email-required' => 'Nesisario i e-mail address.',
 
-# User rights
+# wiki_User rights
 'userrights' => "Inenkåtgan i direchun muna'sesetbi",
 'userrights-lookup-user' => "Maneha i grupun muna'sesetbi",
 'userrights-user-editname' => "Po'lo nå'an muna'sesetbi:",
@@ -731,7 +731,7 @@ Yanggen un decidi mamo'lu, ma'usa ha' sempre para muna'i hao ni kreditu ni che'c
 
 'grouppage-sysop' => '{{ns:project}}:Atministradot siha',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => "I log ni direchun muna'sesetbi",
 
 # Recent changes

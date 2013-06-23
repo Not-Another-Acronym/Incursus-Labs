@@ -86,9 +86,9 @@ $specialPageAliases = array(
 	'Unwatchedpages'            => array( '無哨頁' ),
 	'Upload'                    => array( '進獻' ),
 	'UploadStash'               => array( '貢貯' ),
-	'Userlogin'                 => array( '登簿' ),
-	'Userlogout'                => array( '去簿' ),
-	'Userrights'                => array( '秉治權任' ),
+	'wiki_Userlogin'                 => array( '登簿' ),
+	'wiki_Userlogout'                => array( '去簿' ),
+	'wiki_Userrights'                => array( '秉治權任' ),
 	'Version'                   => array( '版' ),
 	'Wantedcategories'          => array( '求門' ),
 	'Wantedfiles'               => array( '求檔' ),
@@ -147,7 +147,7 @@ $digitTransformTable = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => '鏈墊線：',
 'tog-justify' => '齊段落',
 'tog-hideminor' => '隱近校',
@@ -510,7 +510,7 @@ $1',
 $2',
 'namespaceprotected' => "子權未逮，莫能纂'''$1'''。",
 'ns-specialprotected' => '奇頁禁纂也。',
-'titleprotected' => "緘焉自[[User:$1|$1]]防建也。因''$2''也。",
+'titleprotected' => "緘焉自[[wiki_User:$1|$1]]防建也。因''$2''也。",
 'invalidtitle-knownnamespace' => '無效卷題，含名域"$2"與文本"$3"',
 'exception-nologin' => '尚未登簿',
 
@@ -522,7 +522,7 @@ $2',
 # Login and logout pages
 'logouttext' => "'''子去簿矣'''
 
-子可匿名還覽{{SITENAME}}，或[[Special:UserLogin|復登]]同簿、異簿。
+子可匿名還覽{{SITENAME}}，或[[Special:wiki_UserLogin|復登]]同簿、異簿。
 未清謄本，覽器文舊，且慎之。",
 'welcomecreation' => '== $1大駕光臨! ==
 子簿增矣，敬更[[Special:Preferences|簿註]]。',
@@ -689,7 +689,7 @@ $2',
 'newarticle' => '撰',
 'newarticletext' => '此頁尚缺。欲補，撰於下，有惑見[[{{MediaWiki:Helppage}}|助]]。
 誤入者，返前即可。',
-'anontalkpagetext' => "----''此匿論也，為未簿或不簿者設，IP俱錄以辨人焉。然IP不獨，恐生亂象，不喜惠[[Special:UserLogin/signup|增]][[Special:UserLogin|登簿]]遠之。",
+'anontalkpagetext' => "----''此匿論也，為未簿或不簿者設，IP俱錄以辨人焉。然IP不獨，恐生亂象，不喜惠[[Special:wiki_UserLogin/signup|增]][[Special:wiki_UserLogin|登簿]]遠之。",
 'noarticletext' => '查無此文。[[Special:Search/{{PAGENAME}}|尋題]]，
 <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} 尋誌]，
 或[{{fullurl:{{FULLPAGENAME}}|action=edit}} 纂頁]</span>。',
@@ -718,11 +718,11 @@ $2',
 'note' => "'''註'''",
 'previewnote' => "'''此乃預覽，尚未儲焉。'''",
 'continue-editing' => '續纂',
-'session_fail_preview' => "'''歉哉有變，子纂未存焉，惠再之。如復不成，[[Special:UserLogout|重登]]再試也。'''",
+'session_fail_preview' => "'''歉哉有變，子纂未存焉，惠再之。如復不成，[[Special:wiki_UserLogout|重登]]再試也。'''",
 'session_fail_preview_html' => "'''歉哉有變，子纂未存焉'''
 
 ''此維基亦合純HTML，除預覽以遠惡JavaScript侵。''
-'''纂文若合，惠再之。如復不成，簿[[Special:UserLogout|重登]]焉。'''",
+'''纂文若合，惠再之。如復不成，簿[[Special:wiki_UserLogout|重登]]焉。'''",
 'token_suffix_mismatch' => "'''君修見拒，蓋因代理之故，亂事見兮。'''",
 'editing' => '纂$1',
 'creating' => '撰$1',
@@ -756,7 +756,7 @@ $2',
 'template-semiprotected' => '（半錮）',
 'hiddencategories' => '此頁屬隱類之員有$1：',
 'nocreatetitle' => '新題謝焉',
-'nocreatetext' => '舊題可修，新題謝焉。[[Special:UserLogin|登簿、增簿]]以逮權也。',
+'nocreatetext' => '舊題可修，新題謝焉。[[Special:wiki_UserLogin|登簿、增簿]]以逮權也。',
 'nocreate-loggedin' => '子權未逮，新頁謝焉。',
 'sectioneditnotsupported-title' => '不纂持節',
 'sectioneditnotsupported-text' => '此頁不持纂節也。',
@@ -796,11 +796,11 @@ $2',
 'undo-success' => '此審可返也。查確然完之。',
 'undo-failure' => '中審之異，此審無返也。',
 'undo-norev' => '其審無存或刪，此審無返也。',
-'undo-summary' => '返[[Special:Contributions/$2|$2]]（[[User talk:$2|書]]）之審$1',
+'undo-summary' => '返[[Special:Contributions/$2|$2]]（[[wiki_User talk:$2|書]]）之審$1',
 
 # Account creation failure
 'cantcreateaccounttitle' => '新簿謝焉',
-'cantcreateaccount-text' => "[[User:$3|S3]]因''$2''故，封子IP <b>$1</b>。",
+'cantcreateaccount-text' => "[[wiki_User:$3|S3]]因''$2''故，封子IP <b>$1</b>。",
 
 # History pages
 'viewpagelogs' => '覽誌',
@@ -1030,7 +1030,7 @@ $1",
 'mypreferences' => '簿註',
 'prefs-edits' => '數計：',
 'prefsnologin' => '未登簿',
-'prefsnologintext' => '註記須<span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} 登簿]</span>。',
+'prefsnologintext' => '註記須<span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} 登簿]</span>。',
 'changepassword' => '易符節',
 'prefs-skin' => '面版',
 'skin-preview' => '草覽',
@@ -1133,16 +1133,16 @@ $1",
 'prefs-displaywatchlist' => '示項',
 'prefs-diffs' => '異',
 
-# User preference: e-mail validation using jQuery
+# wiki_User preference: e-mail validation using jQuery
 'email-address-validity-valid' => '電郵有效之',
 'email-address-validity-invalid' => '貢一效之電郵',
 
-# User rights
+# wiki_User rights
 'userrights' => '秉治權任',
 'userrights-lookup-user' => '司社',
 'userrights-user-editname' => '簿名：',
 'editusergroup' => '治社',
-'editinguser' => "正纂簿'''[[User:$1|$1]]''' （[[User talk:$1|{{int:talkpagelinktext}}]]{{int:pipe-separator}}[[Special:Contributions/$1|{{int:contribslink}}]]） 之權",
+'editinguser' => "正纂簿'''[[wiki_User:$1|$1]]''' （[[wiki_User talk:$1|{{int:talkpagelinktext}}]]{{int:pipe-separator}}[[Special:Contributions/$1|{{int:contribslink}}]]） 之權",
 'userrights-editusergroup' => '治社',
 'saveusergroups' => '定之',
 'userrights-groupsmember' => '有員：',
@@ -1156,7 +1156,7 @@ $1",
 'userrights-reason' => '因：',
 'userrights-no-interwiki' => '爾無權改他山wiki之簿權也。',
 'userrights-nodatabase' => '資料庫$1無存或非本地也。',
-'userrights-nologin' => '爾以有秩乲簿[[Special:UserLogin|登]]後以定簿之權也。',
+'userrights-nologin' => '爾以有秩乲簿[[Special:wiki_UserLogin|登]]後以定簿之權也。',
 'userrights-notallowed' => '爾之簿無權定簿之權也。',
 'userrights-changeable-col' => '爾所管轄',
 'userrights-unchangeable-col' => '非爾所轄',
@@ -1246,7 +1246,7 @@ $1",
 'right-override-export-depth' => '出有五層深之頁',
 'right-sendemail' => '擬書傳予他簿',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => '職權志',
 'rightsnone' => '（凡）',
 
@@ -1335,7 +1335,7 @@ $1",
 'reuploaddesc' => '消進乃返載獻',
 'upload-tryagain' => '呈改檔述',
 'uploadnologin' => '未登簿',
-'uploadnologintext' => '[[Special:UserLogin|登簿]]始可進獻',
+'uploadnologintext' => '[[Special:wiki_UserLogin|登簿]]始可進獻',
 'upload_directory_missing' => '目錄$1已失，無建之。',
 'upload_directory_read_only' => '目錄$1禁入，無可獻。',
 'uploaderror' => '進獻有變',
@@ -1595,7 +1595,7 @@ $1',
 'statistics-views-total' => '閱總',
 'statistics-views-total-desc' => '不包無存之頁與奇頁之閱數',
 'statistics-views-peredit' => '每纂閱數',
-'statistics-users' => '註[[Special:ListUsers|簿]]',
+'statistics-users' => '註[[Special:Listwiki_Users|簿]]',
 'statistics-users-active' => '活簿',
 'statistics-users-active-desc' => '早$1日前更動之簿',
 'statistics-mostpopular' => '燴炙',
@@ -1736,13 +1736,13 @@ $1',
 'linksearch-line' => '$1連$2',
 'linksearch-error' => '萬字僅用於機之始也。',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => '始簿：',
 'listusers-submit' => '見',
 'listusers-noresult' => '尋無簿。',
 'listusers-blocked' => '（已禁）',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => '躍簿',
 'activeusers-intro' => '此乃為近$1天內之躍簿也。',
 'activeusers-count' => '$3天內之$1易',
@@ -1775,7 +1775,7 @@ $1',
 
 # E-mail user
 'mailnologin' => '無驛',
-'mailnologintext' => '[[Special:UserLogin|登簿]]置郵，方可捎書。',
+'mailnologintext' => '[[Special:wiki_UserLogin|登簿]]置郵，方可捎書。',
 'emailuser' => '捎君',
 'emailpage' => '捎書',
 'emailpagetext' => '表下捎焉，以郵制君。
@@ -1800,7 +1800,7 @@ $1',
 'emailsenttext' => '書遣矣',
 'emailuserfooter' => '此捎由$1給$2經{{SITENAME}}之「捎君」發矣。',
 
-# User Messenger
+# wiki_User Messenger
 'usermessage-summary' => '留系信。',
 'usermessage-editor' => '系信',
 
@@ -1811,7 +1811,7 @@ $1',
 'nowatchlist' => '無哨',
 'watchlistanontext' => '$1以治哨',
 'watchnologin' => '未登簿',
-'watchnologintext' => '[[Special:UserLogin|登簿]]以治哨。',
+'watchnologintext' => '[[Special:wiki_UserLogin|登簿]]以治哨。',
 'addedwatchtext' => "\"[[:\$1]]\"哨派矣。後有易、議者可見於[[Special:Watchlist|哨站]]，且'''粗體'''列於[[Special:RecentChanges|近易]]。",
 'removedwatchtext' => '"[[:$1]]"[[Special:Watchlist|哨]]撤矣。',
 'watch' => '派哨',
@@ -1901,10 +1901,10 @@ $NEWPAGE
 'rollbacklink' => '正',
 'rollbackfailed' => '未能反正',
 'cantrollback' => '獨一作者，無以反正。',
-'alreadyrolled' => '[[User:$2|$2]]（[[User talk:$2|議]] | [[Special:Contributions/$2|{{int:contribslink}}]]）作[[:$1]]，退不成也。有易或已退焉。新纂者為[[User:$3|$3]]（[[User talk:$3|議]] | [[Special:Contributions/$3|{{int:contribslink}}]]）',
+'alreadyrolled' => '[[wiki_User:$2|$2]]（[[wiki_User talk:$2|議]] | [[Special:Contributions/$2|{{int:contribslink}}]]）作[[:$1]]，退不成也。有易或已退焉。新纂者為[[wiki_User:$3|$3]]（[[wiki_User talk:$3|議]] | [[Special:Contributions/$3|{{int:contribslink}}]]）',
 'editcomment' => "贊曰\"''\$1''\"",
-'revertpage' => '去[[Special:Contributions/$2|$2]]之作（欲言之，可至[[User talk:$2|此]]）為[[User:$1|$1]]之本耳',
-'revertpage-nouser' => '去（刪簿）之作為[[User:$1|$1]]之本耳',
+'revertpage' => '去[[Special:Contributions/$2|$2]]之作（欲言之，可至[[wiki_User talk:$2|此]]）為[[wiki_User:$1|$1]]之本耳',
+'revertpage-nouser' => '去（刪簿）之作為[[wiki_User:$1|$1]]之本耳',
 'rollback-success' => '去$1之作，復為$2之本耳。',
 
 # Edit tokens
@@ -2104,7 +2104,7 @@ $1',
 'unblockip' => '赦簿',
 'unblockiptext' => '函下赦禁。',
 'ipusubmit' => '赦此址',
-'unblocked' => '[[User:$1|$1]]赦焉',
+'unblocked' => '[[wiki_User:$1|$1]]赦焉',
 'unblocked-id' => '禁$1赦焉',
 'ipblocklist' => '列禁簿、禁址',
 'ipblocklist-legend' => '尋禁簿',
@@ -2194,7 +2194,7 @@ $1',
 'movearticle' => '遷文：',
 'moveuserpage-warning' => "'''警：'''爾將遷頁齋。注之遷齋後之簿名乃為''無''變也。",
 'movenologin' => '未登簿',
-'movenologintext' => '遷文須[[Special:UserLogin|登簿]]。',
+'movenologintext' => '遷文須[[Special:wiki_UserLogin|登簿]]。',
 'movenotallowed' => '無准遷檔也。',
 'cant-move-user-page' => '無動自齋（除字頁）。',
 'cant-move-to-user-page' => '無動至齋（除字頁）。',
@@ -2645,7 +2645,7 @@ $5
 
 # Delete conflict
 'deletedwhileediting' => '警：纂中見刪。',
-'confirmrecreate' => "[[User:$1|$1]]（[[User talk:$1|議]]）刪之有由：
+'confirmrecreate' => "[[wiki_User:$1|$1]]（[[wiki_User talk:$1|議]]）刪之有由：
 ''$2''
 請爾審視之。",
 'recreate' => '復',

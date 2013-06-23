@@ -29,7 +29,7 @@ require_once( __DIR__ . '/Maintenance.php' );
  *
  * @ingroup Maintenance
  */
-class FixUserRegistration extends Maintenance {
+class Fixwiki_UserRegistration extends Maintenance {
 	public function __construct() {
 		parent::__construct();
 		$this->mDescription = "Fix the user_registration field";
@@ -57,5 +57,5 @@ class FixUserRegistration extends Maintenance {
 	}
 }
 
-$maintClass = "FixUserRegistration";
+$maintClass = "Fixwiki_UserRegistration";
 require_once( RUN_MAINTENANCE_IF_MAIN );

@@ -35,7 +35,7 @@ $namespaceNames = array(
 $fallback = 'lv';
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-showhiddencats' => 'Ruodeit nūglobuotys kategorejis',
 
 'underline-always' => 'Vysod',
@@ -244,7 +244,7 @@ $messages = array(
 Tys parostai nūtiek vacu saišu gadejumā: pīprosūt izmainis voi viesturi lopai, kas ir dzāsta.
 
 Ka lopai ir juobyut, tod, īspiejams, ir klaida programā.
-Par to var ziņuot [[Special:ListUsers/sysop|kaidam administratoram]], nūruodūt ari URL.',
+Par to var ziņuot [[Special:Listwiki_Users/sysop|kaidam administratoram]], nūruodūt ari URL.',
 'missingarticle-rev' => '(Puorsavieršona#: $1)',
 'badtitletext' => 'Pīpraseituo lopa ir ar klaidu, tukša voi napareizai saisteits dažaidu volūdu voi dažaidu wiki viersroksti. Tys var saturēt vīnu voi vairuokus simbolus, kū navar izmontuot viersrokstūs.',
 'viewsource' => 'Apsavērt kodu',
@@ -453,7 +453,7 @@ n = nasvareigs lobuojums.',
 'right-upload_by_url' => 'Īsyuteit failu nu URL adresa',
 'right-delete' => 'Iztreit puslopys',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Lītuotuoju tīseibu registrs',
 'rightsnone' => '(navā)',
 
@@ -586,7 +586,7 @@ Lopys, kas ir tovā [[Special:Watchlist|puorraugamūs rokstu sarokstā]] ir '''r
 'linksearch' => 'Uorejuos saitys',
 'linksearch-ns' => 'Vuordu pluots:',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusers-submit' => 'Paruodeit',
 
 # Special:Log/newusers

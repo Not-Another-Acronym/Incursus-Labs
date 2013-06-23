@@ -298,7 +298,7 @@ class ImagePage extends Article {
 
 		$sizeSel = intval( $user->getOption( 'imagesize' ) );
 		if ( !isset( $wgImageLimits[$sizeSel] ) ) {
-			$sizeSel = User::getDefaultOption( 'imagesize' );
+			$sizeSel = wiki_User::getDefaultOption( 'imagesize' );
 
 			// The user offset might still be incorrect, specially if
 			// $wgImageLimits got changed (see bug #8858).
@@ -358,7 +358,7 @@ class ImagePage extends Article {
 						$thumbOption = $user->getOption( 'thumbsize' );
 						$thumbSizes = array( isset( $wgImageLimits[$thumbOption] )
 							? $wgImageLimits[$thumbOption]
-							: $wgImageLimits[User::getDefaultOption( 'thumbsize' )] );
+							: $wgImageLimits[wiki_User::getDefaultOption( 'thumbsize' )] );
 					}
 					# Generate thumbnails or thumbnail links as needed...
 					$otherSizes = array();
@@ -1057,8 +1057,8 @@ class ImageHistoryList extends ContextSource {
 		$row .= '<td>';
 		if ( $iscur ) {
 			$row .= $this->msg( 'filehist-current' )->escaped();
-		} elseif ( $local && $this->title->quickUserCan( 'edit', $user )
-			&& $this->title->quickUserCan( 'upload', $user )
+		} elseif ( $local && $this->title->quickwiki_UserCan( 'edit', $user )
+			&& $this->title->quickwiki_UserCan( 'upload', $user )
 		) {
 			if ( $file->isDeleted( File::DELETED_FILE ) ) {
 				$row .= $this->msg( 'filehist-revert' )->escaped();

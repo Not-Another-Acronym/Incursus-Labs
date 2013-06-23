@@ -236,8 +236,8 @@ class SearchEngine {
 
 		# Entering an IP address goes to the contributions page
 		if ( $wgEnableSearchContributorsByIP ) {
-			if ( ( $title->getNamespace() == NS_USER && User::isIP( $title->getText() ) )
-				|| User::isIP( trim( $searchterm ) ) ) {
+			if ( ( $title->getNamespace() == NS_USER && wiki_User::isIP( $title->getText() ) )
+				|| wiki_User::isIP( trim( $searchterm ) ) ) {
 				return SpecialPage::getTitleFor( 'Contributions', $title->getDBkey() );
 			}
 		}
@@ -356,7 +356,7 @@ class SearchEngine {
 	 * Extract default namespaces to search from the given user's
 	 * settings, returning a list of index numbers.
 	 *
-	 * @param $user User
+	 * @param $user wiki_User
 	 * @return Array
 	 */
 	public static function userNamespaces( $user ) {
@@ -804,9 +804,9 @@ class SearchResult {
 	 * @return String: highlighted text snippet, null (and not '') if not supported
 	 */
 	function getTextSnippet( $terms ) {
-		global $wgUser, $wgAdvancedSearchHighlighting;
+		global $wgwiki_User, $wgAdvancedSearchHighlighting;
 		$this->initText();
-		list( $contextlines, $contextchars ) = SearchEngine::userHighlightPrefs( $wgUser );
+		list( $contextlines, $contextchars ) = SearchEngine::userHighlightPrefs( $wgwiki_User );
 		$h = new SearchHighlighter();
 		if ( $wgAdvancedSearchHighlighting )
 			return $h->highlightText( $this->mText, $terms, $contextlines, $contextchars );

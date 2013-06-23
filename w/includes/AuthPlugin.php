@@ -72,7 +72,7 @@ class AuthPlugin {
 	/**
 	 * Modify options in the login template.
 	 *
-	 * @param $template UserLoginTemplate object.
+	 * @param $template wiki_UserLoginTemplate object.
 	 * @param $type String 'signup' or 'login'. Added in 1.16.
 	 */
 	public function modifyUITemplate( &$template, &$type ) {
@@ -118,13 +118,13 @@ class AuthPlugin {
 	 * For instance, you might pull the email address or real name from the
 	 * external user database.
 	 *
-	 * The User object is passed by reference so it can be modified; don't
+	 * The wiki_User object is passed by reference so it can be modified; don't
 	 * forget the & on your function declaration.
 	 *
-	 * @param $user User object
+	 * @param $user wiki_User object
 	 * @return bool
 	 */
-	public function updateUser( &$user ) {
+	public function updatewiki_User( &$user ) {
 		# Override this and do something
 		return true;
 	}
@@ -193,7 +193,7 @@ class AuthPlugin {
 	 *
 	 * Return true if successful.
 	 *
-	 * @param $user User object.
+	 * @param $user wiki_User object.
 	 * @param $password String: password.
 	 * @return bool
 	 */
@@ -205,7 +205,7 @@ class AuthPlugin {
 	 * Update user information in the external authentication database.
 	 * Return true if successful.
 	 *
-	 * @param $user User object.
+	 * @param $user wiki_User object.
 	 * @return Boolean
 	 */
 	public function updateExternalDB( $user ) {
@@ -225,13 +225,13 @@ class AuthPlugin {
 	 * Add a user to the external authentication database.
 	 * Return true if successful.
 	 *
-	 * @param $user User: only the name should be assumed valid at this point
+	 * @param $user wiki_User: only the name should be assumed valid at this point
 	 * @param $password String
 	 * @param $email String
 	 * @param $realname String
 	 * @return Boolean
 	 */
-	public function addUser( $user, $password, $email = '', $realname = '' ) {
+	public function addwiki_User( $user, $password, $email = '', $realname = '' ) {
 		return true;
 	}
 
@@ -254,7 +254,7 @@ class AuthPlugin {
 	 * @param $username String: username.
 	 * @return Boolean
 	 */
-	public function strictUserAuth( $username ) {
+	public function strictwiki_UserAuth( $username ) {
 		return false;
 	}
 
@@ -263,13 +263,13 @@ class AuthPlugin {
 	 * For instance, you might pull the email address or real name from the
 	 * external user database.
 	 *
-	 * The User object is passed by reference so it can be modified; don't
+	 * The wiki_User object is passed by reference so it can be modified; don't
 	 * forget the & on your function declaration.
 	 *
-	 * @param $user User object.
+	 * @param $user wiki_User object.
 	 * @param $autocreate Boolean: True if user is being autocreated on login
 	 */
-	public function initUser( &$user, $autocreate = false ) {
+	public function initwiki_User( &$user, $autocreate = false ) {
 		# Override this to do something.
 	}
 
@@ -284,14 +284,14 @@ class AuthPlugin {
 	}
 
 	/**
-	 * Get an instance of a User object
+	 * Get an instance of a wiki_User object
 	 *
-	 * @param $user User
+	 * @param $user wiki_User
 	 *
-	 * @return AuthPluginUser
+	 * @return AuthPluginwiki_User
 	 */
-	public function getUserInstance( User &$user ) {
-		return new AuthPluginUser( $user );
+	public function getUserInstance( wiki_User &$user ) {
+		return new AuthPluginwiki_User( $user );
 	}
 
 	/**
@@ -304,7 +304,7 @@ class AuthPlugin {
 	}
 }
 
-class AuthPluginUser {
+class AuthPluginwiki_User {
 	function __construct( $user ) {
 		# Override this!
 	}

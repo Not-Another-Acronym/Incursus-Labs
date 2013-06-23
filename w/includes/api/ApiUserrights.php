@@ -28,24 +28,24 @@
 /**
  * @ingroup API
  */
-class ApiUserrights extends ApiBase {
+class Apiwiki_Userrights extends ApiBase {
 
 	public function __construct( $main, $action ) {
 		parent::__construct( $main, $action );
 	}
 
-	private $mUser = null;
+	private $mwiki_User = null;
 
 	public function execute() {
 		$params = $this->extractRequestParams();
 
-		$user = $this->getUrUser();
+		$user = $this->getUrwiki_User();
 
-		$form = new UserrightsPage;
+		$form = new wiki_UserrightsPage;
 		$r['user'] = $user->getName();
 		$r['userid'] = $user->getId();
 		list( $r['added'], $r['removed'] ) =
-			$form->doSaveUserGroups(
+			$form->doSavewiki_UserGroups(
 				$user, (array)$params['add'],
 				(array)$params['remove'], $params['reason'] );
 
@@ -56,17 +56,17 @@ class ApiUserrights extends ApiBase {
 	}
 
 	/**
-	 * @return User
+	 * @return wiki_User
 	 */
-	private function getUrUser() {
-		if ( $this->mUser !== null ) {
-			return $this->mUser;
+	private function getUrwiki_User() {
+		if ( $this->mwiki_User !== null ) {
+			return $this->mwiki_User;
 		}
 
 		$params = $this->extractRequestParams();
 
-		$form = new UserrightsPage;
-		$status = $form->fetchUser( $params['user'] );
+		$form = new wiki_UserrightsPage;
+		$status = $form->fetchwiki_User( $params['user'] );
 		if ( !$status->isOK() ) {
 			$errors = $status->getErrorsArray();
 			$this->dieUsageMsg( $errors[0] );
@@ -74,7 +74,7 @@ class ApiUserrights extends ApiBase {
 			$user = $status->value;
 		}
 
-		$this->mUser = $user;
+		$this->mwiki_User = $user;
 		return $user;
 	}
 
@@ -93,11 +93,11 @@ class ApiUserrights extends ApiBase {
 				ApiBase::PARAM_REQUIRED => true
 			),
 			'add' => array(
-				ApiBase::PARAM_TYPE => User::getAllGroups(),
+				ApiBase::PARAM_TYPE => wiki_User::getAllGroups(),
 				ApiBase::PARAM_ISMULTI => true
 			),
 			'remove' => array(
-				ApiBase::PARAM_TYPE => User::getAllGroups(),
+				ApiBase::PARAM_TYPE => wiki_User::getAllGroups(),
 				ApiBase::PARAM_ISMULTI => true
 			),
 			'token' => array(
@@ -112,7 +112,7 @@ class ApiUserrights extends ApiBase {
 
 	public function getParamDescription() {
 		return array(
-			'user' => 'User name',
+			'user' => 'wiki_User name',
 			'add' => 'Add the user to these groups',
 			'remove' => 'Remove the user from these groups',
 			'token' => 'A userrights token previously retrieved through list=users',
@@ -129,7 +129,7 @@ class ApiUserrights extends ApiBase {
 	}
 
 	public function getTokenSalt() {
-		return $this->getUrUser()->getName();
+		return $this->getUrwiki_User()->getName();
 	}
 
 	public function getExamples() {
@@ -139,7 +139,7 @@ class ApiUserrights extends ApiBase {
 	}
 
 	public function getHelpUrls() {
-		return 'https://www.mediawiki.org/wiki/API:User_group_membership';
+		return 'https://www.mediawiki.org/wiki/API:wiki_User_group_membership';
 	}
 
 	public function getVersion() {

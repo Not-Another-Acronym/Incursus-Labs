@@ -68,7 +68,7 @@ class ApiQuery extends ApiBase {
 		'allimages' => 'ApiQueryAllImages',
 		'alllinks' => 'ApiQueryAllLinks',
 		'allpages' => 'ApiQueryAllPages',
-		'allusers' => 'ApiQueryAllUsers',
+		'allusers' => 'ApiQueryAllwiki_Users',
 		'backlinks' => 'ApiQueryBacklinks',
 		'blocks' => 'ApiQueryBlocks',
 		'categorymembers' => 'ApiQueryCategoryMembers',
@@ -87,7 +87,7 @@ class ApiQuery extends ApiBase {
 		'search' => 'ApiQuerySearch',
 		'tags' => 'ApiQueryTags',
 		'usercontribs' => 'ApiQueryContributions',
-		'users' => 'ApiQueryUsers',
+		'users' => 'ApiQuerywiki_Users',
 		'watchlist' => 'ApiQueryWatchlist',
 		'watchlistraw' => 'ApiQueryWatchlistRaw',
 	);
@@ -95,7 +95,7 @@ class ApiQuery extends ApiBase {
 	private $mQueryMetaModules = array(
 		'allmessages' => 'ApiQueryAllMessages',
 		'siteinfo' => 'ApiQuerySiteinfo',
-		'userinfo' => 'ApiQueryUserInfo',
+		'userinfo' => 'ApiQuerywiki_UserInfo',
 	);
 
 	private $mSlaveDB = null;
@@ -113,9 +113,9 @@ class ApiQuery extends ApiBase {
 		// Allow custom modules to be added in LocalSettings.php
 		global $wgAPIPropModules, $wgAPIListModules, $wgAPIMetaModules,
 			$wgMemc, $wgAPICacheHelpTimeout;
-		self::appendUserModules( $this->mQueryPropModules, $wgAPIPropModules );
-		self::appendUserModules( $this->mQueryListModules, $wgAPIListModules );
-		self::appendUserModules( $this->mQueryMetaModules, $wgAPIMetaModules );
+		self::appendwiki_UserModules( $this->mQueryPropModules, $wgAPIPropModules );
+		self::appendwiki_UserModules( $this->mQueryListModules, $wgAPIListModules );
+		self::appendwiki_UserModules( $this->mQueryMetaModules, $wgAPIMetaModules );
 
 		$this->mPropModuleNames = array_keys( $this->mQueryPropModules );
 		$this->mListModuleNames = array_keys( $this->mQueryListModules );
@@ -144,7 +144,7 @@ class ApiQuery extends ApiBase {
 	 * @param $modules array Module array
 	 * @param $newModules array Module array to add to $modules
 	 */
-	private static function appendUserModules( &$modules, $newModules ) {
+	private static function appendwiki_UserModules( &$modules, $newModules ) {
 		if ( is_array( $newModules ) ) {
 			foreach ( $newModules as $moduleName => $moduleClass ) {
 				$modules[$moduleName] = $moduleClass;

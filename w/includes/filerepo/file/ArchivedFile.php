@@ -427,7 +427,7 @@ class ArchivedFile {
 	 *
 	 * @return int
 	 */
-	public function getRawUser() {
+	public function getRawwiki_User() {
 		$this->load();
 		return $this->user;
 	}
@@ -437,7 +437,7 @@ class ArchivedFile {
 	 *
 	 * @return string
 	 */
-	public function getRawUserText() {
+	public function getRawwiki_UserText() {
 		$this->load();
 		return $this->user_text;
 	}
@@ -476,10 +476,10 @@ class ArchivedFile {
 	 * Determine if the current user is allowed to view a particular
 	 * field of this FileStore image file, if it's marked as deleted.
 	 * @param $field Integer
-	 * @param $user User object to check, or null to use $wgUser
+	 * @param $user wiki_User object to check, or null to use $wgwiki_User
 	 * @return bool
 	 */
-	public function userCan( $field, User $user = null ) {
+	public function userCan( $field, wiki_User $user = null ) {
 		$this->load();
 		return Revision::userCanBitfield( $this->deleted, $field, $user );
 	}

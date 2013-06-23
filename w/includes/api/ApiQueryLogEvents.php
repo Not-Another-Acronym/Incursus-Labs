@@ -118,9 +118,9 @@ class ApiQueryLogEvents extends ApiQueryBase {
 
 		$user = $params['user'];
 		if ( !is_null( $user ) ) {
-			$userid = User::idFromName( $user );
+			$userid = wiki_User::idFromName( $user );
 			if ( !$userid ) {
-				$this->dieUsage( "User name $user not found", 'param_user' );
+				$this->dieUsage( "wiki_User name $user not found", 'param_user' );
 			}
 			$this->addWhereFld( 'log_user', $userid );
 			$index['logging'] = 'user_time';
@@ -510,7 +510,7 @@ class ApiQueryLogEvents extends ApiQueryBase {
 
 	public function getPossibleErrors() {
 		return array_merge( parent::getPossibleErrors(), array(
-			array( 'code' => 'param_user', 'info' => 'User name $user not found' ),
+			array( 'code' => 'param_user', 'info' => 'wiki_User name $user not found' ),
 			array( 'code' => 'param_title', 'info' => 'Bad title value \'title\'' ),
 			array( 'code' => 'param_prefix', 'info' => 'Bad title value \'prefix\'' ),
 			array( 'code' => 'prefixsearchdisabled', 'info' => 'Prefix search disabled in Miser Mode' ),

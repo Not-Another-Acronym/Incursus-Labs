@@ -23,7 +23,7 @@
 $fallback = 'ka';
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'რცხუეფიშ ათოღაზუა:',
 'tog-justify' => 'გამანგი აბზაცეფი',
 'tog-hideminor' => 'დოფული ციქა რედაქტირაფა ეკონია თირაფეფს',
@@ -240,7 +240,7 @@ $messages = array(
 
 თენა, მუჭოთ წესინი, მოხვადუ თი ბორჯის, მუჟამს მახვარებუ გიაჸუნუუ თი ხასჷლაშ ისტორიაშ რცხუს, ნამუთ ლასირი რე. 
 თენა თაშ ვა რე-და, შილებე თქვა ძირით ჩილათა სისტემაშ კოდის. 
-ქორთხიინთ, ქატყვინუათ თენა [[Special:ListUsers/sysop|administrator]]–ს, URL–შ მეწურაფათ.',
+ქორთხიინთ, ქატყვინუათ თენა [[Special:Listwiki_Users/sysop|administrator]]–ს, URL–შ მეწურაფათ.',
 'missingarticle-rev' => '(რედაქტირაფა#: $1)',
 'badtitle' => 'ცაგანა სათაური',
 'badtitletext' => 'მოთხილ ხასილაშ ჯოხო ჩილათირ რდუ, ვარა ჩოლიერ, ვარა ხოლო გოხოლუდეს ჩილათირო გინორცხუაფილ ინტერ–ნინა ვარა ინტერ–წიკი ჯოხო. 
@@ -338,7 +338,7 @@ $messages = array(
 'template-protected' => '(თხილერი)',
 'template-semiprotected' => '(გვერდო თხილერი)',
 'hiddencategories' => 'თე ხასილა ოკათუ {{PLURAL:$1|1 ტყობინაფილ კატეგორიას|$1 ტყობინაფილ კატეგორიეფს}}:',
-'nocreatetext' => 'თე ხასილას ვა შილებე ახალ ხასილაშ გექიმინუა დორცხუაფილ ვარიაშ გეშა. თქვა შეგილებუნა კინორთა დო გექიმინელ ხასილაშ რედაქტირაფა, ვარა [[სპეციალურ:Userlogin|მიშულა დო ანგარიშიშ დორცხუაფა]]',
+'nocreatetext' => 'თე ხასილას ვა შილებე ახალ ხასილაშ გექიმინუა დორცხუაფილ ვარიაშ გეშა. თქვა შეგილებუნა კინორთა დო გექიმინელ ხასილაშ რედაქტირაფა, ვარა [[სპეციალურ:wiki_Userlogin|მიშულა დო ანგარიშიშ დორცხუაფა]]',
 'permissionserrorstext-withaction' => 'თქვა ვა გიღუნა $2–იშ ღოლამაშ ალობა თე გეჸვენჯი {{PLURAL:$1|სამანჯელით|სამანჯელეფით}}:',
 'recreate-moveddeleted-warn' => "'''გართხილება: თქვა კინე ახალშო ორსხუანთ ხასჷლას, ნამუქჷთ ლასირქ იჸუ ოწოხოლე'''
 
@@ -459,7 +459,7 @@ $messages = array(
 'grouppage-user' => '{{ns:project}}:მახვარებუეფ',
 'grouppage-sysop' => '{{ns:project}}:ხემანჯღვერეფი',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'მახვარებუშ ნებეფიშ ჟურნალ',
 
 # Associated actions - in the sentence "You do not have permission to X"

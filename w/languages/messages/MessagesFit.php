@@ -14,7 +14,7 @@
 $fallback = 'fi';
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Linkitten alleviivaus',
 'tog-justify' => 'Tassaa kappalheet',
 'tog-hideminor' => 'Piilota pienet muutokset vereksen muutoksitten listasta',
@@ -220,7 +220,7 @@ $messages = array(
 Useimiten tämä johtuu vanhentuneesta vertailu- tai histuuriasivulinkistä poistethuun sivhuun.
 
 Jos kysheessä ei ole poistettu sivu, olet piian löytäny virheen ohjelmassa.
-Ilmota tämän sivun atressi wikin [[Special:ListUsers/sysop|atministratöörile]].',
+Ilmota tämän sivun atressi wikin [[Special:Listwiki_Users/sysop|atministratöörile]].',
 'missingarticle-rev' => '(versuuni: $1)',
 'badtitle' => 'Virheelinen titteli',
 'badtitletext' => 'Pyytämästi sivurypriikki oli virheelinen, tyhjä eli titteli on väärin linkitetty muusta wikistä. Se saattaa sisältää yhen eli monta sympoolia, joita ei saa käyttää sivutittelissä.',

@@ -30,7 +30,7 @@
  *
  * @ingroup SpecialPage
  */
-class ActiveUsersPager extends UsersPager {
+class Activewiki_UsersPager extends wiki_UsersPager {
 
 	/**
 	 * @var FormOptions
@@ -53,17 +53,17 @@ class ActiveUsersPager extends UsersPager {
 	 * @param $par string Parameter passed to the page
 	 */
 	function __construct( IContextSource $context = null, $group = null, $par = null ) {
-		global $wgActiveUserDays;
+		global $wgActivewiki_UserDays;
 
 		parent::__construct( $context );
 
-		$this->RCMaxAge = $wgActiveUserDays;
+		$this->RCMaxAge = $wgActivewiki_UserDays;
 		$un = $this->getRequest()->getText( 'username', $par );
-		$this->requestedUser = '';
+		$this->requestedwiki_User = '';
 		if ( $un != '' ) {
 			$username = Title::makeTitleSafe( NS_USER, $un );
 			if( !is_null( $username ) ) {
-				$this->requestedUser = $username->getText();
+				$this->requestedwiki_User = $username->getText();
 			}
 		}
 
@@ -92,13 +92,13 @@ class ActiveUsersPager extends UsersPager {
 
 	function getQueryInfo() {
 		$dbr = wfGetDB( DB_SLAVE );
-		$conds = array( 'rc_user > 0' ); // Users - no anons
+		$conds = array( 'rc_user > 0' ); // wiki_Users - no anons
 		$conds[] = 'ipb_deleted IS NULL'; // don't show hidden names
 		$conds[] = 'rc_log_type IS NULL OR rc_log_type != ' . $dbr->addQuotes( 'newusers' );
 		$conds[] = 'rc_timestamp >= ' . $dbr->addQuotes( $dbr->timestamp( wfTimestamp( TS_UNIX ) - $this->RCMaxAge*24*3600 ) );
 
-		if( $this->requestedUser != '' ) {
-			$conds[] = 'rc_user_text >= ' . $dbr->addQuotes( $this->requestedUser );
+		if( $this->requestedwiki_User != '' ) {
+			$conds[] = 'rc_user_text >= ' . $dbr->addQuotes( $this->requestedwiki_User );
 		}
 
 		$query = array(
@@ -135,20 +135,20 @@ class ActiveUsersPager extends UsersPager {
 		$lang = $this->getLanguage();
 
 		$list = array();
-		$user = User::newFromId( $row->user_id );
+		$user = wiki_User::newFromId( $row->user_id );
 
-		// User right filter
+		// wiki_User right filter
 		foreach( $this->hideRights as $right ) {
-			// Calling User::getRights() within the loop so that
+			// Calling wiki_User::getRights() within the loop so that
 			// if the hideRights() filter is empty, we don't have to
 			// trigger the lazy-init of the big userrights array in the
-			// User object
+			// wiki_User object
 			if ( in_array( $right, $user->getRights() ) ) {
 				return '';
 			}
 		}
 
-		// User group filter
+		// wiki_User group filter
 		// Note: This is a different loop than for user rights,
 		// because we're reusing it to build the group links
 		// at the same time
@@ -180,7 +180,7 @@ class ActiveUsersPager extends UsersPager {
 		$out .= Html::hidden( 'title', $self->getPrefixedDBkey() ) . $limit . "\n";
 
 		$out .= Xml::inputLabel( $this->msg( 'activeusers-from' )->text(),
-			'username', 'offset', 20, $this->requestedUser ) . '<br />';# Username field
+			'username', 'offset', 20, $this->requestedwiki_User ) . '<br />';# wiki_Username field
 
 		$out .= Xml::checkLabel( $this->msg( 'activeusers-hidebots' )->text(),
 			'hidebots', 'hidebots', $this->opts->getValue( 'hidebots' ) );
@@ -199,7 +199,7 @@ class ActiveUsersPager extends UsersPager {
 /**
  * @ingroup SpecialPage
  */
-class SpecialActiveUsers extends SpecialPage {
+class SpecialActivewiki_Users extends SpecialPage {
 
 	/**
 	 * Constructor
@@ -214,16 +214,16 @@ class SpecialActiveUsers extends SpecialPage {
 	 * @param $par Mixed: parameter passed to the page or null
 	 */
 	public function execute( $par ) {
-		global $wgActiveUserDays;
+		global $wgActivewiki_UserDays;
 
 		$this->setHeaders();
 		$this->outputHeader();
 
 		$out = $this->getOutput();
 		$out->wrapWikiMsg( "<div class='mw-activeusers-intro'>\n$1\n</div>",
-			array( 'activeusers-intro', $this->getLanguage()->formatNum( $wgActiveUserDays ) ) );
+			array( 'activeusers-intro', $this->getLanguage()->formatNum( $wgActivewiki_UserDays ) ) );
 
-		$up = new ActiveUsersPager( $this->getContext(), null, $par );
+		$up = new Activewiki_UsersPager( $this->getContext(), null, $par );
 
 		# getBody() first to check, if empty
 		$usersbody = $up->getBody();

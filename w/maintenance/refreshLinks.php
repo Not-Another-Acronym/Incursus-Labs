@@ -224,7 +224,7 @@ class RefreshLinks extends Maintenance {
 		$dbw = wfGetDB( DB_MASTER );
 		$dbw->begin( __METHOD__ );
 
-		$options = ParserOptions::newFromUserAndLang( new User, $wgContLang );
+		$options = ParserOptions::newFromwiki_UserAndLang( new wiki_User, $wgContLang );
 		$parserOutput = $wgParser->parse( $text, $page->getTitle(), $options, true, true, $page->getLatest() );
 		$update = new LinksUpdate( $page->getTitle(), $parserOutput, false );
 		$update->doUpdate();

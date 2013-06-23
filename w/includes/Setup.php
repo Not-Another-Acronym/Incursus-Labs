@@ -177,7 +177,7 @@ if ( $wgUseSharedUploads ) {
 			'transformVia404' => !$wgGenerateThumbnailOnParse,
 			'dbType' => $wgDBtype,
 			'dbServer' => $wgDBserver,
-			'dbUser' => $wgDBuser,
+			'dbwiki_User' => $wgDBuser,
 			'dbPassword' => $wgDBpassword,
 			'dbName' => $wgSharedUploadDBname,
 			'dbFlags' => ( $wgDebugDumpSql ? DBO_DEBUG : 0 ) | DBO_DEFAULT,
@@ -270,7 +270,7 @@ if ( !$wgCookiePrefix ) {
 }
 $wgCookiePrefix = strtr( $wgCookiePrefix, '=,; +."\'\\[', '__________' );
 
-$wgUseEnotif = $wgEnotifUserTalk || $wgEnotifWatchlist;
+$wgUseEnotif = $wgEnotifwiki_UserTalk || $wgEnotifWatchlist;
 
 if ( $wgMetaNamespace === false ) {
 	$wgMetaNamespace = str_replace( ' ', '_', $wgSitename );
@@ -284,8 +284,8 @@ $wgCanonicalNamespaceNames = array(
 	NS_MEDIA            => 'Media',
 	NS_SPECIAL          => 'Special',
 	NS_TALK             => 'Talk',
-	NS_USER             => 'User',
-	NS_USER_TALK        => 'User_talk',
+	NS_USER             => 'wiki_User',
+	NS_USER_TALK        => 'wiki_User_talk',
 	NS_PROJECT          => 'Project',
 	NS_PROJECT_TALK     => 'Project_talk',
 	NS_FILE             => 'File',
@@ -317,7 +317,7 @@ if ( $wgUseFileCache || $wgUseSquid ) {
 	$wgDebugToolbar = false;
 }
 
-# $wgAllowRealName and $wgAllowUserSkin were removed in 1.16
+# $wgAllowRealName and $wgAllowwiki_UserSkin were removed in 1.16
 # in favor of $wgHiddenPrefs, handle b/c here
 if ( !$wgAllowRealName ) {
 	$wgHiddenPrefs[] = 'realname';
@@ -357,15 +357,15 @@ if ( $wgAjaxUploadDestCheck ) {
 	$wgAjaxExportList[] = 'SpecialUpload::ajaxGetExistsWarning';
 }
 
-if ( $wgNewUserLog ) {
+if ( $wgNewwiki_UserLog ) {
 	# Add a new log type
 	$wgLogTypes[]                        = 'newusers';
 	$wgLogNames['newusers']              = 'newuserlogpage';
 	$wgLogHeaders['newusers']            = 'newuserlogpagetext';
-	$wgLogActionsHandlers['newusers/newusers'] = 'NewUsersLogFormatter';
-	$wgLogActionsHandlers['newusers/create'] = 'NewUsersLogFormatter';
-	$wgLogActionsHandlers['newusers/create2'] = 'NewUsersLogFormatter';
-	$wgLogActionsHandlers['newusers/autocreate'] = 'NewUsersLogFormatter';
+	$wgLogActionsHandlers['newusers/newusers'] = 'Newwiki_UsersLogFormatter';
+	$wgLogActionsHandlers['newusers/create'] = 'Newwiki_UsersLogFormatter';
+	$wgLogActionsHandlers['newusers/create2'] = 'Newwiki_UsersLogFormatter';
+	$wgLogActionsHandlers['newusers/autocreate'] = 'Newwiki_UsersLogFormatter';
 }
 
 if ( $wgCookieSecure === 'detect' ) {
@@ -500,12 +500,12 @@ $wgContLang->initContLang();
 
 // Now that variant lists may be available...
 $wgRequest->interpolateTitle();
-$wgUser = RequestContext::getMain()->getUser(); # BackCompat
+$wgwiki_User = RequestContext::getMain()->getUser(); # BackCompat
 
 /**
  * @var $wgLang Language
  */
-$wgLang = new StubUserLang;
+$wgLang = new Stubwiki_UserLang;
 
 /**
  * @var OutputPage

@@ -162,11 +162,11 @@ $.wikiEditor = {
 	 * with a default.
 	 *
 	 * @param object Object to extract property from
-	 * @param lang Language code, defaults to wgUserLanguage
+	 * @param lang Language code, defaults to wgwiki_UserLanguage
 	 */
 	autoLang: function ( object, lang ) {
 		var defaultKey = $( 'body' ).hasClass( 'rtl' ) ? 'default-rtl' : 'default';
-		return object[lang || mw.config.get( 'wgUserLanguage' )] || object[defaultKey] || object['default'] || object;
+		return object[lang || mw.config.get( 'wgwiki_UserLanguage' )] || object[defaultKey] || object['default'] || object;
 	},
 
 	/**
@@ -175,7 +175,7 @@ $.wikiEditor = {
 	 *
 	 * @param icon Icon object from e.g. toolbar config
 	 * @param path Default icon path, defaults to $.wikiEditor.imgPath
-	 * @param lang Language code, defaults to wgUserLanguage
+	 * @param lang Language code, defaults to wgwiki_UserLanguage
 	 */
 	autoIcon: function ( icon, path, lang ) {
 		var src = $.wikiEditor.autoLang( icon, lang );
@@ -193,10 +193,10 @@ $.wikiEditor = {
 	 * @param icon Icon object, see autoIcon()
 	 * @param offset Offset object
 	 * @param path Icon path, see autoIcon()
-	 * @param lang Language code, defaults to wgUserLanguage
+	 * @param lang Language code, defaults to wgwiki_UserLanguage
 	 */
 	autoIconOrOffset: function ( icon, offset, path, lang ) {
-		lang = lang || mw.config.get( 'wgUserLanguage' );
+		lang = lang || mw.config.get( 'wgwiki_UserLanguage' );
 		if ( typeof offset == 'object' && lang in offset ) {
 			return offset[lang];
 		} else if ( typeof icon == 'object' && lang in icon ) {

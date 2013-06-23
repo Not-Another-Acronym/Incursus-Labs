@@ -258,7 +258,7 @@ class MWNamespaceTest extends MediaWikiTestCase {
 		$this->assertCanTalk( NS_USER      );
 		$this->assertCanTalk( NS_USER_TALK );
 
-		// User defined namespaces
+		// wiki_User defined namespaces
 		$this->assertCanTalk( 100 );
 		$this->assertCanTalk( 101 );
 	}

@@ -40,7 +40,7 @@ class SwiftFileBackend extends FileBackendStore {
 	/** @var CF_Authentication */
 	protected $auth; // Swift authentication handler
 	protected $authTTL; // integer seconds
-	protected $swiftAnonUser; // string; username to handle unauthenticated requests
+	protected $swiftAnonwiki_User; // string; username to handle unauthenticated requests
 	protected $swiftUseCDN; // boolean; whether CloudFiles CDN is enabled
 	protected $swiftCDNExpiry; // integer; how long to cache things in the CDN
 	protected $swiftCDNPurgable; // boolean; whether object CDN purging is enabled
@@ -63,10 +63,10 @@ class SwiftFileBackend extends FileBackendStore {
 	 * @see FileBackendStore::__construct()
 	 * Additional $config params include:
 	 *   - swiftAuthUrl       : Swift authentication server URL
-	 *   - swiftUser          : Swift user used by MediaWiki (account:username)
+	 *   - swiftwiki_User          : Swift user used by MediaWiki (account:username)
 	 *   - swiftKey           : Swift authentication key for the above user
 	 *   - swiftAuthTTL       : Swift authentication TTL (seconds)
-	 *   - swiftAnonUser      : Swift user used for end-user requests (account:username).
+	 *   - swiftAnonwiki_User      : Swift user used for end-user requests (account:username).
 	 *                          If set, then views of public containers are assumed to go
 	 *                          through this user. If not set, then public containers are
 	 *                          accessible to unauthenticated requests via ".r:*" in the ACL.
@@ -92,7 +92,7 @@ class SwiftFileBackend extends FileBackendStore {
 		}
 		// Required settings
 		$this->auth = new CF_Authentication(
-			$config['swiftUser'],
+			$config['swiftwiki_User'],
 			$config['swiftKey'],
 			null, // account; unused
 			$config['swiftAuthUrl']
@@ -101,8 +101,8 @@ class SwiftFileBackend extends FileBackendStore {
 		$this->authTTL = isset( $config['swiftAuthTTL'] )
 			? $config['swiftAuthTTL']
 			: 5 * 60; // some sane number
-		$this->swiftAnonUser = isset( $config['swiftAnonUser'] )
-			? $config['swiftAnonUser']
+		$this->swiftAnonwiki_User = isset( $config['swiftAnonwiki_User'] )
+			? $config['swiftAnonwiki_User']
 			: '';
 		$this->shardViaHashLevels = isset( $config['shardViaHashLevels'] )
 			? $config['shardViaHashLevels']
@@ -678,11 +678,11 @@ class SwiftFileBackend extends FileBackendStore {
 			// NoSuchContainerException not thrown: container must exist
 
 			// Make container public to end-users...
-			if ( $this->swiftAnonUser != '' ) {
+			if ( $this->swiftAnonwiki_User != '' ) {
 				$status->merge( $this->setContainerAccess(
 					$contObj,
-					array( $this->auth->username, $this->swiftAnonUser ), // read
-					array( $this->auth->username, $this->swiftAnonUser ) // write
+					array( $this->auth->username, $this->swiftAnonwiki_User ), // read
+					array( $this->auth->username, $this->swiftAnonwiki_User ) // write
 				) );
 			} else {
 				$status->merge( $this->setContainerAccess(

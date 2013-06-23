@@ -29,7 +29,7 @@
  *
  * @ingroup API
  */
-class ApiQueryUserInfo extends ApiQueryBase {
+class ApiQuerywiki_UserInfo extends ApiQueryBase {
 
 	private $prop = array();
 
@@ -45,11 +45,11 @@ class ApiQueryUserInfo extends ApiQueryBase {
 			$this->prop = array_flip( $params['prop'] );
 		}
 
-		$r = $this->getCurrentUserInfo();
+		$r = $this->getCurrentwiki_UserInfo();
 		$result->addValue( 'query', $this->getModuleName(), $r );
 	}
 
-	protected function getCurrentUserInfo() {
+	protected function getCurrentwiki_UserInfo() {
 		global $wgHiddenPrefs;
 		$user = $this->getUser();
 		$result = $this->getResult();
@@ -86,7 +86,7 @@ class ApiQueryUserInfo extends ApiQueryBase {
 		}
 
 		if ( isset( $this->prop['rights'] ) ) {
-			// User::getRights() may return duplicate values, strip them
+			// wiki_User::getRights() may return duplicate values, strip them
 			$vals['rights'] = array_values( array_unique( $user->getRights() ) );
 			$result->setIndexedTagName( $vals['rights'], 'r' );	// even if empty
 		}

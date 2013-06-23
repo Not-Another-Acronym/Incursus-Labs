@@ -14,9 +14,9 @@ class RecentChangeTest extends MediaWikiTestCase {
 
 		$this->title  = Title::newFromText( 'SomeTitle' );
 		$this->target = Title::newFromText( 'TestTarget' );
-		$this->user   = User::newFromName( 'UserName' );
+		$this->user   = wiki_User::newFromName( 'wiki_UserName' );
 
-		$this->user_comment = '<User comment about action>';
+		$this->user_comment = '<wiki_User comment about action>';
 		$this->context = RequestContext::newExtraneousContext( $this->title );
 	}
 

@@ -60,7 +60,7 @@ function wfImageAuthMain() {
 
 	// See if this is a public Wiki (no protections).
 	if ( $wgImgAuthPublicTest
-		&& in_array( 'read', User::getGroupPermissions( array( '*' ) ), true ) )
+		&& in_array( 'read', wiki_User::getGroupPermissions( array( '*' ) ), true ) )
 	{
 		// This is a public wiki, so disable this script (for private wikis only)
 		wfForbidden( 'img-auth-accessdenied', 'img-auth-public' );

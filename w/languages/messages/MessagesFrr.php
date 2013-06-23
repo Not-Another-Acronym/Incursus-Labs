@@ -18,7 +18,7 @@ $fallback = 'de';
 $linkTrail = '/^([a-zäöüßåāđē]+)(.*)$/sDu';
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Linke unerstrike:',
 'tog-justify' => 'Täkst ås blokseeting',
 'tog-hideminor' => 'Latje änringe fersteege',
@@ -363,7 +363,7 @@ Grün foon e späre: $1',
 
 Jü sid as möölikerwise tuninte mååged unti ferschääwen wörden.
 
-Wan dåt ai di fål as, hääst dü eewäntuäl en fäägel önj e software fünen. Mäld dåt hål en  [[Special:ListUsers/sysop|administrator]] unner nååming foon jü URL.',
+Wan dåt ai di fål as, hääst dü eewäntuäl en fäägel önj e software fünen. Mäld dåt hål en  [[Special:Listwiki_Users/sysop|administrator]] unner nååming foon jü URL.',
 'missingarticle-rev' => '(Färsjoonsnumer: $1)',
 'missingarticle-diff' => '(Ferschääl twasche färsjoone: $1, $2)',
 'readonly_lag' => 'Jü dootebånk wörd automaatisch for schriwtugraawe späred, deerma da ferdiiljde dootebånke (slaves) jam ma di hooddootebånksärwer (master) oufglike koone.',
@@ -412,7 +412,7 @@ $2',
 'customjsprotected' => 'Dü mutst detheer JavaScript sidj ei bewerke, auer det hoker ööders hiart.',
 'ns-specialprotected' => 'Spetsjåålside koone ai beårbed wårde.',
 'titleprotected' => 'En sid ma dideer noome koon ai önjläid wårde.
-Jü späre wörd döör [[User:$1|$1]] ma grün "$2" inruchted.',
+Jü späre wörd döör [[wiki_User:$1|$1]] ma grün "$2" inruchted.',
 'filereadonlyerror' => 'Det datei „$1“ koon ei feranert wurd, auer uun det fertiaknis „$2“ bluas leesen wurd koon.
 Di grünj faan di administraator as: „$3“.',
 'invalidtitle-knownnamespace' => 'Ferkiard auerskraft uun di nöömrüm „$2“ an tekst „$3“',
@@ -428,7 +428,7 @@ Di grünj faan di administraator as: „$3“.',
 # Login and logout pages
 'logouttext' => "'''Dü bast nü oufmälded.'''
 
-Dü koost {{SITENAME}} nü anonüüm widerbrüke, unti de wider uner diseelew unti en oudern brükernoome [[Special:UserLogin|önjmälde]].
+Dü koost {{SITENAME}} nü anonüüm widerbrüke, unti de wider uner diseelew unti en oudern brükernoome [[Special:wiki_UserLogin|önjmälde]].
 Påås aw, dåt hu side nuch wise koone, dåt dü önjmälded bast, sülung dü ai dan browsercache lääsimååged heest.",
 'welcomecreation' => '== Wäljkiimen, $1! ==
 
@@ -473,7 +473,7 @@ Wees sü gödj än aktiwiir da än fersäk dåt wider.',
 'loginsuccesstitle' => 'Önjmälding erfolchrik',
 'loginsuccess' => "'''Dü bast nü ås „$1“ bai {{SITENAME}} önjmälded.'''",
 'nosuchuser' => 'Di brükernoome „$1“ bestoont ai.
-Präiw jü schriwwise (grut-/latjschriwing beåchte) unti [[Special:UserLogin/signup|mäld de ås naie brüker önj]].',
+Präiw jü schriwwise (grut-/latjschriwing beåchte) unti [[Special:wiki_UserLogin/signup|mäld de ås naie brüker önj]].',
 'nosuchusershort' => 'Deer as nåån brüker ma noome  "$1".
 Präiw din ruchtschriwing.',
 'nouserspecified' => 'Dü schäät en brükernoome spesifisiire.',
@@ -667,7 +667,7 @@ Dåt koon ferschääwen unti wächhååld weese, wilt dü jü sid bekiikedest.',
 'loginreqlink' => 'Önjmälde',
 'loginreqpagetext' => 'Dü möist $1 am oudere side tu bekiiken.',
 'accmailtitle' => 'Pååsuurd sånd.',
-'accmailtext' => "En tufäli generiird pååsuurd for [[User talk:$1|$1]] wörd tu $2 fersånd.
+'accmailtext' => "En tufäli generiird pååsuurd for [[wiki_User talk:$1|$1]] wörd tu $2 fersånd.
 
 Dåt pååsuurd for jüdeer nai benjüterkonto koon aw e spetsjoolsid ''[[Special:ChangePassword|Pååsuurd änre]]'' änred wårde.",
 'newarticle' => '(Nai)',
@@ -675,7 +675,7 @@ Dåt pååsuurd for jüdeer nai benjüterkonto koon aw e spetsjoolsid ''[[Specia
 Am jü sid tu måågen, dreeg dan täkst önj e unerstönjene box in (sii jü
 [[{{MediaWiki:Helppage}}|heelpsid]] for mör informasjoon).
 Bast üt fersiien heer, klik di '''tubääg'''-klänkfläche foon dan browser.",
-'anontalkpagetext' => "----''Üüb detheer sidj könst dü en ünbekäänden brüker en nooracht du. Det lääpt auer sin IP adres. IP adresen kön faan flook brükern brükt wurd. Wan dü mä detheer nooracht niks began könst, do as det ferlicht för hoker ööders mend weesen. Dü säärst niks widjer onernem. Wan dü en aanj [[Special:UserLogin/signup|brükerkonto iinrachst]] of di [[Special:UserLogin|uunmeldest]], komt sowat ei weder föör.",
+'anontalkpagetext' => "----''Üüb detheer sidj könst dü en ünbekäänden brüker en nooracht du. Det lääpt auer sin IP adres. IP adresen kön faan flook brükern brükt wurd. Wan dü mä detheer nooracht niks began könst, do as det ferlicht för hoker ööders mend weesen. Dü säärst niks widjer onernem. Wan dü en aanj [[Special:wiki_UserLogin/signup|brükerkonto iinrachst]] of di [[Special:wiki_UserLogin|uunmeldest]], komt sowat ei weder föör.",
 'noarticletext' => 'Jüdeer sid önjhålt uugenblaklik nuch nån täkst.
 Dü koost dideere tiitel aw da ouder side [[Special:Search/{{PAGENAME}}|säke]],
 <span class="plainlinks">önj da deertuhiirende [{{fullurl:{{#special:Log}}|page={{FULLPAGENAMEE}}}} logböke säke] unti jüdeer sid [{{fullurl:{{FULLPAGENAME}}|action=edit}} beårbe]</span>.',
@@ -714,13 +714,13 @@ Det sidj as oober noch ei seekert!",
 'previewconflict' => 'Dideer forbekiik jeeft di inhålt foon dåt boowerst takstfälj wider. Sü wårt jü sid ütsiinj, wan dü nü spiikerst.',
 'session_fail_preview' => "'''Din werk küd ei ufseekert wurd, diar as wat skiaf gingen.'''
 Fersjük det man noch ans an trak do üüb ''Sid spiikre''.
-Wan't do imer noch ei loket, [[Special:UserLogout|melde di uf]] an weder uun.",
+Wan't do imer noch ei loket, [[Special:wiki_UserLogout|melde di uf]] an weder uun.",
 'session_fail_preview_html' => "'''Din werk küd ei seekert wurd. Diar as wat skiaf gingen.'''
 
 ''Uun {{SITENAME}} as HTML aktiwiaret, an diaram as JavaScript deaktiwiaret wurden.''
 
 Fersjük det man noch ans an trak do üüb ''Sid spiikre''.
-Wan't do imer noch ei loket, [[Special:UserLogout|melde di uf]] an weder uun.",
+Wan't do imer noch ei loket, [[Special:wiki_UserLogout|melde di uf]] an weder uun.",
 'token_suffix_mismatch' => "'''Din werk küd ei ufseekert wurd, auer diar frääm tiaken uun san.'''
 
 Det komt flooksis föör, wan Dan anonym Proxy-siinst ei rocht werket.",
@@ -768,7 +768,7 @@ Uun't logbuk stäänt muar diartu:",
 'hiddencategories' => 'Jüdeer sid as lasmoot foon {{PLURAL:$1|1 ferstäägen kategorii|$1 ferstäägene kategoriie}}:',
 'nocreatetitle' => 'Det maagin faan nei sidjen as ei saner aanj mögelk.',
 'nocreatetext' => 'Aw {{SITENAME}} wörd dåt måågen foon naie side begränsed.
-Dü koost bestönjene side änre unti de [[Special:UserLogin|önjmälde unti mååg en account]].',
+Dü koost bestönjene side änre unti de [[Special:wiki_UserLogin|önjmälde unti mååg en account]].',
 'nocreate-loggedin' => 'Dü heest niinj beruchtiging, naie side tu måågen.',
 'sectioneditnotsupported-title' => 'Jü beårbing foon oufsnaase wårt ai unerstüted',
 'sectioneditnotsupported-text' => 'Jü beårbing foon oufsnaase wårt aw jüdeer beårbingssid ai stiped.',
@@ -815,11 +815,11 @@ Deer {{PLURAL:$2|mötj ai mör ås 1 apteel|mönje ai mör ås $1 apteele}} wees
 Luke oner, of dü det uk würelk du wel, an do seekre din feranrangen.',
 'undo-failure' => 'Jü änring köö ai tunintemååged wårde, deer di bedrååwede oufsnaas intwasche feränred wörd.',
 'undo-norev' => 'Jü beårbing köö ai tunintemååged wårde, deer jü ai bestoont unti sleeked wörd.',
-'undo-summary' => 'Änring $1 foon [[Special:Contributions/$2|$2]] ([[User talk:$2|Diskusjoon]]) tunintemååged.',
+'undo-summary' => 'Änring $1 foon [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Diskusjoon]]) tunintemååged.',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'Benjüterkonto köö ai mååged wårde',
-'cantcreateaccount-text' => "Dår måågen foon en brükerkonto foon jü IP-adräs '''($1)''' üt wörd döör [[User:$3|$3]] späred.
+'cantcreateaccount-text' => "Dår måågen foon en brükerkonto foon jü IP-adräs '''($1)''' üt wörd döör [[wiki_User:$3|$3]] späred.
 
 Grün foon jü späre: ''$2''",
 
@@ -1077,7 +1077,7 @@ Dü könst det uun't [{{fullurl:{{#Special:Log}}/delete|page={{FULLPAGENAMEE}}}}
 'mypreferences' => 'Iinstelangen',
 'prefs-edits' => 'Taal faan feranrangen:',
 'prefsnologin' => 'Ai önjmälded',
-'prefsnologintext' => 'Dü skel <span class="plainlinks">[{{fullurl:{{#special:UserLogin}}|returnto=$1}} uunmeldet]</span> wees, am din iinstelangen tu feranrin.',
+'prefsnologintext' => 'Dü skel <span class="plainlinks">[{{fullurl:{{#special:wiki_UserLogin}}|returnto=$1}} uunmeldet]</span> wees, am din iinstelangen tu feranrin.',
 'changepassword' => 'Pååsuurd änre',
 'prefs-skin' => 'Skak',
 'skin-preview' => 'Forlök',
@@ -1185,16 +1185,16 @@ Do san jo ual iinstelangen wech.',
 'prefs-displaywatchlist' => "Mögelkhaiden för't uunwisin",
 'prefs-diffs' => 'Ferskeel',
 
-# User preference: e-mail validation using jQuery
+# wiki_User preference: e-mail validation using jQuery
 'email-address-validity-valid' => 'Detdiar E-Mail-adres schocht gud ütj.',
 'email-address-validity-invalid' => 'Du en echt E-Mail-adres uun.',
 
-# User rights
+# wiki_User rights
 'userrights' => 'Brükerrochten bewerke',
 'userrights-lookup-user' => 'Brükersköölen bewerke',
 'userrights-user-editname' => 'Brükernööm:',
 'editusergroup' => 'Brükersköölen bewerke',
-'editinguser' => "Brükerrochten faan '''[[User:$1|$1]]''' $2 feranre",
+'editinguser' => "Brükerrochten faan '''[[wiki_User:$1|$1]]''' $2 feranre",
 'userrights-editusergroup' => 'Lasmootskap tu brükersköölen bewerke',
 'saveusergroups' => 'Brükersköölen seekre',
 'userrights-groupsmember' => 'Lasmoot faan:',
@@ -1206,7 +1206,7 @@ Do san jo ual iinstelangen wech.',
 'userrights-reason' => 'Grünj:',
 'userrights-no-interwiki' => 'Dü heest ei det rocht, am brükerrochten uun ööder wikis tu feranrin.',
 'userrights-nodatabase' => 'Det dootenbeenk $1 jaft at ei, tumanst ei lokaal.',
-'userrights-nologin' => 'Dü mutst di mä en administraator-brükerkonto [[Special:UserLogin|uunmelde]], wan dü brükerrochten feranre wel.',
+'userrights-nologin' => 'Dü mutst di mä en administraator-brükerkonto [[Special:wiki_UserLogin|uunmelde]], wan dü brükerrochten feranre wel.',
 'userrights-notallowed' => 'Dü heest ei det rocht, am brükerrochten tu feranrin.',
 'userrights-changeable-col' => 'Lasmootskapen, diar dü feranre könst',
 'userrights-unchangeable-col' => 'Lasmootskapen, diar dü ei feranre könst',
@@ -1264,7 +1264,7 @@ Do san jo ual iinstelangen wech.',
 'right-browsearchive' => 'Sjük stregen sidjen',
 'right-sendemail' => 'E-mails tu oudere brükere schake',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Ruchte-logbök',
 'rightsnone' => '(-)',
 
@@ -1329,7 +1329,7 @@ Do san jo ual iinstelangen wech.',
 'upload' => 'Huuchschake',
 'uploadbtn' => 'Datei huuchsjüür',
 'uploadnologin' => 'Ai önjmälded',
-'uploadnologintext' => 'Dü möist [[Special:UserLogin|önjmälded weese]], am dat dü dootäie huuchsiinje koost.',
+'uploadnologintext' => 'Dü möist [[Special:wiki_UserLogin|önjmälded weese]], am dat dü dootäie huuchsiinje koost.',
 'upload_directory_missing' => 'Dåt aplees-fertiiknis ($1) breecht än köö ai foon di wäbsärwer mååged wårde.',
 'upload_directory_read_only' => 'Dåt aplees-fertiiknis ($1) koon ai foon e wäbsärver beschraawen wårde.',
 'uploaderror' => 'Aplees-fäägel',
@@ -1628,7 +1628,7 @@ $1",
 'change-blocklink' => 'Späring änre',
 'contribslink' => 'tujeefte',
 'emaillink' => 'e-mail schake',
-'autoblocker' => 'Automatische spär, deer dü en gemiinsoom IP-adräs ma [[User:$1|brüker:$1]] brükst. Grün foon brükerspär: „$2“.',
+'autoblocker' => 'Automatische spär, deer dü en gemiinsoom IP-adräs ma [[wiki_User:$1|brüker:$1]] brükst. Grün foon brükerspär: „$2“.',
 'blocklogpage' => 'Brükerspär-logbök',
 'blocklogentry' => 'spärd „[[$1]]“ for di tidrüm: $2 $3',
 'reblock-logentry' => 'änerd jü spär for „[[$1]]“ for di tidrüm: $2 $3',

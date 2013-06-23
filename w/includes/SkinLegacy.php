@@ -28,7 +28,7 @@ class SkinLegacy extends SkinTemplate {
 	 * Add skin specific stylesheets
 	 * @param $out OutputPage
 	 */
-	function setupSkinUserCss( OutputPage $out ) {
+	function setupSkinwiki_UserCss( OutputPage $out ) {
 		$out->addModuleStyles( 'mediawiki.legacy.shared' );
 		$out->addModuleStyles( 'mediawiki.legacy.oldshared' );
 	}
@@ -62,11 +62,11 @@ class SkinLegacy extends SkinTemplate {
 	}
 
 	function qbSetting() {
-		global $wgUser;
+		global $wgwiki_User;
 		if ( $this->isQuickbarSuppressed() ) {
 			return 0;
 		}
-		$q = $wgUser->getOption( 'quickbar', 0 );
+		$q = $wgwiki_User->getOption( 'quickbar', 0 );
 		if( $q == 5 ) {
 			# 5 is the default, which chooses the setting
 			# depending on the directionality of your interface language
@@ -300,14 +300,14 @@ class LegacyTemplate extends BaseTemplate {
 	}
 
 	function bottomLinks() {
-		global $wgOut, $wgUser;
+		global $wgOut, $wgwiki_User;
 		$sep = wfMessage( 'pipe-separator' )->escaped() . "\n";
 
 		$s = '';
 		if ( $wgOut->isArticleRelated() ) {
 			$element[] = '<strong>' . $this->editThisPage() . '</strong>';
 
-			if ( $wgUser->isLoggedIn() ) {
+			if ( $wgwiki_User->isLoggedIn() ) {
 				$element[] = $this->watchThisPage();
 			}
 
@@ -322,16 +322,16 @@ class LegacyTemplate extends BaseTemplate {
 				$title->getNamespace() == NS_USER ||
 				$title->getNamespace() == NS_USER_TALK
 			) {
-				$id = User::idFromName( $title->getText() );
-				$ip = User::isIP( $title->getText() );
+				$id = wiki_User::idFromName( $title->getText() );
+				$ip = wiki_User::isIP( $title->getText() );
 
 				# Both anons and non-anons have contributions list
 				if ( $id || $ip ) {
 					$element[] = $this->userContribsLink();
 				}
 
-				if ( $this->getSkin()->showEmailUser( $id ) ) {
-					$element[] = $this->emailUserLink();
+				if ( $this->getSkin()->showEmailwiki_User( $id ) ) {
+					$element[] = $this->emailwiki_UserLink();
 				}
 			}
 
@@ -341,15 +341,15 @@ class LegacyTemplate extends BaseTemplate {
 				$s .= "\n<br />";
 
 				// Delete/protect/move links for privileged users
-				if ( $wgUser->isAllowed( 'delete' ) ) {
+				if ( $wgwiki_User->isAllowed( 'delete' ) ) {
 					$s .= $this->deleteThisPage();
 				}
 
-				if ( $wgUser->isAllowed( 'protect' ) ) {
+				if ( $wgwiki_User->isAllowed( 'protect' ) ) {
 					$s .= $sep . $this->protectThisPage();
 				}
 
-				if ( $wgUser->isAllowed( 'move' ) ) {
+				if ( $wgwiki_User->isAllowed( 'move' ) ) {
 					$s .= $sep . $this->moveThisPage();
 				}
 			}
@@ -423,7 +423,7 @@ class LegacyTemplate extends BaseTemplate {
 	}
 
 	function pageTitleLinks() {
-		global $wgOut, $wgUser, $wgRequest, $wgLang;
+		global $wgOut, $wgwiki_User, $wgRequest, $wgLang;
 
 		$oldid = $wgRequest->getVal( 'oldid' );
 		$diff = $wgRequest->getVal( 'diff' );
@@ -465,19 +465,19 @@ class LegacyTemplate extends BaseTemplate {
 			);
 		}
 
-		if ( $wgUser->getNewtalk() ) {
+		if ( $wgwiki_User->getNewtalk() ) {
 			# do not show "You have new messages" text when we are viewing our
 			# own talk page
-			if ( !$title->equals( $wgUser->getTalkPage() ) ) {
+			if ( !$title->equals( $wgwiki_User->getTalkPage() ) ) {
 				$tl = Linker::linkKnown(
-					$wgUser->getTalkPage(),
+					$wgwiki_User->getTalkPage(),
 					wfMessage( 'newmessageslink' )->escaped(),
 					array(),
 					array( 'redirect' => 'no' )
 				);
 
 				$dl = Linker::linkKnown(
-					$wgUser->getTalkPage(),
+					$wgwiki_User->getTalkPage(),
 					wfMessage( 'newmessagesdifflink' )->escaped(),
 					array(),
 					array( 'diff' => 'cur' )
@@ -563,9 +563,9 @@ class LegacyTemplate extends BaseTemplate {
 			$s = wfMessage( 'protectedpage' )->text();
 		} else {
 			$title = $this->getSkin()->getTitle();
-			if ( $title->quickUserCan( 'edit' ) && $title->exists() ) {
+			if ( $title->quickwiki_UserCan( 'edit' ) && $title->exists() ) {
 				$t = wfMessage( 'editthispage' )->text();
-			} elseif ( $title->quickUserCan( 'create' ) && !$title->exists() ) {
+			} elseif ( $title->quickwiki_UserCan( 'create' ) && !$title->exists() ) {
 				$t = wfMessage( 'create-this-page' )->text();
 			} else {
 				$t = wfMessage( 'viewsource' )->text();
@@ -583,12 +583,12 @@ class LegacyTemplate extends BaseTemplate {
 	}
 
 	function deleteThisPage() {
-		global $wgUser, $wgRequest;
+		global $wgwiki_User, $wgRequest;
 
 		$diff = $wgRequest->getVal( 'diff' );
 		$title = $this->getSkin()->getTitle();
 
-		if ( $title->getArticleID() && ( !$diff ) && $wgUser->isAllowed( 'delete' ) ) {
+		if ( $title->getArticleID() && ( !$diff ) && $wgwiki_User->isAllowed( 'delete' ) ) {
 			$t = wfMessage( 'deletethispage' )->text();
 
 			$s = Linker::linkKnown(
@@ -605,12 +605,12 @@ class LegacyTemplate extends BaseTemplate {
 	}
 
 	function protectThisPage() {
-		global $wgUser, $wgRequest;
+		global $wgwiki_User, $wgRequest;
 
 		$diff = $wgRequest->getVal( 'diff' );
 		$title = $this->getSkin()->getTitle();
 
-		if ( $title->getArticleID() && ( ! $diff ) && $wgUser->isAllowed( 'protect' ) ) {
+		if ( $title->getArticleID() && ( ! $diff ) && $wgwiki_User->isAllowed( 'protect' ) ) {
 			if ( $title->isProtected() ) {
 				$text = wfMessage( 'unprotectthispage' )->text();
 				$query = array( 'action' => 'unprotect' );
@@ -633,25 +633,25 @@ class LegacyTemplate extends BaseTemplate {
 	}
 
 	function watchThisPage() {
-		global $wgOut, $wgUser;
+		global $wgOut, $wgwiki_User;
 		++$this->mWatchLinkNum;
 
 		// Cache
 		$title = $this->getSkin()->getTitle();
 
 		if ( $wgOut->isArticleRelated() ) {
-			if ( $wgUser->isWatched( $title ) ) {
+			if ( $wgwiki_User->isWatched( $title ) ) {
 				$text = wfMessage( 'unwatchthispage' )->text();
 				$query = array(
 					'action' => 'unwatch',
-					'token' => UnwatchAction::getUnwatchToken( $title, $wgUser ),
+					'token' => UnwatchAction::getUnwatchToken( $title, $wgwiki_User ),
 				);
 				$id = 'mw-unwatch-link' . $this->mWatchLinkNum;
 			} else {
 				$text = wfMessage( 'watchthispage' )->text();
 				$query = array(
 					'action' => 'watch',
-					'token' => WatchAction::getWatchToken( $title, $wgUser ),
+					'token' => WatchAction::getWatchToken( $title, $wgwiki_User ),
 				);
 				$id = 'mw-watch-link' . $this->mWatchLinkNum;
 			}
@@ -670,7 +670,7 @@ class LegacyTemplate extends BaseTemplate {
 	}
 
 	function moveThisPage() {
-		if ( $this->getSkin()->getTitle()->quickUserCan( 'move' ) ) {
+		if ( $this->getSkin()->getTitle()->quickwiki_UserCan( 'move' ) ) {
 			return Linker::linkKnown(
 				SpecialPage::getTitleFor( 'Movepage' ),
 				wfMessage( 'movethispage' )->text(),
@@ -706,7 +706,7 @@ class LegacyTemplate extends BaseTemplate {
 		);
 	}
 
-	function emailUserLink() {
+	function emailwiki_UserLink() {
 		return Linker::linkKnown(
 			SpecialPage::getTitleFor( 'Emailuser', $this->getSkin()->getTitle()->getDBkey() ),
 			wfMessage( 'emailuser' )->escaped()
@@ -821,16 +821,16 @@ class LegacyTemplate extends BaseTemplate {
 	}
 
 	function nameAndLogin() {
-		global $wgUser, $wgLang, $wgRequest;
+		global $wgwiki_User, $wgLang, $wgRequest;
 
 		$returnTo = $this->getSkin()->getTitle();
 		$ret = '';
 
-		if ( $wgUser->isAnon() ) {
+		if ( $wgwiki_User->isAnon() ) {
 			if ( $this->getSkin()->showIPinHeader() ) {
 				$name = $wgRequest->getIP();
 
-				$talkLink = Linker::link( $wgUser->getTalkPage(),
+				$talkLink = Linker::link( $wgwiki_User->getTalkPage(),
 					$wgLang->getNsText( NS_TALK ) );
 				$talkLink = wfMessage( 'parentheses' )->rawParams( $talkLink )->escaped();
 
@@ -841,28 +841,28 @@ class LegacyTemplate extends BaseTemplate {
 
 			$query = array();
 
-			if ( !$returnTo->isSpecial( 'Userlogout' ) ) {
+			if ( !$returnTo->isSpecial( 'wiki_Userlogout' ) ) {
 				$query['returnto'] = $returnTo->getPrefixedDBkey();
 			}
 
-			$loginlink = $wgUser->isAllowed( 'createaccount' )
+			$loginlink = $wgwiki_User->isAllowed( 'createaccount' )
 				? 'nav-login-createaccount'
 				: 'login';
 			$ret .= "\n<br />" . Linker::link(
-				SpecialPage::getTitleFor( 'Userlogin' ),
+				SpecialPage::getTitleFor( 'wiki_Userlogin' ),
 				wfMessage( $loginlink )->text(), array(), $query
 			);
 		} else {
-			$talkLink = Linker::link( $wgUser->getTalkPage(),
+			$talkLink = Linker::link( $wgwiki_User->getTalkPage(),
 				$wgLang->getNsText( NS_TALK ) );
 			$talkLink = wfMessage( 'parentheses' )->rawParams( $talkLink )->escaped();
 
-			$ret .= Linker::link( $wgUser->getUserPage(),
-				htmlspecialchars( $wgUser->getName() ) );
+			$ret .= Linker::link( $wgwiki_User->getUserPage(),
+				htmlspecialchars( $wgwiki_User->getName() ) );
 			$ret .= " $talkLink<br />";
 			$ret .= $wgLang->pipeList( array(
 				Linker::link(
-					SpecialPage::getTitleFor( 'Userlogout' ), wfMessage( 'logout' )->text(),
+					SpecialPage::getTitleFor( 'wiki_Userlogout' ), wfMessage( 'logout' )->text(),
 					array(), array( 'returnto' => $returnTo->getPrefixedDBkey() )
 				),
 				Linker::specialLink( 'Preferences' ),

@@ -19,7 +19,7 @@
  */
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Joṛaoko latarre dag udugoḱma:',
 'tog-justify' => 'Olaḱ kạli mońjte sajao:',
 'tog-hideminor' => 'Nitaḱ bodolaḱre huḍiṅ kạmi danaṅme',
@@ -351,7 +351,7 @@ Sasetić do noa kathae roṛ keda: $1',
 'missing-article' => '"$1" $2 noa ńutumanaḱ sakhiyạ̣t sakamre olakanaḱ do bań ṅamoka.
 Noa hoy renaḱ karon do hoyoḱkana cabak tạrik pharak se noare joṛao sakam do get́ giḍi akana.
 Judi noa do karon bań hoylen khan, noa do am sopṭoyer re kạtićtem ńam daṛeyaḱa.
-Daya katet́ noa do nonde [[Special:ListUsers/sysop|administrator]],  ṭhen lạime, URL hotete.',
+Daya katet́ noa do nonde [[Special:Listwiki_Users/sysop|administrator]],  ṭhen lạime, URL hotete.',
 'missingarticle-rev' => '(Nãwã aro#: $1)',
 'missingarticle-diff' => '(Pharak: $1, $2)',
 'readonly_lag' => 'Ḍaṭabes do aćhote tege bondo hoe akana, je lekate udhin reaḱ ḍaṭabes sarvarkor mukhiạ ḍaṭabes sarvar lekate heć daṛeaḱ.',
@@ -438,7 +438,7 @@ Ale do baḍae ocolem amaḱ kuki doe kạmikana, sakam do arhõ rakaṕ lạgit
 'loginsuccess' => '\'\'\'Am do nitge "$1" ńutumte {{SITENAME}} rem bolo akana.',
 'nosuchuser' => '"$1" ńutuman jahan beoharić bạnuea.
 Beoharićaḱ ńutum do bukṛogea.
-Amaḱ bananko ńelmẽ, se [[Special:Userlogin/signup nãwã mit́ṭen ekaunṭ tearmẽ]].',
+Amaḱ bananko ńelmẽ, se [[Special:wiki_Userlogin/signup nãwã mit́ṭen ekaunṭ tearmẽ]].',
 'nosuchusershort' => '"$1" ńutuman jahãe beoharko do banuḱkoa. Ńutum reaḱ banan biḍaomẽ.',
 'nouserspecified' => 'Am do pusṭaote laṛcaṛićaḱ ńutum em hoyoḱtama.',
 'login-userblocked' => 'Nui laṛcaṛic doe esetgea. bhitri boloḱ ạidạri bań emoḱ kana.',
@@ -564,7 +564,7 @@ Amaḱ IP ṭhikana do noa sakam sompadon jạṛre rekorḍoḱa.",
 'loginreqlink' => 'Bhitri boloḱ',
 'loginreqpagetext' => 'Eṭagaḱ sakamko ńel lạgit́te do am $1 hoyoḱ jạruṛtama.',
 'accmailtitle' => 'Uku nambar do kulena.',
-'accmailtext' => '[[User talk:$1 $1]] lạgit́te aćte benaoen uku nambar do $2 kul hoena.
+'accmailtext' => '[[wiki_User talk:$1 $1]] lạgit́te aćte benaoen uku nambar do $2 kul hoena.
 Bhitri bolo kateḱ noa nãwã ekaunṭ lạgit uku nambar "[[Special:ChangePassword Change password]]" sakam khonem bodol daṛyakya.',
 'newarticle' => '(Nãwa)',
 'newarticletext' => "Am do oka mitṭen joṛaoem pańja akada, onaṭak do bạnuḱa.
@@ -776,11 +776,11 @@ Unuduḱ: '''({{int:cur}})''' = nahaḱ nãwã aroeko saõte tulạo, '''({{int:
 'prefs-help-email-others' => 'Am são e-mail hotete jogajog dohoy lạgitte mitṭen joṛao se amaḱ katha roṛaḱ sakam bachao jońme.
 Amaḱ e-mail ṭhikạna do bań cabaḱa tinre onko do ko beohara',
 
-# User preference: e-mail validation using jQuery
+# wiki_User preference: e-mail validation using jQuery
 'email-address-validity-valid' => 'E-mail ṭhikạna do jewetge ńamena',
 'email-address-validity-invalid' => 'Amaḱ jewet e-mail ṭhkạna emmẽ',
 
-# User rights
+# wiki_User rights
 'userrights' => 'Beoharićaḱ laṛcaṛ ektiạrko',
 'userrights-lookup-user' => 'Beoharkoaḱ gãotako laṛcaṛ',
 'userrights-user-editname' => 'Beoharićaḱ ńutum emmẽ',
@@ -935,7 +935,7 @@ Noa reaḱ pasnao katha [$2 rẽt pasnao sakam] latare emena',
 # Special:LinkSearch
 'linksearch-line' => '$2 khon $1 re joṛao hoeakana',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusers-submit' => 'Udugmẽ',
 'listusers-blocked' => '(Esetgea)',
 

@@ -28,7 +28,7 @@
  * Look for duplicate user table entries and optionally prune them.
  * @ingroup Maintenance
  */
-class UserDupes {
+class wiki_UserDupes {
 	var $db;
 	var $reassigned;
 	var $trimmed;

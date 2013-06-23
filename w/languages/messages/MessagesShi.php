@@ -13,7 +13,7 @@
  */
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'krrj du izdayn:',
 'tog-justify' => 'skr lɛrd n-stor ɣ togzimin aygiddi',
 'tog-hideminor' => 'Ḥbu imbddl imaynutn lli fssusnin.',
@@ -341,7 +341,7 @@ ghikad artitsbib  igh itabaa lfrq aqdim nghd tarikh artawi skra nsfha ityohyadn.
 
 ighor iga lhal ghika ati ran taft kra lkhata gh lbarnamaj.
 
-ini mayad ikra [[Special:ListUsers/sysop|lmodir]] tfktas ladriss ntwriqt an.',
+ini mayad ikra [[Special:Listwiki_Users/sysop|lmodir]] tfktas ladriss ntwriqt an.',
 'missingarticle-rev' => '(lmorajaaa#: $1)',
 'missingarticle-diff' => '(lfarq: $1, $2)',
 'internalerror' => 'khata ghogns',
@@ -400,7 +400,7 @@ lcont nek  tuyskar .
 'loginsuccess' => 'Tllit ɣilad ɣ ifalan (tzdit d tuqqna) {{GENDER:$1|||}} ar {{SITENAME}} zund « $1 ».',
 'nosuchuser' => 'Asqdac « $1 » ur illi.
 Ussaɣ n isqdacn ḥiln hlli.
-Ẓṛ daɣ ist turit mzyan mayad, niɣd [[Special:UserLogin/signup|tmmurẓmt amiḍan amaynu]].',
+Ẓṛ daɣ ist turit mzyan mayad, niɣd [[Special:wiki_UserLogin/signup|tmmurẓmt amiḍan amaynu]].',
 'nosuchusershort' => 'Ur illa umsaws lli ilan assaɣ « $1 ». Ẓṛ ist turit mzyan mayad.',
 'nouserspecified' => 'Illa fllak ad tarat assaɣ nk.',
 'login-userblocked' => 'Asqdac ad ur as yufi ad ikcm. Tazdayt ɣ ifalan uras ttuyskar',
@@ -744,7 +744,7 @@ Izdar ad urtili ɣ isbidn n mayllan ɣ {{SITENAME}} .',
 
 'grouppage-sysop' => '{{ns:project}}: Inedbalen',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Anɣmas n imbddlnn izrfan n umsqdac',
 'rightsnone' => '(ḥtta yan)',
 
@@ -807,7 +807,7 @@ Mel imbddeln z tisniwin li ittuyzdayni bla tasna li trit.',
 'reuploaddesc' => 'Sbidd asrbu d turrit',
 'upload-tryagain' => 'Ṣafḍ Anglam n ufaylu li ibudln',
 'uploadnologin' => 'Ur tmlit mat git',
-'uploadnologintext' => 'Mel zwar mat git [[Special:UserLogin|Mel mat git]] iɣ trit ad tsrbut isddawn.',
+'uploadnologintext' => 'Mel zwar mat git [[Special:wiki_UserLogin|Mel mat git]] iɣ trit ad tsrbut isddawn.',
 'upload_directory_missing' => 'Akaram n w-affay ($1) ur ittyufa d urt iskr uqadac web (serveur)',
 'uploadlogpage' => 'Anɣmis n isrbuṭn',
 'filename' => 'Assaɣ n usdaw',

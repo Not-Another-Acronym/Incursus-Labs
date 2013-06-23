@@ -55,7 +55,7 @@ $specialPageAliases = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => '下劃連結',
 'tog-justify' => '對到段落',
 'tog-hideminor' => '該朝子嗰改動弆到嗰細修改',
@@ -380,7 +380,7 @@ MySQL回到錯誤“$3: $4”。',
 通常箇係因為修訂歷史頁上頭，過時嗰連結連到刪吥嗰版面咁舞得嗰。
 
 如果不係咁，倷可能係尋到軟件裡頭嗰bug。
-請記得 URL 嗰地址，向[[Special:ListUsers/sysop|管理員]]報告。',
+請記得 URL 嗰地址，向[[Special:Listwiki_Users/sysop|管理員]]報告。',
 'missingarticle-rev' => '（修訂#: $1）',
 'missingarticle-diff' => '（差異: $1, $2）',
 'readonly_lag' => '附屬資料庫服務器拿緩存更新到主服務器，資料庫自動鎖到嘞',
@@ -423,7 +423,7 @@ $2',
 # Login and logout pages
 'logouttext' => "'''汝退出正哩。'''
 
-接到汝得匿名使用{{SITENAME}}，或[[Special:UserLogin|登入過]]。除非汝刪吥瀏覽器緩存，隻把子頁面可能會接到話汝係登入狀態。",
+接到汝得匿名使用{{SITENAME}}，或[[Special:wiki_UserLogin|登入過]]。除非汝刪吥瀏覽器緩存，隻把子頁面可能會接到話汝係登入狀態。",
 'welcomecreation' => '== 歡迎, $1! ==
 
 建正哩汝嗰帳戶，莫誺記設置 [[Special:Preferences|{{SITENAME}}嗰個人參數]]。',
@@ -570,7 +570,7 @@ $2',
 'newarticletext' => '箇係隻冇拕建立嗰頁面。
 要新開箇隻頁面，請到下首嗰方框裡頭編寫內容（望吖[[{{MediaWiki:Helppage}}|説明]]嗰細節）。
 若係汝伓係特事來到箇首，捺吖瀏覽器嗰「去還」鍵即得去還。',
-'anontalkpagetext' => "---- ''箇係匿名用戶嗰討論頁，話伓定佢哈冇開隻帳戶。別人單用得正IP地址同佢聯繫。箇隻IP地址可能有好幾隻用戶共用。如果倷係匿名用戶，覺得箇頁嗰內容同倷冇關，歡迎去[[Special:UserLogin|開隻新帳戶或登入]]，省得同別嗰匿名用戶扤混來。''",
+'anontalkpagetext' => "---- ''箇係匿名用戶嗰討論頁，話伓定佢哈冇開隻帳戶。別人單用得正IP地址同佢聯繫。箇隻IP地址可能有好幾隻用戶共用。如果倷係匿名用戶，覺得箇頁嗰內容同倷冇關，歡迎去[[Special:wiki_UserLogin|開隻新帳戶或登入]]，省得同別嗰匿名用戶扤混來。''",
 'noarticletext' => '眼下箇頁哈冇內容，汝到別嗰頁面[[Special:Search/{{PAGENAME}}|尋得正箇頁嗰標題]]，
 <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} 尋吖有關日誌]或[{{fullurl:{{FULLPAGENAME}}|action=edit}} 編寫箇頁]</span>。',
 'noarticletext-nopermission' => '眼下箇頁哈冇內容，汝可以到別嗰頁面[[Special:Search/{{PAGENAME}}|尋吖箇頁嗰標題]]，
@@ -585,12 +585,12 @@ $2',
 'note' => "'''注意:'''",
 'previewnote' => "'''請記到箇光係預覽，內容哈冇保存！'''",
 'previewconflict' => '箇隻預覽係上首文字編輯區嗰內容。倷選擇保存嗰話佢才會保存到。',
-'session_fail_preview' => "'''伓過意！箇隻段落嗰資料跌吥嘞，我俚處理伓正倷嗰編輯。請較過吖。哈係扤伓正嗰話，試得[[Special:UserLogout|退出]]後登入過。'''",
+'session_fail_preview' => "'''伓過意！箇隻段落嗰資料跌吥嘞，我俚處理伓正倷嗰編輯。請較過吖。哈係扤伓正嗰話，試得[[Special:wiki_UserLogout|退出]]後登入過。'''",
 'session_fail_preview_html' => "伓過意！相關嗰程式資料跌吥哩，我俚處理伓正汝嗰編輯。'''
 
 ''箇隻wiki開放正原HTML碼，預覽拕弆到以防止JavaScript嗰攻擊。''
 
-'''要係佢係合法編輯嗰，請較過吖。哈係扤伓正嗰話，試得[[Special:UserLogout|退出]]後登入過。'''",
+'''要係佢係合法編輯嗰，請較過吖。哈係扤伓正嗰話，試得[[Special:wiki_UserLogout|退出]]後登入過。'''",
 'token_suffix_mismatch' => "'''倷嗰用戶端嗰編輯信毀吥嘞嚸標點符號字符，噉嗰話倷嗰編輯就拕拒絕嘞。
 箇種情況通常係含到好多臭蟲、以網絡為主嗰匿名代理服務扤得。'''",
 'editing' => '編輯嘚「$1」',
@@ -631,7 +631,7 @@ $2',
 'hiddencategories' => '箇隻版面係屬於$1隻隱藏類嗰成員：',
 'edittools' => '<!--箇首嗰文本會到下底嗰編輯同上傳列表裡坨顯示。 -->',
 'nocreatetitle' => '新建頁面拕限制',
-'nocreatetext' => '箇隻網站限制新建頁面嗰功能。倷可以回頭去編輯有嘞嗰頁面，或者[[Special:UserLogin|登入或新開帳戶]]。',
+'nocreatetext' => '箇隻網站限制新建頁面嗰功能。倷可以回頭去編輯有嘞嗰頁面，或者[[Special:wiki_UserLogin|登入或新開帳戶]]。',
 'nocreate-loggedin' => '倷到 {{SITENAME}} 冇權新開頁面。',
 'permissionserrors' => '許可權錯誤',
 'permissionserrorstext' => '根據底下嗰{{PLURAL:$1|原因|原因}}，倷冇許可權去扤:',
@@ -655,7 +655,7 @@ $2',
 # "Undo" feature
 'undo-success' => '箇隻編輯可以拕取銷。請檢查吖以確定箇係倷想扤嗰，接到保存修改去完成撤銷編輯。',
 'undo-failure' => '半中嗰編輯有人挭仗，箇隻編輯伓可以拕取銷。',
-'undo-summary' => '取消由[[Special:Contributions/$2|$2]] （[[User talk:$2|對話]]）所修訂嗰 $1',
+'undo-summary' => '取消由[[Special:Contributions/$2|$2]] （[[wiki_User talk:$2|對話]]）所修訂嗰 $1',
 
 # Account creation failure
 'cantcreateaccounttitle' => '新開伓正帳戶',
@@ -816,7 +816,7 @@ $2',
 'mypreferences' => '我嗰參數設置',
 'prefs-edits' => '編輯數:',
 'prefsnologin' => '哈冇登入',
-'prefsnologintext' => '汝要<span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} 登入]</span>後才設得正個人參數。',
+'prefsnologintext' => '汝要<span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} 登入]</span>後才設得正個人參數。',
 'changepassword' => '改過密碼',
 'prefs-skin' => '皮',
 'skin-preview' => '（預覽）',
@@ -863,12 +863,12 @@ $2',
 'prefs-help-email-others' => '汝不公開自家嗰用戶身分也得通過用戶頁或用戶談詑頁跟得汝聯繫。',
 'prefs-help-email-required' => '需要電子郵件地址。',
 
-# User rights
+# wiki_User rights
 'userrights' => '用戶許可權管理',
 'userrights-lookup-user' => '管理用戶群',
 'userrights-user-editname' => '輸入用戶名:',
 'editusergroup' => '編輯用戶群',
-'editinguser' => "眼下編輯嘚用戶嗰權限 '''[[User:$1|$1]]''' （[[User talk:$1|{{int:talkpagelinktext}}]]{{int:pipe-separator}}[[Special:Contributions/$1|{{int:contribslink}}]]）",
+'editinguser' => "眼下編輯嘚用戶嗰權限 '''[[wiki_User:$1|$1]]''' （[[wiki_User talk:$1|{{int:talkpagelinktext}}]]{{int:pipe-separator}}[[Special:Contributions/$1|{{int:contribslink}}]]）",
 'userrights-editusergroup' => '編輯用戶群',
 'saveusergroups' => '存儲用戶群',
 'userrights-groupsmember' => '歸到:',
@@ -894,7 +894,7 @@ $2',
 'grouppage-sysop' => '{{ns:project}}:操作員',
 'grouppage-bureaucrat' => '{{ns:project}}:行政員',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => '用戶許可權日誌',
 'rightslogtext' => '底下記到用戶許可權嗰更改記錄。',
 'rightslogentry' => '拿 $1 嗰許可權從 $2 改到 $3',
@@ -953,7 +953,7 @@ $2',
 'uploadbtn' => '上傳檔案',
 'reuploaddesc' => '返回上傳列表。',
 'uploadnologin' => '冇登入',
-'uploadnologintext' => '倷要[[Special:UserLogin|登入]]再上傳得正檔案。',
+'uploadnologintext' => '倷要[[Special:wiki_UserLogin|登入]]再上傳得正檔案。',
 'upload_directory_read_only' => '上傳目錄（$1）伓存在或冇寫入許可權。',
 'uploaderror' => '上傳出錯',
 'uploadtext' => "用下底嗰表格上傳檔案。
@@ -1133,7 +1133,7 @@ $2',
 'statistics-edits-average' => '每頁嗰平均編輯數',
 'statistics-views-total' => '查看嗰統共數',
 'statistics-views-peredit' => '每到編輯查看數',
-'statistics-users' => '註冊過嗰[[Special:ListUsers|用戶]]',
+'statistics-users' => '註冊過嗰[[Special:Listwiki_Users|用戶]]',
 'statistics-users-active' => '活躍用戶',
 'statistics-users-active-desc' => '頭$1日操作過嗰用戶',
 'statistics-mostpopular' => '眵嗰人最多嗰頁面',
@@ -1251,7 +1251,7 @@ Also see [[Special:WantedCategories|wanted categories]].',
 'linksearch-ok' => '尋吖',
 'linksearch-line' => '$1連自$2',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => '顯示噉樣用戶條件:',
 'listusers-submit' => '顯示',
 'listusers-noresult' => '尋伓到用戶。',
@@ -1264,7 +1264,7 @@ Also see [[Special:WantedCategories|wanted categories]].',
 
 # E-mail user
 'mailnologin' => '冇email地址',
-'mailnologintext' => '倷要[[Special:UserLogin|登入]] 起同到倷嗰[[Special:Preferences|參數設置]] 有隻有效嗰email才發得正email到別嗰用戶。',
+'mailnologintext' => '倷要[[Special:wiki_UserLogin|登入]] 起同到倷嗰[[Special:Preferences|參數設置]] 有隻有效嗰email才發得正email到別嗰用戶。',
 'emailuser' => '發email到箇隻用戶',
 'emailpage' => '發email到用戶',
 'emailpagetext' => '要係箇隻用戶到佢嗰參數設置頁填哩有效嗰email位置，下底嗰表格會寄隻信息到箇隻用戶。
@@ -1290,7 +1290,7 @@ Also see [[Special:WantedCategories|wanted categories]].',
 'nowatchlist' => '倷嗰監視列表什哩都冇有。',
 'watchlistanontext' => '請$1眵吖或改吖倷嗰監視列表。',
 'watchnologin' => '冇登入',
-'watchnologintext' => '倷要[[Special:UserLogin|登入]]起才改得正倷嗰監視列表。',
+'watchnologintext' => '倷要[[Special:wiki_UserLogin|登入]]起才改得正倷嗰監視列表。',
 'addedwatchtext' => "頁面「[[:$1]]」加到嘞倷嗰[[Special:Watchlist|監視列表]]。箇頁同佢嗰討論頁嗰全部改動以後都會列到許首，佢會用'''粗體''' 列到[[Special:RecentChanges|最近更改]]讓倷更加容易識別。 倷以後要係拿佢到監視列表刪卟佢嗰話，就到導航條點吖「莫眏到」。",
 'removedwatchtext' => '頁面[[:$1]]到[[Special:Watchlist|倷嗰監視列表]]刪卟哩。',
 'watch' => '眏到',
@@ -1370,12 +1370,12 @@ $NEWPAGE
 'rollbacklink' => '還原',
 'rollbackfailed' => '還原失敗',
 'cantrollback' => '還原伓正；最末嗰貢獻人係文章嗰唯一作者。',
-'alreadyrolled' => '還原伓正由[[User:$2|$2]] （[[User talk:$2|討論]]）做嗰[[$1]]嗰最晏編寫；
+'alreadyrolled' => '還原伓正由[[wiki_User:$2|$2]] （[[wiki_User talk:$2|討論]]）做嗰[[$1]]嗰最晏編寫；
 別嗰人編輯過或係恢復嘞箇頁。
 
-最晏編輯人: [[User:$3|$3]] （[[User talk:$3|討論]]）。',
+最晏編輯人: [[wiki_User:$3|$3]] （[[wiki_User talk:$3|討論]]）。',
 'editcomment' => "編輯介紹: \"''\$1''\"。",
-'revertpage' => '返回由[[Special:Contributions/$2|$2]] （[[User talk:$2|對話]]）嗰編輯；恢復到[[User:$1|$1]]嗰最末一隻版本',
+'revertpage' => '返回由[[Special:Contributions/$2|$2]] （[[wiki_User talk:$2|對話]]）嗰編輯；恢復到[[wiki_User:$1|$1]]嗰最末一隻版本',
 'rollback-success' => '返回由$1嗰編輯；恢復到$2嗰最末一隻版本。',
 
 # Edit tokens
@@ -1547,7 +1547,7 @@ $1',
 'unblockip' => '解封IP地址',
 'unblockiptext' => '用下底嗰表格去恢復早先拕封嗰IP嗰編寫權。',
 'ipusubmit' => '解封箇隻地址',
-'unblocked' => '[[User:$1|$1]]解封嘞',
+'unblocked' => '[[wiki_User:$1|$1]]解封嘞',
 'unblocked-id' => '封禁$1拕刪卟嘞',
 'ipblocklist' => '拕封用戶嗰名單',
 'ipblocklist-legend' => '尋吖拕封鎖嗰用戶',
@@ -1623,7 +1623,7 @@ $1',
 噉倷就非要手工移動或合併頁面。",
 'movearticle' => '換動頁面:',
 'movenologin' => '冇登入',
-'movenologintext' => '倷要係登記用戶接到[[Special:UserLogin|登入]]後才移動得正頁面。',
+'movenologintext' => '倷要係登記用戶接到[[Special:wiki_UserLogin|登入]]後才移動得正頁面。',
 'movenotallowed' => '倷到{{SITENAME}}冇權移動頁面。',
 'newtitle' => '新標題:',
 'move-watch' => '眏到箇頁',
@@ -2176,7 +2176,7 @@ $3
 
 # Delete conflict
 'deletedwhileediting' => '警告: 倷編輯嗰時間有人刪卟嘞箇頁！',
-'confirmrecreate' => "倷編輯嗰時間，用戶[[User:$1|$1]]（[[User talk:$1|對話]]）因為下底原因刪卟嘞箇頁:
+'confirmrecreate' => "倷編輯嗰時間，用戶[[wiki_User:$1|$1]]（[[wiki_User talk:$1|對話]]）因為下底原因刪卟嘞箇頁:
 : ''$2''
 請想正後再重建頁面。",
 'recreate' => '重建',

@@ -52,7 +52,7 @@ CREATE UNIQUE INDEX /*$wgDBprefix*/[user_name]        ON /*$wgDBprefix*/[user]([
 ;
 
 --
--- User permissions have been broken out to a separate table;
+-- wiki_User permissions have been broken out to a separate table;
 -- this allows sites with a shared user table to have different
 -- permissions assigned to a user in each project.
 --
@@ -77,7 +77,7 @@ CREATE INDEX /*$wgDBprefix*/user_group_id ON /*$wgDBprefix*/user_newtalk([user_i
 CREATE INDEX /*$wgDBprefix*/user_ip       ON /*$wgDBprefix*/user_newtalk(user_ip);
 
 -- 
--- User preferences and other fun stuff
+-- wiki_User preferences and other fun stuff
 -- replaces old user.user_options BLOB
 -- 
 CREATE TABLE /*$wgDBprefix*/user_properties (

@@ -106,7 +106,7 @@ $magicWords = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'ܪܫܘܡ ܣܪܛܐ ܬܚܝܬ ܐܣܪܐ:',
 'tog-justify' => 'ܫܘܐ ܦܬܓܡ̈ܐ',
 'tog-hideminor' => 'ܛܫܝ ܫܘܚܠܦ̈ܐ ܙܥܘܪ̈ܐ ܒܫܘܚܠܦ̈ܐ ܚܕ̈ܬܐ',
@@ -395,7 +395,7 @@ $1',
 # Login and logout pages
 'logouttext' => "'''ܗܫܐ ܦܠܛܠܟ ܡܢ ܚܘܫܒܢܟ.'''
 
-ܡܨܬ ܐܦܠܚܬ {{SITENAME}} ܐܝܟ ܡܦܠܚܢܐ ܠܐ ܝܕܝܥܐ ܐܘ ܡܨܬ ܕ[[Special:UserLogin|ܬܥܘܠ]] ܒܚܘܫܒܢܐ ܥܝܢܗ ܐܘ ܐܝܟ ܡܦܠܚܢܐ ܐܚܪܢܐ.
+ܡܨܬ ܐܦܠܚܬ {{SITENAME}} ܐܝܟ ܡܦܠܚܢܐ ܠܐ ܝܕܝܥܐ ܐܘ ܡܨܬ ܕ[[Special:wiki_UserLogin|ܬܥܘܠ]] ܒܚܘܫܒܢܐ ܥܝܢܗ ܐܘ ܐܝܟ ܡܦܠܚܢܐ ܐܚܪܢܐ.
 
 ܚܕ ܟܡܐ ܡܢ ܦܐܬܬ̈ܐ ܡܬܚܙܝܢ ܐܝܟ ܕܗܘ ܐܢܬ ܥܠܝܠܐ ܐܝܬܝܟ ܥܕܡܐ ܕܐܣܦܩܬ ܠܦܐܬܬ̈ܐ ܠܒܝܟܬ̈ܐ ܕܡܦܐܬܢܐ ܕܝܠܟ",
 'welcomecreation' => '== ܒܫܝܢܐ, $1! ==
@@ -528,7 +528,7 @@ $1',
 ܗܕܐ ܦܐܬܐ ܐܝܬ ܡܢ ܟܕܘ.',
 
 # "Undo" feature
-'undo-summary' => 'ܠܐ ܬܥܒܕ $1 ܒܝܕ [[Special:Contributions/$2|$2]] ([[User talk:$2|ܡܡܠܠܐ]])',
+'undo-summary' => 'ܠܐ ܬܥܒܕ $1 ܒܝܕ [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|ܡܡܠܠܐ]])',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'ܒܪܝܐ ܕܚܘܫܒܢܐ ܠܐ ܡܬܡܨܝܢܐ',
@@ -746,7 +746,7 @@ $1',
 'prefs-displaywatchlist' => 'ܓܒܝܬ̈ܐ ܕܚܘܘܝܐ',
 'prefs-diffs' => 'ܦܪ̈ܝܫܘܝܬܐ',
 
-# User rights
+# wiki_User rights
 'userrights' => 'ܡܕܒܪܢܘܬܐ ܕܙܕ̈ܩܐ ܕܡܦܠܚܢܐ',
 'userrights-lookup-user' => 'ܕܒܪ ܟܢܘܫܝ̈ܐ ܕܡܦܠܚܢܐ',
 'userrights-user-editname' => 'ܐܥܠ ܫܡܐ ܕܡܦܠܚܢܐ:',
@@ -799,7 +799,7 @@ $1',
 'right-mergehistory' => 'ܚܒܘܛ ܬܫܥܝܬܐ ܕܦܐܬܬ̈ܐ',
 'right-userrights' => 'ܫܚܠܦ ܟܠ ܙܕ̈ܩܐ ܕܡܦܠܚܢܐ',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'ܣܓܠܐ ܕܙܕ̈ܩܐ ܕܡܦܠܚܢܐ',
 'rightsnone' => '(ܠܐ ܡܕܡ)',
 
@@ -991,7 +991,7 @@ $1',
 'statistics-edits-average' => 'ܡܨܥܐ ܕܫܘܚܠܦ̈ܐ ܠܟܠ ܦܐܬܐ',
 'statistics-views-total' => 'ܣܘܝܟܐ ܕܚܙܝܐ',
 'statistics-views-peredit' => 'ܚܘܘܝ̈ܐ ܠܟܠ ܫܘܚܠܦܐ',
-'statistics-users' => '[[Special:ListUsers|ܡܦܠܚܢ̈ܐ]] ܡܣܓܠ̈ܐ',
+'statistics-users' => '[[Special:Listwiki_Users|ܡܦܠܚܢ̈ܐ]] ܡܣܓܠ̈ܐ',
 'statistics-users-active' => 'ܡܦܠܚܢ̈ܐ ܙܪ̄ܝܙܐ',
 'statistics-mostpopular' => 'ܦܐܬܬ̈ܐ ܚܙܝ̈ܐ ܝܬܝܪ ܡܢ ܟܠ',
 
@@ -1117,13 +1117,13 @@ $1',
 'linksearch-ok' => 'ܒܨܝ',
 'linksearch-line' => '$1 ܝܨܝܪܐ ܡܢ $2',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => 'ܚܘܝ ܡܦܠܚܢ̈ܐ ܕܫܪܝܢ ܒ:',
 'listusers-submit' => 'ܚܘܝ',
 'listusers-noresult' => 'ܠܐ ܐܫܬܟܚ ܡܦܠܚܢܐ ܚܕ.',
 'listusers-blocked' => '(ܚܪܝܡܐ)',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'ܡܟܬܒܘܬܐ ܕܗܕ̈ܡܐ ܙܪ̄ܝܙܐ',
 'activeusers-count' => '$1 {{PLURAL:$1|ܫܘܚܠܦܐ ܚܕܬܐ|ܫܘܚܠܦ̈ܐ ܚܕ̈ܬܐ}} ܒ {{PLURAL:$3|ܝܘܡܐ ܐܚܪܝܐ|$3 ܝܘܡܬ̈ܐ ܐܚܪ̈ܝܐ}}',
 'activeusers-from' => 'ܚܘܝ ܡܦܠܚܢ̈ܐ ܕܫܪܐ ܥܡ:',
@@ -1166,7 +1166,7 @@ $1',
 'emailccsubject' => 'ܨܚܚܐ ܕܐܓܪܬܟ ܠ $1: $2',
 'emailsent' => 'ܒܝܠܕܪܐ ܐܠܩܛܪܘܢܝܐ ܐܫܬܕܪ',
 
-# User Messenger
+# wiki_User Messenger
 'usermessage-summary' => 'ܫܒܩܐ ܐܓܪܬܐ ܕܛܟܣܐ',
 'usermessage-editor' => 'ܡܫܕܪܢܐ ܕܛܟܣܐ',
 
@@ -1177,7 +1177,7 @@ $1',
 'nowatchlist' => 'ܠܝܬ ܠܟ ܡܕܡ ܒܪ̈ܗܝܬܐ ܕܝܠܟ',
 'watchlistanontext' => '$1 ܠܚܙܝܐ ܐܘ ܫܚܠܦܬܐ ܕܦܐܬܬ̈ܐ ܒܪ̈ܗܝܬܟ.',
 'watchnologin' => 'ܠܝܬܝܟ ܥܠܝܠܐ',
-'watchnologintext' => 'ܐܠܨܐ ܕܬܗܘܐ [[Special:UserLogin|ܥܠܝܠܐ]] ܠܫܚܠܦܬܐ ܕܪ̈ܗܝܬܟ.',
+'watchnologintext' => 'ܐܠܨܐ ܕܬܗܘܐ [[Special:wiki_UserLogin|ܥܠܝܠܐ]] ܠܫܚܠܦܬܐ ܕܪ̈ܗܝܬܟ.',
 'addwatch' => 'ܐܘܣܦ ܥܠ ܪ̈ܗܝܬܝ',
 'addedwatchtext' => "ܦܐܬܐ ܕ\"[[:\$1]]\" ܐܬܬܘܣܦܬ ܒ[[Special:Watchlist|ܪ̈ܗܝܬܟ]].
 ܐܝܢܐ ܫܘܚܠܦܐ ܠܦܐܬܐ ܗܕܐ ܒܕܥܬܝܕ ܬܬܓܠܚ ܥܡ ܦܐܬܐ ܕܡܡܠܠܐ ܕܝܠܗ ܬܡܢ, ܘܦܐܬܐ ܬܗܘܐ ܒܣܪܛܐ '''ܚܠܝܡܐ''' ܒܦܐܬܐ ܕ[[Special:RecentChanges|ܫܘܚܠܦ̈ܐ ܚܕ̈ܬܐ]] ܠܦܫܛܬܐ ܕܫܟܚܬܗ.",
@@ -1227,7 +1227,7 @@ $1',
 # Rollback
 'rollbacklink' => 'ܐܦܢܝ',
 'editcomment' => "ܦܣܝܩܬ̈ܐ ܕܫܘܚܠܦܐ ܗܘܐ: \"''\$1''\".",
-'revertpage' => 'ܐܗܦܟ ܫܘܚܠܦ̈ܐ ܒܝܕ [[Special:Contributions/$2|$2]] ([[User talk:$2|ܡܡܠܠܐ]]) ܠܬܢܝܬܐ ܐܚܪܝܬܐ ܒܝܕ [[User:$1|$1]]',
+'revertpage' => 'ܐܗܦܟ ܫܘܚܠܦ̈ܐ ܒܝܕ [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|ܡܡܠܠܐ]]) ܠܬܢܝܬܐ ܐܚܪܝܬܐ ܒܝܕ [[wiki_User:$1|$1]]',
 
 # Edit tokens
 'sessionfailure-title' => 'ܡܘܬܒܐ ܠܐ ܢܨܚܬ',
@@ -1368,7 +1368,7 @@ $1',
 'ipb-blocklist-contribs' => 'ܫܘܬܦܘ̈ܬܐ ܕ$1',
 'unblockip' => 'ܫܩܘܠ ܚܪܡܐ ܡܢ ܡܦܠܚܢܐ',
 'ipusubmit' => 'ܫܩܘܠ ܚܪܡܐ ܗܢܐ',
-'unblocked' => 'ܐܫܬܩܠ ܚܪܡܐ ܡܢ [[User:$1|$1]]',
+'unblocked' => 'ܐܫܬܩܠ ܚܪܡܐ ܡܢ [[wiki_User:$1|$1]]',
 'blocklist' => 'ܡܦܠܚܢ̈ܐ ܡܚܪ̈ܡܐ',
 'ipblocklist' => 'ܡܦܠܚܢ̈ܐ ܡܚܪ̈ܡܐ',
 'ipblocklist-legend' => 'ܐܫܟܚ ܡܦܠܚܢܐ ܡܚܪܡܐ',

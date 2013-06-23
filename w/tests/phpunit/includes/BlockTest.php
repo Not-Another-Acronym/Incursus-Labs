@@ -20,7 +20,7 @@ class BlockTest extends MediaWikiLangTestCase {
 	function addDBData() {
 		//$this->dumpBlocks();
 
-		$user = User::newFromName( 'UTBlockee' );
+		$user = wiki_User::newFromName( 'UTBlockee' );
 		if( $user->getID() == 0 ) {
 			$user->addToDatabase();
 			$user->setPassword( 'UTBlockeePassword' );
@@ -83,7 +83,7 @@ class BlockTest extends MediaWikiLangTestCase {
 	}
 
 	/**
-	 * This is the method previously used to load block info in CheckUser etc
+	 * This is the method previously used to load block info in Checkwiki_User etc
 	 * passing an empty value (empty string, null, etc) as the ip parameter bypasses IP lookup checks.
 	 *
 	 * This stopped working with r84475 and friends: regression being fixed for bug 29116.
@@ -93,7 +93,7 @@ class BlockTest extends MediaWikiLangTestCase {
 	function testBug29116LoadWithEmptyIp( $vagueTarget ) {
 		$this->hideDeprecated( 'Block::load' );
 
-		$uid = User::idFromName( 'UTBlockee' );
+		$uid = wiki_User::idFromName( 'UTBlockee' );
 		$this->assertTrue( ($uid > 0), 'Must be able to look up the target user during tests' );
 
 		$block = new Block();
@@ -104,7 +104,7 @@ class BlockTest extends MediaWikiLangTestCase {
 	}
 
 	/**
-	 * CheckUser since being changed to use Block::newFromTarget started failing
+	 * Checkwiki_User since being changed to use Block::newFromTarget started failing
 	 * because the new function didn't accept empty strings like Block::load()
 	 * had. Regression bug 29116.
 	 *
@@ -123,9 +123,9 @@ class BlockTest extends MediaWikiLangTestCase {
 		);
 	}
 
-	function testBlockedUserCanNotCreateAccount() {
-		$username = 'BlockedUserToCreateAccountWith';
-		$u = User::newFromName( $username );
+	function testBlockedwiki_UserCanNotCreateAccount() {
+		$username = 'Blockedwiki_UserToCreateAccountWith';
+		$u = wiki_User::newFromName( $username );
 		$u->setPassword( 'NotRandomPass' );
 		$u->addToDatabase();
 		unset( $u );
@@ -138,7 +138,7 @@ class BlockTest extends MediaWikiLangTestCase {
 		);
 
 		// Reload user
-		$u = User::newFromName( $username );
+		$u = wiki_User::newFromName( $username );
 		$this->assertFalse(
 			$u->isBlockedFromCreateAccount(),
 			"Our sandbox user should be able to create account before being blocked"
@@ -158,8 +158,8 @@ class BlockTest extends MediaWikiLangTestCase {
 			/* $enableAutoblock */ true,
 			/* $hideName (ipb_deleted) */ true,
 			/* $blockEmail */ true,
-			/* $allowUsertalk */ false,
-			/* $byName */ 'MetaWikiUser'
+			/* $allowwiki_Usertalk */ false,
+			/* $byName */ 'MetaWikiwiki_User'
 		);
 		$block->insert();
 
@@ -177,7 +177,7 @@ class BlockTest extends MediaWikiLangTestCase {
 		);
 
 		// Reload user
-		$u = User::newFromName( $username );
+		$u = wiki_User::newFromName( $username );
 		$this->assertTrue(
 			(bool) $u->isBlockedFromCreateAccount(),
 			"Our sandbox user '$username' should NOT be able to create account"
@@ -186,7 +186,7 @@ class BlockTest extends MediaWikiLangTestCase {
 
 	function testCrappyCrossWikiBlocks() {
 		// Delete the last round's block if it's still there
-		$oldBlock = Block::newFromTarget( 'UserOnForeignWiki' );
+		$oldBlock = Block::newFromTarget( 'wiki_UserOnForeignWiki' );
 		if ( $oldBlock ) {
 			// An old block will prevent our new one from saving.
 			$oldBlock->delete();
@@ -194,7 +194,7 @@ class BlockTest extends MediaWikiLangTestCase {
 
 		// Foreign perspective (blockee not on current wiki)...
 		$block = new Block(
-			/* $address */ 'UserOnForeignWiki',
+			/* $address */ 'wiki_UserOnForeignWiki',
 			/* $user */ 14146,
 			/* $by */ 0,
 			/* $reason */ 'crosswiki block...',
@@ -206,25 +206,25 @@ class BlockTest extends MediaWikiLangTestCase {
 			/* $enableAutoblock */ true,
 			/* $hideName (ipb_deleted) */ true,
 			/* $blockEmail */ true,
-			/* $allowUsertalk */ false,
-			/* $byName */ 'MetaWikiUser'
+			/* $allowwiki_Usertalk */ false,
+			/* $byName */ 'MetaWikiwiki_User'
 		);
 
 		$res = $block->insert( $this->db );
 		$this->assertTrue( (bool)$res['id'], 'Block succeeded' );
 
 		// Local perspective (blockee on current wiki)...
-		$user = User::newFromName( 'UserOnForeignWiki' );
+		$user = wiki_User::newFromName( 'wiki_UserOnForeignWiki' );
 		$user->addToDatabase();
 		// Set user ID to match the test value
 		$this->db->update( 'user', array( 'user_id' => 14146 ), array( 'user_id' => $user->getId() ) );
 		$user = null; // clear
 
 		$block = Block::newFromID( $res['id'] );
-		$this->assertEquals( 'UserOnForeignWiki', $block->getTarget()->getName(), 'Correct blockee name' );
+		$this->assertEquals( 'wiki_UserOnForeignWiki', $block->getTarget()->getName(), 'Correct blockee name' );
 		$this->assertEquals( '14146',  $block->getTarget()->getId(), 'Correct blockee id' );
-		$this->assertEquals( 'MetaWikiUser', $block->getBlocker(), 'Correct blocker name' );
-		$this->assertEquals( 'MetaWikiUser', $block->getByName(), 'Correct blocker name' );
+		$this->assertEquals( 'MetaWikiwiki_User', $block->getBlocker(), 'Correct blocker name' );
+		$this->assertEquals( 'MetaWikiwiki_User', $block->getByName(), 'Correct blocker name' );
 		$this->assertEquals( 0, $block->getBy(), 'Correct blocker id' );
 	}
 }

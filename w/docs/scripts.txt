@@ -1,6 +1,6 @@
 scripts.txt
 
-MediaWiki primary scripts are in the root directory of the software. Users
+MediaWiki primary scripts are in the root directory of the software. wiki_Users
 should only use these scripts to access the wiki. There are also some .php that
 aren't primary scripts but helper files and won't work if they are accessed
 directly by the web.

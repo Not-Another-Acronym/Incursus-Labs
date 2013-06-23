@@ -43,12 +43,12 @@ $wgLogo             = "https://image.eveonline.com/Corporation/98176508_128.png"
 ## UPO means: this is also a user preference option
 
 $wgEnableEmail      = true;
-$wgEnableUserEmail  = true; # UPO
+$wgEnablewiki_UserEmail  = true; # UPO
 
 $wgEmergencyContact = "waterfoul@gmail.com";
 $wgPasswordSender   = "waterfoul@gmail.com";
 
-$wgEnotifUserTalk      = false; # UPO
+$wgEnotifwiki_UserTalk      = false; # UPO
 $wgEnotifWatchlist     = false; # UPO
 $wgEmailAuthentication = true;
 
@@ -182,7 +182,7 @@ require_once('extensions/IntraACL/includes/HACL_Initialize.php');
 enableIntraACL();
 
 $wgMainCacheType = CACHE_ACCEL;
-/*
+
 
 // see http://www.mediawiki.org/wiki/Manual:Hooks/SpecialPage_initList
 // and http://www.mediawiki.org/w/Manual:Special_pages
@@ -203,4 +203,5 @@ function StripLogin(&$personal_urls, &$wgTitle) {
         unset( $personal_urls['anonlogin'] );
         return true;
 }
-$wgHooks['PersonalUrls'][] = 'StripLogin';*/
+$wgHooks['PersonalUrls'][] = 'StripLogin';
+?>

@@ -92,8 +92,8 @@ $specialPageAliases = array(
 	'Uncategorizedpages'        => array( 'KategorizatuGabekoOrrialdeak' ),
 	'Uncategorizedtemplates'    => array( 'KategorizatuGabekoTxantiloiak' ),
 	'Upload'                    => array( 'Igo' ),
-	'Userlogin'                 => array( 'SaioaHasi' ),
-	'Userlogout'                => array( 'SaioaItxi' ),
+	'wiki_Userlogin'                 => array( 'SaioaHasi' ),
+	'wiki_Userlogout'                => array( 'SaioaItxi' ),
 	'Version'                   => array( 'Bertsioa' ),
 	'Wantedcategories'          => array( 'EskatutakoKategoriak' ),
 	'Wantedfiles'               => array( 'EskatutakoFitxategiak' ),
@@ -125,7 +125,7 @@ $magicWords = array(
 $separatorTransformTable = array( ',' => '.', '.' => ',' ); /* Bug 15717 */
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Loturak azpimarratu:',
 'tog-justify' => 'Paragrafoak justifikatu',
 'tog-hideminor' => 'Azken aldaketetan aldaketa txikiak ezkutatu',
@@ -508,7 +508,7 @@ Itzulpenetarako, erabil ezazu [//translatewiki.net/ translatewiki.net], MediaWik
 $2",
 'namespaceprotected' => "Ez daukazu '''$1''' izen-tarteko orrialdeak aldatzeko baimenik.",
 'ns-specialprotected' => 'Ezin dira {{ns:special}} izen-tarteko orrialdeak editatu.',
-'titleprotected' => "[[User:$1|$1]]ek izenburu hau sortzea ekidin zuen.
+'titleprotected' => "[[wiki_User:$1|$1]]ek izenburu hau sortzea ekidin zuen.
 Emandako arrazoia ''$2'' izan zen.",
 'exception-nologin' => 'Saioa hasi gabe',
 
@@ -520,7 +520,7 @@ Emandako arrazoia ''$2'' izan zen.",
 # Login and logout pages
 'logouttext' => "'''Saioa itxi egin duzu.'''
 
-Erabiltzaile anonimo bezala jarrai dezakezu {{SITENAME}} erabiltzen, edo [[Special:UserLogin|saioa has dezakezu berriz]] erabiltzaile berdinarekin edo ezberdin batekin.
+Erabiltzaile anonimo bezala jarrai dezakezu {{SITENAME}} erabiltzen, edo [[Special:wiki_UserLogin|saioa has dezakezu berriz]] erabiltzaile berdinarekin edo ezberdin batekin.
 Kontuan izan orrialde batzuk saioa hasita bazenu bezala ikus ditzakezula nabigatzailearen katxea garbitu arte.",
 'welcomecreation' => '== Ongi etorri, $1! ==
 
@@ -562,7 +562,7 @@ Ziurta ezazu cookiak gaiturik dituzula, birkargatu orrialde hau eta saia saitez 
 'loginsuccess' => "'''Saioa hasi duzu {{SITENAME}}(e)n \"\$1\" izenarekin.'''",
 'nosuchuser' => 'Ez dago "$1" izena duen lankiderik.
 Lankide izenak zehatza izan behar du.
-Egiaztatu ondo idatzi duzun, edo [[Special:UserLogin/signup|kontu berria sor ezazu]].',
+Egiaztatu ondo idatzi duzun, edo [[Special:wiki_UserLogin/signup|kontu berria sor ezazu]].',
 'nosuchusershort' => 'Ez dago "$1" izena duen erabiltzailerik. Egiaztatu ongi idatzi duzula.',
 'nouserspecified' => 'Erabiltzaile izena zehaztu beharra daukazu.',
 'login-userblocked' => 'Erabiltzailea blokeatua dago. Ezin du saioa hasi.',
@@ -729,7 +729,7 @@ Baliteke orrialdea begiratzen zenuen bitartean norbaitek ezabatu edo izenburua a
 'loginreqlink' => 'saioa hasi',
 'loginreqpagetext' => 'Beste orrialde batzuk ikusteko $1 beharra daukazu..',
 'accmailtitle' => 'Pasahitza bidali da.',
-'accmailtext' => "[[User talk:$1|$1]]-entzako ausaz sortutako pasahitza $2-(r)a bidali da.
+'accmailtext' => "[[wiki_User talk:$1|$1]]-entzako ausaz sortutako pasahitza $2-(r)a bidali da.
 
 Kontu berri honentzako pasahitza edozein unetan alda daiteke ''[[Special:ChangePassword|pasahitz aldaketa]]'' orrian, saioa hasi ondoren.",
 'newarticle' => '(Berria)',
@@ -737,7 +737,7 @@ Kontu berri honentzako pasahitza edozein unetan alda daiteke ''[[Special:ChangeP
 'anontalkpagetext' => "----''Orrialde hau konturik sortu ez edo erabiltzen ez duen erabiltzaile anonimo baten eztabaida orria da.
 Bere IP helbidea erabili beharko da beraz identifikatzeko.
 Erabiltzaile batek baino gehiagok IP bera erabil dezakete ordea.
-Erabiltzaile anonimoa bazara eta zurekin zerikusirik ez duten mezuak jasotzen badituzu, mesedez [[Special:UserLogin/signup|Izena eman]] edo [[Special:UserLogin|saioa hasi]] etorkizunean horrelakoak gerta ez daitezen.''",
+Erabiltzaile anonimoa bazara eta zurekin zerikusirik ez duten mezuak jasotzen badituzu, mesedez [[Special:wiki_UserLogin/signup|Izena eman]] edo [[Special:wiki_UserLogin|saioa hasi]] etorkizunean horrelakoak gerta ez daitezen.''",
 'noarticletext' => 'Oraindik ez dago testurik orrialde honetan.
 Beste orrialde batzuetan [[Special:Search/{{PAGENAME}}|bilatu dezakezu izenburu hau]],
 <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} bilatu lotutako logak],
@@ -820,7 +820,7 @@ Azken erregistroko sarrera ematen da azpian erreferentzia gisa:",
 'hiddencategories' => 'Orrialde hau {{PLURAL:$1|kategoria izkutu bateko|$1 kategoria izkutuko}} kide da:',
 'edittools' => '<!-- Hemen jarritako testua aldaketa eta igoera formularioen azpian agertuko da. -->',
 'nocreatetitle' => 'Orrialdeak sortzea mugatuta',
-'nocreatetext' => 'Gune honek orrialde berriak sortzeko gaitasuna mugatu du. Atzera egin dezakezu existitzen den orrialde bat aldatzeko, edo [[Special:UserLogin|saio hasi edo kontua sortu]].',
+'nocreatetext' => 'Gune honek orrialde berriak sortzeko gaitasuna mugatu du. Atzera egin dezakezu existitzen den orrialde bat aldatzeko, edo [[Special:wiki_UserLogin|saio hasi edo kontua sortu]].',
 'nocreate-loggedin' => 'Ez duzu orri berriak sortzeko baimenik.',
 'sectioneditnotsupported-title' => 'Ezin dira atalak aldatu',
 'sectioneditnotsupported-text' => 'Ezin dira atalak aldatu orrialde honetan.',
@@ -862,11 +862,11 @@ Eztabaidak aipatu gabe utzi dira.',
 Mesedez beheko alderaketa egiaztatu, egin nahi duzuna hori dela frogatzeko, eta ondoren azpiko aldaketak gorde, aldaketa desegiten amaitzeko.',
 'undo-failure' => 'Ezin izan da aldaketa desegin tarteko aldaketekin gatazkak direla-eta.',
 'undo-norev' => 'Aldaketa ezin da desegin ez delako existitzen edo ezabatu zutelako.',
-'undo-summary' => '[[Special:Contributions/$2|$2(r)en]] $1 berrikuspena desegin da ([[User talk:$2|Eztabaida]])',
+'undo-summary' => '[[Special:Contributions/$2|$2(r)en]] $1 berrikuspena desegin da ([[wiki_User talk:$2|Eztabaida]])',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'Ezin izan da kontua sortu',
-'cantcreateaccount-text' => "IP helbide honetatik ('''$1''') kontu berria sortzeko aukera blokeatu du [[User:$3|$3]](e)k.
+'cantcreateaccount-text' => "IP helbide honetatik ('''$1''') kontu berria sortzeko aukera blokeatu du [[wiki_User:$3|$3]](e)k.
 
 $3(e)k emandako arrazoia: ''$2''",
 
@@ -1118,7 +1118,7 @@ Saia zaitez zure eskeraren aurretik ''all:'' jartzen eduki guztien artean bilatz
 'mypreferences' => 'Hobespenak',
 'prefs-edits' => 'Aldaketa kopurua:',
 'prefsnologin' => 'Saioa hasi gabe',
-'prefsnologintext' => '<span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} Izena eman]</span> behar duzu zure hobespenak ezartzeko.',
+'prefsnologintext' => '<span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} Izena eman]</span> behar duzu zure hobespenak ezartzeko.',
 'changepassword' => 'Pasahitza aldatu',
 'prefs-skin' => 'Itxura',
 'skin-preview' => 'Aurrebista',
@@ -1223,16 +1223,16 @@ $1 {{PLURAL:$1|karakteretik|karakteretik}} behera izan behar ditu.',
 'prefs-displaywatchlist' => 'Aukerak erakutsi',
 'prefs-diffs' => 'Ezberdintasunak',
 
-# User preference: e-mail validation using jQuery
+# wiki_User preference: e-mail validation using jQuery
 'email-address-validity-valid' => 'E-posta helbidea zuzena dela dirudi',
 'email-address-validity-invalid' => 'E-posta helbide zuzena idatzi',
 
-# User rights
+# wiki_User rights
 'userrights' => 'Erabiltzaile baimenen kudeaketa',
 'userrights-lookup-user' => 'Erabiltzaile taldeak kudeatu',
 'userrights-user-editname' => 'Erabiltzaile izena idatzi:',
 'editusergroup' => 'Erabiltzaile taldeak editatu',
-'editinguser' => "'''[[User:$1|$1]]''' $2 lankidearen erabiltzaile-eskubideak aldatzen",
+'editinguser' => "'''[[wiki_User:$1|$1]]''' $2 lankidearen erabiltzaile-eskubideak aldatzen",
 'userrights-editusergroup' => 'Erabiltzaile taldeak editatu',
 'saveusergroups' => 'Erabiltzaile taldeak gorde',
 'userrights-groupsmember' => 'Partaide da hemen:',
@@ -1244,7 +1244,7 @@ $1 {{PLURAL:$1|karakteretik|karakteretik}} behera izan behar ditu.',
 'userrights-reason' => 'Arrazoia:',
 'userrights-no-interwiki' => 'Ez duzu beste wikietan erabiltzaile eskumenak aldatzeko baimenik.',
 'userrights-nodatabase' => '$1 datubasea ez da existitzen edo ez dago lokalki.',
-'userrights-nologin' => 'Administratzaile kontu batekin [[Special:UserLogin|hasi behar duzu saioa]] erabiltzaile eskubideak esleitzeko.',
+'userrights-nologin' => 'Administratzaile kontu batekin [[Special:wiki_UserLogin|hasi behar duzu saioa]] erabiltzaile eskubideak esleitzeko.',
 'userrights-notallowed' => 'Zure kontuak ez du baimenik erabiltzaile eskumenak aldatzeko.',
 'userrights-changeable-col' => 'Alda ditzakezun taldeak',
 'userrights-unchangeable-col' => 'Aldatu ezin ditzakezun taldeak',
@@ -1333,7 +1333,7 @@ $1 {{PLURAL:$1|karakteretik|karakteretik}} behera izan behar ditu.',
 'right-override-export-depth' => '5eko sakonerararteko loturiko orrialdeak barne esportatu',
 'right-sendemail' => 'Beste erabiltzaileei e-posta bidali',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Erabiltzaile eskubideen erregistroa',
 'rightslogtext' => 'Erabiltzaile eskubideetan izandako aldaketen erregistroa da hau.',
 'rightslogentry' => '$1(r)en partaidetza aldatu da $2(e)tik $3(e)ra',
@@ -1427,7 +1427,7 @@ $1 {{PLURAL:$1|karakteretik|karakteretik}} behera izan behar ditu.',
 'reuploaddesc' => 'Igotzeko formulariora itzuli.',
 'upload-tryagain' => 'Aldatutako fitxategiaren deskribapena bidali',
 'uploadnologin' => 'Saioa hasi gabe',
-'uploadnologintext' => 'Fitxategiak igotzeko [[Special:UserLogin|saioa hasi]] behar duzu.',
+'uploadnologintext' => 'Fitxategiak igotzeko [[Special:wiki_UserLogin|saioa hasi]] behar duzu.',
 'upload_directory_missing' => 'Igoeren direktorioa ($1) ezin da aurkitu eta web zerbitzariak ezin du sortu.',
 'upload_directory_read_only' => 'Web zerbitzariak ez dauka igoera direktorioan ($1) idazteko baimenik.',
 'uploaderror' => 'Errorea igotzerakoan',
@@ -1530,9 +1530,9 @@ $1',
 'upload-proto-error' => 'Protokolo ezegokia',
 'upload-proto-error-text' => 'Kanpo igoerak <code>http://</code> edo <code>ftp://</code> hasiera duen URLa izan behar du.',
 'upload-file-error' => 'Barne errorea',
-'upload-file-error-text' => 'Barne errore bat gertatu da zerbitzarian fitxategi tenporal bat sortzen saiatzean. Mesedez, jar zaitez [[Special:ListUsers/sysop|administratzaile]] batekin harremanetan.',
+'upload-file-error-text' => 'Barne errore bat gertatu da zerbitzarian fitxategi tenporal bat sortzen saiatzean. Mesedez, jar zaitez [[Special:Listwiki_Users/sysop|administratzaile]] batekin harremanetan.',
 'upload-misc-error' => 'Errore ezezaguna igotzerakoan',
-'upload-misc-error-text' => 'Errore ezezagun bat gertatu da fitxategia igotzen ari zenean. Mesedez, egiaztatu URLa baliozkoa eta eskuragarria dela eta berriz saiatu. Arazoak jarraitzen badu, jar zaitez [[Special:ListUsers/sysop|administratzailearekin]] harremanetan.',
+'upload-misc-error-text' => 'Errore ezezagun bat gertatu da fitxategia igotzen ari zenean. Mesedez, egiaztatu URLa baliozkoa eta eskuragarria dela eta berriz saiatu. Arazoak jarraitzen badu, jar zaitez [[Special:Listwiki_Users/sysop|administratzailearekin]] harremanetan.',
 'upload-too-many-redirects' => 'URLak birzuzenketa gehiegi zituen',
 'upload-unknown-size' => 'Tamaina ezezaguna',
 'upload-http-error' => 'HTTP errorea gertatu da: $1',
@@ -1696,7 +1696,7 @@ Bere [$2 fitxategiaren deskribapen orrialdea] behean dago.',
 'statistics-edits-average' => 'Bataz-besteko aldaketak orrialdeko',
 'statistics-views-total' => 'Ikusitako orrialdeak guztira',
 'statistics-views-peredit' => 'Ikusitako orrialdeak aldaketa bakoitzeko',
-'statistics-users' => 'Izen-emandako [[Special:ListUsers|lankideak]]',
+'statistics-users' => 'Izen-emandako [[Special:Listwiki_Users|lankideak]]',
 'statistics-users-active' => 'Lankide aktiboak',
 'statistics-users-active-desc' => 'Aurreko {{PLURAL:$1|egunean|egunetan}} jardueraren bat gauzatu duten erabiltzaileak',
 'statistics-mostpopular' => 'Orri bisitatuenak',
@@ -1850,13 +1850,13 @@ Baimendutako protokoloak: <code>$1</code> (protokoloa zehazten ez bada http:// h
 'linksearch-line' => '$1, $2(e)tik lotuta',
 'linksearch-error' => 'Komodinak izenaren hasieran bakarrik agertu beharko lirateke.',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => 'Hemendik aurrerako erabiltzaileak bistaratu:',
 'listusers-submit' => 'Erakutsi',
 'listusers-noresult' => 'Ez da erabiltzailerik aurkitu.',
 'listusers-blocked' => '(blokeatua)',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'Lankide aktiboen zerrenda',
 'activeusers-count' => '{{PLURAL:$1|Aldaketa berri bat|$1 aldaketa berri}} azken {{PLURAL:$3|egunean|$3 egunetan}}',
 'activeusers-from' => 'Bilatu honela hasten diren lankideak:',
@@ -1887,7 +1887,7 @@ Badago [[{{MediaWiki:Listgrouprights-helppage}}|informazio osagarria]] banakako 
 
 # E-mail user
 'mailnologin' => 'Bidalketa helbiderik ez',
-'mailnologintext' => 'Beste erabiltzaileei e-posta mezuak bidaltzeko [[Special:UserLogin|saioa hasi]] eta baliozko e-posta helbidea behar duzu izan zure [[Special:Preferences|hobespenetan]].',
+'mailnologintext' => 'Beste erabiltzaileei e-posta mezuak bidaltzeko [[Special:wiki_UserLogin|saioa hasi]] eta baliozko e-posta helbidea behar duzu izan zure [[Special:Preferences|hobespenetan]].',
 'emailuser' => 'Erabiltzaile honi e-posta bidali',
 'emailuser-title-notarget' => 'Erabiltzaileari e-maila bidali',
 'emailpage' => 'Erabiltzaileari e-posta bidali',
@@ -1915,7 +1915,7 @@ Badago [[{{MediaWiki:Listgrouprights-helppage}}|informazio osagarria]] banakako 
 'emailsenttext' => 'Zure e-posta mezua bidali egin da.',
 'emailuserfooter' => 'E-posta hau $1(e)k bidali dio $2(r)i {{SITENAME}}ko "E-posta bidali" funtzioa erabiliz.',
 
-# User Messenger
+# wiki_User Messenger
 'usermessage-editor' => 'Sistemako mezularia',
 
 # Watchlist
@@ -1925,7 +1925,7 @@ Badago [[{{MediaWiki:Listgrouprights-helppage}}|informazio osagarria]] banakako 
 'nowatchlist' => 'Zure jarraipen zerrenda hutsik dago.',
 'watchlistanontext' => 'Mesedez $1 zure jarraipen zerrendako orrialdeak ikusi eta aldatu ahal izateko.',
 'watchnologin' => 'Saioa hasi gabe',
-'watchnologintext' => '[[Special:UserLogin|Saioa hasi]] behar duzu zure jarraipen zerrenda aldatzeko.',
+'watchnologintext' => '[[Special:wiki_UserLogin|Saioa hasi]] behar duzu zure jarraipen zerrenda aldatzeko.',
 'addedwatchtext' => "\"<nowiki>\$1</nowiki>\" orrialdea zure [[Special:Watchlist|jarraipen edo zelatatuen zerrendara]] erantsi da. Orrialde honen hurrengo aldaketak zerrenda horretan ageriko dira aurrerantzean, eta gainera [[Special:RecentChanges|aldaketa berrien zerrendan]] beltzez ageriko da, erraztasunez antzeman ahal izateko.
 
 Jarraipen zerrendatik artikulua kentzeko, artikuluan ''ez jarraitu''ri eman.",
@@ -2031,12 +2031,12 @@ kontu izan.',
 'rollbacklinkcount' => 'desegin {{PLURAL:$1|edizio bat|$1 edizio}}',
 'rollbackfailed' => 'Desegiteak huts egin dud',
 'cantrollback' => 'Ezin da aldaketa desegin; erabiltzaile bakarrak hartu du parte.',
-'alreadyrolled' => 'Ezin da [[User:$2|$2]](e)k ([[User talk:$2|Eztabaida]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]) [[$1]](e)n egindako azken aldaketa desegin;
+'alreadyrolled' => 'Ezin da [[wiki_User:$2|$2]](e)k ([[wiki_User talk:$2|Eztabaida]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]) [[$1]](e)n egindako azken aldaketa desegin;
 beste norbaitek editatu du edo jada desegin du.
 
- Azken aldaketa [[User:$3|$3]](e)k ([[User talk:$3|Eztabaida]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]) egin du.',
+ Azken aldaketa [[wiki_User:$3|$3]](e)k ([[wiki_User talk:$3|Eztabaida]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]) egin du.',
 'editcomment' => "Aldaketaren laburpena: \"''\$1''\".",
-'revertpage' => '[[Special:Contributions/$2|$2]] ([[User talk:$2|talk]]) wikilariaren aldaketak deseginda, edukia [[User:$1|$1]] wikilariaren azken bertsiora itzuli da.',
+'revertpage' => '[[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|talk]]) wikilariaren aldaketak deseginda, edukia [[wiki_User:$1|$1]] wikilariaren azken bertsiora itzuli da.',
 'rollback-success' => '$1 wikilariaren aldaketak deseginda,
 edukia $2 wikilariaren azken bertsiora itzuli da.',
 
@@ -2255,7 +2255,7 @@ Ikus [[Special:BlockList|blokeoen zerrenda]] blokeoak aztertzeko.',
 'unblockip' => 'Erabiltzailea desblokeatu',
 'unblockiptext' => 'Erabili beheko formularioa lehenago blokeatutako IP helbide edo erabiltzaile baten idazketa baimenak leheneratzeko.',
 'ipusubmit' => 'Blokeoa ezabatu',
-'unblocked' => '[[User:$1|$1]] desblokeatu egin da',
+'unblocked' => '[[wiki_User:$1|$1]] desblokeatu egin da',
 'unblocked-id' => '$1 blokeaketa ezabatu da',
 'blocklist' => 'Blokeatutako erabiltzaileak',
 'ipblocklist' => 'Blokeatutako erabiltzaileak',
@@ -2279,7 +2279,7 @@ Ikus [[Special:BlockList|blokeoen zerrenda]] blokeoak aztertzeko.',
 'change-blocklink' => 'blokeoa aldatu',
 'contribslink' => 'ekarpenak',
 'emaillink' => 'E-maila bidali',
-'autoblocker' => '"[[User:$1|$1]]"(e)k berriki erabili duen IP helbidea duzulako autoblokeatu zaizu. $1(e)k emandako arrazoia zera da: "\'\'\'$2\'\'\'"',
+'autoblocker' => '"[[wiki_User:$1|$1]]"(e)k berriki erabili duen IP helbidea duzulako autoblokeatu zaizu. $1(e)k emandako arrazoia zera da: "\'\'\'$2\'\'\'"',
 'blocklogpage' => 'Blokeo erregistroa',
 'blocklog-showlog' => 'Lankide hau aurretik blokeatua izan da.
 Blokeo erregistroa ematen da azpian erreferentziarako:',
@@ -2361,7 +2361,7 @@ Kasu horietan orrialdea eskuz mugitu edo bestearekin bateratu beharko duzu.",
 'movearticle' => 'Orrialdea mugitu',
 'moveuserpage-warning' => "'''Oharra:''' Lankide orrialde bat mugitzera zoaz. Kontutan izan orrialde bakarrik mugituko duzula eta '''ez''' duzula lankide izena aldatuko.",
 'movenologin' => 'Saioa hasi gabe',
-'movenologintext' => 'Orrialde bat mugitzeko erregistratutako lankidea izan behar duzu eta [[Special:UserLogin|saioa hasi]].',
+'movenologintext' => 'Orrialde bat mugitzeko erregistratutako lankidea izan behar duzu eta [[Special:wiki_UserLogin|saioa hasi]].',
 'movenotallowed' => 'Ez daukazu orrialdeak mugitzeko baimenik.',
 'movenotallowedfile' => 'Ez duzu fitxategiak mugitzeko eskumenik.',
 'cant-move-user-page' => 'Ez duzu lankide orrialdeak mugitzeko eskumenik (azpiorrialdeetatik at).',
@@ -3120,7 +3120,7 @@ Egiaztapen kode hau $4 iraungiko da.',
 
 # Delete conflict
 'deletedwhileediting' => "'''Oharra''': Zu aldaketak egiten hasi ondoren orrialdea ezabatua izan da!",
-'confirmrecreate' => "[[User:$1|$1]] erabiltzaileak ([[User talk:$1|eztabaida]]) orrialde hau ezabatu zu aldatzen hasi eta gero. Hona arrazoia: : ''$2'' Mesedez, baieztatu orrialde hau berriz sortu nahi duzula.",
+'confirmrecreate' => "[[wiki_User:$1|$1]] erabiltzaileak ([[wiki_User talk:$1|eztabaida]]) orrialde hau ezabatu zu aldatzen hasi eta gero. Hona arrazoia: : ''$2'' Mesedez, baieztatu orrialde hau berriz sortu nahi duzula.",
 'recreate' => 'Birsortu',
 
 # action=purge

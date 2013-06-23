@@ -76,11 +76,11 @@ class ApiMain extends ApiBase {
 		'edit' => 'ApiEditPage',
 		'upload' => 'ApiUpload',
 		'filerevert' => 'ApiFileRevert',
-		'emailuser' => 'ApiEmailUser',
+		'emailuser' => 'ApiEmailwiki_User',
 		'watch' => 'ApiWatch',
 		'patrol' => 'ApiPatrol',
 		'import' => 'ApiImport',
-		'userrights' => 'ApiUserrights',
+		'userrights' => 'Apiwiki_Userrights',
 		'options' => 'ApiOptions',
 	);
 
@@ -166,14 +166,14 @@ class ApiMain extends ApiBase {
 			// Impose module restrictions.
 			// If the current user cannot read,
 			// Remove all modules other than login
-			global $wgUser;
+			global $wgwiki_User;
 
 			if ( $this->getRequest()->getVal( 'callback' ) !== null ) {
 				// JSON callback allows cross-site reads.
 				// For safety, strip user credentials.
 				wfDebug( "API: stripping user credentials for JSON callback\n" );
-				$wgUser = new User();
-				$this->getContext()->setUser( $wgUser );
+				$wgwiki_User = new wiki_User();
+				$this->getContext()->setwiki_User( $wgwiki_User );
 			}
 		}
 
@@ -271,7 +271,7 @@ class ApiMain extends ApiBase {
 			return;
 		}
 
-		if ( !in_array( 'read', User::getGroupPermissions( array( '*' ) ), true ) ) {
+		if ( !in_array( 'read', wiki_User::getGroupPermissions( array( '*' ) ), true ) ) {
 			// Private wiki, only private headers
 			if ( $mode !== 'private' ) {
 				wfDebug( __METHOD__ . ": ignoring request for $mode cache mode, private wiki\n" );
@@ -604,7 +604,7 @@ class ApiMain extends ApiBase {
 		}
 
 		if ( $e instanceof UsageException ) {
-			// User entered incorrect parameters - print usage screen
+			// wiki_User entered incorrect parameters - print usage screen
 			$errMessage = $e->getMessageArray();
 
 			// Only print the help message when this is for the developer, not runtime
@@ -745,7 +745,7 @@ class ApiMain extends ApiBase {
 	 */
 	protected function checkExecutePermissions( $module ) {
 		$user = $this->getUser();
-		if ( $module->isReadMode() && !in_array( 'read', User::getGroupPermissions( array( '*' ) ), true ) &&
+		if ( $module->isReadMode() && !in_array( 'read', wiki_User::getGroupPermissions( array( '*' ) ), true ) &&
 			!$user->isAllowed( 'read' ) )
 		{
 			$this->dieUsageMsg( 'readrequired' );
@@ -1052,7 +1052,7 @@ class ApiMain extends ApiBase {
 
 		$msg .= "\n$astriks Permissions $astriks\n\n";
 		foreach ( self::$mRights as $right => $rightMsg ) {
-			$groups = User::getGroupsWithPermission( $right );
+			$groups = wiki_User::getGroupsWithPermission( $right );
 			$msg .= "* " . $right . " *\n  " . wfMsgReplaceArgs( $rightMsg[ 'msg' ], $rightMsg[ 'params' ] ) .
 						"\nGranted to:\n  " . str_replace( '*', 'all', implode( ', ', $groups ) ) . "\n\n";
 

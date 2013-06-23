@@ -78,7 +78,7 @@ class DatabaseMssql extends DatabaseBase {
 		$this->close();
 		$this->mServer = $server;
 		$this->mPort = $wgDBport;
-		$this->mUser = $user;
+		$this->mwiki_User = $user;
 		$this->mPassword = $password;
 		$this->mDBname = $dbName;
 
@@ -93,11 +93,11 @@ class DatabaseMssql extends DatabaseBase {
 		// Current solution requires installer to know to input 'ntauth' for both username and password
 		// to trigger connection via NT Auth. - ugly, ugly, ugly
 		// TO-DO: Make this better and add NT Auth choice to MW installer when SQL Server option is chosen.
-		$ntAuthUserTest = strtolower( $user );
+		$ntAuthwiki_UserTest = strtolower( $user );
 		$ntAuthPassTest = strtolower( $password );
 
 		// Decide which auth scenerio to use
-		if( $ntAuthPassTest == 'ntauth' && $ntAuthUserTest == 'ntauth' ){
+		if( $ntAuthPassTest == 'ntauth' && $ntAuthwiki_UserTest == 'ntauth' ){
 			// Don't add credentials to $connectionInfo
 		} else {
 			$connectionInfo['UID'] = $user;
@@ -111,7 +111,7 @@ class DatabaseMssql extends DatabaseBase {
 
 		if ( $this->mConn === false ) {
 			wfDebug( "DB connection error\n" );
-			wfDebug( "Server: $server, Database: $dbName, User: $user, Password: " . substr( $password, 0, 3 ) . "...\n" );
+			wfDebug( "Server: $server, Database: $dbName, wiki_User: $user, Password: " . substr( $password, 0, 3 ) . "...\n" );
 			wfDebug( $this->lastError() . "\n" );
 			return false;
 		}
@@ -741,13 +741,13 @@ class DatabaseMssql extends DatabaseBase {
 	 * Precondition: This object is connected as the superuser.
 	 * Creates the database, schema, user and login.
 	 */
-	function initial_setup( $dbName, $newUser, $loginPassword ) {
+	function initial_setup( $dbName, $newwiki_User, $loginPassword ) {
 		$dbName = $this->escapeIdentifier( $dbName );
 
 		// It is not clear what can be used as a login,
 		// From http://msdn.microsoft.com/en-us/library/ms173463.aspx
 		// a sysname may be the same as an identifier.
-		$newUser = $this->escapeIdentifier( $newUser );
+		$newwiki_User = $this->escapeIdentifier( $newwiki_User );
 		$loginPassword = $this->addQuotes( $loginPassword );
 
 		$this->doQuery("CREATE DATABASE $dbName;");
@@ -755,16 +755,16 @@ class DatabaseMssql extends DatabaseBase {
 		$this->doQuery("CREATE SCHEMA $dbName;");
 		$this->doQuery("
 						CREATE
-							LOGIN $newUser
+							LOGIN $newwiki_User
 						WITH
 							PASSWORD=$loginPassword
 						;
 					");
 		$this->doQuery("
 						CREATE
-							USER $newUser
+							USER $newwiki_User
 						FOR
-							LOGIN $newUser
+							LOGIN $newwiki_User
 						WITH
 							DEFAULT_SCHEMA=$dbName
 						;
@@ -782,7 +782,7 @@ class DatabaseMssql extends DatabaseBase {
 							CREATE FULLTEXT CATALOG
 						ON
 							DATABASE::$dbName
-						TO $newUser
+						TO $newwiki_User
 						;
 					");
 		$this->doQuery("
@@ -790,7 +790,7 @@ class DatabaseMssql extends DatabaseBase {
 							CONTROL
 						ON
 							SCHEMA::$dbName
-						TO $newUser
+						TO $newwiki_User
 						;
 					");
 

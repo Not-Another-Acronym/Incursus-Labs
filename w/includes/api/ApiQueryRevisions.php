@@ -75,11 +75,11 @@ class ApiQueryRevisions extends ApiQueryBase {
 	 * @return bool|String
 	 */
 	public static function getRollbackToken( $pageid, $title, $rev ) {
-		global $wgUser;
-		if ( !$wgUser->isAllowed( 'rollback' ) ) {
+		global $wgwiki_User;
+		if ( !$wgwiki_User->isAllowed( 'rollback' ) ) {
 			return false;
 		}
-		return $wgUser->getEditToken(
+		return $wgwiki_User->getEditToken(
 			array( $title->getPrefixedText(), $rev->getUserText() ) );
 	}
 
@@ -228,7 +228,7 @@ class ApiQueryRevisions extends ApiQueryBase {
 		if ( $this->fld_user ) {
 			$this->addTables( 'user' );
 			$this->addJoinConds( array( 'user' => Revision::userJoinCond() ) );
-			$this->addFields( Revision::selectUserFields() );
+			$this->addFields( Revision::selectwiki_UserFields() );
 		}
 
 		// Bug 24166 - API error when using rvprop=tags
@@ -627,8 +627,8 @@ class ApiQueryRevisions extends ApiQueryBase {
 				' ids            - The ID of the revision',
 				' flags          - Revision flags (minor)',
 				' timestamp      - The timestamp of the revision',
-				' user           - User that made the revision',
-				' userid         - User id of revision creator',
+				' user           - wiki_User that made the revision',
+				' userid         - wiki_User id of revision creator',
 				' size           - Length (bytes) of the revision',
 				' sha1           - SHA-1 (base 16) of the revision',
 				' comment        - Comment by the user for revision',

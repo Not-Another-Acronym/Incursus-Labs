@@ -108,7 +108,7 @@ abstract class UploadBase {
 	 * identifying the missing permission.
 	 * Can be overriden by subclasses.
 	 *
-	 * @param $user User
+	 * @param $user wiki_User
 	 * @return bool
 	 */
 	public static function isAllowed( $user ) {
@@ -494,7 +494,7 @@ abstract class UploadBase {
 	/**
 	 * Alias for verifyTitlePermissions. The function was originally 'verifyPermissions'
 	 * but that suggests it's checking the user, when it's really checking the title + user combination.
-	 * @param $user User object to verify the permissions against
+	 * @param $user wiki_User object to verify the permissions against
 	 * @return mixed An array as returned by getUserPermissionsErrors or true
 	 *               in case the user has proper permissions.
 	 */
@@ -509,7 +509,7 @@ abstract class UploadBase {
 	 * isAllowed() should be called as well for generic is-user-blocked or
 	 * can-user-upload checking.
 	 *
-	 * @param $user User object to verify the permissions against
+	 * @param $user wiki_User object to verify the permissions against
 	 * @return mixed An array as returned by getUserPermissionsErrors or true
 	 *               in case the user has proper permissions.
 	 */
@@ -622,7 +622,7 @@ abstract class UploadBase {
 	 * @param $comment
 	 * @param $pageText
 	 * @param $watch
-	 * @param $user User
+	 * @param $user wiki_User
 	 *
 	 * @return Status indicating the whether the upload succeeded.
 	 */
@@ -1266,7 +1266,7 @@ abstract class UploadBase {
 	 * Check if there's an overwrite conflict and, if so, if restrictions
 	 * forbid this user from performing the upload.
 	 *
-	 * @param $user User
+	 * @param $user wiki_User
 	 *
 	 * @return mixed true on success, array on failure
 	 */
@@ -1295,11 +1295,11 @@ abstract class UploadBase {
 	/**
 	 * Check if a user is the last uploader
 	 *
-	 * @param $user User object
+	 * @param $user wiki_User object
 	 * @param $img String: image name
 	 * @return Boolean
 	 */
-	public static function userCanReUpload( User $user, $img ) {
+	public static function userCanReUpload( wiki_User $user, $img ) {
 		if( $user->isAllowed( 'reupload' ) ) {
 			return true; // non-conditional
 		}

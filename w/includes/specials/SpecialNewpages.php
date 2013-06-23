@@ -44,7 +44,7 @@ class SpecialNewpages extends IncludableSpecialPage {
 	}
 
 	protected function setup( $par ) {
-		global $wgEnableNewpagesUserFilter;
+		global $wgEnableNewpageswiki_UserFilter;
 
 		// Options
 		$opts = new FormOptions();
@@ -72,7 +72,7 @@ class SpecialNewpages extends IncludableSpecialPage {
 
 		// Validate
 		$opts->validateIntBounds( 'limit', 0, 5000 );
-		if( !$wgEnableNewpagesUserFilter ) {
+		if( !$wgEnableNewpageswiki_UserFilter ) {
 			$opts->setValue( 'username', '' );
 		}
 	}
@@ -206,7 +206,7 @@ class SpecialNewpages extends IncludableSpecialPage {
 	}
 
 	protected function form() {
-		global $wgEnableNewpagesUserFilter, $wgScript;
+		global $wgEnableNewpageswiki_UserFilter, $wgScript;
 
 		// Consume values
 		$this->opts->consumeValue( 'offset' ); // don't carry offset, DWIW
@@ -259,7 +259,7 @@ class SpecialNewpages extends IncludableSpecialPage {
 					$tagFilterSelector .
 				'</td>
 			</tr>' ) : '' ) .
-			( $wgEnableNewpagesUserFilter ?
+			( $wgEnableNewpageswiki_UserFilter ?
 			'<tr>
 				<td class="mw-label">' .
 					Xml::label( $this->msg( 'newpages-username' )->text(), 'mw-np-username' ) .
@@ -354,7 +354,7 @@ class SpecialNewpages extends IncludableSpecialPage {
 			$this->msg( 'brackets' )->params( $this->msg( 'nbytes' )->numParams( $result->length )->text() )
 		);
 
-		$ulink = Linker::revUserTools( $rev );
+		$ulink = Linker::revwiki_UserTools( $rev );
 		$comment = Linker::revComment( $rev );
 
 		if ( $this->patrollable( $result ) ) {
@@ -494,7 +494,7 @@ class NewPagesPager extends ReverseChronologicalPager {
 	}
 
 	function getQueryInfo() {
-		global $wgEnableNewpagesUserFilter, $wgGroupPermissions;
+		global $wgEnableNewpageswiki_UserFilter, $wgGroupPermissions;
 		$conds = array();
 		$conds['rc_new'] = 1;
 
@@ -511,8 +511,8 @@ class NewPagesPager extends ReverseChronologicalPager {
 			$rcIndexes = array( 'rc_timestamp' );
 		}
 
-		# $wgEnableNewpagesUserFilter - temp WMF hack
-		if( $wgEnableNewpagesUserFilter && $user ) {
+		# $wgEnableNewpageswiki_UserFilter - temp WMF hack
+		if( $wgEnableNewpageswiki_UserFilter && $user ) {
 			$conds['rc_user_text'] = $user->getText();
 			$rcIndexes = 'rc_user_text';
 		# If anons cannot make new pages, don't "exclude logged in users"!

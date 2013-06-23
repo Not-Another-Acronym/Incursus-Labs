@@ -91,8 +91,8 @@ $wgCaptchaTriggers['edit']          = false; // Would check on every edit
 $wgCaptchaTriggers['create']        = false; // Check on page creation.
 $wgCaptchaTriggers['sendemail']     = false; // Special:Emailuser
 $wgCaptchaTriggers['addurl']        = true;  // Check on edits that add URLs
-$wgCaptchaTriggers['createaccount'] = true;  // Special:Userlogin&type=signup
-$wgCaptchaTriggers['badlogin']      = true;  // Special:Userlogin after failure
+$wgCaptchaTriggers['createaccount'] = true;  // Special:wiki_Userlogin&type=signup
+$wgCaptchaTriggers['badlogin']      = true;  // Special:wiki_Userlogin after failure
 
 /**
  * You may wish to apply special rules for captcha triggering on some namespaces.
@@ -178,13 +178,13 @@ $wgExtensionMessagesFiles['ConfirmEdit'] = "$wgConfirmEditIP/ConfirmEdit.i18n.ph
 $wgExtensionMessagesFiles['ConfirmEditAlias'] = "$wgConfirmEditIP/ConfirmEdit.alias.php";
 
 $wgHooks['EditFilterMerged'][] = 'ConfirmEditHooks::confirmEditMerged';
-$wgHooks['UserCreateForm'][] = 'ConfirmEditHooks::injectUserCreate';
-$wgHooks['AbortNewAccount'][] = 'ConfirmEditHooks::confirmUserCreate';
-$wgHooks['LoginAuthenticateAudit'][] = 'ConfirmEditHooks::triggerUserLogin';
-$wgHooks['UserLoginForm'][] = 'ConfirmEditHooks::injectUserLogin';
-$wgHooks['AbortLogin'][] = 'ConfirmEditHooks::confirmUserLogin';
-$wgHooks['EmailUserForm'][] = 'ConfirmEditHooks::injectEmailUser';
-$wgHooks['EmailUser'][] = 'ConfirmEditHooks::confirmEmailUser';
+$wgHooks['wiki_UserCreateForm'][] = 'ConfirmEditHooks::injectwiki_UserCreate';
+$wgHooks['AbortNewAccount'][] = 'ConfirmEditHooks::confirmwiki_UserCreate';
+$wgHooks['LoginAuthenticateAudit'][] = 'ConfirmEditHooks::triggerwiki_UserLogin';
+$wgHooks['wiki_UserLoginForm'][] = 'ConfirmEditHooks::injectwiki_UserLogin';
+$wgHooks['AbortLogin'][] = 'ConfirmEditHooks::confirmwiki_UserLogin';
+$wgHooks['Emailwiki_UserForm'][] = 'ConfirmEditHooks::injectEmailwiki_User';
+$wgHooks['Emailwiki_User'][] = 'ConfirmEditHooks::confirmEmailwiki_User';
 # Register API hook
 $wgHooks['APIEditBeforeSave'][] = 'ConfirmEditHooks::confirmEditAPI';
 $wgHooks['APIGetAllowedParams'][] = 'ConfirmEditHooks::APIGetAllowedParams';

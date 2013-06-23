@@ -5,7 +5,7 @@
 -- Better to use namespace (drop the 1 bit!) and title
 
 -- 2002-12-17 by Brion Vibber <brion@pobox.com>
--- affects, affected by changes to SpecialWatchlist.php, User.php,
+-- affects, affected by changes to SpecialWatchlist.php, wiki_User.php,
 -- Article.php, Title.php, SpecialRecentchanges.php
 
 DROP TABLE IF EXISTS watchlist2;

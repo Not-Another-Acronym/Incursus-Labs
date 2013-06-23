@@ -117,9 +117,9 @@ $specialPageAliases = array(
 	'Unusedtemplates'           => array( 'CitakanNganggur' ),
 	'Unwatchedpages'            => array( 'KacaTeuDiawaskeun' ),
 	'Upload'                    => array( 'Kunjal' ),
-	'Userlogin'                 => array( 'AsupLog' ),
-	'Userlogout'                => array( 'KaluarLog' ),
-	'Userrights'                => array( 'HakPamake' ),
+	'wiki_Userlogin'                 => array( 'AsupLog' ),
+	'wiki_Userlogout'                => array( 'KaluarLog' ),
+	'wiki_Userrights'                => array( 'HakPamake' ),
 	'Version'                   => array( 'Versi' ),
 	'Wantedcategories'          => array( 'KategoriDiteang' ),
 	'Wantedpages'               => array( 'KacaDiteang', 'TumbuPegat' ),
@@ -129,7 +129,7 @@ $specialPageAliases = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Gurat-handapan tutumbu',
 'tog-justify' => 'Lempengkeun alinéa',
 'tog-hideminor' => 'Sumputkeun éditan minor dina nu anyar robah',
@@ -465,7 +465,7 @@ $1',
 Hal ieu biasana disababkeun ku ayana tutumbu béda atawa jujutan heubeul ka hiji kaca nu geus dihapus.
 
 Lamun lain ieu sababna, Anjeun meureun geus manggihan bug dina pakakas lemes.
-Mangga laporkeun ha ieu ka salasaurang [[Special:ListUsers/sysop|Kuncén]], bari jeung nyebutkeun alamat URL nu dituju.',
+Mangga laporkeun ha ieu ka salasaurang [[Special:Listwiki_Users/sysop|Kuncén]], bari jeung nyebutkeun alamat URL nu dituju.',
 'missingarticle-rev' => '(révisi#: $1)',
 'missingarticle-diff' => '(Béda: $1, $2)',
 'readonly_lag' => 'Pangkalan datana sacara otomatis dikonci nalika server pangkalan data sekundér disalin kana master',
@@ -508,7 +508,7 @@ Pikeun alihbasa, mangga sumping ka [//translatewiki.net/wiki/Main_Page?setlang=e
 'customcssprotected' => 'Anjeun teu teu diwenangkeun pikeun ngédit ieu kaca CSS, sabab ngandung setélan pribadi kontributor séjén.',
 'customjsprotected' => 'Anjeun teu teu diwenangkeun pikeun ngédit ieu kaca JavaScript, sabab ngandung setélan pribadi kontributor séjén.',
 'ns-specialprotected' => 'Kaca dina ngaranspasi {{ns:special}} teu bisa di édit.',
-'titleprotected' => "Ieu judul dikonci ku [[User:$1|$1]] kalawan alesan ''$2''.",
+'titleprotected' => "Ieu judul dikonci ku [[wiki_User:$1|$1]] kalawan alesan ''$2''.",
 
 # Virus scanner
 'virus-badscanner' => "Kasalahan konfigurasi: panyekén virus teu dipikawanoh: ''$1''",
@@ -518,7 +518,7 @@ Pikeun alihbasa, mangga sumping ka [//translatewiki.net/wiki/Main_Page?setlang=e
 # Login and logout pages
 'logouttext' => "'''Anjeun ayeuna geus kaluar log.'''
 
-Anjeun bisa tetep migunakeun {{SITENAME}} bari anonim, atawa bisa [[Special:UserLogin|asup log deui]] salaku pamaké nu sarua atawa nu séjén deui.
+Anjeun bisa tetep migunakeun {{SITENAME}} bari anonim, atawa bisa [[Special:wiki_UserLogin|asup log deui]] salaku pamaké nu sarua atawa nu séjén deui.
 Mangkahadé, sababaraha kaca bakal tetep némbongkeun saolah-olah anjeun asup log kénéh nepi ka anjeun ngosongkeun ''cache'' panyungsi anjeun.",
 'welcomecreation' => '==Wilujeng sumping, $1!==
 Rekening anjeun geus dijieun.
@@ -560,7 +560,7 @@ Pariksa kukisna bisi tumpur, terus cobaan muat ulang ieu kaca.',
 'loginsuccess' => 'Anjeun ayeuna geus asup log ka {{SITENAME}} salaku "$1".',
 'nosuchuser' => 'Euweuh pamaké nu ngaranna "$1".
 Ngaran pamaké ngabedakeun hurup kapital.
-Pariksa éjahanana, atawa paké formulir di handap pikeun [[Special:UserLogin/signup|nyieun rekening anyar]].',
+Pariksa éjahanana, atawa paké formulir di handap pikeun [[Special:wiki_UserLogin/signup|nyieun rekening anyar]].',
 'nosuchusershort' => 'Taya pamaké nu ngaranna "$1", pariksa éjahanana!',
 'nouserspecified' => 'Anjeun kudu ngeusian ngaran landihan.',
 'login-userblocked' => 'Ieu pamaké keur dipeungpeuk, teu diwenangkeun asup log.',
@@ -746,7 +746,7 @@ Bisa jadi geus dipindahkeun atawa geus dihapus nalika anjeun muka kacana.',
 'loginreqlink' => 'asup log',
 'loginreqpagetext' => 'Mun hayang muka kaca séjénna, Anjeun kudu $1.',
 'accmailtitle' => 'Sandi geus dikirim.',
-'accmailtext' => "Sandi acak pikeun [[User talk:$1|$1]] geus dikirimkeun ka $2.
+'accmailtext' => "Sandi acak pikeun [[wiki_User talk:$1|$1]] geus dikirimkeun ka $2.
 
 Sandi pikeun rekening anyar ieu bisa diganti dina kaca ''[[Special:ChangePassword|ganti sandi]]'' sanggeus asup log.",
 'newarticle' => '(anyar)',
@@ -754,7 +754,7 @@ Sandi pikeun rekening anyar ieu bisa diganti dina kaca ''[[Special:ChangePasswor
 Pikeun nyieun kaca, mimitian ku ngetik jeroeun kotak di handap
 (tempo [[{{MediaWiki:Helppage}}|kaca pitulung]] pikeun leuwih écés).
 Mun anjeun ka dieu teu ngahaja, klik baé tombol '''back''' na panyungsi anjeun.",
-'anontalkpagetext' => "----''Ieu mangrupa kaca sawala pikeun pamaké anonim nu can (henteu) nyieun rekening, kusabab kitu alamat IP dipaké dina hal ieu pikeun nyirikeun anjeunna. Alamat IP ieu bisa dipaké ku sababaraha urang. Mun anjeun salasahiji pamaké anonim sarta ngarasa aya koméntar nu teu pakait geus ditujukeun ka anjeun, leuwih hadé [[Special:UserLogin|nyieun rekening atawa asup log]] sangkan teu pahili jeung pamaké anonim séjén.''",
+'anontalkpagetext' => "----''Ieu mangrupa kaca sawala pikeun pamaké anonim nu can (henteu) nyieun rekening, kusabab kitu alamat IP dipaké dina hal ieu pikeun nyirikeun anjeunna. Alamat IP ieu bisa dipaké ku sababaraha urang. Mun anjeun salasahiji pamaké anonim sarta ngarasa aya koméntar nu teu pakait geus ditujukeun ka anjeun, leuwih hadé [[Special:wiki_UserLogin|nyieun rekening atawa asup log]] sangkan teu pahili jeung pamaké anonim séjén.''",
 'noarticletext' => 'Kiwari can aya téks dina ieu kaca.
 Anjeun bisa [[Special:Search/{{PAGENAME}}|nyusud judul ieu kaca]] dina kaca séjén,
 <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} nyusud log nu tumali],
@@ -786,7 +786,7 @@ Pikeun rujukan, éntri log panungtung dipidangkeun di handap:',
 
 ''Kusabab {{SITENAME}} ngawenangkeun dipakéna HTML atah, pramidangna disumputkeun pikeun nyegah panarajang JavaScript.''
 
-'''Mun ieu éditan bener, mangga cobian deui. Mun tetep teu metu, cobi [[Special:UserLogout|kaluar log]] heula, lajeng lebet deui.'''",
+'''Mun ieu éditan bener, mangga cobian deui. Mun tetep teu metu, cobi [[Special:wiki_UserLogout|kaluar log]] heula, lajeng lebet deui.'''",
 'token_suffix_mismatch' => "'''Éditan anjeun ditolak sabab aplikasi klien Anjeun ngarobah karakter tanda baca dina éditan. Éditan kasebut ditolak keur nyegah kasalahan dina artikel téks. Hal ieu kadang-kadang kajadian lamun Anjeun maké proksi anonim basis web nu masalah.'''",
 'edit_form_incomplete' => "'''Sawatara bagian tina wangun éditan teu nepi ka sérver; pariksa deui naha éditan Anjeun tetep gembleng sarta cobaan deui.'''",
 'editing' => 'Ngédit $1',
@@ -827,7 +827,7 @@ kuncén nu ngonci pangkalan data mikeun kajelasan : $1",
 'edittools' => '<!-- Téks di dieu bakal némbongan di handapeun formulir édit jeung muat.-->',
 'nocreatetitle' => 'Nyieun kaca kakara diwatesan',
 'nocreatetext' => '{{SITENAME}} nutup kabisa nyieun kaca anyar.
-Mangga édit artikel nu geus aya, atawa [[Special:UserLogin|asup log/daptar heula]].',
+Mangga édit artikel nu geus aya, atawa [[Special:wiki_UserLogin|asup log/daptar heula]].',
 'nocreate-loggedin' => 'Anjeun teu diwenangkeun pikeun nyieun kaca anyar.',
 'sectioneditnotsupported-title' => 'Teu bisa ngarobah dina sub-judul',
 'sectioneditnotsupported-text' => 'Eusi subjudul di ieu kaca teu bisa diédit.',
@@ -866,11 +866,11 @@ Sawatara citakan baris teu diasupkeun.',
 'undo-success' => 'Éditan ieu bisa dibolaykeun. Mangga pariksa babandingan di handap pikeun mastikeun mémang anjeun miharep éta parobahan. Mun geus yakin, mangga simpen parobahanana pikeun ngabolaykeun éditan.',
 'undo-failure' => 'Éditan teu bisa dibolaykeun alatan kaselang ku éditan séjén.',
 'undo-norev' => 'Éditan ieu henteu bisa bolaykeun alatan kaca henteu kapanggih atawa geus dihapus.',
-'undo-summary' => '←Ngabolaykeun révisi $1 ku [[Special:Contributions/$2|$2]] ([[User talk:$2|Obrolan]])',
+'undo-summary' => '←Ngabolaykeun révisi $1 ku [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Obrolan]])',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'Rekening teu bisa dijieun',
-'cantcreateaccount-text' => "Nyieun rekening ti ieu alamat IP ('''$1''') dipeungpeuk ku [[User:$3|$3]].
+'cantcreateaccount-text' => "Nyieun rekening ti ieu alamat IP ('''$1''') dipeungpeuk ku [[wiki_User:$3|$3]].
 
 Alesanana $3 cenah ''$2''.",
 
@@ -1107,7 +1107,7 @@ Coba susud dimimitian ku ''all:'' pikeun nyusud sakabéh kandunganana (kaasup ka
 'mypreferences' => 'Préferéns',
 'prefs-edits' => 'Jumlah éditan:',
 'prefsnologin' => 'Can asup log',
-'prefsnologintext' => 'Anjeun kudu <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} asup log]</span> pikeun ngatur préferénsi pamaké.',
+'prefsnologintext' => 'Anjeun kudu <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} asup log]</span> pikeun ngatur préferénsi pamaké.',
 'changepassword' => 'Robah sandi',
 'prefs-skin' => 'Kulit',
 'skin-preview' => 'Pramidang',
@@ -1210,16 +1210,16 @@ Mun geus anggeus teu bisa dibolaykeun.',
 'prefs-displaywatchlist' => 'Pilihan pidangan',
 'prefs-diffs' => 'Béda',
 
-# User preference: e-mail validation using jQuery
+# wiki_User preference: e-mail validation using jQuery
 'email-address-validity-valid' => 'Alamat surélék sigana bener',
 'email-address-validity-invalid' => 'Asupkeun alamat ratron nu bener',
 
-# User rights
+# wiki_User rights
 'userrights' => 'Manajemén hak pamaké',
 'userrights-lookup-user' => 'Atur gorombolan pamaké',
 'userrights-user-editname' => 'Asupkeun landihan:',
 'editusergroup' => 'Édit Golongan Pamaké',
-'editinguser' => "Ngarobah hak kontributor '''[[User:$1|$1]]''' $2",
+'editinguser' => "Ngarobah hak kontributor '''[[wiki_User:$1|$1]]''' $2",
 'userrights-editusergroup' => 'Édit gorombolan pamaké',
 'saveusergroups' => 'Simpen Grup Pamaké',
 'userrights-groupsmember' => 'Anggota ti:',
@@ -1231,7 +1231,7 @@ Mun geus anggeus teu bisa dibolaykeun.',
 'userrights-reason' => 'Alesan:',
 'userrights-no-interwiki' => 'Anjeung teu diwenangkeun ngarobah hak pamaké dina wiki séjén.',
 'userrights-nodatabase' => 'Pangkalan data $1 euweuh atawa henteu lokal.',
-'userrights-nologin' => 'Pikeun ngatur hak pamaké, anjeun kudu [[Special:UserLogin|asup log]] migunakeun rekening kuncén.',
+'userrights-nologin' => 'Pikeun ngatur hak pamaké, anjeun kudu [[Special:wiki_UserLogin|asup log]] migunakeun rekening kuncén.',
 'userrights-notallowed' => 'Akun anjeun teu boga kawenangan pikeun ngatur hak pamaké.',
 'userrights-changeable-col' => 'Jumplukan anu bisa Anjeun robah',
 'userrights-unchangeable-col' => 'Jumplukan anu teu bisa Anjeun robah',
@@ -1314,7 +1314,7 @@ Mun geus anggeus teu bisa dibolaykeun.',
 'right-siteadmin' => 'Ngonci jeung muka konci databés',
 'right-sendemail' => 'Kirim surélék ka pamaké séjén',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Log hak pamaké',
 'rightslogtext' => 'Ieu mangrupa log parobahan hak-hak pamaké.',
 'rightslogentry' => 'ngarobah kaanggotaan grup pikeun $1 tina $2 jadi $3',
@@ -1406,7 +1406,7 @@ Mun geus anggeus teu bisa dibolaykeun.',
 'uploadbtn' => 'Muatkeun koropak',
 'reuploaddesc' => 'Balik ka formulir muatan.',
 'uploadnologin' => 'Can asup log',
-'uploadnologintext' => 'Anjeun kudu [[Special:UserLogin|asup log]] pikeun ngamuat koropak.',
+'uploadnologintext' => 'Anjeun kudu [[Special:wiki_UserLogin|asup log]] pikeun ngamuat koropak.',
 'upload_directory_read_only' => 'Diréktori muatan ($1) teu bisa ditulis ku server ramat.',
 'uploaderror' => 'Kasalahan muat',
 'upload-recreate-warning' => "'''Awas: berkas nu ngaranna kitu geus kungsi dihapus atawa dipindahkeun.'''
@@ -1656,7 +1656,7 @@ Saméméh ngahapus, pariksa heula bisi aya tumbu ka ieu citakan.',
 'statistics-views-total' => 'Lobana dibuka',
 'statistics-views-total-desc' => 'Muka kaca nu can aya jeung kaca husus teu diitung',
 'statistics-views-peredit' => 'Muka unggal édit',
-'statistics-users' => '[[Special:ListUsers|Kontributor]] kadaptar',
+'statistics-users' => '[[Special:Listwiki_Users|Kontributor]] kadaptar',
 'statistics-users-active' => 'Pamaké getol',
 'statistics-users-active-desc' => 'Kontributor nu ngoprék salila {{PLURAL:$1|poé|$1 poé}} panungtung',
 'statistics-mostpopular' => 'Kaca nu pangmindengna dibuka',
@@ -1805,13 +1805,13 @@ Baca ogé [[Special:WantedCategories|kategori nu dipikabutuh]].',
 'linksearch-line' => '$1 ditumbu ti $2',
 'linksearch-error' => "''Wildcard'' ngan bisa némbongan dina awal ngaran indung (''host'').",
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => 'Témbongkeun kontributor dimimitian ku:',
 'listusers-submit' => 'Témbongkeun',
 'listusers-noresult' => 'Teu kapendak.',
 'listusers-blocked' => '(diblokir)',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'Béréndélan pamaké nu getol',
 'activeusers-intro' => 'Ieu béréndélan kontributor anu geus ngoprék $1 {{PLURAL:$1|poé|poé}} panungtung.',
 'activeusers-count' => '$1 {{PLURAL:$1|édit|édit}}an salila {{PLURAL:$3|poé|$3 poé}} panungtung',
@@ -1845,7 +1845,7 @@ Baca ogé [[Special:WantedCategories|kategori nu dipikabutuh]].',
 
 # E-mail user
 'mailnologin' => 'Euweuh alamat ngirim',
-'mailnologintext' => "Anjeun kudu '''[[Special:UserLogin|asup log]]''' sarta boga alamat surélék nu sah na [[Special:Preferences|préferénsi]] anjeun sangkan bisa nyurélékan pamaké séjén.",
+'mailnologintext' => "Anjeun kudu '''[[Special:wiki_UserLogin|asup log]]''' sarta boga alamat surélék nu sah na [[Special:Preferences|préferénsi]] anjeun sangkan bisa nyurélékan pamaké séjén.",
 'emailuser' => 'Surélékan pamaké ieu',
 'emailpage' => 'Surélékan pamaké',
 'emailpagetext' => 'Anjeun bisa maké formulir di handap pikeun ngirim surélék ka ieu pamaké.
@@ -1877,7 +1877,7 @@ Alamat surélék nu diasupkeun kana [[Special:Preferences|préferénsi pamaké a
 'nowatchlist' => 'Anjeun teu boga awaskeuneun.',
 'watchlistanontext' => 'Mangga $1 pikeun némbongkeun atawa ngarobah béréndélan awaskeuneun anjeun.',
 'watchnologin' => 'Can asup log',
-'watchnologintext' => 'Anjeun kudu [[Special:UserLogin|asup log]] pikeun ngarobah awaskeuneun.',
+'watchnologintext' => 'Anjeun kudu [[Special:wiki_UserLogin|asup log]] pikeun ngarobah awaskeuneun.',
 'addedwatchtext' => "Kaca \"[[:\$1]]\" geus ditambahkeun ka [[Special:Watchlist|awaskeuneun]] anjeun.
 Jaga, parobahan na kaca ieu katut kaca obrolanana bakal dibéréndélkeun di dinya, sarta kacana bakal katémbong '''dikandelan''' dina kaca [[Special:RecentChanges|Nu anyar robah]] sangkan leuwih gampang ngawaskeunana.
 
@@ -1973,9 +1973,9 @@ Hal ieu teu diwenangkeun pikeun nyegah karuksakan {{SITENAME}} nu teu dihaja.',
 'rollbacklink' => 'balikkeun',
 'rollbackfailed' => 'Gagal malikkeun',
 'cantrollback' => 'Éditan teu bisa dibalikkeun; kontribusi panungtung ngarupakeun hiji-hijina panulis kaca ieu.',
-'alreadyrolled' => 'Teu bisa mulangkeun édit ahir [[$1]] ku [[User:$2|$2]] ([[User talk:$2|Obrolan]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]); geus aya nu ngédit atawa mulangkeun kacana.
+'alreadyrolled' => 'Teu bisa mulangkeun édit ahir [[$1]] ku [[wiki_User:$2|$2]] ([[wiki_User talk:$2|Obrolan]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]); geus aya nu ngédit atawa mulangkeun kacana.
 
-Édit ahir ku [[User:$3|$3]] ([[User talk:$3|Obrolan]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
+Édit ahir ku [[wiki_User:$3|$3]] ([[wiki_User talk:$3|Obrolan]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
 'editcomment' => "Komentar ngéditna: \"''\$1''\".",
 'revertpage' => 'Malikkeun éditan $2, diganti deui ka vérsi ahir ku $1',
 'rollback-success' => 'Mulangkeun éditan $1; balik deui ka vérsi panungtung ku $2.',
@@ -2159,7 +2159,7 @@ Pikeun rujukan, éntri log panungtung dipidangkeun di handap:',
 'unblockip' => 'Buka peungpeuk pamaké',
 'unblockiptext' => 'Paké formulir di handap pikeun mulangkeun aksés nulis ka alamat IP atawa ngaran pamaké nu saméméhna dipeungpeuk.',
 'ipusubmit' => 'Buka peungpeuk pikeun pamaké ieu',
-'unblocked' => 'peungpeuk ka [[User:$1|$1]] geus dicabut',
+'unblocked' => 'peungpeuk ka [[wiki_User:$1|$1]] geus dicabut',
 'unblocked-range' => '$1 geus teu dipeungpeuk',
 'unblocked-id' => 'peungpeuk $1 geus dicabut',
 'blocklist' => 'Kontributor nu dipeungpeuk',
@@ -2183,7 +2183,7 @@ Pikeun rujukan, éntri log panungtung dipidangkeun di handap:',
 'unblocklink' => 'buka blokir',
 'change-blocklink' => 'Robah status blokir',
 'contribslink' => 'kontribusi',
-'autoblocker' => 'Otomatis dipeungpeuk kusabab alamat IP anjeun dipaké ku "[[User:$1|$1]]".
+'autoblocker' => 'Otomatis dipeungpeuk kusabab alamat IP anjeun dipaké ku "[[wiki_User:$1|$1]]".
 Alesan: "$2"',
 'blocklogpage' => 'Log_peungpeuk',
 'blocklog-showlog' => 'Ieu pamaké saméméhna geus kungsi dipeungpeuk.
@@ -2255,7 +2255,7 @@ anjeun kudu bener-bener ngarti kana hal ieu.",
 Dina kajadian kitu, mun hayang (jeung perlu) anjeun kudu mindahkeun atawa ngagabungkeun kacana sacara manual.",
 'movearticle' => 'Pindahkeun kaca',
 'movenologin' => 'Can asup log',
-'movenologintext' => 'Anjeun kudu jadi pamaké nu kadaptar tur [[Special:UserLogin|asup log]] pikeun mindahkeun kaca.',
+'movenologintext' => 'Anjeun kudu jadi pamaké nu kadaptar tur [[Special:wiki_UserLogin|asup log]] pikeun mindahkeun kaca.',
 'movenotallowed' => 'Anjeung teu boga kawenangan mindahkeun kaca.',
 'movenotallowedfile' => 'Anjeung teu boga kawenangan mindahkeun kaca.',
 'newtitle' => 'Ka judul anyar',
@@ -2887,7 +2887,7 @@ Sandi konfirmasi ieu bakal kadaluwarsa dina $4.',
 
 # Delete conflict
 'deletedwhileediting' => "'''Awas''': ieu kaca geus dihapus nalika anjeun mitembeyan ngédit!",
-'confirmrecreate' => "Pamaké [[User:$1|$1]] ([[User talk:$1|ngobrol]]) geus ngahapus artikel ieu nalika anjeun ngédit kalawan alesan:
+'confirmrecreate' => "Pamaké [[wiki_User:$1|$1]] ([[wiki_User talk:$1|ngobrol]]) geus ngahapus artikel ieu nalika anjeun ngédit kalawan alesan:
 : ''$2''
 mangga pastikeun yén anjeun rék nyieun deui artikel ieu.",
 'recreate' => 'Jieun deui',

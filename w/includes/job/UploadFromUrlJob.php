@@ -39,7 +39,7 @@ class UploadFromUrlJob extends Job {
 	public $upload;
 
 	/**
-	 * @var User
+	 * @var wiki_User
 	 */
 	protected $user;
 
@@ -55,7 +55,7 @@ class UploadFromUrlJob extends Job {
 			$this->params['url'],
 			false
 		);
-		$this->user = User::newFromName( $this->params['userName'] );
+		$this->user = wiki_User::newFromName( $this->params['userName'] );
 
 		# Fetch the file
 		$status = $this->upload->fetchFile();
@@ -81,7 +81,7 @@ class UploadFromUrlJob extends Job {
 				$key = $this->upload->stashFile();
 
 				if ( $this->params['leaveMessage'] ) {
-					$this->user->leaveUserMessage(
+					$this->user->leavewiki_UserMessage(
 						wfMessage( 'upload-warning-subj' )->text(),
 						wfMessage( 'upload-warning-msg',
 							$key,
@@ -119,13 +119,13 @@ class UploadFromUrlJob extends Job {
 	protected function leaveMessage( $status ) {
 		if ( $this->params['leaveMessage'] ) {
 			if ( $status->isGood() ) {
-				$this->user->leaveUserMessage( wfMessage( 'upload-success-subj' )->text(),
+				$this->user->leavewiki_UserMessage( wfMessage( 'upload-success-subj' )->text(),
 					wfMessage( 'upload-success-msg',
 						$this->upload->getTitle()->getText(),
 						$this->params['url']
 					)->text() );
 			} else {
-				$this->user->leaveUserMessage( wfMessage( 'upload-failure-subj' )->text(),
+				$this->user->leavewiki_UserMessage( wfMessage( 'upload-failure-subj' )->text(),
 					wfMessage( 'upload-failure-msg',
 						$status->getWikiText(),
 						$this->params['url']

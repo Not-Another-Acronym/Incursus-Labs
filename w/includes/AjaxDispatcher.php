@@ -97,7 +97,7 @@ class AjaxDispatcher {
 	 * request.
 	 */
 	function performAction() {
-		global $wgAjaxExportList, $wgUser;
+		global $wgAjaxExportList, $wgwiki_User;
 
 		if ( empty( $this->mode ) ) {
 			return;
@@ -113,8 +113,8 @@ class AjaxDispatcher {
 				'Bad Request',
 				"unknown function " . (string) $this->func_name
 			);
-		} elseif ( !in_array( 'read', User::getGroupPermissions( array( '*' ) ), true )
-			&& !$wgUser->isAllowed( 'read' ) )
+		} elseif ( !in_array( 'read', wiki_User::getGroupPermissions( array( '*' ) ), true )
+			&& !$wgwiki_User->isAllowed( 'read' ) )
 		{
 			wfHttpError(
 				403,

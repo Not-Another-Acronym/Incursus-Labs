@@ -27,18 +27,18 @@
  * @ingroup Watchlist
  */
 class WatchedItem {
-	var $mTitle, $mUser, $id, $ns, $ti;
+	var $mTitle, $mwiki_User, $id, $ns, $ti;
 	private $loaded = false, $watched, $timestamp;
 
 	/**
 	 * Create a WatchedItem object with the given user and title
-	 * @param $user User: the user to use for (un)watching
+	 * @param $user wiki_User: the user to use for (un)watching
 	 * @param $title Title: the title we're going to (un)watch
 	 * @return WatchedItem object
 	 */
-	public static function fromUserTitle( $user, $title ) {
+	public static function fromwiki_UserTitle( $user, $title ) {
 		$wl = new WatchedItem;
-		$wl->mUser = $user;
+		$wl->mwiki_User = $user;
 		$wl->mTitle = $title;
 		$wl->id = $user->getId();
 		# Patch (also) for email notification on page changes T.Gries/M.Arndt 11.09.2004
@@ -86,7 +86,7 @@ class WatchedItem {
 	}
 
 	/**
-	 * Is mTitle being watched by mUser?
+	 * Is mTitle being watched by mwiki_User?
 	 * @return bool
 	 */
 	public function isWatched() {

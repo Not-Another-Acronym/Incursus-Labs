@@ -145,9 +145,9 @@ $specialPageAliases = array(
 	'Unusedtemplates'           => array( 'Njewužywane_pśedłogi' ),
 	'Unwatchedpages'            => array( 'Boki_kenž_njejsu_we_wobglědowańkach' ),
 	'Upload'                    => array( 'Uploadowaś' ),
-	'Userlogin'                 => array( 'Pśizjawiś_se' ),
-	'Userlogout'                => array( 'Wótzjawiś_se' ),
-	'Userrights'                => array( 'Pšawa_wužywarjow' ),
+	'wiki_Userlogin'                 => array( 'Pśizjawiś_se' ),
+	'wiki_Userlogout'                => array( 'Wótzjawiś_se' ),
+	'wiki_Userrights'                => array( 'Pšawa_wužywarjow' ),
 	'Version'                   => array( 'Wersija' ),
 	'Wantedcategories'          => array( 'Póžedane_kategorije' ),
 	'Wantedfiles'               => array( 'Felujuce_dataje' ),
@@ -159,7 +159,7 @@ $specialPageAliases = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Wótkaze pódšmarnuś:',
 'tog-justify' => 'Tekst do bloka zrownaś',
 'tog-hideminor' => 'Małe změny w aktualnych změnach schowaś',
@@ -499,7 +499,7 @@ Administrator, kenž jo ju zacynił, jo pódał toś tu pśicynu: $1',
 To se zwětšego zawinujo pśez njepłaśiwe wótchylenje abo wótkaz w stawiznach k bokoju, kótaryž jo se južo wulašował.
 
 Jolic to njepśitrjefijo, sy snaź namakał programowu zmólku w softwarje.
-Pšosym daj to a pśisłušny URL [[Special:ListUsers/sysop|administratoroju]] k wěsći.',
+Pšosym daj to a pśisłušny URL [[Special:Listwiki_Users/sysop|administratoroju]] k wěsći.',
 'missingarticle-rev' => '(wersija: $1)',
 'missingarticle-diff' => '(rozdźěl: $1, $2)',
 'readonly_lag' => 'Datowa banka jo awtomatiski se zacyniła, aby wótwisne serwery se mógli z głownym serwerom wurownowaś.',
@@ -545,7 +545,7 @@ Aby pśełožki za wšykne wikije pśidał abo změnił, wužywaj pšosym [//tra
 'customcssprotected' => 'Njamaš pšawo, aby toś ten CSS-bok wobźěłał, dokulaž wopśimujo  wósobinske nastajenja drugego wužywarja.',
 'customjsprotected' => 'Njamaš pšawo, aby toś ten JavaScriptowy bok wobźěłał, dokulaž wopśimujo  wósobinske nastajenja drugego wužywarja.',
 'ns-specialprotected' => 'Njejo móžno, boki w rumje {{ns:special}} wobźěłaś.',
-'titleprotected' => "Bok z toś tym mjenim bu wót [[User:$1|$1]] pśeśiwo napóranjeju šćitany. Pśicyna jo ''$2''.",
+'titleprotected' => "Bok z toś tym mjenim bu wót [[wiki_User:$1|$1]] pśeśiwo napóranjeju šćitany. Pśicyna jo ''$2''.",
 'filereadonlyerror' => 'Njejo móžno dataju "$1" změniś, dokulaž datajowy repozitorium "$2" jo jano cytajobny.
 
 Administrator, kenž jo jen zastajił, jo toś tu pśicynu pódał: "$3".',
@@ -562,7 +562,7 @@ Administrator, kenž jo jen zastajił, jo toś tu pśicynu pódał: "$3".',
 # Login and logout pages
 'logouttext' => "'''Sy se něnto wótzjawił.'''
 
-Móžoš {{SITENAME}} anomymnje dalej wužywaś abo móžoš [[Special:UserLogin|se znowego pśizjawiś]] ako samski abo hynakšy wužywaŕ.
+Móžoš {{SITENAME}} anomymnje dalej wužywaś abo móžoš [[Special:wiki_UserLogin|se znowego pśizjawiś]] ako samski abo hynakšy wužywaŕ.
 Źiwaj na to, až někotare boki se dalej tak zwobraznjuju ako by hyšći pśizjawjeny był, až njewuproznijoš cache swójego wobglědowaka.",
 'welcomecreation' => '== Witaj, $1! ==
 
@@ -604,7 +604,7 @@ Pśeswědč se, až cookije su zmóžnjone, zacytaj toś ten bok a wopytaj hyš�
 'loginsuccesstitle' => 'Pśizjawjenje wuspěšne',
 'loginsuccess' => "'''Sy něnto ako „$1” w {{GRAMMAR:lokatiw|{{SITENAME}}}} pśizjawjony.'''",
 'nosuchuser' => 'Wužywaŕ z mjenim „$1“ njeeksistěrujo. Wužywarske mjenja źiwaju na wjelikopisanje.
-Pśeglěduj pšawopis abo [[Special:UserLogin/signup|załož nowe konto]].',
+Pśeglěduj pšawopis abo [[Special:wiki_UserLogin/signup|załož nowe konto]].',
 'nosuchusershort' => 'Wužywarske mě „$1“ njeeksistěrujo. Pśeglěduj pšawopis.',
 'nouserspecified' => 'Pšosym pódaj wužywarske mě.',
 'login-userblocked' => 'Toś ten wužywaŕ jo blokěrowany. Pśizjawjenje njejo dowólone.',
@@ -789,13 +789,13 @@ Jo se snaź pśesunuł abo wulašował, mjaztym až woglědujoš se bok.',
 'loginreqlink' => 'se pśizjawiś',
 'loginreqpagetext' => 'Dejš $1, aby mógł boki pšawje cytaś.',
 'accmailtitle' => 'Šćitne gronidło jo se wótpósłało.',
-'accmailtext' => "Pśipadnje napórane gronidło za [[User talk:$1|$1]] jo se pósłało k $2.
+'accmailtext' => "Pśipadnje napórane gronidło za [[wiki_User talk:$1|$1]] jo se pósłało k $2.
 
 Gronidło za toś to nowe konto dajo se na boku ''[[Special:ChangePassword|Gronidło změniś]]'' pśi pśizjawjenju změniś.",
 'newarticle' => '(Nowy nastawk)',
 'newarticletext' => "Sy slědował wótkaz na bok, kótaryž hyšći njeeksistěrujo.
 Aby bok napórał, zapiš do kašćika dołojce (glědaj [[{{MediaWiki:Helppage}}|bok pomocy]] za dalšne informacije). Jolic sy zamólnje how, klikni na tłocašk '''Slědk'' w swójom wobglědowaku.",
-'anontalkpagetext' => "---- ''Toś jo diskusijny bok za anonymnego wužywarja, kótaryž njejo dotychměst žedno wužywarske konto załožył abo swójo konto njewužywa. Togodla dejmy numerisku IP-adresu wužywaś, aby jogo/ju identificěrowali. Taka IP-adresa dajo se wót wšakich wužywarjow wužywaś. Jolic sy anonymny wužywaŕ a se mysliš, až su se njerelewantne komentary na tebje měrili, [[Special:UserLogin/signup|załož konto]] abo [[Special:UserLogin|pśizjaw se]], aby se w pśichoźe zmuśenje z drugimi anonymnymi wužywarjami wobinuł.''",
+'anontalkpagetext' => "---- ''Toś jo diskusijny bok za anonymnego wužywarja, kótaryž njejo dotychměst žedno wužywarske konto załožył abo swójo konto njewužywa. Togodla dejmy numerisku IP-adresu wužywaś, aby jogo/ju identificěrowali. Taka IP-adresa dajo se wót wšakich wužywarjow wužywaś. Jolic sy anonymny wužywaŕ a se mysliš, až su se njerelewantne komentary na tebje měrili, [[Special:wiki_UserLogin/signup|załož konto]] abo [[Special:wiki_UserLogin|pśizjaw se]], aby se w pśichoźe zmuśenje z drugimi anonymnymi wužywarjami wobinuł.''",
 'noarticletext' => 'Dotychměst toś ten bok hyšći njewopśimujo žeden tekst. Móžoš w drugich bokach [[Special:Search/{{PAGENAME}}|titel togo boka pytaś]], <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} wótpowědne protokole pytaś] abo [{{fullurl:{{FULLPAGENAME}}|action=edit}} toś ten bok wobźěłaś]</span>.',
 'noarticletext-nopermission' => 'Tuchylu njejo žeden tekst na toś tom boku.
 Móžoš [[Special:Search/{{PAGENAME}}|toś ten bokowy titel]] na drugich bokach pytaś
@@ -876,7 +876,7 @@ Nejnowšy protokolowy zapisk jo dołojce ako referenca pódany:",
 'hiddencategories' => 'Toś ten bok jo jadna z {{PLURAL:$1|1 schowaneje kategorije|$1 schowaneju kategorijow|$1 schowanych kategorijow|$1 schowanych kategorijow}}:',
 'edittools' => '<!-- Tekst how buźo wiźeś pód wobźěłowańskimi a upload-formularami. -->',
 'nocreatetitle' => 'Załožowanje nowych bokow jo se wobgranicowało.',
-'nocreatetext' => 'Na {{GRAMMAR:lokatiw|{{SITENAME}}}} jo se załoženje nowych bokow wót serwera wobgranicowało. Móžoš hyś slědk a eksistěrujucy bok wobźěłaś, abo se [[Special:UserLogin|pśizjawiś]].',
+'nocreatetext' => 'Na {{GRAMMAR:lokatiw|{{SITENAME}}}} jo se załoženje nowych bokow wót serwera wobgranicowało. Móžoš hyś slědk a eksistěrujucy bok wobźěłaś, abo se [[Special:wiki_UserLogin|pśizjawiś]].',
 'nocreate-loggedin' => 'Njamaš pšawo nowe boki napóraś.',
 'sectioneditnotsupported-title' => 'Wobźěłowanje wótrězka se njepódpěra',
 'sectioneditnotsupported-text' => 'Wobźěłowanje wótrězka njepódpěra se na toś tom wobźěłowańskem boku.',
@@ -923,11 +923,11 @@ Njesmějo daś wěcej nježli $2 {{PLURAL:$2|wołanja|wołanjowu|wołanjow|woła
 'undo-success' => 'Wobźěłanje móžo se wótpóraś. Pšosym pśeglěduj dołojcne pśirownowanje aby se wěsty był, až to wót wěrnosći coš, a pón składuj změny, aby se wobźěłanje doskóńcnje wótpórało.',
 'undo-failure' => 'Změna njejo se mógała wótpóraś, dokulaž jo něchten pótrjefjony wótrězk mjaztym změnił.',
 'undo-norev' => 'Změna njeda se wótwrośiś, dokulaž njeeksistěčujo abo jo se wulašowała.',
-'undo-summary' => 'Wersija $1 wót [[Special:Contributions/$2|$2]] ([[User talk:$2|Diskusija]]) jo se anulěrowała',
+'undo-summary' => 'Wersija $1 wót [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Diskusija]]) jo se anulěrowała',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'Njejo móžno wužywarske konto wutwóriś',
-'cantcreateaccount-text' => "Wutwórjenje wužywarskego konta z toś teje IP adresy ('''$1''') jo blokěrowane pśez [[User:$3|$3]].
+'cantcreateaccount-text' => "Wutwórjenje wužywarskego konta z toś teje IP adresy ('''$1''') jo blokěrowane pśez [[wiki_User:$3|$3]].
 
 Pśicyna, kótaruž $3 jo zapódał, jo ''$2''.",
 
@@ -1186,7 +1186,7 @@ Drobnostki móžoš w [{{fullurl:{{#Special:Log}}/delete|page={{FULLPAGENAMEE}}}
 'mypreferences' => 'Nastajenja',
 'prefs-edits' => 'Licba wobźěłanjow:',
 'prefsnologin' => 'Njejsy pśizjawjony',
-'prefsnologintext' => 'Musyš se <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} pśizjawiś]</span>, aby mógał swóje nastajenja změniś.',
+'prefsnologintext' => 'Musyš se <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} pśizjawiś]</span>, aby mógał swóje nastajenja změniś.',
 'changepassword' => 'Šćitne gronidło změniś',
 'prefs-skin' => 'Šat',
 'skin-preview' => 'Pśeglěd',
@@ -1296,16 +1296,16 @@ Móžoš toś ten bok wužywaś, aby slědk stajił swóje nastajenja na standar
 'prefs-displaywatchlist' => 'Zwobraznjowańske opcije',
 'prefs-diffs' => 'Rozdźěle',
 
-# User preference: e-mail validation using jQuery
+# wiki_User preference: e-mail validation using jQuery
 'email-address-validity-valid' => 'Zda se, až e-mailowa adresa jo płaśiwa',
 'email-address-validity-invalid' => 'Zapódaj płaśiwu e-mailowu adresu',
 
-# User rights
+# wiki_User rights
 'userrights' => 'Zastojanje wužywarskich pšawow',
 'userrights-lookup-user' => 'Wužywarske kupki zastojaś',
 'userrights-user-editname' => 'Wužywarske mě:',
 'editusergroup' => 'Wužywarske kupki wobźěłaś.',
-'editinguser' => "Změnjaju se wužywarske pšawa wužywarja '''[[User:$1|$1]]''' $2",
+'editinguser' => "Změnjaju se wužywarske pšawa wužywarja '''[[wiki_User:$1|$1]]''' $2",
 'userrights-editusergroup' => 'Pšawa wužywarskich kupkow wobźěłaś',
 'saveusergroups' => 'Wužywarske kupki składowaś',
 'userrights-groupsmember' => 'Cłonk kupki:',
@@ -1317,7 +1317,7 @@ Móžoš toś ten bok wužywaś, aby slědk stajił swóje nastajenja na standar
 'userrights-reason' => 'Pśicyna:',
 'userrights-no-interwiki' => 'Njamaš pšawo wužywarske pšawa w drugich wikijach změniś.',
 'userrights-nodatabase' => 'Datowa banka $1 njeeksistěrujo abo njejo lokalna.',
-'userrights-nologin' => 'Musyš se z administratorowym kontom [[Special:UserLogin|pśizjawiś]], aby wužywarske pšawa změnił.',
+'userrights-nologin' => 'Musyš se z administratorowym kontom [[Special:wiki_UserLogin|pśizjawiś]], aby wužywarske pšawa změnił.',
 'userrights-notallowed' => 'Twóje konto njama pšawa, aby wužywarske pšawa pśidało abo wótpórało.',
 'userrights-changeable-col' => 'Kupki, kótarež móžoš změniś',
 'userrights-unchangeable-col' => 'Kupki, kótarež njamóžoš změniś',
@@ -1408,7 +1408,7 @@ Móžoš toś ten bok wužywaś, aby slědk stajił swóje nastajenja na standar
 'right-sendemail' => 'Drugim wužywarjam e-mail pósłaś',
 'right-passwordreset' => 'E-maile za slědkstajanje gronidłow se woglědaś',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Protokol wužywarskich pšawow',
 'rightslogtext' => 'To jo protokol wužywarskich pšawow.',
 'rightslogentry' => 'Pśisłušnosć ku kupce jo se za „$1“ změniła wót „$2“ na „$3“.',
@@ -1505,7 +1505,7 @@ Boki na [[Special:Watchlist|wobglědowańce]] su '''tucne'''.",
 'reuploaddesc' => 'Nagraśe pśetergnuś a slědk k nagrawańskemu formularoju',
 'upload-tryagain' => 'Změnjone datajowe wopisanje wótpósłaś',
 'uploadnologin' => 'Njepśizjawjony',
-'uploadnologintext' => 'Dejš se [[Special:UserLogin|pśizjawiś]], aby mógał dataje nagraś.',
+'uploadnologintext' => 'Dejš se [[Special:wiki_UserLogin|pśizjawiś]], aby mógał dataje nagraś.',
 'upload_directory_missing' => 'Nagrawański zapis ($1) felujo a njejo se pśez webserwer napóraś dał.',
 'upload_directory_read_only' => 'Nagrawański zapisk ($1) njedajo se pśez webserwer pisaś.',
 'uploaderror' => 'Nagrawańska zmólka',
@@ -1633,9 +1633,9 @@ $1',
 'upload-proto-error' => 'Njekorektny protokol',
 'upload-proto-error-text' => 'URL musy zachopiś z <code>http://</code> abo <code>ftp://</code>.',
 'upload-file-error' => 'Interna zmólka',
-'upload-file-error-text' => 'Pśi napóranju temporarneje dataje na serwerje jo nastała interna zmólka. Pšosym staj se ze [[Special:ListUsers/sysop|systemowym administratorom]] do zwiska.',
+'upload-file-error-text' => 'Pśi napóranju temporarneje dataje na serwerje jo nastała interna zmólka. Pšosym staj se ze [[Special:Listwiki_Users/sysop|systemowym administratorom]] do zwiska.',
 'upload-misc-error' => 'Njeznata zmólka pśi nagrawanju.',
-'upload-misc-error-text' => 'Pśi nagrawanju jo nastała njeznata zmólka. Kontrolěruj pšosym, lěc URL jo płaśiwy a pśistupny a wopytaj hyšći raz. Jolic problem dalej eksistěrujo, staj se z [[Special:ListUsers/sysop|administratorom]] do zwiska.',
+'upload-misc-error-text' => 'Pśi nagrawanju jo nastała njeznata zmólka. Kontrolěruj pšosym, lěc URL jo płaśiwy a pśistupny a wopytaj hyšći raz. Jolic problem dalej eksistěrujo, staj se z [[Special:Listwiki_Users/sysop|administratorom]] do zwiska.',
 'upload-too-many-redirects' => 'URL jo pśewjele dalejpósrědnjenja wopśimjeł',
 'upload-unknown-size' => 'Njeznata wjelikosć',
 'upload-http-error' => 'HTTP-zmólka nastata: $1',
@@ -1868,7 +1868,7 @@ Snaź coš wopisanje na jeje [$2 boku datajowego wopisanja] wobźěłaś.',
 'statistics-views-total' => 'Zwobraznjenja dogromady',
 'statistics-views-total-desc' => 'Woglědanja na njeeksistěrujucych bokach a specialnych bokach njejsu zapśimjone',
 'statistics-views-peredit' => 'Zwobraznjenja na změnu',
-'statistics-users' => 'Zregistrěrowane [[Special:ListUsers|wužywarje]]',
+'statistics-users' => 'Zregistrěrowane [[Special:Listwiki_Users|wužywarje]]',
 'statistics-users-active' => 'Aktiwne wužywarje',
 'statistics-users-active-desc' => 'Wužywarje, kótarež su {{PLURAL:$1|cora|w slědnyma $1 dnjoma|w slědnych $1 dnjach|w slědnych $1 dnjach}} aktiwne byli',
 'statistics-mostpopular' => 'Nejwěcej woglědane boki',
@@ -2033,13 +2033,13 @@ Pódpěrane protokole: <code>$1</code> (standard jo http://, jolic žeden protok
 'linksearch-line' => '$1 wótkazany z $2',
 'linksearch-error' => 'Zasupne znamješko daju se jano na zachopjeńku URL wužywaś.',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => 'Pokaž wužywarjow wót:',
 'listusers-submit' => 'Pokazaś',
 'listusers-noresult' => 'Žeden wužywaŕ njejo se namakał.',
 'listusers-blocked' => '(blokěrowany)',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'Lisćina aktiwnych wužywarjow',
 'activeusers-intro' => 'To jo lisćina wužywarjow, kotrež su byli aktiwne za {{PLURAL:$1|slědny źeń|slědnej $1 dnja|slědne $1 dny|slědnych $1 dnjow}}.',
 'activeusers-count' => '$1 {{PLURAL:$1|změna|změnje|změny|změnow}} w {{PLURAL:$3|slědnem dnju|slědnyma $3 dnjoma|slědnych $3 dnjach|slědnych $3 dnjach}}',
@@ -2072,7 +2072,7 @@ Pódpěrane protokole: <code>$1</code> (standard jo http://, jolic žeden protok
 
 # E-mail user
 'mailnologin' => 'Njejo móžno e-mailku pósłaś.',
-'mailnologintext' => 'Dejš [[Special:UserLogin|pśizjawjony]] byś a płaśiwu e-mailowu adresu w swójich [[Special:Preferences|nastajenjach]] měś, aby drugim wužywarjam e-mail pósłał.',
+'mailnologintext' => 'Dejš [[Special:wiki_UserLogin|pśizjawjony]] byś a płaśiwu e-mailowu adresu w swójich [[Special:Preferences|nastajenjach]] měś, aby drugim wužywarjam e-mail pósłał.',
 'emailuser' => 'Toś tomu wužywarjeju e-mail pósłaś',
 'emailuser-title-target' => 'E-mail na {{GENDER:$1|toś tomu wužywarjeju|toś tej wužywarce}} pósłaś',
 'emailuser-title-notarget' => 'E-mail wužywarjeju',
@@ -2103,7 +2103,7 @@ E-mailowa adresa, kótaruž sy zapódał w [[Special:Preferences|swójich wužyw
 'emailsenttext' => 'Twój e-mail jo se wótpósłał.',
 'emailuserfooter' => 'Toś ta e-mailka jo se z pomocu funkcije "Toś tomu wužywarjeju e-mail pósłaś" na {{SITENAME}} wót $1 do $2 pósłała.',
 
-# User Messenger
+# wiki_User Messenger
 'usermessage-summary' => 'Systemowu powěźeńku zawóstajis.',
 'usermessage-editor' => 'Systemowy powěstnik',
 
@@ -2114,7 +2114,7 @@ E-mailowa adresa, kótaruž sy zapódał w [[Special:Preferences|swójich wužyw
 'nowatchlist' => 'Žedne zapise w twójej wobglědowańce.',
 'watchlistanontext' => 'Dejš $1, aby mógał swóju wobglědowańku wiźeś abo zapise w njej wobźěłaś.',
 'watchnologin' => 'Njepśizjawjony(a)',
-'watchnologintext' => 'Musyš [[Special:UserLogin|pśizjawjony]] byś, aby mógał swóju wobglědowańku wobźěłaś.',
+'watchnologintext' => 'Musyš [[Special:wiki_UserLogin|pśizjawjony]] byś, aby mógał swóju wobglědowańku wobźěłaś.',
 'addwatch' => 'K wobglědowańce dodaś',
 'addedwatchtext' => 'Bok "[[:$1]]" jo se k twójej [[Special:Watchlist|wobglědowańce]] dodał.
 Pózdźejšne změny na toś tom boku a w pśisłušecej diskusiji se tam nalicuju.',
@@ -2220,12 +2220,12 @@ póstupujśo z glědanim.',
 'rollbacklinkcount-morethan' => 'wěcej ako $1 {{PLURAL:$1|změnu|změnje|změny|změnow}} slědk wześ',
 'rollbackfailed' => 'Slědkwześe njejo se raźiło.',
 'cantrollback' => 'Njejo móžno změnu slědk wześ, slědny pśinosowaŕ jo jadnučki awtor boka.',
-'alreadyrolled' => 'Njejo móžno slědnu změnu w nastawku [[:$1]] wót [[User:$2|$2]] ([[User talk:$2|diskusija]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]) slědk wześ; drugi wužywaŕ jo mjaztym bok změnił abo južo slědk stajił .
+'alreadyrolled' => 'Njejo móžno slědnu změnu w nastawku [[:$1]] wót [[wiki_User:$2|$2]] ([[wiki_User talk:$2|diskusija]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]) slědk wześ; drugi wužywaŕ jo mjaztym bok změnił abo južo slědk stajił .
 
-Slědnu změnu k bokoju jo pśewjadł [[User:$3|$3]] ([[User talk:$3|diskusija]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
+Slědnu změnu k bokoju jo pśewjadł [[wiki_User:$3|$3]] ([[wiki_User talk:$3|diskusija]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
 'editcomment' => "Zapominanje k slědnej změnje jo było: \"''\$1''\".",
-'revertpage' => 'Změny wužywarja [[Special:Contributions/$2|$2]] ([[User talk:$2|Diskusija]]) su se wótwrośili a slědna wersija wužywarja [[User:$1|$1]] jo se wótnowiła.',
-'revertpage-nouser' => 'Jo změny wót (wužywarske mě wótpórane) na slědnu wersiju wót [[User:$1|$1]] slědk stajił',
+'revertpage' => 'Změny wužywarja [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Diskusija]]) su se wótwrośili a slědna wersija wužywarja [[wiki_User:$1|$1]] jo se wótnowiła.',
+'revertpage-nouser' => 'Jo změny wót (wužywarske mě wótpórane) na slědnu wersiju wót [[wiki_User:$1|$1]] slědk stajił',
 'rollback-success' => 'Změny wót $1 su se slědk wzeli a slědna wersija wót $2 jo zasej se nawrośiła.',
 
 # Edit tokens
@@ -2448,7 +2448,7 @@ Glědaj do [[Special:BlockList|lisćiny blokěrowanjow]], aby blokěrowanja pśe
 'unblockip' => 'Wužywarja dopušćiś',
 'unblockiptext' => 'Z pomocu dołojcnego formulara móžotej IP-adresa abo wužywaŕ zasej se dopušćiś.',
 'ipusubmit' => 'Toś to blokěrowanje wótpóraś',
-'unblocked' => 'Wužywaŕ [[User:$1|$1]] jo zasej se dopušćił.',
+'unblocked' => 'Wužywaŕ [[wiki_User:$1|$1]] jo zasej se dopušćił.',
 'unblocked-range' => 'Blokěrowanje za $1 jo se wótpórało',
 'unblocked-id' => '$1 jo se dopušćił(a).',
 'blocklist' => 'Blokěrowane wužywarje',
@@ -2481,7 +2481,7 @@ Glědaj do [[Special:BlockList|lisćiny blokěrowanjow]], aby blokěrowanja pśe
 'change-blocklink' => 'Blokěrowanje změniś',
 'contribslink' => 'pśinoski',
 'emaillink' => 'E-mail pósłaś',
-'autoblocker' => 'Awtomatiski blokěrowany, dokulaž twója IP-adresa jo se rowno wót "[[User:$1|$1]]". Pśicyna za blokěrowanje wužywarja $1 jo: "$2".',
+'autoblocker' => 'Awtomatiski blokěrowany, dokulaž twója IP-adresa jo se rowno wót "[[wiki_User:$1|$1]]". Pśicyna za blokěrowanje wužywarja $1 jo: "$2".',
 'blocklogpage' => 'Protokol blokěrowanjow',
 'blocklog-showlog' => 'Toś ten wužywaŕ jo se pjerwjej zablokěrował. Protokol blokěrowanjow pódawa se dołojce ako referenca:',
 'blocklog-showsuppresslog' => 'Toś ten wužywaŕ jo se pjerwjej zablokěrował a schował. Protokol pódtłocowanjow pódawa se dołojce ako referenca:',
@@ -2572,7 +2572,7 @@ W toś tyma padoma dej wopśimjeśe boka manualnje se pśesunuś resp. gromadu w
 'movearticle' => 'Bok pśesunuś',
 'moveuserpage-warning' => "'''Warnowanje:''' Coš rowno wužywarski bok pśesunuś. Pšosym wobmysli, až jano bok se pśesunjo a wužiwaŕ '''nje'''buźo se pśemjenjowaś.",
 'movenologin' => 'Njepśizjawjony(a)',
-'movenologintext' => 'Musyš zregistrěrowany wužywaŕ a [[Special:UserLogin|pśizjawjony]] byś, aby pśesunuł bok.',
+'movenologintext' => 'Musyš zregistrěrowany wužywaŕ a [[Special:wiki_UserLogin|pśizjawjony]] byś, aby pśesunuł bok.',
 'movenotallowed' => 'Njamaš pšawo pśesuwaś boki.',
 'movenotallowedfile' => 'Njamaš pšawo dataje pśesunuś.',
 'cant-move-user-page' => 'Njamaš pšawo wužywarske boki pśesunuś (mimo pódbokow).',
@@ -3405,7 +3405,7 @@ E-mailowy program jo wrośił: $1',
 'confirmemail_invalid' => 'Njepłaśece wobkšuśeńske gronidło. Snaź jo kod mjaztym płaśiwosć zgubił.',
 'confirmemail_needlogin' => 'Dejš $1 aby swóju e-mailowu adresu wobkšuśił.',
 'confirmemail_success' => 'Twója e-mailowa adresa jo wobkšuśona
-Móžoš se něnto [[Special:UserLogin|pśizjawiś]] a se wikiju wijaseliś.',
+Móžoš se něnto [[Special:wiki_UserLogin|pśizjawiś]] a se wikiju wijaseliś.',
 'confirmemail_loggedin' => 'Twója e-mailowa adresa jo něnto wobkšuśona.',
 'confirmemail_error' => 'Zmólka pśi wobkšuśenju e-mailoweje adresy.',
 'confirmemail_subject' => '{{SITENAME}} - Wobkšuśenje e-mailoweje adrese',
@@ -3452,10 +3452,10 @@ Toś ten wobkšuśeński kod płaśi až do $4.',
 
 # Delete conflict
 'deletedwhileediting' => "'''Warnowanje''': Toś ten bok se wulašujo, gaž zachopijoš jen wobźěłaś!",
-'confirmrecreate' => "Wužywaŕ [[User:$1|$1]] ([[User talk:$1|diskusija]]) jo bok wulašował, nježli až sy zachopił jen wobźěłaś, pśicyna:
+'confirmrecreate' => "Wužywaŕ [[wiki_User:$1|$1]] ([[wiki_User talk:$1|diskusija]]) jo bok wulašował, nježli až sy zachopił jen wobźěłaś, pśicyna:
 : ''$2''
 Pšosym wobkšuśiś, až napšawdu coš ten bok zasej wutwóriś.",
-'confirmrecreate-noreason' => 'Wužywaŕ [[User:$1|$1]] ([[User talk:$1|diskusija]]) jo toś ten bok wulašował, nježli až sy zachopił jen wobźěłaś.
+'confirmrecreate-noreason' => 'Wužywaŕ [[wiki_User:$1|$1]] ([[wiki_User talk:$1|diskusija]]) jo toś ten bok wulašował, nježli až sy zachopił jen wobźěłaś.
 Pšosym wobkšuś, až napšawdu coš toś ten bok zasej napóraś.',
 'recreate' => 'Wótnowótki wutwóriś',
 

@@ -123,9 +123,9 @@ $specialPageAliases = array(
 	'Unusedtemplates'           => array( 'TemplateNunUsati' ),
 	'Unwatchedpages'            => array( 'PàgginiNunTaliati' ),
 	'Upload'                    => array( 'Càrrica' ),
-	'Userlogin'                 => array( 'Tràsi', 'Login' ),
-	'Userlogout'                => array( 'Nesci', 'Logout' ),
-	'Userrights'                => array( 'PirmessiUtenti' ),
+	'wiki_Userlogin'                 => array( 'Tràsi', 'Login' ),
+	'wiki_Userlogout'                => array( 'Nesci', 'Logout' ),
+	'wiki_Userrights'                => array( 'PirmessiUtenti' ),
 	'Version'                   => array( 'Virsioni' ),
 	'Wantedcategories'          => array( 'CatigurìiAddumannati' ),
 	'Wantedfiles'               => array( 'FileAddumannati' ),
@@ -137,7 +137,7 @@ $specialPageAliases = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Suttalìnia li culligamenti:',
 'tog-justify' => 'Alliniamentu dû paràgrafu: giustificatu',
 'tog-hideminor' => "Ammuccia li canciamenti nichi nta l'ùrtimi canciamenti",
@@ -469,7 +469,7 @@ MySQL hà ristituitu lu siquenti erruri "$3: $4".',
 Chistu di sòlitu avveni quannu s\'arrichiama, a partiri di la crunuluggìa o di lu cunfruntu tra rivisioni, nu cullicamentu a na pàggina scancillata, a nu cunfrontu tra rivisioni ca nun asìstunu o a nu cunfrontu tra rivisioni pulizziati di la crunuluggìa.
 
 Nta lu casu ca non fussi accuddì, è fàcili ca si scuprìu nu sbagghiu di lu software MediaWiki.
-V\'arringrazziamu si signaliati zoccu succidìu a nu [[Special:ListUsers/sysop|amministraturi]] spicificannu la URL \'n chistioni.',
+V\'arringrazziamu si signaliati zoccu succidìu a nu [[Special:Listwiki_Users/sysop|amministraturi]] spicificannu la URL \'n chistioni.',
 'missingarticle-rev' => '(rivisioni#: $1)',
 'missingarticle-diff' => '(Diff: $1, $2)',
 'readonly_lag' => 'Lu database hà statu bluccatu automaticamenti, mentri li server cu li database slave si sincrunìzzanu cu lu master',
@@ -509,7 +509,7 @@ Query: $2',
 $2',
 'namespaceprotected' => "Nun hai lu pirmissu pi canciari li pàggini ntô namespace '''$1'''.",
 'ns-specialprotected' => 'Li pàggini ntô namespace {{ns:special}} non ponnu èssiri canciati.',
-'titleprotected' => "La criazzioni di sta pàggina cu stu tìtulu fu bluccata da [[User:$1|$1]].
+'titleprotected' => "La criazzioni di sta pàggina cu stu tìtulu fu bluccata da [[wiki_User:$1|$1]].
 La mutivazzioni è chista: ''$2''.",
 'filereadonlyerror' => 'Nun fu pussìbbili canciari lu file "$1" pirchì lu repository di file "$2" è \'n mudalitati di sula littura.La mutivazzioni è "\'\'$3\'\'".',
 
@@ -521,7 +521,7 @@ La mutivazzioni è chista: ''$2''.",
 # Login and logout pages
 'logouttext' => "'''Nisciuta. Ora siti fora.'''
 
-Poi cuntinuari a usari {{SITENAME}} di manera anònima, o poi [[Special:UserLogin|tràsiri n'àutra vota]] cu lu stissu o cu n'àutru nomu d'utenti.
+Poi cuntinuari a usari {{SITENAME}} di manera anònima, o poi [[Special:wiki_UserLogin|tràsiri n'àutra vota]] cu lu stissu o cu n'àutru nomu d'utenti.
 Accura chi quarchi pàggina pò cuntinuari a èssiri ammustrata comu si nun avissi nisciutu nzinu a quannu tu nun scancelli tutta la mimoria dû tò browser.",
 'welcomecreation' => "== Bonvinutu, $1! ==
 
@@ -559,7 +559,7 @@ L'account hà statu criatu currettamenti. Nun ti scurdari di pirsunalizzari li [
 'loginsuccess' => "'''Ora trasisti nta {{SITENAME}} comu \"\$1\".'''",
 'nosuchuser' => 'Nun è riggistratu nuddu utenti di nomu "$1".
 Li nnomi utenti sunu sinsitivi ê maiusculi.
-Virificari lu nomu nziritu o [[Special:UserLogin/signup|criari un novu accessu]].',
+Virificari lu nomu nziritu o [[Special:wiki_UserLogin/signup|criari un novu accessu]].',
 'nosuchusershort' => 'Nun c\'è nuddu utenti di nomu "$1". Cuntrolla l\'ortugrafìa.',
 'nouserspecified' => 'È nicissariu spicificari un nomu utenti.',
 'login-userblocked' => "St'utilizzaturi è bluccatu. Nun è pussibbili di tràsiri",
@@ -697,7 +697,7 @@ Forsi ca fu spustata o cancillata na mentri ca stàvutu taliannu la pàggina.',
 'loginreqlink' => "esèquiri l'accessu",
 'loginreqpagetext' => 'Pi vìdiri àutri pàggini è nicissariu $1.',
 'accmailtitle' => 'Password nviata.',
-'accmailtext' => 'La password pi [[User talk:$1|$1]] fu nviata a lu ndirizzu $2.
+'accmailtext' => 'La password pi [[wiki_User talk:$1|$1]] fu nviata a lu ndirizzu $2.
 
 La password pi stu novu account pò essiri canciata â accessu nâ pàggina pi [[Special:ChangePassword|canciari password]].',
 'newarticle' => '(Novu)',
@@ -707,7 +707,7 @@ Si agghicasti ccà pi sbagghiu, clicca lu buttuni ''''n arreri (back)''' dû tò
 'anontalkpagetext' => "----''Chista è la pàggina di discussioni di n’utenti anònimu, ca nun criau ancora n’accessu o ca nun l’usa.
 P’idintificàrilu è pirciò nicissariu usari lu nùmmiru di lu sò nnirizzu IP.
 Li nnirizzi IP ponnu pirò èssiri spartuti di cchiù utenti.
-Siddu sî n’utenti anònimu e riteni ca li cummenti prisenti nta sta pàggina nun si rifirìscinu a tia, [[Special:UserLogin/signup|crea n’accessu novu]] o [[Special:UserLogin|trasi]] cu chiddu ca già hai p’evitari d’èssiri cunfusu cu àutri utenti anònimi ‘n futuru.''",
+Siddu sî n’utenti anònimu e riteni ca li cummenti prisenti nta sta pàggina nun si rifirìscinu a tia, [[Special:wiki_UserLogin/signup|crea n’accessu novu]] o [[Special:wiki_UserLogin|trasi]] cu chiddu ca già hai p’evitari d’èssiri cunfusu cu àutri utenti anònimi ‘n futuru.''",
 'noarticletext' => 'Nta stu mumentu la pàggina addumannata è vacanti. È pussìbbili [[Special:Search/{{PAGENAME}}|circari stu tìtulu]] nta l\'àutri pàggini dû situ oppuru <span class="plainlinks">[{{fullurl:{{#Special:Log}}|action=edit}} circari ntê riggistra culligati] oppuru [{{fullurl:{{FULLPAGENAME}}|action=edit}} canciari la pàggina ora]</span>.',
 'noarticletext-nopermission' => 'Nta stu mumentu la pàggina addumannata è vacanti. È pussibbili [[Special:Search/{{PAGENAME}}|circari stu titulu]] nti àutri pàggini dû situ oppuru <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} circari ntê riggistra currilati]</span>.',
 'userpage-userdoesnotexist' => 'L\'account "<nowiki>$1</nowiki>" nun currispunni a n\'utenti riggistratu. Virificari si si voli criari o canciari sta pàggina.',
@@ -728,7 +728,7 @@ Siddu sî n’utenti anònimu e riteni ca li cummenti prisenti nta sta pàggina 
 
 ''Poichì nta stu situ è abbilitatu l'usu di HTML senza limitazzioni, l'antiprima nun veni visualizzata; si tratta di na misura di sicurizza contra l'attacchi JavaScript.''
 
-'''Siddu chistu è nu tintativu liggìttimu di canciamentu, arriprova. Siddu lu prubbrema pirsisti, si pò pruvari a [[Special:UserLogout|sculligàrisi]] e effittuari n'accessu novu.'''",
+'''Siddu chistu è nu tintativu liggìttimu di canciamentu, arriprova. Siddu lu prubbrema pirsisti, si pò pruvari a [[Special:wiki_UserLogout|sculligàrisi]] e effittuari n'accessu novu.'''",
 'token_suffix_mismatch' => "'''Lu canciamentu nun fu sarvatu pirchì lu client ammustrau di gèstiri 'n modu sbagghiatu li caràttiri di puntiggiatura nta lu token assuciatu a iddu. P'evitari na curruzzioni pussìbbili dô testu dâ pàggina, fu rifiutatu tuttu lu canciamentu. Sta situazzioni pò virificàrisi, certi voti, quannu s'adòpiranu arcuni sirvizza di proxy anònimi via web chi prisèntanu bug.'''",
 'editing' => 'Canciu di la vuci "$1"',
 'creating' => 'Stai criannu $1',
@@ -765,7 +765,7 @@ L'amministraturi ca bluccau lu database lu fici pi stu mutivu: $1",
 'hiddencategories' => 'Sta pàggina apparteni a {{PLURAL:$1|na catigurìa ammuciata|$1 catigurìi ammuciati}}:',
 'edittools' => '<!-- Chistu testu cumpari sutta li moduli di canciu e carricamentu. -->',
 'nocreatetitle' => 'Criazzioni dî pàggini limitata',
-'nocreatetext' => "La pussibbilitati di criari pàggini novi nta {{SITENAME}} è limitata a l'utenti riggistrati. Poi turnari 'n arreri e canciari na pàggina esistenti, oppuru [[Special:UserLogin|tràsiri o criari nu cuntu novu]].",
+'nocreatetext' => "La pussibbilitati di criari pàggini novi nta {{SITENAME}} è limitata a l'utenti riggistrati. Poi turnari 'n arreri e canciari na pàggina esistenti, oppuru [[Special:wiki_UserLogin|tràsiri o criari nu cuntu novu]].",
 'nocreate-loggedin' => 'Nun hai lu pirmissu pi criari pàggini novi ntâ {{SITENAME}}.',
 'permissionserrors' => 'Erruri di pirmissu',
 'permissionserrorstext' => 'Nun hai lu pirmissu pi fari chistu, pi {{PLURAL:$1|chistu motivu|sti mutivi}}:',
@@ -803,11 +803,11 @@ Arcuni template non vènunu nziriti.',
 Virificati lu paraguni ccà sutta p'accuràrivi ca lu cuntinutu è chiddu addisiatu e doppu sarvati la pàggina pi cumplitari l'annullamentu.",
 'undo-failure' => "Lu canciamentu nun pò èssiri annullatu a càusa d'un cunflittu cu li canciamenti ntirmedi.",
 'undo-norev' => 'Lu canciamentu nun pò essiri annullatu pirchì nun esisti o fù cancillato.',
-'undo-summary' => 'Annullatu lu canciamentu $1 di [[Special:Contributions/$2|$2]] ([[User talk:$2|discussioni]])',
+'undo-summary' => 'Annullatu lu canciamentu $1 di [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|discussioni]])',
 
 # Account creation failure
 'cantcreateaccounttitle' => "Mpussìbbili riggistrari n'utenti",
-'cantcreateaccount-text' => "La criazzioni di account di stu nnirizzu IP ('''$1''') fu bluccata di [[User:$3|$3]].
+'cantcreateaccount-text' => "La criazzioni di account di stu nnirizzu IP ('''$1''') fu bluccata di [[wiki_User:$3|$3]].
 
 Lu mutivu è ''$2''",
 
@@ -1032,7 +1032,7 @@ S'havi accirtari ca la cuntinuità storica di la pàggina nun veni altirata.",
 'mypreferences' => 'Li mè prifirenzi',
 'prefs-edits' => 'Nùmmuru di canciamenti:',
 'prefsnologin' => 'Accessu nun effittuatu',
-'prefsnologintext' => 'Pi putiri pirsunalizzari li prifirenzi è nicissariu fari l\'<span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} accessu]</span>.',
+'prefsnologintext' => 'Pi putiri pirsunalizzari li prifirenzi è nicissariu fari l\'<span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} accessu]</span>.',
 'changepassword' => 'Cancia la password',
 'prefs-skin' => 'Aspettu',
 'skin-preview' => 'Antiprima',
@@ -1133,12 +1133,12 @@ L'operazioni nun pò èssiri annullata.",
 'prefs-displayrc' => 'Opzioni di visualizzazioni',
 'prefs-diffs' => 'Diffirenzi',
 
-# User rights
+# wiki_User rights
 'userrights' => 'Gistioni dî dritti utenti',
 'userrights-lookup-user' => "Gistisci li gruppi di l'utenti",
 'userrights-user-editname' => "Trasi nu nomu d'utenti:",
 'editusergroup' => 'Cancia gruppi utenti',
-'editinguser' => "Canciamentu dî dritti di l'utenti '''[[User:$1|$1]]''' ([[User talk:$1|{{int:talkpagelinktext}}]]{{int:pipe-separator}}[[Special:Contributions/$1|{{int:contribslink}}]])",
+'editinguser' => "Canciamentu dî dritti di l'utenti '''[[wiki_User:$1|$1]]''' ([[wiki_User talk:$1|{{int:talkpagelinktext}}]]{{int:pipe-separator}}[[Special:Contributions/$1|{{int:contribslink}}]])",
 'userrights-editusergroup' => "Cancia li gruppi di l'utenti",
 'saveusergroups' => 'Sarva gruppi utenti',
 'userrights-groupsmember' => 'Membru di:',
@@ -1149,7 +1149,7 @@ L'operazioni nun pò èssiri annullata.",
 'userrights-reason' => 'Mutivu:',
 'userrights-no-interwiki' => "Nun si disponi di li pirmessi nicissari pi canciari li diritti di l'utenti ni autri siti.",
 'userrights-nodatabase' => 'Lu database $1 nu esisti o nun è lu database locali.',
-'userrights-nologin' => "Pi assignari li diritti di l'utenti è nicissariu [[Special:UserLogin|trasiri]] comu amministraturi.",
+'userrights-nologin' => "Pi assignari li diritti di l'utenti è nicissariu [[Special:wiki_UserLogin|trasiri]] comu amministraturi.",
 'userrights-notallowed' => "L'utenti nun disponi dê pirmessi nicissari pi assignari diritti all'utenti.",
 'userrights-changeable-col' => 'Gruppi canciabili',
 'userrights-unchangeable-col' => 'Gruppi nun canciabili',
@@ -1235,7 +1235,7 @@ L'operazioni nun pò èssiri annullata.",
 'right-siteadmin' => 'Blocca a sblocca lu databasi',
 'right-override-export-depth' => 'Esporta pàggini cumpresi li pàggini culligati finu ô quintu liveddu',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => "Dritti di l'utenti",
 'rightslogtext' => "Chistu è un log dî canciamenti a li dritti di l'utenti.",
 'rightslogentry' => "hà canciatu l'appartinenza di $1 dû gruppu $2 a lu gruppu $3",
@@ -1325,7 +1325,7 @@ L'operazioni nun pò èssiri annullata.",
 'uploadbtn' => 'Càrrica',
 'reuploaddesc' => 'Torna a lu mòdulu pi lu carricamentu.',
 'uploadnologin' => 'Accessu nun effittuatu',
-'uploadnologintext' => 'Hai a esèquiri [[Special:UserLogin|lu login]] pi carricari mmàggini o àutri files multimidiali.',
+'uploadnologintext' => 'Hai a esèquiri [[Special:wiki_UserLogin|lu login]] pi carricari mmàggini o àutri files multimidiali.',
 'upload_directory_missing' => 'La directory di upload ($1) nun asisti e non pò èssiri criata dû webserver.',
 'upload_directory_read_only' => 'Lu server web nun è n gradu di scrìviri ntâ directory di upload ($1).',
 'uploaderror' => 'Erruri ntô carricamentu',
@@ -1556,7 +1556,7 @@ Appressu veni ammustrata la discrizioni prisenti nâ [$2 paggina di discrizzioni
 'statistics-edits-average' => 'Media dî canci pi pàggina',
 'statistics-views-total' => 'Visualizzazioni totali',
 'statistics-views-peredit' => 'Visualizzazioni pî canci',
-'statistics-users' => '[[Special:ListUsers|Utilizzatura]] riggistrati',
+'statistics-users' => '[[Special:Listwiki_Users|Utilizzatura]] riggistrati',
 'statistics-users-active' => 'Utilizzatura attivi',
 'statistics-users-active-desc' => "Utilizzatura chi fìciru n'azzioni {{PLURAL:$1|ni l'ultimu ionnu|nî l'ultimi $1 ionna}}",
 'statistics-mostpopular' => 'Pàggini cchiù visitati',
@@ -1705,13 +1705,13 @@ Protucolli suppurtati: <code>$1</code>',
 'linksearch-line' => '$1 prisenti ntâ pàggina $2',
 'linksearch-error' => 'Li metacaràttiri si ponnu usari sulu a lu princìpiu dû nnirizzu.',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => "Ammustra l'utenti a pàrtiri di:",
 'listusers-submit' => 'Ammustra',
 'listusers-noresult' => "Nuddu utenti attruvatu. Virificari l'usu di caràttiri maiùsculi/minùsculi.",
 'listusers-blocked' => '(bloccatu)',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'Lista dî utenti attivi',
 'activeusers-count' => "$1 {{PLURAL:$1|canciamentu|canciamenti}} nti {{PLURAL:$3|l'ùrtimu jornu| nti l'ùrtimi $3 jorna}}",
 'activeusers-from' => 'Ammustra li utenti a pàrtiri da:',
@@ -1743,7 +1743,7 @@ Protucolli suppurtati: <code>$1</code>',
 
 # E-mail user
 'mailnologin' => 'Nuddu ndirizzu cui mannari lu missaggiu',
-'mailnologintext' => 'Hai a fari lu [[Special:UserLogin|login]] e aver riggistratu na casella e-mail vàlida ntê tò [[Special:Preferences|prifirenzi]] pi mannari posta alittrònica a àutri Utenti.',
+'mailnologintext' => 'Hai a fari lu [[Special:wiki_UserLogin|login]] e aver riggistratu na casella e-mail vàlida ntê tò [[Special:Preferences|prifirenzi]] pi mannari posta alittrònica a àutri Utenti.',
 'emailuser' => "Manna n'imail a stu utenti",
 'emailpage' => "Manna un missaggiu e-mail a l'utenti",
 'emailpagetext' => "Siddu st'utenti lassau nu nnirizzu email vàlidu ntê sò prifirenzi, ci putiti mannari nu missaggiu. Lu nnirizzu email ca lassasti ntê tò [[Special:Preferences|prifirenzi]] và a cumpàriri comu mittenti di lu email, di manera ca lu distinatariu ti pò arrispùnniri.",
@@ -1771,7 +1771,7 @@ Protucolli suppurtati: <code>$1</code>',
 'nowatchlist' => "Nun hai innicatu pàggini a tèniri d'occhiu.",
 'watchlistanontext' => "Pi visualizzari e canciari l'alencu di l'ossirvati spiciali è nicissariu $1.",
 'watchnologin' => 'Nun hai effittuatu lu login',
-'watchnologintext' => 'Hai a fari prima lu [[Special:UserLogin|login]] pi canciari la tò lista di ossirvati spiciali.',
+'watchnologintext' => 'Hai a fari prima lu [[Special:wiki_UserLogin|login]] pi canciari la tò lista di ossirvati spiciali.',
 'addedwatchtext' => "La pàggina \"[[:\$1]]\" è stata agghiunciuta â propia [[Special:Watchlist|lista di l'ossirvati spiciali]]. D'ora n poi, li mudìfichi appurtati â pàggina e â sò discussioni vèninu alincati n chidda sedi; lu tìtulu dâ pàggina appari n '''grassettu''' ntâ pàggina di l' [[Special:RecentChanges|ùrtimi canciamenti]] pi rinnìrilu cchiù visìbbili. Siddu n un secunnu tempu s'addisìa eliminari la pàggina dâ lista di l'ossirvati spiciali, fari clic supra \"nun sèquiri\" ntâ barra n àutu.",
 'removedwatchtext' => 'La pàggina "[[:$1]]" hà statu eliminata dâ lista di l\'ossirvati spiciali.',
 'watch' => 'talìa',
@@ -1865,11 +1865,11 @@ Talìa $2 pi na lista di cancillazzioni ricenti.',
 'rollbacklink' => "canciu n'arreri",
 'rollbackfailed' => "Canciu 'n arreri fallitu",
 'cantrollback' => "Mpussìbbili annullari li canciamenti; l'utenti ca l'effittuau è l'ùnicu a aviri cuntribbuiutu â pàggina.",
-'alreadyrolled' => "Nun è pussìbbili annullari li canciamenti appurtati â pàggina [[:$1]] di parti di [[User:$2|$2]] ([[User talk:$2|discussioni]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]); n'àutru utenti hà già canciatu la pàggina oppuru hà effittuatu lu rollback.
+'alreadyrolled' => "Nun è pussìbbili annullari li canciamenti appurtati â pàggina [[:$1]] di parti di [[wiki_User:$2|$2]] ([[wiki_User talk:$2|discussioni]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]); n'àutru utenti hà già canciatu la pàggina oppuru hà effittuatu lu rollback.
 
-Lu canciamentu cchiù ricenti â pàggina fu appurtata di [[User:$3|$3]] ([[User talk:$3|discussioni]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).",
+Lu canciamentu cchiù ricenti â pàggina fu appurtata di [[wiki_User:$3|$3]] ([[wiki_User talk:$3|discussioni]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).",
 'editcomment' => "Â discrizzioni â mudìfica era: \"''\$1''\".",
-'revertpage' => "Canciu narrè di [[Special:Contributions/$2|$2]] ([[User talk:$2|Discussioni]]) cu l'ùrtima virsioni di [[User:$1|$1]]",
+'revertpage' => "Canciu narrè di [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Discussioni]]) cu l'ùrtima virsioni di [[wiki_User:$1|$1]]",
 'rollback-success' => 'Annullati li canciamenti di $1; ritornata â virsioni pricidenti di $2.',
 
 # Edit tokens
@@ -2067,7 +2067,7 @@ Pi maggiuri nfurmazzioni, talìa la [[Special:BlockList|lista di l'IP bluccati]]
 'unblockip' => 'Sblocca ndirizzu IP',
 'unblockiptext' => "Usari lu mòdulu suttastanti pi ristituiri l'accessu n scrittura a un utenti o ndirizzu IP bluccatu.",
 'ipusubmit' => 'Leva stu bloccu',
-'unblocked' => "L'utenti [[User:$1|$1]] hà statu sbluccatu",
+'unblocked' => "L'utenti [[wiki_User:$1|$1]] hà statu sbluccatu",
 'unblocked-id' => 'Lu bloccu $1 hà statu cacciatu',
 'ipblocklist' => 'Utiloizzatura bluccati',
 'ipblocklist-legend' => "Atrova n'utenti bluccatu",
@@ -2085,7 +2085,7 @@ Pi maggiuri nfurmazzioni, talìa la [[Special:BlockList|lista di l'IP bluccati]]
 'unblocklink' => 'sblocca',
 'change-blocklink' => 'cancia bloccu',
 'contribslink' => 'cuntribbuti',
-'autoblocker' => 'Bluccatu automaticamenti pirchì lu ndirizzu IP è cundivisu cu l\'utenti "[[User:$1|$1]]". Lu bloccu di l\'utenti $1 fu mpostu pi lu siquenti mutivu: "\'\'\'$2\'\'\'".',
+'autoblocker' => 'Bluccatu automaticamenti pirchì lu ndirizzu IP è cundivisu cu l\'utenti "[[wiki_User:$1|$1]]". Lu bloccu di l\'utenti $1 fu mpostu pi lu siquenti mutivu: "\'\'\'$2\'\'\'".',
 'blocklogpage' => 'Blocchi',
 'blocklogentry' => 'hà bluccatu [[$1]]; scadenza $2 $3',
 'reblock-logentry' => 'Canciau li mpustazzioni dû bloccu pi [[$1]] cu na scadenza di $2 $3',
@@ -2161,7 +2161,7 @@ Chistu pò èssiri nu canciamentu dràsticu pi na pàggina pupulari; aviti a ès
 Nta sti casi, tu hai a spustari o agghiùnciri manuarmenti la pàggina di discussioni.",
 'movearticle' => 'Sposta la pàggina',
 'movenologin' => 'Accessu nun effittuatu',
-'movenologintext' => "Lu spustamentu dî pàggini è cunzintitu sulu a l'utenti riggistrati c'hannu esiquitu l'[[Special:UserLogin|accessu]] a lu situ.",
+'movenologintext' => "Lu spustamentu dî pàggini è cunzintitu sulu a l'utenti riggistrati c'hannu esiquitu l'[[Special:wiki_UserLogin|accessu]] a lu situ.",
 'movenotallowed' => 'Nun hai li pirmessi nicissari a lu spustamentu dê pàggini.',
 'movenotallowedfile' => "Nun ci su' li pirmessi nicissàrii pi spustari file.",
 'cant-move-user-page' => 'Nun aviti lu pirmissu nicissàriu pi spustari li pàggini utenti.',
@@ -2801,7 +2801,7 @@ Stu còdici di cunferma scadi automaticamenti a li $4.',
 
 # Delete conflict
 'deletedwhileediting' => "'''Accura''': Sta pàggina vinni scancillata doppu c'hai accuminzatu a scanciàrila!",
-'confirmrecreate' => "L'utenti [[User:$1|$1]] ([[User talk:$1|discussioni]]) scancillau sta pàggina doppu ca hai accuminciatu a scanciàrila, pi stu mutivu: ''$2'' Pi favuri, cunferma ca addisìi pi daveru criari n'àutra vota sta pàggina.",
+'confirmrecreate' => "L'utenti [[wiki_User:$1|$1]] ([[wiki_User talk:$1|discussioni]]) scancillau sta pàggina doppu ca hai accuminciatu a scanciàrila, pi stu mutivu: ''$2'' Pi favuri, cunferma ca addisìi pi daveru criari n'àutra vota sta pàggina.",
 'recreate' => 'Ricrìa',
 
 'unit-pixel' => 'px',

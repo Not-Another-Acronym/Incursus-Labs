@@ -19,14 +19,14 @@
 $fallback = 'fr';
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Souligner les liens:',
 'tog-justify' => 'Égalisez les paragraphes',
 'tog-hideminor' => 'Cachez les petits changements dans la liste des derniers changements',
 'tog-hidepatrolled' => '↓ Cachez les petits changements dans la liste des derniers changements',
 'tog-newpageshidepatrolled' => '↓Cache pages patrollés de la list des pages nouveau',
 'tog-extendwatchlist' => 'Agrandir la liste des pages guettées pour montrer tous les changements',
-'tog-usenewrc' => 'User les derniers changements improuvés (JavaScript)',
+'tog-usenewrc' => 'wiki_User les derniers changements improuvés (JavaScript)',
 'tog-numberheadings' => 'Mettre les numéros sus les en-têtes',
 'tog-showtoolbar' => "Montrer la barre d'outils des changements (JavaScript)",
 'tog-editondblclick' => 'Faire un clic-double pour changer la page (JavaScript)',
@@ -50,9 +50,9 @@ $messages = array(
 'tog-oldsig' => '↓ Preview du signature existant:',
 'tog-fancysig' => 'Signature brute (sans liens préparés)',
 'tog-externaleditor' => 'Utiliser par défaut un éditeur de texte externe (pour les utilisateurs avancés, nécessite des réglages spécifiques sur votre ordinateur)',
-'tog-externaldiff' => 'User un autre comparateur comme réglage ordinaire',
+'tog-externaldiff' => 'wiki_User un autre comparateur comme réglage ordinaire',
 'tog-showjumplinks' => 'Mettre les "liens vites" en haut de la page',
-'tog-uselivepreview' => "User la vue d'avance vite (JavaScript) (En assai)",
+'tog-uselivepreview' => "wiki_User la vue d'avance vite (JavaScript) (En assai)",
 'tog-forceeditsummary' => "M'avertir quand j'ai laissé la boëte de commentaires vide",
 'tog-watchlisthideown' => 'Cacher mes changements dans la liste des pages guettées',
 'tog-watchlisthidebots' => 'Cacher les changements faits par les bots dans la liste des pages guettées',
@@ -467,7 +467,7 @@ Votre numéro de blocage est #$5.  Mettez donc cette information dans toutes vos
 'newarticletext' => "Vous avez suit un lien à une page qu'existe pas encore.
 Pour créer la page, mettez des mots dans la boëte en bas (voyez la [[{{MediaWiki:Helppage}}|page d'aide]] pour plus d'information).
 Si vous êtes ici par erreur, cliquez le bouton \"back\" sus votre navigateur.",
-'anontalkpagetext' => "----''Ça ici, c'est la page de discussion pour un useur sans nom qu'a pas encore créé un compte ou qui l'use pas.  Ça fait, il faut user l'adresse IP numérique pour l'identifier.  Une adresse comme ça pourrait être usée par plusieurs useurs.  Si vous êtes un useur sans nom et vous croyez que des messages sans rapport ont été envoyés à vous, [[Special:UserLogin|créer un compte ou connecter]] pour empêcher la confusion avec des autres useurs sans nom dans l'avenir.''",
+'anontalkpagetext' => "----''Ça ici, c'est la page de discussion pour un useur sans nom qu'a pas encore créé un compte ou qui l'use pas.  Ça fait, il faut user l'adresse IP numérique pour l'identifier.  Une adresse comme ça pourrait être usée par plusieurs useurs.  Si vous êtes un useur sans nom et vous croyez que des messages sans rapport ont été envoyés à vous, [[Special:wiki_UserLogin|créer un compte ou connecter]] pour empêcher la confusion avec des autres useurs sans nom dans l'avenir.''",
 'noarticletext' => 'À présent, y a pas de texte sus cette page.
 Vous pouvez [[Special:Search/{{PAGENAME}}|charcher pour le titre de cette page]] dans des autres pages, <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} charcher dans les notes parents], ou [{{fullurl:{{FULLPAGENAME}}|action=edit}} changer cette page]</span>.',
 'clearyourcache' => "'''Notez:''' Après que vous avez sauvé votres changements, il foudra peut-être dépasser le cache de votre navigateur pour voir les changements.  '''Mozilla / Firefox / Safari:''' Tenez le bouton ''Shift'' en pèsant ''Reload'', ou pèsez ''Ctrl-Shift-R'' (''Cmd-Shift-R'' sus Apple Mac); '''IE:''' Tenez ''Ctrl'' en pèsant ''Refresh'', ou pèsez ''Ctrl-F5''; '''Konqueror:''' Simplement pèsez le bouton ''Reload'', ou pèsez ''F5''; Pour les useurs de '''Opera''', il foudra peut-être vider complètement le cache dans ''Tools→Preferences''.",
@@ -518,7 +518,7 @@ Il foudra que vous mettez vos changements dans le texte qu'est là asteur.
 'template-semiprotected' => '(demi-protégé)',
 'edittools' => "<!-- Le texte que vous mettez ici va être montré sous les boëttes de changements ou d'import de dossier. -->",
 'nocreatetitle' => 'Création de page limitée',
-'nocreatetext' => "La création des pages est limitée.  Vous pouvez changer une page qu'a été déjà créée ou [[Special:UserLogin|connecter ou créer un compte]].",
+'nocreatetext' => "La création des pages est limitée.  Vous pouvez changer une page qu'a été déjà créée ou [[Special:wiki_UserLogin|connecter ou créer un compte]].",
 'nocreate-loggedin' => 'Vous avez pas la permission de créer des nouvelles pages.',
 'permissionserrors' => 'Erreur de permissions',
 'permissionserrorstext' => 'Vous avez pas la permission de faire ça pour {{PLURAL:$1|cette raison|ces raisons}}:',
@@ -531,7 +531,7 @@ Les notes d'ôtage pour cette page sont données ici pour vous aider:",
 # "Undo" feature
 'undo-success' => "Le changement peut être renversé.  Regardez donc la comparaison en bas pour être sûr que c'est comme vous voulez, et puis sauvez les changements en bas pour finir le renversage du changement.",
 'undo-failure' => "Le changement pouvait pas être renversé à cause d'une dispute de changements.",
-'undo-summary' => 'Défaire la révision $1 par [[Special:Contributions/$2|$2]] ([[User talk:$2|Discussion]])',
+'undo-summary' => 'Défaire la révision $1 par [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Discussion]])',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'Impossible de créer le compte',
@@ -627,8 +627,8 @@ Des autres administrateurs sus ce wiki ont la permission de voir et de rétablir
 'prefs-help-realname' => 'Votre vrai nom est pas nécessaire.  Si vous choisirait de le mettre, ça serait usé pour vous donner du crédit pour votre ouvrage.',
 'prefs-help-email' => "Votre adresse e-mail est pas nécessaire, mais ça quitte le monde vous contacter par votre page d'useur ou votre page de discussion sans montrer votre identité.",
 
-# User rights
-'editinguser' => "Changement de '''[[User:$1|$1]]''' ([[User talk:$1|{{int:talkpagelinktext}}]] | [[Special:Contributions/$1|{{int:contribslink}}]])",
+# wiki_User rights
+'editinguser' => "Changement de '''[[wiki_User:$1|$1]]''' ([[wiki_User talk:$1|{{int:talkpagelinktext}}]] | [[Special:Contributions/$1|{{int:contribslink}}]])",
 
 # Associated actions - in the sentence "You do not have permission to X"
 'action-edit' => 'Faire un changement',

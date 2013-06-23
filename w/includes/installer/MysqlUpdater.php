@@ -75,8 +75,8 @@ class MysqlUpdater extends DatabaseUpdater {
 			array( 'addField', 'image',         'img_media_type',   'patch-img_media_type.sql' ),
 			array( 'doPagelinksUpdate' ),
 			array( 'dropField', 'image',        'img_type',         'patch-drop_img_type.sql' ),
-			array( 'doUserUniqueUpdate' ),
-			array( 'doUserGroupsUpdate' ),
+			array( 'dowiki_UserUniqueUpdate' ),
+			array( 'dowiki_UserGroupsUpdate' ),
 			array( 'addField', 'site_stats',    'ss_total_pages',   'patch-ss_total_articles.sql' ),
 			array( 'addTable', 'user_newtalk',                      'patch-usernewtalk2.sql' ),
 			array( 'addTable', 'transcache',                        'patch-transcache.sql' ),
@@ -149,7 +149,7 @@ class MysqlUpdater extends DatabaseUpdater {
 
 			// 1.14
 			array( 'addField', 'site_stats',    'ss_active_users',  'patch-ss_active_users.sql' ),
-			array( 'doActiveUsersInit' ),
+			array( 'doActivewiki_UsersInit' ),
 			array( 'addField', 'ipblocks',      'ipb_allow_usertalk', 'patch-ipb_allow_usertalk.sql' ),
 
 			// 1.15
@@ -162,7 +162,7 @@ class MysqlUpdater extends DatabaseUpdater {
 			array( 'addTable', 'user_properties',                   'patch-user_properties.sql' ),
 			array( 'addTable', 'log_search',                        'patch-log_search.sql' ),
 			array( 'addField', 'logging',       'log_user_text',    'patch-log_user_text.sql' ),
-			array( 'doLogUsertextPopulation' ), # listed separately from the previous update because 1.16 was released without this update
+			array( 'doLogwiki_UsertextPopulation' ), # listed separately from the previous update because 1.16 was released without this update
 			array( 'doLogSearchPopulation' ),
 			array( 'addTable', 'l10n_cache',                        'patch-l10n_cache.sql' ),
 			array( 'addTable', 'external_user',                     'patch-external_user.sql' ),
@@ -190,7 +190,7 @@ class MysqlUpdater extends DatabaseUpdater {
 			array( 'doLangLinksLengthUpdate' ),
 
 			// 1.18
-			array( 'doUserNewTalkTimestampNotNull' ),
+			array( 'dowiki_UserNewTalkTimestampNotNull' ),
 			array( 'addIndex', 'user',          'user_email',       'patch-user_email_index.sql' ),
 			array( 'modifyField', 'user_properties', 'up_property', 'patch-up_property.sql' ),
 			array( 'addTable', 'uploadstash',                       'patch-uploadstash.sql' ),
@@ -198,7 +198,7 @@ class MysqlUpdater extends DatabaseUpdater {
 
 			// 1.19
 			array( 'addIndex', 'logging',       'type_action',      'patch-logging-type-action-index.sql'),
-			array( 'doMigrateUserOptions' ),
+			array( 'doMigratewiki_UserOptions' ),
 			array( 'dropField', 'user',         'user_options', 'patch-drop-user_options.sql' ),
 			array( 'addField', 'revision',      'rev_sha1',         'patch-rev_sha1.sql' ),
 			array( 'addField', 'archive',       'ar_sha1',          'patch-ar_sha1.sql' ),
@@ -551,8 +551,8 @@ class MysqlUpdater extends DatabaseUpdater {
 		}
 	}
 
-	protected function doUserUniqueUpdate() {
-		$duper = new UserDupes( $this->db, array( $this, 'output' ) );
+	protected function dowiki_UserUniqueUpdate() {
+		$duper = new wiki_UserDupes( $this->db, array( $this, 'output' ) );
 		if ( $duper->hasUniqueIndex() ) {
 			$this->output( "...already have unique user_name index.\n" );
 			return;
@@ -564,7 +564,7 @@ class MysqlUpdater extends DatabaseUpdater {
 		$this->applyPatch( 'patch-user_nameindex.sql', false, "Adding unique index on user_name" );
 	}
 
-	protected function doUserGroupsUpdate() {
+	protected function dowiki_UserGroupsUpdate() {
 		if ( $this->db->tableExists( 'user_groups', __METHOD__ ) ) {
 			$info = $this->db->fieldInfo( 'user_groups', 'ug_group' );
 			if ( $info->type() == 'int' ) {
@@ -825,7 +825,7 @@ class MysqlUpdater extends DatabaseUpdater {
 		}
 	}
 
-	protected function doUserNewTalkTimestampNotNull() {
+	protected function dowiki_UserNewTalkTimestampNotNull() {
 		$info = $this->db->fieldInfo( 'user_newtalk', 'user_last_timestamp' );
 		if ( $info->isNullable() ) {
 			$this->output( "...user_last_timestamp is already nullable.\n" );

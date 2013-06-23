@@ -32,7 +32,7 @@
  *
  * @ingroup SpecialPage
  */
-class UsersPager extends AlphabeticPager {
+class wiki_UsersPager extends AlphabeticPager {
 
 	/**
 	 * @param $context IContextSource
@@ -47,7 +47,7 @@ class UsersPager extends AlphabeticPager {
 		$par = ( $par !== null ) ? $par : '';
 		$parms = explode( '/', $par );
 		$symsForAll = array( '*', 'user' );
-		if ( $parms[0] != '' && ( in_array( $par, User::getAllGroups() ) || in_array( $par, $symsForAll ) ) ) {
+		if ( $parms[0] != '' && ( in_array( $par, wiki_User::getAllGroups() ) || in_array( $par, $symsForAll ) ) ) {
 			$this->requestedGroup = $par;
 			$un = $request->getText( 'username' );
 		} elseif ( count( $parms ) == 2 ) {
@@ -64,11 +64,11 @@ class UsersPager extends AlphabeticPager {
 		$this->creationSort = $request->getBool( 'creationSort' );
 		$this->including = $including;
 
-		$this->requestedUser = '';
+		$this->requestedwiki_User = '';
 		if ( $un != '' ) {
 			$username = Title::makeTitleSafe( NS_USER, $un );
 			if( ! is_null( $username ) ) {
-				$this->requestedUser = $username->getText();
+				$this->requestedwiki_User = $username->getText();
 			}
 		}
 		parent::__construct();
@@ -99,12 +99,12 @@ class UsersPager extends AlphabeticPager {
 		} else {
 			//$options['USE INDEX'] = $this->creationSort ? 'PRIMARY' : 'user_name';
 		}
-		if( $this->requestedUser != '' ) {
+		if( $this->requestedwiki_User != '' ) {
 			# Sorted either by account creation or name
 			if( $this->creationSort ) {
-				$conds[] = 'user_id >= ' . intval( User::idFromName( $this->requestedUser ) );
+				$conds[] = 'user_id >= ' . intval( wiki_User::idFromName( $this->requestedwiki_User ) );
 			} else {
-				$conds[] = 'user_name >= ' . $dbr->addQuotes( $this->requestedUser );
+				$conds[] = 'user_name >= ' . $dbr->addQuotes( $this->requestedwiki_User );
 			}
 		}
 		if( $this->editsOnly ) {
@@ -214,9 +214,9 @@ class UsersPager extends AlphabeticPager {
 			Xml::fieldset( $this->msg( 'listusers' )->text() ) .
 			Html::hidden( 'title', $self );
 
-		# Username field
+		# wiki_Username field
 		$out .= Xml::label( $this->msg( 'listusersfrom' )->text(), 'offset' ) . ' ' .
-			Xml::input( 'username', 20, $this->requestedUser, array( 'id' => 'offset' ) ) . ' ';
+			Xml::input( 'username', 20, $this->requestedwiki_User, array( 'id' => 'offset' ) ) . ' ';
 
 		# Group drop-down list
 		$out .= Xml::label( $this->msg( 'group' )->text(), 'group' ) . ' ' .
@@ -248,8 +248,8 @@ class UsersPager extends AlphabeticPager {
 	 */
 	function getAllGroups() {
 		$result = array();
-		foreach( User::getAllGroups() as $group ) {
-			$result[$group] = User::getGroupName( $group );
+		foreach( wiki_User::getAllGroups() as $group ) {
+			$result[$group] = wiki_User::getGroupName( $group );
 		}
 		asort( $result );
 		return $result;
@@ -264,8 +264,8 @@ class UsersPager extends AlphabeticPager {
 		if( $this->requestedGroup != '' ) {
 			$query['group'] = $this->requestedGroup;
 		}
-		if( $this->requestedUser != '' ) {
-			$query['username'] = $this->requestedUser;
+		if( $this->requestedwiki_User != '' ) {
+			$query['username'] = $this->requestedwiki_User;
 		}
 		wfRunHooks( 'SpecialListusersDefaultQuery', array( $this, &$query ) );
 		return $query;
@@ -278,8 +278,8 @@ class UsersPager extends AlphabeticPager {
 	 * @return array
 	 */
 	protected static function getGroups( $uid ) {
-		$user = User::newFromId( $uid );
-		$groups = array_diff( $user->getEffectiveGroups(), User::getImplicitGroups() );
+		$user = wiki_User::newFromId( $uid );
+		$groups = array_diff( $user->getEffectiveGroups(), wiki_User::getImplicitGroups() );
 		return $groups;
 	}
 
@@ -287,18 +287,18 @@ class UsersPager extends AlphabeticPager {
 	 * Format a link to a group description page
 	 *
 	 * @param $group String: group name
-	 * @param $username String Username
+	 * @param $username String wiki_Username
 	 * @return string
 	 */
 	protected static function buildGroupLink( $group, $username ) {
-		return User::makeGroupLinkHtml( $group, htmlspecialchars( User::getGroupMember( $group, $username ) ) );
+		return wiki_User::makeGroupLinkHtml( $group, htmlspecialchars( wiki_User::getGroupMember( $group, $username ) ) );
 	}
 }
 
 /**
  * @ingroup SpecialPage
  */
-class SpecialListUsers extends SpecialPage {
+class SpecialListwiki_Users extends SpecialPage {
 
 	/**
 	 * Constructor
@@ -317,7 +317,7 @@ class SpecialListUsers extends SpecialPage {
 		$this->setHeaders();
 		$this->outputHeader();
 
-		$up = new UsersPager( $this->getContext(), $par, $this->including() );
+		$up = new wiki_UsersPager( $this->getContext(), $par, $this->including() );
 
 		# getBody() first to check, if empty
 		$usersbody = $up->getBody();

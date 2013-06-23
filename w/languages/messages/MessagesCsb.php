@@ -38,7 +38,7 @@ $namespaceNames = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Pòdsztrëchiwùjë lënczi:',
 'tog-justify' => 'Wërównanié (justifikacëjô) paragrafów',
 'tog-hideminor' => 'Zatacë môłi edicëje w slédnëch zmianach',
@@ -337,7 +337,7 @@ To mòże bëc téż fela softwôrë brëkòwóny przez {{SITENAME}}.',
 Zwëczajno je to sparłãczoné òdsélaniém do nieaktualnégò lënka nierównoscë dwóch wersëjów starnë abò do rëmniãti wersëji starnë.
 
 Jeżlë tak nie je, mòżlëwé je, że je to problem sparłãczony z felą w softwôrze.
-Mòże to zgłoszëc [[Special:ListUsers/sysop|sprôwnikòwi]], pòdając adresã URL.',
+Mòże to zgłoszëc [[Special:Listwiki_Users/sysop|sprôwnikòwi]], pòdając adresã URL.',
 'missingarticle-rev' => '(wersëjô $1)',
 'internalerror' => 'Bënowô fela',
 'filecopyerror' => 'Ni mòże skòpérowac lopka "$1" do "$2".',
@@ -354,7 +354,7 @@ Przemëszlë dolmaczënié na [//translatewiki.net/wiki/Main_Page?setlang=csb tr
 
 # Login and logout pages
 'logouttext' => "'''Jes wëlogòwóny.'''
-Mòżesz robic dali na {{SITENAME}} jakno anonimòwi brëkòwnik abò sã [[Special:UserLogin|wlogòwac]] znowa jakno równy, a bò jinszi brëkòwnik.
+Mòżesz robic dali na {{SITENAME}} jakno anonimòwi brëkòwnik abò sã [[Special:wiki_UserLogin|wlogòwac]] znowa jakno równy, a bò jinszi brëkòwnik.
 Bôczë, że do czasu wëczëszczenia pòdrãczny pamiãcë przezérnika, niejedné starnë bãdą wëzdrzëc jakbë të bëł wlogòwóny.",
 'welcomecreation' => ' == Witôj, $1! ==
 Twòjé kònto òstało prawie ùsôdzoné.
@@ -384,7 +384,7 @@ Nie zbëjë zmienic swòjich nastôwów na [[Special:Preferences|{{SITENAME}}]].
 'loginsuccesstitle' => 'ùdałé logòwanié',
 'loginsuccess' => 'Të jes wlogòwóny do {{SITENAME}} jakno "$1".',
 'nosuchuser' => 'Nie dô brëkòwnika ò mionie "$1".
-Sprôwdzë pisënk abò [[Special:UserLogin/signup|ùsôdzë nowé kònto]].',
+Sprôwdzë pisënk abò [[Special:wiki_UserLogin/signup|ùsôdzë nowé kònto]].',
 'nouserspecified' => 'Mùszisz pòdac miono brëkòwnika.',
 'wrongpassword' => 'Lëchô parola.
 Spróbùjë znowa.',
@@ -468,7 +468,7 @@ Proszëmë pòdac wëższé pòdôłczi przë wszëtczich pëtaniach.",
 'loginreqlink' => 'Wlogùjë',
 'loginreqpagetext' => '$1 sã, żebë przezérac jinszé starnë.',
 'accmailtitle' => 'Parola wësłónô.',
-'accmailtext' => "Przëtrôfkòwò wëgenerowónô parola dlô [[User talk:$1|$1]] òsta wësłónô do $2.
+'accmailtext' => "Przëtrôfkòwò wëgenerowónô parola dlô [[wiki_User talk:$1|$1]] òsta wësłónô do $2.
 
 Parolã dlô negò nowégò kònta mòże zmienic pò wlogòwaniu na starnie ''[[Special:ChangePassword|zjinaka parolë]]''.",
 'newarticle' => '(Nowi)',
@@ -479,7 +479,7 @@ Jeżlë jes të tuwò bez zmiłkã, le klëkni w swòjim przezérnikù knąpã '
 'anontalkpagetext' => "----''To je starna dyskùsëji anonimòwiégò brëkòwnika, chtëren nie ùsôdzëł jesz swòjegò kòntae, abò gò nie brëkùje.
 Abë gò rozpòznac, ùżëwómë adresów IP.
 Takô adresa IP, mòże bëc równak brëkòwónô przez wiele lëdzy.
-Jeżlë jes anonimòwim brëkòwnikã ë ùwôżôsz, że ne wiadła nie są do ce sczerowóne, tedë [[Special:UserLogin/signup|ùsôdzë nowé kònto]] abò [[Special:UserLogin|wlogùjë sã]], bë niechac niezrozmeiniô z jinyma anonimòwima brëkòwnikama.''",
+Jeżlë jes anonimòwim brëkòwnikã ë ùwôżôsz, że ne wiadła nie są do ce sczerowóne, tedë [[Special:wiki_UserLogin/signup|ùsôdzë nowé kònto]] abò [[Special:wiki_UserLogin|wlogùjë sã]], bë niechac niezrozmeiniô z jinyma anonimòwima brëkòwnikama.''",
 'noarticletext' => 'Felëje starna ò tim titlu.
 Mòżesz [[Special:Search/{{PAGENAME}}|szëkac za {{PAGENAME}} na jinych starnach]],
 <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} szëkac w logù] abò [{{fullurl:{{FULLPAGENAME}}|action=edit}} ùsôdzëc nã starnã]</span>',
@@ -666,8 +666,8 @@ Mô bëc mni jakno $1 {{PLURAL:$1|znak|znaczi/znaków}}.',
 'prefs-help-email' => 'Adresa e-mail je òptacëjnô, zezwôlô równak sélac do ce nową parolã jak tã zabëjesz.
 Mòżesz zezwòlëc jinszim brëkòwniką na łączbã z Tobą przez Twòją starnã abò starnã diskùsëji, bez mùszebnotë wëskrzënianiô swòjich pòdôwków.',
 
-# User rights
-'editinguser' => "Zmiana praw brëkòwnika '''[[User:$1|$1]]''' ([[User talk:$1|{{int:talkpagelinktext}}]]{{int:pipe-separator}}[[Special:Contributions/$1|{{int:contribslink}}]])",
+# wiki_User rights
+'editinguser' => "Zmiana praw brëkòwnika '''[[wiki_User:$1|$1]]''' ([[wiki_User talk:$1|{{int:talkpagelinktext}}]]{{int:pipe-separator}}[[Special:Contributions/$1|{{int:contribslink}}]])",
 
 # Groups
 'group' => 'Karno:',
@@ -714,7 +714,7 @@ Mòżesz zezwòlëc jinszim brëkòwniką na łączbã z Tobą przez Twòją sta
 'right-autoconfirmed' => 'Edicëjô dzélowò zazychrowónych starnów',
 'right-bot' => 'Nacéchòwanié edicëjó jakno aùtomatnych',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Prawa brëkòwnika',
 
 # Associated actions - in the sentence "You do not have permission to X"
@@ -956,10 +956,10 @@ Czej chcesz remôc starnã z lëste ùzéronëch artiklów, klikni ''Òprzestôj
 'rollback' => 'Copnij edicëjã',
 'rollbacklink' => 'copnij',
 'rollbackfailed' => 'Nie szło copnąc zmianë',
-'alreadyrolled' => 'Ni mòże copnąc slédny edicëji starnë [[:$1]], chtërny ùsôdzcą je [[User:$2|$2]] ([[User talk:$2|Diskùsëjô]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]);
+'alreadyrolled' => 'Ni mòże copnąc slédny edicëji starnë [[:$1]], chtërny ùsôdzcą je [[wiki_User:$2|$2]] ([[wiki_User talk:$2|Diskùsëjô]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]);
 chtos jiny ju zeditowôł starnã abò copnął zmianë.
 
-Slédnym ùsódzcą starnë bëł [[User:$3|$3]] ([[User talk:$3|Diskùsëjô]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
+Slédnym ùsódzcą starnë bëł [[wiki_User:$3|$3]] ([[wiki_User talk:$3|Diskùsëjô]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
 
 # Protect
 'protectlogpage' => 'Zazychrowóné',
@@ -1050,7 +1050,7 @@ Biéj do [[Special:BlockList|lëstë zascëgónëch adresów IP]] abë òbaczëc
 'unblocklink' => 'òdblokùjë',
 'change-blocklink' => 'zmieni blokòwanié',
 'contribslink' => 'wkłôd',
-'autoblocker' => 'Zablokòwóno ce aùtomatnie, ga brëkùjesz ti sami adresë IP co brëkòwnik "[[User:$1|$1]]". Przëczënô blokòwóniô $1 to: "\'\'\'$2\'\'\'".',
+'autoblocker' => 'Zablokòwóno ce aùtomatnie, ga brëkùjesz ti sami adresë IP co brëkòwnik "[[wiki_User:$1|$1]]". Przëczënô blokòwóniô $1 to: "\'\'\'$2\'\'\'".',
 'blocklogpage' => 'Historëjô blokòwaniô',
 'blocklogentry' => 'zablokòwôł [[$1]], czas blokadë: $2 $3',
 'unblocklogentry' => 'òdblokòwôł $1',

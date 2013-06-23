@@ -17,7 +17,7 @@
 $fallback = 'de';
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-showtoolbar' => "Werkzaich zum Bearwaide zaische (dodezu brauchd's JavaScript)",
 'tog-showhiddencats' => 'Zaisch vaschdeglde Kadegorije',
 
@@ -208,7 +208,7 @@ $messages = array(
 Normalerwais hääßd des, dass die Said gleschd worre isch.
 
 Wenns des nit isch, hoschd villaischd en Fehler in de Daadebong'g gfunne.
-Bidde meldsm [[Special:ListUsers/sysop|Adminischdrador]], un gebb d URL dezu aa.",
+Bidde meldsm [[Special:Listwiki_Users/sysop|Adminischdrador]], un gebb d URL dezu aa.",
 'missingarticle-rev' => '(Versionsnummer#: $1)',
 'badtitle' => 'Schleschde Didl',
 'badtitletext' => 'De Titel vun de aageforderte Said isch nid giltich, leer, odder e nid giltiche Link vun eme annere Wiki.
@@ -386,7 +386,7 @@ Erklärung: '''({{int:cur}})''' = Unnerschied zu jetzert,
 
 'grouppage-sysop' => '{{ns:project}}:Adminischtratore',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Benutzerrecht-Logbuch',
 'rightsnone' => '(-)',
 

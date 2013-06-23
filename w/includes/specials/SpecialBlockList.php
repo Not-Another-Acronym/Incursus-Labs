@@ -82,7 +82,7 @@ class SpecialBlockList extends SpecialPage {
 				'flatlist' => true,
 			),
 			'Limit' => array(
-				'class' => 'HTMLBlockedUsersItemSelect',
+				'class' => 'HTMLBlockedwiki_UsersItemSelect',
 				'label-message' => 'table_pager_limit_label',
 				'options' => array(
 					$lang->formatNum( 20 ) => 20,
@@ -291,7 +291,7 @@ class BlockListPager extends TablePager {
 				break;
 
 			case 'ipb_expiry':
-				$formatted = $this->getLanguage()->formatExpiry( $value, /* User preference timezone */ true );
+				$formatted = $this->getLanguage()->formatExpiry( $value, /* wiki_User preference timezone */ true );
 				if( $this->getUser()->isAllowed( 'block' ) ){
 					if( $row->ipb_auto ){
 						$links[] = Linker::linkKnown(
@@ -429,14 +429,14 @@ class BlockListPager extends TablePager {
 		foreach ( $result as $row ) {
 			$userids[] = $row->ipb_by;
 
-			# Usernames and titles are in fact related by a simple substitution of space -> underscore
+			# wiki_Usernames and titles are in fact related by a simple substitution of space -> underscore
 			# The last few lines of Title::secureAndSplit() tell the story.
 			$name = str_replace( ' ', '_', $row->ipb_address );
 			$lb->add( NS_USER, $name );
 			$lb->add( NS_USER_TALK, $name );
 		}
 
-		$ua = UserArray::newFromIDs( $userids );
+		$ua = wiki_UserArray::newFromIDs( $userids );
 		foreach( $ua as $user ){
 			$name = str_replace( ' ', '_', $user->getName() );
 			$lb->add( NS_USER, $name );
@@ -453,7 +453,7 @@ class BlockListPager extends TablePager {
  *
  * @todo Do not release 1.19 with this.
  */
-class HTMLBlockedUsersItemSelect extends HTMLSelectField {
+class HTMLBlockedwiki_UsersItemSelect extends HTMLSelectField {
 	/**
 	 * Basically don't do any validation. If it's a number that's fine. Also,
 	 * add it to the list if it's not there already

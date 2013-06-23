@@ -11,7 +11,7 @@
  */
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Enyunzi ebengako olukoloboze?',
 'tog-justify' => "Ennyiriri z'enkanankanye",
 'tog-hideminor' => 'Kisa nkyukakyuka entono ezakakolebwa',
@@ -344,7 +344,7 @@ Kino kitera okubawo singa likoda y'enjawulo mu mpandika z'olupapula eba nsobu ob
 ku nnanda yalwo eba nga egyidwawo.
 
 Ebyo bwe biba nga ssi bye bikireesewo, oyinz'okuba nga ozudde nsobi mu sofutiweya ono.
-Ensobi eno gimanyise [[Special:ListUsers/sysop|omuteesiteesi]], nga omulaga n'endagiriro (URL) kw'ogisanze.",
+Ensobi eno gimanyise [[Special:Listwiki_Users/sysop|omuteesiteesi]], nga omulaga n'endagiriro (URL) kw'ogisanze.",
 'missingarticle-rev' => '(olukyusa#: $1)',
 'missingarticle-diff' => '(Enjawulo wakati wa: $1, $2)',
 'readonly_lag' => "Okukukkiriza enkyukakyuka mu ggwanika lya data lino kuyimirizidwamu, kompyuta eziriko amawanika ga data amazibizi zisobole okugakwataganya n'eggwanika lya data ery'ennono",
@@ -389,7 +389,7 @@ Enkyukakyuka z'okola wano zigyakubaako kye zikola ku ngeri abantu gye bakozesaam
 $2',
 'namespaceprotected' => "Tolina buyinza bwa kukyusa ku mpapula ez'omu kkuŋaanizo erya '''$1'''.",
 'ns-specialprotected' => 'Empapula enjawule tezikukkiriza kuzikyusaako.',
-'titleprotected' => '[[User:$1|$1]] ataddewo ekikugizo ekigaana okukozesa omutwe guno.<br />
+'titleprotected' => '[[wiki_User:$1|$1]] ataddewo ekikugizo ekigaana okukozesa omutwe guno.<br />
 Ensonga gy\'awadde eri nti "\'\'$2\'\'".',
 
 # Virus scanner
@@ -400,7 +400,7 @@ Ensonga gy\'awadde eri nti "\'\'$2\'\'".',
 # Login and logout pages
 'logouttext' => "'''Kati ovuddemu.'''
 
-Osobola okusigala nga okozesa {{SITENAME}} nga at'eyanjudde, ate osobola [[Special:UserLogin|n'okuddamu okuyingira]] nga bw'obadde oba nga okozesezza ery'obwa memba eddala.
+Osobola okusigala nga okozesa {{SITENAME}} nga at'eyanjudde, ate osobola [[Special:wiki_UserLogin|n'okuddamu okuyingira]] nga bw'obadde oba nga okozesezza ery'obwa memba eddala.
 Wekkaanye, empapula ezimu ziyinza okukweyolekera nga bwe zibadde nga oyingidde - okutuusa lw'okunkumula eggwanika ezzibizi erya kalambula-neti yo.",
 'welcomecreation' => "== $1 tukwanirizza! == <br />
 Akawunti yo ekoledwa.<br />
@@ -447,7 +447,7 @@ Kalambulanetti yo gitegeke ekkirize obujjukiza, ddamu owange olupapula luno oryo
 'loginsuccess' => "'''Kati oyingidde mu {{SITENAME}} nga okozesa erinnya \"\$1\".'''",
 'nosuchuser' => "Tewali memba akozesa lya \"\$1\".<br />
 Ery'obwa memba bw'okyusa obunene bw'ennukuta z'oliwandisa obeera owandise eddala.<br />
-Kebera bw'oliwandise, oba [[Special:UserLogin/signup|kolawo akawunti empya]].",
+Kebera bw'oliwandise, oba [[Special:wiki_UserLogin/signup|kolawo akawunti empya]].",
 'nosuchusershort' => 'Tewali memba akozesa lya "$1".<br />
 Kebera bw\'oliwandise.',
 'nouserspecified' => "Kyetaagisa owandikewo erinnya ly'obwa memba.",
@@ -612,7 +612,7 @@ Guyinz'okuba nga guggidwawo oba gujjuludwa ng'okyagukolako.",
 'loginreqlink' => 'Yingira',
 'loginreqpagetext' => '$1 olyoke osobole okulaba empapula ndala.',
 'accmailtitle' => 'Ekigambo ekikuumi kisindikiddwa',
-'accmailtext' => "Ekigambo ekikuumi ekya akawunti empya [[User talk:$1|$1]] kisindikiddwa ku $2.
+'accmailtext' => "Ekigambo ekikuumi ekya akawunti empya [[wiki_User talk:$1|$1]] kisindikiddwa ku $2.
 
 Okukyusa ekigambo kino memba, ng'ayingidde mu wiki, alage ku lupapula ''[[Special:ChangePassword|change password]]''.",
 'newarticle' => '(Lupapula lupya)',
@@ -625,7 +625,7 @@ erya '''ddayo'''.",
 Kino kitwetaagisizza okumwawulira ku ndagiriro ya IP kwe yayimidde.<br />
 Abantu bangi basobola okukozesa endagiriro eya IP y'emu.<br />
 Bw'obanga naawe okola ng'at'eyanjudde nga owulira nti ebimu ku birowozo ebikwolekezedwa wano<br />
-tebiggirawo oba tebikwatagana naawe, [[Special:UserLogin/signup|funa akawunti]] oba [[Special:UserLogin|yingira]] baleme okukutabula n'abalala abakola ng'abat'eyanjudde.",
+tebiggirawo oba tebikwatagana naawe, [[Special:wiki_UserLogin/signup|funa akawunti]] oba [[Special:wiki_UserLogin|yingira]] baleme okukutabula n'abalala abakola ng'abat'eyanjudde.",
 'noarticletext' => "Wano tewali kyawandikidwawo.<br />
 Ky'obadde onoonya osobola [[Special:Search/{{PAGENAME}}| okukinoonyeza]] ku mpapula ndala oba oyinza [{{fullurl:{{FULLPAGENAME}}|action=edit}} gwe okukiwandikako] wano.",
 'noarticletext-nopermission' => 'Wano tewali kyawandikidwawo.<br />
@@ -668,7 +668,7 @@ zonna ziteekwa okuba ntono, okugeza ''{{ns:user}}:Foo/vector.css'' so ssi ''{{ns
 'session_fail_preview' => "'''Tetusobodde okukola ku by'okyusizza olw'okubanga olutuula'''<br />
 '''lwa wiki luno luzzemu okugootaana olwa data okubula.'''<br /> 
 Kikwetaagisa okuddamu by'okoze. <br />
-Ekyo bwe kitagonjoola ebizibu sooka [[Special:UserLogout|oveemu]] mu wiki oddemu ate okugiyingira.",
+Ekyo bwe kitagonjoola ebizibu sooka [[Special:wiki_UserLogout|oveemu]] mu wiki oddemu ate okugiyingira.",
 'session_fail_preview_html' => "'''Tukwetondera! Tekisobose okukola ku nkyukakyuka z'okozewo kubanga data ekwata ku lutuula lwo evuddewo.'''<br />
 <br />
 ''{{SITENAME}} esobozesa abantu okukola ku buwandike bwa yo obw'ennono obwa HTML.''<br />
@@ -676,7 +676,7 @@ Ekyo bwe kitagonjoola ebizibu sooka [[Special:UserLogout|oveemu]] mu wiki oddemu
 ''abakola enkyukakyuka ez'ekiyaaye nga bayitira mu JavaScript.''<br />
 <br />
 '''Bw'oba nga ddala ogenderera okukola enkyukakyuka wano mu bwesimbu, ddamu ogezeko.'''<br />
-Ekyo bwe kitakola, sooka [[Special:UserLogout|oveemu]] mu wiki oryoke oddemu<br />
+Ekyo bwe kitakola, sooka [[Special:wiki_UserLogout|oveemu]] mu wiki oryoke oddemu<br />
 okugiyingira ogezeeko n'ate okukola enkyukakyuka zo.",
 'token_suffix_mismatch' => "'''Enkyukakyuka zo zigaanidwa olw'okuba nti puloguramu gy'okozesa etabuddetabudde'''<br />
 '''obubonero obumenya mu bubaka obukakasa obugenderevu bw'omulimu ogwo.'''<br />
@@ -732,7 +732,7 @@ Ekyasemba okuyingizibwa mu lukalala olw'ebifuddeyo lwa lwo bibino okwongera okuk
 'template-semiprotected' => '(ebimu ku lupapula luno bisibidwa)',
 'hiddencategories' => 'Olupapula luno lusangibwa mu {{PLURAL:$1|ttuluba erikise limu|matuluba amakise $1}}:',
 'nocreatetitle' => 'Okukolawo empapula kuliko obukwakkulizo',
-'nocreatetext' => "Ku {{SITENAME}} tosobola okukolawo empapula mpya nga tokozesa buyinza obw'obwamemba. Kati oyinza kugenda n'okyusamu olupapula olulala olwakolebwa dda, oba oyinza [[Special:UserLogin|okufuna obuyinza obw'obwamemba]].",
+'nocreatetext' => "Ku {{SITENAME}} tosobola okukolawo empapula mpya nga tokozesa buyinza obw'obwamemba. Kati oyinza kugenda n'okyusamu olupapula olulala olwakolebwa dda, oba oyinza [[Special:wiki_UserLogin|okufuna obuyinza obw'obwamemba]].",
 'nocreate-loggedin' => 'Tolina buyinza bwa kukolawo empapula mpya.',
 'sectioneditnotsupported-title' => 'Okukyusa mu bitundu tekukkirizibwa',
 'sectioneditnotsupported-text' => 'Olupapula luno terukkiriza okukyusa mu bitundu.',
@@ -894,8 +894,8 @@ W'owandikira by'onoonya bw'osoosawo akagambo ''all:'', okunoonya kubuna Wikipedi
 'yournick' => 'Empaako yo (ssi ya tteeka):',
 'prefs-help-email' => "Okuwayo E-mail yo ssi kya tteeka, naye yetaagisibwa bw'obanga werabide ekigambo kyo ekikuumi - basobole okukusindikira ekipya.",
 
-# User rights
-'editinguser' => "Okyusa ndukusa za memba '''[[User:$1|$1]]''' ([[User talk:$1|{{int:talkpagelinktext}}]] {{int:pipe-separator}} [[Special:Contributions/$1|{{int:contribslink}}]])",
+# wiki_User rights
+'editinguser' => "Okyusa ndukusa za memba '''[[wiki_User:$1|$1]]''' ([[wiki_User talk:$1|{{int:talkpagelinktext}}]] {{int:pipe-separator}} [[Special:Contributions/$1|{{int:contribslink}}]])",
 'userrights-reason' => 'Nsonga:',
 
 # Groups
@@ -903,7 +903,7 @@ W'owandikira by'onoonya bw'osoosawo akagambo ''all:'', okunoonya kubuna Wikipedi
 
 'grouppage-sysop' => '{{ns:project}}:Abateesiteesi',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => "Olukalala lw'ebifudeyo ku by'endukusa za bamemba",
 
 # Associated actions - in the sentence "You do not have permission to X"

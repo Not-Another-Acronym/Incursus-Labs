@@ -301,7 +301,7 @@ class WikiImporter {
 		} else {
 			$this->debug( "-- Title: <invalid>" );
 		}
-		$this->debug( "-- User: " . $revision->user_text );
+		$this->debug( "-- wiki_User: " . $revision->user_text );
 		$this->debug( "-- Timestamp: " . $revision->timestamp );
 		$this->debug( "-- Comment: " . $revision->comment );
 		$this->debug( "-- Text: " . $revision->text );
@@ -541,10 +541,10 @@ class WikiImporter {
 		}
 
 		if ( isset( $logInfo['contributor']['ip'] ) ) {
-			$revision->setUserIP( $logInfo['contributor']['ip'] );
+			$revision->setwiki_UserIP( $logInfo['contributor']['ip'] );
 		}
 		if ( isset( $logInfo['contributor']['username'] ) ) {
-			$revision->setUserName( $logInfo['contributor']['username'] );
+			$revision->setwiki_UserName( $logInfo['contributor']['username'] );
 		}
 
 		return $this->logItemCallback( $revision );
@@ -672,10 +672,10 @@ class WikiImporter {
 			$revision->setMinor( true );
 		}
 		if ( isset( $revisionInfo['contributor']['ip'] ) ) {
-			$revision->setUserIP( $revisionInfo['contributor']['ip'] );
+			$revision->setwiki_UserIP( $revisionInfo['contributor']['ip'] );
 		}
 		if ( isset( $revisionInfo['contributor']['username'] ) ) {
-			$revision->setUserName( $revisionInfo['contributor']['username'] );
+			$revision->setwiki_UserName( $revisionInfo['contributor']['username'] );
 		}
 		$revision->setNoUpdates( $this->mNoUpdates );
 
@@ -775,10 +775,10 @@ class WikiImporter {
 		$revision->setComment( $uploadInfo['comment'] );
 
 		if ( isset( $uploadInfo['contributor']['ip'] ) ) {
-			$revision->setUserIP( $uploadInfo['contributor']['ip'] );
+			$revision->setwiki_UserIP( $uploadInfo['contributor']['ip'] );
 		}
 		if ( isset( $uploadInfo['contributor']['username'] ) ) {
-			$revision->setUserName( $uploadInfo['contributor']['username'] );
+			$revision->setwiki_UserName( $uploadInfo['contributor']['username'] );
 		}
 		$revision->setNoUpdates( $this->mNoUpdates );
 
@@ -1053,14 +1053,14 @@ class WikiRevision {
 	/**
 	 * @param $user
 	 */
-	function setUsername( $user ) {
+	function setwiki_Username( $user ) {
 		$this->user_text = $user;
 	}
 
 	/**
 	 * @param $ip
 	 */
-	function setUserIP( $ip ) {
+	function setwiki_UserIP( $ip ) {
 		$this->user_text = $ip;
 	}
 
@@ -1286,7 +1286,7 @@ class WikiRevision {
 		$dbw = wfGetDB( DB_MASTER );
 
 		# Sneak a single revision into place
-		$user = User::newFromName( $this->getUser() );
+		$user = wiki_User::newFromName( $this->getUser() );
 		if( $user ) {
 			$userId = intval( $user->getId() );
 			$userText = $user->getName();
@@ -1294,7 +1294,7 @@ class WikiRevision {
 		} else {
 			$userId = 0;
 			$userText = $this->getUser();
-			$userObj = new User;
+			$userObj = new wiki_User;
 		}
 
 		// avoid memory leak...?
@@ -1385,7 +1385,7 @@ class WikiRevision {
 			'log_type' => $this->type,
 			'log_action' => $this->action,
 			'log_timestamp' => $dbw->timestamp( $this->timestamp ),
-			'log_user' => User::idFromName( $this->user_text ),
+			'log_user' => wiki_User::idFromName( $this->user_text ),
 			#'log_user_text' => $this->user_text,
 			'log_namespace' => $this->getTitle()->getNamespace(),
 			'log_title' => $this->getTitle()->getDBkey(),
@@ -1441,7 +1441,7 @@ class WikiRevision {
 			return false;
 		}
 
-		$user = User::newFromName( $this->user_text );
+		$user = wiki_User::newFromName( $this->user_text );
 
 		# Do the actual upload
 		if ( $archiveName ) {

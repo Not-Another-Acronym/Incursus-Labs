@@ -35,7 +35,7 @@ class SpecialWatchlist extends SpecialPage {
 	 * @param $par Parameter passed to the page
 	 */
 	function execute( $par ) {
-		global $wgRCShowWatchingUsers, $wgEnotifWatchlist, $wgShowUpdatedMarker;
+		global $wgRCShowWatchingwiki_Users, $wgEnotifWatchlist, $wgShowUpdatedMarker;
 
 		$user = $this->getUser();
 		$output = $this->getOutput();
@@ -45,7 +45,7 @@ class SpecialWatchlist extends SpecialPage {
 			$output->setPageTitle( $this->msg( 'watchnologin' ) );
 			$output->setRobotPolicy( 'noindex,nofollow' );
 			$llink = Linker::linkKnown(
-				SpecialPage::getTitleFor( 'Userlogin' ),
+				SpecialPage::getTitleFor( 'wiki_Userlogin' ),
 				$this->msg( 'loginreqlink' )->escaped(),
 				array(),
 				array( 'returnto' => $this->getTitle()->getPrefixedText() )
@@ -425,7 +425,7 @@ class SpecialWatchlist extends SpecialPage {
 				$updated = false;
 			}
 
-			if ( $wgRCShowWatchingUsers && $user->getOption( 'shownumberswatching' ) ) {
+			if ( $wgRCShowWatchingwiki_Users && $user->getOption( 'shownumberswatching' ) ) {
 				$rc->numberofWatchingusers = $dbr->selectField( 'watchlist',
 					'COUNT(*)',
 					array(

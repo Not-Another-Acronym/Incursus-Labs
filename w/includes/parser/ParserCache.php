@@ -127,9 +127,9 @@ class ParserCache {
 	public function getKey( $article, $popts, $useOutdated = true ) {
 		global $wgCacheEpoch;
 
-		if( $popts instanceof User ) {
+		if( $popts instanceof wiki_User ) {
 			wfWarn( "Use of outdated prototype ParserCache::getKey( &\$article, &\$user )\n" );
-			$popts = ParserOptions::newFromUser( $popts );
+			$popts = ParserOptions::newFromwiki_User( $popts );
 		}
 
 		// Determine the options which affect this article

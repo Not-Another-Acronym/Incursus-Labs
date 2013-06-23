@@ -24,12 +24,12 @@
 /**
  * @since 1.20
  */
-class UserCache {
+class wiki_UserCache {
 	protected $cache = array(); // (uid => property => value)
 	protected $typesCached = array(); // (uid => cache type => 1)
 
 	/**
-	 * @return UserCache
+	 * @return wiki_UserCache
 	 */
 	public static function singleton() {
 		static $instance = null;
@@ -44,8 +44,8 @@ class UserCache {
 	/**
 	 * Get a property of a user based on their user ID
 	 *
-	 * @param $userId integer User ID
-	 * @param $prop string User property
+	 * @param $userId integer wiki_User ID
+	 * @param $prop string wiki_User property
 	 * @return mixed The property or false if the user does not exist
 	 */
 	public function getProp( $userId, $prop ) {

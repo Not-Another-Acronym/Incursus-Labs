@@ -38,7 +38,7 @@ $namespaceNames = array(
 $linkTrail = '/^([a-zÄäÇçĞğŇňÖöŞşÜüÝýŽž]+)(.*)$/sDu';
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Çykgytlaryň aşagyny çyz:',
 'tog-justify' => 'Teksti iki ýaňa deňle',
 'tog-hideminor' => '"Soňky üýtgeşmeler" sahypasynda ujypsyzja özgerdişleri gizle',
@@ -372,7 +372,7 @@ Maglumat bazasyny gulplan administratoryň düşündirişi: $1',
 Bu ýagdaý sahypanyň öçürilen bir sahypanyň ozalky wersiýasy bolmaklygyndan ýüze çykýan bolup biler.
 
 Eger sebäp ol däl bolsa, programma serişdesinde bir säwlige duşan bolmagyňyz ahmal.
-Muny bir [[Special:ListUsers/sysop|administratora]] URL-ni belläp alyp ýetirmekligiňizi haýyş edýäris.',
+Muny bir [[Special:Listwiki_Users/sysop|administratora]] URL-ni belläp alyp ýetirmekligiňizi haýyş edýäris.',
 'missingarticle-rev' => '(wersiýa#: $1)',
 'missingarticle-diff' => '(Tapawut: $1, $2)',
 'readonly_lag' => 'Ätiýaçlyk serwerler esasy serwere boýunça täzelenýärkä, maglumat bazasy awtomatik usulda gulplandy.',
@@ -413,7 +413,7 @@ Talap: $2',
 $2',
 'namespaceprotected' => "Siziň '''$1''' giňişligindäki sahypalary redaktirlemäge rugsadyňyz ýok.",
 'ns-specialprotected' => '{{ns:special}} at giňişligindäki sahypalary redaktirläp bolmaýar.',
-'titleprotected' => "[[User:$1|$1]] tarapyndan döredilmeginiň öňüni almak maksady bilen bu sahypa gorag astyna alyndy.
+'titleprotected' => "[[wiki_User:$1|$1]] tarapyndan döredilmeginiň öňüni almak maksady bilen bu sahypa gorag astyna alyndy.
 Görkezilen sebäp: ''$2''.",
 
 # Virus scanner
@@ -424,7 +424,7 @@ Görkezilen sebäp: ''$2''.",
 # Login and logout pages
 'logouttext' => "'''Sessiýany ýapdyňyz.'''
 
-Indi anonim ýagdaýda {{SITENAME}} saýtyny ulanyp bilersiňiz, ýa-da şol bir ýa-da başga bir at bilen [[Special:UserLogin|sessiýany ýaňadan]] açyp bilersiňiz.
+Indi anonim ýagdaýda {{SITENAME}} saýtyny ulanyp bilersiňiz, ýa-da şol bir ýa-da başga bir at bilen [[Special:wiki_UserLogin|sessiýany ýaňadan]] açyp bilersiňiz.
 Web brauzeriňiziň keşini arassalaýançaňyz käbir sahypalar sessiýaňyzyň açyk wagtkysy ýaly görünip biler.",
 'welcomecreation' => '== Hoş geldiňiz, $1! ==
 
@@ -469,7 +469,7 @@ Olary işletmegiňizi we gaýtadan synanyşyp görmegiňizi haýyş edýäris.',
 'loginsuccess' => "'''{{SITENAME}} saýtynda \"\$1\" ulanyjy ady bilen hasaba girdiňiz.'''",
 'nosuchuser' => '"$1" diýen at bilen ulanyjy ýok.
 Ulanyjy atlary baş hem-de setir harplara duýgurdyr.
-Ýazylyşyny barlaň ýa-da [[Special:UserLogin/signup|täze hasap açyň]].',
+Ýazylyşyny barlaň ýa-da [[Special:wiki_UserLogin/signup|täze hasap açyň]].',
 'nosuchusershort' => '"$1" dýen at bilen ulanyjy ýok. Ýazylyşyny barlaň.',
 'nouserspecified' => 'Ulanyjy adyny görkezmegiňiz hökmanydyr.',
 'login-userblocked' => 'Bu ulanyjy blokirlenipdir. Sessiýa açmaga rugsat berilmeýär.',
@@ -624,7 +624,7 @@ Sahypany görýän mahalayňyz onuň ady üýtgedilen ýa-da öçürilen bolmagy
 'loginreqlink' => 'hasaba gir',
 'loginreqpagetext' => 'Başga sahypalary görmek üçin $1.',
 'accmailtitle' => 'Parol iberildi.',
-'accmailtext' => "[[User talk:$1|$1]] üçin ugralla döredilen parol $2 adresine iberildi.
+'accmailtext' => "[[wiki_User talk:$1|$1]] üçin ugralla döredilen parol $2 adresine iberildi.
 
 Bu paroly sessiýa açanyňyzdan soňra ''[[Special:ChangePassword|paroly üýtget]]'' sahypasynda üýtgedip bilersiňiz.",
 'newarticle' => '(Täze)',
@@ -632,7 +632,7 @@ Bu paroly sessiýa açanyňyzdan soňra ''[[Special:ChangePassword|paroly üýtg
 'anontalkpagetext' => "----''Bu sahypa heniz ulanyjy hasaby edinmedik ýa-da hasabyny ulanmaýan bir anonim ulanyjynyň pikir alyşma sahypasydyr.
 Şonuň üçinem biz ony görkezmek üçin sanlaýyn IP adresini ulanmaly bolýarys.
 Şunuň ýaly IP adresinden ençeme ulanyjy peýdalanýan bolmagy ahmal.
-Eger-de sizem anonim ulanyjy bolsaňyz we size siziň bilen dahyly ýok habarlaşyklar gelýän bolsa, onda mundan beýläk başga anonim ulanyjylar bilen garjaşmazlygyňyz üçin [[Special:UserLogin/signup|özüňize hasap ediniň]] ýa-da [[Special:UserLogin|sessiýa açyň]].''",
+Eger-de sizem anonim ulanyjy bolsaňyz we size siziň bilen dahyly ýok habarlaşyklar gelýän bolsa, onda mundan beýläk başga anonim ulanyjylar bilen garjaşmazlygyňyz üçin [[Special:wiki_UserLogin/signup|özüňize hasap ediniň]] ýa-da [[Special:wiki_UserLogin|sessiýa açyň]].''",
 'noarticletext' => 'Bu sahypa häzirki wagtda boş dur.
 Bu ady başga sahypalarda [[Special:Search/{{PAGENAME}}|gözläp bilersiňiz]],
 <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} degişli gündeliklerde gözleg geçirip bilersiňiz],
@@ -664,14 +664,14 @@ Hususy .css we .js sahypalarynyň setir harp bilen ýazylýandygyny ýatda sakla
 'previewconflict' => 'Bu deslapky syn redaktirleme penjiresiniň üstünde ýerleşip, ol ýazdyran mahalyňyz sahypanyň nähili görünjekdigini görkezýär.',
 'session_fail_preview' => "'''Bagyşlaň! Sessiýa maglumatynyň ýitirilmegi zerarly serwer özgerdişiňizi işläp bilenok.'''
 Gaýtadan synanyşmagyňyzy haýyş edýäris.
-Eger şonda-da bolmasa, onda [[Special:UserLogout|sessiýany ýapyň-da]] gaýtadan açyp görüň.",
+Eger şonda-da bolmasa, onda [[Special:wiki_UserLogout|sessiýany ýapyň-da]] gaýtadan açyp görüň.",
 'session_fail_preview_html' => "'''Bagyşlaň! Sessiýa maglumatynyň ýitirilmegi zerarly serwer özgerdişiňizi işläp bilenok.'''
 
 ''Sebabi {{SITENAME}} saýtynda arassa HTML açyk, deslapky syn JavaScript hüjümlerinden goranmak üçin ätiýaçdan gizlenilýär.''
 
 '''Eger-de bu ak ýürekli bir özgerdiş bolsa, onda gaýtadan synanyşyň.'''
 
-Eger şonda-da bolmasa, onda [[Special:UserLogout|sessiýany ýapyň-da]] gaýtadan açyp görüň.",
+Eger şonda-da bolmasa, onda [[Special:wiki_UserLogout|sessiýany ýapyň-da]] gaýtadan açyp görüň.",
 'token_suffix_mismatch' => "'''Özgerdişiňiz ret edildi, sebäbi programmaňyz redaktirleme penjiresindäki pumktuasiýa belgilerine nädogry çemeleşdi.'''
 Sahypanyň tekstine zeper ýetmeginiň öňüni almak maksady bilen özgerdişiňiz ret edildi.
 Bu ýagdaý kämahal içi ýalňyşly anonim web proksileri ulanylanda ýüze çykýar.",
@@ -721,7 +721,7 @@ Gündeligiň iň soňky ýazgysy salgylanmak üçin aşakda berilýär:",
 'hiddencategories' => 'Bu sahypa {{PLURAL:$1|1 gizlin kategoriýa|$1 gizlin kategoriýa}} degişlidir:',
 'nocreatetitle' => 'Sahypa döretmeklik çäklendirildi',
 'nocreatetext' => '{{SITENAME}} täze sahypa döretmek mümkinçiligini çäklendirdi.
-Yza gaýdyp, bar bolan sahypalary redaktirläp bilersiňiz ýa-da bolmasa [[Special:UserLogin|sessiýa açyp]] ýa-da [[Special:UserLogin|hasap döredip]] bilersiňiz.',
+Yza gaýdyp, bar bolan sahypalary redaktirläp bilersiňiz ýa-da bolmasa [[Special:wiki_UserLogin|sessiýa açyp]] ýa-da [[Special:wiki_UserLogin|hasap döredip]] bilersiňiz.',
 'nocreate-loggedin' => 'Täze sahypa döretmäge rugsadyňyz ýok.',
 'sectioneditnotsupported-title' => 'Bölüm redaktirleme goldanylmaýar',
 'sectioneditnotsupported-text' => 'Bölüm redaktirleme bu sahypada goldanylmaýar.',
@@ -764,11 +764,11 @@ Ol argumentler hasap edilmedi.",
 Aşakdaky deňeşdirmäni barlap, hakykatdan-da şuny isleýändigiňize göz ýetiriň we aşakdaky üýtgeşmeleri ýazdyryp, özgerdişi yzyna alyň.',
 'undo-failure' => 'Gapma-garşylykly aralyk özgerdişler zerarly bu özgerdişi yzyna alyp bolmaýar.',
 'undo-norev' => 'Özgerdişi yzyna alyp bolmaýar, sebäbi ol ýok ýa-da öçürilipdir.',
-'undo-summary' => '$1 wersiýasy [[Special:Contributions/$2|$2]] ([[User talk:$2|Çekişme]]) tarapyndan yzyna alyndy.',
+'undo-summary' => '$1 wersiýasy [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Çekişme]]) tarapyndan yzyna alyndy.',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'Hasap döredip bolmaýar',
-'cantcreateaccount-text' => "Bu IP adresinden ('''$1''') ulanyjy hasaby döretmeklik [[User:$3|$3]] tarapyndan blokirlenipdir.
+'cantcreateaccount-text' => "Bu IP adresinden ('''$1''') ulanyjy hasaby döretmeklik [[wiki_User:$3|$3]] tarapyndan blokirlenipdir.
 
 $3 tarapyndan görkezilen sebäp: ''$2''",
 
@@ -1024,7 +1024,7 @@ Emma olaryň {{SITENAME}} indeksleriniň möwriti geçen bolmagy mümkindir.',
 'mypreferences' => 'Ileri tutmalar',
 'prefs-edits' => 'Özgerdiş sany:',
 'prefsnologin' => 'Sessiýa açmansyňyz',
-'prefsnologintext' => 'Ulanyjy ileri tutmalaryny üýtgetmek üçin <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} sessiýa açmagyňyz gerek]</span>.',
+'prefsnologintext' => 'Ulanyjy ileri tutmalaryny üýtgetmek üçin <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} sessiýa açmagyňyz gerek]</span>.',
 'changepassword' => 'Paroly üýtget',
 'prefs-skin' => 'Bezeg',
 'skin-preview' => 'Deslapky syn',
@@ -1130,12 +1130,12 @@ $1 {{PLURAL:$1|simwoldan|simwoldan}} köp bolmaly däl.',
 'prefs-displaywatchlist' => 'Görkeziş opsiýalary',
 'prefs-diffs' => 'Tapawutlar',
 
-# User rights
+# wiki_User rights
 'userrights' => 'Ulanyjy hukuklary dolandyryşy',
 'userrights-lookup-user' => 'Ulanyjy toparlaryny dolandyr',
 'userrights-user-editname' => 'Ulanyjy adyny giriziň:',
 'editusergroup' => 'Ulanyjy toparlaryny redaktirle',
-'editinguser' => "'''[[User:$1|$1]]''' ([[User talk:$1|{{int:talkpagelinktext}}]]{{int:pipe-separator}}[[Special:Contributions/$1|{{int:contribslink}}]]) ulanyjysynyň ulanyjy hukuklaryny üýtgedýärsiňiz",
+'editinguser' => "'''[[wiki_User:$1|$1]]''' ([[wiki_User talk:$1|{{int:talkpagelinktext}}]]{{int:pipe-separator}}[[Special:Contributions/$1|{{int:contribslink}}]]) ulanyjysynyň ulanyjy hukuklaryny üýtgedýärsiňiz",
 'userrights-editusergroup' => 'Ulanyjy toparlaryny redaktirle',
 'saveusergroups' => 'Ulanyjy toparlaryny ýazdyr',
 'userrights-groupsmember' => 'Agza toparlary:',
@@ -1147,7 +1147,7 @@ $1 {{PLURAL:$1|simwoldan|simwoldan}} köp bolmaly däl.',
 'userrights-reason' => 'Sebäp:',
 'userrights-no-interwiki' => 'Başga wikilerdäki ulanyjy hukuklaryny redaktirlemäge ygtyýaryňyz ýok.',
 'userrights-nodatabase' => '$1 maglumat bazasy ýok ýa-da ol lokal däl.',
-'userrights-nologin' => 'Ulanyjy hukuklaryny bermek üçin administrator hasaby bilen [[Special:UserLogin|sessiýa açmagyňyz]] zerurdyr.',
+'userrights-nologin' => 'Ulanyjy hukuklaryny bermek üçin administrator hasaby bilen [[Special:wiki_UserLogin|sessiýa açmagyňyz]] zerurdyr.',
 'userrights-notallowed' => 'Siziň hasabyňyzyň ulanyjy hukuklaryny bermäge ygtyýary ýok.',
 'userrights-changeable-col' => 'Üýtgedip bilýän toparlaryňyz',
 'userrights-unchangeable-col' => 'Üýtgedip bilmeýän toparlaryňyz',
@@ -1236,7 +1236,7 @@ $1 {{PLURAL:$1|simwoldan|simwoldan}} köp bolmaly däl.',
 'right-override-export-depth' => 'Sahypalary, şol sanda çykgytly sahypalary 5-e çenli çuňlukda eksportirle',
 'right-sendemail' => 'Başga ulanyjylara e-poçta iber',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Ulanyjy hukuklarynyň gündeligi',
 'rightslogtext' => 'Ulanyjy hukuklaryndaky üýtgeşmeler gündeligi.',
 'rightslogentry' => '$1 üçin topar agzalygyny $2 toparyndan $3 toparyna üýtgetdi',
@@ -1328,7 +1328,7 @@ $1 {{PLURAL:$1|simwoldan|simwoldan}} köp bolmaly däl.',
 'reuploaddesc' => 'Ýüklemäni goýbolsun et we ýükleme formuna gaýdyp bar',
 'upload-tryagain' => 'Üýtgedilen faýl düşündirişini tabşyr',
 'uploadnologin' => 'Sessiýa açmansyňyz',
-'uploadnologintext' => 'Faýl ýüklemek üçin [[Special:UserLogin|sessiýaňyz açyk bolmaly]].',
+'uploadnologintext' => 'Faýl ýüklemek üçin [[Special:wiki_UserLogin|sessiýaňyz açyk bolmaly]].',
 'upload_directory_missing' => '($1) ýükleme direktoriýasy ýok we web serwer ony döredip bilmeýär.',
 'upload_directory_read_only' => '($1) ýükleme direktoriýasyna web serweriň ýazmak rugsady ýok.',
 'uploaderror' => 'Ýükleme säwligi',
@@ -1447,11 +1447,11 @@ $1',
 'upload-proto-error-text' => 'Uzakdan ýükleme, <code>http://</code> ýa-da <code>ftp://</code> bilen başlaýan URL talap edýär.',
 'upload-file-error' => 'Içerki säwlik',
 'upload-file-error-text' => 'Serwerde wagtlaýyn faýl döretmäge synanyşylýarka bir içerki säwlik ýüze çykdy.
-Bir [[Special:ListUsers/sysop|administrator]] bilen habarlaşmagyňyzy haýyş edýäris.',
+Bir [[Special:Listwiki_Users/sysop|administrator]] bilen habarlaşmagyňyzy haýyş edýäris.',
 'upload-misc-error' => 'Näbelli ýükleme säwligi',
 'upload-misc-error-text' => 'Ýükleme wagtynda näbelli bir säwlik ýüze çykdy.
 URL-niň dogrudygyny hem-de baryp bolýandygyny barlaň we gaýtadan synanyşyň.
-Eger-de problema gaýtalansa, onda bir [[Special:ListUsers/sysop|administrator]] bilen habarlaşyň.',
+Eger-de problema gaýtalansa, onda bir [[Special:Listwiki_Users/sysop|administrator]] bilen habarlaşyň.',
 'upload-too-many-redirects' => 'URL aşa köp gönükdirmani özünde jemleýär',
 'upload-unknown-size' => 'Näbelli ölçeg',
 'upload-http-error' => 'HTTP säwligi ýüze çykdy: $1',
@@ -1620,7 +1620,7 @@ Giriş formaty: mazmuntip/kiçitip, meselem <code>surat/jpeg</code>.',
 'statistics-edits-average' => 'Sahypa başyna ortaça özgerdiş',
 'statistics-views-total' => 'Jemi synlama',
 'statistics-views-peredit' => 'Özgerdiş başyna synlama',
-'statistics-users' => 'Hasaba alnan [[Special:ListUsers|ulanyjylar]]',
+'statistics-users' => 'Hasaba alnan [[Special:Listwiki_Users|ulanyjylar]]',
 'statistics-users-active' => 'Işjeň ulanyjylar',
 'statistics-users-active-desc' => 'Soňky {{PLURAL:$1|1 günde|$1 günde}} haýsydyr bir iş geçiren ulanyjylar',
 'statistics-mostpopular' => 'Iň köp görülýän sahypalar',
@@ -1771,13 +1771,13 @@ Goldanylýan protokollar: <code>$1</code>',
 'linksearch-line' => '$1 sahypasyna $2 sahypasyndan çykgyt berilýär',
 'linksearch-error' => 'Çalşyrma simwollar diňe hostuň adynyň başlangyjynda peýda bolup bilýär.',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => 'Şunuň bilen başlaýan ulanyjylary görkez:',
 'listusers-submit' => 'Görkez',
 'listusers-noresult' => 'Ulanyjy tapylmady.',
 'listusers-blocked' => '(blokirlenen)',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'Işjeň ulanyjylaryň sanawy',
 'activeusers-intro' => 'Bu sanawda soňky $1 {{PLURAL:$1|günüň|günüň}} dowamynda nähilidir bir iş geçiren ulanyjylar görkezilýär.',
 'activeusers-count' => 'Soňky {{PLURAL:$3|günde|$3 günde}} $1 sany {{PLURAL:$1|özgerdiş|özgerdiş}}',
@@ -1811,7 +1811,7 @@ Goldanylýan protokollar: <code>$1</code>',
 
 # E-mail user
 'mailnologin' => 'Iberer ýaly adres ýok',
-'mailnologintext' => 'Başga ulanyjylara e-poçta ibermek üçin [[Special:UserLogin|sessiýaňyz açyk bolmaly]] hem-de [[Special:Preferences|ileri tutmalarda]] dogry bir e-poçta adresiňiz bolmalydyr.',
+'mailnologintext' => 'Başga ulanyjylara e-poçta ibermek üçin [[Special:wiki_UserLogin|sessiýaňyz açyk bolmaly]] hem-de [[Special:Preferences|ileri tutmalarda]] dogry bir e-poçta adresiňiz bolmalydyr.',
 'emailuser' => 'Bu ulanyja e-poçta iber',
 'emailpage' => 'Ulanyja e-poçta iber',
 'emailpagetext' => 'Bu ulanyja e-poçta habarlaşygy ibermek üçin aşakdaky formdan peýdalanyp bilersiňiz.
@@ -1836,7 +1836,7 @@ Goldanylýan protokollar: <code>$1</code>',
 'emailsenttext' => 'E-poçtaňyz iberildi.',
 'emailuserfooter' => 'Bu e-poçta $1 tarapyndan $2 ulanyjysyna {{SITENAME}} saýtyndaky "Ulanyja e-poçta iber" funksiýasy arkaly iberildi.',
 
-# User Messenger
+# wiki_User Messenger
 'usermessage-summary' => 'Ulgam habary goýuň.',
 'usermessage-editor' => 'Ulgam habarçysy',
 
@@ -1847,7 +1847,7 @@ Goldanylýan protokollar: <code>$1</code>',
 'nowatchlist' => 'Gözegçilik sanawyňyzda hiçhili sahypa ýok.',
 'watchlistanontext' => 'Gözegçilik sanawyňyzdaky sahypalary görmek ýa-da redaktirlemek üçin $1.',
 'watchnologin' => 'Sessiýa açmansyňyz',
-'watchnologintext' => 'Gözegçilik sanawyňyzy üýtgetmek üçin [[Special:UserLogin|sessiýa açmagyňyz]] zerurdyr.',
+'watchnologintext' => 'Gözegçilik sanawyňyzy üýtgetmek üçin [[Special:wiki_UserLogin|sessiýa açmagyňyz]] zerurdyr.',
 'addedwatchtext' => "[[:$1]]  atly sahypa [[Special:Watchlist|gözegçilik sanawyňyza]] goşuldy.
 
 Geljekde, bu sahypada we degişli çekişme sahypasynda ediljek üýtgeşmeler şu ýerde sanawlanjakdyr.
@@ -1954,13 +1954,13 @@ seresaplyk bilen hereket ediň.',
 'rollbackfailed' => 'Öňki katdyna getirmeklik şowsuz',
 'cantrollback' => 'Özgerdişi yzyna getirip bolmaýar;
 iň soňky goşant goşan ulanyjy bu sahypanyň ýeke-täk awtory bolup durýar.',
-'alreadyrolled' => '[[User:$2|$2]] ([[User talk:$2|Çekişme]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]) tarapyndan [[:$1]] sahypasynda edilen iň soňky özgerdişi öňki katdyna getirip bolmaýar;
+'alreadyrolled' => '[[wiki_User:$2|$2]] ([[wiki_User talk:$2|Çekişme]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]) tarapyndan [[:$1]] sahypasynda edilen iň soňky özgerdişi öňki katdyna getirip bolmaýar;
 kimdir biri ony redaktirläpdir ýa-da eýýäm öňki katdyna getiripdir.
 
-Iň soňky özgerdiş eden: [[User:$3|$3]] ([[User talk:$3|Çekişme]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
+Iň soňky özgerdiş eden: [[wiki_User:$3|$3]] ([[wiki_User talk:$3|Çekişme]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
 'editcomment' => "Özgerdişiň teswiri şeýledi: \"''\$1''\".",
-'revertpage' => '[[Special:Contributions/$2|$2]] ([[User talk:$2|Çekişme]]) tarapyndan edilen özgerdişler [[User:$1|$1]] tarapyndan redaktirlenen soňky wersiýasyna yzyna getirildi.',
-'revertpage-nouser' => '(ulanyjy ady aýyrylan) tarapyndan edilen özgerdişler [[User:$1|$1]] tarapyndan redaktirlenen soňky wersiýasyna yzyna getirildi.',
+'revertpage' => '[[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Çekişme]]) tarapyndan edilen özgerdişler [[wiki_User:$1|$1]] tarapyndan redaktirlenen soňky wersiýasyna yzyna getirildi.',
+'revertpage-nouser' => '(ulanyjy ady aýyrylan) tarapyndan edilen özgerdişler [[wiki_User:$1|$1]] tarapyndan redaktirlenen soňky wersiýasyna yzyna getirildi.',
 'rollback-success' => '$1 tarapyndan edilen özgerdişler yzyna getirildi;
 $2 tarapyndan edilen soňky wersiýa gaýdyp gelindi.',
 
@@ -2181,7 +2181,7 @@ Aşakda blokirlemäniň takyk sebäbini ýazyň (meselem: wandalizm eden sahypal
 'unblockip' => 'Ulanyjynyň blokirlemesini aýyr',
 'unblockiptext' => 'Ozaldan blokirlenen bir IP adresine ýa-da ulanyjy adyna ýazgy etmek mümkinçiligini almak üçin aşakdaky formdan peýdalanyň.',
 'ipusubmit' => 'Bu blokirlemäni aýyr',
-'unblocked' => '[[User:$1|$1]] - blokirlenmesi aýyryldy',
+'unblocked' => '[[wiki_User:$1|$1]] - blokirlenmesi aýyryldy',
 'unblocked-id' => '$1 blokirlemesi aýyryldy',
 'ipblocklist' => 'Blokirlenen ulanyjylar',
 'ipblocklist-legend' => 'Blokirlenen ulanyjy gözle',
@@ -2201,7 +2201,7 @@ Aşakda blokirlemäniň takyk sebäbini ýazyň (meselem: wandalizm eden sahypal
 'unblocklink' => 'blokirowkany aýyr',
 'change-blocklink' => 'blokirowkany üýtget',
 'contribslink' => 'goşantlar',
-'autoblocker' => 'Awtomatik usulda blokirlendiňiz, çünki ýaňy-ýakynda IP adresiňiz "[[User:$1|$1]]" ulanyjysy tarapyndan ulanyldy. $1 atly ulanyjynyň blokirlenmegi üçin görkezilen sebäp: "\'\'\'$2\'\'\'"',
+'autoblocker' => 'Awtomatik usulda blokirlendiňiz, çünki ýaňy-ýakynda IP adresiňiz "[[wiki_User:$1|$1]]" ulanyjysy tarapyndan ulanyldy. $1 atly ulanyjynyň blokirlenmegi üçin görkezilen sebäp: "\'\'\'$2\'\'\'"',
 'blocklogpage' => 'Blokirleme gündeligi',
 'blocklog-showlog' => 'Bu ulanyjy ozal hem blokirlenipdir.
 Salgylanmak üçin blokirleme gündeligi aşakda berilýär:',
@@ -2287,7 +2287,7 @@ Bu üýtgeşiklik giňden tanalýan bir sahypa üçin garaşylmaýan netijelere 
 'movearticle' => 'Köne at',
 'moveuserpage-warning' => "'''Üns beriň:''' Bir ulanyjy sahypasyny geçirjek bolup dursuňyz. Diňe sahypanyň geçiriljekdigine, emma ulanyjynyň ''adynyň üýtgedilmejekdigine'' üns beriň.",
 'movenologin' => 'Sessiýa açmansyňyz',
-'movenologintext' => 'Sahypanyň adyny üýtgetmek üçin hasap açan bolmagyňyz hem-de [[Special:UserLogin|sessiýaňyzyň açyk]] bolmagy zerurdyr.',
+'movenologintext' => 'Sahypanyň adyny üýtgetmek üçin hasap açan bolmagyňyz hem-de [[Special:wiki_UserLogin|sessiýaňyzyň açyk]] bolmagy zerurdyr.',
 'movenotallowed' => 'Sahypalaryň adyny üýtgetmäge rugsadyňyz ýok.',
 'movenotallowedfile' => 'Faýllaryň adyny üýtgetmäge rugsadyňyz ýok.',
 'cant-move-user-page' => 'Ulanyjy sahypalarynyň adyny üýtgetmäge rugsadyňyz ýok (kiçi sahypalar degişli däl).',
@@ -2906,7 +2906,7 @@ Sessiýa açmak üçin bu kod gerek däldir, emma bu wikidäki haýsydyr bir bir
 Serwer yzyna gaýtardy:$1',
 'confirmemail_invalid' => 'Nädogry tassyklama kody. Koduň möhleti gutaran bolmagy ahmal.',
 'confirmemail_needlogin' => 'E-poçta adresiňizi tassyklamak üçin $1.',
-'confirmemail_success' => 'E-poçta adresiňiz tassyklandy. [[Special:UserLogin|Sessiýa açyň-da]] wikini ulanyberiň.',
+'confirmemail_success' => 'E-poçta adresiňiz tassyklandy. [[Special:wiki_UserLogin|Sessiýa açyň-da]] wikini ulanyberiň.',
 'confirmemail_loggedin' => 'E-poçta adresiňiz tassyklandy.',
 'confirmemail_error' => 'Tassyklamaňyz ýazdyrylanda bir ýalňyşlyk boldy.',
 'confirmemail_subject' => '{{SITENAME}} e-poçta adres tassyklamasy.',
@@ -2948,7 +2948,7 @@ Bu tassyklama kody $4 senesine çenli güýjüni saklaýar.',
 
 # Delete conflict
 'deletedwhileediting' => "'''Duýduryş''': Bu sahypa siz redaktirläp başlanyňyzdan soňra öçürildi!",
-'confirmrecreate' => "Bu sahypany [[User:$1|$1]] ([[User talk:$1|çekişme]]) ulanyjysy siz sahypany redaktirläp otyrkaňyz öçürdi, sebäbi:
+'confirmrecreate' => "Bu sahypany [[wiki_User:$1|$1]] ([[wiki_User talk:$1|çekişme]]) ulanyjysy siz sahypany redaktirläp otyrkaňyz öçürdi, sebäbi:
 : ''$2''
 Sahypany gaýtadan döretmek isleýän bolsaňyz, tassyklamagyňyzy haýyş edýäris.",
 'recreate' => 'Gaýtadan döret',

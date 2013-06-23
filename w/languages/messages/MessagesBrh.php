@@ -184,7 +184,7 @@ Dá geştirí mesingoko panna sená nákára o fark yá lekav ná gańđ aseá i
 
 Aga dun aff, to ní software aŧí aeb as xanánus.
 
-Ná minnatvár maron ki dáná itlá e [[Special:ListUsers/sysop|amaldár]] as e kes, o URL e nişán kes.',
+Ná minnatvár maron ki dáná itlá e [[Special:Listwiki_Users/sysop|amaldár]] as e kes, o URL e nişán kes.',
 'missingarticle-rev' => '(radbadal droşum#: $1)',
 'viewsource' => 'Bumpad e ur',
 
@@ -331,7 +331,7 @@ Ná radbadal ák deskáne atíko matano.",
 
 'grouppage-sysop' => '{{ns:project}}:Amaldár ák',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Kárband hakk hisáb',
 
 # Associated actions - in the sentence "You do not have permission to X"

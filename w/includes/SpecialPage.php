@@ -196,12 +196,12 @@ class SpecialPage {
 	 * Return categorised listable special pages which are available
 	 * for the current user, and everyone.
 	 *
-	 * @param $user User object to check permissions, $wgUser will be used
+	 * @param $user wiki_User object to check permissions, $wgwiki_User will be used
 	 *              if not provided
 	 * @return array Associative array mapping page's name to its SpecialPage object
 	 * @deprecated since 1.18 call SpecialPageFactory method directly
 	 */
-	static function getUsablePages( User $user = null ) {
+	static function getUsablePages( wiki_User $user = null ) {
 		wfDeprecated( __METHOD__, '1.18' );
 		return SpecialPageFactory::getUsablePages( $user );
 	}
@@ -542,10 +542,10 @@ class SpecialPage {
 	 * special page (as defined by $mRestriction).  Can be overridden by sub-
 	 * classes with more complicated permissions schemes.
 	 *
-	 * @param $user User: the user to check
+	 * @param $user wiki_User: the user to check
 	 * @return Boolean: does the user have permission to view the page?
 	 */
-	public function userCanExecute( User $user ) {
+	public function userCanExecute( wiki_User $user ) {
 		return $user->isAllowed( $this->mRestriction );
 	}
 
@@ -758,9 +758,9 @@ class SpecialPage {
 	}
 
 	/**
-	 * Shortcut to get the User executing this instance
+	 * Shortcut to get the wiki_User executing this instance
 	 *
-	 * @return User
+	 * @return wiki_User
 	 * @since 1.18
 	 */
 	public function getUser() {
@@ -944,16 +944,16 @@ abstract class FormSpecialPage extends SpecialPage {
 	/**
 	 * Called from execute() to check if the given user can perform this action.
 	 * Failures here must throw subclasses of ErrorPageError.
-	 * @param $user User
+	 * @param $user wiki_User
 	 * @return Bool true
 	 * @throws ErrorPageError
 	 */
-	protected function checkExecutePermissions( User $user ) {
+	protected function checkExecutePermissions( wiki_User $user ) {
 		$this->checkPermissions();
 
 		if ( $this->requiresUnblock() && $user->isBlocked() ) {
 			$block = $user->getBlock();
-			throw new UserBlockedError( $block );
+			throw new wiki_UserBlockedError( $block );
 		}
 
 		if ( $this->requiresWrite() ) {
@@ -1102,7 +1102,7 @@ abstract class SpecialRedirectToSpecial extends RedirectSpecialPage {
 }
 
 /**
- * ListAdmins --> ListUsers/sysop
+ * ListAdmins --> Listwiki_Users/sysop
  */
 class SpecialListAdmins extends SpecialRedirectToSpecial {
 	function __construct() {
@@ -1111,7 +1111,7 @@ class SpecialListAdmins extends SpecialRedirectToSpecial {
 }
 
 /**
- * ListBots --> ListUsers/bot
+ * ListBots --> Listwiki_Users/bot
  */
 class SpecialListBots extends SpecialRedirectToSpecial {
 	function __construct() {
@@ -1120,12 +1120,12 @@ class SpecialListBots extends SpecialRedirectToSpecial {
 }
 
 /**
- * CreateAccount --> UserLogin/signup
+ * CreateAccount --> wiki_UserLogin/signup
  * @todo FIXME: This (and the rest of the login frontend) needs to die a horrible painful death
  */
 class SpecialCreateAccount extends SpecialRedirectToSpecial {
 	function __construct() {
-		parent::__construct( 'CreateAccount', 'Userlogin', 'signup', array( 'uselang' ) );
+		parent::__construct( 'CreateAccount', 'wiki_Userlogin', 'signup', array( 'uselang' ) );
 	}
 }
 /**
@@ -1279,7 +1279,7 @@ class SpecialMycontributions extends RedirectSpecialPage {
 }
 
 /**
- * Redirect to Special:Listfiles?user=$wgUser
+ * Redirect to Special:Listfiles?user=$wgwiki_User
  */
 class SpecialMyuploads extends RedirectSpecialPage {
 	function __construct() {

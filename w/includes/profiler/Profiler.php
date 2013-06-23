@@ -306,7 +306,7 @@ class Profiler {
 	 * $wgRUstart. Will return null if not able to find data.
 	 *
 	 * @param $metric string|false: metric to use, with the following possibilities:
-	 *   - user: User CPU time (without system calls)
+	 *   - user: wiki_User CPU time (without system calls)
 	 *   - cpu: Total CPU time (user and system calls)
 	 *   - wall (or any other string): elapsed time
 	 *   - false (default): will fall back to default metric
@@ -339,7 +339,7 @@ class Profiler {
 	 * $wgRUstart. Will return null if not able to find data.
 	 *
 	 * @param $metric string|false: metric to use, with the following possibilities:
-	 *   - user: User CPU time (without system calls)
+	 *   - user: wiki_User CPU time (without system calls)
 	 *   - cpu: Total CPU time (user and system calls)
 	 *   - wall (or any other string): elapsed time
 	 *   - false (default): will fall back to default metric

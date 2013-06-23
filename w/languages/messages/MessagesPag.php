@@ -12,7 +12,7 @@
  */
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-enotifwatchlistpages' => 'Manpa-awit na e-mail ed siak no abalo may sakey ya bolong ya babantayan ko',
 
 'underline-always' => 'Naynay',
@@ -165,7 +165,7 @@ San ipropromisam met ya insulat mo yan dili o kinopyam ya manlapo ed sakey ya pu
 'yourrealname' => 'Tuwan ngaran:',
 'badsiglength' => 'Andukey ya maong so nickname. Say dukey to dapat mas daiset en say $1 ya character.',
 
-# User rights
+# wiki_User rights
 'userrights-user-editname' => 'Isulat so username:',
 
 # Recent changes

@@ -40,13 +40,13 @@ class IntraACL_SQL_SD
     {
         $dbw = wfGetDB(DB_MASTER);
         $mgGroups = implode(',', $sd->getManageGroups());
-        $mgUsers = implode(',', $sd->getManageUsers());
+        $mgwiki_Users = implode(',', $sd->getManagewiki_Users());
         $dbw->replace('halo_acl_security_descriptors', NULL, array(
             'sd_id'     => $sd->getSDID(),
             'pe_id'     => $sd->getPEID(),
             'type'      => $sd->getPEType(),
             'mr_groups' => $mgGroups,
-            'mr_users'  => $mgUsers), __METHOD__);
+            'mr_users'  => $mgwiki_Users), __METHOD__);
     }
 
     /**

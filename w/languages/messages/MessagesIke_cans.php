@@ -10,7 +10,7 @@
  */
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-rememberpassword' => 'ᐃᖅᑑ ᐅᐃᑭᐱᑎᐊ ᐊᑎᖅ ᖃᑯᒍᖅ ᐊᑐᐃᓐᓇᓯᕗᖅ ᐅᕙᓗᒪᔪᖅ ᖃᕆᑕᐅᔭᖅ (for a maximum of $1 {{PLURAL:$1|day|days}})',
 
 # Dates
@@ -212,8 +212,8 @@ $messages = array(
 'email' => 'ᑭᒍᑎᐅᑉ ᓯᑎᓂᖅᐹᖓ',
 'prefs-help-email' => 'ᑭᒍᑎᐅᑉ ᓯᑎᓂᖅᐹᖓ (ᐱᒃᑲᓪᓚᕗᖅ) — ᖃᑯᒍ ᓇᓗᓇᙱᓚᖅ ᐃᓕᔅᓯ ᐱᔪᖕᓇᖅᑐᖅ ᐱᒋᕚ ᑲᙳᓇᖅᑐᖅ ᐋᔩᖃᑎᒋᖏᖅ',
 
-# User rights
-'editinguser' => "ᓱᖁᓯᖅᐹ ᖃᑕᙳᑎ '''[[User:$1|$1]]''' ([[User talk:$1|{{int:talkpagelinktext}}]] | [[Special:Contributions/$1|{{int:contribslink}}]])",
+# wiki_User rights
+'editinguser' => "ᓱᖁᓯᖅᐹ ᖃᑕᙳᑎ '''[[wiki_User:$1|$1]]''' ([[wiki_User talk:$1|{{int:talkpagelinktext}}]] | [[Special:Contributions/$1|{{int:contribslink}}]])",
 
 # Recent changes
 'recentchanges' => 'ᐱᒋᕗᖅ ᐊᓯᐊᙳᑐᖅ',

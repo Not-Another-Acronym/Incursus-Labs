@@ -6,7 +6,7 @@
  */
 class ApiOptionsTest extends MediaWikiLangTestCase {
 
-	private $mTested, $mApiMainMock, $mUserMock, $mContext, $mSession;
+	private $mTested, $mApiMainMock, $mwiki_UserMock, $mContext, $mSession;
 
 	private $mOldGetPreferencesHooks = false;
 
@@ -15,7 +15,7 @@ class ApiOptionsTest extends MediaWikiLangTestCase {
 	function setUp() {
 		parent::setUp();
 
-		$this->mUserMock = $this->getMockBuilder( 'User' )
+		$this->mwiki_UserMock = $this->getMockBuilder( 'wiki_User' )
 			->disableOriginalConstructor()
 			->getMock();
 
@@ -24,13 +24,13 @@ class ApiOptionsTest extends MediaWikiLangTestCase {
 			->getMock();
 
 		// Set up groups
-		$this->mUserMock->expects( $this->any() )
+		$this->mwiki_UserMock->expects( $this->any() )
 			->method( 'getEffectiveGroups' )->will( $this->returnValue( array( '*', 'user')) );
 
 		// Create a new context
 		$this->mContext = new DerivativeContext( new RequestContext() );
 		$this->mContext->getContext()->setTitle( Title::newFromText( 'Test' ) );
-		$this->mContext->setUser( $this->mUserMock );
+		$this->mContext->setwiki_User( $this->mwiki_UserMock );
 
 		$this->mApiMainMock->expects( $this->any() )
 			->method( 'getContext' )
@@ -103,7 +103,7 @@ class ApiOptionsTest extends MediaWikiLangTestCase {
 	}
 
 	public function testAnon() {
-		$this->mUserMock->expects( $this->once() )
+		$this->mwiki_UserMock->expects( $this->once() )
 			->method( 'isAnon' )
 			->will( $this->returnValue( true ) );
 
@@ -133,13 +133,13 @@ class ApiOptionsTest extends MediaWikiLangTestCase {
 	}
 
 	public function testNoChanges() {
-		$this->mUserMock->expects( $this->never() )
+		$this->mwiki_UserMock->expects( $this->never() )
 			->method( 'resetOptions' );
 
-		$this->mUserMock->expects( $this->never() )
+		$this->mwiki_UserMock->expects( $this->never() )
 			->method( 'setOption' );
 
-		$this->mUserMock->expects( $this->never() )
+		$this->mwiki_UserMock->expects( $this->never() )
 			->method( 'saveSettings' );
 
 		try {
@@ -155,13 +155,13 @@ class ApiOptionsTest extends MediaWikiLangTestCase {
 	}
 
 	public function testReset() {
-		$this->mUserMock->expects( $this->once() )
+		$this->mwiki_UserMock->expects( $this->once() )
 			->method( 'resetOptions' );
 
-		$this->mUserMock->expects( $this->never() )
+		$this->mwiki_UserMock->expects( $this->never() )
 			->method( 'setOption' );
 
-		$this->mUserMock->expects( $this->once() )
+		$this->mwiki_UserMock->expects( $this->once() )
 			->method( 'saveSettings' );
 
 		$request = $this->getSampleRequest( array( 'reset' => '' ) );
@@ -172,14 +172,14 @@ class ApiOptionsTest extends MediaWikiLangTestCase {
 	}
 
 	public function testOptionWithValue() {
-		$this->mUserMock->expects( $this->never() )
+		$this->mwiki_UserMock->expects( $this->never() )
 			->method( 'resetOptions' );
 
-		$this->mUserMock->expects( $this->once() )
+		$this->mwiki_UserMock->expects( $this->once() )
 			->method( 'setOption' )
 			->with( $this->equalTo( 'name' ), $this->equalTo( 'value' ) );
 
-		$this->mUserMock->expects( $this->once() )
+		$this->mwiki_UserMock->expects( $this->once() )
 			->method( 'saveSettings' );
 
 		$request = $this->getSampleRequest( array( 'optionname' => 'name', 'optionvalue' => 'value' ) );
@@ -190,14 +190,14 @@ class ApiOptionsTest extends MediaWikiLangTestCase {
 	}
 
 	public function testOptionResetValue() {
-		$this->mUserMock->expects( $this->never() )
+		$this->mwiki_UserMock->expects( $this->never() )
 			->method( 'resetOptions' );
 
-		$this->mUserMock->expects( $this->once() )
+		$this->mwiki_UserMock->expects( $this->once() )
 			->method( 'setOption' )
 			->with( $this->equalTo( 'name' ), $this->equalTo( null ) );
 
-		$this->mUserMock->expects( $this->once() )
+		$this->mwiki_UserMock->expects( $this->once() )
 			->method( 'saveSettings' );
 
 		$request = $this->getSampleRequest( array( 'optionname' => 'name' ) );
@@ -207,31 +207,31 @@ class ApiOptionsTest extends MediaWikiLangTestCase {
 	}
 
 	public function testChange() {
-		$this->mUserMock->expects( $this->never() )
+		$this->mwiki_UserMock->expects( $this->never() )
 			->method( 'resetOptions' );
 
-		$this->mUserMock->expects( $this->at( 1 ) )
+		$this->mwiki_UserMock->expects( $this->at( 1 ) )
 			->method( 'getOptions' );
 
-		$this->mUserMock->expects( $this->at( 2 ) )
+		$this->mwiki_UserMock->expects( $this->at( 2 ) )
 			->method( 'setOption' )
 			->with( $this->equalTo( 'willBeNull' ), $this->equalTo( null ) );
 
-		$this->mUserMock->expects( $this->at( 3 ) )
+		$this->mwiki_UserMock->expects( $this->at( 3 ) )
 			->method( 'getOptions' );
 
-		$this->mUserMock->expects( $this->at( 4 ) )
+		$this->mwiki_UserMock->expects( $this->at( 4 ) )
 			->method( 'setOption' )
 			->with( $this->equalTo( 'willBeEmpty' ), $this->equalTo( '' ) );
 
-		$this->mUserMock->expects( $this->at( 5 ) )
+		$this->mwiki_UserMock->expects( $this->at( 5 ) )
 			->method( 'getOptions' );
 
-		$this->mUserMock->expects( $this->at( 6 ) )
+		$this->mwiki_UserMock->expects( $this->at( 6 ) )
 			->method( 'setOption' )
 			->with( $this->equalTo( 'willBeHappy' ), $this->equalTo( 'Happy' ) );
 
-		$this->mUserMock->expects( $this->once() )
+		$this->mwiki_UserMock->expects( $this->once() )
 			->method( 'saveSettings' );
 
 		$request = $this->getSampleRequest( array( 'change' => 'willBeNull|willBeEmpty=|willBeHappy=Happy' ) );
@@ -242,24 +242,24 @@ class ApiOptionsTest extends MediaWikiLangTestCase {
 	}
 
 	public function testResetChangeOption() {
-		$this->mUserMock->expects( $this->once() )
+		$this->mwiki_UserMock->expects( $this->once() )
 			->method( 'resetOptions' );
 
-		$this->mUserMock->expects( $this->at( 2 ) )
+		$this->mwiki_UserMock->expects( $this->at( 2 ) )
 			->method( 'getOptions' );
 
-		$this->mUserMock->expects( $this->at( 3 ) )
+		$this->mwiki_UserMock->expects( $this->at( 3 ) )
 			->method( 'setOption' )
 			->with( $this->equalTo( 'willBeHappy' ), $this->equalTo( 'Happy' ) );
 
-		$this->mUserMock->expects( $this->at( 4 ) )
+		$this->mwiki_UserMock->expects( $this->at( 4 ) )
 			->method( 'getOptions' );
 
-		$this->mUserMock->expects( $this->at( 5 ) )
+		$this->mwiki_UserMock->expects( $this->at( 5 ) )
 			->method( 'setOption' )
 			->with( $this->equalTo( 'name' ), $this->equalTo( 'value' ) );
 
-		$this->mUserMock->expects( $this->once() )
+		$this->mwiki_UserMock->expects( $this->once() )
 			->method( 'saveSettings' );
 
 		$args = array(

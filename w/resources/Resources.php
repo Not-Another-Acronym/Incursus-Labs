@@ -9,17 +9,17 @@ return array(
 	'noscript' => array( 'class' => 'ResourceLoaderNoscriptModule' ),
 	'startup' => array( 'class' => 'ResourceLoaderStartUpModule' ),
 	'filepage' => array( 'class' => 'ResourceLoaderFilePageModule' ),
-	'user.groups' => array( 'class' => 'ResourceLoaderUserGroupsModule' ),
+	'user.groups' => array( 'class' => 'ResourceLoaderwiki_UserGroupsModule' ),
 
 	// Scripts managed by the current user (stored in their user space)
-	'user' => array( 'class' => 'ResourceLoaderUserModule' ),
+	'user' => array( 'class' => 'ResourceLoaderwiki_UserModule' ),
 
 	// Scripts generated based on the current user's preferences
-	'user.cssprefs' => array( 'class' => 'ResourceLoaderUserCSSPrefsModule' ),
+	'user.cssprefs' => array( 'class' => 'ResourceLoaderwiki_UserCSSPrefsModule' ),
 
 	// Populate mediawiki.user placeholders with information about the current user
-	'user.options' => array( 'class' => 'ResourceLoaderUserOptionsModule' ),
-	'user.tokens' => array( 'class' => 'ResourceLoaderUserTokensModule' ),
+	'user.options' => array( 'class' => 'ResourceLoaderwiki_UserOptionsModule' ),
+	'user.tokens' => array( 'class' => 'ResourceLoaderwiki_UserTokensModule' ),
 
 	// Scripts for the dynamic language specific data, like grammar forms.
 	'mediawiki.language.data' => array( 'class' => 'ResourceLoaderLanguageDataModule' ),

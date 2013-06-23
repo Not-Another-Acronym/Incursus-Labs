@@ -47,7 +47,7 @@ $specialPageAliases = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'በመያያዣ ስር አስምር',
 'tog-justify' => 'አንቀጾችን አስተካክል',
 'tog-hideminor' => 'በቅርብ ጊዜ የተደረጉ አነስተኛ እርማቶችን ደብቅ',
@@ -398,7 +398,7 @@ $1',
 $2",
 'namespaceprotected' => "በ'''$1''' ክፍለ-ዊኪ ያሉትን ገጾች ለማዘጋጀት ፈቃድ የለዎም።",
 'ns-specialprotected' => 'ልዩ ገጾችን ማረም አይፈቀድም።',
-'titleprotected' => "ይህ አርዕስት እንዳይፈጠር በ[[User:$1|$1]] ተጠብቋል። የተሰጠው ምክንያት ''$2'' ነው።",
+'titleprotected' => "ይህ አርዕስት እንዳይፈጠር በ[[wiki_User:$1|$1]] ተጠብቋል። የተሰጠው ምክንያት ''$2'' ነው።",
 'exception-nologin' => 'ገና አልገቡም',
 'exception-nologin-text' => 'ለዚሁ ገጽ ወይም አድራጎት፣ ወደ ዊኪው በአባልነት ስም አስቀድሞ መግባት ግዴታ ነው።',
 
@@ -413,7 +413,7 @@ $2",
 'welcomecreation' => '== ሰላምታ፣ $1! ==
 
 የብዕር ስምዎ ተፈጥሯል። ምርጫዎችዎን ለማስተካከል ይችላሉ።',
-'yourname' => 'Username / የብዕር ስም:',
+'yourname' => 'wiki_Username / የብዕር ስም:',
 'yourpassword' => 'Password / መግቢያ ቃል',
 'yourpasswordagain' => 'መግቢያ ቃልዎን ዳግመኛ ይስጡ',
 'remembermypassword' => 'ለሚቀጥለው ጊዜ በዚ ኮምፒውተር ላይ በአባልነት ስሜ መግባቴን ( ቢባዛ ለ $1 {{PLURAL:$1|ቀን|ቀናት}}) አስታውስ።',
@@ -601,7 +601,7 @@ $1ን ወይም ማንም ሌላ [[{{MediaWiki:Grouppage-sysop}}|መጋቢ]] ስ
 'newarticletext' => 'እርስዎ የተከተሉት መያያዣ እስካሁን ወደማይኖር ገጽ የሚወስድ ነው። ገጹን አሁን ለመፍጠር፣ ከታች በሚገኘው ሳጥን ውስጥ መተየብ ይጀምሩ። ለተጨማሪ መረጃ፣ [[{{MediaWiki:Helppage}}|የእርዳታ ገጽን]] ይመልከቱ።
 
 ወደዚህ በስሕተት ከሆነ የመጡት፣ የቃኝውን «Back» ቁልፍ ይጫኑ።',
-'anontalkpagetext' => "----''ይኸው ገጽ ገና ያልገባ ወይም ብዕር ስም የሌለው ተጠቃሚ ውይይት ገጽ ነው። መታወቂያው በ[[ቁጥር አድራሻ]] እንዲሆን ያስፈልጋል። አንዳንዴ ግን አንድ የቁጥር አድራሻ በሁለት ወይም በብዙ ተጠቃሚዎች የጋራ ሊሆን ይችላል። ስለዚህ ለርስዎ የማይገባ ውይይት እንዳይደርስልዎ፣ [[Special:UserLogin|«መግቢያ»]] በመጫን የብዕር ስም ለማውጣት ይችላሉ።''",
+'anontalkpagetext' => "----''ይኸው ገጽ ገና ያልገባ ወይም ብዕር ስም የሌለው ተጠቃሚ ውይይት ገጽ ነው። መታወቂያው በ[[ቁጥር አድራሻ]] እንዲሆን ያስፈልጋል። አንዳንዴ ግን አንድ የቁጥር አድራሻ በሁለት ወይም በብዙ ተጠቃሚዎች የጋራ ሊሆን ይችላል። ስለዚህ ለርስዎ የማይገባ ውይይት እንዳይደርስልዎ፣ [[Special:wiki_UserLogin|«መግቢያ»]] በመጫን የብዕር ስም ለማውጣት ይችላሉ።''",
 'noarticletext' => 'በአሁኑ ወቅት በዚህ ገጽ ላይ ጽሑፍ የለም፤ ነገር ግን በሌሎች ገጾች ላይ [[Special:Search/{{PAGENAME}}|ይህን አርዕስት መፈለግ]]፣ <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} ከርዕሱ ጋር የተዛመዱ መዝገቦችን መፈልግ]፣ ወይም [{{fullurl:{{FULLPAGENAME}}|action=edit}} አዲስ ገፅ ሊያዘጋጁ] ይችላሉ</span>።',
 'noarticletext-nopermission' => 'በአሁኑ ወቅት በዚህ ገጽ ላይ ጽሑፍ የለም፤ በሌሎች ገጾች ላይ [[Special:Search/{{PAGENAME}}|ይህን አርዕስት መፈለግ]]፣ <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} ከርዕሱ ጋር የተዛመዱ መዝገቦችን መፈልግ]፣ ይችላሉ። ነገር ግን ይህን ገጽ ለመፍጠር ፈቃድ የለዎም።።',
 'userpage-userdoesnotexist' => 'የብዕር ስም «<nowiki>$1</nowiki>» አልተመዘገበም። እባክዎ ይህን ገጽ ለመፍጠር/ ለማስተካከል የፈለጉ እንደ ሆነ ያረጋግጡ።',
@@ -653,7 +653,7 @@ $1ን ወይም ማንም ሌላ [[{{MediaWiki:Grouppage-sysop}}|መጋቢ]] ስ
 'template-semiprotected' => '(በከፊል የተቆለፈ)',
 'hiddencategories' => 'ይህ ገጽ በ{{PLURAL:$1|1 የተደበቀ መደብ|$1 የተደበቁ መድቦች}} ውስጥ ይገኛል።',
 'nocreatetitle' => 'የገጽ መፍጠር ተወሰነ',
-'nocreatetext' => '{{SITENAME}} አዳዲስ ገጾችን ለመፍጠር ያሚያስችል ሁኔታ ከለክሏል። ተመልሰው የቆየውን ገጽ ማዘጋጀት ይችላሉ፤ አለዚያ [[Special:UserLogin|በብዕር ስም መግባት]] ይችላሉ።',
+'nocreatetext' => '{{SITENAME}} አዳዲስ ገጾችን ለመፍጠር ያሚያስችል ሁኔታ ከለክሏል። ተመልሰው የቆየውን ገጽ ማዘጋጀት ይችላሉ፤ አለዚያ [[Special:wiki_UserLogin|በብዕር ስም መግባት]] ይችላሉ።',
 'nocreate-loggedin' => 'አዲስ ገጽ በ{{SITENAME}} ለመፍጠር ፈቃድ የለዎም።',
 'permissionserrors' => 'የፈቃድ ስሕተቶች',
 'permissionserrorstext' => 'ያ አድራጎት አይቻልም - {{PLURAL:$1|ምክንያቱም|ምክንያቶቹም}}፦',
@@ -679,11 +679,11 @@ $1ን ወይም ማንም ሌላ [[{{MediaWiki:Grouppage-sysop}}|መጋቢ]] ስ
 'undo-success' => "ያ ለውጥ በቀጥታ ሊገለበጥ ይቻላል። እባክዎ ከታች ያለውን ማነጻጸርያ ተመልክተው ይህ እንደሚፈልጉ ያረጋግጡና ለውጡ እንዲገለበጥ '''ገጹን ለማቅረብ''' ይጫኑ።",
 'undo-failure' => 'ከዚሁ ለውጥ በኋላ ቅራኔ ለውጦች ስለ ገቡ ሊገለበጥ አይቻልም።',
 'undo-norev' => 'ለውጡ አይኖርም ወይም ጠፍቷልና ሊገለበጥ አልተቻለም።',
-'undo-summary' => 'አንድ ለውጥ $1 ከ[[Special:Contributions/$2|$2]] ([[User talk:$2|ውይይት]]) ገለበጠ',
+'undo-summary' => 'አንድ ለውጥ $1 ከ[[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|ውይይት]]) ገለበጠ',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'ብዕር ስም ለመፍጠር አይቻልም',
-'cantcreateaccount-text' => "ከዚሁ የቁጥር አድራሻ ('''$1''') የብዕር ስም መፍጠር በ[[User:$3|$3]] ታግዷል።
+'cantcreateaccount-text' => "ከዚሁ የቁጥር አድራሻ ('''$1''') የብዕር ስም መፍጠር በ[[wiki_User:$3|$3]] ታግዷል።
 
 በ$3 የተሰጠው ምክንያት ''$2'' ነው።",
 
@@ -858,7 +858,7 @@ $1ን ወይም ማንም ሌላ [[{{MediaWiki:Grouppage-sysop}}|መጋቢ]] ስ
 'mypreferences' => 'ምርጫዎች፤',
 'prefs-edits' => 'የለውጦች ቁጥር:',
 'prefsnologin' => 'ገና አልገቡም',
-'prefsnologintext' => 'ምርጫዎችዎን ለማስተካከል አስቀድሞ <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} መግባት]</span>  ያስፈልግዎታል።',
+'prefsnologintext' => 'ምርጫዎችዎን ለማስተካከል አስቀድሞ <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} መግባት]</span>  ያስፈልግዎታል።',
 'changepassword' => 'መግቢያ ቃልዎን ለመቀየር',
 'prefs-skin' => 'የድህረ-ገጽ መልክ',
 'skin-preview' => 'ቅድመ-ዕይታ',
@@ -945,16 +945,16 @@ $1ን ወይም ማንም ሌላ [[{{MediaWiki:Grouppage-sysop}}|መጋቢ]] ስ
 'prefs-displayrc' => 'የማሳያ አማራጮች',
 'prefs-diffs' => 'ልዩነቶች',
 
-# User preference: e-mail validation using jQuery
+# wiki_User preference: e-mail validation using jQuery
 'email-address-validity-valid' => 'ኢ-ሜል አድራሻ ትክክለኛ ይመስላል።',
 'email-address-validity-invalid' => 'ትክክለኛ ኢ-ሜል ማቅረብ ያስፈልጋል።',
 
-# User rights
+# wiki_User rights
 'userrights' => 'የአባል መብቶች ለማስተዳደር',
 'userrights-lookup-user' => 'የ1 አባል ማዕረግ ለማስተዳደር',
 'userrights-user-editname' => 'ለዚሁ ብዕር ስም፦',
 'editusergroup' => 'የአባሉ ማዕረግ ለማስተካከል',
-'editinguser' => "ይህ ማመልከቻ ለብዕር ስም '''[[User:$1|$1]]''' ([[User talk:$1|{{int:talkpagelinktext}}]]{{int:pipe-separator}}[[Special:Contributions/$1|{{int:contribslink}}]]) መብቶቹን ለመቀየር ነው።",
+'editinguser' => "ይህ ማመልከቻ ለብዕር ስም '''[[wiki_User:$1|$1]]''' ([[wiki_User talk:$1|{{int:talkpagelinktext}}]]{{int:pipe-separator}}[[Special:Contributions/$1|{{int:contribslink}}]]) መብቶቹን ለመቀየር ነው።",
 'userrights-editusergroup' => 'የአባሉ ማዕረግ ለማስተካከል',
 'saveusergroups' => 'ለውጦቹ ይቆጠቡ',
 'userrights-groupsmember' => 'አሁን ያሉባቸው ማዕረጎች፦',
@@ -965,7 +965,7 @@ $1ን ወይም ማንም ሌላ [[{{MediaWiki:Grouppage-sysop}}|መጋቢ]] ስ
 'userrights-reason' => 'ምክንያቱ፦',
 'userrights-no-interwiki' => 'ማዕረጎችን በሌላ ዊኪ ላይ ለማስተካከል ፈቃድ የለዎም።',
 'userrights-nodatabase' => 'መረጃ-ቤቱ $1 አይኖርም ወይም የቅርብ አካባቢ አይደለም።',
-'userrights-nologin' => 'የአባል መብቶች ለመወሰን መጋቢ ሆነው [[Special:UserLogin|መግባት]] ያስፈልግዎታል።',
+'userrights-nologin' => 'የአባል መብቶች ለመወሰን መጋቢ ሆነው [[Special:wiki_UserLogin|መግባት]] ያስፈልግዎታል።',
 'userrights-notallowed' => 'የአባል መብቶች ለማስተካከል ፈቃድ የለዎም።',
 'userrights-changeable-col' => 'ሊቀይሩ የሚችሉት ስብስባዎች',
 'userrights-unchangeable-col' => 'ሊቀይሩ የማይችሉት ስብስባዎች፦',
@@ -1022,7 +1022,7 @@ $1ን ወይም ማንም ሌላ [[{{MediaWiki:Grouppage-sysop}}|መጋቢ]] ስ
 'right-userrights' => 'ያባላት ሁሉ መብቶች ለማስተካከል',
 'right-sendemail' => 'ወደ ሌላ አባል ኢ-ሜል ለመላክ',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'የአባል መብቶች መዝገብ',
 'rightslogtext' => 'ይህ መዝገብ የአባል መብቶች ሲለወጡ ይዘረዝራል።',
 'rightslogentry' => 'የ$1 ማዕረግ ከ$2 ወደ $3 ለወጠ',
@@ -1105,7 +1105,7 @@ $1ን ወይም ማንም ሌላ [[{{MediaWiki:Grouppage-sysop}}|መጋቢ]] ስ
 'uploadbtn' => 'ፋይሉ ይላክ',
 'reuploaddesc' => 'ለመሰረዝና ወደ መላኪያ ማመልከቻ ለመመለስ',
 'uploadnologin' => 'ገና አልገቡም',
-'uploadnologintext' => 'ፋይል ለመላክ አስቀድሞ [[Special:UserLogin|መግባት]] ያስፈልግዎታል።',
+'uploadnologintext' => 'ፋይል ለመላክ አስቀድሞ [[Special:wiki_UserLogin|መግባት]] ያስፈልግዎታል።',
 'uploaderror' => 'የመላክ ስሕተት',
 'uploadtext' => "በዚህ ማመልከቻ ላይ ፋይል ለመላክ ይችላሉ። ቀድሞ የተላኩት ስዕሎች [[Special:FileList|በፋይል / ሥዕሎች ዝርዝር]] ናቸው፤ ከዚህ በላይ የሚጨመረው ፋይል ሁሉ [[Special:Log/upload|በፋይሎች መዝገብ]] ይዘረዝራሉ።
 
@@ -1324,7 +1324,7 @@ $1',
 'statistics-pages-desc' => 'በዊኪ ላይ ያሉት ገጾች ሁሉ - ከነውይይት፣ መምሪያ መንገድ ወዘተ.',
 'statistics-files' => 'የተላኩት ፋይሎች',
 'statistics-edits' => '{{SITENAME}} ከተጀመረ አንሥቶ የተደረጉት ለውጦች',
-'statistics-users' => 'አባልነት የገቡ [[Special:ListUsers|ተጠቃሚዎች]]',
+'statistics-users' => 'አባልነት የገቡ [[Special:Listwiki_Users|ተጠቃሚዎች]]',
 'statistics-users-active' => 'ተግባራዊ ተጠቃሚዎች',
 'statistics-users-active-desc' => 'ባለፈው {{PLURAL:$1|ቀን|$1 ቀን}} ማንኛውንም ድርጊት የሠሩት ተጠቃሚዎች',
 'statistics-mostpopular' => 'ከሁሉ የታዩት ገጾች',
@@ -1466,13 +1466,13 @@ Also see [[Special:WantedCategories|wanted categories]].',
 'linksearch-ok' => 'ፍለጋ',
 'linksearch-line' => '$1 ከ $2 ተያያዘ።',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => 'ከዚሁ ፊደል ጀምሮ፦',
 'listusers-submit' => 'ይታይ',
 'listusers-noresult' => 'ማንም ተጠቃሚ አልተገኘም።',
 'listusers-blocked' => '(ታግዷል)',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'ተግባራዊ አባላት ዝርዝር',
 'activeusers-intro' => 'እነዚህ አባላት ባለፈው $1 ቀን ውስጥ ማናቸውንም አይነት ተግባር ፈጸሙ።',
 'activeusers-count' => '$1 {{PLURAL:$1|ለውጥ|ለውጦች}} ባለፈው $3 ቀን ውስጥ',
@@ -1492,7 +1492,7 @@ Also see [[Special:WantedCategories|wanted categories]].',
 
 # E-mail user
 'mailnologin' => 'ምንም መነሻ አድራሻ የለም',
-'mailnologintext' => 'ኢ-ሜል ወደ ሌላ አባል ለመላክ [[Special:UserLogin|መግባት]]ና በ[[Special:Preferences|ምርጫዎችዎ]] ትክክለኛ የኢሜል አድራሻዎ መኖር ያስፈልጋል።',
+'mailnologintext' => 'ኢ-ሜል ወደ ሌላ አባል ለመላክ [[Special:wiki_UserLogin|መግባት]]ና በ[[Special:Preferences|ምርጫዎችዎ]] ትክክለኛ የኢሜል አድራሻዎ መኖር ያስፈልጋል።',
 'emailuser' => 'ለዚህ/ች ሰው ኢሜል መላክ',
 'emailuser-title-target' => '{{GENDER:$1|ለዚህ|ለዚች}} አባል ኢ-ሜል መላክ',
 'emailuser-title-notarget' => 'ወደ አባል ኢ-ሜል ለመላክ',
@@ -1528,7 +1528,7 @@ Also see [[Special:WantedCategories|wanted categories]].',
 'nowatchlist' => 'ዝርዝርዎ ባዶ ነው። ምንም ገጽ ገና አልተጨመረም።',
 'watchlistanontext' => 'የሚከታተሉት ገጾች ዝርዝርዎን ለመመልከት ወይም ለማስተካከል እባክዎ $1።',
 'watchnologin' => 'ገና አልገቡም',
-'watchnologintext' => 'የሚከታተሏቸውን ገጾች ዝርዝር ለመቀየር [[Special:UserLogin|መግባት]] ይኖርብዎታል።',
+'watchnologintext' => 'የሚከታተሏቸውን ገጾች ዝርዝር ለመቀየር [[Special:wiki_UserLogin|መግባት]] ይኖርብዎታል።',
 'addedwatchtext' => "ገጹ «$1» [[Special:Watchlist|ለሚከታተሉት ገጾች]] ተጨምሯል። ወደፊት ይህ ገጽ ወይም የውይይቱ ገጽ ሲቀየር፣ በዚያ ዝርዝር ላይ ይታያል። በተጨማሪም [[Special:RecentChanges|«በቅርብ ጊዜ በተለወጡ» ገጾች]] ዝርዝር፣ በቀላሉ እንዲታይ በ'''ጉልህ ፊደላት''' ተጽፎ ይገኛል።
 
 በኋላ ጊዜ ገጹን ከሚከታተሉት ገጾች ለማስወግድ የፈለጉ እንደሆነ፣ በጫፉ ዳርቻ «አለመከታተል» የሚለውን ይጫኑ።",
@@ -1623,9 +1623,9 @@ $NEWPAGE
 'rollbacklink' => 'ROLLBACK ይመለስ',
 'rollbackfailed' => 'መገልበጡ አልተከናወነም',
 'cantrollback' => 'ለውጡን መገልበጥ አይቻልም፦ አቅራቢው ብቻ ስላዘጋጁት ነው።',
-'alreadyrolled' => 'የ[[:$1]] መጨረሻ ለውጥ በ[[User:$2|$2]] ([[User talk:$2|ውይይት]]) መገልበት አይቻልም፤ ሌላ ሰው አሁን ገጹን መልሶታል።
+'alreadyrolled' => 'የ[[:$1]] መጨረሻ ለውጥ በ[[wiki_User:$2|$2]] ([[wiki_User talk:$2|ውይይት]]) መገልበት አይቻልም፤ ሌላ ሰው አሁን ገጹን መልሶታል።
 
-መጨረሻው ለውጥ በ[[User:$3|$3]] ([[User talk:$3|ውይይት]]) ነበረ።',
+መጨረሻው ለውጥ በ[[wiki_User:$3|$3]] ([[wiki_User talk:$3|ውይይት]]) ነበረ።',
 'editcomment' => "ማጠቃለያው፦ «''$1''» ነበረ።",
 'revertpage' => 'የ$2ን ለውጦች ወደ $1 እትም መለሰ።',
 'rollback-success' => 'የ$1 ለውጦች ተገለበጡ፣ ወደ $2 ዕትም ተመልሷል።',
@@ -1812,7 +1812,7 @@ $1',
 'unblockip' => 'ከተጠቃሚ ማገጃ ለማንሣት',
 'unblockiptext' => 'በዚህ ማመልከቻ ከታገደ ተጠቃሚ ማገጃውን ለማንሣት ይቻላል።',
 'ipusubmit' => 'ማገጃውን ለማንሣት',
-'unblocked' => 'ማገጃ ከ[[User:$1|$1]] ተነሣ',
+'unblocked' => 'ማገጃ ከ[[wiki_User:$1|$1]] ተነሣ',
 'unblocked-range' => 'ማገጃ ከ$1 ተነሣ',
 'unblocked-id' => 'ማገጃ $1 ተነሣ',
 'blocklist' => 'የታገዱት ተጠቃሚዎች',
@@ -1895,7 +1895,7 @@ $1',
 :ከነውይይቱ ገጽ አንድላይ አይዛወሩም። የዚያን ጊዜ የውይይቱን ገጽ ለማዛወር ከወደዱ በእጅ ማድረግ ያስፈልግዎታል።",
 'movearticle' => 'የቆየ አርእስት፡',
 'movenologin' => 'ገና አልገቡም',
-'movenologintext' => 'ገጽ ለማዛወር [[Special:UserLogin|በብዕር ስም መግባት]] ይኖርብዎታል።',
+'movenologintext' => 'ገጽ ለማዛወር [[Special:wiki_UserLogin|በብዕር ስም መግባት]] ይኖርብዎታል።',
 'movenotallowed' => 'በዚህ ዊኪ ገጾችን ለማዛወር ፈቃድ የለዎም።',
 'movenotallowedfile' => 'ፋይልን ለማዛወር ፈቃድ የለዎም።',
 'cant-move-user-page' => 'ከንዑስ ገጾች በቀር፣ የአባል ገጽ ለማዛወር ፈቃድ የለዎም።',
@@ -2440,7 +2440,7 @@ $3
 
 # Delete conflict
 'deletedwhileediting' => "'''ማስጠንቀቂያ'''፦ መዘጋጀት ከጀመሩ በኋላ ገጹ ጠፍቷል!",
-'confirmrecreate' => "መዘጋጀት ከጀመሩ በኋላ፣ ተጠቃሚው [[User:$1|$1]] ([[User talk:$1|ውይይት]]) ገጹን አጠፍተው ይህን ምክንያት አቀረቡ፦
+'confirmrecreate' => "መዘጋጀት ከጀመሩ በኋላ፣ ተጠቃሚው [[wiki_User:$1|$1]] ([[wiki_User talk:$1|ውይይት]]) ገጹን አጠፍተው ይህን ምክንያት አቀረቡ፦
 : ''$2''
 እባክዎ ገጹን እንደገና ለመፍጠር በውኑ እንደ ፈለጉ ያረጋግጡ።",
 'recreate' => 'እንደገና ይፈጠር',

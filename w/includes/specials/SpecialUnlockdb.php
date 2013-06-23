@@ -36,7 +36,7 @@ class SpecialUnlockdb extends FormSpecialPage {
 		return false;
 	}
 
-	public function checkExecutePermissions( User $user ) {
+	public function checkExecutePermissions( wiki_User $user ) {
 		global $wgReadOnlyFile;
 
 		parent::checkExecutePermissions( $user );

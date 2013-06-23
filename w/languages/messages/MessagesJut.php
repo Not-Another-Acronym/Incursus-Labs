@@ -15,7 +15,7 @@
 $fallback = 'da';
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Understreg henvesnenger',
 'tog-justify' => 'Ves ertikler ve lege margener',
 'tog-hideminor' => "Skjul mendre ændrenger i'n liste åver seneste ændrenger",
@@ -404,7 +404,7 @@ Du lover os hermed, at du selv '''har skrevet skrevselenger''', at skrevselenger
 'templatesusedpreview' => 'Følgende skablåner bruges åf denne ertikelførhåndsvesnenge:',
 'template-protected' => '(skrevebeskyttet)',
 'template-semiprotected' => '(skrevebeskyttet før ekke ånmeldte og nye brugere)',
-'nocreatetext' => "Æ'n åpdiin har begrænset åprettelse åf nye sider. Bestående sider ken ændres æller [[Special:UserLogin|loĝge på]].",
+'nocreatetext' => "Æ'n åpdiin har begrænset åprettelse åf nye sider. Bestående sider ken ændres æller [[Special:wiki_UserLogin|loĝge på]].",
 'recreate-moveddeleted-warn' => "'''Advarsel: Du er ve at genskabe en tidligere slettet side.'''
 
 Åvervej det'm er passende at genåprette'n side. De slettede hersenenger før
@@ -455,7 +455,7 @@ hersenenge, (førge) = førskel til den førge hersenenge, l = lile til mendre �
 
 'grouppage-sysop' => '{{ns:project}}:Administråtorer',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Rettigheds-logbåĝ',
 
 # Recent changes

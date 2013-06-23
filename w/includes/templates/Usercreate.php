@@ -30,7 +30,7 @@ if( !defined( 'MEDIAWIKI' ) ) die( -1 );
 /**
  * @ingroup Templates
  */
-class UsercreateTemplate extends QuickTemplate {
+class wiki_UsercreateTemplate extends QuickTemplate {
 	function addInputItem( $name, $value, $type, $msg, $helptext = false ) {
 		$this->data['extraInput'][] = array(
 			'name' => $name,
@@ -85,7 +85,7 @@ class UsercreateTemplate extends QuickTemplate {
 				'id' => 'wpPassword2',
 				'tabindex' => '2',
 				'size' => '20'
-			) + User::passwordChangeInputAttribs() ); ?>
+			) + wiki_User::passwordChangeInputAttribs() ); ?>
 			</td>
 		</tr>
 	<?php if( $this->data['usedomain'] ) {
@@ -113,7 +113,7 @@ class UsercreateTemplate extends QuickTemplate {
 			'id' => 'wpRetype',
 			'tabindex' => '4',
 			'size' => '20'
-		) + User::passwordChangeInputAttribs() ); ?>
+		) + wiki_User::passwordChangeInputAttribs() ); ?>
 			</td>
 		</tr>
 		<tr>

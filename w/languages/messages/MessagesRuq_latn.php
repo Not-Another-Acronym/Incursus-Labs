@@ -16,7 +16,7 @@
 $fallback = 'ro';
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Subliniaere legătuls:',
 
 # Dates

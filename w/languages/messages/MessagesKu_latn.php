@@ -100,7 +100,7 @@ $magicWords = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Xetekê di bin girêdanê de çêke:',
 'tog-justify' => 'Gotar bi forma "block"',
 'tog-hideminor' => 'Guherandinên biçûk ji listêya guherandinên dawî veşêre',
@@ -447,7 +447,7 @@ Pirs: $2',
 $2',
 'namespaceprotected' => "Destûra te ji bo guhertina vê rûpelê '''$1''' di valahiya nav de nîne.",
 'ns-specialprotected' => 'Rûpelên taybet {{ns:special}} nikarin werin guherandin.',
-'titleprotected' => "Rûpelek bi vî navî nikare bê çêkirin. Ev astengkirin ji [[User:$1|$1]] bi sedema ''$2'' hatiye çêkirin.",
+'titleprotected' => "Rûpelek bi vî navî nikare bê çêkirin. Ev astengkirin ji [[wiki_User:$1|$1]] bi sedema ''$2'' hatiye çêkirin.",
 
 # Virus scanner
 'virus-unknownscanner' => 'Antîvîrusa nenas:',
@@ -455,7 +455,7 @@ $2',
 # Login and logout pages
 'logouttext' => "'''Tu niha derketî.'''
 
-Tu dikarî {{SITENAME}} niha weke bikarhênerekî nediyarkirî bikarbînî, yan jî tu dikarî dîsa bi vî navê xwe yan navekî din wek bikarhêner [[Special:UserLogin|dîsa têkevî]].
+Tu dikarî {{SITENAME}} niha weke bikarhênerekî nediyarkirî bikarbînî, yan jî tu dikarî dîsa bi vî navê xwe yan navekî din wek bikarhêner [[Special:wiki_UserLogin|dîsa têkevî]].
 Bila di bîra te de be ku gengaz e hin rûpel mîna ku tu hîn bi navê xwe qeyd kiriyî werin nîşandan, heta ku tu nîşanên çavlêgerandina (browser) xwe jênebî.",
 'welcomecreation' => '== Tu bi xêr hatî, $1! ==
 
@@ -644,7 +644,7 @@ Zanibe ku tu nikarî e-nameya bişînî heta tu di [[Special:Preferences|tercih�
 'newarticletext' => "Ev rûpel hîn tune. Eger tu bixwazî vê rûpelê çêkî, dest bi nivîsandinê bike û piştre qeyd bike. '''Wêrek be''', biceribîne!<br />
 Ji bo alîkariyê binêre: [[{{MediaWiki:Helppage}}|Alîkarî]].<br />
 Heke tu bi şaşîtî hatî, bizîvire rûpela berê.",
-'anontalkpagetext' => "----''Ev rûpela gotûbêjê ye ji bo bikarhênerên nediyarkirî ku hîn hesabekî xwe çênekirine an jî bikarnaînin. Ji ber vê yekê divê em wan bi navnîşana IP ya hejmarî nîşan bikin. Navnîşaneke IP dikare ji aliyê gelek kesan ve were bikaranîn. Heger tu bikarhênerekî nediyarkirî bî û bawerdikî ku nirxandinên bê peywend di der barê te de hatine kirin ji kerema xwe re [[Special:UserLogin/signup|hesabekî xwe veke an jî têkeve]] da ku tu xwe ji tevlîheviyên bi bikarhênerên din re biparêzî.''",
+'anontalkpagetext' => "----''Ev rûpela gotûbêjê ye ji bo bikarhênerên nediyarkirî ku hîn hesabekî xwe çênekirine an jî bikarnaînin. Ji ber vê yekê divê em wan bi navnîşana IP ya hejmarî nîşan bikin. Navnîşaneke IP dikare ji aliyê gelek kesan ve were bikaranîn. Heger tu bikarhênerekî nediyarkirî bî û bawerdikî ku nirxandinên bê peywend di der barê te de hatine kirin ji kerema xwe re [[Special:wiki_UserLogin/signup|hesabekî xwe veke an jî têkeve]] da ku tu xwe ji tevlîheviyên bi bikarhênerên din re biparêzî.''",
 'noarticletext' => 'Ev rûpel niha vala ye, tu dikarî [[Special:Search/{{PAGENAME}}|Di nav gotarên din de li "{{PAGENAME}}" bigerî]] an jî [{{fullurl:{{FULLPAGENAME}}|action=edit}} vê rûpelê biguherînî].',
 'noarticletext-nopermission' => 'Ev rûpel niha vala ye. 
 Tu dikarî [[Special:Search/{{PAGENAME}}|Di nav gotarên din de li "{{PAGENAME}}" bigere]] 
@@ -716,11 +716,11 @@ Ew berê heye.',
 # "Undo" feature
 'undo-success' => 'Ev guherandin dikare were şûndekirin. Ji kerema xwe ferqa piştî tomarkirinê bibîne, bê ka tu dixwazî vê guhertoyê tomar bikî an na. Ger te şaşîtiyek kir, ji kerema xwe derkeve.',
 'undo-failure' => 'Ev guhertin ji ber guherandinên piştî wê re nikare were şûndekirin.',
-'undo-summary' => 'Guhertoya $1 ya [[Special:Contributions/$2|$2]] ([[User talk:$2|gotûbêj]]) şûnde kir',
+'undo-summary' => 'Guhertoya $1 ya [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|gotûbêj]]) şûnde kir',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'Hesab nikarîbû were çêkirin',
-'cantcreateaccount-text' => "Çêkirinê hesaban ji vê IP'yê ('''$1''') hatiye qedexekirin ji [[User:$3|$3]].
+'cantcreateaccount-text' => "Çêkirinê hesaban ji vê IP'yê ('''$1''') hatiye qedexekirin ji [[wiki_User:$3|$3]].
 
 Sedema qedexekirina $3 ev e: ''$2''",
 
@@ -868,7 +868,7 @@ Sedema qedexekirina $3 ev e: ''$2''",
 'mypreferences' => 'Tercihên min',
 'prefs-edits' => 'Hejmarê guherandinan:',
 'prefsnologin' => 'Xwe tomar nekir',
-'prefsnologintext' => 'Tu gireke xwe <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} qeydbikê]</span> ji bo guherandina tercihên bikarhêneran.',
+'prefsnologintext' => 'Tu gireke xwe <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} qeydbikê]</span> ji bo guherandina tercihên bikarhêneran.',
 'changepassword' => 'Şîfreyê biguherîne',
 'prefs-skin' => 'Pêste',
 'skin-preview' => 'Pêşdîtin',
@@ -946,16 +946,16 @@ Sedema qedexekirina $3 ev e: ''$2''",
 'prefs-displaywatchlist' => 'Vebijarkan nîşan bide',
 'prefs-diffs' => 'Cudahî',
 
-# User preference: e-mail validation using jQuery
+# wiki_User preference: e-mail validation using jQuery
 'email-address-validity-valid' => 'E-name derbasdar e',
 'email-address-validity-invalid' => 'E-nameyeke derbasdar binivîse',
 
-# User rights
+# wiki_User rights
 'userrights' => 'Îdarekirina mafên bikarhêneran',
 'userrights-lookup-user' => 'Birêvebirina koman',
 'userrights-user-editname' => 'Navekî bikarhêneriyê binivîse:',
 'editusergroup' => 'Komên bikarhêneran biguherîne',
-'editinguser' => "Mafên bikarhêner '''[[User:$1|$1]]''' ([[User talk:$1|{{int:talkpagelinktext}}]]{{int:pipe-separator}}[[Special:Contributions/$1|{{int:contribslink}}]]) tên guhertin",
+'editinguser' => "Mafên bikarhêner '''[[wiki_User:$1|$1]]''' ([[wiki_User talk:$1|{{int:talkpagelinktext}}]]{{int:pipe-separator}}[[Special:Contributions/$1|{{int:contribslink}}]]) tên guhertin",
 'userrights-editusergroup' => 'Komên bikarhêneran biguherîne',
 'saveusergroups' => 'Komên bikarhêneran tomar bike',
 'userrights-groupsmember' => 'Endamê/a:',
@@ -966,7 +966,7 @@ Sedema qedexekirina $3 ev e: ''$2''",
 'userrights-reason' => 'Sedem:',
 'userrights-no-interwiki' => 'Mafê te ji bo guherandina mafên bikarhênerên di Wîkiyên din de nîne.',
 'userrights-nodatabase' => 'Danegeh $1 nîne an ne ya vir e.',
-'userrights-nologin' => 'Ji bo guherandina mafên bikarhêneran, divê tu bi hesabê rêveber [[Special:UserLogin|têkevî]].',
+'userrights-nologin' => 'Ji bo guherandina mafên bikarhêneran, divê tu bi hesabê rêveber [[Special:wiki_UserLogin|têkevî]].',
 'userrights-notallowed' => "Account'a te mafê xwe tune ye ji bo guherandina mafên bikarhêneran.",
 'userrights-changeable-col' => 'Komên ku tu dikarî biguherînî',
 'userrights-unchangeable-col' => 'Komên ku tu nikarî biguherînî',
@@ -1004,7 +1004,7 @@ Sedema qedexekirina $3 ev e: ''$2''",
 'right-userrights' => 'Hemû mafên bikarhêner biguherîne',
 'right-sendemail' => 'Ji bikarhênerên di re e-name bişîne',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'guhertina mafê bikarhêneriyê',
 'rightslogtext' => 'Ev guhertineke ji bo mafên bikarhêneriyê ye.',
 'rightslogentry' => 'grûpa bikarhêneran ji bo $1 ji $2 guherande $3',
@@ -1068,7 +1068,7 @@ Sedema qedexekirina $3 ev e: ''$2''",
 'uploadbtn' => 'Wêneyekî bar bike',
 'reuploaddesc' => 'Barkirinê biskîne û dîsa here rûpela barkirinê.',
 'uploadnologin' => 'Xwe tomar nekir',
-'uploadnologintext' => 'Ji bo barkirina wêneyan divê ku tu [[Special:UserLogin|têkevî]].',
+'uploadnologintext' => 'Ji bo barkirina wêneyan divê ku tu [[Special:wiki_UserLogin|têkevî]].',
 'uploaderror' => 'Çewtiya barkirinê',
 'upload-recreate-warning' => "'''Agahdarî: Peleke bi vî navî hatiye jêbirin an jî raguhestin.'''",
 'uploadtext' => "Berê tu wêneyên nû bar bikî, ji bo dîtin an vedîtina wêneyên ku ji xwe hene binêre: [[Special:FileList|lîsteya wêneyên barkirî]]. Herwisa wêneyên ku hatine barkirin an jî jê birin li vir dikarî bibînî: [[Special:Log/upload|reşahîya barkirîyan]].
@@ -1235,7 +1235,7 @@ Agahdariya li ser [$2 rûpela danasîna pelê] li jêr tê nîşandan.',
 'statistics-pages-desc' => 'Hemû rûpelên di vê wîkiyê de, bi hemû rûpelên gotûbêj, beralîkirin, hwd.',
 'statistics-files' => 'Wêneyên barkirî',
 'statistics-views-total' => 'Hemû nîşandan',
-'statistics-users' => '[[Special:ListUsers|Bikarhênerên tomarkirî]]',
+'statistics-users' => '[[Special:Listwiki_Users|Bikarhênerên tomarkirî]]',
 'statistics-users-active' => 'Bikarhênerên çalak',
 'statistics-mostpopular' => 'Rûpelên herî lênerî',
 
@@ -1345,12 +1345,12 @@ Li [[Special:WantedCategories|kategoriyên xwestî]] binêre.',
 'linksearch-ns' => 'Valahiya nav:',
 'linksearch-ok' => 'Lêgerîn',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusers-submit' => 'nîşan bide',
 'listusers-noresult' => 'Bikarhêner nehate dîtin.',
 'listusers-blocked' => '(hate astengkirin)',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'Lîsteya bikarhênerên çalak',
 'activeusers-hidebots' => "Bot'an veşêre",
 'activeusers-hidesysops' => 'Rêveberan veşêre',
@@ -1370,7 +1370,7 @@ Li [[Special:WantedCategories|kategoriyên xwestî]] binêre.',
 
 # E-mail user
 'mailnologin' => 'Navnîşanê neşîne',
-'mailnologintext' => 'Te gireke xwe [[Special:UserLogin|qeydbikê]] û adrêsa e-nameyan di [[Special:Preferences|tercihên xwe]] da nivîsandibe ji bo şandina e-nameyan ji bikarhênerên din ra.',
+'mailnologintext' => 'Te gireke xwe [[Special:wiki_UserLogin|qeydbikê]] û adrêsa e-nameyan di [[Special:Preferences|tercihên xwe]] da nivîsandibe ji bo şandina e-nameyan ji bikarhênerên din ra.',
 'emailuser' => 'Ji bikarhêner re e-name bişîne',
 'emailpage' => 'E-name bikarhêner',
 'defemailsubject' => '{{SITENAME}} e-name',
@@ -1386,7 +1386,7 @@ Li [[Special:WantedCategories|kategoriyên xwestî]] binêre.',
 'emailsent' => 'E-name hat şandin',
 'emailsenttext' => 'E-nameya te hat şandin.',
 
-# User Messenger
+# wiki_User Messenger
 'usermessage-editor' => 'Peyamnêra sîstemê',
 
 # Watchlist
@@ -1395,7 +1395,7 @@ Li [[Special:WantedCategories|kategoriyên xwestî]] binêre.',
 'nowatchlist' => 'Tiştek di lîsteya te ya şopandinê de tune ye.',
 'watchlistanontext' => 'Ji  kerema xwe ji bo dîtin an jî sererastkirina lîsteya te ya şopandinê xwe $1.',
 'watchnologin' => 'Te xwe tomar nekiriye',
-'watchnologintext' => 'Ji bo dîtin an jî sererastkirina lîsteya te ya şopandinê divê tu xwe [[Special:Userlogin|tomar bikî]].',
+'watchnologintext' => 'Ji bo dîtin an jî sererastkirina lîsteya te ya şopandinê divê tu xwe [[Special:wiki_Userlogin|tomar bikî]].',
 'addwatch' => 'Tevlî lîsteya şopandinê bike',
 'addedwatchtext' => "Rûpela \"[[:\$1]]\" çû ser [[{{ns:special}}:Watchlist|lîsteya te ya şopandinê]].
 Li dahatû de her guhertoyek li wê rûpelê û rûpela guftûgo ya wê were kirin li vir tê nîşandan.
@@ -1487,9 +1487,9 @@ Paşagahîdan û alîkaraya din:
 'cantrollback' => 'Guherto naye vegerandin;
 bikarhênerê dawî, tenya nivîskarê vê rûpelê ye.',
 'alreadyrolled' => 'Guherandina dawiya [[$1]]
-bi [[User:$2|$2]] ([[User talk:$2|gotûbêj]]) venizivre; kesekî din ew rûpel zîvirandiye an guherandiye.
+bi [[wiki_User:$2|$2]] ([[wiki_User talk:$2|gotûbêj]]) venizivre; kesekî din ew rûpel zîvirandiye an guherandiye.
 
-Guhertoya dawî bi [[User:$3|$3]] ([[User talk:$3|gotûbêj]]).',
+Guhertoya dawî bi [[wiki_User:$3|$3]] ([[wiki_User talk:$3|gotûbêj]]).',
 'editcomment' => "Kurtenivîsê guherandinê ev bû: \"''\$1''\".",
 'revertpage' => 'Guherandina $2 hat betal kirin, vegerand guhartoya dawî ya $1',
 'rollback-success' => 'Guherandina $1 şondakir; dîsa guharte verzyona $2.',
@@ -1654,7 +1654,7 @@ Sedemekê binivîse!",
 'unblockip' => "IP'yekê dîsa veke",
 'unblockiptext' => "Nivîsara jêr bikarwîne ji bo qebûlkirina nivîsandinê bikarhênerekî ya IP'yeka berê astengkirî.",
 'ipusubmit' => 'Vê astengkirinê rake',
-'unblocked' => '[[User:$1|$1]] niha vê astengkirinê ye',
+'unblocked' => '[[wiki_User:$1|$1]] niha vê astengkirinê ye',
 'unblocked-id' => '$1 dîsa vê astengkirinê ye',
 'blocklist' => 'Bikarhênerên astengkirî',
 'ipblocklist' => "Listek ji adresên IP'yan û bikarhêneran yê hatine astengkirin",
@@ -1682,7 +1682,7 @@ Sedemekê binivîse!",
 'change-blocklink' => 'Astengkirinê biguherîne',
 'contribslink' => 'beşdarî',
 'emaillink' => 'e-name bişîne',
-'autoblocker' => 'Otomatîk hate astengkirin ji ber ku IP\'ya wê û ya "[[User:$1|$1]]" yek in. Sedem: "\'\'$2\'\'"',
+'autoblocker' => 'Otomatîk hate astengkirin ji ber ku IP\'ya wê û ya "[[wiki_User:$1|$1]]" yek in. Sedem: "\'\'$2\'\'"',
 'blocklogpage' => 'Astengkirina têketinê',
 'blocklogentry' => '"[[$1]]" ji bo dema $2, $3 asteng kir',
 'blocklogtext' => "Ev reşahîyek ji astengkirinên û rakirina astengkirinên bikarhêneran ra ye. Adrêsên IP'yan, yê otomatîk hatine astengkirin, nehatine nivîsandin. [[Special:BlockList|Lîsteya IP'yên astengkirî]] bibîne ji bo dîtina astengkirinên IP'yan.",
@@ -1724,7 +1724,7 @@ Eger ev mişkla çêbû, tu gireke vê rûpelê bi xwe bigerînê.
 Xêra xwe navê nû û sedemê navgerandinê binivisîne.",
 'movearticle' => 'Rûpelê bigerîne',
 'movenologin' => 'Xwe tomar nekir',
-'movenologintext' => 'Tu dive bikarhênereke qeydkirî bî û [[Special:UserLogin|werî nav sîstemê]]
+'movenologintext' => 'Tu dive bikarhênereke qeydkirî bî û [[Special:wiki_UserLogin|werî nav sîstemê]]
 da bikarî navê wê rûpelê biguherînî.',
 'movenotallowed' => 'Mafên te bo guherandina navên gotaran tune ye.',
 'movenotallowedfile' => "Mafê te bo guherandina navên data'yan tune ye.",
@@ -2026,7 +2026,7 @@ Lê eger ev *ne* tu bû, li lînkê netikîne. Ev e-nameya di rojê $4 da netê 
 
 # Delete conflict
 'deletedwhileediting' => "'''Hişyarî:''' Piştî te dest bi guherandinê kir ev rûpel hate jêbirin!",
-'confirmrecreate' => "Piştî te dest bi guherandinê kir, bikarhêner [[User:$1|$1]] ([[User talk:$1|gotûbêj]]) ev rûpel jê bir. Sedema jêbirinê ev bû:
+'confirmrecreate' => "Piştî te dest bi guherandinê kir, bikarhêner [[wiki_User:$1|$1]] ([[wiki_User talk:$1|gotûbêj]]) ev rûpel jê bir. Sedema jêbirinê ev bû:
 : ''$2''
 Ji kerema xwe zanibe ku tu bi rastî dixwazî vê rûpelê dîsa çêkî.",
 'recreate' => 'Dîsa çêke',

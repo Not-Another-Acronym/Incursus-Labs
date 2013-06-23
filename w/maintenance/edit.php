@@ -32,7 +32,7 @@ class EditCLI extends Maintenance {
 	public function __construct() {
 		parent::__construct();
 		$this->mDescription = "Edit an article from the command line, text is from stdin";
-		$this->addOption( 'user', 'Username', false, true, 'u' );
+		$this->addOption( 'user', 'wiki_Username', false, true, 'u' );
 		$this->addOption( 'summary', 'Edit summary', false, true, 's' );
 		$this->addOption( 'minor', 'Minor edit', false, false, 'm' );
 		$this->addOption( 'bot', 'Bot edit', false, false, 'b' );
@@ -42,7 +42,7 @@ class EditCLI extends Maintenance {
 	}
 
 	public function execute() {
-		global $wgUser, $wgTitle;
+		global $wgwiki_User, $wgTitle;
 
 		$userName = $this->getOption( 'user', 'Maintenance script' );
 		$summary = $this->getOption( 'summary', '' );
@@ -51,12 +51,12 @@ class EditCLI extends Maintenance {
 		$autoSummary = $this->hasOption( 'autosummary' );
 		$noRC = $this->hasOption( 'no-rc' );
 
-		$wgUser = User::newFromName( $userName );
-		if ( !$wgUser ) {
+		$wgwiki_User = wiki_User::newFromName( $userName );
+		if ( !$wgwiki_User ) {
 			$this->error( "Invalid username", true );
 		}
-		if ( $wgUser->isAnon() ) {
-			$wgUser->addToDatabase();
+		if ( $wgwiki_User->isAnon() ) {
+			$wgwiki_User->addToDatabase();
 		}
 
 		$wgTitle = Title::newFromText( $this->getArg() );

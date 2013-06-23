@@ -214,9 +214,9 @@ $specialPageAliases = array(
 	'Unusedtemplates'           => array( 'Ónotuð_snið' ),
 	'Unwatchedpages'            => array( 'Óvaktaðar_síður' ),
 	'Upload'                    => array( 'Hlaða_inn' ),
-	'Userlogin'                 => array( 'Innskrá' ),
-	'Userlogout'                => array( 'Útskrá' ),
-	'Userrights'                => array( 'Notandaréttindi' ),
+	'wiki_Userlogin'                 => array( 'Innskrá' ),
+	'wiki_Userlogout'                => array( 'Útskrá' ),
+	'wiki_Userrights'                => array( 'Notandaréttindi' ),
 	'Version'                   => array( 'Útgáfa' ),
 	'Wantedcategories'          => array( 'Eftirsóttir_flokkar' ),
 	'Wantedfiles'               => array( 'Eftirsóttar_skrár' ),
@@ -232,7 +232,7 @@ $linkPrefixExtension = true;
 $linkTrail = '/^([áðéíóúýþæöa-z-–]+)(.*)$/sDu';
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Undirstrika tengla:',
 'tog-justify' => 'Jafna málsgreinar',
 'tog-hideminor' => 'Fela minniháttar breytingar í nýlegum breytingum',
@@ -574,7 +574,7 @@ Kerfisstjórinn sem læsti honum gaf þessa skýringu: $1',
 Þetta orsakast oftast þegar úreltum mismunar- eða breytingaskráartengli er fylgt að síðu sem hefur verið eytt.
 
 Ef þetta er ekki raunin, kann að vera að þú hafir rekist á villu í hugbúnaðinum.
-Gjörðu svo vel og tilkynntu atvikið til [[Special:ListUsers/sysop|stjórnanda]], og gerðu grein fyrir vefslóðinni.',
+Gjörðu svo vel og tilkynntu atvikið til [[Special:Listwiki_Users/sysop|stjórnanda]], og gerðu grein fyrir vefslóðinni.',
 'missingarticle-rev' => '(breyting#: $1)',
 'missingarticle-diff' => '(Munur: $1, $2)',
 'readonly_lag' => 'Gagnagrunninum hefur verið læst sjálfkrafa á meðan undirvefþjónarnir reyna að hafa í við aðalvefþjóninn',
@@ -623,7 +623,7 @@ $2',
 'customcssprotected' => 'Þú hefur ekki leyfi að breyta þessari CSS-umbrotsíðu, því hún hefur notendastillingar annars notanda.',
 'customjsprotected' => 'Þú hefur ekki leyfi til að breyta þessari JavaScript síðu, því hún hefur notendastillingar annars notanda.',
 'ns-specialprotected' => 'Kerfissíðum er ekki hægt að breyta.',
-'titleprotected' => "Þessi titill hefur verið verndaður fyrir sköpun af [[User:$1|$1]].
+'titleprotected' => "Þessi titill hefur verið verndaður fyrir sköpun af [[wiki_User:$1|$1]].
 Ástæðan sem gefin var ''$2''.",
 'filereadonlyerror' => 'Ekki var hægt að breyta skránni "$1" því skráin í skráarsafninu "$2" er engöngu hægt að lesa.
 
@@ -641,7 +641,7 @@ Möppudýrið sem læsti skránni gaf þessa ástæðu: "\'\'$3\'\'".',
 # Login and logout pages
 'logouttext' => "'''Þú hefur verið skráð(ur) út.'''
 
-Þú getur haldið áfram að nota {{SITENAME}} óþekkt(ur), eða þú getur [[Special:UserLogin|skráð þig inn aftur]] sem sami eða annar notandi.
+Þú getur haldið áfram að nota {{SITENAME}} óþekkt(ur), eða þú getur [[Special:wiki_UserLogin|skráð þig inn aftur]] sem sami eða annar notandi.
 Athugaðu að sumar síður kunna að birtast líkt og þú sért ennþá skráð(ur) inn, þangað til að þú hreinsar skyndiminnið í vafranum þínum.",
 'welcomecreation' => '== Velkomin(n), $1! ==
 Aðgangurinn þinn hefur verið búinn til.
@@ -687,7 +687,7 @@ Gakktu úr skugga um að vefkökur séu virkar, endurhladdu þessari síðu og r
 'loginsuccess' => "'''Þú ert nú innskráð(ur) á {{SITENAME}} sem „$1“.'''",
 'nosuchuser' => 'Það er enginn notandi með þetta nafn: "$1".
 Gerður er greinarmunur á há- og lágstöfum.
-Athugaðu hvort um innsláttavillu er að ræða eða [[Special:UserLogin/signup|búðu til nýtt notendanafn]].',
+Athugaðu hvort um innsláttavillu er að ræða eða [[Special:wiki_UserLogin/signup|búðu til nýtt notendanafn]].',
 'nosuchusershort' => 'Það er enginn notandi með nafnið „$1“. Athugaðu hvort nafnið sé ritað rétt.',
 'nouserspecified' => 'Þú verður að taka fram notandanafn.',
 'login-userblocked' => 'Þessi notandi hefur verið settur í bann.  Innskráning ekki leyfð.',
@@ -883,7 +883,7 @@ Hlutinn gæti hafa verið fluttur til eða hent á meðan þú varst að skoða 
 'loginreqlink' => 'innskrá',
 'loginreqpagetext' => 'Þú þarft að $1 til að geta séð aðrar síður.',
 'accmailtitle' => 'Lykilorð sent.',
-'accmailtext' => "Lykilorðið fyrir [[User talk:$1|$1]] hefur verið sent á $2.
+'accmailtext' => "Lykilorðið fyrir [[wiki_User talk:$1|$1]] hefur verið sent á $2.
 
 Hægt er að breyta lykilorðinu fyrir aðganginn á ''[[Special:ChangePassword|change password]]'' þegar notandinn hefur skráð sig inn.",
 'newarticle' => '(Ný)',
@@ -894,7 +894,7 @@ Ef þú hefur óvart villst hingað geturðu notað '''til baka'''-hnappinn í v
 'anontalkpagetext' => "----''Þetta er spjallsíða fyrir óþekktan notanda sem hefur ekki búið til aðgang ennþá, eða notar hann ekki.
 Þar af leiðandi þurfum við að nota vistfang til að bera kennsli á hann/hana.
 Nokkrir notendur geta deilt sama vistfangi.
-Ef þú ert óþekktur notandi og finnst að óviðkomandi athugasemdum hafa verið beint að þér, gjörðu svo vel og [[Special:UserLogin/signup|búðu til aðgang]] eða [[Special:UserLogin|skráðu þig inn]] til þess að koma í veg fyrir þennan rugling við aðra óþekkta notendur í framtíðinni.''",
+Ef þú ert óþekktur notandi og finnst að óviðkomandi athugasemdum hafa verið beint að þér, gjörðu svo vel og [[Special:wiki_UserLogin/signup|búðu til aðgang]] eða [[Special:wiki_UserLogin|skráðu þig inn]] til þess að koma í veg fyrir þennan rugling við aðra óþekkta notendur í framtíðinni.''",
 'noarticletext' => 'Enginn texti er á þessari síðu enn sem komið er.
 Þú getur [[Special:Search/{{PAGENAME}}|leitað í öðrum síðum]],
 <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} leitað í tengdum skrám], eða [{{fullurl:{{FULLPAGENAME}}|action=edit}} breytt henni sjálfur]</span>.',
@@ -936,7 +936,7 @@ Vinsamlegast reyndu aftur síðar. Ef það virkar ekki heldur skaltu reyna að 
 ''Því {{SITENAME}} styður hráan HTML-kóða er forskoðunin falin sem vörn gegn JavaScript árásum..''
 
 '''Ef þetta er vingjarnleg breyting, reyndu þá aftur.'''
-Ef þetta leysir ekki vandamálið, reyndu að [[Special:UserLogout|skrá þig út]] og skrá þig aftur inn.",
+Ef þetta leysir ekki vandamálið, reyndu að [[Special:wiki_UserLogout|skrá þig út]] og skrá þig aftur inn.",
 'token_suffix_mismatch' => "'''Breytingu þinni hefur verið hafnað því að biðlarinn þinn ruglaði greinarmerkingum í breytingar tókanum.\"
 Þetta er gert til að hindra spillingu texta síðunnar.
 Þetta getur gerst þegar þú notar bilaðan vafra eða ónafngreinda vefsels þjónustu.",
@@ -981,7 +981,7 @@ Verndunarskrá síðunnar er gefin fyrir neðan til tilvísunar.",
 'hiddencategories' => 'Þessi síða er meðlimur í {{PLURAL:$1|1 földum flokki|$1 földum flokkum}}:',
 'nocreatetitle' => 'Síðugerð takmörkuð',
 'nocreatetext' => '{{SITENAME}} hefur takmarkað eiginleikann að gera nýjar síður.
-Þú getur farið til baka og breytt núverandi síðum, eða [[Special:UserLogin|skráð þið inn eða búið til aðgang]].',
+Þú getur farið til baka og breytt núverandi síðum, eða [[Special:wiki_UserLogin|skráð þið inn eða búið til aðgang]].',
 'nocreate-loggedin' => 'Þú hefur ekki leyfi til að skapa nýjar síður.',
 'sectioneditnotsupported-title' => 'Hlutabreyting er ekki virk',
 'sectioneditnotsupported-text' => 'Hlutabreyting er ekki virk á þessari síðu.',
@@ -1022,11 +1022,11 @@ Hluti sniðsins verður ekki með.",
 'undo-success' => 'Breytingin hefur verið tekin tilbaka. Vinsamlegast staðfestu og vistaðu svo.',
 'undo-failure' => 'Breytinguna var ekki hægt að taka tilbaka vegna breytinga í millitíðinni.',
 'undo-norev' => 'Ekki var hægt að taka breytinguna aftr því að hún er ekki til eða henni var eytt.',
-'undo-summary' => 'Tek aftur breytingu $1 frá [[Special:Contributions/$2|$2]] ([[User talk:$2|spjall]])',
+'undo-summary' => 'Tek aftur breytingu $1 frá [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|spjall]])',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'Ekki hægt að búa til aðgang',
-'cantcreateaccount-text' => "Aðgangsgerð fyrir þetta vistfang ('''$1''') hefur verið bannað af [[User:$3|$3]].
+'cantcreateaccount-text' => "Aðgangsgerð fyrir þetta vistfang ('''$1''') hefur verið bannað af [[wiki_User:$3|$3]].
 
 Ástæðan sem $3 gaf fyrir því er ''$2''",
 
@@ -1253,7 +1253,7 @@ Athugaðu að skrár þeirra yfir {{SITENAME}}-efni kunna að vera úreltar.',
 'mypreferences' => 'Mínar stillingar',
 'prefs-edits' => 'Fjöldi breytinga:',
 'prefsnologin' => 'Ekki innskráður',
-'prefsnologintext' => 'Þú verður að vera <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} skráð(ur) inn]</span> til að breyta notandastillingum.',
+'prefsnologintext' => 'Þú verður að vera <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} skráð(ur) inn]</span> til að breyta notandastillingum.',
 'changepassword' => 'Breyta lykilorði',
 'prefs-skin' => 'Þema',
 'skin-preview' => 'Forskoða',
@@ -1365,16 +1365,16 @@ Tölvupóstfang þitt er ekki gefið upp þegar aðrir notendur hafa samband vi�
 'prefs-displaywatchlist' => 'Útlitsmöguleikar',
 'prefs-diffs' => 'Breytingar',
 
-# User preference: e-mail validation using jQuery
+# wiki_User preference: e-mail validation using jQuery
 'email-address-validity-valid' => 'Netfang virðist vera virkt.',
 'email-address-validity-invalid' => 'Settu inn rétt netfang',
 
-# User rights
+# wiki_User rights
 'userrights' => 'Breyta notandaréttindum',
 'userrights-lookup-user' => 'Yfirlit notandahópa',
 'userrights-user-editname' => 'Skráðu notandanafn:',
 'editusergroup' => 'Breyta notandahópum',
-'editinguser' => "Breyti réttindum '''[[User:$1|$1]]''' $2",
+'editinguser' => "Breyti réttindum '''[[wiki_User:$1|$1]]''' $2",
 'userrights-editusergroup' => 'Breyta notandahópum',
 'saveusergroups' => 'Vista notandahóp',
 'userrights-groupsmember' => 'Meðlimur:',
@@ -1386,7 +1386,7 @@ Tölvupóstfang þitt er ekki gefið upp þegar aðrir notendur hafa samband vi�
 'userrights-reason' => 'Ástæða:',
 'userrights-no-interwiki' => 'Þú hefur ekki leyfi til að breyta notandaréttindum á öðrum wiki-síðum.',
 'userrights-nodatabase' => 'Gagnagrunnurinn $1 er ekki til eða ekki staðbundinn.',
-'userrights-nologin' => 'Þú verður að [[Special:UserLogin|innskrá]] þig á möppudýraaðgang til að geta útdeilt notandaréttindum.',
+'userrights-nologin' => 'Þú verður að [[Special:wiki_UserLogin|innskrá]] þig á möppudýraaðgang til að geta útdeilt notandaréttindum.',
 'userrights-notallowed' => 'Þinn aðgangur hefur ekki réttindi til að útdeila notandaréttindum.',
 'userrights-changeable-col' => 'Hópar sem þú getur breytt',
 'userrights-unchangeable-col' => 'Hópar sem þú getur ekki breytt',
@@ -1477,7 +1477,7 @@ Tölvupóstfang þitt er ekki gefið upp þegar aðrir notendur hafa samband vi�
 'right-sendemail' => 'Senda tölvupóst til annara notenda',
 'right-passwordreset' => 'Skoða tölvupósta um endurstillingu lykilorðs',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Réttindaskrá notenda',
 'rightslogtext' => 'Þetta er skrá yfir breytingar á réttindum notenda.',
 'rightslogentry' => 'breytti réttindum $1 frá $2 í $3',
@@ -1574,7 +1574,7 @@ Síður á [[Special:Watchlist|vaktlistanum þínum]] eru '''feitletraðar'''.",
 'reuploaddesc' => 'Aftur á innhlaðningarformið.',
 'upload-tryagain' => 'Sendu breytta myndlýsingu',
 'uploadnologin' => 'Óinnskráð(ur)',
-'uploadnologintext' => 'Þú verður að vera [[Special:UserLogin|skráð(ur) inn]]
+'uploadnologintext' => 'Þú verður að vera [[Special:wiki_UserLogin|skráð(ur) inn]]
 til að hlaða inn skrám.',
 'upload_directory_missing' => 'Mappa upphlaða ($1) er týnd og vefþjónninn gat ekki búið hana til.',
 'upload_directory_read_only' => 'Mistókst að skrifa í möppu upphlaða ($1) á vefþjóni.',
@@ -1697,11 +1697,11 @@ $1',
 'upload-proto-error-text' => 'Upphlöðun frá öðrum vefþjón þarfnast vefslóðar sem byrjar á <code>http://</code> eða <code>ftp://</code>.',
 'upload-file-error' => 'Innri villa',
 'upload-file-error-text' => 'Innri villa: Gat ekki búið til tímabundna skrá á vefþjóni.
-Vinsamlegast hafðu samband við [[Special:ListUsers/sysop|möppudýr]].',
+Vinsamlegast hafðu samband við [[Special:Listwiki_Users/sysop|möppudýr]].',
 'upload-misc-error' => 'Óþekkt innhleðsluvilla',
 'upload-misc-error-text' => 'Upphal þitt mistókst vegna óþekktrar villu.
 Athugaðu hvort vefslóðin sé rétt og aðgengileg og að því loknu reyndu aftur.
-Ef vandamálið lagast ekki, hafðu samband við [[Special:ListUsers/sysop|stjórnanda]].',
+Ef vandamálið lagast ekki, hafðu samband við [[Special:Listwiki_Users/sysop|stjórnanda]].',
 'upload-too-many-redirects' => 'Vefslóðin inniheldur of margar tilvísanir.',
 'upload-unknown-size' => 'Óþekkt stærð',
 'upload-http-error' => 'HTTP villa kom upp við upphal skráarinnar: $1',
@@ -1910,7 +1910,7 @@ Leitarstrengurinn á að vera á þessu formi: efnistag/myndasnið, t.d. <code>i
 'statistics-views-total' => 'Uppflettingar alls',
 'statistics-views-total-desc' => 'Flettingar á síður sem eru ekki til eða kerfisíður eru ekki innifaldar.',
 'statistics-views-peredit' => 'Uppflettingar á hverja breytingu (meðaltal)',
-'statistics-users' => 'Skráðir  [[Special:ListUsers|notendur]]',
+'statistics-users' => 'Skráðir  [[Special:Listwiki_Users|notendur]]',
 'statistics-users-active' => 'Virkir notendur',
 'statistics-users-active-desc' => 'Notendur sem hafa framkvæmt aðgerð {{PLURAL:$1|síðastliðin dag|síðastliðna $1 daga}}',
 'statistics-mostpopular' => 'Mest skoðuðu síður',
@@ -2078,13 +2078,13 @@ Studdar samskiptareglur: <code>$1</code> (ekki bæta neinum af þessum í leitin
 'linksearch-line' => 'Tengt er í $1 á síðunni $2',
 'linksearch-error' => 'Algildistafir mega engöngu birtast í upphafi vefslóðarinnar.',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => 'Sýna notendur sem byrja á:',
 'listusers-submit' => 'Sýna',
 'listusers-noresult' => 'Enginn notandi fannst.',
 'listusers-blocked' => '(bannaður)',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'Virkir notendur',
 'activeusers-intro' => 'Þetta er listi yfir notendur sem hafa verið virkir {{PLURAL:$1|síðasta|síðustu}} $1 {{PLURAL:$1|dag|daga}}.',
 'activeusers-count' => '$1 {{PLURAL:$1|breyting|breytingar}} á {{PLURAL:$3|síðastliðnum degi|síðustu $3 dögum}}',
@@ -2118,7 +2118,7 @@ Studdar samskiptareglur: <code>$1</code> (ekki bæta neinum af þessum í leitin
 
 # E-mail user
 'mailnologin' => 'Ekkert netfang til að senda á',
-'mailnologintext' => 'Þú verður að vera [[Special:UserLogin|innskráð(ur)]] auk þess að hafa gilt netfang í [[Special:Preferences|stillingunum]] þínum til að senda tölvupóst til annara notenda.',
+'mailnologintext' => 'Þú verður að vera [[Special:wiki_UserLogin|innskráð(ur)]] auk þess að hafa gilt netfang í [[Special:Preferences|stillingunum]] þínum til að senda tölvupóst til annara notenda.',
 'emailuser' => 'Senda þessum notanda tölvupóst',
 'emailuser-title-target' => 'Sendu þessum {{GENDER:$1|notanda}} tölvupóst',
 'emailuser-title-notarget' => 'Senda tölvupóst',
@@ -2149,7 +2149,7 @@ Póstfangið sem þú tilgreindir í [[Special:Preferences|stillingunum þínum]
 'emailsenttext' => 'Skilaboðin þín hafa verið send.',
 'emailuserfooter' => 'Þessi tölvupóstur var sendur af $1 til $2 með möguleikanum "Senda notanda tölvupóst" á {{SITENAME}}.',
 
-# User Messenger
+# wiki_User Messenger
 'usermessage-summary' => 'Skil eftir meldingu.',
 'usermessage-editor' => 'Meldinga sendiboði',
 
@@ -2160,7 +2160,7 @@ Póstfangið sem þú tilgreindir í [[Special:Preferences|stillingunum þínum]
 'nowatchlist' => 'Vaktlistinn er tómur.',
 'watchlistanontext' => 'Vinsamlegast $1 til að skoða eða breyta vaktlistanum þínum.',
 'watchnologin' => 'Óinnskráð(ur)',
-'watchnologintext' => 'Þú verður að vera [[Special:UserLogin|innskáð(ur)]] til að geta breytt vaktlistanum.',
+'watchnologintext' => 'Þú verður að vera [[Special:wiki_UserLogin|innskáð(ur)]] til að geta breytt vaktlistanum.',
 'addwatch' => 'Bæta á vaktlistann',
 'addedwatchtext' => 'Síðunni „[[:$1]]“ hefur verið bætt á [[Special:Watchlist|vaktlistann]] þinn.
 Frekari breytingar á henni eða spallsíðu hennar munu verða sýndar þar.',
@@ -2277,13 +2277,13 @@ Eyðing síðunnar gæti truflað vinnslu gangnasafns {{SITENAME}}; haltu áfram
 'rollbacklinkcount-morethan' => 'taka aftur fleiri en $1 {{PLURAL:$1|breytingu|breytingar}}',
 'rollbackfailed' => 'Mistókst að taka aftur',
 'cantrollback' => 'Ekki hægt að taka aftur breytingu, síðasti höfundur er eini höfundur þessarar síðu.',
-'alreadyrolled' => 'Ekki var hægt að taka síðustu breytingu [[:$1]] eftir [[User:$2|$2]] ([[User talk:$2|talk]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]) til baka;
+'alreadyrolled' => 'Ekki var hægt að taka síðustu breytingu [[:$1]] eftir [[wiki_User:$2|$2]] ([[wiki_User talk:$2|talk]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]) til baka;
 einhver annar hefur breytt síðunni eða tekið breytinguna til baka.
 
-Síðasta breyting síðunnar er frá [[User:$3|$3]] ([[User talk:$3|talk]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
+Síðasta breyting síðunnar er frá [[wiki_User:$3|$3]] ([[wiki_User talk:$3|talk]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
 'editcomment' => "Beytingarágripið var: \"''\$1''\".",
-'revertpage' => 'Tók aftur breytingar [[Special:Contributions/$2|$2]] ([[User talk:$2|spjall]]), breytt til síðustu útgáfu [[User:$1|$1]]',
-'revertpage-nouser' => 'Tók aftur breytingar (notendanafn fjarlægt) til síðustu útgáfu [[User:$1|$1]]',
+'revertpage' => 'Tók aftur breytingar [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|spjall]]), breytt til síðustu útgáfu [[wiki_User:$1|$1]]',
+'revertpage-nouser' => 'Tók aftur breytingar (notendanafn fjarlægt) til síðustu útgáfu [[wiki_User:$1|$1]]',
 'rollback-success' => 'Tók til baka breytingar eftir $1; núverandi $2.',
 
 # Edit tokens
@@ -2517,7 +2517,7 @@ Sjá [[Special:BlockList|bannaðir notendur og vistföng]] fyrir yfirlit yfir n�
 'unblockip' => 'Afbanna notanda',
 'unblockiptext' => 'Endurvekja skrifréttindi bannaðra notenda eða vistfanga.',
 'ipusubmit' => 'Afbanna',
-'unblocked' => '[[User:$1|$1]] hefur verið afbannaður',
+'unblocked' => '[[wiki_User:$1|$1]] hefur verið afbannaður',
 'unblocked-range' => '$1 hefur verið afbannaður',
 'unblocked-id' => 'Bann $1 hefur verið fjarlægt',
 'blocklist' => 'Bannaðir notendur og vistföng',
@@ -2550,7 +2550,7 @@ Sjá [[Special:BlockList|bannaðir notendur og vistföng]] fyrir yfirlit yfir n�
 'change-blocklink' => 'breyta bönnun',
 'contribslink' => 'framlög',
 'emaillink' => 'senda tölvupóst',
-'autoblocker' => 'Vistfang þitt er bannað vegna þess að það hefur nýlega verið notað af „[[User:$1|$1]]“.
+'autoblocker' => 'Vistfang þitt er bannað vegna þess að það hefur nýlega verið notað af „[[wiki_User:$1|$1]]“.
 Ástæðan fyrir því að $1 var bannaður er: „$2“',
 'blocklogpage' => 'Bönnunarskrá',
 'blocklog-showlog' => 'Notandinn hefur verið bannaður áður.
@@ -2641,7 +2641,7 @@ Ef síðan er vinsæl þá getur þessi aðgerð kallað fram viðbrögð annara
 'movearticle' => 'Færa síðu:',
 'moveuserpage-warning' => "'''Viðvörun:''' Þú ert í þann mund að færa notendasíðu. Athugaðu aðeins síðan verður færð og notendanafni hans verður '''ekki''' breytt.",
 'movenologin' => 'Óinnskráð(ur)',
-'movenologintext' => 'Þú verður að vera [[Special:UserLogin|innskráð(ur)]] til að geta fært síður.',
+'movenologintext' => 'Þú verður að vera [[Special:wiki_UserLogin|innskráð(ur)]] til að geta fært síður.',
 'movenotallowed' => 'Þú hefur ekki leyfi til að færa síður.',
 'movenotallowedfile' => 'Þú hefur ekki leyfi til að færa skrár.',
 'cant-move-user-page' => 'Þú hefur ekki leyfi til að færa notandasíðu (fyrir utan undirsíður).',
@@ -3400,7 +3400,7 @@ Athugaðu hvort ógild tákn séu í netfanginu þínu.
 Póstþjónninn skilaði: $1',
 'confirmemail_invalid' => 'Ógildur staðfestingarkóði. Hann gæti verið útrunninn.',
 'confirmemail_needlogin' => 'Þú verður að $1 til að staðfesta netfangið þitt.',
-'confirmemail_success' => 'Netfang þitt hefur verið staðfest. Þú getur nú [[Special:UserLogin|skráð þig inn]] og vafrað um wiki-kerfið.',
+'confirmemail_success' => 'Netfang þitt hefur verið staðfest. Þú getur nú [[Special:wiki_UserLogin|skráð þig inn]] og vafrað um wiki-kerfið.',
 'confirmemail_loggedin' => 'Netfang þitt hefur verið staðfest.',
 'confirmemail_error' => 'Eitthvað fór úrskeiðis við vistun staðfestingarinnar.',
 'confirmemail_subject' => 'Staðfesting netfangs á {{SITENAME}}',
@@ -3446,10 +3446,10 @@ $5
 
 # Delete conflict
 'deletedwhileediting' => "'''Viðvörun''': Þessari síðu var eytt eftir að þú fórst að breyta henni!",
-'confirmrecreate' => "Notandi [[User:$1|$1]] ([[User talk:$1|spjall]]) eyddi þessari síðu eftir að þú fórst að breyta henni út af:
+'confirmrecreate' => "Notandi [[wiki_User:$1|$1]] ([[wiki_User talk:$1|spjall]]) eyddi þessari síðu eftir að þú fórst að breyta henni út af:
 : ''$2''
 Vinsamlegast staðfestu að þú viljir endurvekja hana.",
-'confirmrecreate-noreason' => 'Notandinn [[User:$1|$1]] ([[User talk:$1|spjall]]) eyddi þessari síðu eftir að þú fórst að breyta henni.
+'confirmrecreate-noreason' => 'Notandinn [[wiki_User:$1|$1]] ([[wiki_User talk:$1|spjall]]) eyddi þessari síðu eftir að þú fórst að breyta henni.
 Vinsamlegast staðfestu að þú viljir endurvekja hana.',
 'recreate' => 'Endurvekja',
 

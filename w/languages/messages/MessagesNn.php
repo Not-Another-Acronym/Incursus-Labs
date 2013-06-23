@@ -291,9 +291,9 @@ $specialPageAliases = array(
 	'Unusedtemplates'           => array( 'Ubrukte_malar' ),
 	'Unwatchedpages'            => array( 'Uovervaka_sider' ),
 	'Upload'                    => array( 'Last_opp' ),
-	'Userlogin'                 => array( 'Logg_inn' ),
-	'Userlogout'                => array( 'Logg_ut' ),
-	'Userrights'                => array( 'Brukarrettar' ),
+	'wiki_Userlogin'                 => array( 'Logg_inn' ),
+	'wiki_Userlogout'                => array( 'Logg_ut' ),
+	'wiki_Userrights'                => array( 'Brukarrettar' ),
 	'Version'                   => array( 'Versjon' ),
 	'Wantedcategories'          => array( 'Etterspurde_kategoriar' ),
 	'Wantedfiles'               => array( 'Etterspurde_filer' ),
@@ -311,7 +311,7 @@ $separatorTransformTable = array(
 $linkTrail = '/^([æøåa-z]+)(.*)$/sDu';
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Strek under lenkjer:',
 'tog-justify' => 'Blokkjusterte avsnitt',
 'tog-hideminor' => 'Gøym småplukk i lista over siste endringar',
@@ -646,7 +646,7 @@ $1',
 Dei vanlegaste årsakene til denne feilen er ei lenkje til ein skilnad mellom forskjellige versjonar eller lenkjer til ein gammal versjon av ei side som har vorte sletta.
 
 Om det ikkje er tilfellet kan du ha funne ein feil i programvara.
-Meld gjerne problemet til ein [[Special:ListUsers/sysop|administrator]] og oppgje då adressa til sida.',
+Meld gjerne problemet til ein [[Special:Listwiki_Users/sysop|administrator]] og oppgje då adressa til sida.',
 'missingarticle-rev' => '(versjon $1)',
 'missingarticle-diff' => '(jamføring av versjon $1 og $2)',
 'readonly_lag' => 'Databasen er mellombels skriveverna for at databasetenarane skal kunna synkronisere seg mot kvarandre',
@@ -693,7 +693,7 @@ $2',
 'customcssprotected' => '↓Du har ikkje tilgang til å endre denne sida, fordi ho inneheld ein annan brukar sine personlege innstillingar.',
 'customjsprotected' => '↓Du har ikkje tilgang til å endra denne JavaScript-sida fordi ho inneheld ein annen brukar sine personlege innstillingar.',
 'ns-specialprotected' => 'Sider i {{ns:special}}-namnerommet kan ikkje endrast.',
-'titleprotected' => "Denne sidetittelen er verna mot oppretting av [[User:$1|$1]].
+'titleprotected' => "Denne sidetittelen er verna mot oppretting av [[wiki_User:$1|$1]].
 Grunnen som er gjeven er: ''$2''.",
 'filereadonlyerror' => 'Kan ikkje endra fila «$1» av di filsamlinga «$2» er skriveverna.
 
@@ -711,7 +711,7 @@ Administratoren som låste filsamlinga oppgav den fylgjande årsaka: «$3».',
 # Login and logout pages
 'logouttext' => "'''Du er no utlogga.'''
 
-Du kan no halde fram å bruke {{SITENAME}} anonymt, eller du kan [[Special:UserLogin|logge inn att]]  med same kontoen eller ein annan brukar kan logge inn.
+Du kan no halde fram å bruke {{SITENAME}} anonymt, eller du kan [[Special:wiki_UserLogin|logge inn att]]  med same kontoen eller ein annan brukar kan logge inn.
 Ver merksam på at nokre sider framleis kan visast fram som om du er innlogga fram til du slettar mellomlageret til nettlesaren din.",
 'welcomecreation' => '== Hjarteleg velkommen til {{SITENAME}}, $1! ==
 Brukarkontoen din er oppretta.
@@ -754,7 +754,7 @@ Sjå etter om du tek imot informasjonskapslar (cookies), last ned sida ein gong 
 'loginsuccesstitle' => 'Du er no innlogga',
 'loginsuccess' => 'Du er no innlogga som «$1».',
 'nosuchuser' => 'Det finst ikkje nokon brukar med brukarnamnet «$1».
-Brukarnamn skil mellom stor og liten bokstav. Sjekk at du har skrive brukarnamet rett eller [[Special:UserLogin/signup|opprett ein ny konto]].',
+Brukarnamn skil mellom stor og liten bokstav. Sjekk at du har skrive brukarnamet rett eller [[Special:wiki_UserLogin/signup|opprett ein ny konto]].',
 'nosuchusershort' => 'Det finst ikkje nokon brukar med brukarnamnet «$1». Sjekk at du har skrive rett.',
 'nouserspecified' => 'Du må oppgje eit brukarnamn.',
 'login-userblocked' => 'Denne brukaren er blokkert. Innlogging er ikkje tillate.',
@@ -933,7 +933,7 @@ Han kan ha vorten flytta eller sletta medan du såg på sida.',
 'loginreqlink' => 'logge inn',
 'loginreqpagetext' => 'Du lyt $1 for å lesa andre sider.',
 'accmailtitle' => 'Passord er sendt.',
-'accmailtext' => "Eit tilfeldig laga passord for [[User talk:$1|$1]] er sendt til $2.
+'accmailtext' => "Eit tilfeldig laga passord for [[wiki_User talk:$1|$1]] er sendt til $2.
 
 Passordet for den nye kontoen kan verta endra på ''[[Special:ChangePassword|endra passord]]''-sida etter innlogging.",
 'newarticle' => '(Ny)',
@@ -941,7 +941,7 @@ Passordet for den nye kontoen kan verta endra på ''[[Special:ChangePassword|end
 For å opprette sida, kan du skrive i boksen under (sjå [[{{MediaWiki:Helppage}}|hjelpesida]] for meir informasjon).
 Hamna du her ved ein feil, klikk på '''attende'''-knappen i nettlesaren din.",
 'anontalkpagetext' => "----''Dette er ei diskusjonsside for ein anonym brukar som ikkje har oppretta konto eller ikkje har logga inn.
-Vi er difor nøydde til å bruke den numeriske IP-adressa til å identifisere brukaren. Same IP-adresse kan vere knytt til fleire brukarar. Om du er ein anonym brukar og meiner at du har fått irrelevante kommentarar på ei slik side, [[Special:UserLogin/signup|opprett ein brukarkonto]] eller [[Special:UserLogin|logg inn]] slik at vi unngår framtidige forvekslingar med andre anonyme brukarar.''",
+Vi er difor nøydde til å bruke den numeriske IP-adressa til å identifisere brukaren. Same IP-adresse kan vere knytt til fleire brukarar. Om du er ein anonym brukar og meiner at du har fått irrelevante kommentarar på ei slik side, [[Special:wiki_UserLogin/signup|opprett ein brukarkonto]] eller [[Special:wiki_UserLogin|logg inn]] slik at vi unngår framtidige forvekslingar med andre anonyme brukarar.''",
 'noarticletext' => 'Det er nett no ikkje noko tekst på denne sida.
 Du kan [[Special:Search/{{PAGENAME}}|søkja etter sidetittelen]] i andre sider, <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} søkja i dei relaterte loggane]
 eller [{{fullurl:{{FULLPAGENAME}}|action=edit}} endra denne sida]</span>.',
@@ -1029,7 +1029,7 @@ Det siste loggelementet er oppgjeve under som referanse:",
 'edittools' => '<!-- Teksten her vert vist mellom tekstboksen og «Lagre»-knappen når ein endrar ei side. -->',
 'nocreatetitle' => 'Avgrensa sideoppretting',
 'nocreatetext' => '{{SITENAME}} har avgrensa tilgang til å opprette nye sider.
-Du kan gå attende og endre ei eksisterande side, [[Special:UserLogin|logge inn eller opprette ein brukarkonto]].',
+Du kan gå attende og endre ei eksisterande side, [[Special:wiki_UserLogin|logge inn eller opprette ein brukarkonto]].',
 'nocreate-loggedin' => 'Du har ikkje tilgang til å opprette nye sider.',
 'sectioneditnotsupported-title' => 'Endring av bolkar er ikkje støtta',
 'sectioneditnotsupported-text' => 'Endring av bolkar er ikkje støtta på denne sida.',
@@ -1076,11 +1076,11 @@ Desse parameterane har vorte utelatne.',
 'undo-success' => 'Endringa kan attenderullast. Ver venleg og sjå over skilnadene nedanfor for å vere sikker på at du vil attenderulle. Deretter kan du lagre attenderullinga.',
 'undo-failure' => 'Endringa kunne ikkje attenderullast grunna konflikt med endringar som er gjorde i mellomtida.',
 'undo-norev' => 'Endringa kunne ikkje fjernast fordi han ikkje finst eller vart sletta',
-'undo-summary' => 'Rullar attende versjon $1 av [[Special:Contributions/$2|$2]] ([[User talk:$2|diskusjon]])',
+'undo-summary' => 'Rullar attende versjon $1 av [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|diskusjon]])',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'Kan ikkje opprette brukarkonto',
-'cantcreateaccount-text' => "Kontooppretting frå denne IP-adressa ('''$1''') er blokkert av [[User:$3|$3]].
+'cantcreateaccount-text' => "Kontooppretting frå denne IP-adressa ('''$1''') er blokkert av [[wiki_User:$3|$3]].
 
 Grunnen som vart gjeven av $3 er ''$2''",
 
@@ -1338,7 +1338,7 @@ Ver merksam på at registra deira kan vera utdaterte.',
 'mypreferences' => 'Innstillingar',
 'prefs-edits' => 'Tal på endringar:',
 'prefsnologin' => 'Ikkje innlogga',
-'prefsnologintext' => 'Du må vere <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} logga inn]</span> for å endre brukarinnstillingane.',
+'prefsnologintext' => 'Du må vere <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} logga inn]</span> for å endre brukarinnstillingane.',
 'changepassword' => 'Skift passord',
 'prefs-skin' => 'Drakt',
 'skin-preview' => 'førehandsvis',
@@ -1448,16 +1448,16 @@ Dette kan ikkje tilbakestillast.',
 'prefs-displaywatchlist' => 'Val for vising',
 'prefs-diffs' => 'Skilnader',
 
-# User preference: e-mail validation using jQuery
+# wiki_User preference: e-mail validation using jQuery
 'email-address-validity-valid' => 'E-postadressa ser ut til å vera gyldig',
 'email-address-validity-invalid' => 'Skriv inn ei gyldig e-postaddresse.',
 
-# User rights
+# wiki_User rights
 'userrights' => 'Administrering av brukartilgang',
 'userrights-lookup-user' => 'Administrer brukargrupper',
 'userrights-user-editname' => 'Skriv inn brukarnamn:',
 'editusergroup' => 'Endre brukargrupper',
-'editinguser' => "Endrar brukarrettane til brukaren '''[[User:$1|$1]]''' $2",
+'editinguser' => "Endrar brukarrettane til brukaren '''[[wiki_User:$1|$1]]''' $2",
 'userrights-editusergroup' => 'Endre brukargrupper',
 'saveusergroups' => 'Lagre brukargrupper',
 'userrights-groupsmember' => 'Medlem av:',
@@ -1469,7 +1469,7 @@ Dette kan ikkje tilbakestillast.',
 'userrights-reason' => 'Årsak:',
 'userrights-no-interwiki' => 'Du har ikkje tilgang til å endre brukartilgangar på andre wikiar.',
 'userrights-nodatabase' => 'Databasen $1 finst ikkje eller er ikkje lokal.',
-'userrights-nologin' => 'Du må [[Special:UserLogin|logge inn]] med ein administrator- og/eller byråkratkonto for å endre brukartilgangar.',
+'userrights-nologin' => 'Du må [[Special:wiki_UserLogin|logge inn]] med ein administrator- og/eller byråkratkonto for å endre brukartilgangar.',
 'userrights-notallowed' => 'Kontoen din har ikkje løyve til å leggja til eller fjerna brukarrettar.',
 'userrights-changeable-col' => 'Grupper du kan endre',
 'userrights-unchangeable-col' => 'Grupper du ikkje kan endre',
@@ -1560,7 +1560,7 @@ Dette kan ikkje tilbakestillast.',
 'right-sendemail' => 'Senda e-post til andre brukarar',
 'right-passwordreset' => 'Sjå e-postar for passord som er stilte attende',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Brukartilgangslogg',
 'rightslogtext' => 'Dette er ein logg over endringar av brukartilgang.',
 'rightslogentry' => 'endra brukartilgangen til $1 frå $2 til $3',
@@ -1656,7 +1656,7 @@ Dette kan ikkje tilbakestillast.',
 'reuploaddesc' => 'Attende til opplastingsskjemaet.',
 'upload-tryagain' => 'Send inn endra filskildring',
 'uploadnologin' => 'Ikkje innlogga',
-'uploadnologintext' => 'Du lyt vera [[Special:UserLogin|innlogga]] for å kunna laste opp filer.',
+'uploadnologintext' => 'Du lyt vera [[Special:wiki_UserLogin|innlogga]] for å kunna laste opp filer.',
 'upload_directory_missing' => 'Opplastingsmappa ($1) manglar og kunne ikkje opprettast av tenaren.',
 'upload_directory_read_only' => 'Opplastingsmappa ($1) er skriveverna.',
 'uploaderror' => 'Feil under opplasting av fil',
@@ -1782,9 +1782,9 @@ $1',
 'upload-proto-error' => 'Feil protokoll',
 'upload-proto-error-text' => 'Fjernopplasting krev nettadresser som byrjar med <code>http://</code> eller <code>ftp://</code>.',
 'upload-file-error' => 'Intern feil',
-'upload-file-error-text' => 'Ein intern feil oppstod under forsøk på å lage ei mellombels fil på tenaren. Ver venleg og ta kontakt med ein [[Special:ListUsers/sysop|administrator]].',
+'upload-file-error-text' => 'Ein intern feil oppstod under forsøk på å lage ei mellombels fil på tenaren. Ver venleg og ta kontakt med ein [[Special:Listwiki_Users/sysop|administrator]].',
 'upload-misc-error' => 'Ukjend feil ved opplastinga',
-'upload-misc-error-text' => 'Ein ukjend feil oppstod under opplastinga. Ver venleg og stadfest at nettadressa er gyldig og tilgjengeleg, og prøv ein gong til. Dersom problemet held fram, ta kontakt med ein [[Special:ListUsers/sysop|administrator]].',
+'upload-misc-error-text' => 'Ein ukjend feil oppstod under opplastinga. Ver venleg og stadfest at nettadressa er gyldig og tilgjengeleg, og prøv ein gong til. Dersom problemet held fram, ta kontakt med ein [[Special:Listwiki_Users/sysop|administrator]].',
 'upload-too-many-redirects' => 'URL-en inneheldt for mange omdirigeringar',
 'upload-unknown-size' => 'Ukjend storleik',
 'upload-http-error' => 'Ein HTTP-feil oppstod: $1',
@@ -2019,7 +2019,7 @@ Du vil kan henda endra skildringa på [$2 filskildringssida] hennar der.',
 'statistics-views-total' => 'Totalt visningstal',
 'statistics-views-total-desc' => 'Visingar av sider som ikkje finst og spesialsider er ikkje tekne med',
 'statistics-views-peredit' => 'Visingar per endring',
-'statistics-users' => 'Registrerte [[Special:ListUsers|brukarar]]',
+'statistics-users' => 'Registrerte [[Special:Listwiki_Users|brukarar]]',
 'statistics-users-active' => 'Aktive brukarar',
 'statistics-users-active-desc' => 'Brukarar som har utført handlingar {{PLURAL:$1|i dag|dei siste $1 dagane}}',
 'statistics-mostpopular' => 'Mest viste sider',
@@ -2183,13 +2183,13 @@ Støtta protokollar: <code>$1</code> (nyttar http:// som standard om ingen proto
 'linksearch-line' => '$2 lenkjer til $1',
 'linksearch-error' => 'Jokerteikn kan berre nyttast føre tenarnamnet.',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => 'Vis brukarnamna frå og med:',
 'listusers-submit' => 'Vis',
 'listusers-noresult' => 'Ingen brukarnamn vart funne.',
 'listusers-blocked' => '(konto blokkert)',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'Liste over aktive brukarar',
 'activeusers-intro' => 'Dette er ei liste over brukarar som har hatt ei eller anna form for aktivitet innanfor {{PLURAL:$1|den siste dagen|dei siste dagane}}.',
 'activeusers-count' => '{{PLURAL:$1|Éi handling|$1 handlingar}} {{PLURAL:$3|det siste døgeret|dei siste $3 døgra}}',
@@ -2222,7 +2222,7 @@ Støtta protokollar: <code>$1</code> (nyttar http:// som standard om ingen proto
 
 # E-mail user
 'mailnologin' => 'Inga avsendaradresse',
-'mailnologintext' => 'Du lyt vera [[Special:UserLogin|innlogga]] og ha ei gyldig e-postadresse sett i [[Special:Preferences|brukarinnstillingane]] for å sende e-post åt andre brukarar.',
+'mailnologintext' => 'Du lyt vera [[Special:wiki_UserLogin|innlogga]] og ha ei gyldig e-postadresse sett i [[Special:Preferences|brukarinnstillingane]] for å sende e-post åt andre brukarar.',
 'emailuser' => 'Send e-post åt denne brukaren',
 'emailuser-title-target' => 'Send epost åt {{GENDER:$1|brukaren}}',
 'emailuser-title-notarget' => 'Send e-post åt brukar',
@@ -2253,7 +2253,7 @@ E-postadressa du har sett i [[Special:Preferences|innstillingane dine]] vil dukk
 'emailsenttext' => 'E-posten er sendt.',
 'emailuserfooter' => 'E-posten vart sendt av $1 til $2 via «Send e-post»-funksjonen på {{SITENAME}}.',
 
-# User Messenger
+# wiki_User Messenger
 'usermessage-summary' => 'Lèt att ei systemmelding.',
 'usermessage-editor' => 'Systembodbringar',
 
@@ -2264,7 +2264,7 @@ E-postadressa du har sett i [[Special:Preferences|innstillingane dine]] vil dukk
 'nowatchlist' => 'Du har ikkje noko i overvakingslista di.',
 'watchlistanontext' => 'Du lyt $1 for å vise eller endre sider på overvakingslista di.',
 'watchnologin' => 'Ikkje innlogga',
-'watchnologintext' => 'Du lyt vera [[Special:UserLogin|innlogga]] for å kunna endre overvakingslista.',
+'watchnologintext' => 'Du lyt vera [[Special:wiki_UserLogin|innlogga]] for å kunna endre overvakingslista.',
 'addwatch' => '↓Legg til i overvakingslista',
 'addedwatchtext' => 'Sida «[[:$1]]» er lagd til i [[Special:Watchlist|overvakingslista]] di. Framtidige endringar av henne og den tilhøyrande diskusjonssida hennar vil bli oppførde der.',
 'removewatch' => 'Fjerna frå overvakingslista',
@@ -2370,12 +2370,12 @@ Attendemelding og hjelp:
 'rollbacklinkcount-morethan' => 'rull attende meir enn {{PLURAL:$1|éi endring|$1 endringar}}',
 'rollbackfailed' => 'Kunne ikkje rulle attende',
 'cantrollback' => 'Kan ikkje rulle attende fordi den siste brukaren er den einaste forfattaren.',
-'alreadyrolled' => 'Kan ikkje rulla attende den siste endringa på [[:$1]] gjord av [[User:$2|$2]] ([[User talk:$2|diskusjon]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]) av di nokon andre alt har endra eller attenderulla sida.
+'alreadyrolled' => 'Kan ikkje rulla attende den siste endringa på [[:$1]] gjord av [[wiki_User:$2|$2]] ([[wiki_User talk:$2|diskusjon]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]) av di nokon andre alt har endra eller attenderulla sida.
 
-Den siste endringa vart gjord av [[User:$3|$3]] ([[User talk:$3|brukardiskusjon]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
+Den siste endringa vart gjord av [[wiki_User:$3|$3]] ([[wiki_User talk:$3|brukardiskusjon]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
 'editcomment' => "Samandraget for endringa var: «''$1''».",
-'revertpage' => 'Attenderulla endring gjord av [[Special:Contributions/$2|$2]] ([[User talk:$2|diskusjon]]) til siste versjonen av [[User:$1|$1]]',
-'revertpage-nouser' => 'Tilbakestilte endringar av (brukarnamn fjerna) til den siste versjonen av [[User:$1|$1]]',
+'revertpage' => 'Attenderulla endring gjord av [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|diskusjon]]) til siste versjonen av [[wiki_User:$1|$1]]',
+'revertpage-nouser' => 'Tilbakestilte endringar av (brukarnamn fjerna) til den siste versjonen av [[wiki_User:$1|$1]]',
 'rollback-success' => 'Rulla attende endringane av $1, attende til siste versjonen av $2.',
 
 # Edit tokens
@@ -2595,7 +2595,7 @@ Sjå [[Special:BlockList|blokkeringslista]] for alle blokkeringane.',
 'unblockip' => 'Opphev blokkering',
 'unblockiptext' => 'Bruk skjemaet nedanfor for å oppheve blokkeringa av ein tidlegare blokkert brukar.',
 'ipusubmit' => 'Opphev blokkering',
-'unblocked' => 'Blokkeringa av [[User:$1|$1]] er oppheva',
+'unblocked' => 'Blokkeringa av [[wiki_User:$1|$1]] er oppheva',
 'unblocked-range' => '$1 vart avblokkert',
 'unblocked-id' => 'Blokkering $1 er oppheva',
 'blocklist' => 'Blokkerte brukarar',
@@ -2628,7 +2628,7 @@ Sjå [[Special:BlockList|blokkeringslista]] for alle blokkeringane.',
 'change-blocklink' => 'endra blokkering',
 'contribslink' => 'bidrag',
 'emaillink' => 'send e-post',
-'autoblocker' => 'Automatisk blokkert fordi du deler IP-adresse med [[User:$1|$1]]. Grunngjeving gjeve for blokkeringa av $1 var: «$2».',
+'autoblocker' => 'Automatisk blokkert fordi du deler IP-adresse med [[wiki_User:$1|$1]]. Grunngjeving gjeve for blokkeringa av $1 var: «$2».',
 'blocklogpage' => 'Blokkeringslogg',
 'blocklog-showlog' => 'Denne brukaren har tidlegare vorte blokkert.
 Blokkeringsloggen er sett opp nedanfor, som referanse.',
@@ -2719,7 +2719,7 @@ I desse falla lyt du flytta eller fletta sida manuelt, om ynskjeleg.",
 'movearticle' => 'Flytt side:',
 'moveuserpage-warning' => "'''Åtvaring:''' Du er i ferd med å flytta ei brukarside. Merk at berre sida vert flytt og at brukarnamnet '''ikkje''' vert endra.",
 'movenologin' => 'Ikkje innlogga',
-'movenologintext' => 'Du lyt vera registrert brukar og vera [[Special:UserLogin|innlogga]] for å flytte ei side.',
+'movenologintext' => 'Du lyt vera registrert brukar og vera [[Special:wiki_UserLogin|innlogga]] for å flytte ei side.',
 'movenotallowed' => 'Du har ikkje tilgang til å flytte sider.',
 'movenotallowedfile' => 'Du har ikkje løyve til å flytta filer.',
 'cant-move-user-page' => 'Du har ikkje løyve til å flytte brukarsider (bortsett frå undersider).',
@@ -3621,10 +3621,10 @@ Denne stadfestingskoden vert forelda $4.',
 
 # Delete conflict
 'deletedwhileediting' => "'''Åtvaring:''' Denne sida har vorte sletta etter du starta å endre henne!",
-'confirmrecreate' => "Brukaren «[[User:$1|$1]]» ([[User talk:$1|brukardiskusjon]]) sletta denne sida medan du endra henne, og gav denne grunnen: ''$2''
+'confirmrecreate' => "Brukaren «[[wiki_User:$1|$1]]» ([[wiki_User talk:$1|brukardiskusjon]]) sletta denne sida medan du endra henne, og gav denne grunnen: ''$2''
 
 Du må stadfeste at du verkeleg vil nyopprette denne sida.",
-'confirmrecreate-noreason' => 'Brukaren [[User:$1|$1]] ([[User talk:$1|diskusjon]]) sletta sida etter at du byrja å endra henne. Stadfest at du verkeleg ynskjer å oppretta sida på nytt.',
+'confirmrecreate-noreason' => 'Brukaren [[wiki_User:$1|$1]] ([[wiki_User talk:$1|diskusjon]]) sletta sida etter at du byrja å endra henne. Stadfest at du verkeleg ynskjer å oppretta sida på nytt.',
 'recreate' => 'Attopprett',
 
 # action=purge

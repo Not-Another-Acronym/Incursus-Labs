@@ -67,7 +67,7 @@ $specialPageAliases = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Binadlisan nga mga sumpay:',
 'tog-justify' => 'Ihusto ang mga parapo',
 'tog-hideminor' => 'Ipakita ang gamayng pag-usab sa mga bag-ong giusab',
@@ -388,7 +388,7 @@ Ang tagdumala nga nag-lock niini mihatag niining eksplanasyon: $1',
 Kasagaran nahitabo kini tungod sa pagsunod og sumpay nga dugay na nga diff o kaagi sa panid nga natangtang na.
 
 Kon dili kini ang kaso, mamahimong nakatagboka og bug sa software.
-Palihog ireport kini sa usa ka [[Special:ListUsers/sysop|administrador]], hinumdomi ang URL.',
+Palihog ireport kini sa usa ka [[Special:Listwiki_Users/sysop|administrador]], hinumdomi ang URL.',
 'missingarticle-rev' => '(rebisyon#: $1)',
 'missingarticle-diff' => '(Diff: $1, $2)',
 'readonly_lag' => 'Ang database awtomatikong na-lock samtang ang mga slave database server mo-catch up sa master',
@@ -432,7 +432,7 @@ Para sa mga paghubad, palihog ikonsider ang paggamit sa [//translatewiki.net/wik
 $2',
 'namespaceprotected' => "Wala kay permiso nga mag-usab sa mga panid sa '''$1''' nga ngalang espasyo.",
 'ns-specialprotected' => 'Ang mga espesyal nga panid dili mausban.',
-'titleprotected' => 'Ang kining titulo giprotektahan sa paghimo ni [[User:$1|$1]].
+'titleprotected' => 'Ang kining titulo giprotektahan sa paghimo ni [[wiki_User:$1|$1]].
 Ang rason nga gihatag mao ang "\'\'$2\'\'".',
 
 # Virus scanner
@@ -443,7 +443,7 @@ Ang rason nga gihatag mao ang "\'\'$2\'\'".',
 # Login and logout pages
 'logouttext' => "'''Nakabiya ka na.'''
 
-Mahimo kang magpadayon sa paggamit sa {{SITENAME}} bisan wala ka magpaila o puyde usab nga [[Special:UserLogin|mag-log in ka'g usab]] o isip laing gumagamit. Palihog hinumdomi nga may ubang mga panid nga magpakita sama nga ikaw naka-log in pa; kini tungod kay wala pa nimo malimpiyohi ang cache sa imong brawser.",
+Mahimo kang magpadayon sa paggamit sa {{SITENAME}} bisan wala ka magpaila o puyde usab nga [[Special:wiki_UserLogin|mag-log in ka'g usab]] o isip laing gumagamit. Palihog hinumdomi nga may ubang mga panid nga magpakita sama nga ikaw naka-log in pa; kini tungod kay wala pa nimo malimpiyohi ang cache sa imong brawser.",
 'welcomecreation' => '== Maayong pag-abot, $1! ==
 Nahimo na ang imong akawnt.
 Ayaw kalimot sa pag-usab sa imong [[Special:Preferences|{{SITENAME}} mga preperensiya]].',
@@ -482,7 +482,7 @@ Palihog i-enable kini, ug sulayi'g balik.",
 'loginsuccess' => "'''Nailhan ka na sa {{SITENAME}} isip \"\$1\".'''",
 'nosuchuser' => 'Walay gumagamit nga may pangalang "$1".
 Case sensitive ang mga user name.
-I-tsek ang imong espeling, o [[Special:UserLogin/signup|paghimo og bag-ong akawnt]].',
+I-tsek ang imong espeling, o [[Special:wiki_UserLogin/signup|paghimo og bag-ong akawnt]].',
 'nosuchusershort' => 'Walay gumagamit nga may pangalang "$1".
 I-tsek ang imong espeling.',
 'nouserspecified' => 'Kinahanglan mag-specify ka og username.',
@@ -567,11 +567,11 @@ Ang maong mga argumento natangtang.",
 Palihog og tsek sa komparison sa ubos aron ma-tsek nga kini gyud ang imong gustong mahimo, ug unya tipigi ang mga pag-usab sa ubos aron mahuman ang pag-way-bili sa pag-usab.',
 'undo-failure' => 'Ang pag-usab dili puyde mapa-way-bili tungod sa mga naka-conflict nga intermediate nga mga pag-usab.',
 'undo-norev' => 'Ang pag-usab dili puyde mapa-way-bili tungod kay wala pa ni mahimo o kaha natangtang na kini.',
-'undo-summary' => 'Giway-bili  ang rebisyon  $1 ni [[Special:Contributions/$2|$2]] ([[User talk:$2|Hisgot]])',
+'undo-summary' => 'Giway-bili  ang rebisyon  $1 ni [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Hisgot]])',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'Dili makahimo og akawnt',
-'cantcreateaccount-text' => "Ang paghimo og akawnt gikan niining IP address ('''$1''') gi-block ni [[User:$3|$3]].
+'cantcreateaccount-text' => "Ang paghimo og akawnt gikan niining IP address ('''$1''') gi-block ni [[wiki_User:$3|$3]].
 
 Ang rason nga gihatag ni $3 mao nga ''$2''",
 
@@ -754,7 +754,7 @@ Hinumdomi nga ang ilang indeks sa sulod sa {{SITENAME}} mahimong dugay-dugay na.
 'mypreferences' => 'Akong preperensiya',
 'prefs-edits' => 'Gidaghanon sa nausab:',
 'prefsnologin' => 'Wala maka-log-in',
-'prefsnologintext' => 'Kinahanglan ikaw <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} naka-log-in]</span> aron ma-set ang imong mga preperensiya.',
+'prefsnologintext' => 'Kinahanglan ikaw <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} naka-log-in]</span> aron ma-set ang imong mga preperensiya.',
 'changepassword' => 'Usba ang pasword',
 'prefs-skin' => 'Panit',
 'skin-preview' => 'Paunang tan-aw',
@@ -817,7 +817,7 @@ Dili kini puyde mabalik.',
 'prefs-emailconfirm-label' => 'Kompirmasyon sa e-mail:',
 'prefs-textboxsize' => 'Size sa editing window',
 'youremail' => 'E-mail:',
-'username' => 'Username:',
+'username' => 'wiki_Username:',
 'uid' => 'ID sa gumagamit:',
 'prefs-memberingroups' => 'Miyembro sa {{PLURAL:$1|grupo|mga grupo}}:',
 'prefs-registration' => 'Oras sa pagparehistro:',
@@ -848,7 +848,7 @@ Kon gipili nimo nga ihatag kini, gamiton kini aron pasidunggan ka sa imong mga t
 
 'grouppage-sysop' => '{{ns:project}}:Mga tigdumala',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Log sa mga katungod sa gumagamit',
 'rightsnone' => '(wala)',
 

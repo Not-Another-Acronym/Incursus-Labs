@@ -60,7 +60,7 @@ interface LogEntry {
 
 	/**
 	 * Get the user for performed this action.
-	 * @return User
+	 * @return wiki_User
 	 */
 	public function getPerformer();
 
@@ -235,13 +235,13 @@ class DatabaseLogEntry extends LogEntryBase {
 		$userId = (int) $this->row->log_user;
 		if ( $userId !== 0 ) { // logged-in users
 			if ( isset( $this->row->user_name ) ) {
-				return User::newFromRow( $this->row );
+				return wiki_User::newFromRow( $this->row );
 			} else {
-				return User::newFromId( $userId );
+				return wiki_User::newFromId( $userId );
 			}
 		} else { // IP users
 			$userText = $this->row->log_user_text;
-			return User::newFromName( $userText, false );
+			return wiki_User::newFromName( $userText, false );
 		}
 	}
 
@@ -289,11 +289,11 @@ class RCDatabaseLogEntry extends DatabaseLogEntry {
 	public function getPerformer() {
 		$userId = (int) $this->row->rc_user;
 		if ( $userId !== 0 ) {
-			return User::newFromId( $userId );
+			return wiki_User::newFromId( $userId );
 		} else {
 			$userText = $this->row->rc_user_text;
 			// Might be an IP, don't validate the username
-			return User::newFromName( $userText, false );
+			return wiki_User::newFromName( $userText, false );
 		}
 	}
 
@@ -327,7 +327,7 @@ class ManualLogEntry extends LogEntryBase {
 	protected $type; ///!< @var string
 	protected $subtype; ///!< @var string
 	protected $parameters = array(); ///!< @var array
-	protected $performer; ///!< @var User
+	protected $performer; ///!< @var wiki_User
 	protected $target; ///!< @var Title
 	protected $timestamp; ///!< @var string
 	protected $comment = ''; ///!< @var string
@@ -371,9 +371,9 @@ class ManualLogEntry extends LogEntryBase {
 	 * 
 	 * @since 1.19
 	 * 
-	 * @param User $performer
+	 * @param wiki_User $performer
 	 */
-	public function setPerformer( User $performer ) {
+	public function setPerformer( wiki_User $performer ) {
 		$this->performer = $performer;
 	}
 
@@ -522,7 +522,7 @@ class ManualLogEntry extends LogEntryBase {
 	}
 
 	/**
-	 * @return User
+	 * @return wiki_User
 	 */
 	public function getPerformer() {
 		return $this->performer;

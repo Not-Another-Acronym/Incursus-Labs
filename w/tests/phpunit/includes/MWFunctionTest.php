@@ -2,7 +2,7 @@
 
 class MWFunctionTest extends MediaWikiTestCase {
 	
-	function testCallUserFuncWorkarounds() {
+	function testCallwiki_UserFuncWorkarounds() {
 		
 		$this->assertEquals( 
 			call_user_func( array( 'MWFunctionTest', 'someMethod' ) ),

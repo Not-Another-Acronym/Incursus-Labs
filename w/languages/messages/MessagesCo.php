@@ -243,8 +243,8 @@ U to indirizzu IP serà registratu indu a cronolugia di ista pagina.",
 'yourvariant' => 'Variante',
 'yournick' => 'Signatura pè e discussioni:',
 
-# User rights
-'editinguser' => "Mudifica di '''[[User:$1|$1]]''' ([[User talk:$1|{{int:talkpagelinktext}}]]{{int:pipe-separator}}[[Special:Contributions/$1|{{int:contribslink}}]])",
+# wiki_User rights
+'editinguser' => "Mudifica di '''[[wiki_User:$1|$1]]''' ([[wiki_User talk:$1|{{int:talkpagelinktext}}]]{{int:pipe-separator}}[[Special:Contributions/$1|{{int:contribslink}}]])",
 'userrights-groupsmember' => 'Membru di:',
 'userrights-reason' => 'Mutivu:',
 
@@ -358,7 +358,7 @@ U to indirizzu IP serà registratu indu a cronolugia di ista pagina.",
 'linksearch-ns' => 'Spaziu:',
 'linksearch-ok' => 'Ricerca',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusers-submit' => 'Mustrà',
 
 # E-mail user

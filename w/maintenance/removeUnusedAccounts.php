@@ -59,7 +59,7 @@ class RemoveUnusedAccounts extends Maintenance {
 		$touchedSeconds = 86400 * $touched;
 		foreach ( $res as $row ) {
 			# Check the account, but ignore it if it's within a $excludedGroups group or if it's touched within the $touchedSeconds seconds.
-			$instance = User::newFromId( $row->user_id );
+			$instance = wiki_User::newFromId( $row->user_id );
 			if ( count( array_intersect( $instance->getEffectiveGroups(), $excludedGroups ) ) == 0
 				&& $this->isInactiveAccount( $row->user_id, true )
 				&& wfTimestamp( TS_UNIX, $row->user_touched ) < wfTimestamp( TS_UNIX, time() - $touchedSeconds )
@@ -91,7 +91,7 @@ class RemoveUnusedAccounts extends Maintenance {
 	 * Could the specified user account be deemed inactive?
 	 * (No edits, no deleted edits, no log entries, no current/old uploads)
 	 *
-	 * @param $id User's ID
+	 * @param $id wiki_User's ID
 	 * @param $master bool Perform checking on the master
 	 * @return bool
 	 */

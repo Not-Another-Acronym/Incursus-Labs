@@ -40,7 +40,7 @@ class OracleInstaller extends DatabaseInstaller {
 	protected $internalDefaults = array(
 		'_OracleDefTS' => 'USERS',
 		'_OracleTempTS' => 'TEMP',
-		'_InstallUser' => 'SYSDBA',
+		'_Installwiki_User' => 'SYSDBA',
 	);
 
 	public $minimumVersion = '9.0.1'; // 9iR1
@@ -68,13 +68,13 @@ class OracleInstaller extends DatabaseInstaller {
 			$this->getTextBox( '_OracleTempTS', 'config-oracle-temp-ts', array(), $this->parent->getHelpBox( 'config-db-oracle-help' ) ) .
 			Html::closeElement( 'fieldset' ) .
 			$this->parent->getWarningBox( wfMessage( 'config-db-account-oracle-warn' )->text() ).
-			$this->getInstallUserBox().
-			$this->getWebUserBox();
+			$this->getInstallwiki_UserBox().
+			$this->getWebwiki_UserBox();
 	}
 
-	public function submitInstallUserBox() {
-		parent::submitInstallUserBox();
-		$this->parent->setVar( '_InstallDBname', $this->getVar( '_InstallUser' ) );
+	public function submitInstallwiki_UserBox() {
+		parent::submitInstallwiki_UserBox();
+		$this->parent->setVar( '_InstallDBname', $this->getVar( '_Installwiki_User' ) );
 		return Status::newGood();
 	}
 
@@ -98,7 +98,7 @@ class OracleInstaller extends DatabaseInstaller {
 		}
 
 		// Submit user box
-		$status = $this->submitInstallUserBox();
+		$status = $this->submitInstallwiki_UserBox();
 		if ( !$status->isOK() ) {
 			return $status;
 		}
@@ -108,9 +108,9 @@ class OracleInstaller extends DatabaseInstaller {
 		$status = $this->getConnection();
 		if ( !$status->isOK() ) {
 			if ( $this->connError == 28009 ) {
-				// _InstallUser seems to be a SYSDBA
+				// _Installwiki_User seems to be a SYSDBA
 				// Scenario 2: Create user with SYSDBA and install with new user
-				$status = $this->submitWebUserBox();
+				$status = $this->submitWebwiki_UserBox();
 				if ( !$status->isOK() ) {
 					return $status;
 				}
@@ -127,7 +127,7 @@ class OracleInstaller extends DatabaseInstaller {
 		} else {
 			// check for web user credentials
 			// Scenario 3: Install with a priviliged user but use a restricted user
-			$statusIS3 = $this->submitWebUserBox();
+			$statusIS3 = $this->submitWebwiki_UserBox();
 			if ( !$statusIS3->isOK() ) {
 				return $statusIS3;
 			}
@@ -152,7 +152,7 @@ class OracleInstaller extends DatabaseInstaller {
 		try {
 			$db = new DatabaseOracle(
 				$this->getVar( 'wgDBserver' ),
-				$this->getVar( '_InstallUser' ),
+				$this->getVar( '_Installwiki_User' ),
 				$this->getVar( '_InstallPassword' ),
 				$this->getVar( '_InstallDBname' ),
 				0,
@@ -171,7 +171,7 @@ class OracleInstaller extends DatabaseInstaller {
 		try {
 			$db = new DatabaseOracle(
 				$this->getVar( 'wgDBserver' ),
-				$this->getVar( '_InstallUser' ),
+				$this->getVar( '_Installwiki_User' ),
 				$this->getVar( '_InstallPassword' ),
 				$this->getVar( '_InstallDBname' ),
 				DBO_SYSDBA,
@@ -197,7 +197,7 @@ class OracleInstaller extends DatabaseInstaller {
 		# Add our user callback to installSteps, right before the tables are created.
 		$callback = array(
 			'name' => 'user',
-			'callback' => array( $this, 'setupUser' )
+			'callback' => array( $this, 'setupwiki_User' )
 		);
 		$this->parent->addInstallStep( $callback, 'database' );
 	}
@@ -208,7 +208,7 @@ class OracleInstaller extends DatabaseInstaller {
 		return $status;
 	}
 
-	public function setupUser() {
+	public function setupwiki_User() {
 		global $IP;
 
 		if ( !$this->getVar( '_CreateDBAccount' ) ) {
@@ -244,10 +244,10 @@ class OracleInstaller extends DatabaseInstaller {
 		if ($status->isOK()) {
 			// user created or already existing, switching back to a normal connection
 			// as the new user has all needed privileges to setup the rest of the schema
-			// i will be using that user as _InstallUser from this point on
+			// i will be using that user as _Installwiki_User from this point on
 			$this->db->close();
 			$this->db = false;
-			$this->parent->setVar( '_InstallUser', $this->getVar( 'wgDBuser' ) );
+			$this->parent->setVar( '_Installwiki_User', $this->getVar( 'wgDBuser' ) );
 			$this->parent->setVar( '_InstallPassword', $this->getVar( 'wgDBpassword' ) );
 			$this->parent->setVar( '_InstallDBname', $this->getVar( 'wgDBuser' ) );
 			$status = $this->getConnection();

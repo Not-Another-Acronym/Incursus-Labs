@@ -15,7 +15,7 @@ QUnit.test( 'user status', 9, function ( assert ) {
 	 */
 
 	// Forge an anonymous user:
-	mw.config.set( 'wgUserName', null );
+	mw.config.set( 'wgwiki_UserName', null );
 
 	assert.strictEqual( mw.user.getName(), null, 'user.getName() returns null when anonymous' );
 	assert.strictEqual( mw.user.name(), null, 'user.name() compatibility' );
@@ -23,7 +23,7 @@ QUnit.test( 'user status', 9, function ( assert ) {
 	assert.assertTrue( mw.user.anonymous(), 'user.anonymous() compatibility' );
 
 	// Not part of startUp module
-	mw.config.set( 'wgUserName', 'John' );
+	mw.config.set( 'wgwiki_UserName', 'John' );
 
 	assert.equal( mw.user.getName(), 'John', 'user.getName() returns username when logged-in' );
 	assert.equal( mw.user.name(), 'John', 'user.name() compatibility' );
@@ -40,7 +40,7 @@ QUnit.asyncTest( 'getGroups', 3, function ( assert ) {
 		assert.notStrictEqual( $.inArray( '*', groups ), -1, '"*"" is in the list' );
 		// Sort needed because of different methods if creating the arrays,
 		// only the content matters.
-		assert.deepEqual( groups.sort(), mw.config.get( 'wgUserGroups' ).sort(), 'Array contains all groups, just like wgUserGroups' );
+		assert.deepEqual( groups.sort(), mw.config.get( 'wgwiki_UserGroups' ).sort(), 'Array contains all groups, just like wgwiki_UserGroups' );
 		QUnit.start();
 	});
 });

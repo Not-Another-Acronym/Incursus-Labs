@@ -14,7 +14,7 @@
  */
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-showtoolbar' => 'Dïrregesïeve vuesehth (JavaScript)',
 'tog-fancysig' => 'Saajpe singnatuvreh (namhtah jïjtsistie lïenghke)',
 
@@ -291,7 +291,7 @@ Datne luhpede mijjieh aaj datne tjaala tjaalege jïjtje, jallh kåpieeret raejes
 'template-protected' => '(vaarjeleme)',
 'template-semiprotected' => '(lehkie-vaarjelidh)',
 'nocreatetext' => '{{SITENAME}} åtna gaertjiedidh nuepieh ahte skaepede orre bielieh.
-Dov dorje värrhtoedimmie gååvnese bielieh, jallh [[Special:UserLogin|logge sïjse jallh skaepede nuhtjien]].',
+Dov dorje värrhtoedimmie gååvnese bielieh, jallh [[Special:wiki_UserLogin|logge sïjse jallh skaepede nuhtjien]].',
 
 # History pages
 'viewpagelogs' => 'Vuesehte loggeh ihke dïhte bielie',
@@ -352,8 +352,8 @@ Dov dorje värrhtoedimmie gååvnese bielieh, jallh [[Special:UserLogin|logge s�
 'email' => 'E-påaste',
 'prefs-help-realname' => 'Ov nomme galkedh ijje tjaeledh. Bïjre datne veeljeme tjaeledh dov ov nomme, båetedh dïhte nuhtjie ihke tjaeledh dov barkoe.',
 
-# User rights
-'editinguser' => "Värrhtoedimmie nuhtjien '''[[User:$1|$1]]''' ([[User talk:$1|{{int:talkpagelinktext}}]] | [[Special:Contributions/$1|{{int:contribslink}}]])",
+# wiki_User rights
+'editinguser' => "Värrhtoedimmie nuhtjien '''[[wiki_User:$1|$1]]''' ([[wiki_User talk:$1|{{int:talkpagelinktext}}]] | [[Special:Contributions/$1|{{int:contribslink}}]])",
 
 # Groups
 'group' => 'Tjïerte:',
@@ -365,7 +365,7 @@ Dov dorje värrhtoedimmie gååvnese bielieh, jallh [[Special:UserLogin|logge s�
 
 'grouppage-sysop' => '{{ns:project}}:Reeredh',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Nuhtjienreaktah logge',
 
 # Recent changes
@@ -530,7 +530,7 @@ Dov dorje värrhtoedimmie gååvnese bielieh, jallh [[Special:UserLogin|logge s�
 # Special:Categories
 'categories' => 'Karegorijeh',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusers-submit' => 'Vuesehte',
 
 # E-mail user

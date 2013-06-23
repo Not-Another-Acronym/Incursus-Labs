@@ -311,9 +311,9 @@ $specialPageAliases = array(
 	'Unwatchedpages'            => array( 'דפים_שאינם_במעקב' ),
 	'Upload'                    => array( 'העלאה', 'העלאת_קובץ_לשרת' ),
 	'UploadStash'               => array( 'מאגר_העלאות' ),
-	'Userlogin'                 => array( 'כניסה_לחשבון', 'כניסה', 'כניסה_/_הרשמה_לחשבון' ),
-	'Userlogout'                => array( 'יציאה_מהחשבון', 'יציאה' ),
-	'Userrights'                => array( 'ניהול_הרשאות_משתמש', 'הפיכת_משתמש_למפעיל_מערכת', 'הענקת_או_ביטול_הרשאת_בוט' ),
+	'wiki_Userlogin'                 => array( 'כניסה_לחשבון', 'כניסה', 'כניסה_/_הרשמה_לחשבון' ),
+	'wiki_Userlogout'                => array( 'יציאה_מהחשבון', 'יציאה' ),
+	'wiki_Userrights'                => array( 'ניהול_הרשאות_משתמש', 'הפיכת_משתמש_למפעיל_מערכת', 'הענקת_או_ביטול_הרשאת_בוט' ),
 	'Version'                   => array( 'גרסה', 'גרסת_התוכנה' ),
 	'Wantedcategories'          => array( 'קטגוריות_מבוקשות' ),
 	'Wantedfiles'               => array( 'קבצים_מבוקשים' ),
@@ -353,7 +353,7 @@ $namespaceGenderAliases = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'סימון קישורים בקו תחתי:',
 'tog-justify' => 'יישור פסקאות',
 'tog-hideminor' => 'הסתרת שינויים משניים ברשימת השינויים האחרונים',
@@ -696,7 +696,7 @@ $1',
 הדבר נגרם בדרך כלל על ידי קישור ישן להשוואת גרסאות של דף שנמחק או לגרסה של דף כזה.
 
 אם זה אינו המקרה, זהו כנראה באג בתוכנה.
-אנא דווחו על כך ל[[Special:ListUsers/sysop|מפעיל מערכת]], תוך שמירת פרטי כתובת ה־URL.',
+אנא דווחו על כך ל[[Special:Listwiki_Users/sysop|מפעיל מערכת]], תוך שמירת פרטי כתובת ה־URL.',
 'missingarticle-rev' => '(מספר גרסה: $1)',
 'missingarticle-diff' => '(השוואת הגרסאות: $1, $2)',
 'readonly_lag' => 'בסיס הנתונים ננעל אוטומטית כדי לאפשר לבסיסי הנתונים המשניים להתעדכן מהבסיס הראשי.',
@@ -746,7 +746,7 @@ $2',
 'customcssprotected' => 'אינכם מורשים לערוך דף CSS זה, כיוון שהוא כולל את ההגדרות האישיות של משתמש אחר.',
 'customjsprotected' => 'אינכם מורשים לערוך דף JavaScript זה, כיוון שהוא כולל את ההגדרות האישיות של משתמש אחר.',
 'ns-specialprotected' => 'לא ניתן לערוך דפים מיוחדים.',
-'titleprotected' => 'לא ניתן ליצור דף זה, כיוון שהמשתמש [[User:$1|$1]] הגן עליו מפני יצירה.
+'titleprotected' => 'לא ניתן ליצור דף זה, כיוון שהמשתמש [[wiki_User:$1|$1]] הגן עליו מפני יצירה.
 הסיבה שניתנה לכך היא "$2".',
 'filereadonlyerror' => 'לא ניתן לשנות את הקובץ "$1" כיוון שמאגר הקבצים "$2" במצב קריאה בלבד.
 
@@ -764,7 +764,7 @@ $2',
 # Login and logout pages
 'logouttext' => "'''יצאתם זה עתה מהחשבון.'''
 
-באפשרותכם להמשיך ולעשות שימוש ב{{grammar:תחילית|{{SITENAME}}}} באופן אנונימי, או [[Special:UserLogin|לשוב ולהיכנס לאתר]] עם שם משתמש זהה או אחר.
+באפשרותכם להמשיך ולעשות שימוש ב{{grammar:תחילית|{{SITENAME}}}} באופן אנונימי, או [[Special:wiki_UserLogin|לשוב ולהיכנס לאתר]] עם שם משתמש זהה או אחר.
 שימו לב כי ייתכן שדפים אחדים ימשיכו להיות מוצגים כאילו אתם עדיין מחוברים לחשבון עד שתנקו את המטמון של הדפדפן שלכם.",
 'welcomecreation' => '== ברוך בואך, $1! ==
 חשבונך נוצר.
@@ -811,7 +811,7 @@ $2',
 'loginsuccesstitle' => 'הכניסה הושלמה בהצלחה',
 'loginsuccess' => "'''נכנסת ל{{grammar:תחילית|{{SITENAME}}}} בשם \"\$1\".'''",
 'nosuchuser' => 'אין משתמש בשם "$1".
-אנא ודאו שהאיות נכון (כולל אותיות רישיות וקטנות), או [[Special:UserLogin/signup|צרו חשבון חדש]].',
+אנא ודאו שהאיות נכון (כולל אותיות רישיות וקטנות), או [[Special:wiki_UserLogin/signup|צרו חשבון חדש]].',
 'nosuchusershort' => 'אין משתמש בשם "$1".
 אנא ודאו שהאיות נכון.',
 'nouserspecified' => 'עליכם לציין שם משתמש.',
@@ -1010,7 +1010,7 @@ $2
 'loginreqlink' => 'להיכנס לחשבון',
 'loginreqpagetext' => 'עליכם $1 כדי לצפות בדפים אחרים.',
 'accmailtitle' => 'הסיסמה נשלחה',
-'accmailtext' => 'סיסמה אקראית עבור [[User talk:$1|$1]] נשלחה אל $2.
+'accmailtext' => 'סיסמה אקראית עבור [[wiki_User talk:$1|$1]] נשלחה אל $2.
 
 ניתן לשנות את הסיסמה לחשבון החדש הזה בדף [[Special:ChangePassword|שינוי הסיסמה]] לאחר הכניסה.',
 'newarticle' => '(חדש)',
@@ -1018,7 +1018,7 @@ $2
 כדי ליצור את הדף הזה, התחילו להקליד בתיבת הטקסט למטה (ראו את [[{{MediaWiki:Helppage}}|דף העזרה]] למידע נוסף).
 אם הגעתם לכאן בטעות, לחצו על '''כפתור החזרה''' (Back) בדפדפן שלכם.",
 'anontalkpagetext' => "----
-'''זהו דף שיחה של משתמש אנונימי שעדיין לא יצר חשבון במערכת, או שהוא לא משתמש בו. כיוון שכך, אנו צריכים להשתמש בכתובת ה־IP כדי לזהותו. ייתכן שכתובת IP זו תייצג מספר משתמשים. אם אתם משתמשים אנונימיים ומרגישים שקיבלתם הודעות בלתי רלוונטיות, אנא [[Special:UserLogin|היכנסו לחשבון]] או [[Special:UserLogin/signup|הירשמו לאתר]] כדי להימנע מבלבול עתידי עם משתמשים אנונימיים נוספים.'''
+'''זהו דף שיחה של משתמש אנונימי שעדיין לא יצר חשבון במערכת, או שהוא לא משתמש בו. כיוון שכך, אנו צריכים להשתמש בכתובת ה־IP כדי לזהותו. ייתכן שכתובת IP זו תייצג מספר משתמשים. אם אתם משתמשים אנונימיים ומרגישים שקיבלתם הודעות בלתי רלוונטיות, אנא [[Special:wiki_UserLogin|היכנסו לחשבון]] או [[Special:wiki_UserLogin/signup|הירשמו לאתר]] כדי להימנע מבלבול עתידי עם משתמשים אנונימיים נוספים.'''
 ----",
 'noarticletext' => 'אין כרגע טקסט בדף זה.
 באפשרותכם [[Special:Search/{{PAGENAME}}|לחפש את כותרת הדף]] בדפים אחרים,
@@ -1062,13 +1062,13 @@ $2
 'previewconflict' => 'תצוגה מקדימה זו מציגה כיצד ייראה הטקסט בחלון העריכה העליון, אם תבחרו לשמור אותו.',
 'session_fail_preview' => "'''לא ניתן לבצע את עריכתכם עקב אובדן מידע הכניסה.'''
 אנא נסו שוב.
-אם זה לא עוזר, נסו [[Special:UserLogout|לצאת מהחשבון]] ולהיכנס אליו שנית.",
+אם זה לא עוזר, נסו [[Special:wiki_UserLogout|לצאת מהחשבון]] ולהיכנס אליו שנית.",
 'session_fail_preview_html' => "'''לא ניתן לבצע את עריכתם עקב אובדן מידע הכניסה.'''
 
 כיוון שבאתר זה אפשרות השימוש ב־HTML מאופשרת, התצוגה המקדימה מוסתרת כדי למנוע התקפות JavaScript.
 
 '''אם זהו ניסיון עריכה לגיטימי, אנא נסו שוב.'''
-אם זה לא עוזר, נסו [[Special:UserLogout|לצאת מהחשבון]] ולהיכנס אליו שנית.",
+אם זה לא עוזר, נסו [[Special:wiki_UserLogout|לצאת מהחשבון]] ולהיכנס אליו שנית.",
 'token_suffix_mismatch' => "'''עריכתכם נדחתה כיוון שהדפדפן שלכם מחק את תווי הפיסוק באסימון העריכה.'''
 העריכה נדחתה כדי למנוע בעיות כאלה בטקסט של הדף.
 לעתים התקלה מתרחשת עקב שימוש בשירות פרוקסי אנונימי פגום.",
@@ -1113,7 +1113,7 @@ $2
 'hiddencategories' => 'דף זה כלול ב{{PLURAL:$1|קטגוריה מוסתרת אחת|־$1 קטגוריות מוסתרות}}:',
 'edittools' => '<!-- הטקסט הנכתב כאן יוצג מתחת לטופסי עריכת דפים והעלאת קבצים, ולפיכך ניתן לכתוב להציג בו תווים קשים לכתיבה, קטעים מוכנים של טקסט ועוד. -->',
 'nocreatetitle' => 'יצירת הדפים הוגבלה',
-'nocreatetext' => 'אתר זה מגביל את האפשרות ליצור דפים חדשים. באפשרותכם לחזור אחורה ולערוך דף קיים, או [[Special:UserLogin|להיכנס לחשבון]].',
+'nocreatetext' => 'אתר זה מגביל את האפשרות ליצור דפים חדשים. באפשרותכם לחזור אחורה ולערוך דף קיים, או [[Special:wiki_UserLogin|להיכנס לחשבון]].',
 'nocreate-loggedin' => 'אינכם מורשים ליצור דפים חדשים.',
 'sectioneditnotsupported-title' => 'עריכת פסקאות אינה נתמכת',
 'sectioneditnotsupported-text' => 'עריכת פסקאות אינה נתמכת בדף זה.',
@@ -1163,11 +1163,11 @@ $2
 'undo-success' => 'ניתן לבטל את העריכה. אנא בִדקו את השוואת הגרסאות למטה כדי לוודא שזה מה שאתם רוצים לעשות, ואז שמרו את השינויים למטה כדי לבצע את ביטול העריכה.',
 'undo-failure' => 'לא ניתן היה לבטל את העריכה עקב התנגשות עם עריכות מאוחרות יותר.',
 'undo-norev' => 'לא ניתן היה לבטל את העריכה כי היא אינה קיימת או כי היא נמחקה.',
-'undo-summary' => 'ביטול גרסה $1 של [[Special:Contributions/$2|$2]] ([[User talk:$2|שיחה]])',
+'undo-summary' => 'ביטול גרסה $1 של [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|שיחה]])',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'לא ניתן ליצור את החשבון',
-'cantcreateaccount-text' => 'אפשרות יצירת החשבונות מכתובת ה־IP הזו (<b>$1</b>) נחסמה על ידי [[User:$3|$3]]. הסיבה שניתנה על ידי $3 היא "$2".',
+'cantcreateaccount-text' => 'אפשרות יצירת החשבונות מכתובת ה־IP הזו (<b>$1</b>) נחסמה על ידי [[wiki_User:$3|$3]]. הסיבה שניתנה על ידי $3 היא "$2".',
 
 # History pages
 'viewpagelogs' => 'הצגת יומנים עבור דף זה',
@@ -1428,7 +1428,7 @@ $1",
 'mypreferences' => 'העדפות',
 'prefs-edits' => 'מספר עריכות:',
 'prefsnologin' => 'לא נכנסת לחשבון',
-'prefsnologintext' => 'עליכם <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} להיכנס לחשבון]</span> כדי לשנות העדפות משתמש.',
+'prefsnologintext' => 'עליכם <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} להיכנס לחשבון]</span> כדי לשנות העדפות משתמש.',
 'changepassword' => 'שינוי סיסמה',
 'prefs-skin' => 'עיצוב',
 'skin-preview' => 'תצוגה מקדימה',
@@ -1542,16 +1542,16 @@ $1",
 'prefs-displaywatchlist' => 'אפשרויות תצוגה',
 'prefs-diffs' => 'הבדלים בין גרסאות',
 
-# User preference: e-mail validation using jQuery
+# wiki_User preference: e-mail validation using jQuery
 'email-address-validity-valid' => 'כתובת הדואר האלקטרוני נראית תקינה',
 'email-address-validity-invalid' => 'יש להקליד כתובת דואר אלקטרוני תקינה',
 
-# User rights
+# wiki_User rights
 'userrights' => 'ניהול הרשאות משתמש',
 'userrights-lookup-user' => 'ניהול קבוצות משתמש',
 'userrights-user-editname' => 'שם משתמש:',
 'editusergroup' => 'עריכת קבוצות משתמשים',
-'editinguser' => "שינוי הרשאות המשתמש של '''[[User:$1|$1]]''' $2",
+'editinguser' => "שינוי הרשאות המשתמש של '''[[wiki_User:$1|$1]]''' $2",
 'userrights-editusergroup' => 'עריכת קבוצות משתמש',
 'saveusergroups' => 'שמירת קבוצות משתמש',
 'userrights-groupsmember' => '{{GENDER:$2|חבר|חברה}} ב{{PLURAL:$1|קבוצה|קבוצות}}:',
@@ -1563,7 +1563,7 @@ $1",
 'userrights-reason' => 'סיבה:',
 'userrights-no-interwiki' => 'אין לכם הרשאה לערוך הרשאות משתמש באתרים אחרים.',
 'userrights-nodatabase' => 'בסיס הנתונים $1 אינו קיים או אינו מקומי.',
-'userrights-nologin' => 'עליכם [[Special:UserLogin|להיכנס לחשבון]] עם הרשאות מתאימות כדי לשנות הרשאות של משתמשים.',
+'userrights-nologin' => 'עליכם [[Special:wiki_UserLogin|להיכנס לחשבון]] עם הרשאות מתאימות כדי לשנות הרשאות של משתמשים.',
 'userrights-notallowed' => 'לחשבון המשתמש שלכם אין הרשאה להוסיף או להסיר הרשאות של משתמשים.',
 'userrights-changeable-col' => 'קבוצות שבאפשרותכם לשנות',
 'userrights-unchangeable-col' => 'קבוצות שאין באפשרותכם לשנות',
@@ -1654,7 +1654,7 @@ $1",
 'right-sendemail' => 'שליחת דואר אלקטרוני למשתמשים אחרים',
 'right-passwordreset' => 'צפייה בדואר אלקטרוני של איפוס סיסמה',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'יומן תפקידים',
 'rightslogtext' => 'זהו יומן השינויים בתפקידי המשתמשים.',
 'rightslogentry' => 'שינה את ההרשאות של $1 מ$2 ל$3',
@@ -1751,7 +1751,7 @@ $1",
 'reuploaddesc' => 'ביטול ההעלאה וחזרה לטופס העלאת קבצים לשרת',
 'upload-tryagain' => 'שליחת התיאור החדש של הקובץ',
 'uploadnologin' => 'לא נכנסתם לחשבון',
-'uploadnologintext' => 'עליכם [[Special:UserLogin|להיכנס לחשבון]] כדי להעלות קבצים.',
+'uploadnologintext' => 'עליכם [[Special:wiki_UserLogin|להיכנס לחשבון]] כדי להעלות קבצים.',
 'upload_directory_missing' => 'שרת האינטרנט אינו יכול ליצור את תיקיית ההעלאות ($1) החסרה.',
 'upload_directory_read_only' => 'שרת האינטרנט אינו יכול לכתוב בתיקיית ההעלאות ($1).',
 'uploaderror' => 'שגיאה בהעלאת הקובץ',
@@ -1885,11 +1885,11 @@ $1',
 'upload-proto-error-text' => 'בהעלאה מרוחקת, יש להשתמש בכתובות URL המתחילות עם <code>http://</code> או <code>ftp://</code>.',
 'upload-file-error' => 'שגיאה פנימית',
 'upload-file-error-text' => 'שגיאה פנימית התרחשה בעת הניסיון ליצור קובץ זמני על השרת.
-אנא צרו קשר עם [[Special:ListUsers/sysop|מפעיל מערכת]].',
+אנא צרו קשר עם [[Special:Listwiki_Users/sysop|מפעיל מערכת]].',
 'upload-misc-error' => 'שגיאת העלאה בלתי ידועה',
 'upload-misc-error-text' => 'שגיאת העלאה בלתי ידועה התרחשה במהלך ההעלאה.
 אנא ודאו שכתובת ה־URL תקינה וזמינה ונסו שוב.
-אם הבעיה חוזרת על עצמה, אנא צרו קשר עם [[Special:ListUsers/sysop|מפעיל מערכת]].',
+אם הבעיה חוזרת על עצמה, אנא צרו קשר עם [[Special:Listwiki_Users/sysop|מפעיל מערכת]].',
 'upload-too-many-redirects' => 'הכתובת מכילה הפניות רבות מדי',
 'upload-unknown-size' => 'גודל בלתי ידוע',
 'upload-http-error' => 'התרחשה שגיאת HTTP‏: $1',
@@ -2127,7 +2127,7 @@ $1',
 'statistics-views-total' => 'מספר הצפיות הכולל',
 'statistics-views-total-desc' => 'צפיות בדפים שאינם קיימים ובדפים מיוחדים אינן כלולות',
 'statistics-views-peredit' => 'מספר הצפיות לעריכה',
-'statistics-users' => 'ה[[Special:ListUsers|משתמשים]] הרשומים',
+'statistics-users' => 'ה[[Special:Listwiki_Users|משתמשים]] הרשומים',
 'statistics-users-active' => 'המשתמשים הפעילים',
 'statistics-users-active-desc' => 'משתמשים שביצעו פעולה כלשהי {{PLURAL:$1|ביום האחרון|ביומיים האחרונים|ב־$1 הימים האחרונים}}',
 'statistics-mostpopular' => 'הדפים הנצפים ביותר',
@@ -2296,13 +2296,13 @@ $1',
 'linksearch-line' => '$1 מקושר מהדף $2',
 'linksearch-error' => 'תווים כלליים יכולים להופיע רק בתחילת שם השרת.',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => 'הצגת משתמשים החל מ:',
 'listusers-submit' => 'הצגה',
 'listusers-noresult' => 'לא נמצאו משתמשים.',
 'listusers-blocked' => '(חסום)',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'רשימת משתמשים פעילים',
 'activeusers-intro' => 'זוהי רשימת המשתמשים שביצעו פעולה כלשהי {{PLURAL:$1|ביום האחרון|ביומיים האחרונים|ב־$1 הימים האחרונים}}.',
 'activeusers-count' => '{{PLURAL:$1|פעולה אחת|$1 פעולות}} ב{{PLURAL:$3|יום האחרון|יומיים האחרונים|־$3 הימים האחרונים}}',
@@ -2336,7 +2336,7 @@ $1',
 
 # E-mail user
 'mailnologin' => 'אין כתובת לשליחה',
-'mailnologintext' => 'עליכם [[Special:UserLogin|להיכנס לחשבון]] ולהגדיר לעצמכם כתובת דואר אלקטרוני תקינה ב[[Special:Preferences|העדפות המשתמש]] שלכם כדי לשלוח דואר למשתמש אחר.',
+'mailnologintext' => 'עליכם [[Special:wiki_UserLogin|להיכנס לחשבון]] ולהגדיר לעצמכם כתובת דואר אלקטרוני תקינה ב[[Special:Preferences|העדפות המשתמש]] שלכם כדי לשלוח דואר למשתמש אחר.',
 'emailuser' => 'שליחת דואר אלקטרוני למשתמש זה',
 'emailuser-title-target' => 'שליחת דוא"ל {{GENDER:$1|למשתמש זה|למשתמשת זו}}',
 'emailuser-title-notarget' => 'שליחת דוא"ל למשתמש',
@@ -2367,7 +2367,7 @@ $1',
 'emailsenttext' => 'הודעת הדואר האלקטרוני שלך נשלחה.',
 'emailuserfooter' => 'דואר זה נשלח על ידי $1 למשתמש $2 באמצעות תכונת "שליחת דואר אלקטרוני למשתמש זה" ב{{grammar:תחילית|{{SITENAME}}}}.',
 
-# User Messenger
+# wiki_User Messenger
 'usermessage-summary' => 'השארת הודעת מערכת.',
 'usermessage-editor' => 'שולח הודעות המערכת',
 
@@ -2378,7 +2378,7 @@ $1',
 'nowatchlist' => 'אין דפים ברשימת המעקב.',
 'watchlistanontext' => 'עליכם $1 כדי לצפות או לערוך פריטים ברשימת המעקב.',
 'watchnologin' => 'לא נכנסתם לחשבון',
-'watchnologintext' => 'עליכם [[Special:UserLogin|להיכנס לחשבון]] כדי לערוך את רשימת המעקב.',
+'watchnologintext' => 'עליכם [[Special:wiki_UserLogin|להיכנס לחשבון]] כדי לערוך את רשימת המעקב.',
 'addwatch' => 'הוספה לרשימת המעקב',
 'addedwatchtext' => 'הדף [[:$1]] נוסף ל[[Special:Watchlist|רשימת המעקב]].
 שינויים שייערכו בעתיד בדף זה ובדף השיחה שלו, יוצגו ברשימת המעקב.',
@@ -2487,12 +2487,12 @@ $UNWATCHURL
 'rollbackfailed' => 'השחזור נכשל',
 'cantrollback' => 'לא ניתן לשחזר את העריכה;
 התורם האחרון הוא היחיד שכתב בדף זה.',
-'alreadyrolled' => 'לא ניתן לשחזר את העריכה של [[User:$2|$2]] ([[User talk:$2|שיחה]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]) בדף [[:$1]]; מישהו אחר כבר ערך או שחזר את הדף.
+'alreadyrolled' => 'לא ניתן לשחזר את העריכה של [[wiki_User:$2|$2]] ([[wiki_User talk:$2|שיחה]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]) בדף [[:$1]]; מישהו אחר כבר ערך או שחזר את הדף.
 
-העריכה האחרונה הייתה של [[User:$3|$3]] ([[User talk:$3|שיחה]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
+העריכה האחרונה הייתה של [[wiki_User:$3|$3]] ([[wiki_User talk:$3|שיחה]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
 'editcomment' => "תקציר העריכה היה: \"'''\$1'''\".",
-'revertpage' => 'שוחזר מעריכות של [[Special:Contributions/$2|$2]] ([[User talk:$2|שיחה]]) לעריכה האחרונה של [[User:$1|$1]]',
-'revertpage-nouser' => 'שוחזר מעריכות של (שם המשתמש הוסר) לעריכה האחרונה של [[User:$1|$1]]',
+'revertpage' => 'שוחזר מעריכות של [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|שיחה]]) לעריכה האחרונה של [[wiki_User:$1|$1]]',
+'revertpage-nouser' => 'שוחזר מעריכות של (שם המשתמש הוסר) לעריכה האחרונה של [[wiki_User:$1|$1]]',
 'rollback-success' => 'שוחזר מעריכה של $1 לעריכה האחרונה של $2',
 
 # Edit tokens
@@ -2722,7 +2722,7 @@ $1',
 'unblockip' => 'שחרור חסימה',
 'unblockiptext' => 'השתמשו בטופס שלהלן כדי להחזיר את הרשאות הכתיבה למשתמש או כתובת IP חסומים.',
 'ipusubmit' => 'שחרור חסימה',
-'unblocked' => 'המשתמש [[User:$1|$1]] שוחרר מחסימתו.',
+'unblocked' => 'המשתמש [[wiki_User:$1|$1]] שוחרר מחסימתו.',
 'unblocked-range' => '$1 שוחרר מחסימתו',
 'unblocked-id' => 'חסימה מספר $1 שוחררה.',
 'blocklist' => 'משתמשים חסומים',
@@ -2755,7 +2755,7 @@ $1',
 'change-blocklink' => 'שינוי חסימה',
 'contribslink' => 'תרומות',
 'emaillink' => 'שליחת דוא"ל',
-'autoblocker' => 'נחסמתם באופן אוטומטי משום שאתם חולקים את כתובת ה־IP שלכם עם [[User:$1|$1]].
+'autoblocker' => 'נחסמתם באופן אוטומטי משום שאתם חולקים את כתובת ה־IP שלכם עם [[wiki_User:$1|$1]].
 הסיבה שניתנה לחסימת $1 היא "\'\'\'$2\'\'\'"',
 'blocklogpage' => 'יומן חסימות',
 'blocklog-showlog' => 'משתמש זה נחסם בעבר. יומן החסימות מוצג למטה:',
@@ -2855,7 +2855,7 @@ $1',
 'movearticle' => 'העברת דף:',
 'moveuserpage-warning' => "'''אזהרה:''' אתם עומדים להעביר דף משתמש. שימו לב שרק הדף יועבר וששם המשתמש '''לא''' ישתנה.",
 'movenologin' => 'לא נכנסתם לחשבון',
-'movenologintext' => 'עליכם [[Special:UserLogin|להיכנס לחשבון]] כדי להעביר דפים.',
+'movenologintext' => 'עליכם [[Special:wiki_UserLogin|להיכנס לחשבון]] כדי להעביר דפים.',
 'movenotallowed' => 'אינכם מורשים להעביר דפים.',
 'movenotallowedfile' => 'אינכם מורשים להעביר קבצים.',
 'cant-move-user-page' => 'אינכם מורשים להעביר דפי משתמש (למעט דפי משנה).',
@@ -3728,7 +3728,7 @@ $1',
 'confirmemail_invalid' => 'קוד האימות שגוי. ייתכן שפג תוקפו.',
 'confirmemail_needlogin' => 'עליכם לבצע $1 כדי לאמת את כתובת הדוא"ל שלכם.',
 'confirmemail_success' => 'כתובת הדוא"ל שלכם אושרה.
-כעת באפשרותכם [[Special:UserLogin|להיכנס לחשבון שלכם]] וליהנות מהאתר.',
+כעת באפשרותכם [[Special:wiki_UserLogin|להיכנס לחשבון שלכם]] וליהנות מהאתר.',
 'confirmemail_loggedin' => 'כתובת הדוא"ל שלכם אושרה כעת.',
 'confirmemail_error' => 'שגיאה בשמירת קוד האימות.',
 'confirmemail_subject' => 'קוד אימות דוא"ל מ{{grammar:תחילית|{{SITENAME}}}}',
@@ -3778,10 +3778,10 @@ $5
 
 # Delete conflict
 'deletedwhileediting' => "'''אזהרה''': דף זה נמחק לאחר שהתחלתם לערוך!",
-'confirmrecreate' => "הדף נמחק על ידי המשתמש [[User:$1|$1]] ([[User talk:$1|שיחה]]) לאחר שהתחלתם לערוך אותו, מסיבה זו:
+'confirmrecreate' => "הדף נמחק על ידי המשתמש [[wiki_User:$1|$1]] ([[wiki_User talk:$1|שיחה]]) לאחר שהתחלתם לערוך אותו, מסיבה זו:
 :'''$2'''
 אנא אשרו שאתם אכן רוצים ליצור מחדש את הדף.",
-'confirmrecreate-noreason' => 'הדף נמחק על ידי המשתמש [[User:$1|$1]] ([[User talk:$1|שיחה]]) לאחר שהתחלתם לערוך אותו.
+'confirmrecreate-noreason' => 'הדף נמחק על ידי המשתמש [[wiki_User:$1|$1]] ([[wiki_User talk:$1|שיחה]]) לאחר שהתחלתם לערוך אותו.
 אנא אשרו שאתם אכן רוצים ליצור מחדש את הדף.',
 'recreate' => 'יצירה מחדש',
 

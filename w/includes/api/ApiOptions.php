@@ -173,7 +173,7 @@ class ApiOptions extends ApiBase {
 		return array(
 			'api.php?action=options&reset=&token=123ABC',
 			'api.php?action=options&change=skin=vector|hideminor=1&token=123ABC',
-			'api.php?action=options&reset=&change=skin=monobook&optionname=nickname&optionvalue=[[User:Beau|Beau]]%20([[User_talk:Beau|talk]])&token=123ABC',
+			'api.php?action=options&reset=&change=skin=monobook&optionname=nickname&optionvalue=[[wiki_User:Beau|Beau]]%20([[wiki_User_talk:Beau|talk]])&token=123ABC',
 		);
 	}
 

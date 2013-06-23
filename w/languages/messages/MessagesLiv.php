@@ -187,7 +187,7 @@ $messages = array(
 'nstab-category' => 'Kategōrij',
 
 # General errors
-'missing-article' => " Datubāz äb lieudõn kizdõd līed ''$1'' $2 tekstõ. Sīkõks võib vȱlda mõitõkst agā istōrij siḑīm jarā kištāntõd lēḑ pǟlõ.  Až ažād äb ūo nei,  võib vȱlda ka vigā sistēms. Siz um kītõmõst ka [[Special:ListUsers/sysop| administrātorõn]] ja tämmõn āndamizt ka sīe līed internet adres",
+'missing-article' => " Datubāz äb lieudõn kizdõd līed ''$1'' $2 tekstõ. Sīkõks võib vȱlda mõitõkst agā istōrij siḑīm jarā kištāntõd lēḑ pǟlõ.  Až ažād äb ūo nei,  võib vȱlda ka vigā sistēms. Siz um kītõmõst ka [[Special:Listwiki_Users/sysop| administrātorõn]] ja tämmõn āndamizt ka sīe līed internet adres",
 'missingarticle-rev' => '(redaktsij: $1)',
 'badtitle' => 'Vigāli pēļikēra',
 'badtitletext' => 'Tōdõd līed pēļikēra vȯļ vigāli, tijā agā tuoizõst kīel versiōnist agā vikist äbõigistiz sidtõd. Sīe sizzõl võib vȱlda ikš agā jemīņ simbōlõ, midā äb sō pēļikēris kȭlbatõ.',
@@ -373,7 +373,7 @@ Legend: '''({{int:cur}})''' = vaiţīd līdzinţõmizõks lǟndz redaktsijõks,,
 
 'grouppage-sysop' => '{{ns:project}}:Administrātord',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Kȭlbatijiz õigõmt log',
 
 # Associated actions - in the sentence "You do not have permission to X"

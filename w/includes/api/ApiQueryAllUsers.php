@@ -29,7 +29,7 @@
  *
  * @ingroup API
  */
-class ApiQueryAllUsers extends ApiQueryBase {
+class ApiQueryAllwiki_Users extends ApiQueryBase {
 	public function __construct( $query, $moduleName ) {
 		parent::__construct( $query, $moduleName, 'au' );
 	}
@@ -40,7 +40,7 @@ class ApiQueryAllUsers extends ApiQueryBase {
 	 * @param String $name
 	 * @return String
 	 */
-	private function getCanonicalUserName( $name ) {
+	private function getCanonicalwiki_UserName( $name ) {
 		return str_replace( '_', ' ', $name );
 	}
 
@@ -67,24 +67,24 @@ class ApiQueryAllUsers extends ApiQueryBase {
 		$useIndex = true;
 
 		$dir = ( $params['dir'] == 'descending' ? 'older' : 'newer' );
-		$from = is_null( $params['from'] ) ? null : $this->getCanonicalUserName( $params['from'] );
-		$to = is_null( $params['to'] ) ? null : $this->getCanonicalUserName( $params['to'] );
+		$from = is_null( $params['from'] ) ? null : $this->getCanonicalwiki_UserName( $params['from'] );
+		$to = is_null( $params['to'] ) ? null : $this->getCanonicalwiki_UserName( $params['to'] );
 
 		# MySQL doesn't seem to use 'equality propagation' here, so like the
-		# ActiveUsers special page, we have to use rc_user_text for some cases.
+		# Activewiki_Users special page, we have to use rc_user_text for some cases.
 		$userFieldToSort = $params['activeusers'] ? 'rc_user_text' : 'user_name';
 
 		$this->addWhereRange( $userFieldToSort, $dir, $from, $to );
 
 		if ( !is_null( $params['prefix'] ) ) {
 			$this->addWhere( $userFieldToSort .
-				$db->buildLike( $this->getCanonicalUserName( $params['prefix'] ), $db->anyString() ) );
+				$db->buildLike( $this->getCanonicalwiki_UserName( $params['prefix'] ), $db->anyString() ) );
 		}
 
 		if ( !is_null( $params['rights'] ) ) {
 			$groups = array();
 			foreach( $params['rights'] as $r ) {
-				$groups = array_merge( $groups, User::getGroupsWithPermission( $r ) );
+				$groups = array_merge( $groups, wiki_User::getGroupsWithPermission( $r ) );
 			}
 
 			$groups = array_unique( $groups );
@@ -129,12 +129,12 @@ class ApiQueryAllUsers extends ApiQueryBase {
 			$this->addWhere( 'user_editcount > 0' );
 		}
 
-		$this->showHiddenUsersAddBlockInfo( $fld_blockinfo );
+		$this->showHiddenwiki_UsersAddBlockInfo( $fld_blockinfo );
 
 		if ( $fld_groups || $fld_rights ) {
 			// Show the groups the given users belong to
 			// request more than needed to avoid not getting all rows that belong to one user
-			$groupCount = count( User::getAllGroups() );
+			$groupCount = count( wiki_User::getAllGroups() );
 			$sqlLimit = $limit + $groupCount + 1;
 
 			$this->addTables( 'user_groups', 'ug2' );
@@ -145,7 +145,7 @@ class ApiQueryAllUsers extends ApiQueryBase {
 		}
 
 		if ( $params['activeusers'] ) {
-			global $wgActiveUserDays;
+			global $wgActivewiki_UserDays;
 			$this->addTables( 'recentchanges' );
 
 			$this->addJoinConds( array( 'recentchanges' => array(
@@ -155,7 +155,7 @@ class ApiQueryAllUsers extends ApiQueryBase {
 			$this->addFields( array( 'recentedits' => 'COUNT(*)' ) );
 
 			$this->addWhere( 'rc_log_type IS NULL OR rc_log_type != ' . $db->addQuotes( 'newusers' ) );
-			$timestamp = $db->timestamp( wfTimestamp( TS_UNIX ) - $wgActiveUserDays*24*3600 );
+			$timestamp = $db->timestamp( wfTimestamp( TS_UNIX ) - $wgActivewiki_UserDays*24*3600 );
 			$this->addWhere( 'rc_timestamp >= ' . $db->addQuotes( $timestamp ) );
 
 			$this->addOption( 'GROUP BY', $userFieldToSort );
@@ -177,8 +177,8 @@ class ApiQueryAllUsers extends ApiQueryBase {
 		$res = $this->select( __METHOD__ );
 
 		$count = 0;
-		$lastUserData = false;
-		$lastUser = false;
+		$lastwiki_UserData = false;
+		$lastwiki_User = false;
 		$result = $this->getResult();
 
 		//
@@ -191,16 +191,16 @@ class ApiQueryAllUsers extends ApiQueryBase {
 		foreach ( $res as $row ) {
 			$count++;
 
-			if ( $lastUser !== $row->user_name ) {
+			if ( $lastwiki_User !== $row->user_name ) {
 				// Save the last pass's user data
-				if ( is_array( $lastUserData ) ) {
+				if ( is_array( $lastwiki_UserData ) ) {
 					$fit = $result->addValue( array( 'query', $this->getModuleName() ),
-							null, $lastUserData );
+							null, $lastwiki_UserData );
 
-					$lastUserData = null;
+					$lastwiki_UserData = null;
 
 					if ( !$fit ) {
-						$this->setContinueEnumParameter( 'from', $lastUserData['name'] );
+						$this->setContinueEnumParameter( 'from', $lastwiki_UserData['name'] );
 						break;
 					}
 				}
@@ -212,88 +212,88 @@ class ApiQueryAllUsers extends ApiQueryBase {
 				}
 
 				// Record new user's data
-				$lastUser = $row->user_name;
-				$lastUserData = array(
+				$lastwiki_User = $row->user_name;
+				$lastwiki_UserData = array(
 					'userid' => $row->user_id,
-					'name' => $lastUser,
+					'name' => $lastwiki_User,
 				);
 				if ( $fld_blockinfo && !is_null( $row->ipb_by_text ) ) {
-					$lastUserData['blockid'] = $row->ipb_id;
-					$lastUserData['blockedby'] = $row->ipb_by_text;
-					$lastUserData['blockedbyid'] = $row->ipb_by;
-					$lastUserData['blockreason'] = $row->ipb_reason;
-					$lastUserData['blockexpiry'] = $row->ipb_expiry;
+					$lastwiki_UserData['blockid'] = $row->ipb_id;
+					$lastwiki_UserData['blockedby'] = $row->ipb_by_text;
+					$lastwiki_UserData['blockedbyid'] = $row->ipb_by;
+					$lastwiki_UserData['blockreason'] = $row->ipb_reason;
+					$lastwiki_UserData['blockexpiry'] = $row->ipb_expiry;
 				}
 				if ( $row->ipb_deleted ) {
-					$lastUserData['hidden'] = '';
+					$lastwiki_UserData['hidden'] = '';
 				}
 				if ( $fld_editcount ) {
-					$lastUserData['editcount'] = intval( $row->user_editcount );
+					$lastwiki_UserData['editcount'] = intval( $row->user_editcount );
 				}
 				if ( $params['activeusers'] ) {
-					$lastUserData['recenteditcount'] = intval( $row->recentedits );
+					$lastwiki_UserData['recenteditcount'] = intval( $row->recentedits );
 				}
 				if ( $fld_registration ) {
-					$lastUserData['registration'] = $row->user_registration ?
+					$lastwiki_UserData['registration'] = $row->user_registration ?
 						wfTimestamp( TS_ISO_8601, $row->user_registration ) : '';
 				}
 			}
 
 			if ( $sqlLimit == $count ) {
-				// BUG!  database contains group name that User::getAllGroups() does not return
+				// BUG!  database contains group name that wiki_User::getAllGroups() does not return
 				// TODO: should handle this more gracefully
 				ApiBase::dieDebug( __METHOD__,
-					'MediaWiki configuration error: the database contains more user groups than known to User::getAllGroups() function' );
+					'MediaWiki configuration error: the database contains more user groups than known to wiki_User::getAllGroups() function' );
 			}
 
-			$lastUserObj = User::newFromId( $row->user_id );
+			$lastwiki_UserObj = wiki_User::newFromId( $row->user_id );
 
 			// Add user's group info
 			if ( $fld_groups ) {
-				if ( !isset( $lastUserData['groups'] ) ) {
-					if ( $lastUserObj ) {
-						$lastUserData['groups'] = $lastUserObj->getAutomaticGroups();
+				if ( !isset( $lastwiki_UserData['groups'] ) ) {
+					if ( $lastwiki_UserObj ) {
+						$lastwiki_UserData['groups'] = $lastwiki_UserObj->getAutomaticGroups();
 					} else {
 						// This should not normally happen
-						$lastUserData['groups'] = array();
+						$lastwiki_UserData['groups'] = array();
 					}
 				}
 
 				if ( !is_null( $row->ug_group2 ) ) {
-					$lastUserData['groups'][] = $row->ug_group2;
+					$lastwiki_UserData['groups'][] = $row->ug_group2;
 				}
 
-				$result->setIndexedTagName( $lastUserData['groups'], 'g' );
+				$result->setIndexedTagName( $lastwiki_UserData['groups'], 'g' );
 			}
 
-			if ( $fld_implicitgroups && !isset( $lastUserData['implicitgroups'] ) && $lastUserObj ) {
-				$lastUserData['implicitgroups'] = $lastUserObj->getAutomaticGroups();
-				$result->setIndexedTagName( $lastUserData['implicitgroups'], 'g' );
+			if ( $fld_implicitgroups && !isset( $lastwiki_UserData['implicitgroups'] ) && $lastwiki_UserObj ) {
+				$lastwiki_UserData['implicitgroups'] = $lastwiki_UserObj->getAutomaticGroups();
+				$result->setIndexedTagName( $lastwiki_UserData['implicitgroups'], 'g' );
 			}
 			if ( $fld_rights ) {
-				if ( !isset( $lastUserData['rights'] ) ) {
-					if ( $lastUserObj ) {
-						$lastUserData['rights'] =  User::getGroupPermissions( $lastUserObj->getAutomaticGroups() );
+				if ( !isset( $lastwiki_UserData['rights'] ) ) {
+					if ( $lastwiki_UserObj ) {
+						$lastwiki_UserData['rights'] =  wiki_User::getGroupPermissions( $lastwiki_UserObj->getAutomaticGroups() );
 					} else {
 						// This should not normally happen
-						$lastUserData['rights'] = array();
+						$lastwiki_UserData['rights'] = array();
 					}
 				}
 
 				if ( !is_null( $row->ug_group2 ) ) {
-					$lastUserData['rights'] = array_unique( array_merge( $lastUserData['rights'],
-						User::getGroupPermissions( array( $row->ug_group2 ) ) ) );
+					$lastwiki_UserData['rights'] = array_unique( array_merge( $lastwiki_UserData['rights'],
+						wiki_User::getGroupPermissions( array( $row->ug_group2 ) ) ) );
 				}
 
-				$result->setIndexedTagName( $lastUserData['rights'], 'r' );
+				$result->setIndexedTagName( $lastwiki_UserData['rights'], 'r' );
 			}
 		}
 
-		if ( is_array( $lastUserData ) ) {
+		if ( is_array( $lastwiki_UserData ) ) {
 			$fit = $result->addValue( array( 'query', $this->getModuleName() ),
-				null, $lastUserData );
+				null, $lastwiki_UserData );
 			if ( !$fit ) {
-				$this->setContinueEnumParameter( 'from', $lastUserData['name'] );
+				$this->setContinueEnumParameter( 'from', $lastwiki_UserData['name'] );
 			}
 		}
 
@@ -305,7 +305,7 @@ class ApiQueryAllUsers extends ApiQueryBase {
 	}
 
 	public function getAllowedParams() {
-		$userGroups = User::getAllGroups();
+		$userGroups = wiki_User::getAllGroups();
 		return array(
 			'from' => null,
 			'to' => null,
@@ -326,7 +326,7 @@ class ApiQueryAllUsers extends ApiQueryBase {
 				ApiBase::PARAM_ISMULTI => true,
 			),
 			'rights' => array(
-				ApiBase::PARAM_TYPE => User::getAllRights(),
+				ApiBase::PARAM_TYPE => wiki_User::getAllRights(),
 				ApiBase::PARAM_ISMULTI => true,
 			),
 			'prop' => array(
@@ -353,7 +353,7 @@ class ApiQueryAllUsers extends ApiQueryBase {
 	}
 
 	public function getParamDescription() {
-		global $wgActiveUserDays;
+		global $wgActivewiki_UserDays;
 		return array(
 			'from' => 'The user name to start enumerating from',
 			'to' => 'The user name to stop enumerating at',
@@ -373,7 +373,7 @@ class ApiQueryAllUsers extends ApiQueryBase {
 				),
 			'limit' => 'How many total user names to return',
 			'witheditsonly' => 'Only list users who have made edits',
-			'activeusers' => "Only list users active in the last {$wgActiveUserDays} days(s)"
+			'activeusers' => "Only list users active in the last {$wgActivewiki_UserDays} days(s)"
 		);
 	}
 

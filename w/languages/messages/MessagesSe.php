@@ -95,7 +95,7 @@ $magicWords = array(
 $linkTrail = '/^(:?[a-zàáâçčʒǯđðéèêëǧǥȟíìîïıǩŋñóòôõßšŧúùûýÿüžþæøåäö]+)(.*)$/sDu';
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Liŋkkaid vuolláisárgun',
 'tog-hideminor' => 'Čiega unna rievdadusaid varas rievdadusat -listtus',
 'tog-extendwatchlist' => 'Viiddit čuovvunlisttu, nu ahte čájeha buot dahkon rievdadusaid, iige dušše ođđaseamos',
@@ -602,7 +602,7 @@ $1 {{int:pipe-separator}} $2',
 'mypreferences' => 'Ásahusat',
 'prefs-edits' => 'Rievdadusaid mearri:',
 'prefsnologin' => 'It leat čálligoahtán sisa',
-'prefsnologintext' => 'Don fertet [[Special:UserLogin|čálligoahtit sisa]], ovdalgo sáhtát rievdadit du ásahusaid.',
+'prefsnologintext' => 'Don fertet [[Special:wiki_UserLogin|čálligoahtit sisa]], ovdalgo sáhtát rievdadit du ásahusaid.',
 'changepassword' => 'Suollemassáni molson',
 'prefs-skin' => 'Olggosoaidnu',
 'skin-preview' => 'ovdalgihtii geahččan...',
@@ -651,12 +651,12 @@ $1 {{int:pipe-separator}} $2',
 'prefs-signature' => 'Vuolláičálus',
 'prefs-dateformat' => 'Beaivemeari hábmi',
 
-# User rights
+# wiki_User rights
 'userrights' => 'Geavaheaddjevuoigatvuođaid stivren',
 'userrights-lookup-user' => 'Geavaheaddjirivttiid stivren',
 'userrights-user-editname' => 'Geavaheaddjidovddaldat',
 'editusergroup' => 'Rievdat geavaheaddjijoavkkuid',
-'editinguser' => "Rievdadit siiddu '''[[User:$1|$1]]''' ([[User talk:$1|{{int:talkpagelinktext}}]] | [[Special:Contributions/$1|{{int:contribslink}}]])",
+'editinguser' => "Rievdadit siiddu '''[[wiki_User:$1|$1]]''' ([[wiki_User talk:$1|{{int:talkpagelinktext}}]] | [[Special:Contributions/$1|{{int:contribslink}}]])",
 'userrights-editusergroup' => 'Rievdat geavaheaddjejoavkku',
 'saveusergroups' => 'Vurke',
 'userrights-groupsmember' => 'Lahttun čuovvovaš joavkkuin:',
@@ -681,7 +681,7 @@ $1 {{int:pipe-separator}} $2',
 'grouppage-sysop' => '{{ns:project}}:Administráhtorat',
 'grouppage-bureaucrat' => '{{ns:project}}:Byrokráhtat',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Logga geavaheaddjirievttiin',
 'rightslogtext' => 'Vuolábealde lea logga geavaheaddjirivttiid rievdadusain.',
 'rightslogentry' => 'Geavaheaddji $1 rievttit rievdaduvvoi joavkkuin $2 joavkkuide $3',
@@ -723,7 +723,7 @@ $1 {{int:pipe-separator}} $2',
 'uploadbtn' => 'Lasit fiilla',
 'reuploaddesc' => 'Máhca sáddenskovvái.',
 'uploadnologin' => 'It leat loggen sisa',
-'uploadnologintext' => 'Don fertet leat [[Special:UserLogin|čálligoahtán sisa]], ovdalgo sáhtát vurket fiillaid.',
+'uploadnologintext' => 'Don fertet leat [[Special:wiki_UserLogin|čálligoahtán sisa]], ovdalgo sáhtát vurket fiillaid.',
 'uploaderror' => 'Vurkenfeaila',
 'uploadlog' => 'Fiilalogga',
 'uploadlogpage' => 'Fiilalogga',
@@ -848,7 +848,7 @@ $1 {{int:pipe-separator}} $2',
 'statistics-files' => 'Fiillat',
 'statistics-edits' => 'Rievdadusat maŋŋel dan go {{SITENAME}} vuođđuduvvui',
 'statistics-edits-average' => 'Gaskamearálaš rievdadusaid mearri/siidu',
-'statistics-users' => 'Registrerejuvvon [[Special:ListUsers|geavaheaddjit]]',
+'statistics-users' => 'Registrerejuvvon [[Special:Listwiki_Users|geavaheaddjit]]',
 'statistics-users-active' => 'Aktiivvalaš geavaheaddjit',
 'statistics-users-active-desc' => 'Geavaheaddjit, geat leat bargan juoidá maŋimus {{PLURAL:$1|beaivvi|$1 beaivvi}} áigge.',
 'statistics-mostpopular' => 'Eanemusta gehčojuvvon siiddut',
@@ -949,11 +949,11 @@ Also see [[Special:WantedCategories|wanted categories]].',
 # Special:LinkSearch
 'linksearch-ok' => 'Oza',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusers-submit' => 'Oza',
 'listusers-noresult' => 'Geavaheaddjit eai dihtton. Dárkis maid sierra bustávasturrodagat.',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'Listu aktiivvalaš geavaheddjiin',
 'activeusers-intro' => 'Dát lea listu geavaheddjiin, mat leat bargan juoidá maŋimus $1 {{PLURAL:$1|beaivvi|beaivvi}} siste.',
 'activeusers-count' => '$1 {{PLURAL:$1|rievdadus|rievdadusa}} maŋimus $3 beaivvi siste',
@@ -966,7 +966,7 @@ Also see [[Special:WantedCategories|wanted categories]].',
 
 # E-mail user
 'mailnologin' => 'Sáddejeaddji čujuhus váilo',
-'mailnologintext' => 'Don fertet leat [[Special:UserLogin|čálligoahtán sisa]] ja du [[Special:Preferences|ásahusain]] ferte leat gelbbolaš ja <strong>sihkarastojuvvon</strong> e-poastačujuhus, ovdalgo sáhtat sáddet e-poasta eará geavaheddjiide.',
+'mailnologintext' => 'Don fertet leat [[Special:wiki_UserLogin|čálligoahtán sisa]] ja du [[Special:Preferences|ásahusain]] ferte leat gelbbolaš ja <strong>sihkarastojuvvon</strong> e-poastačujuhus, ovdalgo sáhtat sáddet e-poasta eará geavaheddjiide.',
 'emailuser' => 'Čále e-poastta geavaheaddjái',
 'emailpage' => 'Sádde e-poastta geavaheaddjái',
 'emailpagetext' => 'Jus dát geavaheaddji lea lasihin iežaset ásahusaide gelbbolaš e-poastačujuhusa, vuolábeale skoviin sáhtat sáddet sudnje ovtta sáni. Iežat ásahusaide lasihuvvon e-poastačujuhus oidno sáddejeaddji dieđuin, vai vuostáiváldi sáhttá vástidit.',
@@ -983,7 +983,7 @@ Also see [[Special:WantedCategories|wanted categories]].',
 'emailccsubject' => 'Kopiija sáddejuvvon sánis čujuhussii $1: $2',
 'emailsent' => 'E-poastasátni lea sáddejuvvon',
 'emailsenttext' => 'E-poastasátni lea sáddejuvvon.',
-'emailuserfooter' => 'Dán e-poastta sáddii geavaheaddji $1 geavaheaddjái $2 {{SITENAME}} "E-mailUser"-doaimmain.',
+'emailuserfooter' => 'Dán e-poastta sáddii geavaheaddji $1 geavaheaddjái $2 {{SITENAME}} "E-mailwiki_User"-doaimmain.',
 
 # Watchlist
 'watchlist' => 'Čuovvunlistu',
@@ -991,7 +991,7 @@ Also see [[Special:WantedCategories|wanted categories]].',
 'nowatchlist' => 'Du čuovvunlisttus eai leat siiddut.',
 'watchlistanontext' => 'Don fertet $1, jus hálidat geavahit čuovvunlisttu.',
 'watchnologin' => 'It leat čálligoahtán sisa',
-'watchnologintext' => 'Don fertet [[Special:UserLogin|čálligoahtit sisa]], jus hálidat geavahit du čuovvunlisttu.',
+'watchnologintext' => 'Don fertet [[Special:wiki_UserLogin|čálligoahtit sisa]], jus hálidat geavahit du čuovvunlisttu.',
 'addedwatchtext' => "Siidu '''<nowiki>$1</nowiki>''' lea lasihuvvon [[Special:Watchlist|čuovvunlisttui]]. Boahtevuođas siiddu ja siiddu ságastallansiiddu rievdadusat almmuhuvvo dáppe. Siidu lea '''buidon''' [[Special:RecentChanges|varas rievdadusat -listtus]], vai fuomašat dan álkit. Jus hálidat heaiti čuovvumis dan siiddu, deaddil liŋkka ''heaite čuovvumis'' siiddu ravddas.",
 'removedwatchtext' => "Siidu '''[[:$1]]''' lea sihkojuvvon du čuovvunlisttus.",
 'watch' => 'Čuovo',
@@ -1049,9 +1049,9 @@ Siiddus $2 lea listu maŋimus sihkomiin.',
 'rollbacklink' => 'máhcat',
 'rollbackfailed' => 'Máhccan ii lihkosmuvvan',
 'cantrollback' => 'Máhcaheapmi ovddit veršuvdnii ii leat vejolaš, daningo maŋimuš čálli lea siiddu aidna dahkki.',
-'alreadyrolled' => 'Rievdadusat, maid geavaheaddji [[User:$2|$2]] ([[User talk:$2|ságastallan]]) lea dahkan, siidui $1 ii sáhte sihkkut, daningo geavaheaddji [[User:$3|$3]] ([[User talk:$3|ságastallan]]) lea dahkan ođđa rievdadusaid.',
+'alreadyrolled' => 'Rievdadusat, maid geavaheaddji [[wiki_User:$2|$2]] ([[wiki_User talk:$2|ságastallan]]) lea dahkan, siidui $1 ii sáhte sihkkut, daningo geavaheaddji [[wiki_User:$3|$3]] ([[wiki_User talk:$3|ságastallan]]) lea dahkan ođđa rievdadusaid.',
 'editcomment' => "Rievdadusa čoahkkáigeassu lei: ''$1''.",
-'revertpage' => 'Geavaheaddji [[Special:Contributions/$2|$2]] ([[User_talk:$2|ságastallan]]) rievdadusat sihkkojuvvui ja siidu máhcahuvvui veršuvdnii, man geavaheaddji [[User:$1|$1]] lei dahkan.',
+'revertpage' => 'Geavaheaddji [[Special:Contributions/$2|$2]] ([[wiki_User_talk:$2|ságastallan]]) rievdadusat sihkkojuvvui ja siidu máhcahuvvui veršuvdnii, man geavaheaddji [[wiki_User:$1|$1]] lei dahkan.',
 'rollback-success' => 'Rievdadusat, maid geavaheaddji ”$1” lei dahkan, sihkojuvvui ja artihkal máhcaduvvui veršuvdnii, man geavaheaddji $2 lei dahkan.',
 
 # Protect

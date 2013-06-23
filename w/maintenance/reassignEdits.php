@@ -45,8 +45,8 @@ class ReassignEdits extends Maintenance {
 	public function execute() {
 		if ( $this->hasArg( 0 ) && $this->hasArg( 1 ) ) {
 			# Set up the users involved
-			$from = $this->initialiseUser( $this->getArg( 0 ) );
-			$to   = $this->initialiseUser( $this->getArg( 1 ) );
+			$from = $this->initialisewiki_User( $this->getArg( 0 ) );
+			$to   = $this->initialisewiki_User( $this->getArg( 1 ) );
 
 			# If the target doesn't exist, and --force is not set, stop here
 			if ( $to->getId() || $this->hasOption( 'force' ) ) {
@@ -59,7 +59,7 @@ class ReassignEdits extends Maintenance {
 				}
 			} else {
 				$ton = $to->getName();
-				$this->error( "User '{$ton}' not found." );
+				$this->error( "wiki_User '{$ton}' not found." );
 			}
 		}
 	}
@@ -67,8 +67,8 @@ class ReassignEdits extends Maintenance {
 	/**
 	 * Reassign edits from one user to another
 	 *
-	 * @param $from User to take edits from
-	 * @param $to User to assign edits to
+	 * @param $from wiki_User to take edits from
+	 * @param $to wiki_User to assign edits to
 	 * @param $rc bool Update the recent changes table
 	 * @param $report bool Don't change things; just echo numbers
 	 * @return integer Number of entries changed, or that would be changed
@@ -132,7 +132,7 @@ class ReassignEdits extends Maintenance {
 	 * Return the most efficient set of user conditions
 	 * i.e. a user => id mapping, or a user_text => text mapping
 	 *
-	 * @param $user User for the condition
+	 * @param $user wiki_User for the condition
 	 * @param $idfield string Field name containing the identifier
 	 * @param $utfield string Field name containing the user text
 	 * @return array
@@ -145,7 +145,7 @@ class ReassignEdits extends Maintenance {
 	 * Return user specifications
 	 * i.e. user => id, user_text => text
 	 *
-	 * @param $user User for the spec
+	 * @param $user wiki_User for the spec
 	 * @param $idfield string Field name containing the identifier
 	 * @param $utfield string Field name containing the user text
 	 * @return array
@@ -157,16 +157,16 @@ class ReassignEdits extends Maintenance {
 	/**
 	 * Initialise the user object
 	 *
-	 * @param $username string Username or IP address
-	 * @return User
+	 * @param $username string wiki_Username or IP address
+	 * @return wiki_User
 	 */
-	private function initialiseUser( $username ) {
-		if ( User::isIP( $username ) ) {
-			$user = new User();
+	private function initialisewiki_User( $username ) {
+		if ( wiki_User::isIP( $username ) ) {
+			$user = new wiki_User();
 			$user->setId( 0 );
 			$user->setName( $username );
 		} else {
-			$user = User::newFromName( $username );
+			$user = wiki_User::newFromName( $username );
 			if ( !$user ) {
 				$this->error( "Invalid username", true );
 			}

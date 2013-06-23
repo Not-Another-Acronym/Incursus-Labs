@@ -16,7 +16,7 @@ class ApiBlockTest extends ApiTestCase {
 	}
 
 	function addDBData() {
-		$user = User::newFromName( 'UTApiBlockee' );
+		$user = wiki_User::newFromName( 'UTApiBlockee' );
 
 		if ( $user->getId() == 0 ) {
 			$user->addToDatabase();
@@ -38,7 +38,7 @@ class ApiBlockTest extends ApiTestCase {
 
 		$data = $this->getTokens();
 
-		$user = User::newFromName( 'UTApiBlockee' );
+		$user = wiki_User::newFromName( 'UTApiBlockee' );
 
 		if ( !$user->getId() ) {
 			$this->markTestIncomplete( "The user UTApiBlockee does not exist" );

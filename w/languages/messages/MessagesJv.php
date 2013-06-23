@@ -49,7 +49,7 @@ $namespaceAliases = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Garisen ngisoré pranala:',
 'tog-justify' => 'Ratakna paragraf',
 'tog-hideminor' => 'Delikna suntingan cilik ing owah-owahan pungkasan',
@@ -383,7 +383,7 @@ Basis data ngasilaké kasalahan "$3: $4".',
 'readonlytext' => 'Database lagi dikunci marang panampan anyar. Pangurus sing ngunci mènèhi katrangan kaya mangkéné: <p>$1',
 'missing-article' => "Basis data ora bisa nemokaké tèks kaca sing kuduné ana, yaiku \"\$1\" \$2.
 Bab iki bisasané disebabaké déning pranala daluwarsa menyang revisi sadurungé kaca sing wis dibusak.
-Yèn dudu iki panyebabé, panjenengan manawa bisa nemokaké kasalahan (''bug'') jroning piranti alus (''software''). Mangga dilapuraké bab iki menyang [[Special:ListUsers/sysop|administrator]], kanthi nyebutaké alamat URL sing dituju",
+Yèn dudu iki panyebabé, panjenengan manawa bisa nemokaké kasalahan (''bug'') jroning piranti alus (''software''). Mangga dilapuraké bab iki menyang [[Special:Listwiki_Users/sysop|administrator]], kanthi nyebutaké alamat URL sing dituju",
 'missingarticle-rev' => '(révisi#: $1)',
 'missingarticle-diff' => '(Béda: $1, $2)',
 'readonly_lag' => 'Database wis dikunci mawa otomatis sawetara database sékundhèr lagi nglakoni sinkronisasi mawa database utama',
@@ -430,7 +430,7 @@ $2',
 'customcssprotected' => 'Sampéyan ora dililakaké nyunting kaca CSS iki amarga kaisi pangaturan pribadi saka panganggo liya.',
 'customjsprotected' => 'Sampéyan ora dililakaké nyunting kaca JavaScript iki amarga kaisi pangaturan pribadi saka panganggo liya.',
 'ns-specialprotected' => 'Kaca ing bilik nama astaméwa utawa kusus, ora bisa disunting.',
-'titleprotected' => "Irah-irahan iki direksa ora olèh digawé déning [[User:$1|$1]].
+'titleprotected' => "Irah-irahan iki direksa ora olèh digawé déning [[wiki_User:$1|$1]].
 Alesané yaiku ''$2''.",
 'filereadonlyerror' => 'Ora bisa ngowah berkas "$1" amarga panyimpenan berkas "$2" ana ing mode mung-bisa-diwaca.
 
@@ -448,7 +448,7 @@ Pangurus sing ngopèni kuwi ngawedharaké: "$3".',
 # Login and logout pages
 'logouttext' => "'''Sampéyan wis metu log'''
 
-Sampéyan bisa nganggo {{SITENAME}} sacara anonim, utawa bisa [[Special:UserLogin|mlebu log manèh]] kanthi jeneng panganggo sing padha utawa beda.
+Sampéyan bisa nganggo {{SITENAME}} sacara anonim, utawa bisa [[Special:wiki_UserLogin|mlebu log manèh]] kanthi jeneng panganggo sing padha utawa beda.
 
 Cathet yèn sapérangan kaca mungkin isih nampilaké tulisan yèn Sampéyan isih nèng njero log, kuwi bisa ilang yèn Sampéyan ngresiki ''cache'' pramban Sampéyan.",
 'welcomecreation' => '== Sugeng rawuh, $1! ==
@@ -492,7 +492,7 @@ Pesthèkaken panjenengan sampun ngaktifaken kuki, lajeng amot malih kaca punika 
 'loginsuccess' => "'''Panjenengan saiki mlebu ing {{SITENAME}} kanthi asma \"\$1\".'''",
 'nosuchuser' => 'Ora ana panganggo mawa asma "$1".
 Jeneng panganggo iku mbédakaké kapitalisasi.
-Coba dipriksa manèh pasang aksarané, utawa [[Special:UserLogin/signup|gawé akun anyar]].',
+Coba dipriksa manèh pasang aksarané, utawa [[Special:wiki_UserLogin/signup|gawé akun anyar]].',
 'nosuchusershort' => 'Ora ana panganggo mawa asma "$1". Coba dipriksa manèh pasang aksarané (éjaané).',
 'nouserspecified' => 'Panjenengan kudu milih asma panganggo.',
 'login-userblocked' => 'Panganggé punika dipunblok. Login boten dipunidinaken',
@@ -664,14 +664,14 @@ Bagéan iki manawa wis dipindhah utawa dibusak nalika panjenengan buka.',
 'loginreqlink' => 'mlebu log',
 'loginreqpagetext' => 'Panjenengan kudu $1 kanggo bisa mirsani kaca liyané.',
 'accmailtitle' => 'Tembung sandhi wis dikirim.',
-'accmailtext' => "Sawijining tembung sandi acak kanggo [[User talk:$1|$1]] wis digawé lan dikirim menyang $2.
+'accmailtext' => "Sawijining tembung sandi acak kanggo [[wiki_User talk:$1|$1]] wis digawé lan dikirim menyang $2.
 
 Tembung sandi kanggo akun anyar iki bisa diganti ing kaca ''[[Special:ChangePassword|ganti tembung sandi]]'' sawisé mlebu log.",
 'newarticle' => '(Anyar)',
 'newarticletext' => "Katonané panjenengan ngetutaké pranala artikel sing durung ana.
 Manawa kersa manulis artikel iki, manggaa. (Mangga mirsani [[{{MediaWiki:Helppage}}|Pitulung]] kanggo informasi sabanjuré).
 Yèn ora sengaja tekan kéné, bisa ngeklik pencètan '''back''' waé ing panjlajah wèb panjenengan.",
-'anontalkpagetext' => "---- ''Iki yaiku kaca dhiskusi sawijining panganggo anonim sing durung kagungan akun utawa ora nganggo akuné, dadi kita keeksa kudu nganggo alamat IP-né kanggo nepangi. Alamat IP kaya mengkéné iki bisa dienggo déning panganggo sing séjé-séjé. Yèn panjenengan pancèn panganggo anonim lan olèh komentar-komentar miring, mangga [[Special:UserLogin/signup|nggawé akun]] utawa [[Special:UserLogin|log mlebu]] supaya ora rancu karo panganggo anonim liyané ing mangsa ngarep.''",
+'anontalkpagetext' => "---- ''Iki yaiku kaca dhiskusi sawijining panganggo anonim sing durung kagungan akun utawa ora nganggo akuné, dadi kita keeksa kudu nganggo alamat IP-né kanggo nepangi. Alamat IP kaya mengkéné iki bisa dienggo déning panganggo sing séjé-séjé. Yèn panjenengan pancèn panganggo anonim lan olèh komentar-komentar miring, mangga [[Special:wiki_UserLogin/signup|nggawé akun]] utawa [[Special:wiki_UserLogin|log mlebu]] supaya ora rancu karo panganggo anonim liyané ing mangsa ngarep.''",
 'noarticletext' => 'Saiki ora ana tèks ing kaca iki. Panjenengan bisa [[Special:Search/{{PAGENAME}}|nglakoni panggolèkan kanggo judhul iki kaca iki]] ing kaca-kaca liyané, <span class="plainlinks">[{{fullurl:{{#Special:Log}}|kaca={{urlencode:{{FULLPAGENAME}}}}}} nggolèki log kagandhèng],
 utawa [{{fullurl:{{FULLPAGENAME}}|action=edit}} nyunting kaca iki]</span>.',
 'noarticletext-nopermission' => 'Saiki ora ana tèks ing kaca iki. 
@@ -752,7 +752,7 @@ Entri cathetan pungkasan disadiakake ing ngisor kanggo referensi:",
 'hiddencategories' => 'Kaca iki sawijining anggota saka {{PLURAL:$1|1 kategori ndelik|$1 kategori-kategori ndelik}}:',
 'edittools' => '<!-- Tèks ing ngisor iki bakal ditudhuhaké ing ngisoring isènan suntingan lan pangemotan.-->',
 'nocreatetitle' => 'Panggawéan kaca anyar diwatesi',
-'nocreatetext' => 'Situs iki ngwatesi kemampuan kanggo nggawé kaca anyar. Panjenengan bisa bali lan nyunting kaca sing wis ana, utawa mangga [[Special:UserLogin|mlebua log utawa ndaftar]]',
+'nocreatetext' => 'Situs iki ngwatesi kemampuan kanggo nggawé kaca anyar. Panjenengan bisa bali lan nyunting kaca sing wis ana, utawa mangga [[Special:wiki_UserLogin|mlebua log utawa ndaftar]]',
 'nocreate-loggedin' => 'Panjenengan ora kagungan idin kanggo nggawé kaca anyar.',
 'sectioneditnotsupported-title' => 'Panyuntingan bagéyan ora kasengkuyungan',
 'sectioneditnotsupported-text' => 'Panyuntingan sapérangan ora disengkuyung ing kaca suntingan iki.',
@@ -799,11 +799,11 @@ Sawetara cithakan bakal dilirwakaké.',
 'undo-success' => 'Suntingan iki bisa dibatalaké. Tulung priksa prabandhingan ing ngisor iki kanggo mesthèkaké yèn prakara iki pancèn sing bener panjenengan pèngin lakoni, banjur simpenen pangowahan iku kanggo ngrampungaké pambatalan suntingan.',
 'undo-failure' => 'Suntingan iki ora bisa dibatalakén amerga ana konflik panyuntingan antara.',
 'undo-norev' => 'Suntingan iki ora bisa dibatalaké amerga ora ana utawa wis dibusak.',
-'undo-summary' => '←Mbatalaké revisi $1 déning [[Special:Contributions/$2|$2]] ([[User talk:$2|Dhiskusi]])',
+'undo-summary' => '←Mbatalaké revisi $1 déning [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Dhiskusi]])',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'Akun ora bisa digawé',
-'cantcreateaccount-text' => "Saka alamat IP iki ('''$1''') ora diparengaké nggawé akun utawa rékening. Sing mblokir utawa ora marengaké iku [[User:$3|$3]].
+'cantcreateaccount-text' => "Saka alamat IP iki ('''$1''') ora diparengaké nggawé akun utawa rékening. Sing mblokir utawa ora marengaké iku [[wiki_User:$3|$3]].
 
 Alesané miturut $3 yaiku ''$2''",
 
@@ -1058,7 +1058,7 @@ Rinciané bisa ditemokaké nèng [{{fullurl:{{#Special:Log}}/delete|page={{FULLP
 'mypreferences' => 'Préferènsi',
 'prefs-edits' => 'Gunggungé suntingan:',
 'prefsnologin' => 'Durung mlebu log',
-'prefsnologintext' => 'Panjenengan kudu <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}}| mlebu log]</span> kanggo ngowahin préferènsi njenengan.',
+'prefsnologintext' => 'Panjenengan kudu <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}}| mlebu log]</span> kanggo ngowahin préferènsi njenengan.',
 'changepassword' => 'Ganti tembung sandi',
 'prefs-skin' => 'Kulit',
 'skin-preview' => 'Pratilik',
@@ -1171,16 +1171,16 @@ Alamat layang èlèktronik Sampéyan ora dituduhaké nalika wong liya ngubungi S
 'prefs-displaywatchlist' => 'Opsi tampilan',
 'prefs-diffs' => 'Prabédan',
 
-# User preference: e-mail validation using jQuery
+# wiki_User preference: e-mail validation using jQuery
 'email-address-validity-valid' => 'Alamat layang èlèktronik kayané sah',
 'email-address-validity-invalid' => 'Lebokaké alamat layang èlèktronik sing sah',
 
-# User rights
+# wiki_User rights
 'userrights' => 'Manajemen hak panganggo',
 'userrights-lookup-user' => 'Ngatur kelompok panganggo',
 'userrights-user-editname' => 'Lebokna jeneng panganggo:',
 'editusergroup' => 'Sunting kelompok panganggo',
-'editinguser' => "Ngganti hak panganggo '''[[User:$1|$1]]''' $2",
+'editinguser' => "Ngganti hak panganggo '''[[wiki_User:$1|$1]]''' $2",
 'userrights-editusergroup' => 'Sunting kelompok panganggo',
 'saveusergroups' => 'Simpen kelompok panganggo',
 'userrights-groupsmember' => 'Anggota saka:',
@@ -1192,7 +1192,7 @@ Alamat layang èlèktronik Sampéyan ora dituduhaké nalika wong liya ngubungi S
 'userrights-reason' => 'Alesan:',
 'userrights-no-interwiki' => 'Panjenengan ora ana hak kanggo ngowahi hak panganggo ing wiki liyané.',
 'userrights-nodatabase' => 'Basis data $1 ora ana utawa ora lokal.',
-'userrights-nologin' => 'Panjenengan kudu [[Special:UserLogin|mlebu log]] mawa nganggo akun utawa rékening pangurus supaya bisa ngowahi hak panganggo.',
+'userrights-nologin' => 'Panjenengan kudu [[Special:wiki_UserLogin|mlebu log]] mawa nganggo akun utawa rékening pangurus supaya bisa ngowahi hak panganggo.',
 'userrights-notallowed' => 'Akun Sampéyan ora nduwé idin kanggo nambah utawa nyuda hak-hak panganggo.',
 'userrights-changeable-col' => 'Grup sing bisa panjenengan owahi',
 'userrights-unchangeable-col' => 'Grup sing ora bisa diowahi panjenengan',
@@ -1283,7 +1283,7 @@ Alamat layang èlèktronik Sampéyan ora dituduhaké nalika wong liya ngubungi S
 'right-sendemail' => 'Ngirim layang listrik (e-mail) menyang panganggo liya',
 'right-passwordreset' => 'Delok layang èlèktronik panyetèlulangan tembung sandhi',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Log pangowahan hak aksès',
 'rightslogtext' => 'Ing ngisor iki kapacak log pangowahan marang hak-hak panganggo.',
 'rightslogentry' => 'ngganti kaanggotan kelompok kanggo $1 saka $2 dadi $3',
@@ -1379,7 +1379,7 @@ Alamat layang èlèktronik Sampéyan ora dituduhaké nalika wong liya ngubungi S
 'reuploaddesc' => 'Bali ing formulir pamotan',
 'upload-tryagain' => 'Kirim déskripsi berkas sing wis diowah',
 'uploadnologin' => 'Durung mlebu log',
-'uploadnologintext' => 'Panjenengan kudu [[Special:UserLogin|mlebu log]] supaya olèh ngunggahaké gambar utawa berkas liyané.',
+'uploadnologintext' => 'Panjenengan kudu [[Special:wiki_UserLogin|mlebu log]] supaya olèh ngunggahaké gambar utawa berkas liyané.',
 'upload_directory_missing' => 'Direktori pamunggahan ($1) ora ditemokaké lan ora bisa digawé déning server wèb.',
 'upload_directory_read_only' => 'Dirèktori pangunggahan ($1) ora bisa ditulis déning server wèb.',
 'uploaderror' => 'Kaluputan pangunggahan berkas',
@@ -1494,9 +1494,9 @@ $1',
 'upload-proto-error-text' => 'Pangunggahan jarah adoh mbutuhaké URL sing diawali karo <code>http://</code> utawa <code>ftp://</code>.',
 'upload-file-error' => 'Kaluputan internal',
 'upload-file-error-text' => 'Ana kaluputan internal nalika nyoba ngunggahaké berkas sauntara ing server.
-Mangga kontak [[Special:ListUsers/sysop|pangurus]].',
+Mangga kontak [[Special:Listwiki_Users/sysop|pangurus]].',
 'upload-misc-error' => 'Kaluputan pamunggahan sing ora dimangertèni',
-'upload-misc-error-text' => 'Ana kaluputan sing ora diweruhi kadadéyan nalika pangunggahan. Mangga dipasthèkaké yèn URL kasebut iku absah lan bisa diaksès lan sawisé iku cobanen manèh. Yèn masalah iki isih ana, mangga kontak [[Special:ListUsers/sysop|pangurus sistem]].',
+'upload-misc-error-text' => 'Ana kaluputan sing ora diweruhi kadadéyan nalika pangunggahan. Mangga dipasthèkaké yèn URL kasebut iku absah lan bisa diaksès lan sawisé iku cobanen manèh. Yèn masalah iki isih ana, mangga kontak [[Special:Listwiki_Users/sysop|pangurus sistem]].',
 'upload-too-many-redirects' => 'URL ngandhut kakèhan pengalihan',
 'upload-unknown-size' => 'Ukuran ora diweruhi',
 'upload-http-error' => 'Ana kasalahan HTTP: $1',
@@ -1725,7 +1725,7 @@ Priksanen dhisik pranala-pranala menyang cithakan iki sadurungé mbusak.',
 'statistics-views-total' => 'Gunggung panampilan kaca',
 'statistics-views-total-desc' => 'Delokan nèng kaca sing ora ana lan kaca kusus ora kalebu',
 'statistics-views-peredit' => 'Gunggung/cacahing panampilan saben suntingan',
-'statistics-users' => 'Gunggung [[Special:ListUsers|panganggo kadaftar]]',
+'statistics-users' => 'Gunggung [[Special:Listwiki_Users|panganggo kadaftar]]',
 'statistics-users-active' => 'Para panganggo aktif',
 'statistics-users-active-desc' => 'Panganggo sing ngayahi aktivitas jroning {{PLURAL:$1|dia|$1 dina}} pungkasan',
 'statistics-mostpopular' => 'Kaca sing paling akèh dideleng',
@@ -1888,13 +1888,13 @@ Deleng uga [[Special:WantedCategories|kategori sing diperlokaké]].',
 'linksearch-line' => '$1 disambung saka $2',
 'linksearch-error' => "''Wildcards'' namung bisa dienggo ing bagéyan awal saka jeneng host.",
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => 'Tuduhna panganggo sing diawali karo:',
 'listusers-submit' => 'Tuduhna',
 'listusers-noresult' => 'Panganggo ora ditemokaké.',
 'listusers-blocked' => '(diblokir)',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'Dhaptar panganggo aktif',
 'activeusers-intro' => 'Iki daptar panganggo sing katon lakuné ing $1 {{PLURAL:$1|dina|dina}} kapungkur.',
 'activeusers-count' => '$1 {{PLURAL:$1|suntingan|suntingan}} ing {{PLURAL:$3|dina|$3 dina}} pungkasan',
@@ -1928,7 +1928,7 @@ Informasi tambahan perkara hak-hak individual bisa ditemokaké ing [[{{MediaWiki
 
 # E-mail user
 'mailnologin' => 'Ora ana alamat layang e-mail',
-'mailnologintext' => 'Panjenengan kudu [[Special:UserLogin|mlebu log]] lan kagungan alamat e-mail sing sah ing [[Special:Preferences|preféèrensi]] yèn kersa ngirim layang e-mail kanggo panganggo liya.',
+'mailnologintext' => 'Panjenengan kudu [[Special:wiki_UserLogin|mlebu log]] lan kagungan alamat e-mail sing sah ing [[Special:Preferences|preféèrensi]] yèn kersa ngirim layang e-mail kanggo panganggo liya.',
 'emailuser' => 'Kirim e-mail panganggo iki',
 'emailpage' => 'Kirimi panganggo iki layang e-mail',
 'emailpagetext' => 'Panjenengan bisa migunakaké formulir ing ngisor kanggo ngirim layang-e marang panganggo iki.
@@ -1957,7 +1957,7 @@ Alamat layang-e sing panjenengan lebokaké ing [[Special:Preferences|préferèsi
 'emailsenttext' => 'Layang e-mail panjenengan wis dikirim.',
 'emailuserfooter' => 'Layang-e iki dikirimaké déning $1 marang $2 migunakaké fungsi "Layangpanganggo" ing {{SITENAME}}.',
 
-# User Messenger
+# wiki_User Messenger
 'usermessage-summary' => 'Tinggalaké layang sistem.',
 'usermessage-editor' => 'Pawartaning layang sistem',
 
@@ -1968,7 +1968,7 @@ Alamat layang-e sing panjenengan lebokaké ing [[Special:Preferences|préferèsi
 'nowatchlist' => 'Daftar pangawasan panjenengan kosong.',
 'watchlistanontext' => 'Mangga $1 kanggo mirsani utawa nyunting daftar pangawasan panjenengan.',
 'watchnologin' => 'Durung mlebu log',
-'watchnologintext' => 'Panjenengan kudu [[Special:UserLogin|mlebu log]] kanggo ngowahi daftar artikel pilihan.',
+'watchnologintext' => 'Panjenengan kudu [[Special:wiki_UserLogin|mlebu log]] kanggo ngowahi daftar artikel pilihan.',
 'addwatch' => 'Tambah nèng daptar pangawasan',
 'addedwatchtext' => "Kaca \"[[:\$1]]\" wis ditambahaké menyang [[Special:Watchlist|daftar pangawasan]].
 Owah-owahan sing dumadi ing tembé ing kaca iku lan kaca dhiskusi sing kagandhèng, bakal dipacak ing kéné, lan kaca iku bakal dituduhaké '''kandel''' ing [[Special:RecentChanges|daftar owah-owahan iku]] supados luwih gampang katon.",
@@ -2070,12 +2070,12 @@ kudu ngati-ati.',
 'rollbacklinkcount-morethan' => 'balèkaké luwih saka $1 {{PLURAL:$1|suntingan|suntingan}}',
 'rollbackfailed' => 'Pambalèkan gagal dilakoni',
 'cantrollback' => 'Ora bisa mbalèkaké suntingan; panganggo pungkasan iku siji-sijiné penulis artikel iki.',
-'alreadyrolled' => 'Ora bisa mbalèkaké suntingan pungkasan [[:$1]] déning [[User:$2|$2]] ([[User talk:$2|Wicara]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]); wong liya wis nyunting utawa mbalèkaké kaca artikel iku.
+'alreadyrolled' => 'Ora bisa mbalèkaké suntingan pungkasan [[:$1]] déning [[wiki_User:$2|$2]] ([[wiki_User talk:$2|Wicara]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]); wong liya wis nyunting utawa mbalèkaké kaca artikel iku.
 
-Suntingan pungkasan dilakoni déning [[User:$3|$3]] ([[User talk:$3|Wicara]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
+Suntingan pungkasan dilakoni déning [[wiki_User:$3|$3]] ([[wiki_User talk:$3|Wicara]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
 'editcomment' => "Ringkesan suntingan yaiku: \"''\$1''\".",
-'revertpage' => 'Suntingan [[Special:Contributions/$2|$2]] ([[User talk:$2|dhiskusi]]) dipunwangsulaken dhateng ing vèrsi pungkasan déning [[User:$1|$1]]',
-'revertpage-nouser' => 'Suntingan dibalèkaké déning (jeneng panganggo dibusak) nèng benahan pungkasan déning [[User:$1|$1]]',
+'revertpage' => 'Suntingan [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|dhiskusi]]) dipunwangsulaken dhateng ing vèrsi pungkasan déning [[wiki_User:$1|$1]]',
+'revertpage-nouser' => 'Suntingan dibalèkaké déning (jeneng panganggo dibusak) nèng benahan pungkasan déning [[wiki_User:$1|$1]]',
 'rollback-success' => 'Suntingan dibalèkaké déning $1;
 diowahi bali menyang vèrsi pungkasan déning $2.',
 
@@ -2309,7 +2309,7 @@ Delok [[Special:BlockList|daptar blokir]] kanggo ninjo blokiran.',
 'unblockip' => 'Jabel blokir marang alamat IP utawa panganggo',
 'unblockiptext' => 'Nggonen formulir ing ngisor iki kanggo mbalèkaké aksès nulis sawijining alamt IP utawa panganggo sing sadurungé diblokir.',
 'ipusubmit' => 'Ilangna blokir iki',
-'unblocked' => 'Blokir marang [[User:$1|$1]] wis dijabel',
+'unblocked' => 'Blokir marang [[wiki_User:$1|$1]] wis dijabel',
 'unblocked-range' => '$1 ora diblokir manèh',
 'unblocked-id' => 'Blokir $1 wis dijabel',
 'blocklist' => 'Panganggo diblokir',
@@ -2342,7 +2342,7 @@ Delok [[Special:BlockList|daptar blokir]] kanggo ninjo blokiran.',
 'change-blocklink' => 'owahi blokir',
 'contribslink' => 'sumbangan',
 'emaillink' => 'kirim layang èlèktronik',
-'autoblocker' => 'Panjenengan otomatis dipun-blok amargi nganggé alamat protokol internet (IP) ingkang sami kaliyan "[[User:$1|$1]]". Alesanipun $1 dipun blok inggih punika "\'\'\'$2\'\'\'"',
+'autoblocker' => 'Panjenengan otomatis dipun-blok amargi nganggé alamat protokol internet (IP) ingkang sami kaliyan "[[wiki_User:$1|$1]]". Alesanipun $1 dipun blok inggih punika "\'\'\'$2\'\'\'"',
 'blocklogpage' => 'Log pamblokiran',
 'blocklog-showlog' => 'Panganggo iki wis tau diblokir sakdurungé.
 Log blokiran sumadhiya nèng ngisor kanggo rujukan:',
@@ -2426,7 +2426,7 @@ Ing kasus-kasus iku, yèn panjenengan gayuh, panjenengan bisa mindhahaké utawa 
 'movearticle' => 'Pindhah kaca',
 'moveuserpage-warning' => "'''Pèngetan:''' Sampéyan arep mindhahaké kaca panganggo. Mangga cathet yèn namung kaca sing bakal dipindhahaké lan panganggo '''ora''' bakal diganti jenengé.",
 'movenologin' => 'Durung mlebu log',
-'movenologintext' => 'Panjenengan kudu dadi panganggo sing wis ndaftar lan wis [[Special:UserLogin|mlebu log]] kanggo mindhah kaca.',
+'movenologintext' => 'Panjenengan kudu dadi panganggo sing wis ndaftar lan wis [[Special:wiki_UserLogin|mlebu log]] kanggo mindhah kaca.',
 'movenotallowed' => 'Panjenengan ora pareng ngalihaké kaca.',
 'movenotallowedfile' => 'Panjenengan ora duwé hak kanggo mindhahaké berkas.',
 'cant-move-user-page' => 'Panjenengan ora nduwèni hak aksès kanggo mindhahaké kaca panganggo (kapisah saka anak-kaca).',
@@ -3240,10 +3240,10 @@ Konfirmasi iki bakal kadaluwarsa ing $4.',
 
 # Delete conflict
 'deletedwhileediting' => "'''Pènget''': Kaca iki wis kabusak sawisé panjenengan miwiti nyunting!",
-'confirmrecreate' => "Panganggo [[User:$1|$1]] ([[User talk:$1|Wicara]]) wis mbusak kaca iki nalika panjenengan miwiti panyuntingan mawa alesan:
+'confirmrecreate' => "Panganggo [[wiki_User:$1|$1]] ([[wiki_User talk:$1|Wicara]]) wis mbusak kaca iki nalika panjenengan miwiti panyuntingan mawa alesan:
 : ''$2''
 Mangga didhedhes (dikonfirmasi) menawa panjenengan kersa nggawé ulang kaca iki.",
-'confirmrecreate-noreason' => 'Panganggo [[User:$1|$1]] ([[User talk:$1|wicara]]) mbusak kaca iki sakbaré Sampéyan lekas nyunting. Mangga pesthèkaké yèn Sampéyan pancen pingin tenan nggawé manèh kaca iki.',
+'confirmrecreate-noreason' => 'Panganggo [[wiki_User:$1|$1]] ([[wiki_User talk:$1|wicara]]) mbusak kaca iki sakbaré Sampéyan lekas nyunting. Mangga pesthèkaké yèn Sampéyan pancen pingin tenan nggawé manèh kaca iki.',
 'recreate' => 'Gawé ulang',
 
 # action=purge

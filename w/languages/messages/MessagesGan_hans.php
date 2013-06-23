@@ -33,7 +33,7 @@ $namespaceNames = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => '下划链接',
 'tog-justify' => '对到段落',
 'tog-hideminor' => '该朝子𠮶改动弆到𠮶细修改',
@@ -358,7 +358,7 @@ MySQL回到错误“$3: $4”。',
 通常个系因为修订历史页上头，过时𠮶连结连到删吥𠮶版面咁舞得𠮶。
 
 如果不系咁，倷可能系寻到软件里头𠮶bug。
-请记得 URL 𠮶地址，向[[Special:ListUsers/sysop|管理员]]报告。',
+请记得 URL 𠮶地址，向[[Special:Listwiki_Users/sysop|管理员]]报告。',
 'missingarticle-rev' => '（修订#: $1）',
 'missingarticle-diff' => '（差异: $1, $2）',
 'readonly_lag' => '附属数据库服务器拿缓存更新到主服务器，数据库自动锁到嘞',
@@ -401,7 +401,7 @@ $2',
 # Login and logout pages
 'logouttext' => "'''汝退出正哩。'''
 
-接到汝得匿名使用{{SITENAME}}，或[[Special:UserLogin|登入过]]。除非汝删吥浏览器缓存，只把子页面可能会接到话汝系登入状态。",
+接到汝得匿名使用{{SITENAME}}，或[[Special:wiki_UserLogin|登入过]]。除非汝删吥浏览器缓存，只把子页面可能会接到话汝系登入状态。",
 'welcomecreation' => '== 欢迎, $1! ==
 
 建正哩汝𠮶帐户，莫𫍧记设置 [[Special:Preferences|{{SITENAME}}𠮶个人参数]]。',
@@ -548,7 +548,7 @@ $2',
 'newarticletext' => '个系只冇拕建立𠮶页面。
 要新开个只页面，请到下首𠮶方框里头编写内容（望吖[[{{MediaWiki:Helppage}}|说明]]𠮶细节）。
 若系汝伓系特事来到个首，捺吖浏览器𠮶「去还」键即得去还。',
-'anontalkpagetext' => "---- ''个系匿名用户𠮶讨论页，话伓定佢哈冇开只帐户。别人单用得正IP地址同佢联系。个只IP地址可能有好几只用户共用。如果倷系匿名用户，觉得个页𠮶内容同倷冇关，欢迎去[[Special:UserLogin|开只新帐户或登入]]，省得同别𠮶匿名用户扤混来。''",
+'anontalkpagetext' => "---- ''个系匿名用户𠮶讨论页，话伓定佢哈冇开只帐户。别人单用得正IP地址同佢联系。个只IP地址可能有好几只用户共用。如果倷系匿名用户，觉得个页𠮶内容同倷冇关，欢迎去[[Special:wiki_UserLogin|开只新帐户或登入]]，省得同别𠮶匿名用户扤混来。''",
 'noarticletext' => '眼下个页哈冇内容，倷可以到别𠮶页面[[Special:Search/{{PAGENAME}}|寻吖个页𠮶标题]]，
 <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} 寻吖有关日志]或[{{fullurl:{{FULLPAGENAME}}|action=edit}} 编写个页]</span>。',
 'noarticletext-nopermission' => '眼下个页哈冇内容，汝可以到别𠮶页面[[Special:Search/{{PAGENAME}}|寻吖个页𠮶标题]]，
@@ -568,7 +568,7 @@ $2',
 
 ''个只wiki开放正原HTML码，预览拕弆到以防止JavaScript𠮶攻击。''
 
-'''要系佢系合法编辑𠮶，请较过吖。哈系扤伓正𠮶话，试得[[Special:UserLogout|退出]]后登入过。'''",
+'''要系佢系合法编辑𠮶，请较过吖。哈系扤伓正𠮶话，试得[[Special:wiki_UserLogout|退出]]后登入过。'''",
 'token_suffix_mismatch' => "'''倷𠮶用户端𠮶编辑信毁吥嘞嚸标点符号字符，啖𠮶话倷𠮶编辑就拖拒绝嘞。
 个种情况通常系含到好多臭虫、以网络为主𠮶匿名代理服务扤得。'''",
 'editing' => '编辑嘚$1',
@@ -609,7 +609,7 @@ $2',
 'hiddencategories' => '个只版面系属于$1只隐藏类𠮶成员：',
 'edittools' => '<!--个首𠮶文本会到下底𠮶编辑同上传列表里坨显示。 -->',
 'nocreatetitle' => '新建页面拖限制',
-'nocreatetext' => '个只网站限制新建页面𠮶功能。倷可以回头去编辑有嘞𠮶页面，或者[[Special:UserLogin|登入或新开帐户]]。',
+'nocreatetext' => '个只网站限制新建页面𠮶功能。倷可以回头去编辑有嘞𠮶页面，或者[[Special:wiki_UserLogin|登入或新开帐户]]。',
 'nocreate-loggedin' => '倷到 {{SITENAME}} 冇权新开页面。',
 'permissionserrors' => '权限错误',
 'permissionserrorstext' => '根据底下𠮶{{PLURAL:$1|原因|原因}}，倷冇权限去扤:',
@@ -633,7 +633,7 @@ $2',
 # "Undo" feature
 'undo-success' => '个只编辑可以拖取销。请检查吖以确定个系倷想扤𠮶，接到保存修改去完成撤销编辑。',
 'undo-failure' => '半中𠮶编辑有人挭仗，个只编辑伓可以拖取销。',
-'undo-summary' => '取消由[[Special:Contributions/$2|$2]] （[[User talk:$2|对话]]）所修订𠮶 $1',
+'undo-summary' => '取消由[[Special:Contributions/$2|$2]] （[[wiki_User talk:$2|对话]]）所修订𠮶 $1',
 
 # Account creation failure
 'cantcreateaccounttitle' => '新开伓正帐户',
@@ -794,7 +794,7 @@ $2',
 'mypreferences' => '偶𠮶参数设置',
 'prefs-edits' => '编辑数:',
 'prefsnologin' => '哈冇登入',
-'prefsnologintext' => '汝要<span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} 登入]</span>后才设得正个人参数。',
+'prefsnologintext' => '汝要<span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} 登入]</span>后才设得正个人参数。',
 'changepassword' => '改过密码',
 'prefs-skin' => '皮',
 'skin-preview' => '（预览）',
@@ -841,12 +841,12 @@ $2',
 'prefs-help-email-others' => '汝不公开自家𠮶用户身分也得通过用户页或用户谈𫍡页跟得汝联系。',
 'prefs-help-email-required' => '需要电子邮件地址。',
 
-# User rights
+# wiki_User rights
 'userrights' => '用户权限管理',
 'userrights-lookup-user' => '管理用户群',
 'userrights-user-editname' => '输入用户名:',
 'editusergroup' => '编辑用户群',
-'editinguser' => "眼下编辑嘚用户𠮶权限 '''[[User:$1|$1]]''' （[[User talk:$1|{{int:talkpagelinktext}}]]{{int:pipe-separator}}[[Special:Contributions/$1|{{int:contribslink}}]]）",
+'editinguser' => "眼下编辑嘚用户𠮶权限 '''[[wiki_User:$1|$1]]''' （[[wiki_User talk:$1|{{int:talkpagelinktext}}]]{{int:pipe-separator}}[[Special:Contributions/$1|{{int:contribslink}}]]）",
 'userrights-editusergroup' => '编辑用户群',
 'saveusergroups' => '存储用户群',
 'userrights-groupsmember' => '归到:',
@@ -872,7 +872,7 @@ $2',
 'grouppage-sysop' => '{{ns:project}}:操作员',
 'grouppage-bureaucrat' => '{{ns:project}}:行政员',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => '用户权限日志',
 'rightslogtext' => '底下记到用户权限𠮶更改记录。',
 'rightslogentry' => '拿 $1 𠮶权限从 $2 改到 $3',
@@ -931,7 +931,7 @@ $2',
 'uploadbtn' => '上传档案',
 'reuploaddesc' => '返回上传列表。',
 'uploadnologin' => '冇登入',
-'uploadnologintext' => '倷要[[Special:UserLogin|登入]]再上传得正档案。',
+'uploadnologintext' => '倷要[[Special:wiki_UserLogin|登入]]再上传得正档案。',
 'upload_directory_read_only' => '上传目录（$1）伓存在或冇写入权限。',
 'uploaderror' => '上传出错',
 'uploadtext' => "用下底𠮶表格上传档案。
@@ -1111,7 +1111,7 @@ $2',
 'statistics-edits-average' => '每页𠮶平均编辑数',
 'statistics-views-total' => '查看𠮶统共数',
 'statistics-views-peredit' => '每到编辑查看数',
-'statistics-users' => '注册过𠮶[[Special:ListUsers|用户]]',
+'statistics-users' => '注册过𠮶[[Special:Listwiki_Users|用户]]',
 'statistics-users-active' => '活跃用户',
 'statistics-users-active-desc' => '头$1日操作过𠮶用户',
 'statistics-mostpopular' => '眵𠮶人最多𠮶页面',
@@ -1229,7 +1229,7 @@ Also see [[Special:WantedCategories|wanted categories]].',
 'linksearch-ok' => '寻吖',
 'linksearch-line' => '$1连自$2',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => '显示啖样用户条件:',
 'listusers-submit' => '显示',
 'listusers-noresult' => '寻伓到用户。',
@@ -1242,7 +1242,7 @@ Also see [[Special:WantedCategories|wanted categories]].',
 
 # E-mail user
 'mailnologin' => '冇email地址',
-'mailnologintext' => '倷要[[Special:UserLogin|登入]] 起同到倷𠮶[[Special:Preferences|参数设置]] 有只有效𠮶email才发得正email到别𠮶用户。',
+'mailnologintext' => '倷要[[Special:wiki_UserLogin|登入]] 起同到倷𠮶[[Special:Preferences|参数设置]] 有只有效𠮶email才发得正email到别𠮶用户。',
 'emailuser' => '发email到个只用户',
 'emailpage' => '发email到用户',
 'emailpagetext' => '要系个只用户到佢𠮶参数设置页填哩有效𠮶email位置，下底𠮶表格会寄只信息到个只用户。
@@ -1268,7 +1268,7 @@ Also see [[Special:WantedCategories|wanted categories]].',
 'nowatchlist' => '倷𠮶监视列表什哩都冇有。',
 'watchlistanontext' => '请$1眵吖或改吖倷𠮶监视列表。',
 'watchnologin' => '冇登入',
-'watchnologintext' => '倷要[[Special:UserLogin|登入]]起才改得正倷𠮶监视列表。',
+'watchnologintext' => '倷要[[Special:wiki_UserLogin|登入]]起才改得正倷𠮶监视列表。',
 'addedwatchtext' => "页面\"[[:\$1]]\" 加到嘞倷𠮶[[Special:Watchlist|监视列表]]。个页同佢𠮶讨论页𠮶全部改动以后都会列到许首，佢会用'''粗体''' 列到[[Special:RecentChanges|最近更改]]让倷更加容易识别。 倷以后要系拿佢到监视列表删卟佢𠮶话，就到导航条点吖“莫眏到”。",
 'removedwatchtext' => '页面[[:$1]]到[[Special:Watchlist|倷𠮶监视列表]]删卟哩。',
 'watch' => '眏到',
@@ -1348,12 +1348,12 @@ $NEWPAGE
 'rollbacklink' => '还原',
 'rollbackfailed' => '还原失败',
 'cantrollback' => '还原伓正；最末𠮶贡献人系文章𠮶唯一作者。',
-'alreadyrolled' => '还原伓正由[[User:$2|$2]] （[[User talk:$2|讨论]]）做𠮶[[$1]]𠮶最晏编写；
+'alreadyrolled' => '还原伓正由[[wiki_User:$2|$2]] （[[wiki_User talk:$2|讨论]]）做𠮶[[$1]]𠮶最晏编写；
 别𠮶人编辑过或系恢复嘞个页。
 
-最晏编辑人: [[User:$3|$3]] （[[User talk:$3|讨论]]）。',
+最晏编辑人: [[wiki_User:$3|$3]] （[[wiki_User talk:$3|讨论]]）。',
 'editcomment' => "编辑介绍: \"''\$1''\"。",
-'revertpage' => '返回由[[Special:Contributions/$2|$2]] （[[User talk:$2|对话]]）𠮶编辑；恢复到[[User:$1|$1]]𠮶最末一只版本',
+'revertpage' => '返回由[[Special:Contributions/$2|$2]] （[[wiki_User talk:$2|对话]]）𠮶编辑；恢复到[[wiki_User:$1|$1]]𠮶最末一只版本',
 'rollback-success' => '返回由$1𠮶编辑；恢复到$2𠮶最末一只版本。',
 
 # Edit tokens
@@ -1525,7 +1525,7 @@ $1',
 'unblockip' => '解封IP地址',
 'unblockiptext' => '用下底𠮶表格去恢复早先拖封𠮶IP𠮶编写权。',
 'ipusubmit' => '解封个只地址',
-'unblocked' => '[[User:$1|$1]]解封嘞',
+'unblocked' => '[[wiki_User:$1|$1]]解封嘞',
 'unblocked-id' => '封禁$1拖删卟嘞',
 'ipblocklist' => '拕封用户𠮶名单',
 'ipblocklist-legend' => '寻吖拖封锁𠮶用户',
@@ -1601,7 +1601,7 @@ $1',
 啖倷就非要手工移动或合并页面。",
 'movearticle' => '换动页面:',
 'movenologin' => '冇登入',
-'movenologintext' => '倷要系登记用户接到[[Special:UserLogin|登入]]后才移动得正页面。',
+'movenologintext' => '倷要系登记用户接到[[Special:wiki_UserLogin|登入]]后才移动得正页面。',
 'movenotallowed' => '倷到{{SITENAME}}冇权移动页面。',
 'newtitle' => '新标题:',
 'move-watch' => '眏到个页',
@@ -2154,7 +2154,7 @@ $3
 
 # Delete conflict
 'deletedwhileediting' => '警告: 倷编辑𠮶时间有人删卟嘞个页！',
-'confirmrecreate' => "倷编辑𠮶时间，用户[[User:$1|$1]]（[[User talk:$1|对话]]）因为下底原因删卟嘞个页:
+'confirmrecreate' => "倷编辑𠮶时间，用户[[wiki_User:$1|$1]]（[[wiki_User talk:$1|对话]]）因为下底原因删卟嘞个页:
 : ''$2''
 请想正后再重建页面。",
 'recreate' => '重建',

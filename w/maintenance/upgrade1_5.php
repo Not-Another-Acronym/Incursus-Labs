@@ -648,9 +648,9 @@ CREATE TABLE $pagelinks (
 		echo $str;
 	}
 
-	function upgradeUser() {
+	function upgradewiki_User() {
 		// Apply unique index, if necessary:
-		$duper = new UserDupes( $this->dbw, array( $this, 'userDupeCallback' ) );
+		$duper = new wiki_UserDupes( $this->dbw, array( $this, 'userDupeCallback' ) );
 		if ( $duper->hasUniqueIndex() ) {
 			$this->log( "Already have unique user_name index." );
 		} else {

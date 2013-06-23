@@ -14,7 +14,7 @@
 $fallback = 'fr';
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Loïens soulinés:',
 'tog-justify' => 'Aligner ches paragrafes',
 'tog-hideminor' => 'Muche ches tiots edits din ches nouvieus cangemints',
@@ -290,7 +290,7 @@ $messages = array(
 'laggedslavemode' => "'''Afute:''' Pététe éq l'pache-lo n'o poin chés darins canjemints.",
 'missing-article' => "El base éd dounées n'o poin treuvé ech teske d'eune pache éq ale d'vroait treuver, aveuc ch'nom  \"\$1\" \$2. <br />  Généralemint, ch'est pasqué in o sui eune anthieusse diff o bin un histourique érlié aveuc eune pache défachée.
 
-Si s'n'est poin ch'cas-lo, pététe éq ch'est un bogue din ch'businkillache. <br /> I feut signaler ch'probléme-lo à un [[Special:ListUsers/sysop|administrateu]], aveuc l'URL.",
+Si s'n'est poin ch'cas-lo, pététe éq ch'est un bogue din ch'businkillache. <br /> I feut signaler ch'probléme-lo à un [[Special:Listwiki_Users/sysop|administrateu]], aveuc l'URL.",
 'missingarticle-rev' => '(révision#: $1)',
 'missingarticle-diff' => '(Diff: $1, $2)',
 'internalerror' => 'Bérlurache intérne',
@@ -542,7 +542,7 @@ Ale doét mie éte pu longue éq $1 {{PLURAL:$1|caracter|caractéres}}.',
 'prefs-help-email-others' => "Os pouvez auchi couésir d'laicher les eutes vos contacter par imèle aveuc un loïen édseur vote pache éd distchussion d'uzeu sans qu'i soèche nécessaire ed révéler vote idintité.",
 'prefs-help-email-required' => 'I feut eune iméle adérche',
 
-# User rights
+# wiki_User rights
 'userrights-groupsmember' => 'Mimbe éd:',
 
 # Groups
@@ -556,7 +556,7 @@ Ale doét mie éte pu longue éq $1 {{PLURAL:$1|caracter|caractéres}}.',
 
 'grouppage-sysop' => '{{ns:project}}:Aménistrateus',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => "Jornal d'chés droés dechl uzeu",
 
 # Associated actions - in the sentence "You do not have permission to X"
@@ -672,7 +672,7 @@ Vir apré ([$2 pache]).",
 
 # Statistics
 'statistics' => 'Éstatistikes',
-'statistics-users' => '[[Special:ListUsers|Uzeus]] inrégistrés',
+'statistics-users' => '[[Special:Listwiki_Users|Uzeus]] inrégistrés',
 
 'disambiguations' => 'Paches aveuc des loïens vers des paches du meume nom',
 'disambiguationspage' => 'Template:Omonymie',
@@ -745,7 +745,7 @@ Vir apré ([$2 pache]).",
 'linksearch' => 'Loïens éstérieurs',
 'linksearch-line' => '$1 est loïé édpuis $2',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'Lisse des ouvreus uzeus',
 
 # Special:Log/newusers
@@ -793,10 +793,10 @@ Vir $2 pou eune lisse d'chés darinnes défachons.",
 'rollbackfailed' => 'Értour loupé',
 'cantrollback' => "éj peus mie invérser l'édition;
 ch'darin contérbucheu, ch'est ch'seu auteur del pache-lo.",
-'alreadyrolled' => "éj pus mie invérser el darin édition éd [[:$1]] par [[User:$2|$2]] ([[User talk:$2|Talk]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]);
+'alreadyrolled' => "éj pus mie invérser el darin édition éd [[:$1]] par [[wiki_User:$2|$2]] ([[wiki_User talk:$2|Talk]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]);
 queuque-un il o édité ou invérsé l'pache déjo.
 
-L' passèie édition del pache étoait par  [[User:$3|$3]] ([[User talk:$3|Talk]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).",
+L' passèie édition del pache étoait par  [[wiki_User:$3|$3]] ([[wiki_User talk:$3|Talk]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).",
 
 # Protect
 'protectlogpage' => 'Gasète éd chés protéccions',

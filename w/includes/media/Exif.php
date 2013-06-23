@@ -181,7 +181,7 @@ class Exif {
 
 				# Tags relating to related user information
 				'MakerNote' => Exif::IGNORE,				# Manufacturer notes
-				'UserComment' => Exif::UNDEFINED,			# User comments #p34
+				'wiki_UserComment' => Exif::UNDEFINED,			# wiki_User comments #p34
 
 				# Tags relating to related file information
 				'RelatedSoundFile' => Exif::ASCII,			# Related audio file
@@ -385,7 +385,7 @@ class Exif {
 		$this->exifPropToOrd( 'FileSource' );
 		$this->exifPropToOrd( 'SceneType' );
 
-		$this->charCodeString( 'UserComment' );
+		$this->charCodeString( 'wiki_UserComment' );
 		$this->charCodeString( 'GPSProcessingMethod');
 		$this->charCodeString( 'GPSAreaInformation' );
 		

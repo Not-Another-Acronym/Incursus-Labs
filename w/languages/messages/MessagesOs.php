@@ -90,7 +90,7 @@ $linkTrail = '/^((?:[a-z]|а|æ|б|в|г|д|е|ё|ж|з|и|й|к|л|м|н|о|п|
 $fallback8bitEncoding =  'windows-1251';
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Æрвитæнты бын хахх',
 'tog-justify' => 'Æмвæз абзацтæ',
 'tog-hideminor' => 'Чысыл ивддзинæдтæ фæстаг ивддзинæдты номхыгъды мауал æвдис',
@@ -432,7 +432,7 @@ $1',
 Ацы рæдыд фылдæр рацæуы зæронд иртасæн кæнæ хафт файлы историмæ æрвитæны фæдыл ацæугæйæ.
 
 Кæд уый аххос нæу, уæд гæнæн ис цыдæр раст нæу софты.
-Дæ хорзæхæй, сардау ацы рæдыд [[Special:ListUsers/sysop|радгæсыл]] æмæ иу ын ацы фарсы URL дæр зæгъ.',
+Дæ хорзæхæй, сардау ацы рæдыд [[Special:Listwiki_Users/sysop|радгæсыл]] æмæ иу ын ацы фарсы URL дæр зæгъ.',
 'missingarticle-rev' => '(фæлтæр № $1)',
 'missingarticle-diff' => '(хъауджы: $1, $2)',
 'readonly_lag' => 'Рарддон йæхæдæг сæхгæд ис, цалынмæ дыггагон севертæ нæ ссинхронизаци кæной фыццагонтимæ',
@@ -484,7 +484,7 @@ $2',
 'customcssprotected' => 'Дæуæн нæй бар ивын ацы CSS фарс, уымæн æмæ уым ис æндæр архайæджы персоналон æвæрдтытæ.',
 'customjsprotected' => 'Дæуæн нæй бар ивын ацы JavaScript фарс, уымæн æмæ уым ис æндæр архайæджы персоналон æвæрдтытæ.',
 'ns-specialprotected' => 'Сæрмагонд фæрстæ ({{ns:special}}) баивæн нæй.',
-'titleprotected' => 'Ацы ном уыд æхгæд саразынæй. Сæхгæдта йæ [[User:$1|$1]].
+'titleprotected' => 'Ацы ном уыд æхгæд саразынæй. Сæхгæдта йæ [[wiki_User:$1|$1]].
 Æхгæныны бындур уыд "\'\'$2\'\'".',
 'filereadonlyerror' => 'Нæ уайы фæивын файл "$1" уый тыххæй æмæ репозиторий "$2" кусы æрмæст фæрсыны уавæры.
 
@@ -502,7 +502,7 @@ $2',
 # Login and logout pages
 'logouttext' => "'''Ныр дæ æддæмæ хызт.'''
 
-Дæ бон у дарддæр архайай {{grammar:genitive|{{SITENAME}}}} æнæномæй, æви та [[Special:UserLogin|фæстæмæ бахизын]] раздæры номæй кæнæ та æндæр номæй.
+Дæ бон у дарддæр архайай {{grammar:genitive|{{SITENAME}}}} æнæномæй, æви та [[Special:wiki_UserLogin|фæстæмæ бахизын]] раздæры номæй кæнæ та æндæр номæй.
 Дæ сæры дар æмæ иуæй иу фæрстæ гæнæн ис æвдыст цæуой афтæ, цымæ нырмæ дæр нæ рахызтæ. Уый тыххæй дæ браузеры кеш сафтид кæн.",
 'welcomecreation' => '== Ӕгас цу, $1! ==
 Дæ аккаунт арæзт æрцыдис.
@@ -550,7 +550,7 @@ $2',
 'loginsuccess' => "'''Ныр ды дæ хыст {{grammar:genitive|{{SITENAME}}}} куыд \"\$1\".'''",
 'nosuchuser' => 'Нæй ахæм архайæг "$1" номимæ.
 Архайджыты нæмттæ хатынц дамгъæты регистр.
-Сбæрæг æй кæн, раст ныффыстай ном, æви [[Special:UserLogin/signup|бакæн ног аккаунт]].',
+Сбæрæг æй кæн, раст ныффыстай ном, æви [[Special:wiki_UserLogin/signup|бакæн ног аккаунт]].',
 'nosuchusershort' => 'Нæй архайæг "$1" фæсномыгимæ.
 Фен, фæсномыг раст ныффыстай, æви нæ.',
 'nouserspecified' => 'Ды хъуамæ зæгъай дæ фæсномыг.',
@@ -745,7 +745,7 @@ $2
 'loginreqlink' => 'бахизын',
 'loginreqpagetext' => 'Дæуæн хъæуы $1 цæмæй æндæр фæрстæ кæсай.',
 'accmailtitle' => 'Пароль æрвыст æрцыд.',
-'accmailtext' => "[[User talk:$1|{{grammar:dative|$1}}]] халæй ист пароль æрвыст æрцыд $2-мæ.
+'accmailtext' => "[[wiki_User talk:$1|{{grammar:dative|$1}}]] халæй ист пароль æрвыст æрцыд $2-мæ.
 
 Ацы ног аккаунты пароль гæнæн ис фæивын ''[[Special:ChangePassword|пароль ивæн варсыл]]'' бахизыны фæстæ.",
 'newarticle' => '(Ног)',
@@ -754,7 +754,7 @@ $2
 'anontalkpagetext' => "----''Ай у æнæном архайæджы ныхасы фарс. Ацы архайæг нырмæ нæ срегистраци кодта, кæнæ та йæ аккаунтæй нæ архайы.
 Уый тыххæй мах пайда кæнæм йæ IP адрисæй, цæмæй-иу æй бæрæг кæнæм.
 Ахæм IP адристæй гæнæн ис архайой цалдæр архайæджы.
-Кæд ды æнæном архайæг дæ æмæ дæм цыдæр зæгъæлы фыстæджытæ цæуы, уæд, дæ хорзæхæй, [[Special:UserLogin/signup|бакæн аккаунт]] кæнæ [[Special:UserLogin|бахиз системæмæ]], цæмæй дæ мауал хæццæ кæной æндæр æнæном архайджытимæ.''",
+Кæд ды æнæном архайæг дæ æмæ дæм цыдæр зæгъæлы фыстæджытæ цæуы, уæд, дæ хорзæхæй, [[Special:wiki_UserLogin/signup|бакæн аккаунт]] кæнæ [[Special:wiki_UserLogin|бахиз системæмæ]], цæмæй дæ мауал хæццæ кæной æндæр æнæном архайджытимæ.''",
 'noarticletext' => 'Ацы фарсы нырмæ текст нæй.
 Дæ бон у [[Special:Search/{{PAGENAME}}|бацагурын ацы фарсы ном]] æндæр фæрсты,
 <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} агурын йæ кой логты],
@@ -986,11 +986,11 @@ $2
 'prefs-displaywatchlist' => 'Æвдисыны фадæттæ',
 'prefs-diffs' => 'Иртасæнтæ',
 
-# User preference: e-mail validation using jQuery
+# wiki_User preference: e-mail validation using jQuery
 'email-address-validity-valid' => 'E-mail раст зыны',
 'email-address-validity-invalid' => 'Раст e-mail бацамон',
 
-# User rights
+# wiki_User rights
 'userrights' => 'Архайæджы барты армдарæн',
 'userrights-lookup-user' => 'Архайæджы къордтæ ивын',
 'userrights-user-editname' => 'Фæсномыг бацамон:',
@@ -1031,7 +1031,7 @@ $2
 'right-delete' => 'Фæрстæ хафын',
 'right-bigdelete' => 'Стыр историимæ фæрстæ хафын',
 
-# User rights log
+# wiki_User rights log
 'rightsnone' => '(нæй)',
 
 # Associated actions - in the sentence "You do not have permission to X"
@@ -1254,7 +1254,7 @@ $3',
 'linksearch-ok' => 'Агурын',
 'linksearch-line' => '$2 æрвиты {{grammar:allative|$1}}',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusers-submit' => 'Равдисын',
 
 # Special:Log/newusers
@@ -1266,7 +1266,7 @@ $3',
 'listgrouprights-members' => '(уæнгты номхыгъд)',
 
 # E-mail user
-'mailnologintext' => 'Фыстæгтæ æрвитынмæ хъуамæ [[Special:UserLogin|системæйæн дæхи бавдисай]] æмæ дæ бæлвырд электронон посты адрис [[Special:Preferences|ныффыссай]].',
+'mailnologintext' => 'Фыстæгтæ æрвитынмæ хъуамæ [[Special:wiki_UserLogin|системæйæн дæхи бавдисай]] æмæ дæ бæлвырд электронон посты адрис [[Special:Preferences|ныффыссай]].',
 'emailuser' => 'Ацы архайæгæн электронон фыстæг рарвитт',
 'emailpage' => 'Электронон фыстæг йæм барвит',
 
@@ -1276,7 +1276,7 @@ $3',
 'watchlistfor2' => 'Архайæг: $1 $2',
 'nowatchlist' => 'Иу уацмæ дæр дæ цæст нæ дарыс.',
 'watchnologin' => 'Системæйæн дæхи нæ бацамыдтай',
-'watchnologintext' => 'Ацы номхыгъд ивынæн хъæуы [[Special:UserLogin|бахизын]].',
+'watchnologintext' => 'Ацы номхыгъд ивынæн хъæуы [[Special:wiki_UserLogin|бахизын]].',
 'removedwatchtext' => '«[[:$1]]» фарсмæ [[Special:Watchlist|дæ цæст]] нал дарыс.',
 'watch' => 'Цæст æрдарын',
 'watchthispage' => 'Цæст дарын ацы фарсмæ',

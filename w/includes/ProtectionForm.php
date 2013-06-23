@@ -58,7 +58,7 @@ class ProtectionForm {
 	var $mExistingExpiry = array();
 
 	function __construct( Page $article ) {
-		global $wgUser;
+		global $wgwiki_User;
 		// Set instance variables.
 		$this->mArticle = $article;
 		$this->mTitle = $article->getTitle();
@@ -66,7 +66,7 @@ class ProtectionForm {
 		
 		// Check if the form should be disabled.
 		// If it is, the form will be available in read-only to show levels.
-		$this->mPermErrors = $this->mTitle->getUserPermissionsErrors( 'protect', $wgUser );
+		$this->mPermErrors = $this->mTitle->getUserPermissionsErrors( 'protect', $wgwiki_User );
 		if ( wfReadOnly() ) {
 			$this->mPermErrors[] = array( 'readonlytext', wfReadOnlyReason() );
 		}
@@ -82,7 +82,7 @@ class ProtectionForm {
 	 * Loads the current state of protection into the object.
 	 */
 	function loadData() {
-		global $wgRequest, $wgUser;
+		global $wgRequest, $wgwiki_User;
 		global $wgRestrictionLevels;
 
 		$this->mCascade = $this->mTitle->areRestrictionsCascading();
@@ -136,10 +136,10 @@ class ProtectionForm {
 				// Prevent users from setting levels that they cannot later unset
 				if( $val == 'sysop' ) {
 					// Special case, rewrite sysop to either protect and editprotected
-					if( !$wgUser->isAllowedAny( 'protect', 'editprotected' ) )
+					if( !$wgwiki_User->isAllowedAny( 'protect', 'editprotected' ) )
 						continue;
 				} else {
-					if( !$wgUser->isAllowed($val) )
+					if( !$wgwiki_User->isAllowed($val) )
 						continue;
 				}
 				$this->mRestrictions[$action] = $val;
@@ -247,7 +247,7 @@ class ProtectionForm {
 	 * @return Boolean: success
 	 */
 	function save() {
-		global $wgRequest, $wgUser, $wgOut;
+		global $wgRequest, $wgwiki_User, $wgOut;
 
 		# Permission check!
 		if ( $this->disabled ) {
@@ -256,7 +256,7 @@ class ProtectionForm {
 		}
 
 		$token = $wgRequest->getVal( 'wpEditToken' );
-		if ( !$wgUser->matchEditToken( $token, array( 'protect', $this->mTitle->getPrefixedDBkey() ) ) ) {
+		if ( !$wgwiki_User->matchEditToken( $token, array( 'protect', $this->mTitle->getPrefixedDBkey() ) ) ) {
 			$this->show( array( 'sessionfailure' ) );
 			return false;
 		}
@@ -294,7 +294,7 @@ class ProtectionForm {
 			!(isset($wgGroupPermissions[$edit_restriction]['protect']) && $wgGroupPermissions[$edit_restriction]['protect'] ) )
 			$this->mCascade = false;
 
-		$status = $this->mArticle->doUpdateRestrictions( $this->mRestrictions, $expiry, $this->mCascade, $reasonstr, $wgUser );
+		$status = $this->mArticle->doUpdateRestrictions( $this->mRestrictions, $expiry, $this->mCascade, $reasonstr, $wgwiki_User );
 
 		if ( !$status->isOK() ) {
 			$this->show( $wgOut->parseInline( $status->getWikiText() ) );
@@ -318,11 +318,11 @@ class ProtectionForm {
 			return false;
 		}
 
-		if ( $wgUser->isLoggedIn() && $wgRequest->getCheck( 'mwProtectWatch' ) != $wgUser->isWatched( $this->mTitle ) ) {
+		if ( $wgwiki_User->isLoggedIn() && $wgRequest->getCheck( 'mwProtectWatch' ) != $wgwiki_User->isWatched( $this->mTitle ) ) {
 			if ( $wgRequest->getCheck( 'mwProtectWatch' ) ) {
-				WatchAction::doWatch( $this->mTitle, $wgUser );
+				WatchAction::doWatch( $this->mTitle, $wgwiki_User );
 			} else {
-				WatchAction::doUnwatch( $this->mTitle, $wgUser );
+				WatchAction::doUnwatch( $this->mTitle, $wgwiki_User );
 			}
 		}
 		return true;
@@ -334,7 +334,7 @@ class ProtectionForm {
 	 * @return String: HTML form
 	 */
 	function buildForm() {
-		global $wgUser, $wgLang, $wgOut;
+		global $wgwiki_User, $wgLang, $wgOut;
 
 		$mProtectreasonother = Xml::label(
 			wfMessage( 'protectcomment' )->text(),
@@ -496,14 +496,14 @@ class ProtectionForm {
 					"</td>
 				</tr>";
 			# Disallow watching is user is not logged in
-			if( $wgUser->isLoggedIn() ) {
+			if( $wgwiki_User->isLoggedIn() ) {
 				$out .= "
 				<tr>
 					<td></td>
 					<td class='mw-input'>" .
 						Xml::checkLabel( wfMessage( 'watchthis' )->text(),
 							'mwProtectWatch', 'mwProtectWatch',
-							$this->mTitle->userIsWatching() || $wgUser->getOption( 'watchdefault' ) ) .
+							$this->mTitle->userIsWatching() || $wgwiki_User->getOption( 'watchdefault' ) ) .
 					"</td>
 				</tr>";
 			}
@@ -521,7 +521,7 @@ class ProtectionForm {
 		}
 		$out .= Xml::closeElement( 'fieldset' );
 
-		if ( $wgUser->isAllowed( 'editinterface' ) ) {
+		if ( $wgwiki_User->isAllowed( 'editinterface' ) ) {
 			$title = Title::makeTitle( NS_MEDIAWIKI, 'Protect-dropdown' );
 			$link = Linker::link(
 				$title,
@@ -533,7 +533,7 @@ class ProtectionForm {
 		}
 
 		if ( !$this->disabled ) {
-			$out .= Html::hidden( 'wpEditToken', $wgUser->getEditToken( array( 'protect', $this->mTitle->getPrefixedDBkey() ) ) );
+			$out .= Html::hidden( 'wpEditToken', $wgwiki_User->getEditToken( array( 'protect', $this->mTitle->getPrefixedDBkey() ) ) );
 			$out .= Xml::closeElement( 'form' );
 			$wgOut->addScript( $this->buildCleanupScript() );
 		}
@@ -549,17 +549,17 @@ class ProtectionForm {
 	 * @return String: HTML fragment
 	 */
 	function buildSelector( $action, $selected ) {
-		global $wgRestrictionLevels, $wgUser;
+		global $wgRestrictionLevels, $wgwiki_User;
 
 		$levels = array();
 		foreach( $wgRestrictionLevels as $key ) {
 			//don't let them choose levels above their own (aka so they can still unprotect and edit the page). but only when the form isn't disabled
 			if( $key == 'sysop' ) {
 				//special case, rewrite sysop to protect and editprotected
-				if( !$wgUser->isAllowedAny( 'protect', 'editprotected' ) && !$this->disabled )
+				if( !$wgwiki_User->isAllowedAny( 'protect', 'editprotected' ) && !$this->disabled )
 					continue;
 			} else {
-				if( !$wgUser->isAllowed($key) && !$this->disabled )
+				if( !$wgwiki_User->isAllowed($key) && !$this->disabled )
 					continue;
 			}
 			$levels[] = $key;

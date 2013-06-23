@@ -35,7 +35,7 @@ $namespaceNames = array(
 $namespaceGenderAliases = array();
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Haiguy joajuha',
 'tog-justify' => 'embojoja haipyvo',
 'tog-hideminor' => 'Eñomi ñemyatyrõ michĩva «ñemoambue pyahúpe»',
@@ -270,11 +270,11 @@ Reikotevẽvérõ marandu, emoñe'ẽ kuatiarogue ñepytyvõ rehegua. Oiméramo 
 'yourlanguage' => "Ñe'ẽ:",
 'email' => 'Pareha eleytróniko',
 
-# User rights
+# wiki_User rights
 'userrights-lookup-user' => 'Configurar grupos de usuarios',
 'userrights-user-editname' => 'Ehaimi peteĩ téra puruháragua:',
 'editusergroup' => 'Modificar grupos de usuarios',
-'editinguser' => "Ojehaihína '''[[User:$1|$1]]''' ([[User talk:$1|{{int:talkpagelinktext}}]] | [[Special:Contributions/$1|{{int:contribslink}}]])",
+'editinguser' => "Ojehaihína '''[[wiki_User:$1|$1]]''' ([[wiki_User talk:$1|{{int:talkpagelinktext}}]] | [[Special:Contributions/$1|{{int:contribslink}}]])",
 'userrights-editusergroup' => 'Modificar grupos de usuarios',
 'saveusergroups' => 'Guardar grupos de usuarios',
 'userrights-groupsmember' => 'Pehengue:',
@@ -417,7 +417,7 @@ Reomĩsérõ ta'ãnga peteĩ kuatiaroguépe, eipuru peteĩ joaju:
 # Special:Categories
 'categories' => 'Ñemohendakuéra',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusers-submit' => 'Hechauka',
 
 # E-mail user

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * MediaWikiUserInterfaceTestCase
+ * MediaWikiwiki_UserInterfaceTestCase
  *
  * @file
  * @ingroup Maintenance
@@ -37,7 +37,7 @@ require_once (__DIR__.'/'.'MediaWikiInstallationCommonFunction.php');
 */
 
 
-class MediaWikiUserInterfaceTestCase extends MediaWikiInstallationCommonFunction {
+class MediaWikiwiki_UserInterfaceTestCase extends MediaWikiInstallationCommonFunction {
     
     function setUp() {
         parent::setUp();
@@ -77,7 +77,7 @@ class MediaWikiUserInterfaceTestCase extends MediaWikiInstallationCommonFunction
                 $this->getText( LINK_FORM."div[1]/div[1]/label" ));
         
         // 'Your language' dropdown available
-        $this->assertTrue( $this->isElementPresent( "UserLang" ));
+        $this->assertTrue( $this->isElementPresent( "wiki_UserLang" ));
         
         // 'Wiki language' label available
         $this->assertEquals( "Wiki language:",
@@ -138,18 +138,18 @@ class MediaWikiUserInterfaceTestCase extends MediaWikiInstallationCommonFunction
         $this->assertEquals( "Database table prefix:",
                 $this->getText( "//div[@id='DB_wrapper_mysql']/fieldset[1]/div[2]/div[1]/label" ));
         
-        // 'User account for installation' section available
+        // 'wiki_User account for installation' section available
         $this->assertTrue( $this->isElementPresent( "//div[@id='DB_wrapper_mysql']/fieldset[2]/legend" ));
         
-        // 'User account for installation' label available
-        $this->assertEquals( "User account for installation", $this->getText( "//div[@id='DB_wrapper_mysql']/fieldset[2]/legend" ));
+        // 'wiki_User account for installation' label available
+        $this->assertEquals( "wiki_User account for installation", $this->getText( "//div[@id='DB_wrapper_mysql']/fieldset[2]/legend" ));
         
         // 'Database username' label available
         $this->assertEquals( "Database username:",
                 $this->getText( "//div[@id='DB_wrapper_mysql']/fieldset[2]/div[1]/div[1]/label" ));
         
         // 'Database username' text box defaults to 'root'
-        $this->assertEquals("root", $this->getValue( "mysql__InstallUser" ));
+        $this->assertEquals("root", $this->getValue( "mysql__Installwiki_User" ));
         
         // 'Database password' label available
         $this->assertEquals( "Database password:",

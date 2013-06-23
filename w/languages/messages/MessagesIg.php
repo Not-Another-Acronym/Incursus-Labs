@@ -56,8 +56,8 @@ $specialPageAliases = array(
 	'Specialpages'              => array( 'IhüKá' ),
 	'Undelete'                  => array( 'Ábàkàshịkwàlà' ),
 	'Upload'                    => array( 'TinyéIheNélú' ),
-	'Userlogin'                 => array( 'Ọ\'bàniféÍBànyé' ),
-	'Userlogout'                => array( 'Ọ\'bàniféÍFụtá' ),
+	'wiki_Userlogin'                 => array( 'Ọ\'bàniféÍBànyé' ),
+	'wiki_Userlogout'                => array( 'Ọ\'bàniféÍFụtá' ),
 );
 
 $magicWords = array(
@@ -74,7 +74,7 @@ $magicWords = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Okpürụ ahiri jikodo:',
 'tog-justify' => 'Tinyé ndelita na ọkwa',
 'tog-hideminor' => 'Zonari orü ntàkírí na nwerue mẹrẹ ogẹ nsó',
@@ -396,7 +396,7 @@ Ndetu màkà ihü mkpà nke à díghị ézíbóté nọ nà [[Special:SpecialPa
 Ihe méré na mgbe ndiá bu ihe diff dáfùrù na ógè ndụ ya ma jikodo ákíkó mbu nke ótù ihü à gbákáshíálá.
 
 Ó bú nà ọ búghị ihe mèrè, ȯ nwèríkí bu Í gbákọtàrà àkà na áká nsónùsòrò.
-Biko chi ihe á na áká [[Special:ListUsers/sysop|onye íshí]], dètú URL.',
+Biko chi ihe á na áká [[Special:Listwiki_Users/sysop|onye íshí]], dètú URL.',
 'missingarticle-rev' => '(nlèwáriá#: $1)',
 'missingarticle-diff' => '(Íchè: $1, $2)',
 'internalerror' => 'Nsogbu ime ime',
@@ -439,7 +439,7 @@ Maka ikuwaria na asụsụ nke ozor, biko chetu I ji [//translatewiki.net/wiki/M
 # Login and logout pages
 'logouttext' => "'''I fwuóla ubwá.'''
 
-I nwèríkí jíwá {{SITENAME}} na nke ẹnwéghi áhà, mànà Í nwèríkí [[Special:UserLogin|bátá òzọr]] na áhà Í shị fwüo ma áhà ozọr.
+I nwèríkí jíwá {{SITENAME}} na nke ẹnwéghi áhà, mànà Í nwèríkí [[Special:wiki_UserLogin|bátá òzọr]] na áhà Í shị fwüo ma áhà ozọr.
 Màkwá na o dị ihü gi zi kà Í nor kwa ímé, o gi kwüshí mgbe Í sáfùrù cache ihe ishi a gá intanet gi.",
 'welcomecreation' => '== Nnöö, $1! ==
 Okíkè buwa gi a guchala.
@@ -619,7 +619,7 @@ Ndetu banyéré nkè ogẹ nso di na okpúrụ màkà ádịamámá:",
 'parser-template-loop-warning' => 'Etemete àtụ dị: [[$1]]',
 
 # "Undo" feature
-'undo-summary' => 'Emekwàlà orübà $1 shí [[Special:Contributions/$2|$2]] ([[User talk:$2|talk]])',
+'undo-summary' => 'Emekwàlà orübà $1 shí [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|talk]])',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'Enwéghịkị ke buwá',
@@ -820,7 +820,7 @@ Nwàné ótù okwu íshí na ihe Í nè tú jí ''háníle:'' Í tuó ihe nílé
 'prefs-timeoffset' => 'Nwopù ógè',
 'prefs-diffs' => 'Íchè',
 
-# User rights
+# wiki_User rights
 'userrights-user-editname' => "Tìnyé áhà ọ'bànifé:",
 'editusergroup' => "Mèzí ọtú nke ọ'bànifé",
 'userrights-editusergroup' => "Mèzí ọtú nke ọ'bànifé",
@@ -859,7 +859,7 @@ Nwàné ótù okwu íshí na ihe Í nè tú jí ''háníle:'' Í tuó ihe nílé
 'right-bigdelete' => 'Kàcha ihü nwéré ákíkó mbu dí ógólógó',
 'right-undelete' => 'Ágbakashia ótù ihü',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => "Ndetu échìchè íwú ọ'bànifé",
 'rightsnone' => '(efù)',
 
@@ -1098,12 +1098,12 @@ Ubwa, o na ga [[$2]].',
 'linksearch-ok' => 'Chọwa',
 'linksearch-line' => '$1 jikọdọ shí $2',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusers-submit' => 'Zi',
 'listusers-noresult' => "Ọ hügị ọ'bànifé.",
 'listusers-blocked' => '(kwàchịrị)',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers-hidebots' => 'Zonari bot',
 'activeusers-hidesysops' => 'Zonari ndi íshí',
 'activeusers-noresult' => "Ọ hügị ọ'bànifé.",
@@ -1288,7 +1288,7 @@ Ngá bu ihe hé mèkwàrà nà ihü '''$1''':",
 'ipb-unblock-addr' => 'Ákwàchịrị $1',
 'ipb-unblock' => "Ákwàchịrị áhà ọ'bànifé ma IP",
 'unblockip' => "Ákwàchịrị ọ'bànifé",
-'unblocked' => 'há kwàchịrị [[User:$1|$1]]',
+'unblocked' => 'há kwàchịrị [[wiki_User:$1|$1]]',
 'ipblocklist' => "Ọ'bànifé kwáchírí",
 'blocklist-target' => 'Ẹ́té',
 'blocklist-expiry' => 'Gbá ọ́kà',

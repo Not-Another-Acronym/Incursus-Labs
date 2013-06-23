@@ -68,7 +68,7 @@ class ApiFileRevert extends ApiBase {
 	/**
 	 * Checks that the user has permissions to perform this revert.
 	 * Dies with usage message on inadequate permissions.
-	 * @param $user User The user to check.
+	 * @param $user wiki_User The user to check.
 	 */
 	protected function checkPermissions( $user ) {
 		$title = $this->file->getTitle();

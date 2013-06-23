@@ -14,7 +14,7 @@
  */
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => "Tumana ling'ko:",
 'tog-justify' => 'Singanyekile silamina',
 'tog-usenewrc' => 'Inenset petuho nca (JavaScript)',
@@ -396,7 +396,7 @@ A sumekezi zwa selt sa dya, a kopisize di publiki domeni, a ike risorsi.
 'template-protected' => '(sa bukelezi)',
 'template-semiprotected' => '(bukelezi di pagafi)',
 'nocreatetext' => '{{SITENAME}} sa simplekile petulo.
-A afi e kenki/[[Special:UserLogin|menuhile]].',
+A afi e kenki/[[Special:wiki_UserLogin|menuhile]].',
 'recreate-moveddeleted-warn' => "'''!: A sa hloli petulo dy sa afi kulobala.'''
 
 A sa luku a kenki dyangitubilinisize petulo.
@@ -503,7 +503,7 @@ Informasi: (bye) = petuho a nca selt,
 
 'grouppage-sysop' => '{{ns:project}}:Sesop',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Desu di petuhoni kwa sebelu',
 'rightsnone' => '(ni)',
 
@@ -542,7 +542,7 @@ Informasi: (bye) = petuho a nca selt,
 'upload' => 'Imegi uplodezi',
 'uploadbtn' => 'Imegi uplodezi',
 'uploadnologin' => 'Ni menuhile',
-'uploadnologintext' => 'A sa [[Special:UserLogin|menuhile]]
+'uploadnologintext' => 'A sa [[Special:wiki_UserLogin|menuhile]]
 di uplodezi media.',
 'uploaderror' => 'Bufosi duplodezi',
 'uploadlogpage' => 'Desu di uplodezi',
@@ -692,7 +692,7 @@ di uplodezi media.',
 'deletedcontributions' => 'Afina di sebelu bye sa afi kulobala',
 'deletedcontributions-title' => 'Afina di sebelu bye sa afi kulobala',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => 'Kamukile sebelu di:',
 'listusers-submit' => 'Kamukile',
 'listusers-noresult' => 'Ni-di sebelu.',
@@ -716,7 +716,7 @@ dicon sa sosize ni sa meli di kupo sebelu.',
 'watchlist' => 'Zwa mukoloko di kentezi',
 'mywatchlist' => 'Zwa mukoloko di kentezi',
 'watchnologin' => 'A ni sa menuhile',
-'watchnologintext' => "A sa [[Special:UserLogin|menuhile]] di hloli ye ng'i zwa mukoloko di kentezi.",
+'watchnologintext' => "A sa [[Special:wiki_UserLogin|menuhile]] di hloli ye ng'i zwa mukoloko di kentezi.",
 'addedwatchtext' => "Petulo \"[[:\$1]]\" sa vugisize di zwa [[Special:Watchlist|mukoloko di kentezi]].
 Petuhoni di bye petulo e sa bulelezi sa mukolokosize ta, e '''ombelu''' kwa [[Special:RecentChanges|petuho nca]] di kwazidisize akusize.
 

@@ -48,7 +48,7 @@ skin-dependent CSS
 site JavaScript
 
 These can also be customised on a per-user basis, by editing
-[[User:<name>/monobook.css]], [[User:<name>/monobook.js]], etc.
+[[wiki_User:<name>/monobook.css]], [[wiki_User:<name>/monobook.js]], etc.
 
 This feature has led to a wide variety of "user styles" becoming available,
 which change the appearance of Monobook or MySkin:

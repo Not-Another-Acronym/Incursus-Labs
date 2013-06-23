@@ -270,10 +270,10 @@ class OldLocalFile extends LocalFile {
 	 * field of this image file, if it's marked as deleted.
 	 *
 	 * @param $field Integer
-	 * @param $user User object to check, or null to use $wgUser
+	 * @param $user wiki_User object to check, or null to use $wgwiki_User
 	 * @return bool
 	 */
-	function userCan( $field, User $user = null ) {
+	function userCan( $field, wiki_User $user = null ) {
 		$this->load();
 		return Revision::userCanBitfield( $this->deleted, $field, $user );
 	}
@@ -317,7 +317,7 @@ class OldLocalFile extends LocalFile {
 	 * @param $archiveName string The archive name of the file
 	 * @param $timestamp string
 	 * @param $comment string Upload comment
-	 * @param $user User User who did this upload
+	 * @param $user wiki_User wiki_User who did this upload
 	 * @return bool
 	 */
 	function recordOldUpload( $srcPath, $archiveName, $timestamp, $comment, $user ) {

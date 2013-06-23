@@ -71,7 +71,7 @@ class CliInstaller extends Installer {
 
 		if ( isset( $option['lang'] ) ) {
 			global $wgLang, $wgLanguageCode;
-			$this->setVar( '_UserLang', $option['lang'] );
+			$this->setVar( '_wiki_UserLang', $option['lang'] );
 			$wgContLang = Language::factory( $option['lang'] );
 			$wgLang = Language::factory( $option['lang'] );
 			$wgLanguageCode = $option['lang'];
@@ -90,12 +90,12 @@ class CliInstaller extends Installer {
 		}
 
 		if ( !isset( $option['installdbuser'] ) ) {
-			$this->setVar( '_InstallUser',
+			$this->setVar( '_Installwiki_User',
 				$this->getVar( 'wgDBuser' ) );
 			$this->setVar( '_InstallPassword',
 				$this->getVar( 'wgDBpassword' ) );
 		} else {
-			$this->setVar( '_InstallUser',
+			$this->setVar( '_Installwiki_User',
 				$option['installdbuser'] );
 			$this->setVar( '_InstallPassword',
 				isset( $option['installdbpass'] ) ? $option['installdbpass'] : "" );

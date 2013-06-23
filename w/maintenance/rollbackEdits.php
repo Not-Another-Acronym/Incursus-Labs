@@ -42,7 +42,7 @@ class RollbackEdits extends Maintenance {
 
 	public function execute() {
 		$user = $this->getOption( 'user' );
-		$username = User::isIP( $user ) ? $user : User::getCanonicalName( $user );
+		$username = wiki_User::isIP( $user ) ? $user : wiki_User::getCanonicalName( $user );
 		if ( !$username ) {
 			$this->error( 'Invalid username', true );
 		}
@@ -69,7 +69,7 @@ class RollbackEdits extends Maintenance {
 			return;
 		}
 
-		$doer = User::newFromName( 'Maintenance script' );
+		$doer = wiki_User::newFromName( 'Maintenance script' );
 
 		foreach ( $titles as $t ) {
 			$page = WikiPage::factory( $t );

@@ -57,7 +57,7 @@ class ApiQueryWatchlist extends ApiQueryGeneratorBase {
 
 		$params = $this->extractRequestParams();
 
-		$user = $this->getWatchlistUser( $params );
+		$user = $this->getWatchlistwiki_User( $params );
 
 		if ( !is_null( $params['prop'] ) && is_null( $resultPageSet ) ) {
 			$prop = array_flip( $params['prop'] );

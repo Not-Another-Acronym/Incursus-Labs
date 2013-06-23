@@ -43,7 +43,7 @@ $magicWords = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Tsenya mothalafase go dihlomaganyo:',
 'tog-hideminor' => 'Fihla diphetogo tše nnyenyane',
 'tog-showtoolbar' => "Bontšha ''toolbar'' yago fetola (JavaScript)",
@@ -302,7 +302,7 @@ Se, gantši se hlolwa ke ge o latela hlomanyo goba history ya kgale goya letlaka
 
 
 Gaeba lebaka e se leo, go ka be go na le tšhikidi go "software".
-Bega se go  [[Special:ListUsers/sysop|administrator]], o fana ka URL.',
+Bega se go  [[Special:Listwiki_Users/sysop|administrator]], o fana ka URL.',
 'missingarticle-rev' => '(Thumeletšo#: $1)',
 'internalerror' => 'Phošo ya ka gare',
 'internalerror_info' => 'Phošo ya ka gare :$1',
@@ -347,7 +347,7 @@ Tšhupaleloko (''account'') ya gago e tlhodilwe. O seke wa lebala go fetola [[Sp
 'loginsuccess' => "'''Bjale o tsene go {{SITENAME}} bjalo ka \"\$1\".'''",
 'nosuchuser' => 'Ga gona mošomiši wa leina la "$1".
 Maina a huduetša ke ditlhaka.
-Lebele mopeleto wa gago goba [[Special:UserLogin/signup|o tlhome mošomiši yo mophsa]].',
+Lebele mopeleto wa gago goba [[Special:wiki_UserLogin/signup|o tlhome mošomiši yo mophsa]].',
 'nosuchusershort' => 'Ga gona mošomiši wa leina la "$1". Hlokomela mopeleto wa gago.',
 'nouserspecified' => 'O swanela ke go fana ka leina la mošomiši.',
 'wrongpassword' => 'O loketše ditlhaka-tša-siphiri tšeo e sego tšona. Ka kgopelo, leka gape.',
@@ -474,7 +474,7 @@ Gape o re holofetša  gore mengwalo ye e ngwadile ke wena, goba o e kopiša moth
 'template-semiprotected' => '(lota-ka-seripa)',
 'hiddencategories' => 'Letlakala le, ke setho sa {{PLURAL:$1|1 sehlopha sago uta|$1 dihlopha tšago uta}}:',
 'nocreatetext' => '{{SITENAME}} e nale dithibelo tše itšego go tlholeng ga matlakala a maphsa.
-O ka boela morago wa felola matlakala a lego gona, goba o [[Special:UserLogin|tsene]].',
+O ka boela morago wa felola matlakala a lego gona, goba o [[Special:wiki_UserLogin|tsene]].',
 'nocreate-loggedin' => 'Ga ona tumello ya go tlhola matlakala a mampsha.',
 'permissionserrors' => 'Phošo ya ditumello',
 'permissionserrorstext' => 'Gawa dumelwa go pheta seo,ka {{PLURAL:$1|lebaka|mabaka}} a latelago:',
@@ -629,9 +629,9 @@ Le swanela goba fase ga $1 {{PLURAL:$1|ya tlhaka|tša ditlhaka}}',
 Ga re fane ka e-poso ya gago go bašumiši ba bangwe ge ba polela le wena ka yona.',
 'prefs-help-email-required' => 'E-mail atrese eya nyakega.',
 
-# User rights
+# wiki_User rights
 'editusergroup' => 'Fetola sehlopha sa bašomiši',
-'editinguser' => "O fetola mošomiši '''[[User:$1|$1]]''' $2",
+'editinguser' => "O fetola mošomiši '''[[wiki_User:$1|$1]]''' $2",
 'userrights-editusergroup' => 'Fetola sehlopha sa bašomiši',
 'saveusergroups' => 'Boloko Dihlopha tša bašomiši',
 'userrights-groupsmember' => 'Leloko la:',
@@ -650,7 +650,7 @@ Ga re fane ka e-poso ya gago go bašumiši ba bangwe ge ba polela le wena ka yon
 'right-edit' => 'Fetola matlakala',
 'right-move' => 'Huduša matlakala',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => "''log'' ya ditumello tša mošomiši",
 
 # Associated actions - in the sentence "You do not have permission to X"
@@ -863,7 +863,7 @@ Matlakala ago ba [[Special:Watchlist|lenanong la gago la matlakala ditlhapetšo]
 'linksearch-ok' => 'Fetleka',
 'linksearch-line' => '$1 e kgokaganywa gotšwa $2',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusers-submit' => 'Bontšha',
 
 # Special:Log/newusers

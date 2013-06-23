@@ -63,8 +63,8 @@ $specialPageAliases = array(
 	'Specialpages'              => array( 'SpecialižedLehtpoled' ),
 	'Statistics'                => array( 'Statistikad' ),
 	'Upload'                    => array( 'Jügutoitta' ),
-	'Userlogin'                 => array( 'KävutajanTulendnimi' ),
-	'Userlogout'                => array( 'KävutajanLäntend' ),
+	'wiki_Userlogin'                 => array( 'KävutajanTulendnimi' ),
+	'wiki_Userlogout'                => array( 'KävutajanLäntend' ),
 	'Version'                   => array( 'Versii' ),
 	'Wantedfiles'               => array( 'VarastadudFailad' ),
 	'Watchlist'                 => array( 'KaclendNimikirjutez' ),
@@ -88,7 +88,7 @@ $magicWords = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Jonoštada kosketused:',
 'tog-justify' => 'Tazoitada tekst lehtpolen levedusen mödhe',
 'tog-hideminor' => 'Peitta pened redakcijad veresiden toižetusiden nimikirjuteses',
@@ -416,7 +416,7 @@ Andmusiden baz pördi petusen "$3: $4"',
 
 Mugoi situacii sündub tobjimalaz, konz kävutai ladib lähtta lehtpolen toižetuzistorijaha vanhtunut i čutud kosketustme.
 
-Ku azj ei ole neciš, ka tö, nägub, olet löudnuded vigan programmas. Olgat hüväd, kirjutagat necen polhe [[Special:ListUsers/sysop|administratorale]].
+Ku azj ei ole neciš, ka tö, nägub, olet löudnuded vigan programmas. Olgat hüväd, kirjutagat necen polhe [[Special:Listwiki_Users/sysop|administratorale]].
 Ližakat URL.',
 'missingarticle-rev' => '(versii № $1)',
 'missingarticle-diff' => '(Ero: $1, $2)',
@@ -461,7 +461,7 @@ Kändmižen täht om paremb kävutada [//translatewiki.net/wiki/Main_Page?setlan
 'customcssprotected' => 'Teil ei ole oiktust redaktiruida nece CSS-lehtpol’, sikš sil oma toižen ühtnijan personaližed järgendused.',
 'customjsprotected' => 'Teil ei ole oiktust redaktiruida nece JavaScript-lehtpol’, sikš sil oma toižen ühtnijan personaližed järgendused.',
 'ns-specialprotected' => 'Ei sa redaktiruida specialižid lehtpolid.',
-'titleprotected' => '[[User:$1|$1]]-kävutai om kel\'nu mugoižen lehtpolen pälkirjutesen kävutamižen.
+'titleprotected' => '[[wiki_User:$1|$1]]-kävutai om kel\'nu mugoižen lehtpolen pälkirjutesen kävutamižen.
 Sü om "\'\'$2\'\'".',
 
 # Virus scanner
@@ -472,7 +472,7 @@ Sü om "\'\'$2\'\'".',
 # Login and logout pages
 'logouttext' => "'''Tö olet lähtnuded sistemaspäi.'''
 
-Sab jatkta rad {{SITENAME}}-saital anonimižikš, vai [[Special:UserLogin|kirjutagatoiš udes]] sil-žo vai toižel kävutajan nimel.
+Sab jatkta rad {{SITENAME}}-saital anonimižikš, vai [[Special:wiki_UserLogin|kirjutagatoiš udes]] sil-žo vai toižel kävutajan nimel.
 Otkat sil'mnägubale, miše erasid lehtpolid ozutaškatas mugažo, kut i edel teiden lähtendad sistemaspäi. Miše vajehtada niiden nägu, puhtastagat teiden kaclimen keš.",
 'welcomecreation' => '== Tulgat tervhen, $1! ==
 Teiden registracii om loptud.
@@ -513,7 +513,7 @@ Otkat ned kävutamižhe i toštkat teiden tegend.',
 'loginsuccess' => "'''Tö radat nügüd' {{SITENAME}}-saital kut \"\$1\".'''",
 'nosuchuser' => 'Ei ole kävutajad "$1"-nimenke.
 Kävutajan nimiden oigedkirjutamine rippub kirjamiden registraspäi.
-Kodvgat teiden oigedkirjutamine, vai [[Special:UserLogin/signup|säkat uz\' registracii]].',
+Kodvgat teiden oigedkirjutamine, vai [[Special:wiki_UserLogin/signup|säkat uz\' registracii]].',
 'nosuchusershort' => 'Ei ole kävutajad "$1"-nimenke.
 Kodvgat teiden oigedkirjutamine.',
 'nouserspecified' => 'Pidab kirjutada kävutajan nimi.',
@@ -737,7 +737,7 @@ Alemba om anttud jäl'gmäine aiglehtesen kirjutez:",
 'edittools' => '<!-- Tänna sijatud tekst ozutadas redaktiruindan da jügutoitandan formiden al. -->',
 'nocreatetitle' => 'Lehtpoliden sädand om kaidetud',
 'nocreatetext' => "{{SITENAME}}-saitas uziden lehtpoliden sädand om kaidetud.
-Tö voit pörttas tagaze i redaktiruida toine lehtpol', vai [[Special:UserLogin|kirjutagatoiš sistemha, vai säkat registracii]].",
+Tö voit pörttas tagaze i redaktiruida toine lehtpol', vai [[Special:wiki_UserLogin|kirjutagatoiš sistemha, vai säkat registracii]].",
 'nocreate-loggedin' => 'Teile ei sa säta uzid lehtpolid.',
 'sectioneditnotsupported-title' => "Jagadusiden redaktiruind ei ole pid'oiteldud.",
 'sectioneditnotsupported-text' => "Necil lehtpolel jagadusiden redaktiruind ei ole pid'oiteldud.",
@@ -992,7 +992,7 @@ Otkat sil'mnägubale üks-se, miše {{SITENAME}}-saitan sädäimišt voib olda v
 'mypreferences' => 'Järgendused',
 'prefs-edits' => 'Redaktiruindoiden lugu:',
 'prefsnologin' => 'Tö et olgoi kirjutanus sistemha.',
-'prefsnologintext' => 'Teile pidab <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} kirjutadas sistemha]</span>, miše toižetada järgendusid.',
+'prefsnologintext' => 'Teile pidab <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} kirjutadas sistemha]</span>, miše toižetada järgendusid.',
 'changepassword' => 'Peitsanan toižetuz',
 'prefs-skin' => 'Irdnägu',
 'skin-preview' => 'Ezikaclend',
@@ -1099,11 +1099,11 @@ Ku tö kirjutat sen, nece nimi kävutadas, miše ozutada lehtpolen toižetajad.'
 'prefs-displaywatchlist' => 'Nägun opcijad',
 'prefs-diffs' => 'Erod',
 
-# User preference: e-mail validation using jQuery
+# wiki_User preference: e-mail validation using jQuery
 'email-address-validity-valid' => 'Verkpočtan adres nägub korrektižeks.',
 'email-address-validity-invalid' => 'Antkat verkpočtan korrektine adres',
 
-# User rights
+# wiki_User rights
 'userrights' => 'Kävutajiden oiktusiden ohjandamine',
 'userrights-lookup-user' => 'Kävutajiden gruppiden ohjendamine',
 'userrights-user-editname' => 'Kävutajan nimi:',
@@ -1115,7 +1115,7 @@ Ku tö kirjutat sen, nece nimi kävutadas, miše ozutada lehtpolen toižetajad.'
 'userrights-reason' => 'Sü:',
 'userrights-no-interwiki' => 'Teile ei sa toižetada toižiden wikiden kävutajiden oiktusid.',
 'userrights-nodatabase' => 'Andmusiden $1-bazad ei ole vai se ei ole lokaline.',
-'userrights-nologin' => 'Teile pidab [[Special:UserLogin|kirjutadas sistemha]] administratoran oiktusidenke, miše antta oiktusid kävutajile.',
+'userrights-nologin' => 'Teile pidab [[Special:wiki_UserLogin|kirjutadas sistemha]] administratoran oiktusidenke, miše antta oiktusid kävutajile.',
 'userrights-notallowed' => 'Teiden kävutajan registracijanke ei sa antta oiktusid toižile kävutajile da heitta toižiden kävutajiden oiktusid.',
 'userrights-changeable-col' => 'Gruppad, kudambad teile sab toižetada',
 'userrights-unchangeable-col' => 'Gruppad, kudambid teile ei sa toižetada',
@@ -1202,7 +1202,7 @@ Ku tö kirjutat sen, nece nimi kävutadas, miše ozutada lehtpolen toižetajad.'
 'right-sendemail' => 'Oigeta e-počtad toižile kävutajile',
 'right-passwordreset' => 'Kacta e-kirjeižid peitsanan toižetandanke',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Kävutajan oiktusiden aigkirj',
 'rightslogtext' => 'Nece om kävutajan oiktusiden toižetusen aigkirj.',
 'rightslogentry' => 'toižetin $1-kävutajan ühtnend gruppiš - oli $2, linneb $3',
@@ -1297,7 +1297,7 @@ Ku tö kirjutat sen, nece nimi kävutadas, miše ozutada lehtpolen toižetajad.'
 'reuploaddesc' => 'Pörttas jügetoitandan formannoks',
 'upload-tryagain' => 'Oigeta toižetadud failannimi',
 'uploadnologin' => 'Tö ei olgoi kirjutanus sistemha',
-'uploadnologintext' => 'Teile pidab [[Special:UserLogin|kirjutadas sistemha]], miše failoid jügetoitmaha.',
+'uploadnologintext' => 'Teile pidab [[Special:wiki_UserLogin|kirjutadas sistemha]], miše failoid jügetoitmaha.',
 'upload_directory_missing' => 'Failhodr jügetoitandan täht ($1) om kadonu, i server ei voi säta sidä.',
 'upload_directory_read_only' => 'Server ei voi kirjutada failhodrha jügedoitandan täht ($1).',
 'uploaderror' => 'Jügedoitandan petuz',
@@ -1372,7 +1372,7 @@ Olgat hüväd, kodvgat, todeks-ik tö tahtoit jügutoitta nece fail.",
 'upload-misc-error' => 'Jügutoitandan tundmatoi petuz',
 'upload-misc-error-text' => "Tundmatoi petuz om ozainus jügutoitandan aigan.
 Olgat hüväd, kodvgat, om-ik URL oiged i voib-ik säta sido sen purtkenke, sid' toštkat jügutoituz.
-Ku problem jäb jäl'ghepäi-ki, säkat pagin [[Special:ListUsers/sysop|sistemadministratoranke]].",
+Ku problem jäb jäl'ghepäi-ki, säkat pagin [[Special:Listwiki_Users/sysop|sistemadministratoranke]].",
 'upload-too-many-redirects' => 'Neciš URL-as om äjahk läbikosketusid',
 'upload-unknown-size' => 'Tundmatoi suruz',
 'upload-http-error' => 'HTTP-petuz: $1',
@@ -1538,7 +1538,7 @@ Informacijad sen [$2 andmusiden lehtpolelpäi] om anttud alemba.',
 'statistics-edits-average' => 'Toižetusiden keskmäine lugu lehtpolel',
 'statistics-views-total' => 'Kaiked kacundoid',
 'statistics-views-peredit' => 'Kacundoid redakcijas',
-'statistics-users' => 'Registriruidud [[Special:ListUsers|kävutajad]]',
+'statistics-users' => 'Registriruidud [[Special:Listwiki_Users|kävutajad]]',
 'statistics-users-active' => 'Activižed kävutajad',
 'statistics-users-active-desc' => "Kävutajad, kudambad ozutiba aktivižut {{PLURAL:$1|jäl’gmäižen päivän|$1 jäl'gmäižil päivil}}",
 'statistics-mostpopular' => 'Kaikiš populärižembad lehtpoled',
@@ -1680,13 +1680,13 @@ Kc. mugažo [[Special:WantedCategories|ectud kategorijoiden nimikirjutez]].',
 'linksearch-line' => '$1 om kosketadud $2-lehtpolelpäi',
 'linksearch-error' => 'Džokersimvolid sab kävutada vaiše adresoiden augotišes.',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => 'Ozutada kävutajid augotaden kävutajaspäi:',
 'listusers-submit' => 'Ozutada',
 'listusers-noresult' => 'Kävutajad ei olgoi löutud.',
 'listusers-blocked' => '(blokiruidud)',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'Aktivižiden kävutajiden nimikirjutez',
 'activeusers-from' => 'Oyutada kävutajid, augotaden necišpäi:',
 'activeusers-hidebots' => 'Peitta botid',
@@ -1735,7 +1735,7 @@ Kc. mugažo [[Special:WantedCategories|ectud kategorijoiden nimikirjutez]].',
 'emailsent' => 'Kirjeine om oigetud',
 'emailsenttext' => 'Teiden e-kirjeine om oigetud.',
 
-# User Messenger
+# wiki_User Messenger
 'usermessage-summary' => 'Jätta sistemtedotuz',
 'usermessage-editor' => 'Sisteman tedotai',
 
@@ -1851,11 +1851,11 @@ Tehkat kaik varumujandanke!',
 'rollbackfailed' => 'Endištuz om keskustadud petusen tagut.',
 'cantrollback' => "Ei voi endištada toižetusid;
 Jäl'gmäine toižetai om üksjäižen lehtpolen avtoran.",
-'alreadyrolled' => "Ei voi endištada jäl'gmäšt [[:$1]]-lehtpolen redakcijad (avtor: [[User:$2|$2]]). ([[User talk:$2|Lodud]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]); ken-se toine om jo redaktiruinu vai endištanu sen.
+'alreadyrolled' => "Ei voi endištada jäl'gmäšt [[:$1]]-lehtpolen redakcijad (avtor: [[wiki_User:$2|$2]]). ([[wiki_User talk:$2|Lodud]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]); ken-se toine om jo redaktiruinu vai endištanu sen.
 
-Jäl'gmäižed toižetused om tehnu [[User:$3|$3]] ([[User talk:$3|Lodud]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).",
+Jäl'gmäižed toižetused om tehnu [[wiki_User:$3|$3]] ([[wiki_User talk:$3|Lodud]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).",
 'editcomment' => "Redaktiruindan ümbrikacund oli: \"''\$1''\".",
-'revertpage' => 'Kävutajan [[Special:Contributions/$2|$2]] ([[User talk:$2|Lodud]]) tožetused oma endištadud edeližhe versijahasai (avtor: [[User:$1|$1]])',
+'revertpage' => 'Kävutajan [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Lodud]]) tožetused oma endištadud edeližhe versijahasai (avtor: [[wiki_User:$1|$1]])',
 'rollback-success' => '$1-kävutajan toižetused oma endištadud $2-kävutajan versijahasai.',
 
 # Edit tokens
@@ -2057,7 +2057,7 @@ Kc. [[Special:BlockList|blokiruidud IP-adresoiden nimikirjuteshe]].',
 'unblockip' => 'Heitta blokiruind IP-adresalpäi',
 'unblockiptext' => 'Kävutagat nece form, miše endištada kirjutandvoimuz blokiruidud IP-adresalpäi vai kävutajan nimelpäi.',
 'ipusubmit' => 'Heitta nece blokiruind',
-'unblocked' => '[[User:$1|$1]]-kävutajan blokiruind om heittud',
+'unblocked' => '[[wiki_User:$1|$1]]-kävutajan blokiruind om heittud',
 'unblocked-id' => 'Blokiruind $1 om heittud',
 'blocklist' => 'Blokiruidud kävutajad',
 'ipblocklist' => 'Blokiruidud kävutajad',
@@ -2086,7 +2086,7 @@ Kc. [[Special:BlockList|blokiruidud IP-adresoiden nimikirjuteshe]].',
 'change-blocklink' => 'toižetada blokiruind',
 'contribslink' => 'tond',
 'emaillink' => 'oigeta e-kirjeine',
-'autoblocker' => 'Blokiruidud avtomatižešti, sikš miše teiden IP-adres om tantoi kävutanu "[[User:$1|$1]]".
+'autoblocker' => 'Blokiruidud avtomatižešti, sikš miše teiden IP-adres om tantoi kävutanu "[[wiki_User:$1|$1]]".
 Adresan blokiruindan sü - "$2".',
 'blocklogpage' => 'Blokiruindoiden aigkirj',
 'blocklog-showlog' => 'Nece kävutai blokiruiltihe jo.
@@ -2157,7 +2157,7 @@ Olgat hüväd, vahvištoitkatoiš, miše tö el'gendat kaik jäl'gused.",
 Nenil statjoil tegese sirta vai ühtenzoitta lehtpoled ičeksaz.",
 'movearticle' => "Udesnimitada lehtpol':",
 'movenologin' => 'Tö et olgoi kirjutanus sistemha',
-'movenologintext' => "Teile pidab olda [[Special:UserLogin|registriruidud kävutajan]], miše udesnimitada lehtpol'.",
+'movenologintext' => "Teile pidab olda [[Special:wiki_UserLogin|registriruidud kävutajan]], miše udesnimitada lehtpol'.",
 'movenotallowed' => 'Teile ei sa udesnimitada lehtpolid.',
 'movenotallowedfile' => 'Teile ei sa udesnimitada failoid.',
 'cant-move-user-page' => 'Teile ei sa udesnimitada kävutajiden pälehtpolid.',
@@ -2829,7 +2829,7 @@ Serveran vastuz: $1',
 Kod voiži vanhtuda.',
 'confirmemail_needlogin' => 'Pidab $1, miše vahvištoitta teiden e-počtan adres.',
 'confirmemail_success' => "Teiden e-počtan adres om vahvištoittud.
-Nügüd' tö voit [[Special:UserLogin|kirjutadas sistemha]] da rata wikiš.",
+Nügüd' tö voit [[Special:wiki_UserLogin|kirjutadas sistemha]] da rata wikiš.",
 'confirmemail_loggedin' => 'Teiden e-počtan adres om vahvištoittud.',
 'confirmemail_error' => 'Teiden e-počtan adresan vahvištoitandan aigan ozaižihe petuz.',
 'confirmemail_subject' => '{{SITENAME}}-sait paikičeb teid vahvištoitta teiden e-počtan adres',

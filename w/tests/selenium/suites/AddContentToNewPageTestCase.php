@@ -148,7 +148,7 @@ class AddContentToNewPageTestCase extends SeleniumTestCase {
     }
 
     // Add signature and verify output in the preview
-    public function testAddUserSignature() {
+    public function testAddwiki_UserSignature() {
         $this->getExistingPage();
         $this->clickEditLink();
         $this->loadWikiEditor();

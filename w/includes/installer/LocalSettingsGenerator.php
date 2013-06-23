@@ -56,8 +56,8 @@ class LocalSettingsGenerator {
 			array(
 				'wgServer', 'wgScriptPath', 'wgScriptExtension',
 				'wgPasswordSender', 'wgImageMagickConvertCommand', 'wgShellLocale',
-				'wgLanguageCode', 'wgEnableEmail', 'wgEnableUserEmail', 'wgDiff3',
-				'wgEnotifUserTalk', 'wgEnotifWatchlist', 'wgEmailAuthentication',
+				'wgLanguageCode', 'wgEnableEmail', 'wgEnablewiki_UserEmail', 'wgDiff3',
+				'wgEnotifwiki_UserTalk', 'wgEnotifWatchlist', 'wgEmailAuthentication',
 				'wgDBtype', 'wgSecretKey', 'wgRightsUrl', 'wgSitename', 'wgRightsIcon',
 				'wgRightsText', 'wgMainCacheType', 'wgEnableUploads',
 				'wgMainCacheType', '_MemCachedServers', 'wgDBserver', 'wgDBuser',
@@ -69,7 +69,7 @@ class LocalSettingsGenerator {
 
 		$unescaped = array( 'wgRightsIcon' );
 		$boolItems = array(
-			'wgEnableEmail', 'wgEnableUserEmail', 'wgEnotifUserTalk',
+			'wgEnableEmail', 'wgEnablewiki_UserEmail', 'wgEnotifwiki_UserTalk',
 			'wgEnotifWatchlist', 'wgEmailAuthentication', 'wgEnableUploads', 'wgUseInstantCommons'
 		);
 
@@ -278,12 +278,12 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 ## UPO means: this is also a user preference option
 
 \$wgEnableEmail      = {$this->values['wgEnableEmail']};
-\$wgEnableUserEmail  = {$this->values['wgEnableUserEmail']}; # UPO
+\$wgEnablewiki_UserEmail  = {$this->values['wgEnablewiki_UserEmail']}; # UPO
 
 \$wgEmergencyContact = \"{$this->values['wgEmergencyContact']}\";
 \$wgPasswordSender   = \"{$this->values['wgPasswordSender']}\";
 
-\$wgEnotifUserTalk      = {$this->values['wgEnotifUserTalk']}; # UPO
+\$wgEnotifwiki_UserTalk      = {$this->values['wgEnotifwiki_UserTalk']}; # UPO
 \$wgEnotifWatchlist     = {$this->values['wgEnotifWatchlist']}; # UPO
 \$wgEmailAuthentication = {$this->values['wgEmailAuthentication']};
 

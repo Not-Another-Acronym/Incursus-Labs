@@ -63,7 +63,7 @@ class Selenium {
 		if ( strlen( $this->user ) == 0 ) {
 			return;
 		}
-		$this->open( self::$url . '/index.php?title=Special:Userlogin' );
+		$this->open( self::$url . '/index.php?title=Special:wiki_Userlogin' );
 		$this->type( 'wpName1', $this->user );
 		$this->type( 'wpPassword1', $this->pass );
 		$this->click( "//input[@id='wpLoginAttempt']" );
@@ -118,7 +118,7 @@ class Selenium {
 		return $this->port;
 	}
 
-	public function setUser( $user ) {
+	public function setwiki_User( $user ) {
 		$this->user = $user;
 	}
 

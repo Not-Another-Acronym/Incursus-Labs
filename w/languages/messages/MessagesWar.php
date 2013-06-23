@@ -64,7 +64,7 @@ $specialPageAliases = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Bagisa ha ilarom an mga sumpay:',
 'tog-justify' => 'Ig-justify an mga parrapho',
 'tog-hideminor' => 'Tago-a an mga gagmay nga pagliwat ha mga bag-o pa la nga mga kabag-ohan',
@@ -405,7 +405,7 @@ Nagbalik hin sayop an database nga "$3: $4"',
 Ini in agsob hinungdan han pagsunod han kadaan nga kaibhan o sumpay han kaagi ngadto ha pakli nga ginpara.
 
 Kun diri ini an kaso, bangin ka nakabiling hin bug ha software.
-Alayon la igsumat ini ha [[Special:ListUsers/sysop|administrator]], igsurat la an URL.',
+Alayon la igsumat ini ha [[Special:Listwiki_Users/sysop|administrator]], igsurat la an URL.',
 'missingarticle-rev' => '(pagbag-o#: $1)',
 'missingarticle-diff' => '(Kaibhan: $1, $2)',
 'readonly_lag' => 'Ginlugaring pagtranka han database samtang an mga nasunod nga mga database nga server naglalanat pa han agaron',
@@ -451,7 +451,7 @@ Para makadugang o makaliwat hin mga paghubad para han tanan nga mga wiki, alayon
 'customcssprotected' => 'Diri ka gintutugotan pagliwat hini nga CSS nga pakli, tungod nga nagsusulod ini hin kanan iba nga tawo personal nga karuyagon.',
 'customjsprotected' => 'Diri ka gintutugotan pagliwat hini nga JavaScript nga pakli, tungod nga nagsusulod ini hin kanan iba nga tawo personal nga karuyagon.',
 'ns-specialprotected' => 'Diri maliliwat an mga ispisyal nga pakli.',
-'titleprotected' => 'Ini nga titulo pinasalipod ha paghimo ni [[User:$1|$1]].
+'titleprotected' => 'Ini nga titulo pinasalipod ha paghimo ni [[wiki_User:$1|$1]].
 An katadungan nga ginhatag amo in "\'\'$2\'\'".',
 'filereadonlyerror' => 'Diri maliliwat ini nga paypay "$1" tungod an ginsusudlan han paypay nga "$2" in aada la ha pagbasa-la nga kahimtang.
 
@@ -502,7 +502,7 @@ Alayon paganaha hira ngan utro liwat.',
 'loginsuccess' => "'''Ikaw in nakalog-in ha {{SITENAME}} komo \"\$1\".'''",
 'nosuchuser' => 'Waray gumaramit an may-ada ngaran nga "$1".
 It mga agnay-hi-gumaramit in case sensitive.
-Panginano-a it imo pagbaybay, o [[Special:UserLogin/signup|paghimo hin bag-o nga akawnt]].',
+Panginano-a it imo pagbaybay, o [[Special:wiki_UserLogin/signup|paghimo hin bag-o nga akawnt]].',
 'nosuchusershort' => 'Waray nagamit it may ngaran nga "$1".
 Kitaa kun amo it im pagbaybay.',
 'nouserspecified' => 'Dapat nim magbutang hin agnay hit gumaramit.',
@@ -909,15 +909,15 @@ An imo e-mail address in diri makikit-an kun an iba nga mga gumaramit in makonta
 'prefs-displaywatchlist' => 'Mga pirilion hiunong han ginpapakita',
 'prefs-diffs' => 'Mga kaibhan',
 
-# User preference: e-mail validation using jQuery
+# wiki_User preference: e-mail validation using jQuery
 'email-address-validity-valid' => 'E-mail address in baga puydi',
 
-# User rights
+# wiki_User rights
 'userrights' => 'Pagdudumara hin mga katungod han gumaramit',
 'userrights-lookup-user' => 'Pagdumaraa han mga hugpo han gumaramit',
 'userrights-user-editname' => 'Igbutang an agnay han gumaramit:',
 'editusergroup' => 'Igliwat han mga hugpo han gumaramit',
-'editinguser' => "Igliliwat an mga katungod han gumaramit han gumaramit '''[[User:$1|$1]]''' $2",
+'editinguser' => "Igliliwat an mga katungod han gumaramit han gumaramit '''[[wiki_User:$1|$1]]''' $2",
 'userrights-editusergroup' => 'Igliwat an mga hugpo hin gumaramit',
 'saveusergroups' => 'Igtipig an mga hugpo han gumaramit',
 'userrights-groupsmember' => 'Api han:',
@@ -983,7 +983,7 @@ Diri ka gintutugotan pagliwat han mga katungod han gumaramit ha iba nga mga wiki
 'right-userrights-interwiki' => 'Igliwat an mga katungod han gumaramit han mga gumaramit ha iba nga mga wiki',
 'right-sendemail' => 'Padad-i hin e-mail ngada ha iba nga mga gumaramit',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Talaan hin mga katungod han gumaramit',
 'rightsnone' => '(waray)',
 
@@ -1235,7 +1235,7 @@ An paglaladawan han iya [$2 fayl han paglaladawan nga pakli] didto in ginpapakit
 'statistics-edits-average' => 'Average nga mga pagliwat kada pakli',
 'statistics-views-total' => 'Ngatanan nga mga panginano',
 'statistics-views-peredit' => 'Mga panginano kada pagliwat',
-'statistics-users' => 'Mga [[Special:ListUsers|gumaramit]] nga nakarehistro',
+'statistics-users' => 'Mga [[Special:Listwiki_Users|gumaramit]] nga nakarehistro',
 'statistics-users-active' => 'Mga gumaramit nga nanggigios',
 'statistics-users-active-desc' => 'Mga gumaramit nga may-ada iginbuhat ha urhi nga {{PLURAL:$1|ka adlaw|$1 ka mga adlaw}}',
 'statistics-mostpopular' => 'Gidamoi nga ginpanginanohan nga mga pakli',
@@ -1339,13 +1339,13 @@ An paglaladawan han iya [$2 fayl han paglaladawan nga pakli] didto in ginpapakit
 'linksearch-ok' => 'Pamilnga',
 'linksearch-line' => 'An $1 in nahasumpay tikang ha $2',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => 'Igpakita an mga nagamit nga nagtitikang ha:',
 'listusers-submit' => 'Pakit-a',
 'listusers-noresult' => 'Waray gumaramit nga nahiagian.',
 'listusers-blocked' => '(ginpugngan)',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'Taramdan hin mga gumaramit nga nanggigios',
 'activeusers-hidebots' => 'Igtago an mga bot',
 'activeusers-hidesysops' => 'Igtago an mga magdudumara',
@@ -1384,7 +1384,7 @@ An paglaladawan han iya [$2 fayl han paglaladawan nga pakli] didto in ginpapakit
 'emailccme' => 'Igemail ako hini nga kopya hit ak buot igpasabot.',
 'emailsent' => 'Napadara an e-mail',
 
-# User Messenger
+# wiki_User Messenger
 'usermessage-summary' => 'Nabilin hin mensahe pansistema',
 'usermessage-editor' => 'Mensahero han sistema',
 

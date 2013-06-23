@@ -177,9 +177,9 @@ $specialPageAliases = array(
 	'Unusedtemplates'           => array( 'Templat_tak_digunakan' ),
 	'Unwatchedpages'            => array( 'Laman_tak_dipantau' ),
 	'Upload'                    => array( 'Muat_naik' ),
-	'Userlogin'                 => array( 'Log_masuk' ),
-	'Userlogout'                => array( 'Log_keluar' ),
-	'Userrights'                => array( 'Hak_pengguna' ),
+	'wiki_Userlogin'                 => array( 'Log_masuk' ),
+	'wiki_Userlogout'                => array( 'Log_keluar' ),
+	'wiki_Userrights'                => array( 'Hak_pengguna' ),
 	'Version'                   => array( 'Versi' ),
 	'Wantedcategories'          => array( 'Kategori_dikehendaki' ),
 	'Wantedfiles'               => array( 'Fail_dikehendaki' ),
@@ -191,7 +191,7 @@ $specialPageAliases = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Gariskan pautan:',
 'tog-justify' => 'Laraskan perenggan',
 'tog-hideminor' => 'Sembunyikan suntingan kecil dalam laman perubahan terkini',
@@ -538,7 +538,7 @@ Pentadbir yang menguncinya memberi penjelasan ini: $1',
 Perkara ini biasanya disebabkan oleh perbuatan mengikuti pautan perbezaan yang lama atau pautan ke laman yang telah dihapuskan.
 
 Jika bukan ini sebabnya, anda mungkin telah menjumpai pepijat dalam perisian ini.
-Sila catat URL bagi laman ini dan laporkan perkara ini kepada seorang [[Special:ListUsers/sysop|pentadbir]].',
+Sila catat URL bagi laman ini dan laporkan perkara ini kepada seorang [[Special:Listwiki_Users/sysop|pentadbir]].',
 'missingarticle-rev' => '(semakan $1)',
 'missingarticle-diff' => '(Beza: $1, $2)',
 'readonly_lag' => 'Pangkalan data telah dikunci secara automatik sementara semua pelayan pangkalan data diselaraskan.',
@@ -586,7 +586,7 @@ Untuk menambah atau menyunting terjemahan untuk semua wiki, sila gunakan projek 
 'customcssprotected' => 'Anda tidak dibenarkan menyunting laman JavaScript ini kerana ia mengandungi tetapan peribadi pengguna lain.',
 'customjsprotected' => 'Anda tidak dibenarkan menyunting laman JavaScript ini kerana ia mengandungi tetapan peribadi pengguna lain.',
 'ns-specialprotected' => 'Laman khas tidak boleh disunting.',
-'titleprotected' => "Tajuk ini telah dilindungi oleh [[User:$1|$1]] daripada dicipta. Sebab yang diberikan ialah ''$2''.",
+'titleprotected' => "Tajuk ini telah dilindungi oleh [[wiki_User:$1|$1]] daripada dicipta. Sebab yang diberikan ialah ''$2''.",
 'filereadonlyerror' => 'Fail "$1" tidak dapat diubah suai kerana repositori fail "$2" berada dalam ragam baca sahaja.
 
 Pentadbir yang menguncinya memberikan penjelasan yang berikut: "$3".',
@@ -603,7 +603,7 @@ Pentadbir yang menguncinya memberikan penjelasan yang berikut: "$3".',
 # Login and logout pages
 'logouttext' => "'''Anda telah log keluar.'''
 
-Anda boleh terus menggunakan {{SITENAME}} sebagai pengguna tanpa nama, atau anda boleh [[Special:UserLogin|log masuk sekali lagi]] sebagai pengguna lain. Anda boleh membersihkan cache pelayar web anda sekiranya terdapat laman yang memaparkan seolah-olah anda masih log masuk.",
+Anda boleh terus menggunakan {{SITENAME}} sebagai pengguna tanpa nama, atau anda boleh [[Special:wiki_UserLogin|log masuk sekali lagi]] sebagai pengguna lain. Anda boleh membersihkan cache pelayar web anda sekiranya terdapat laman yang memaparkan seolah-olah anda masih log masuk.",
 'welcomecreation' => '== Selamat datang, $1! ==
 
 Akaun anda telah dibuka. Jangan lupa untuk mengubah [[Special:Preferences|keutamaan {{SITENAME}}]] anda.',
@@ -644,7 +644,7 @@ Pastikan anda telah bolehkan kuki, muat semula laman ini dan cuba lagi.',
 'noname' => 'Nama pengguna tidak sah.',
 'loginsuccesstitle' => 'Berjaya log masuk',
 'loginsuccess' => "'''Anda telah log masuk ke dalam {{SITENAME}} sebagai \"\$1\".'''",
-'nosuchuser' => 'Pengguna "$1" tidak wujud. Nama pengguna adalah peka huruf besar. Sila semak ejaan anda, atau anda boleh [[Special:UserLogin/signup|membuka akaun baru]].',
+'nosuchuser' => 'Pengguna "$1" tidak wujud. Nama pengguna adalah peka huruf besar. Sila semak ejaan anda, atau anda boleh [[Special:wiki_UserLogin/signup|membuka akaun baru]].',
 'nosuchusershort' => 'Pengguna "$1" tidak wujud. Sila semak ejaan anda.',
 'nouserspecified' => 'Sila nyatakan nama pengguna.',
 'login-userblocked' => 'Pengguna ini disekat. Log masuk tidak dibenarkan.',
@@ -833,7 +833,7 @@ Ia mungkin telah dialih atau dihapus semasa anda melihat laman ini.',
 'loginreqlink' => 'log masuk',
 'loginreqpagetext' => 'Anda harus $1 untuk dapat melihat laman yang lain.',
 'accmailtitle' => 'Kata laluan dikirim.',
-'accmailtext' => "Kata laluan rawak yang dijanakan untuk [[User talk:$1|$1]] telah dikirim kepada $2.
+'accmailtext' => "Kata laluan rawak yang dijanakan untuk [[wiki_User talk:$1|$1]] telah dikirim kepada $2.
 
 Kata laluan bagi akaun baru ini boleh ditukar di laman ''[[Special:ChangePassword|tukar kata laluan]]'' setelah pengguna tersebut melog masuk.",
 'newarticle' => '(Baru)',
@@ -843,7 +843,7 @@ Untuk mencipta laman ini, sila taip dalam kotak di bawah
 Jika anda tiba di sini secara tak sengaja, hanya klik butang '''back''' pada pelayar anda.",
 'anontalkpagetext' => "----''Ini ialah laman perbincangan bagi pengguna tanpa nama yang belum membuka akaun atau tidak log masuk.
 Oleh itu kami terpaksa menggunakan alamat IP untuk mengenal pasti pengguna tersebut. Alamat IP ini boleh dikongsi oleh ramai pengguna.
-Sekiranya anda adalah seorang pengguna tanpa nama dan berasa bahawa komen yang tidak kena mengena telah ditujukan kepada anda, sila [[Special:UserLogin/signup|buka akaun baru]] atau [[Special:UserLogin|log masuk]] untuk mengelakkan sebarang kekeliruan dengan pengguna tanpa nama yang lain.''",
+Sekiranya anda adalah seorang pengguna tanpa nama dan berasa bahawa komen yang tidak kena mengena telah ditujukan kepada anda, sila [[Special:wiki_UserLogin/signup|buka akaun baru]] atau [[Special:wiki_UserLogin|log masuk]] untuk mengelakkan sebarang kekeliruan dengan pengguna tanpa nama yang lain.''",
 'noarticletext' => 'Tiada teks dalam laman ini pada masa sekarang. Anda boleh [[Special:Search/{{PAGENAME}}|mencari tajuk bagi laman ini]] dalam laman-laman lain, <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} mencari log-log yang berkaitan], atau [{{fullurl:{{FULLPAGENAME}}|action=edit}} menyunting laman ini]</span>.',
 'noarticletext-nopermission' => 'Tiada teks dalam laman ini ketika ini.
 Anda boleh [[Special:Search/{{PAGENAME}}|mencari tajuk laman ini]] dalam laman lain,
@@ -876,12 +876,12 @@ Masukan log sekatan terakhir disediakan di bawah sebagai rujukan:',
 Perubahan anda belum disimpan!",
 'continue-editing' => 'Pergi ke tempat menyunting',
 'previewconflict' => 'Paparan ini merupakan teks di bahagian atas dalam kotak sunting teks. Teks ini akan disimpan sekiranya anda memilih berbuat demikian.',
-'session_fail_preview' => "'''Kami tidak dapat memproses suntingan anda kerana kehilangan data sesi. Sila cuba lagi. Jika masalah ini berlanjutan, [[Special:UserLogout|log keluar]] dahulu, kemudian log masuk sekali lagi.'''",
+'session_fail_preview' => "'''Kami tidak dapat memproses suntingan anda kerana kehilangan data sesi. Sila cuba lagi. Jika masalah ini berlanjutan, [[Special:wiki_UserLogout|log keluar]] dahulu, kemudian log masuk sekali lagi.'''",
 'session_fail_preview_html' => "'''Kami tidak dapat memproses suntingan anda kerana kehilangan data sesi.'''
 
 ''Oleh sebab {{SITENAME}} membenarkan HTML mentah, ciri pralihat terpaksa disorokkan sebagai perlindungan daripada serangan JavaScript.''
 
-'''Jika ini ialah penyuntingan yang sah, sila cuba lagi. Jika masalah ini berlanjutan, [[Special:UserLogout|log keluar]] dahulu, kemudian log masuk sekali lagi.'''",
+'''Jika ini ialah penyuntingan yang sah, sila cuba lagi. Jika masalah ini berlanjutan, [[Special:wiki_UserLogout|log keluar]] dahulu, kemudian log masuk sekali lagi.'''",
 'token_suffix_mismatch' => "'''Suntingan anda telah ditolak kerana pelanggan anda memusnahkan aksara tanda baca
 dalam token suntingan. Suntingan tersebut telah ditolak untuk menghalang kerosakan teks laman.
 Hal ini kadangkala berlaku apabila anda menggunakan khidmat proksi tanpa nama berdasarkan web yang bermasalah.'''",
@@ -933,7 +933,7 @@ Masukan log terakhir ditunjukkan di bawah untuk rujukan:",
 'edittools-upload' => '-',
 'nocreatetitle' => 'Penciptaan laman dihadkan',
 'nocreatetext' => 'Penciptaan laman baru dihadkan pada {{SITENAME}}.
-Anda boleh berundur dan menyunting laman yang sedia ada, atau [[Special:UserLogin|log masuk]].',
+Anda boleh berundur dan menyunting laman yang sedia ada, atau [[Special:wiki_UserLogin|log masuk]].',
 'nocreate-loggedin' => 'Anda tidak mempunyai keizinan untuk mencipta laman baru.',
 'sectioneditnotsupported-title' => 'Suntingan bahagian tidak disokong',
 'sectioneditnotsupported-text' => 'Suntingan bahagian tidak disokong di laman ini.',
@@ -980,11 +980,11 @@ Argumen-argumen ini telah ditinggalkan.',
 'undo-success' => 'Suntingan ini boleh dibatalkan. Sila semak perbandingan di bawah untuk mengesahkan bahawa anda betul-betul mahu melakukan tindakan ini, kemudian simpan perubahan tersebut.',
 'undo-failure' => 'Suntingan tersebut tidak boleh dibatalkan kerana terdapat suntingan pertengahan yang bercanggah.',
 'undo-norev' => 'Suntingan tersebut tidak boleh dibatalkan kerana tidak wujud atau telah dihapuskan.',
-'undo-summary' => 'Membatalkan semakan $1 oleh [[Special:Contributions/$2|$2]] ([[User talk:$2|Perbincangan]])',
+'undo-summary' => 'Membatalkan semakan $1 oleh [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Perbincangan]])',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'Akaun tidak dapat dibuka',
-'cantcreateaccount-text' => "Pembukaan akaun daripada alamat IP ini (<b>$1</b>) telah disekat oleh [[User:$3|$3]].
+'cantcreateaccount-text' => "Pembukaan akaun daripada alamat IP ini (<b>$1</b>) telah disekat oleh [[wiki_User:$3|$3]].
 
 Sebab yang diberikan oleh $3 ialah ''$2''",
 
@@ -1246,7 +1246,7 @@ Cuba berikan awalan ''all:'' untuk mencari semua kandungan (termasuk laman perbi
 'mypreferences' => 'Keutamaan',
 'prefs-edits' => 'Jumlah suntingan:',
 'prefsnologin' => 'Belum log masuk',
-'prefsnologintext' => 'Anda hendaklah <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} log masuk]</span> terlebih dahulu untuk menetapkan keutamaan.',
+'prefsnologintext' => 'Anda hendaklah <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} log masuk]</span> terlebih dahulu untuk menetapkan keutamaan.',
 'changepassword' => 'Tukar kata laluan',
 'prefs-skin' => 'Rupa',
 'skin-preview' => 'Pralihat',
@@ -1358,16 +1358,16 @@ Tindakan ini tidak boleh dibatalkan.',
 'prefs-displaywatchlist' => 'Pilihan paparan',
 'prefs-diffs' => 'Beza',
 
-# User preference: e-mail validation using jQuery
+# wiki_User preference: e-mail validation using jQuery
 'email-address-validity-valid' => 'Alamat e-mel adalah sah',
 'email-address-validity-invalid' => 'Sila masukkan alamat e-mel yang sah',
 
-# User rights
+# wiki_User rights
 'userrights' => 'Pengurusan hak pengguna',
 'userrights-lookup-user' => 'Urus kumpulan pengguna',
 'userrights-user-editname' => 'Masukkan nama pengguna:',
 'editusergroup' => 'Sunting Kumpulan Pengguna',
-'editinguser' => "Mengubah hak pengguna '''[[User:$1|$1]]''' $2",
+'editinguser' => "Mengubah hak pengguna '''[[wiki_User:$1|$1]]''' $2",
 'userrights-editusergroup' => 'Ubah kumpulan pengguna',
 'saveusergroups' => 'Simpan Kumpulan Pengguna',
 'userrights-groupsmember' => 'Ahli bagi:',
@@ -1379,7 +1379,7 @@ Tindakan ini tidak boleh dibatalkan.',
 'userrights-reason' => 'Sebab:',
 'userrights-no-interwiki' => 'Anda tidak mempunyai keizinan untuk mengubah hak-hak pengguna di wiki lain.',
 'userrights-nodatabase' => 'Pangkalan data $1 tiada atau bukan tempatan.',
-'userrights-nologin' => 'Anda mesti [[Special:UserLogin|log masuk]] dengan akaun pentadbir terlebih dahulu untuk memperuntukkan hak-hak pengguna.',
+'userrights-nologin' => 'Anda mesti [[Special:wiki_UserLogin|log masuk]] dengan akaun pentadbir terlebih dahulu untuk memperuntukkan hak-hak pengguna.',
 'userrights-notallowed' => 'Akuan anda tidak dibenarkan untuk menambah atau membuang hak pengguna.',
 'userrights-changeable-col' => 'Kumpulan yang anda boleh ubah',
 'userrights-unchangeable-col' => 'Kumpulan yang anda tak boleh ubah',
@@ -1471,7 +1471,7 @@ Tindakan ini tidak boleh dibatalkan.',
 'right-sendemail' => 'Mengirim e-mel kepada pengguna-pengguna lain',
 'right-passwordreset' => 'Lihat e-mel set semula kata laluan',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Log hak pengguna',
 'rightslogtext' => 'Ini ialah log perubahan terhadap hak pengguna.',
 'rightslogentry' => 'menukar keahlian kumpulan bagi $1 daripada $2 kepada $3',
@@ -1569,7 +1569,7 @@ Tindakan ini tidak boleh dibatalkan.',
 'reuploaddesc' => 'Kembali ke borang muat naik',
 'upload-tryagain' => 'Serahkan keterangan fail yang telah diubah',
 'uploadnologin' => 'Belum log masuk',
-'uploadnologintext' => 'Anda perlu [[Special:UserLogin|log masuk]]
+'uploadnologintext' => 'Anda perlu [[Special:wiki_UserLogin|log masuk]]
 terlebih dahulu untuk memuat naik fail.',
 'upload_directory_missing' => 'Direktori muat naik ($1) hilang dan tidak dapat dicipta oleh pelayan web.',
 'upload_directory_read_only' => 'Direktori muat naik ($1) tidak boleh ditulis oleh pelayan web.',
@@ -1695,7 +1695,7 @@ $1',
 'upload-proto-error-text' => 'Muat naik jauh memerlukan URL yang dimulakan dengan <code>http://</code> atau <code>ftp://</code>.',
 'upload-file-error' => 'Ralat dalaman',
 'upload-file-error-text' => 'Ralat dalaman telah berlaku ketika cuba mencipta fail sementara pada komputer pelayan.
-Sila hubungi [[Special:ListUsers/sysop|pentadbir sistem]].',
+Sila hubungi [[Special:Listwiki_Users/sysop|pentadbir sistem]].',
 'upload-misc-error' => 'Ralat muat naik yang tidak diketahui',
 'upload-misc-error-text' => 'Ralat yang tidak diketahui telah berlaku ketika muat naik. Sila pastikan bahawa URL tersebut sah dan boleh dicapai kemudian cuba lagi. Jika masalah ini berterusan, sila hubungi pentadbir sistem.',
 'upload-too-many-redirects' => 'URL ini mengandungi terlalu banyak lencongan',
@@ -1934,7 +1934,7 @@ Mungkin anda ingin menyunting keterangan pada [$2 laman penerangan failnya] di s
 'statistics-views-total' => 'Jumlah pandangan',
 'statistics-views-total-desc' => 'Paparan ke laman-laman yang tidak wujud dan laman-laman khas tidak disertakan',
 'statistics-views-peredit' => 'Pandangan setiap suntingan',
-'statistics-users' => '[[Special:ListUsers|Pengguna]] berdaftar',
+'statistics-users' => '[[Special:Listwiki_Users|Pengguna]] berdaftar',
 'statistics-users-active' => 'Pengguna aktif',
 'statistics-users-active-desc' => 'Pengguna yang aktif sejak {{PLURAL:$1|semalam|$1 hari lalu}}',
 'statistics-mostpopular' => 'Laman dilihat terbanyak',
@@ -2100,13 +2100,13 @@ Protokol yang disokong: <code>$1</code> (menjadi http:// jika tiada protokol din
 'linksearch-line' => '$1 dipaut dari $2',
 'linksearch-error' => 'Kad bebas hanya boleh digunakan pada permulaan nama hos.',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => 'Tunjukkan pengguna bermula pada:',
 'listusers-submit' => 'Tunjukkan',
 'listusers-noresult' => 'Tiada pengguna dijumpai.',
 'listusers-blocked' => '(disekat)',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'Senarai pengguna aktif',
 'activeusers-intro' => 'Yang berikut ialah senarai pengguna yang bergiat sejak {{PLURAL:$1|semalam|$1 hari lalu}}.',
 'activeusers-count' => '$1 {{PLURAL:$1|suntingan|suntingan}} sejak {{PLURAL:$3|semalam|$3 hari lalu}}',
@@ -2140,7 +2140,7 @@ Anda boleh mengetahui [[{{MediaWiki:Listgrouprights-helppage}}|maklumat tambahan
 
 # E-mail user
 'mailnologin' => 'Tiada alamat e-mel',
-'mailnologintext' => 'Anda perlu [[Special:UserLogin|log masuk]]
+'mailnologintext' => 'Anda perlu [[Special:wiki_UserLogin|log masuk]]
 terlebih dahulu dan mempunyai alamat e-mel yang sah dalam
 [[Special:Preferences|laman keutamaan]] untuk mengirim e-mel kepada pengguna lain.',
 'emailuser' => 'Kirim e-mel kepada pengguna ini',
@@ -2174,7 +2174,7 @@ Alamat e-mel yang ditetapkan dalam [[Special:Preferences|keutamaan anda]] akan d
 'emailsenttext' => 'E-mel anda telah dikirim.',
 'emailuserfooter' => 'E-mel ini telah dikirim oleh $1 kepada $2 menggunakan alat "E-mel pengguna" di {{SITENAME}}.',
 
-# User Messenger
+# wiki_User Messenger
 'usermessage-summary' => 'Meninggalkan pesanan sistem.',
 'usermessage-editor' => 'Utusan sistem',
 
@@ -2185,7 +2185,7 @@ Alamat e-mel yang ditetapkan dalam [[Special:Preferences|keutamaan anda]] akan d
 'nowatchlist' => 'Tiada item dalam senarai pantau anda.',
 'watchlistanontext' => 'Sila $1 terlebih dahulu untuk melihat atau menyunting senarai pantau anda.',
 'watchnologin' => 'Belum log masuk',
-'watchnologintext' => 'Anda mesti [[Special:UserLogin|log masuk]] terlebih dahulu untuk mengubah senarai pantau.',
+'watchnologintext' => 'Anda mesti [[Special:wiki_UserLogin|log masuk]] terlebih dahulu untuk mengubah senarai pantau.',
 'addwatch' => 'Tambahkan ke senarai pantau',
 'addedwatchtext' => 'Halaman "[[:$1]]" telah dimasukkan ke dalam [[Special:Watchlist|senarai pantau anda]].
 Perubahan-perubahan pada halaman ini dan halaman perbualannya pada masa akan datang akan tersenarai di dalam senarai itu.',
@@ -2295,12 +2295,12 @@ Sila lihat $2 untuk rekod penghapusan terkini.',
 'rollbacklinkcount-morethan' => 'mengundurkan lebih daripada $1 {{PLURAL:$1|suntingan}}',
 'rollbackfailed' => 'Pengunduran gagal',
 'cantrollback' => 'Suntingan tersebut tidak dapat dibalikkan: penyumbang terakhir adalah satu-satunya pengarang bagi rencana ini.',
-'alreadyrolled' => 'Suntingan terakhir bagi [[:$1]] oleh [[User:$2|$2]] ([[User talk:$2|Perbualan]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]) tidak dapat dibalikkan; terdapat pengguna lain yang telah menyunting atau membalikkan laman itu.
+'alreadyrolled' => 'Suntingan terakhir bagi [[:$1]] oleh [[wiki_User:$2|$2]] ([[wiki_User talk:$2|Perbualan]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]) tidak dapat dibalikkan; terdapat pengguna lain yang telah menyunting atau membalikkan laman itu.
 
-Suntingan terakhir telah dibuat oleh [[User:$3|$3]] ([[User talk:$3|Perbualan]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
+Suntingan terakhir telah dibuat oleh [[wiki_User:$3|$3]] ([[wiki_User talk:$3|Perbualan]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
 'editcomment' => "Ringkasan sutingan: \"''\$1''\".",
-'revertpage' => 'Membalikkan suntingan oleh [[Special:Contributions/$2|$2]] ([[User talk:$2|Perbincangan]]) kepada versi terakhir oleh [[User:$1|$1]]',
-'revertpage-nouser' => 'Membalikkan suntingan oleh (nama pengguna dibuang) kepada semakan terakhir oleh [[User:$1|$1]]',
+'revertpage' => 'Membalikkan suntingan oleh [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Perbincangan]]) kepada versi terakhir oleh [[wiki_User:$1|$1]]',
+'revertpage-nouser' => 'Membalikkan suntingan oleh (nama pengguna dibuang) kepada semakan terakhir oleh [[wiki_User:$1|$1]]',
 'rollback-success' => 'Membalikkan suntingan oleh $1 kepada versi terakhir oleh $2.',
 
 # Edit tokens
@@ -2532,7 +2532,7 @@ dirosakkan).',
 'unblockip' => 'Nyahsekat pengguna',
 'unblockiptext' => 'Gunakan borang di bawah untuk membuang sekatan bagialamat IP atau nama pengguna yang telah disekat.',
 'ipusubmit' => 'Tarik balik sekatan ini',
-'unblocked' => '[[User:$1|$1]] telah dinyahsekat',
+'unblocked' => '[[wiki_User:$1|$1]] telah dinyahsekat',
 'unblocked-range' => '$1 telah dinyahsekat',
 'unblocked-id' => 'Sekatan $1 telah dibuang',
 'blocklist' => 'Pengguna yang disekat',
@@ -2565,7 +2565,7 @@ dirosakkan).',
 'change-blocklink' => 'ubah sekatan',
 'contribslink' => 'sumb.',
 'emaillink' => 'hantar e-mel',
-'autoblocker' => 'Disekat secara automatik kerana baru-baru ini alamat IP anda digunakan oleh "[[User:$1|$1]]". Sebab sekatan $1 ialah: "$2"',
+'autoblocker' => 'Disekat secara automatik kerana baru-baru ini alamat IP anda digunakan oleh "[[wiki_User:$1|$1]]". Sebab sekatan $1 ialah: "$2"',
 'blocklogpage' => 'Log sekatan',
 'blocklog-showlog' => 'Pengguna ini pernah disekat sebelum ini. Log sekatan disediakan di bawah sebagai rujukan:',
 'blocklog-showsuppresslog' => 'Pengguna ini pernah disekat dan tersembunyi sebelum ini.
@@ -2664,7 +2664,7 @@ Dalam kes tersebut, anda terpaksa melencongkan atau menggabungkan laman secara m
 'movearticle' => 'Pindahkan laman:',
 'moveuserpage-warning' => "'''Amaran:''' Anda sudah hendak memindahkan suatu laman pengguna. Sila ambil perhatian bahawa hanya laman tersebut akan dipindahkan dan nama pengguna yang berkenaan ''tidak'' berubah.",
 'movenologin' => 'Belum log masuk.',
-'movenologintext' => 'Anda mesti [[Special:UserLogin|log masuk]] terlebih dahulu untuk memindahkan laman.',
+'movenologintext' => 'Anda mesti [[Special:wiki_UserLogin|log masuk]] terlebih dahulu untuk memindahkan laman.',
 'movenotallowed' => 'Anda tidak mempunyai keizinan untuk memindahkan laman.',
 'movenotallowedfile' => 'Anda tidak mempunyai keizinan untuk memindahkan fail.',
 'cant-move-user-page' => 'Anda tidak mempunyai keizinan untuk memindahkan laman pengguna (tidak termasuk sublaman-sublamannya).',
@@ -3560,10 +3560,10 @@ Kod pengesahan ini akan luput pada $4.',
 
 # Delete conflict
 'deletedwhileediting' => "'''Amaran''': Laman ini dihapuskan ketika anda sedang menyuntingnya!",
-'confirmrecreate' => "Pengguna [[User:$1|$1]] ([[User talk:$1|perbincangan]]) telah menghapuskan laman ini ketika anda sedang menyunting atas sebab berikut:
+'confirmrecreate' => "Pengguna [[wiki_User:$1|$1]] ([[wiki_User talk:$1|perbincangan]]) telah menghapuskan laman ini ketika anda sedang menyunting atas sebab berikut:
 : ''$2''
 Sila sahkan bahawa anda mahu mencipta semula laman ini.",
-'confirmrecreate-noreason' => 'Pengguna [[User:$1|$1]] ([[User talk:$1|bincang]]) menghapuskan laman ini selepas anda mulai menyunting. Sila sahkan bahawa anda betul-betul ingin mencipta semula laman ini.',
+'confirmrecreate-noreason' => 'Pengguna [[wiki_User:$1|$1]] ([[wiki_User talk:$1|bincang]]) menghapuskan laman ini selepas anda mulai menyunting. Sila sahkan bahawa anda betul-betul ingin mencipta semula laman ini.',
 'recreate' => 'Cipta semula',
 
 # action=purge

@@ -292,9 +292,9 @@ $specialPageAliases = array(
 	'Unwatchedpages'            => array( 'Niet-evolgden_pagina\'s' ),
 	'Upload'                    => array( 'Bestaanden_opsturen' ),
 	'UploadStash'               => array( 'Bestaandenstallige' ),
-	'Userlogin'                 => array( 'Anmelden' ),
-	'Userlogout'                => array( 'Aofmelden' ),
-	'Userrights'                => array( 'Gebrukersrechten' ),
+	'wiki_Userlogin'                 => array( 'Anmelden' ),
+	'wiki_Userlogout'                => array( 'Aofmelden' ),
+	'wiki_Userrights'                => array( 'Gebrukersrechten' ),
 	'Version'                   => array( 'Versie' ),
 	'Wantedcategories'          => array( 'Gewunste_kategorieën' ),
 	'Wantedfiles'               => array( 'Gewunste_bestaanden' ),
@@ -308,7 +308,7 @@ $specialPageAliases = array(
 $linkTrail = '/^([a-zäöüïëéèà]+)(.*)$/sDu';
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Verwiezingen onderstrepen',
 'tog-justify' => "Alinea's uutvullen",
 'tog-hideminor' => 'Kleine wiezigingen verbargen in leste wiezigingen',
@@ -649,7 +649,7 @@ De databanke gaf de volgende foutmelding: "$3: $4"',
 Dit kan koemen deurda\'j n ouwe verwiezing naor t verschil tussen twee versies van n zied volgen of n versie opvragen die vortedaon is.
 
 As dat niet zo is, dan he\'j misschien n fout in de programmatuur evunnen.
-Meld t dan effen bie n [[Special:ListUsers/sysop|systeembeheerder]] van {{SITENAME}} en vermeld derbie de internetverwiezing van disse zied.',
+Meld t dan effen bie n [[Special:Listwiki_Users/sysop|systeembeheerder]] van {{SITENAME}} en vermeld derbie de internetverwiezing van disse zied.',
 'missingarticle-rev' => '(versienummer: $1)',
 'missingarticle-diff' => '(Wieziging: $1, $2)',
 'readonly_lag' => 'De databanke is automaties beveilig, zodat de ondergeschikten servers zich kunnen synchroniseren mit de sentrale server.',
@@ -696,7 +696,7 @@ $2',
 'customcssprotected' => 'Je kunnen disse CSS-zied niet bewarken, umdat der persoonlike instellingen van n aandere gebruker in staon.',
 'customjsprotected' => 'Je kunnen disse JavaScript-zied niet bewarken, umdat der persoonlike instellingen van n aandere gebruker in staon.',
 'ns-specialprotected' => 'Spesiale ziejen kunnen niet bewarkt wörden.',
-'titleprotected' => "t Anmaken van disse zied is beveiligd deur [[User:$1|$1]].
+'titleprotected' => "t Anmaken van disse zied is beveiligd deur [[wiki_User:$1|$1]].
 De op-egeven reden is ''$2''.",
 'filereadonlyerror' => 'Kon t bestaand "$1" niet anpassen umdat de bestaandsmap "$2" op dit moment op allinnig-lezen steet.
 
@@ -714,7 +714,7 @@ De beheerder gaf hierveur de volgende reden: "$3".',
 # Login and logout pages
 'logouttext' => "'''Je bin noen aofemeld.'''
 
-Je kunnen {{SITENAME}} noen anoniem gebruken of je eigen [[Special:UserLogin|opniej anmelden]] onder disse of n aandere gebrukersnaam.
+Je kunnen {{SITENAME}} noen anoniem gebruken of je eigen [[Special:wiki_UserLogin|opniej anmelden]] onder disse of n aandere gebrukersnaam.
 t Kan ween dat der wat ziejen bin die weeregeven wörden asof je an-emeld bin totda'j t tussengeheugen van joew webkieker leegmaken.",
 'welcomecreation' => '== Welkom, $1! ==
 Joew gebrukersnaam is an-emaakt.
@@ -760,7 +760,7 @@ Zörg derveur da'j scheumbestaanden (cookies) an hebben staon, herlaoj disse zie
 'loginsuccess' => 'Je bin noen an-emeld bie {{SITENAME}} as "$1".',
 'nosuchuser' => 'Der is gien gebruker mit de naam "$1".
 Gebrukersnamen bin heufdlettergeveulig.
-Kiek de schriefwieze effen nao of [[Special:UserLogin/signup|maak n nieje gebruker an]].',
+Kiek de schriefwieze effen nao of [[Special:wiki_UserLogin/signup|maak n nieje gebruker an]].',
 'nosuchusershort' => 'Der is gien gebruker mit de naam "$1". Kiek de spelling nao.',
 'nouserspecified' => 'Vul n naam in',
 'login-userblocked' => 'Disse gebruker is eblokkeerd.
@@ -956,14 +956,14 @@ t Kan ween dat t herneumd is of dat t vortedaon is to jie t an t bekieken waren.
 'loginreqlink' => 'Anmelden',
 'loginreqpagetext' => 'Je mutten $1 um disse zied te bekieken.',
 'accmailtitle' => 'Wachtwoord is verstuurd.',
-'accmailtext' => "Der is n willekeurig wachtwoord veur [[User talk:$1|$1]] verstuurd naor $2.
+'accmailtext' => "Der is n willekeurig wachtwoord veur [[wiki_User talk:$1|$1]] verstuurd naor $2.
 
 t Wachtwoord veur disse gebruker kan ewiezigd wörden deur de zied ''[[Special:ChangePassword|wachtwoord wiezigen]]'' te gebruken.",
 'newarticle' => '(Niej)',
 'newarticletext' => "Disse zied besteet nog niet.
 In t veld hieronder ku'j wat schrieven um disse zied an te maken (meer informasie vie'j op de [[{{MediaWiki:Helppage}}|hulpzied]]).
 A'j hier per ongelok terechtekeumen bin gebruuk dan de knoppe '''veurige''' um weerumme te gaon.",
-'anontalkpagetext' => "---- ''Disse overlegzied heurt bie n anonieme gebruker die nog gien gebrukersnaam hef, of t niet gebruukt. We gebruken daorumme t IP-adres um hum of heur te herkennen, mer t kan oek ween dat meerdere personen t zelfde IP-adres gebruken, en da'j hiermee berichten ontvangen die niet veur joe bedoeld bin. A'j dit veurkoemen willen, dan ku'j t best [[Special:UserLogin/signup|n gebrukersnaam anmaken]] of [[Special:UserLogin|anmelden]].''",
+'anontalkpagetext' => "---- ''Disse overlegzied heurt bie n anonieme gebruker die nog gien gebrukersnaam hef, of t niet gebruukt. We gebruken daorumme t IP-adres um hum of heur te herkennen, mer t kan oek ween dat meerdere personen t zelfde IP-adres gebruken, en da'j hiermee berichten ontvangen die niet veur joe bedoeld bin. A'j dit veurkoemen willen, dan ku'j t best [[Special:wiki_UserLogin/signup|n gebrukersnaam anmaken]] of [[Special:wiki_UserLogin|anmelden]].''",
 'noarticletext' => 'Der steet noen gien tekste op disse zied.
 Je kunnen [[Special:Search/{{PAGENAME}}|de titel opzeuken]] in aandere ziejen,
 <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} zeuken in de logboeken],
@@ -1002,13 +1002,13 @@ Joew tekste is niet op-esleugen!",
 'previewconflict' => "Disse versie löt zien hoe de tekste in t bovenste veld deruut kömp te zien a'j de tekste opslaon.",
 'session_fail_preview' => "'''De bewarking kan niet verwarkt wörden wegens n verlies an data.'''
 Probeer t laoter weer.
-As t probleem dan nog steeds veurkömp, probeer dan [[Special:UserLogout|opniej an te melden]].",
+As t probleem dan nog steeds veurkömp, probeer dan [[Special:wiki_UserLogout|opniej an te melden]].",
 'session_fail_preview_html' => "'''De bewarking kan niet verwarkt wörden wegens n verlies an data.'''
 
 ''Umdat in {{SITENAME}} roewe HTML in-eschakeld is, is de weergave dervan verbörgen um te veurkoemen dat t JavaScript an-evöllen wörden.''
 
 '''As dit n legitieme wieziging is, probeer t dan opniej.'''
-As t dan nog problemen gif, probeer dan um [[Special:UserLogout|opniej an te melden]].",
+As t dan nog problemen gif, probeer dan um [[Special:wiki_UserLogout|opniej an te melden]].",
 'token_suffix_mismatch' => "'''De bewarking is eweigerd umdat de webkieker de leestekens in t bewarkingstoken verkeerd behaandeld hef. De bewarking is eweigerd um verminking van de ziedtekste te veurkoemen. Dit gebeurt soms as der n web-ebaseerden proxydienst gebruukt wörden waor fouten in zitten.'''",
 'edit_form_incomplete' => "'''Partie delen van t bewarkingsformulier hebben de server niet bereikt. Kiek eers nao of de bewarkingen kloppen en probeer t opniej.'''",
 'editing' => 'Bewarken: $1',
@@ -1054,7 +1054,7 @@ De leste logboekregel steet hieronder:",
 'hiddencategories' => 'Disse zied völt in de volgende verbörgen {{PLURAL:$1|kategorie|kategorieën}}:',
 'edittools' => '<!-- Disse tekste steet onder de bewarkings- en bestaandinlaodformulieren. -->',
 'nocreatetitle' => 't Anmaken van nieje ziejen is beteund',
-'nocreatetext' => 'Disse webstee hef de meugelikheid um nieje ziejen an te maken beteund. Je kunnen ziejen die al bestaon wiezigen of je kunnen je [[Special:UserLogin|anmelden of n gebrukerszied anmaken]].',
+'nocreatetext' => 'Disse webstee hef de meugelikheid um nieje ziejen an te maken beteund. Je kunnen ziejen die al bestaon wiezigen of je kunnen je [[Special:wiki_UserLogin|anmelden of n gebrukerszied anmaken]].',
 'nocreate-loggedin' => 'Je hebben gien toestemming um nieje ziejen an te maken.',
 'sectioneditnotsupported-title' => 't Bewarken van seksies wörden niet ondersteund',
 'sectioneditnotsupported-text' => 'Je kunnen op disse zied gien seksies bewarken.',
@@ -1103,11 +1103,11 @@ Sommigen mallen wörden niet in-evoegd.',
 'undo-success' => 'De bewarking kan weerummedreid wörden. Kiek de vergelieking hieronder nao um der wisse van de ween dat alles goed is, en slao de de zied op um de bewarking weerumme te dreien.',
 'undo-failure' => 'De wieziging kon niet weerummedreid wörden umdat t ondertussen awweer ewiezigd is.',
 'undo-norev' => 'De bewarking kon niet weerummedreid wörden, umdat t niet besteet of vortedaon is.',
-'undo-summary' => 'Versie $1 van [[Special:Contributions/$2|$2]] ([[User talk:$2|overleg]]) weerummedreid.',
+'undo-summary' => 'Versie $1 van [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|overleg]]) weerummedreid.',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'Anmaken van n gebrukersprofiel is niet meugelik',
-'cantcreateaccount-text' => "t Anmaken van gebrukers van dit IP-adres (<b>$1</b>) is eblokkeerd deur [[User:$3|$3]].
+'cantcreateaccount-text' => "t Anmaken van gebrukers van dit IP-adres (<b>$1</b>) is eblokkeerd deur [[wiki_User:$3|$3]].
 
 De deur $3 op-egeven reden is ''$2''",
 
@@ -1361,7 +1361,7 @@ Waorschienlik ku'j der meer gegevens over vienen in t [{{fullurl:{{#Special:Log}
 'mypreferences' => 'Mien veurkeuren',
 'prefs-edits' => 'Antal bewarkingen:',
 'prefsnologin' => 'Niet an-meld',
-'prefsnologintext' => 'Je mutten <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} an-emeld]</span> ween um joew veurkeuren in te kunnen stellen.',
+'prefsnologintext' => 'Je mutten <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} an-emeld]</span> ween um joew veurkeuren in te kunnen stellen.',
 'changepassword' => 'Wachtwoord wiezigen',
 'prefs-skin' => '{{SITENAME}}-uterlik',
 'skin-preview' => 'bekieken',
@@ -1473,16 +1473,16 @@ Disse informasie is zichtbaor veur aandere gebrukers.',
 'prefs-displaywatchlist' => 'Weergave-instellingen',
 'prefs-diffs' => 'Verschillen',
 
-# User preference: e-mail validation using jQuery
+# wiki_User preference: e-mail validation using jQuery
 'email-address-validity-valid' => 'Geldig netpostadres',
 'email-address-validity-invalid' => 'Geef n geldig netpostadres op',
 
-# User rights
+# wiki_User rights
 'userrights' => 'Gebrukersrechtenbeheer',
 'userrights-lookup-user' => 'Beheer gebrukersgroepen',
 'userrights-user-editname' => 'Vul n gebrukersnaam in:',
 'editusergroup' => 'Bewark gebrukersgroepen',
-'editinguser' => "Doonde mit t wiezigen van de gebrukersrechten van '''[[User:$1|$1]]''' $2",
+'editinguser' => "Doonde mit t wiezigen van de gebrukersrechten van '''[[wiki_User:$1|$1]]''' $2",
 'userrights-editusergroup' => 'Bewark gebrukersgroep',
 'saveusergroups' => 'Gebrukergroepen opslaon',
 'userrights-groupsmember' => 'Lid van:',
@@ -1494,7 +1494,7 @@ Disse informasie is zichtbaor veur aandere gebrukers.',
 'userrights-reason' => 'Reden:',
 'userrights-no-interwiki' => "Je hebben gien rechten um gebrukersrechten op aandere wiki's te wiezigen.",
 'userrights-nodatabase' => 'Databanke $1 besteet niet of is gien plaotselike databanke.',
-'userrights-nologin' => 'Je mutten [[Special:UserLogin|an-emeld]] ween en as gebruker de juuste rechten hebben um gebrukersrechten toe te kunnen wiezen.',
+'userrights-nologin' => 'Je mutten [[Special:wiki_UserLogin|an-emeld]] ween en as gebruker de juuste rechten hebben um gebrukersrechten toe te kunnen wiezen.',
 'userrights-notallowed' => 'Je hebben gien rechten um gebrukersrechten toe te kunnen wiezen of in te trekken.',
 'userrights-changeable-col' => "Groepen die'j beheren kunnen",
 'userrights-unchangeable-col' => "Groepen die'j niet beheren kunnen",
@@ -1585,7 +1585,7 @@ Disse informasie is zichtbaor veur aandere gebrukers.',
 'right-sendemail' => 'Bericht versturen naor aandere gebrukers',
 'right-passwordreset' => 'Bekiek netpostberichten veur t opniej instellen van joew wachtwoord',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Gebrukersrechtenlogboek',
 'rightslogtext' => 'Dit is n logboek mit veraanderingen van gebrukersrechten',
 'rightslogentry' => 'Gebrukersrechten veur $1 ewiezigd van $2 naor $3',
@@ -1682,7 +1682,7 @@ Disse informasie is zichtbaor veur aandere gebrukers.',
 'reuploaddesc' => 'Weerumme naor de opstuurzied',
 'upload-tryagain' => 'Bestaandsbeschrieving biewarken',
 'uploadnologin' => 'Niet an-emeld',
-'uploadnologintext' => 'Je mutten [[Special:UserLogin|an-emeld]] ween um bestaanden toe te kunnen voegen.',
+'uploadnologintext' => 'Je mutten [[Special:wiki_UserLogin|an-emeld]] ween um bestaanden toe te kunnen voegen.',
 'upload_directory_missing' => 'De inlaojmap veur bestaanden ($1) is vort en kon niet an-emaakt wörden deur de webserver.',
 'upload_directory_read_only' => "Op t moment ku'j gien bestaanden opsturen vanwegen techniese problemen ($1).",
 'uploaderror' => 'Fout bie t inlaojen van t bestaand',
@@ -1801,11 +1801,11 @@ Gao weerumme naor t [[Special:Upload/stash/$1|opstuurformulier]] um dit probleem
 'upload-proto-error' => 'Verkeerd protokol',
 'upload-proto-error-text' => 'Um op disse maniere bestaanden toe te voegen mutten webadressen beginnen mit <code>http://</code> of <code>ftp://</code>.',
 'upload-file-error' => 'Interne fout',
-'upload-file-error-text' => 'Bie ons gung der effen wat fout to n tiedelik bestaand op de server an-emaakt wörden. Neem kontakt op mit n [[Special:ListUsers/sysop|systeembeheerder]].',
+'upload-file-error-text' => 'Bie ons gung der effen wat fout to n tiedelik bestaand op de server an-emaakt wörden. Neem kontakt op mit n [[Special:Listwiki_Users/sysop|systeembeheerder]].',
 'upload-misc-error' => 'Onbekende fout bie t inlaojen van joew bestaand',
 'upload-misc-error-text' => 'Der is bie t inlaojen van t bestaand n onbekende fout op-etrejen. 
 Kiek effen nao of de verwiezing t wel döt en probeer t opniej. 
-As t probleem zo blif, neem dan kontakt op mit één van de [[Special:ListUsers/sysop|systeembeheerders]].',
+As t probleem zo blif, neem dan kontakt op mit één van de [[Special:Listwiki_Users/sysop|systeembeheerders]].',
 'upload-too-many-redirects' => 'Der zatten te veule deurverwiezingen in de URL.',
 'upload-unknown-size' => 'Onbekende grootte',
 'upload-http-error' => 'Der is n HTTP-fout op-etrejen: $1',
@@ -2039,7 +2039,7 @@ Vergeet niet de verwiezingen nao te kieken veurda\'j de mal vortdoon.',
 'statistics-views-total' => 'Totaal antal weeregeven ziejen',
 'statistics-views-total-desc' => 't Bekieken van niet-bestaonde ziejen en spesiale ziejen zitten der niet bie in',
 'statistics-views-peredit' => 'Weeregeven ziejen per bewarking',
-'statistics-users' => 'In-eschreven [[Special:ListUsers|gebrukers]]',
+'statistics-users' => 'In-eschreven [[Special:Listwiki_Users|gebrukers]]',
 'statistics-users-active' => 'Aktieve gebrukers',
 'statistics-users-active-desc' => 'Gebrukers die de veurbieje {{PLURAL:$1|dag|$1 dagen}} n haandeling uutevoerd hebben',
 'statistics-mostpopular' => 'Meestbekeken ziejen',
@@ -2209,13 +2209,13 @@ Ondersteunde protokollen: <code>$1</code> (zet t niet in joew zeukopdrachte).',
 'linksearch-line' => '$1 hef n verwiezing in $2',
 'linksearch-error' => 'Jokers bin allinnig toe-estaon an t begin van n webadres.',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => 'Laot gebrukers zien vanaof:',
 'listusers-submit' => 'Bekiek',
 'listusers-noresult' => 'Gien gebrukers evunnen. Zeuk oek naor variaanten mit kleine letters of heufdletters.',
 'listusers-blocked' => '(eblokkeerd)',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'Aktieve gebrukers',
 'activeusers-intro' => 'Dit is n lieste van gebrukers die de aofgeleupen $1 {{PLURAL:$1|dag|dagen}} enigszins aktief ewest hebben.',
 'activeusers-count' => '$1 leste {{PLURAL:$1|bewarking|bewarkingen}} in de aofgeleupen {{PLURAL:$3|dag|$3 dagen}}',
@@ -2249,7 +2249,7 @@ Meer informasie over de rechten ku'j [[{{MediaWiki:Listgrouprights-helppage}}|hi
 
 # E-mail user
 'mailnologin' => 'Niet an-emeld.',
-'mailnologintext' => 'Je mutten [[Special:UserLogin|an-emeld]] ween en n geldig e-mailadres in "[[Special:Preferences|mien veurkeuren]]" invoeren um disse funksie te kunnen gebruken.',
+'mailnologintext' => 'Je mutten [[Special:wiki_UserLogin|an-emeld]] ween en n geldig e-mailadres in "[[Special:Preferences|mien veurkeuren]]" invoeren um disse funksie te kunnen gebruken.',
 'emailuser' => 'n Bericht sturen',
 'emailuser-title-target' => 'Disse {{GENDER:$1|gebruker}} n bericht sturen',
 'emailuser-title-notarget' => 'Gebruker n bericht sturen',
@@ -2281,7 +2281,7 @@ De ontvanger kan dus drek beantwoorden.",
 'emailsenttext' => 'Bericht is verstuurd.',
 'emailuserfooter' => 'Dit bericht is verstuurd deur $1 an $2 deur de funksie "n Bericht sturen" van {{SITENAME}} te gebruken.',
 
-# User Messenger
+# wiki_User Messenger
 'usermessage-summary' => 'Systeemteksten achter-eleuten',
 'usermessage-editor' => 'Systeemtekste',
 
@@ -2292,7 +2292,7 @@ De ontvanger kan dus drek beantwoorden.",
 'nowatchlist' => 'Gien artikels in volglieste.',
 'watchlistanontext' => '$1 is verplicht um joew volglieste te bekieken of te wiezigen.',
 'watchnologin' => 'Niet an-emeld',
-'watchnologintext' => "Um je volglieste an te passen mu'j eerst [[Special:UserLogin|an-emeld]] ween.",
+'watchnologintext' => "Um je volglieste an te passen mu'j eerst [[Special:wiki_UserLogin|an-emeld]] ween.",
 'addwatch' => 'Op mien volglieste zetten',
 'addedwatchtext' => "De zied \"[[:\$1]]\" steet noen op joew [[Special:Watchlist|volglieste]].
 Toekomstige wiezigingen op disse zied en de overlegzied zullen hier vermeld wörden, oek zullen disse ziejen '''vet-edrokt''' ween in de lieste mit de [[Special:RecentChanges|leste wiezigingen]] zoda'j t makkeliker zien kunnen.",
@@ -2402,13 +2402,13 @@ Wees veurzichtig',
 'rollbacklinkcount-morethan' => 'Meer as {{PLURAL:$1|één bewarking|$1 bewarkingen}} weerummedreien',
 'rollbackfailed' => 'Wieziging herstellen is mislokt',
 'cantrollback' => 'De wiezigingen konnen niet hersteld wörden; der is mer 1 auteur.',
-'alreadyrolled' => 'Kan de leste wieziging van de zied [[:$1]] deur [[User:$2|$2]] ([[User talk:$2|Overleg]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]); niet weerummedreien.
+'alreadyrolled' => 'Kan de leste wieziging van de zied [[:$1]] deur [[wiki_User:$2|$2]] ([[wiki_User talk:$2|Overleg]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]); niet weerummedreien.
 n Aander hef disse zied al bewarkt of hersteld naor n eerdere versie.
 
-De leste bewarking op disse zied is edaon deur [[User:$3|$3]] ([[User talk:$3|Overleg]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
+De leste bewarking op disse zied is edaon deur [[wiki_User:$3|$3]] ([[wiki_User talk:$3|Overleg]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
 'editcomment' => "De bewarkingssamenvatting was: ''$1''.",
 'revertpage' => 'Wiezigingen deur [[Special:Contributions/$2|$2]] hersteld tot de versie nao de leste wieziging deur $1',
-'revertpage-nouser' => 'Wiezigingen deur (gebrukersnaam vortedaon) weerummedreid naor de leste versie deur [[User:$1|$1]]',
+'revertpage-nouser' => 'Wiezigingen deur (gebrukersnaam vortedaon) weerummedreid naor de leste versie deur [[wiki_User:$1|$1]]',
 'rollback-success' => 'Wiezigingen van $1; weerummedreid naor de leste versie van $2.',
 
 # Edit tokens
@@ -2633,7 +2633,7 @@ Op de [[Special:BlockList|blokkeerlieste]] steet n lieste mit alle blokkeringen.
 'unblockip' => 'Deblokkeer gebruker',
 'unblockiptext' => 'Gebruuk t onderstaonde formulier um weerumme schrieftoegang te geven an n eblokkeerden gebruker of IP-adres.',
 'ipusubmit' => 'Blokkering deraof haolen',
-'unblocked' => '[[User:$1|$1]] is edeblokeerd',
+'unblocked' => '[[wiki_User:$1|$1]] is edeblokeerd',
 'unblocked-range' => '$1 is edeblokkeerd',
 'unblocked-id' => 'Blokkering $1 is op-eheven',
 'blocklist' => 'Gebrukers die eblokkeerd bin',
@@ -2666,7 +2666,7 @@ Op de [[Special:BlockList|blokkeerlieste]] steet n lieste mit alle blokkeringen.
 'change-blocklink' => 'blokkering wiezigen',
 'contribslink' => 'biedragen',
 'emaillink' => 'netpostbericht sturen',
-'autoblocker' => 'Vanzelf eblokkeerd umdat t IP-adres overenekömp mit t IP-adres van [[User:$1|$1]], die eblokkeerd is mit as reden: "$2"',
+'autoblocker' => 'Vanzelf eblokkeerd umdat t IP-adres overenekömp mit t IP-adres van [[wiki_User:$1|$1]], die eblokkeerd is mit as reden: "$2"',
 'blocklogpage' => 'Blokkeerlogboek',
 'blocklog-showlog' => 'Disse gebruker is al eerder eblokkeerd.
 t Blokkeerlogboek steet hieronder as referensie:',
@@ -2764,7 +2764,7 @@ Zörg derveur da'j de gevolgen overzien veurda'j veerder gaon.",
 'movearticle' => 'Herneum',
 'moveuserpage-warning' => "'''Waorschuwing:''' Je staon op t punt um n gebrukerszied te herneumen. Allinnig disse zied zal herneumd wörden, '''niet''' de gebruker.",
 'movenologin' => 'Niet an-emeld.',
-'movenologintext' => 'Je mutten [[Special:UserLogin|an-emeld]] ween um de naam van n zied te wiezigen.',
+'movenologintext' => 'Je mutten [[Special:wiki_UserLogin|an-emeld]] ween um de naam van n zied te wiezigen.',
 'movenotallowed' => 'Je hebben gien rechten um ziejen te herneumen.',
 'movenotallowedfile' => 'Je hebben gien rechten um bestaanden te herneumen.',
 'cant-move-user-page' => 'Je hebben gien rechten um gebrukersziejen te herneumen.',
@@ -3592,7 +3592,7 @@ Kiek nao of der gien ongeldige tekens in t netpostadres zitten.
 Fout bie t versturen: $1',
 'confirmemail_invalid' => 'Ongeldige bevestigingskode. De kode kan verlopen ween.',
 'confirmemail_needlogin' => 'Je mutten $1 um joew netpostadres te bevestigen.',
-'confirmemail_success' => 'Joew netpostadres is bevestigd. Je kunnen noen [[Special:UserLogin|anmelden]] en {{SITENAME}} gebruken.',
+'confirmemail_success' => 'Joew netpostadres is bevestigd. Je kunnen noen [[Special:wiki_UserLogin|anmelden]] en {{SITENAME}} gebruken.',
 'confirmemail_loggedin' => 'Joew netpostadres is noen bevestig.',
 'confirmemail_error' => 'Der is iets fout egaon bie t opslaon van joew bevestiging.',
 'confirmemail_subject' => 'Bevestiging netpostadres veur {{SITENAME}}',
@@ -3643,8 +3643,8 @@ De bevestigingskode zal verlopen op $4.',
 
 # Delete conflict
 'deletedwhileediting' => "'''Waorschuwing''': disse zied is vortedaon terwiel jie t an t bewarken waren!",
-'confirmrecreate' => "Gebruker [[User:$1|$1]] ([[User talk:$1|Overleg]]) hef disse zied vortedaon naoda'j  begunnen bin mit joew wieziging, mit opgave van de volgende reden: ''$2''. Bevestig da'j t artikel herschrieven willen.",
-'confirmrecreate-noreason' => "Gebruker [[User:$1|$1]] ([[User talk:$1|overleg]]) hef disse zied vortedaon naoda'j  begunnen bin mit joew wieziging. Bevestig da'j t artikel herschrieven willen.",
+'confirmrecreate' => "Gebruker [[wiki_User:$1|$1]] ([[wiki_User talk:$1|Overleg]]) hef disse zied vortedaon naoda'j  begunnen bin mit joew wieziging, mit opgave van de volgende reden: ''$2''. Bevestig da'j t artikel herschrieven willen.",
+'confirmrecreate-noreason' => "Gebruker [[wiki_User:$1|$1]] ([[wiki_User talk:$1|overleg]]) hef disse zied vortedaon naoda'j  begunnen bin mit joew wieziging. Bevestig da'j t artikel herschrieven willen.",
 'recreate' => 'Herschrieven',
 
 # action=purge

@@ -323,13 +323,13 @@ class PageArchive {
 	 * @param $comment String
 	 * @param $fileVersions Array
 	 * @param $unsuppress Boolean
-	 * @param $user User doing the action, or null to use $wgUser
+	 * @param $user wiki_User doing the action, or null to use $wgwiki_User
 	 *
 	 * @return array(number of file revisions restored, number of image revisions restored, log message)
 	 * on success, false on failure
 	 */
-	function undelete( $timestamps, $comment = '', $fileVersions = array(), $unsuppress = false, User $user = null ) {
-		global $wgUser;
+	function undelete( $timestamps, $comment = '', $fileVersions = array(), $unsuppress = false, wiki_User $user = null ) {
+		global $wgwiki_User;
 
 		// If both the set of text revisions and file revisions are empty,
 		// restore everything. Otherwise, just restore the requested items.
@@ -379,7 +379,7 @@ class PageArchive {
 		}
 
 		if ( $user === null ) {
-			$user = $wgUser;
+			$user = $wgwiki_User;
 		}
 
 		$logEntry = new ManualLogEntry( 'delete', 'restore' );
@@ -555,7 +555,7 @@ class PageArchive {
 		$wasnew = $article->updateIfNewerOn( $dbw, $revision, $previousRevId );
 		if ( $created || $wasnew ) {
 			// Update site stats, link tables, etc
-			$user = User::newFromName( $revision->getRawUserText(), false );
+			$user = wiki_User::newFromName( $revision->getRawwiki_UserText(), false );
 			$article->doEditUpdates( $revision, $user, array( 'created' => $created, 'oldcountable' => $oldcountable ) );
 		}
 
@@ -832,7 +832,7 @@ class SpecialUndelete extends SpecialPage {
 		$time = $lang->userTimeAndDate( $timestamp, $user );
 		$d = $lang->userDate( $timestamp, $user );
 		$t = $lang->userTime( $timestamp, $user );
-		$userLink = Linker::revUserTools( $rev );
+		$userLink = Linker::revwiki_UserTools( $rev );
 
 		if( $this->mPreview ) {
 			$openDiv = '<div id="mw-undelete-revision" class="mw-warning">';
@@ -968,7 +968,7 @@ class SpecialUndelete extends SpecialPage {
 				) .
 			'</strong></div>' .
 			'<div id="mw-diff-'.$prefix.'title2">' .
-				Linker::revUserTools( $rev ) . '<br />' .
+				Linker::revwiki_UserTools( $rev ) . '<br />' .
 			'</div>' .
 			'<div id="mw-diff-'.$prefix.'title3">' .
 				Linker::revComment( $rev ) . $rdel . '<br />' .
@@ -1225,8 +1225,8 @@ class SpecialUndelete extends SpecialPage {
 			$pageLink = htmlspecialchars( $this->getLanguage()->userTimeAndDate( $ts, $user ) );
 			$last = $this->msg( 'diff' )->escaped();
 		}
-		// User links
-		$userLink = Linker::revUserTools( $rev );
+		// wiki_User links
+		$userLink = Linker::revwiki_UserTools( $rev );
 		// Revision text size
 		$size = $row->ar_len;
 		if( !is_null( $size ) ) {
@@ -1254,7 +1254,7 @@ class SpecialUndelete extends SpecialPage {
 			$checkBox = '';
 			$pageLink = $this->getLanguage()->userTimeAndDate( $ts, $user );
 		}
-		$userLink = $this->getFileUser( $file );
+		$userLink = $this->getFilewiki_User( $file );
 		$data = $this->msg( 'widthheight' )->numParams( $row->fa_width, $row->fa_height )->text();
 		$bytes = $this->msg( 'parentheses' )->rawParams( $this->msg( 'nbytes' )->numParams( $row->fa_size )->text() )->plain();
 		$data = htmlspecialchars( $data . ' ' . $bytes );
@@ -1352,12 +1352,12 @@ class SpecialUndelete extends SpecialPage {
 	 * @param $file File
 	 * @return String: HTML fragment
 	 */
-	function getFileUser( $file ) {
+	function getFilewiki_User( $file ) {
 		if( !$file->userCan( File::DELETED_USER, $this->getUser() ) ) {
 			return '<span class="history-deleted">' . $this->msg( 'rev-deleted-user' )->escaped() . '</span>';
 		} else {
-			$link = Linker::userLink( $file->getRawUser(), $file->getRawUserText() ) .
-				Linker::userToolLinks( $file->getRawUser(), $file->getRawUserText() );
+			$link = Linker::userLink( $file->getRawwiki_User(), $file->getRawwiki_UserText() ) .
+				Linker::userToolLinks( $file->getRawwiki_User(), $file->getRawwiki_UserText() );
 			if( $file->isDeleted( File::DELETED_USER ) ) {
 				$link = '<span class="history-deleted">' . $link . '</span>';
 			}

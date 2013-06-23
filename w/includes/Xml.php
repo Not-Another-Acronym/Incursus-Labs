@@ -239,7 +239,7 @@ class Xml {
 			$options .= Xml::option( "$code - $name", $code, ($code == $selected) ) . "\n";
 		}
 
-		$attrs = array( 'id' => 'wpUserLanguage', 'name' => 'wpUserLanguage' );
+		$attrs = array( 'id' => 'wpwiki_UserLanguage', 'name' => 'wpwiki_UserLanguage' );
 		$attrs = array_merge( $attrs, $overrideAttrs );
 
 		if( $msg === null ) {

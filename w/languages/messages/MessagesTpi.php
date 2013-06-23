@@ -43,14 +43,14 @@ $specialPageAliases = array(
 	'Recentchanges'             => array( 'Nupela senis' ),
 	'Specialpages'              => array( 'Sipesol pes' ),
 	'Upload'                    => array( 'Salim media fail' ),
-	'Userlogin'                 => array( 'Yusa login' ),
-	'Userlogout'                => array( 'Yusa logaut' ),
+	'wiki_Userlogin'                 => array( 'Yusa login' ),
+	'wiki_Userlogout'                => array( 'Yusa logaut' ),
 	'Watchlist'                 => array( 'Lukautbuk' ),
 	'Whatlinkshere'             => array( 'Ol link ikam long hia' ),
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Putim lain ananit long ol link:',
 'tog-justify' => "Soim ol paragraf i pulmapim sipes long lephan i go long raithan (''justify'')",
 'tog-hideminor' => 'Noken soim ol liklik senis insait long ol nupela senis',
@@ -440,7 +440,7 @@ Na tu yu tok tru nau olsem yu raitim dispela yu yet, o yu kisim long wanpela hap
 'email' => 'E-mel',
 'prefs-info' => 'Liklik infomesen',
 
-# User rights
+# wiki_User rights
 'editusergroup' => 'Senisim ol grup bilong yusa',
 'userrights-groupsmember' => 'Memba bilong:',
 'userrights-reason' => 'As bilong en:',
@@ -466,7 +466,7 @@ Na tu yu tok tru nau olsem yu raitim dispela yu yet, o yu kisim long wanpela hap
 'right-delete' => 'Rausim ol pes',
 'right-suppressionlog' => 'Lukim ol praivet ripot',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Ripot long ol pawa bilong ol yusa',
 'rightsnone' => 'i nogat wanpela',
 
@@ -605,7 +605,7 @@ Also see [[Special:WantedCategories|wanted categories]].',
 # Special:LinkSearch
 'linksearch-ok' => 'Painim',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusers-submit' => 'Soim',
 
 # Special:Log/newusers
@@ -631,7 +631,7 @@ Also see [[Special:WantedCategories|wanted categories]].',
 'watchlistfor2' => 'Bilong $1 $2',
 'nowatchlist' => 'Nogat wanpela samting istap long lukautbuk bilong yu.',
 'watchlistanontext' => 'Yu mas $1 long lukim o senisim ol samting long lukautbuk bilong yu.',
-'watchnologintext' => 'Yu mas [[Special:UserLogin|login]] long senisim lukautbuk bilong yu.',
+'watchnologintext' => 'Yu mas [[Special:wiki_UserLogin|login]] long senisim lukautbuk bilong yu.',
 'addedwatchtext' => "Pes \"[[:\$1]]\" igo insait long [[Special:Watchlist|lukautbuk]] bilong yu nau.
 Bai yu lukim ol nupela senis long dispela pes, na pes toktok bilong en, long lukautbuk,
 na dispela pes bai kamap '''strongpela''' long [[Special:RecentChanges|pes bilong ol nupela senis]]

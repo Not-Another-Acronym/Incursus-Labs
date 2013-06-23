@@ -228,12 +228,12 @@ var uas = (function () {
 
 QUnit.test( 'profile userAgent support', uacount, function ( assert ) {
 	// Generate a client profile object and compare recursively
-	var uaTest = function( rawUserAgent, data ) {
+	var uaTest = function( rawwiki_UserAgent, data ) {
 		var ret = $.client.profile( {
-			userAgent: rawUserAgent,
+			userAgent: rawwiki_UserAgent,
 			platform: data.platform
 		} );
-		assert.deepEqual( ret, data.profile, 'Client profile support check for ' + data.title + ' (' + data.platform + '): ' + rawUserAgent );
+		assert.deepEqual( ret, data.profile, 'Client profile support check for ' + data.title + ' (' + data.platform + '): ' + rawwiki_UserAgent );
 	};
 
 	// Loop through and run tests
@@ -292,7 +292,7 @@ QUnit.test( 'test', 1, function ( assert ) {
 
 });
 
-QUnit.test( 'User-agent matches against WikiEditor\'s compatibility map', uacount * 2, function ( assert ) {
+QUnit.test( 'wiki_User-agent matches against WikiEditor\'s compatibility map', uacount * 2, function ( assert ) {
 	var	$body = $( 'body' ),
 		bodyClasses = $body.attr( 'class' );
 

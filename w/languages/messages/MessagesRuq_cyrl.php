@@ -16,7 +16,7 @@
 $fallback = 'mk';
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Сублиниаере легајтулс:',
 
 # Dates

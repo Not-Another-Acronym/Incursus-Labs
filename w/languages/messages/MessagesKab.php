@@ -43,7 +43,7 @@ $namespaceAliases = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Derrer izdayen:',
 'tog-justify' => 'Err tehri ger wawalen kif-kif',
 'tog-hideminor' => 'Ffer ibeddlen ifessasen deg yibeddlen imaynuten',
@@ -379,7 +379,7 @@ Win (anedbal) isekker-itt yenna-d: $1',
 Umata, wagi yeḍra mi neḍfeṛ azday ɣer yiwen diff aqbur naɣ ɣer amazray n usebter yemḥan.
 
 Ma mačči d-tajṛut agi, ihi d-taniwit deg uhil.
-Ilaq ad εeggenem yiwen [[Special:ListUsers/sysop|anedbal]] war ad ttum asefkem URL n uzday.',
+Ilaq ad εeggenem yiwen [[Special:Listwiki_Users/sysop|anedbal]] war ad ttum asefkem URL n uzday.',
 'missingarticle-rev' => '(uṭṭun n lqem : $1)',
 'missingarticle-diff' => '(Diff: $1, $2)',
 'readonly_lag' => 'Database d tamsekkert (weḥdes) axaṭer kra n serveur ɛeṭṭlen',
@@ -426,7 +426,7 @@ $2',
 'customcssprotected' => 'Ur tesɛiḍ ara turagt iwakken ad beddeleḍ asebter agi n CSS, acku tesɛa iɣewwaren n yiwen useqdac nniḍen.',
 'customjsprotected' => 'Ur tesɛiḍ ara turagt iwakken ad beddeleḍ asebter agi n Javascript, acku tesɛa iɣewwaren n yiwen useqdac nniḍen.',
 'ns-specialprotected' => 'Ur t-zemred ara ad beddeleḍ isebtar usligen',
-'titleprotected' => "Azwel agi yegdel deg usnulfu ɣef [[User:$1|$1]].
+'titleprotected' => "Azwel agi yegdel deg usnulfu ɣef [[wiki_User:$1|$1]].
 Taɣẓint id yenna : ''$2''",
 'filereadonlyerror' => 'Ulamek an beddel afaylu « $1 » acku akaram n ifuyla « $2 » yella deg taɣuri kan.
 
@@ -444,7 +444,7 @@ Anedbal i tid sekkweṛen yefkad taɣẓint agi : « $3 ».',
 # Login and logout pages
 'logouttext' => "'''Tura tesensereḍ.'''
 
-Tzemreḍ ad tesseqdceḍ {{SITENAME}} d udrig, [[Special:UserLogin|ad tkecmeḍ daɣen]] s yisem n wemseqdac inek (neɣ nniḍen).
+Tzemreḍ ad tesseqdceḍ {{SITENAME}} d udrig, [[Special:wiki_UserLogin|ad tkecmeḍ daɣen]] s yisem n wemseqdac inek (neɣ nniḍen).
 Kra n isebtar zemren ad sskanen belli mazal-ik s yisem n wemseqdac inek armi temḥuḍ lkac.",
 'welcomecreation' => '== Anṣuf yisek (yisem), $1 ! ==
 
@@ -486,7 +486,7 @@ Selken ma sermedeḍ "cookies", sismeḍ asebter dɣa εreḍ tikkelt nniḍen.'
 'loginsuccesstitle' => 'Tkecmeḍ !',
 'loginsuccess' => "'''Tkecmeḍ ar {{SITENAME}} s yisem n wemseqdac \"\$1\".'''",
 'nosuchuser' => 'Aseqdac « $1 » ulac-it d-agi.
-Ssenqed tira n yisem-nni, naɣ [[Special:UserLogin/signup|snulfu-d amiḍan amaynut]].',
+Ssenqed tira n yisem-nni, naɣ [[Special:wiki_UserLogin/signup|snulfu-d amiḍan amaynut]].',
 'nosuchusershort' => 'Ulac isem n wemseqdac s yisem "$1". Ssenqed tira n yisem-nni.',
 'nouserspecified' => 'Yessefk ad tefkeḍ isem n wemseqdac.',
 'login-userblocked' => 'Aseqdac agi i sewḥel. Tuqqna t-ugwi.',
@@ -669,14 +669,14 @@ Smekti-ten u fka-ten i unedbal-nni.",
 'loginreqlink' => 'Kcem',
 'loginreqpagetext' => 'Yessefk $1 iwakken ad teẓriḍ isebtar wiyaḍ.',
 'accmailtitle' => 'Awal n tbaḍnit yettwazen.',
-'accmailtext' => "Awal n uɛaddi id yuran s ugacur i [[User talk:$1|$1]] yetwecgaɛ i $2.
+'accmailtext' => "Awal n uɛaddi id yuran s ugacur i [[wiki_User talk:$1|$1]] yetwecgaɛ i $2.
 Awal n uɛaddi i umiḍan agi amaynut yezmer ad yetbeddel ɣef usebter n ''[[Special:ChangePassword|ubeddel n awal uɛddi]]'' sakin tuqqna.",
 'newarticle' => '(Amaynut)',
 'newarticletext' => 'Tḍefreḍ azday ɣer usebter mazal ur yettwaxleq ara.
 Akken ad txelqeḍ asebter-nni, aru deg tenkult i tella deg ukessar
 (ẓer [[{{MediaWiki:Helppage}}|asebter n tallat]] akken ad tessneḍ kter).
 Ma tɣelṭeḍ, wekki kan ɣef tqeffalt "Back/Précédent" n browser/explorateur inek.',
-'anontalkpagetext' => "---- ''Wagi d asebter n umyennan n useqdac adrig, mazal ur d-yesnufa ara amiḍan. I taɣẓint agi, ilaq an seqdec tansa IP ines iwakken at-id n sulu. Yiwet tansa IP tezmer at tettuseqdac sɣur aṭṭas n iseqdacen. Lukan ula d kečč aqla-k amseqdac adrig dɣa ur tebɣiḍ ara ad tettwabcreḍ izen am wigini, ihi [[Special:UserLogin/signup|snulfud amiḍan]] naɣ [[Special:UserLogin|qqened]] iwakken sya d asawen ur t-illint ara uguren n usulu.''",
+'anontalkpagetext' => "---- ''Wagi d asebter n umyennan n useqdac adrig, mazal ur d-yesnufa ara amiḍan. I taɣẓint agi, ilaq an seqdec tansa IP ines iwakken at-id n sulu. Yiwet tansa IP tezmer at tettuseqdac sɣur aṭṭas n iseqdacen. Lukan ula d kečč aqla-k amseqdac adrig dɣa ur tebɣiḍ ara ad tettwabcreḍ izen am wigini, ihi [[Special:wiki_UserLogin/signup|snulfud amiḍan]] naɣ [[Special:wiki_UserLogin|qqened]] iwakken sya d asawen ur t-illint ara uguren n usulu.''",
 'noarticletext' => 'Ulac aḍris deg usebter-agi, tzemreḍ ad [[Special:Search/{{PAGENAME}}|tnadiḍ ɣef wezwel n usebter-agi]] deg isebtar wiyaḍ neɣ [{{fullurl:{{FULLPAGENAME}}|action=edit}} tettbeddileḍ asebter-agi].',
 'noarticletext-nopermission' => 'Imira ulac aḍris deg usebter agi.
 Tzemreḍ [[Special:Search/{{PAGENAME}}|ad nadiḍ ɣef azwel agi]] deg isebtaren nniḍen,
@@ -715,7 +715,7 @@ G leɛnayek ɛreḍ tikelt nniḍen. Lukan mazal yella ugur, ffeɣ umbeɛd kcem.
 ''Acku {{SITENAME}} i sermed azar n HTML, azaraskan yeseggelmes iwakken ur t-illint ara tinṭagin s Javascript.''
 
 ''' Lukan abeddel agi d-aḥeqqani, ɛered tikkelt nniḍen.'''
-Lukan yella ugur, [[Special:UserLogout|Senser]] dɣa qqen.",
+Lukan yella ugur, [[Special:wiki_UserLogout|Senser]] dɣa qqen.",
 'token_suffix_mismatch' => "'''Abeddel inek/inem ur yeɣbel ara acku iminig inek/inem ur yesettengel ara s umellil isekkilen n uqqa deg asulay n ubeddel.'''
 Tiririt agi telaq i usḍiqqef n usgufsu n uḍris deg usebter.
 Ugur agi, yetilli tikwal mi seqdeceḍ aqeddac Proxy warisem yellan ɣef Web.",
@@ -763,7 +763,7 @@ Asekcem aneggaru n uɣmis yella ddaw-agi :",
 'edittools' => '<!-- Aḍris yettbanen-d seddaw talɣa n ubeddil d uzen. -->',
 'nocreatetitle' => 'Axleq n isebtar meḥdud',
 'nocreatetext' => '{{SITENAME}} yekref iẓubaẓ n usnulfu n isebtar imaynuten.
-Tzemreḍ ad uɣaleḍ ar deffir dɣa ad beddeleḍ asebter yellan yakan, naɣ [[Special:UserLogin|ad qqeneḍ naɣ ad snulfuḍ amiḍan]].',
+Tzemreḍ ad uɣaleḍ ar deffir dɣa ad beddeleḍ asebter yellan yakan, naɣ [[Special:wiki_UserLogin|ad qqeneḍ naɣ ad snulfuḍ amiḍan]].',
 'nocreate-loggedin' => 'Ur tesɛiḍ ara turagt i usnulfu n isebtar imaynuten.',
 'sectioneditnotsupported-title' => 'Abeddel n tigezmi agi ur yezmer ara',
 'sectioneditnotsupported-text' => 'Abeddel n tigezmi ur yezmer ara deg usebtar agi n ubeddel.',
@@ -808,11 +808,11 @@ Ilaq ad i sɛu ddaw n  $2 {{PLURAL:$2|tiɣri|tiɣriwin }}, wannag tura {{PLURAL:
 'undo-success' => 'Tzemreḍ ad tessefsuḍ abeddil. Ssenqed asidmer akken ad tessneḍ ayen tebɣiḍ ad txdmeḍ d ṣṣeḥ, umbeɛd smekti ibeddlen u tkemmleḍ ad tessefsuḍ abeddil.',
 'undo-failure' => 'Ur yezmir ara ad issefu abeddel axaṭer yella amennuɣ abusari deg ubeddel.',
 'undo-norev' => 'Abeddel ur yezmer ara ad yetwekkes acku ulac-itt naɣ tetwekkes yakan',
-'undo-summary' => 'Ssefsu tasiwelt $1 sɣur [[Special:Contributions/$2|$2]] ([[User talk:$2|Meslay]])',
+'undo-summary' => 'Ssefsu tasiwelt $1 sɣur [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Meslay]])',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'Ur yezmir ara ad yexleq isem n wemseqdac',
-'cantcreateaccount-text' => "Asnulfu n umiḍan seg tansa IP (<b>$1</b>) tekyef sɣur [[User:$3|$3]].
+'cantcreateaccount-text' => "Asnulfu n umiḍan seg tansa IP (<b>$1</b>) tekyef sɣur [[wiki_User:$3|$3]].
 
 Taɣẓint n $3 : ''$2''",
 
@@ -1071,7 +1071,7 @@ Tzemreḍ ad affeḍ tilɣa deg [{{fullurl:{{#Special:Log}}/delete|page={{FULLPA
 'mypreferences' => 'Isemyifiyen inu',
 'prefs-edits' => 'Amḍan n ibeddlilen :',
 'prefsnologin' => 'Ur tekcimeḍ ara',
-'prefsnologintext' => 'Ilaq ad iliḍ <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} qqeneḍ]</span> iwakken ad beddeleḍ iɣewwaren ik/im n useqdac.',
+'prefsnologintext' => 'Ilaq ad iliḍ <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} qqeneḍ]</span> iwakken ad beddeleḍ iɣewwaren ik/im n useqdac.',
 'changepassword' => 'Beddel awal n tbaḍnit',
 'prefs-skin' => 'Aglim',
 'skin-preview' => 'Pre-timeẓriwt',
@@ -1182,16 +1182,16 @@ Ur ilaq ara ad i sɛu ugar n $1 {{PLURAL:$1|asekkil|isekkilen}}.',
 'prefs-displaywatchlist' => 'Tixtiṛiyin n ubeqqeḍ',
 'prefs-diffs' => 'Timeẓliwin',
 
-# User preference: e-mail validation using jQuery
+# wiki_User preference: e-mail validation using jQuery
 'email-address-validity-valid' => 'E-mail agi teɣbel',
 'email-address-validity-invalid' => 'Telaq tansa e-mail i ɣbelen !',
 
-# User rights
+# wiki_User rights
 'userrights' => 'Laɛej iserfan n wemseqdac',
 'userrights-lookup-user' => 'Laɛej iderman n yimseqdacen',
 'userrights-user-editname' => 'Ssekcem isem n wemseqdac:',
 'editusergroup' => 'Beddel iderman n yimseqdacen',
-'editinguser' => "Abeddel n izerfan n {{GENDER:$1|useqdac|taseqdact}} '''[[User:$1|$1]]''' $2",
+'editinguser' => "Abeddel n izerfan n {{GENDER:$1|useqdac|taseqdact}} '''[[wiki_User:$1|$1]]''' $2",
 'userrights-editusergroup' => 'Beddel iderman n wemseqdac',
 'saveusergroups' => 'Smekti iderman n yimseqdacen',
 'userrights-groupsmember' => 'Amaslad deg:',
@@ -1203,7 +1203,7 @@ Ur ilaq ara ad i sɛu ugar n $1 {{PLURAL:$1|asekkil|isekkilen}}.',
 'userrights-reason' => 'Ayɣer',
 'userrights-no-interwiki' => 'Ur tesɛiḍ ara turagt iwakken ad beddeleḍ izerfan n iseqdacen ɣef wiki nniḍen.',
 'userrights-nodatabase' => 'Taffa n isefka « $1 » ulac itt naɣ mačči d tadigant.',
-'userrights-nologin' => 'Ilaq ad [[Special:UserLogin|qqeneḍ]] s yiwen umiḍan anedbal iwakken ad beddeleḍ izerfan n useqdac.',
+'userrights-nologin' => 'Ilaq ad [[Special:wiki_UserLogin|qqeneḍ]] s yiwen umiḍan anedbal iwakken ad beddeleḍ izerfan n useqdac.',
 'userrights-notallowed' => 'Amiḍan inek/inem ur yesɛa ara turagt iwakken ad beddeleḍ izerfan n useqdac.',
 'userrights-changeable-col' => 'Igrawen i tzemreḍ ad beddeleḍ',
 'userrights-unchangeable-col' => 'Igrawen ur tzemreḍ ara ad beddeleḍ',
@@ -1294,7 +1294,7 @@ Ur ilaq ara ad i sɛu ugar n $1 {{PLURAL:$1|asekkil|isekkilen}}.',
 'right-sendemail' => 'Ceggaɛ tirawt i iseqdacen nniḍen',
 'right-passwordreset' => 'Ẓeṛ tira n uwennez n awalen uɛaddi',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Aɣmis n yizerfan n wemseqdac',
 'rightslogtext' => 'Wagi d aɣmis n yibeddlen n yizerfan n wemseqdac',
 'rightslogentry' => 'Yettubeddel izerfan n wemseqdac $1 seg $2 ar $3',
@@ -1390,7 +1390,7 @@ Ur ilaq ara ad i sɛu ugar n $1 {{PLURAL:$1|asekkil|isekkilen}}.',
 'reuploaddesc' => 'Semmewet dɣa uɣaled ar tiferkit n tuznin.',
 'upload-tryagain' => 'Ceggaɛ aglam n ufaylu ibeddelen',
 'uploadnologin' => 'Ur tekcimeḍ ara',
-'uploadnologintext' => 'Yessefk [[Special:UserLogin|ad tkecmeḍ]]
+'uploadnologintext' => 'Yessefk [[Special:wiki_UserLogin|ad tkecmeḍ]]
 iwakken ad tazneḍ afaylu.',
 'upload_directory_missing' => 'Akaram n taktert n ufaylu ($1) ulac-it dɣa ur d-yesnulfa ara sɣur aqeddac web.',
 'upload_directory_read_only' => 'Weserver/serveur Web ur yezmir ara ad yaru deg ($1).',
@@ -1507,11 +1507,11 @@ $1',
 'upload-proto-error' => 'Agul deg protokol',
 'upload-proto-error-text' => 'Assekcam yenṭerr URL i yebdan s <code>http://</code> neɣ <code>ftp://</code>.',
 'upload-file-error' => 'Agul zdaxel',
-'upload-file-error-text' => 'Anezri agensan yeḍran asmi yeɛreḍ ad yesnulfu afaylu akudan ɣef uqeddac. Ilaq ad meslayeḍ s [[Special:ListUsers/sysop|unedbal]].',
+'upload-file-error-text' => 'Anezri agensan yeḍran asmi yeɛreḍ ad yesnulfu afaylu akudan ɣef uqeddac. Ilaq ad meslayeḍ s [[Special:Listwiki_Users/sysop|unedbal]].',
 'upload-misc-error' => 'Agul mačči mechur asmi yettwazen ufaylu',
 'upload-misc-error-text' => 'Anezri warisem yegweḍeḍ asmi yettwazen afaylu.
 Ilaq ad selkeneḍ ma URL nni teɣbel, dɣa ɛreḍ tikkelt nniḍen.
-Ma yella daɣen anezri, ilaq ad meslaye ḍ s  [[Special:ListUsers/sysop|unedbal]].',
+Ma yella daɣen anezri, ilaq ad meslaye ḍ s  [[Special:Listwiki_Users/sysop|unedbal]].',
 'upload-too-many-redirects' => 'URL agi yesɛa aṭas illusen n wesnili.',
 'upload-unknown-size' => 'Tiddi warisem',
 'upload-http-error' => 'Anezri HTTP : $1',
@@ -1747,7 +1747,7 @@ Ur tettuḍ ara ad selkeneḍ ma ur llan ara izdayen nniḍen ɣer tilɣatin uqb
 'statistics-views-total' => 'Iskanen',
 'statistics-views-total-desc' => 'Timuɣliwin n isebtar ur llan ara dɣa d isebtar usligen ur sseddant ara',
 'statistics-views-peredit' => 'Tizra s ubeddel',
-'statistics-users' => '[[Special:ListUsers|Iseqdacen]] i siggezen',
+'statistics-users' => '[[Special:Listwiki_Users|Iseqdacen]] i siggezen',
 'statistics-users-active' => 'Iseqdacen urmiden',
 'statistics-users-active-desc' => 'Iseqdacen yesɛan xersum yiwet tigawt seg {{PLURAL:$1|ass agi aneggaru|$1 ussan agi ineggura}}',
 'statistics-mostpopular' => 'isebtar mmeẓren aṭṭas',
@@ -1912,13 +1912,13 @@ Ineggafen imazdayen : <code>$1</code> (ur d-renu acemma deg unadi inek/inem)',
 'linksearch-line' => '$1 yeqqen seg $2',
 'linksearch-error' => 'Tzemreḍ ad seqdeceḍ isekkilen usligen ala deg tazzwara n taɣult uselkim.',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => 'Ssken imseqdacen seg:',
 'listusers-submit' => 'Ssken',
 'listusers-noresult' => 'Ur yufi ḥedd (amseqdac).',
 'listusers-blocked' => '(yekyef)',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'Umuɣ n iseqdacen urmiden',
 'activeusers-intro' => 'Wagi d umuɣ n iseqdacen yexedmen armud deg {{PLURAL:$1|ass agi aneggaru|$1 ussan agi ineggura}}.',
 'activeusers-count' => '$1 {{PLURAL:$1|abeddel n ussan agi ineggura|ibeddilen n ussan agi ineggura}} deg {{PLURAL:$3|ass aneggaru|$3 ussan ineggura}}',
@@ -1952,7 +1952,7 @@ Zemrent ad ilint [[{{MediaWiki:Listgrouprights-helppage}}|tilɣa nniḍen]] ɣef
 
 # E-mail user
 'mailnologin' => 'Ur yufi ḥedd (tansa)',
-'mailnologintext' => 'Yessefk ad [[Special:UserLogin|tkecmeḍ]] u tesɛiḍ tansa e-mail ṭaṣhiḥt deg [[Special:Preferences|isemyifiyen]] inek
+'mailnologintext' => 'Yessefk ad [[Special:wiki_UserLogin|tkecmeḍ]] u tesɛiḍ tansa e-mail ṭaṣhiḥt deg [[Special:Preferences|isemyifiyen]] inek
 iwakken ad tazneḍ email i imseqdacen wiyaḍ.',
 'emailuser' => 'Azen e-mail i wemseqdac-agi',
 'emailuser-title-target' => 'Ceggaɛ tirawt i {{GENDER:$1|aseqdac agi|taseqdact agi}}',
@@ -1984,7 +1984,7 @@ Tansa e-mail id ekfeḍ deg [[Special:Preferences|iɣewwaren inek/inem]] ad tban
 'emailsenttext' => 'Izen n e-mail inek yettwazen.',
 'emailuserfooter' => 'Tirawt agi tetweceggaɛ sɣur « $1 » i « $2 » s tasɣent "Ceggaɛ tirawt i useqdac" n {{SITENAME}}.',
 
-# User Messenger
+# wiki_User Messenger
 'usermessage-summary' => 'Yeǧǧa-d izen anagraw',
 'usermessage-editor' => 'Ameskar n unagraw',
 
@@ -1995,7 +1995,7 @@ Tansa e-mail id ekfeḍ deg [[Special:Preferences|iɣewwaren inek/inem]] ad tban
 'nowatchlist' => 'Umuɣ n uɛessi inek d ilem.',
 'watchlistanontext' => 'G leɛnaya-k $1 iwakken ad twalaḍ neɣ tbeddleḍ iferdas deg wumuɣ n uɛessi inek.',
 'watchnologin' => 'Ur tekcimeḍ ara',
-'watchnologintext' => 'Yessefk ad [[Special:UserLogin|tkecmeḍ]] iwakken ad tbeddleḍ umuɣ n uɛessi inek.',
+'watchnologintext' => 'Yessefk ad [[Special:wiki_UserLogin|tkecmeḍ]] iwakken ad tbeddleḍ umuɣ n uɛessi inek.',
 'addwatch' => 'Rnu i umuɣ n uɛassi',
 'addedwatchtext' => "Asebter \"[[:\$1]]\" yettwarnu deg [[Special:Watchlist|wumuɣ n uɛessi]] inek.
 Ma llan ibeddlen deg usebter-nni neɣ deg usbtar umyennan ines, ad banen dagi,
@@ -2106,7 +2106,7 @@ Amḥu n isebtar am wagi yesɛa akref iwakken {{SITENAME}} ur yesɛu ara arway.'
 'rollbackfailed' => 'Asemmet yexseṛ',
 'cantrollback' => 'Ur yezmir ara ad yessuɣal; yella yiwen kan amseqdac iwumi ibeddel/yexleq asebter-agi.',
 'editcomment' => "Agzul n ubeddel yella: \"''\$1''\".",
-'revertpage' => 'Yessuɣal ibeddlen n [[Special:Contributions/$2|$2]] ([[User talk:$2|Meslay]]); yettubeddel ɣer tasiwelt taneggarut n [[User:$1|$1]]',
+'revertpage' => 'Yessuɣal ibeddlen n [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Meslay]]); yettubeddel ɣer tasiwelt taneggarut n [[wiki_User:$1|$1]]',
 
 # Edit tokens
 'sessionfailure-title' => 'Anezri n tɣimit',
@@ -2245,7 +2245,7 @@ Asekcem aneggaru n useklas n ikyafen yella ddaw agi :',
 'ipbotheroption' => 'nniḍen',
 'badipaddress' => 'Tansa IP mačči d ṣaḥiḥ',
 'ipusubmit' => 'Ekkes akyaf agi',
-'unblocked' => 'Yetwekkes akyaf n [[User:$1|$1]]',
+'unblocked' => 'Yetwekkes akyaf n [[wiki_User:$1|$1]]',
 'unblocked-range' => 'Yetwekkes akyaf n $1',
 'unblocked-id' => 'Akyaf $1 yetwekkes',
 'blocklist' => 'Iseqdacen id yetkyefen',
@@ -2306,7 +2306,7 @@ Wagi yezmer ad yexdem abeddel ameqqṛan i asebter s aṭas timerziwin ; ilaq ad
 Lukan akka, yessefk a t-tedmeḍ weḥdek.",
 'movearticle' => 'Smimeḍ asebter',
 'movenologin' => 'Ur tekcimeḍ ara',
-'movenologintext' => 'Yessefk ad tesɛuḍ isem n wemseqdac u [[Special:UserLogin|tkecmeḍ]]
+'movenologintext' => 'Yessefk ad tesɛuḍ isem n wemseqdac u [[Special:wiki_UserLogin|tkecmeḍ]]
 iwakken ad tesmimḍeḍ asebter.',
 'newtitle' => 'Ar azwel amaynut',
 'move-watch' => 'Ɛass asebter-agi',
@@ -2869,7 +2869,7 @@ Ahil n uzzun n e-mail yuɣal-d s-izen agi : $1',
 'confirmemail_invalid' => 'Angal n usentem mačči ṣaḥiḥ. Waqila yemmut.',
 'confirmemail_needlogin' => 'Yessefk $1 iwakken tesnetmeḍ tansa n email inek.',
 'confirmemail_success' => 'Tansa e-mail inek/inem tergeg.
-Tura tzemreḍ ad [[Special:UserLogin|qqeneḍ]].',
+Tura tzemreḍ ad [[Special:wiki_UserLogin|qqeneḍ]].',
 'confirmemail_loggedin' => 'Asentem n tansa n email inek yekfa tura.',
 'confirmemail_error' => 'Yella ugur s usmekti n usentem inek.',
 'confirmemail_subject' => 'Asentem n tansa n email seg {{SITENAME}}',
@@ -2895,7 +2895,7 @@ Angal n usentem-agi ad yemmut ass $4.',
 
 # Delete conflict
 'deletedwhileediting' => 'Aɣtal: Asebter-agi yettumḥa qbel ad tebdiḍ a t-tbeddleḍ!',
-'confirmrecreate' => "Amseqdac [[User:$1|$1]] ([[User talk:$1|Meslay]]) yemḥu asebter-agi beɛd ad tebdiḍ abeddel axaṭer:
+'confirmrecreate' => "Amseqdac [[wiki_User:$1|$1]] ([[wiki_User talk:$1|Meslay]]) yemḥu asebter-agi beɛd ad tebdiḍ abeddel axaṭer:
 : ''$2''
 G leɛnaya-k sentem belli ṣaḥḥ tebɣiḍ ad tɛiwedeḍ axlaq n usebter-agi.",
 'recreate' => 'Ɛiwed xleq',

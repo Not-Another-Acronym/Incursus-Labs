@@ -682,8 +682,8 @@ class Language {
 	/**
 	 * @return array
 	 */
-	function getExtraUserToggles() {
-		return (array)self::$dataCache->getItem( $this->mCode, 'extraUserToggles' );
+	function getExtrawiki_UserToggles() {
+		return (array)self::$dataCache->getItem( $this->mCode, 'extrawiki_UserToggles' );
 	}
 
 	/**
@@ -1762,10 +1762,10 @@ class Language {
 	 * @return int
 	 */
 	function userAdjust( $ts, $tz = false ) {
-		global $wgUser, $wgLocalTZoffset;
+		global $wgwiki_User, $wgLocalTZoffset;
 
 		if ( $tz === false ) {
-			$tz = $wgUser->getOption( 'timecorrection' );
+			$tz = $wgwiki_User->getOption( 'timecorrection' );
 		}
 
 		$data = explode( '|', $tz, 3 );
@@ -1847,13 +1847,13 @@ class Language {
 	 * @return string
 	 */
 	function dateFormat( $usePrefs = true ) {
-		global $wgUser;
+		global $wgwiki_User;
 
 		if ( is_bool( $usePrefs ) ) {
 			if ( $usePrefs ) {
-				$datePreference = $wgUser->getDatePreference();
+				$datePreference = $wgwiki_User->getDatePreference();
 			} else {
-				$datePreference = (string)User::getDefaultOption( 'date' );
+				$datePreference = (string)wiki_User::getDefaultOption( 'date' );
 			}
 		} else {
 			$datePreference = (string)$usePrefs;
@@ -2012,7 +2012,7 @@ class Language {
 	 * @param $type String: can be 'date', 'time' or 'both'
 	 * @param $ts Mixed: the time format which needs to be turned into a
 	 *            date('YmdHis') format with wfTimestamp(TS_MW,$ts)
-	 * @param $user User object used to get preferences for timezone and format
+	 * @param $user wiki_User object used to get preferences for timezone and format
 	 * @param $options Array, can contain the following keys:
 	 *        - 'timecorrection': time correction, can have the following values:
 	 *             - true: use user's preference
@@ -2025,7 +2025,7 @@ class Language {
 	 * @since 1.19
 	 * @return String
 	 */
-	private function internalUserTimeAndDate( $type, $ts, User $user, array $options ) {
+	private function internalwiki_UserTimeAndDate( $type, $ts, wiki_User $user, array $options ) {
 		$ts = wfTimestamp( TS_MW, $ts );
 		$options += array( 'timecorrection' => true, 'format' => true );
 		if ( $options['timecorrection'] !== false ) {
@@ -2051,7 +2051,7 @@ class Language {
 	 *
 	 * @param $ts Mixed: the time format which needs to be turned into a
 	 *            date('YmdHis') format with wfTimestamp(TS_MW,$ts)
-	 * @param $user User object used to get preferences for timezone and format
+	 * @param $user wiki_User object used to get preferences for timezone and format
 	 * @param $options Array, can contain the following keys:
 	 *        - 'timecorrection': time correction, can have the following values:
 	 *             - true: use user's preference
@@ -2064,8 +2064,8 @@ class Language {
 	 * @since 1.19
 	 * @return String
 	 */
-	public function userDate( $ts, User $user, array $options = array() ) {
-		return $this->internalUserTimeAndDate( 'date', $ts, $user, $options );
+	public function userDate( $ts, wiki_User $user, array $options = array() ) {
+		return $this->internalwiki_UserTimeAndDate( 'date', $ts, $user, $options );
 	}
 
 	/**
@@ -2074,7 +2074,7 @@ class Language {
 	 *
 	 * @param $ts Mixed: the time format which needs to be turned into a
 	 *            date('YmdHis') format with wfTimestamp(TS_MW,$ts)
-	 * @param $user User object used to get preferences for timezone and format
+	 * @param $user wiki_User object used to get preferences for timezone and format
 	 * @param $options Array, can contain the following keys:
 	 *        - 'timecorrection': time correction, can have the following values:
 	 *             - true: use user's preference
@@ -2087,8 +2087,8 @@ class Language {
 	 * @since 1.19
 	 * @return String
 	 */
-	public function userTime( $ts, User $user, array $options = array() ) {
-		return $this->internalUserTimeAndDate( 'time', $ts, $user, $options );
+	public function userTime( $ts, wiki_User $user, array $options = array() ) {
+		return $this->internalwiki_UserTimeAndDate( 'time', $ts, $user, $options );
 	}
 
 	/**
@@ -2097,7 +2097,7 @@ class Language {
 	 *
 	 * @param $ts Mixed: the time format which needs to be turned into a
 	 *            date('YmdHis') format with wfTimestamp(TS_MW,$ts)
-	 * @param $user User object used to get preferences for timezone and format
+	 * @param $user wiki_User object used to get preferences for timezone and format
 	 * @param $options Array, can contain the following keys:
 	 *        - 'timecorrection': time correction, can have the following values:
 	 *             - true: use user's preference
@@ -2110,8 +2110,8 @@ class Language {
 	 * @since 1.19
 	 * @return String
 	 */
-	public function userTimeAndDate( $ts, User $user, array $options = array() ) {
-		return $this->internalUserTimeAndDate( 'both', $ts, $user, $options );
+	public function userTimeAndDate( $ts, wiki_User $user, array $options = array() ) {
+		return $this->internalwiki_UserTimeAndDate( 'both', $ts, $user, $options );
 	}
 
 	/**
@@ -3636,7 +3636,7 @@ class Language {
 	}
 
 	/**
-	 * returns language specific options used by User::getPageRenderHash()
+	 * returns language specific options used by wiki_User::getPageRenderHash()
 	 * for example, the preferred language variant
 	 *
 	 * @return string
@@ -3928,7 +3928,7 @@ class Language {
 				: $infinity;
 		} else {
 			return $format === true
-				? $this->timeanddate( $expiry, /* User preference timezone */ true )
+				? $this->timeanddate( $expiry, /* wiki_User preference timezone */ true )
 				: wfTimestamp( $format, $expiry );
 		}
 	}

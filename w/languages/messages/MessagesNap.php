@@ -53,7 +53,7 @@ $namespaceAliases = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => "Sottolinia 'e jonte:",
 'tog-justify' => "Alliniamento d''e paracrafe mpare",
 'tog-hideminor' => "Annascunne 'e cagne piccirille  'int'a ll'úrdeme cagne",
@@ -261,7 +261,7 @@ Putite cuntinuà a ausà {{SITENAME}} comme n'utente senza nomme, o si nò putit
 'templatesused' => "Template ausate 'a chesta paggena:",
 
 # "Undo" feature
-'undo-summary' => "Canciella 'o cagnamiento $1 'e [[Special:Contributions/$2|$2]] ([[User talk:$2|Chiàcchiera]])",
+'undo-summary' => "Canciella 'o cagnamiento $1 'e [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Chiàcchiera]])",
 
 # History pages
 'currentrev' => "Verzione 'e mmo",
@@ -287,7 +287,7 @@ Putite cuntinuà a ausà {{SITENAME}} comme n'utente senza nomme, o si nò putit
 'username' => 'Nomme utente',
 'yourlanguage' => 'Lengua:',
 
-# User rights log
+# wiki_User rights log
 'rightsnone' => '(nisciuno)',
 
 # Recent changes
@@ -377,7 +377,7 @@ Also see [[Special:WantedCategories|wanted categories]].",
 
 # Rollback
 'rollback' => "Ausa na revizione 'e primma",
-'revertpage' => "Cangiaje 'e cagnamiénte 'e [[Special:Contributions/$2|$2]] ([[User talk:$2|discussione]]), cu â verzione 'e pprimma 'e  [[User:$1|$1]]",
+'revertpage' => "Cangiaje 'e cagnamiénte 'e [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|discussione]]), cu â verzione 'e pprimma 'e  [[wiki_User:$1|$1]]",
 
 # Protect
 'prot_1movedto2' => 'ha spustato [[$1]] a [[$2]]',

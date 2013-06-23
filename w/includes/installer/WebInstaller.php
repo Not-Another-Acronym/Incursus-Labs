@@ -485,7 +485,7 @@ class WebInstaller extends Installer {
 			$wgLanguageCode = $this->getAcceptLanguage();
 			$wgLang = $wgContLang = Language::factory( $wgLanguageCode );
 			$this->setVar( 'wgLanguageCode', $wgLanguageCode );
-			$this->setVar( '_UserLang', $wgLanguageCode );
+			$this->setVar( '_wiki_UserLang', $wgLanguageCode );
 		} else {
 			$wgLanguageCode = $this->getVar( 'wgLanguageCode' );
 			$wgContLang = Language::factory( $wgLanguageCode );

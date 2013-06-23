@@ -88,7 +88,7 @@ class MediaWikiErrorsConnectToDatabasePageTestCase extends MediaWikiInstallation
         $this->type( "mysql_wgDBprefix", VALID_DB_PREFIX );
 
         // Verify warning message for the invalid database user name
-        $this->type( "mysql__InstallUser", INVALID_DB_USER_NAME );
+        $this->type( "mysql__Installwiki_User", INVALID_DB_USER_NAME );
         parent::clickContinueButton();
         $this->assertEquals( "DB connection error: Access denied for user '".INVALID_DB_USER_NAME."'@'localhost' (using password: NO) (localhost).",
                 $this->getText( LINK_DIV."div[2]/div[2]/p[1]" ));
@@ -96,7 +96,7 @@ class MediaWikiErrorsConnectToDatabasePageTestCase extends MediaWikiInstallation
                 $this->getText( LINK_DIV."div[2]/div[2]/p[2]"));
 
         // Verify warning message for the blank database user name
-        $this->type( "mysql__InstallUser", "" );
+        $this->type( "mysql__Installwiki_User", "" );
         parent::clickContinueButton();
         $this->assertEquals( "DB connection error: Access denied for user 'SYSTEM'@'localhost' (using password: NO) (localhost).",
                 $this->getText( LINK_DIV."div[2]/div[2]/p[1]" ));
@@ -104,7 +104,7 @@ class MediaWikiErrorsConnectToDatabasePageTestCase extends MediaWikiInstallation
                 $this->getText( LINK_DIV."div[2]/div[2]/p[2]" ));
 
         // Valid Database username
-        $this->type( "mysql__InstallUser",  VALID_DB_USER_NAME );
+        $this->type( "mysql__Installwiki_User",  VALID_DB_USER_NAME );
 
         // Verify warning message for the invalid password
         $this->type( "mysql__InstallPassword", INVALID_DB_PASSWORD );
@@ -116,7 +116,7 @@ class MediaWikiErrorsConnectToDatabasePageTestCase extends MediaWikiInstallation
                 $this->getText( LINK_DIV."div[2]/div[2]/p[2]" ));
 
         // Verify warning message for the invalid username and password
-        $this->type( "mysql__InstallUser", INVALID_DB_USER_NAME );
+        $this->type( "mysql__Installwiki_User", INVALID_DB_USER_NAME );
         $this->type( "mysql__InstallPassword", INVALID_DB_PASSWORD );
         parent::clickContinueButton();
         $this->assertEquals( "DB connection error: Access denied for user '".INVALID_DB_USER_NAME."'@'localhost' (using password: YES) (localhost).",
@@ -125,7 +125,7 @@ class MediaWikiErrorsConnectToDatabasePageTestCase extends MediaWikiInstallation
                 $this->getText( LINK_DIV."div[2]/div[2]/p[2]" ));
 
         // Valid username and valid password
-        $this->type( "mysql__InstallUser", VALID_DB_USER_NAME );
+        $this->type( "mysql__Installwiki_User", VALID_DB_USER_NAME );
         $this->type( "mysql__InstallPassword", "" );
         parent::clickContinueButton();
 

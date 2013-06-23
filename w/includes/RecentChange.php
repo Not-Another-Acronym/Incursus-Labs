@@ -71,7 +71,7 @@ class RecentChange {
 	var $mTitle = false;
 
 	/**
-	 * @var User
+	 * @var wiki_User
 	 */
 	private $mPerformer = false;
 
@@ -174,16 +174,16 @@ class RecentChange {
 	}
 
 	/**
-	 * Get the User object of the person who performed this change.
+	 * Get the wiki_User object of the person who performed this change.
 	 *
-	 * @return User
+	 * @return wiki_User
 	 */
 	public function getPerformer() {
 		if ( $this->mPerformer === false ) {
 			if ( $this->mAttribs['rc_user'] ) {
-				$this->mPerformer = User::newFromID( $this->mAttribs['rc_user'] );
+				$this->mPerformer = wiki_User::newFromID( $this->mAttribs['rc_user'] );
 			} else {
-				$this->mPerformer = User::newFromName( $this->mAttribs['rc_user_text'], false );
+				$this->mPerformer = wiki_User::newFromName( $this->mAttribs['rc_user_text'], false );
 			}
 		}
 		return $this->mPerformer;
@@ -311,7 +311,7 @@ class RecentChange {
 	 * @return Array See doMarkPatrolled(), or null if $change is not an existing rc_id
 	 */
 	public static function markPatrolled( $change, $auto = false ) {
-		global $wgUser;
+		global $wgwiki_User;
 
 		$change = $change instanceof RecentChange
 			? $change
@@ -320,18 +320,18 @@ class RecentChange {
 		if( !$change instanceof RecentChange ) {
 			return null;
 		}
-		return $change->doMarkPatrolled( $wgUser, $auto );
+		return $change->doMarkPatrolled( $wgwiki_User, $auto );
 	}
 
 	/**
 	 * Mark this RecentChange as patrolled
 	 *
 	 * NOTE: Can also return 'rcpatroldisabled', 'hookaborted' and 'markedaspatrollederror-noautopatrol' as errors
-	 * @param $user User object doing the action
+	 * @param $user wiki_User object doing the action
 	 * @param $auto Boolean: for automatic patrol
 	 * @return array of permissions errors, see Title::getUserPermissionsErrors()
 	 */
-	public function doMarkPatrolled( User $user, $auto = false ) {
+	public function doMarkPatrolled( wiki_User $user, $auto = false ) {
 		global $wgUseRCPatrol, $wgUseNPPatrol;
 		$errors = array();
 		// If recentchanges patrol is disabled, only new pages
@@ -345,7 +345,7 @@ class RecentChange {
 		if( !wfRunHooks('MarkPatrolled', array($this->getAttribute('rc_id'), &$user, false)) ) {
 			$errors[] = array('hookaborted');
 		}
-		// Users without the 'autopatrol' right can't patrol their
+		// wiki_Users without the 'autopatrol' right can't patrol their
 		// own revisions
 		if( $user->getName() == $this->getAttribute('rc_user_text') && !$user->isAllowed('autopatrol') ) {
 			$errors[] = array('markedaspatrollederror-noautopatrol');
@@ -390,7 +390,7 @@ class RecentChange {
 	 * @param $timestamp
 	 * @param $title Title
 	 * @param $minor
-	 * @param $user User
+	 * @param $user wiki_User
 	 * @param $comment
 	 * @param $oldId
 	 * @param $lastTimestamp
@@ -453,7 +453,7 @@ class RecentChange {
 	 * @param $timestamp
 	 * @param $title Title
 	 * @param $minor
-	 * @param $user User
+	 * @param $user wiki_User
 	 * @param $comment
 	 * @param $bot
 	 * @param $ip string
@@ -537,7 +537,7 @@ class RecentChange {
 	/**
 	 * @param $timestamp
 	 * @param $title Title
-	 * @param $user User
+	 * @param $user wiki_User
 	 * @param $actionComment
 	 * @param $ip string
 	 * @param $type

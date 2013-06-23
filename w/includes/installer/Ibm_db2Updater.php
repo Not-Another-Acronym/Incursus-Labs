@@ -72,7 +72,7 @@ class Ibm_db2Updater extends DatabaseUpdater {
 			array( 'addField', 'categorylinks',  'cl_type',           'patch-cl_type-field.sql' ),
 
 			//1.18
-			array( 'doUserNewTalkTimestampNotNull' ),
+			array( 'dowiki_UserNewTalkTimestampNotNull' ),
 			array( 'addIndex', 'user',          'user_email',       'patch-user_email_index.sql' ),
 			array( 'modifyField', 'user_properties', 'up_property', 'patch-up_property.sql' ),
 			array( 'addTable', 'uploadstash',                       'patch-uploadstash.sql' ),

@@ -21,10 +21,10 @@ class SwitchExperimentPrefs extends Maintenance {
 
 		$batchSize = 100;
 		$total = 0;
-		$lastUserID = 0;
+		$lastwiki_UserID = 0;
 		while ( true ) {
 			$res = $dbw->select( 'user_properties', array( 'up_user' ),
-				array( 'up_property' => 'vector-noexperiments', "up_user > $lastUserID" ),
+				array( 'up_property' => 'vector-noexperiments', "up_user > $lastwiki_UserID" ),
 				__METHOD__,
 				array( 'LIMIT' => $batchSize ) );
 			if ( !$res->numRows() ) {
@@ -37,11 +37,11 @@ class SwitchExperimentPrefs extends Maintenance {
 			foreach ( $res as $row ) {
 				$ids[] = $row->up_user;
 			}
-			$lastUserID = max( $ids );
+			$lastwiki_UserID = max( $ids );
 			
 			
 			foreach ( $ids as $id ) {
-				$user = User::newFromId( $id );
+				$user = wiki_User::newFromId( $id );
 				if ( !$user->isLoggedIn() )
 					continue;
 				$user->setOption( $this->getOption( 'pref' ), $this->getOption( 'value' ) );

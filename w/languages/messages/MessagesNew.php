@@ -42,7 +42,7 @@ $digitTransformTable = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'लिङ्कतेत अन्दरलाइन यानादिसँ:',
 'tog-justify' => 'अनुच्छेद धंकादिसँ',
 'tog-hideminor' => 'न्हुगु हिलेज्याय् चिधंगु सम्पादन सुचुकादिसँ',
@@ -323,7 +323,7 @@ MySQL नं इरर "<tt>$3: $4</tt>" क्यंगु दु।',
 'yourlanguage' => 'भाषा:',
 'email' => 'इ-मेल',
 
-# User rights
+# wiki_User rights
 'userrights-user-editname' => 'छपू छ्य्‌लामि नां तयादिसँ:',
 
 # Groups

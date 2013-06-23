@@ -16,7 +16,7 @@
 $fallback = 'es';
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Sipita siqiraña',
 'tog-justify' => "Tanta amuyanak purapt'ayaña",
 'tog-hideminor' => 'Jichha jaqukipawina sullka askiptawix imantaña',
@@ -237,7 +237,7 @@ $messages = array(
 'specialloguserlabel' => 'Apnaqiri:',
 'speciallogtitlelabel' => 'Titulu:',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusers-submit' => 'Uñachayaña',
 
 # Watchlist

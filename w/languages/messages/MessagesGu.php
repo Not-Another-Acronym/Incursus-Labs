@@ -120,9 +120,9 @@ $specialPageAliases = array(
 	'Unusedtemplates'           => array( 'વણવપરાયેલાં_ઢાંચા' ),
 	'Unwatchedpages'            => array( 'વણજોયેલા_પાનાં' ),
 	'Upload'                    => array( 'ચડાવો' ),
-	'Userlogin'                 => array( 'સભ્યપ્રવેશ' ),
-	'Userlogout'                => array( 'સભ્યનિવેશ' ),
-	'Userrights'                => array( 'સભ્યાધિકાર' ),
+	'wiki_Userlogin'                 => array( 'સભ્યપ્રવેશ' ),
+	'wiki_Userlogout'                => array( 'સભ્યનિવેશ' ),
+	'wiki_Userrights'                => array( 'સભ્યાધિકાર' ),
 	'Version'                   => array( 'સંસ્કરણ' ),
 	'Wantedcategories'          => array( 'જોઇતી_શ્રેણીઓ' ),
 	'Wantedfiles'               => array( 'જોઇતી_ફાઇલો' ),
@@ -149,7 +149,7 @@ $digitTransformTable = array(
 $digitGroupingPattern = "##,##,###";
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'કડીઓની નીચે લીટી (અંડરલાઇન) ઉમેરો:',
 'tog-justify' => 'ફકરો લાઇનસર કરો',
 'tog-hideminor' => 'હાલમાં થયેલા ફેરફારમાં નાના ફેરફારો છુપાવો',
@@ -498,7 +498,7 @@ $1',
 આવું સામાન્ય રીતે ત્યારે બને જ્યારે તમે તફાવત કે ઈતિહાસની એવી જુની કડીને અનુસરીને અહીં આવ્યા હોવ કે જે પાનું હટાવી દીધું હોય.
 
 જો તમને ખાતરી છે કે આવું નથી, તો તમારા ભાગે સોફ્ટવેરમાં રહેલી ત્રુટી આવી છે.
-કૃપા કરી આ વાત, જે તે પાનાની પૂર્ણ યુ.આર.એલ. (URL) કડી સાથે, તમારા [[Special:ListUsers/sysop|પ્રબંધક]]ના ધ્યાન પર લાવો.',
+કૃપા કરી આ વાત, જે તે પાનાની પૂર્ણ યુ.આર.એલ. (URL) કડી સાથે, તમારા [[Special:Listwiki_Users/sysop|પ્રબંધક]]ના ધ્યાન પર લાવો.',
 'missingarticle-rev' => '(પુનરાવર્તન#: $1)',
 'missingarticle-diff' => '(ભેદ: $1, $2)',
 'readonly_lag' => 'કનિષ્ઠ માહિતીસંચ સર્વરો મુખ્ય સર્વર સુધી પહોંચી ત્યા સુધી આ માહિતીસંચ પર સ્વયંચલિત રીતે તાળું મરાયું છે',
@@ -547,7 +547,7 @@ $2',
 'customcssprotected' => 'તમને આ પાનું બદલવાની પરવાનગી નથી કારણકે આ પાનામાં બીજા સભ્યની પસંદગીના સેટીંગ્સ છે.',
 'customjsprotected' => 'તમને આ JavaScript પાનું બદલવાની પરવાનગી નથી કારણકે આ પાનામાં બીજા સભ્યની પસંદગીના સેટીંગ્સ છે.',
 'ns-specialprotected' => 'ખાસ પાનાંમાં ફેરફાર ન થઇ શકે.',
-'titleprotected' => 'આ મથાળું (વિષય) [[User:$1|$1]] બનાવવા માટે સુરક્ષિત કરવામાં આવ્યો છે.
+'titleprotected' => 'આ મથાળું (વિષય) [[wiki_User:$1|$1]] બનાવવા માટે સુરક્ષિત કરવામાં આવ્યો છે.
 આ માટેનું કારણ છે-- "\'\'$2\'\'".',
 'invalidtitle-knownnamespace' => 'નામસ્થળ "$2" અને લખાણ "$3" સાથે અમાન્ય મથાળું',
 'invalidtitle-unknownnamespace' => 'અજ્ઞાત નામસ્થળ ક્રમાંક $1 અને નામ "$2" વાળું અમાન્ય મથાળું',
@@ -562,7 +562,7 @@ $2',
 # Login and logout pages
 'logouttext' => "'''તમે (લોગ આઉટ કરીને) બહાર નિકળી ચુક્યા છો.'''
 
-તમે અનામી તરીકે {{SITENAME}} વાપરવાનું ચાલુ રાખી શકો છો, કે પછી તેના તે જ કે અલગ સભ્ય તરીકે [[Special:UserLogin|ફરી પ્રવેશ]] કરી શકો છો.
+તમે અનામી તરીકે {{SITENAME}} વાપરવાનું ચાલુ રાખી શકો છો, કે પછી તેના તે જ કે અલગ સભ્ય તરીકે [[Special:wiki_UserLogin|ફરી પ્રવેશ]] કરી શકો છો.
 ધ્યાન રાખો કે જ્યાં સુધી તમે તમારા બ્રાઉઝરનો  કૅશ સાફ નહીં કરો ત્યાં સુધી કેટલાક પાનાં તમે પ્રવેશી ચુક્યા છો તેમ બતાવશે.",
 'welcomecreation' => '== તમારૂં સ્વાગત છે $1! ==
 તમારૂં ખાતું બની ગયું છે.
@@ -613,7 +613,7 @@ $2',
 
 સભ્યનામો અક્ષરસંવેદી (કેસ સેન્સિટીવ) હોય છે.
 
-કૃપા કરી સ્પેલીંગ/જોડણી ચકાસો અથવા [[Special:UserLogin/signup|નવું ખાતુ ખોલો]].',
+કૃપા કરી સ્પેલીંગ/જોડણી ચકાસો અથવા [[Special:wiki_UserLogin/signup|નવું ખાતુ ખોલો]].',
 'nosuchusershort' => '"$1" નામનો કોઇ સભ્ય નથી, તમારી જોડણી તપાસો.',
 'nouserspecified' => 'તમારે સભ્ય નામ દર્શાવવાની જરૂર છે.',
 'login-userblocked' => 'આ યુઝર પ્રતિબંધિત છે. પ્રવેશ વર્જીત.',
@@ -808,7 +808,7 @@ $2
 'loginreqlink' => 'પ્રવેશ કરો',
 'loginreqpagetext' => 'બીજા પાનાં જોવા માટે જરૂરી છે કે તમે $1.',
 'accmailtitle' => 'ગુપ્તસંજ્ઞા મોકલવામાં આવી છે.',
-'accmailtext' => "[[User talk:$1|$1]] માટે રચેલ ગુપ્તસંજ્ઞા $2 ને મોકલાવી દેવાઇ છે 
+'accmailtext' => "[[wiki_User talk:$1|$1]] માટે રચેલ ગુપ્તસંજ્ઞા $2 ને મોકલાવી દેવાઇ છે 
 આ નવા ખાતાનીગુપ્તસંજ્ઞા  ''[[Special:ChangePassword|change password]]'' વાપરીને પ્રવેશ કર્યા બાદ બદલી શકાશે.",
 'newarticle' => '(નવીન)',
 'newarticletext' => "આપ જે કડીને અનુસરીને અહીં પહોંચ્યા છો તે પાનું અસ્તિત્વમાં નથી.
@@ -818,7 +818,7 @@ $2
 આથી તેને ઓળખવા માટે અમારે સાંખ્યિક  IP સરનામાની મદદ લેવી પડી છે.
 આવું IP સરનામુંઘણાંઅન્યસભ્યો પણ વાપરતા હોઇ શકે.
 જો તમે અજ્ઞાત સભ્ય હોવ અને ઈચ્છતા હોવ કે અસંધિત ટિપ્પનીઓ તમારી તરફ વાળવામાં આવે છે, 
-તો કૃપયા  [[Special:UserLogin/signup|create an account]] અથવા [[Special:UserLogin|log in]] નો ઉપયોગ કરશો  જેથી તમને કોઈ અજ્ઞાત સભ્ય સમજીને તમારી ટીકા ન કરાય.''",
+તો કૃપયા  [[Special:wiki_UserLogin/signup|create an account]] અથવા [[Special:wiki_UserLogin|log in]] નો ઉપયોગ કરશો  જેથી તમને કોઈ અજ્ઞાત સભ્ય સમજીને તમારી ટીકા ન કરાય.''",
 'noarticletext' => 'આ પાનામાં હાલમાં કોઇ માહિતિ નથી.
 તમે  [[Special:Search/{{PAGENAME}}|આ શબ્દ]] ધરાવતાં અન્ય લેખો શોધી શકો છો, <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} સંલગ્ન માહિતિ પત્રકોમાં શોધી શકો છો],
 અથવા  [{{fullurl:{{FULLPAGENAME}}|action=edit}} આ પાનામાં ફેરફાર કરી] માહિતિ ઉમેરવાનું શરૂ કરી શકો છો</span>.',
@@ -854,13 +854,13 @@ $2
 'previewconflict' => 'જો તમે આ પાનું સાચવશો તો આ પ્રિવ્યુમાં દેખાય છે તેવું સચવાશે.',
 'session_fail_preview' => "'''અફસોસ છે! સત્ર માહિતી ખોઇ દેવાને કારણે અમે તમારું કાર્ય સાચવી ન શક્યાં.'''
 કૃપયા ફરી પ્રયત્ન કરો.
-તેમ છતાં પણ સાચવી ન શકો તો [[Special:UserLogout|logging out]] કરી ફરી પ્રવેશ કરો.",
+તેમ છતાં પણ સાચવી ન શકો તો [[Special:wiki_UserLogout|logging out]] કરી ફરી પ્રવેશ કરો.",
 'session_fail_preview_html' => "'''અફસોસ છે! સત્ર માહિતીનો નાશ થવાથી તમે કરેલ ફેરફાર અમે સાચવી ન શક્યાં .'''
 
 ''કેમકે  {{SITENAME}} માં કાચી HTML સક્રીય છે, JavaScript ના હુમલા સામેના રક્ષણ માટે ઝલક પર રોક લગાવી છે .''
 
 '''જો આ ગંભીર પ્રયત્ન હતો તો ફરી પ્રયત્ન કરો .'''
-અનેતમા છતાં  કમા  ના કરેતો  [[Special:UserLogout|logging out]] કરી ફરી લોગ ઇન કરો.",
+અનેતમા છતાં  કમા  ના કરેતો  [[Special:wiki_UserLogout|logging out]] કરી ફરી લોગ ઇન કરો.",
 'token_suffix_mismatch' => "'''તમારા ફેરફારો કેમકે તમારા ગ્રાહકએ ફેરફાર નાકામાં વિરામચિન્હો અસ્ત વ્યસ્ત કરી દેતા.'''
 આ પાનાને ખરાબ થતો અટકાવવા આ ફેરફાર રદ્દ કરાયો છે. 
 જ્યારે તમે વેબ આધારિત  અજ્ઞાત પ્રોક્સી વાપરતા હોવ ત્યારે આવું બની શકે છે.",
@@ -911,7 +911,7 @@ $2
 'hiddencategories' => 'આ પાનું {{PLURAL:$1|૧ છુપી શ્રેણી|$1 છુપી શ્રેણીઓ}}નું સભ્ય છે:',
 'nocreatetitle' => 'પાનું બનાવવૌં મર્યાદિત છે',
 'nocreatetext' => '{{SITENAME}}માં નવું પાનુ બનાવવા ઉપર નિયંત્રણ આવી ગયું છે.
-<br />આપ પાછા જઇને હયાત પાનામાં ફેરફાર કરી શકો છો, નહિતર [[Special:UserLogin|પ્રવેશ કરો કે નવું ખાતું ખોલો]].',
+<br />આપ પાછા જઇને હયાત પાનામાં ફેરફાર કરી શકો છો, નહિતર [[Special:wiki_UserLogin|પ્રવેશ કરો કે નવું ખાતું ખોલો]].',
 'nocreate-loggedin' => 'તમને નવાં પાનાં બનાવવાની પરવાનગી નથી.',
 'sectioneditnotsupported-title' => 'ખંડીય સંપાદન શક્ય નથી',
 'sectioneditnotsupported-text' => 'આ પાના પર ખંડીય સંપાદન શક્ય નથી',
@@ -955,11 +955,11 @@ $2
 નીચે આપેલ સરકામણી સરખાવો અને ચકાસો શું તમે રાખવા માંગો છો અને ફેરફારો સાચવો.',
 'undo-failure' => 'વચ્ચે થયેલા અન્ય ફેરફાર થવાને કારણે આ ફેરફારો ઉલટાવી ન શકાયા',
 'undo-norev' => 'ફેરફાર સાચવી ન શકાયો કેમકે તે અસ્તિત્વમાં નથી અથવા તો ભૂંસી નખાયો છે.',
-'undo-summary' => '[[Special:Contributions/$2|$2]] ([[User talk:$2|talk]])એ કરેલો ફેરફાર $1 પાછો વાળ્યો',
+'undo-summary' => '[[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|talk]])એ કરેલો ફેરફાર $1 પાછો વાળ્યો',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'ખાતું ખોલી શકાય તેમ નથી',
-'cantcreateaccount-text' => "આ IP સરનામા  ('''$1''') પર નવા ખાતાની રચના પર   [[User:$3|$3]] દ્વારા રોક લગાવાઇ છે.
+'cantcreateaccount-text' => "આ IP સરનામા  ('''$1''') પર નવા ખાતાની રચના પર   [[wiki_User:$3|$3]] દ્વારા રોક લગાવાઇ છે.
 
 
 $3 દ્વારા અપાયેલ કારણ છે ''$2''",
@@ -1220,7 +1220,7 @@ $1",
 'mypreferences' => 'પસંદ',
 'prefs-edits' => 'સંપાદનોની સંખ્યા',
 'prefsnologin' => 'પ્રવેશ કરેલ નથી',
-'prefsnologintext' => 'સભ્યના અધિકારો બદલવા તમે <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} logged in]</span> પ્રવેશ કરેલો હોવો જોઈએ',
+'prefsnologintext' => 'સભ્યના અધિકારો બદલવા તમે <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} logged in]</span> પ્રવેશ કરેલો હોવો જોઈએ',
 'changepassword' => 'ગુપ્તસંજ્ઞા બદલો',
 'prefs-skin' => 'ફલક',
 'skin-preview' => 'ફેરફાર બતાવો',
@@ -1334,16 +1334,16 @@ HTML નાકું ચકાસો',
 'prefs-displaywatchlist' => 'પ્રદર્શન વિકલ્પો',
 'prefs-diffs' => 'ફરક',
 
-# User preference: e-mail validation using jQuery
+# wiki_User preference: e-mail validation using jQuery
 'email-address-validity-valid' => 'ઈ-મેલ યોગ્ય લાગે છે.',
 'email-address-validity-invalid' => 'પ્રમાણભૂત શૈલિમાં ઈ-મેલ એડ્રેસ લખો',
 
-# User rights
+# wiki_User rights
 'userrights' => 'સભ્ય હક્ક પ્રબંધન',
 'userrights-lookup-user' => 'સભ્ય સમુહો નું પ્રબંધન કરો',
 'userrights-user-editname' => 'સભ્યનામ દાખલ કરો:',
 'editusergroup' => 'સભ્ય સમુહો સંપાદીત કરો',
-'editinguser' => "સભ્ય '''[[User:$1|$1]]''' ના વપરાશકર્તા અધિકારો બદલો $2",
+'editinguser' => "સભ્ય '''[[wiki_User:$1|$1]]''' ના વપરાશકર્તા અધિકારો બદલો $2",
 'userrights-editusergroup' => 'સભ્ય સમુહો સંપાદીત કરો',
 'saveusergroups' => 'સભ્ય સમુહો સાચવો',
 'userrights-groupsmember' => 'સભ્યપદ:',
@@ -1355,7 +1355,7 @@ HTML નાકું ચકાસો',
 'userrights-reason' => 'કારણ:',
 'userrights-no-interwiki' => 'અન્ય વિકિ પર અન્ય સભ્યો ના અધિકારો માં પરિવર્તન કરવાની તમને પરવાનગી નથી',
 'userrights-nodatabase' => 'માહિતીસંચ $1 અસ્તિત્વમાં નથી કે તે સ્થાનીય નથી.',
-'userrights-nologin' => 'સભ્યના અધિકારો આપવા તમે પ્રબંધક તરીકે પ્રવેશ  [[Special:UserLogin|log in]] કરેલ હોવો જરૂરી છે.',
+'userrights-nologin' => 'સભ્યના અધિકારો આપવા તમે પ્રબંધક તરીકે પ્રવેશ  [[Special:wiki_UserLogin|log in]] કરેલ હોવો જરૂરી છે.',
 'userrights-notallowed' => 'તમારું એકાઉન્ટ ઉમેરો કરવા અથવા વપરાશકર્તા અધિકારો દૂર કરવાની પરવાનગી નથી.',
 'userrights-changeable-col' => 'તમે બદલી શકો તેવા જૂથ',
 'userrights-unchangeable-col' => 'તમે બદલી ન શકો તેવા જૂથ',
@@ -1445,7 +1445,7 @@ HTML નાકું ચકાસો',
 'right-sendemail' => ' અન્ય સભ્યોને ઈ-મેલ મોકલો',
 'right-passwordreset' => 'પાસવર્ડ રીસેટ ઇ-મેઇલ્સ જુઓ',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'સભ્ય હક્ક માહિતિ પત્રક',
 'rightslogtext' => 'સભ્યના બદલાયેલ હક્કોની આ સંપાદન યાદિ છે .',
 'rightslogentry' => '$2 થી $3 સુધી $1 માટે બદલાયેલું સમૂહ સભ્યપદ',
@@ -1541,7 +1541,7 @@ HTML નાકું ચકાસો',
 'reuploaddesc' => 'ફાઇલ ચઢાવવાનું રદ કરો અને ફાઇલ ચઢાવવાના પાના પર પાછા જાવ',
 'upload-tryagain' => 'સુધારીત ફાઇલ વર્ણન ચડાવો',
 'uploadnologin' => 'પ્રવેશ કરેલ નથી',
-'uploadnologintext' => 'ફાઇલ ચઢાવવા માટે  [[Special:UserLogin|logged in]] પ્રવેશ કરેલો હોવો જોઇએ',
+'uploadnologintext' => 'ફાઇલ ચઢાવવા માટે  [[Special:wiki_UserLogin|logged in]] પ્રવેશ કરેલો હોવો જોઇએ',
 'upload_directory_missing' => 'ફાઇલ ચડાવવાની ડાયરેક્ટરી ($1) ગાયબ છે  અને વેબસર્વર દ્વારા તેની રચના ન કરી શકાઇ.',
 'upload_directory_read_only' => 'ચઢાવેલી ડાયરેક્ટરી ($1) એ વેબ બ્રાઉઝર દ્વારા લેખન યોગ્ય નથી.',
 'uploaderror' => 'ફાઇલ ચઢાવમાં ચૂક',
@@ -1667,11 +1667,11 @@ $1',
 'upload-proto-error-text' => 'દુરના ફાઇલ ચઢાવના  URL ની શરૂઆત <code>http://</code> કે <code>ftp://</code>થી થવી જોઇએ.',
 'upload-file-error' => 'આંતરિક ત્રુટિ',
 'upload-file-error-text' => 'સર્વર પર હંગામી ફાઇલ રચતા કોઇ આંતરીક ત્રુટિ નિર્માણ થઇ.
-કૃપયા [[Special:ListUsers/sysop|administrator]]નો સંપર્ક કરો.',
+કૃપયા [[Special:Listwiki_Users/sysop|administrator]]નો સંપર્ક કરો.',
 'upload-misc-error' => 'અજ્ઞાત ફાઇલ ચડાવ ચૂક',
 'upload-misc-error-text' => 'ફાઈલ ચડાવતી વખતે કાંઇક ત્રુટિ રહી ગઇ.
 ખાત્રી કરો કે URL વૈધ છે અને સક્રીય છે અને ફરી પ્રયત્ન કરો.
-તેમ છતાં પણ  પ્રોબ્લેમ રહે તો અહીં સંપર્ક કરશો [[Special:ListUsers/sysop|administrator]].',
+તેમ છતાં પણ  પ્રોબ્લેમ રહે તો અહીં સંપર્ક કરશો [[Special:Listwiki_Users/sysop|administrator]].',
 'upload-too-many-redirects' => 'URLમાં ઘણાં ઉપ નિર્દેશનો છે.',
 'upload-unknown-size' => 'અજ્ઞાત કદ',
 'upload-http-error' => ' HTTP ત્રુટિ : $1',
@@ -1899,7 +1899,7 @@ https://www.mediawiki.org/wiki/Manual:Image_Authorization. જુઓ',
 'statistics-views-total' => 'સરવાળો',
 'statistics-views-total-desc' => 'અવિહરમાન પાના અને ખાસ પાના આમા શામિલ નથી.',
 'statistics-views-peredit' => 'ફેરફાર દીઠ અવલોકનો',
-'statistics-users' => 'નોંધણી થયેલ  [[Special:ListUsers|users]]',
+'statistics-users' => 'નોંધણી થયેલ  [[Special:Listwiki_Users|users]]',
 'statistics-users-active' => 'સક્રીય સભ્યો',
 'statistics-users-active-desc' => 'સભ્ય કે જેમણે છેલ્લા {{PLURAL:$1|દિવસ|$1 દિવસો}}માં ફેરફારો કર્યાં છે',
 'statistics-mostpopular' => 'સૌથી વધુ જોવાયેલા પાના',
@@ -2065,13 +2065,13 @@ https://www.mediawiki.org/wiki/Manual:Image_Authorization. જુઓ',
 'linksearch-line' => '$1 એ $2થી જોડાયેલ છે',
 'linksearch-error' => 'યજમાન નામની શરૂઆતમાં જ વાઈલ્ડકાર્ડ પ્રકટ થશે',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => 'આનાથી શરૂ થતા સભ્યો દર્શાવો:',
 'listusers-submit' => 'બતાવો',
 'listusers-noresult' => 'કોઇ સભ્ય ન મળ્યો',
 'listusers-blocked' => '(પ્રતિબંધિત)',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'સક્રિય સભ્યોની યાદી',
 'activeusers-intro' => 'છેલ્લા  $1 {{PLURAL:$1|દિવસ|દિવસો}}માં જે સભ્યોએ કંઈક યોગદાન કર્યું હોય તેમની યાદી.',
 'activeusers-count' => '$1 {{PLURAL:$1|ફેરફાર|ફેરફારો}} છેલ્લા {{PLURAL:$3|દિવસ |$3 દિવસો }}માં',
@@ -2105,7 +2105,7 @@ https://www.mediawiki.org/wiki/Manual:Image_Authorization. જુઓ',
 
 # E-mail user
 'mailnologin' => 'મેળવનારનું સરનામું નથી',
-'mailnologintext' => 'અન્ય સભ્યને ઇ-મેલ મોકલવા માટે તમે [[Special:UserLogin|logged in]] પ્રવેશ કરેલ હોવો જોઈએ અને તમારા[[Special:Preferences|preferences]] વિકલ્પોમાં તમારા ઈ-મેલ સરનામાની પુષ્ટિ થયેલી હોવી જોઈએ',
+'mailnologintext' => 'અન્ય સભ્યને ઇ-મેલ મોકલવા માટે તમે [[Special:wiki_UserLogin|logged in]] પ્રવેશ કરેલ હોવો જોઈએ અને તમારા[[Special:Preferences|preferences]] વિકલ્પોમાં તમારા ઈ-મેલ સરનામાની પુષ્ટિ થયેલી હોવી જોઈએ',
 'emailuser' => 'સભ્યને ઇ-મેલ કરો',
 'emailuser-title-target' => 'આ {{GENDER:$1|સભ્ય}}ને ઇમેલ કરો',
 'emailuser-title-notarget' => 'ઇ-મેલ વપરાશકર્તા',
@@ -2136,7 +2136,7 @@ https://www.mediawiki.org/wiki/Manual:Image_Authorization. જુઓ',
 'emailsenttext' => 'તમારો ઈ-મેલ મોકલી દેવાયો છે',
 'emailuserfooter' => 'આ પત્ર $1 દ્વારા $2ને  {{SITENAME}} પરની "સભ્યને ઇ-મેલ કરો" કડી મારફતે મોકલવામાં આવ્યો છે.',
 
-# User Messenger
+# wiki_User Messenger
 'usermessage-summary' => 'તંત્ર સંદેશ મૂક્યો',
 'usermessage-editor' => 'તંત્ર સંદેશાઓ',
 
@@ -2147,7 +2147,7 @@ https://www.mediawiki.org/wiki/Manual:Image_Authorization. જુઓ',
 'nowatchlist' => 'તમારી ધ્યાન સૂચિ ખાલી છે',
 'watchlistanontext' => 'તમારી ધ્યાનસૂચિની વસ્તુઓ જોવા અને ફેરફાર કરવા $1 કરો',
 'watchnologin' => 'પ્રવેશ કરેલ નથી',
-'watchnologintext' => 'ધ્યાનસૂચિમાં ફેરફારાકરવા તમે પ્રવેશ [[Special:UserLogin|logged in]] કરેલો હોવો જરૂરી છે.',
+'watchnologintext' => 'ધ્યાનસૂચિમાં ફેરફારાકરવા તમે પ્રવેશ [[Special:wiki_UserLogin|logged in]] કરેલો હોવો જરૂરી છે.',
 'addwatch' => 'ધ્યાનસૂચિ માં ઉમેરો',
 'addedwatchtext' => 'પાનું "[[:$1]]" તમારી [[Special:Watchlist|ધ્યાનસૂચિ]]માં ઉમેરાઈ ગયું છે.
 ભવિષ્યમાં આ પાના અને તેનાં સંલગ્ન ચર્ચાનાં પાનામાં થનારા ફેરફારોની યાદી ત્યાં આપવામાં આવશે.',
@@ -2263,13 +2263,13 @@ Deleting it may disrupt database operations of {{SITENAME}};',
 'rollbackfailed' => 'ઉલટાવવું નિષ્ફળ',
 'cantrollback' => 'આ ફેરફારો ઉલટાવી નહી શકાય
 છેલ્લો ફેરફાર આ પાના ના રચયિતા દ્વારા જ થયો હતો',
-'alreadyrolled' => '[[User:$2|$2]] ([[User talk:$2|talk]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]) દ્વારા થયેલ[[:$1]]ના  ફેરફારો ઉલટાવી ન શકાયા;
+'alreadyrolled' => '[[wiki_User:$2|$2]] ([[wiki_User talk:$2|talk]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]) દ્વારા થયેલ[[:$1]]ના  ફેરફારો ઉલટાવી ન શકાયા;
 કોઇક અન્ય સભ્યએ આ પાનાપર ફેરફાર કરી દીધા છે.
 
-આ પાના પર ના છેલ્લા ફેરફારો [[User:$3|$3]] ([[User talk:$3|talk]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]) દ્વારા કરવામાં આવ્યાં હતાં.',
+આ પાના પર ના છેલ્લા ફેરફારો [[wiki_User:$3|$3]] ([[wiki_User talk:$3|talk]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]) દ્વારા કરવામાં આવ્યાં હતાં.',
 'editcomment' => "ફેરફાર સારાંશ હતી: \"''\$1''\".",
-'revertpage' => '[[Special:Contributions/$2|$2]] ([[User talk:$2|talk]])દ્વારા ફેરફરોને  [[User:$1|$1]] દ્વારા કરેલા છેલ્લા સુધારા સુધી ઉલટાવાયા.',
-'revertpage-nouser' => ' (સભ્ય નામ હટાવ્યું) દ્વારા થયેલ ફેરફારને  [[User:$1|$1]]ના દ્વારા થયેલ છેલ્લા પુનરાવર્તન પર પાછા લઇ જવાયા',
+'revertpage' => '[[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|talk]])દ્વારા ફેરફરોને  [[wiki_User:$1|$1]] દ્વારા કરેલા છેલ્લા સુધારા સુધી ઉલટાવાયા.',
+'revertpage-nouser' => ' (સભ્ય નામ હટાવ્યું) દ્વારા થયેલ ફેરફારને  [[wiki_User:$1|$1]]ના દ્વારા થયેલ છેલ્લા પુનરાવર્તન પર પાછા લઇ જવાયા',
 'rollback-success' => '$1 દ્વારા થયેલા ફેરફારો ઉલટાવાયા
 તેને $2 દ્વારા થયેલ સંપાદન સુધી લઇ જવાયું',
 
@@ -2506,7 +2506,7 @@ To perform a selective restoration, check the boxes corresponding to the revisio
 'unblockip' => 'સભ્ય પરનો પ્રતિબંધ હટાવો',
 'unblockiptext' => 'પહેલા રોક લગાડેલ IP સરનામા કે સભ્ય ના પ્રવેશને પુનઃસ્થાપિત કરવા નીચેનું ફોર્મેટ વાપરો.',
 'ipusubmit' => 'આપ્રતિબંધન હટાવો',
-'unblocked' => '[[User:$1|$1]] પ્રતિબંધિત કરાયા',
+'unblocked' => '[[wiki_User:$1|$1]] પ્રતિબંધિત કરાયા',
 'unblocked-range' => '$1  અનાવરોધિત કરવામાં આવ્યું છે',
 'unblocked-id' => ' $1 નો પ્રતિબંધ હટાવાયો',
 'blocklist' => 'પ્રતિબંધિત સભ્યો',
@@ -2539,7 +2539,7 @@ To perform a selective restoration, check the boxes corresponding to the revisio
 'change-blocklink' => 'પ્રતિબંધમાં ફેરફાર કરો',
 'contribslink' => 'યોગદાન',
 'emaillink' => 'ઈ-મેલ મોકલો',
-'autoblocker' => 'તમારા પર સ્વયંચાલિત રીતે રોક લગાવાઇ છે કેમકે તમારો IP હાલમાં "[[User:$1|$1]]" સભ્ય દ્વારા વપરાયો છે.
+'autoblocker' => 'તમારા પર સ્વયંચાલિત રીતે રોક લગાવાઇ છે કેમકે તમારો IP હાલમાં "[[wiki_User:$1|$1]]" સભ્ય દ્વારા વપરાયો છે.
 તેનું કારણ આ છે : "$2"',
 'blocklogpage' => 'પ્રતિબંધ સૂચિ',
 'blocklog-showlog' => 'આ સભ્ય પર પહેલા રોક લગાવાઈ છે.
@@ -2645,7 +2645,7 @@ To perform a selective restoration, check the boxes corresponding to the revisio
 'movearticle' => 'આ પાનાનું નામ બદલો:',
 'moveuserpage-warning' => "'''ચેતવણી :''' તમે સભ્યનું પાનું હટાવી રહ્યાં છો.  કૃપયા યાદરાખશો કે માત્ર પાનું જ હટાવીશકાશે અને સભ્ય્ને નૂતન નામ નહીં અપાય.",
 'movenologin' => 'પ્રવેશ કરેલ નથી',
-'movenologintext' => 'કોઇ પાનું હટાવવા માટે તેમે નોંધણી કૃત સભ્ય અને [[Special:UserLogin|logged in]]  હોવા જોઇએ',
+'movenologintext' => 'કોઇ પાનું હટાવવા માટે તેમે નોંધણી કૃત સભ્ય અને [[Special:wiki_UserLogin|logged in]]  હોવા જોઇએ',
 'movenotallowed' => 'તમને પાનાં ખસેડવાની પરવાનગી નથી.',
 'movenotallowedfile' => 'તમને ફાઈલ ખસેડવાની પરવાનગી નથી.',
 'cant-move-user-page' => 'તમને સભ્ય પાના હટાવવાની પરવાનગી નથી (ઉપપાના સિવાય).',
@@ -3454,7 +3454,7 @@ To perform a selective restoration, check the boxes corresponding to the revisio
 સંકેત કાલાતિત થયું હોય',
 'confirmemail_needlogin' => 'તમારે ઈ-મેલ ને બહાલી આપવા $1 કરવું પડશે',
 'confirmemail_success' => 'તમારા ઈ-મેલની પુષ્ટિ થઈ ગઈ છે.
-તમે હવે પ્રવેશ [[Special:UserLogin|log in]] કરી વિકિનો આનંદ ઉઠાવી શકો.',
+તમે હવે પ્રવેશ [[Special:wiki_UserLogin|log in]] કરી વિકિનો આનંદ ઉઠાવી શકો.',
 'confirmemail_loggedin' => 'તમારા ઇ-મેલ સરનામાની પુષ્ટિ કરાઇ છે.',
 'confirmemail_error' => 'પુષ્ટિ સાચવતા કોઈ ત્રુટિ રહી ગઈ',
 'confirmemail_subject' => '{{SITENAME}} ઈ-મેલ સરનામાની પુષ્ટિ',
@@ -3503,10 +3503,10 @@ $5
 
 # Delete conflict
 'deletedwhileediting' => "'''ચેતવણી''': તમે ફેરફાર  કર્યા પછી આ પાનું હટાવી દેવાયું !",
-'confirmrecreate' => "સભ્ય [[User:$1|$1]] ([[User talk:$1|talk]]) એતમે ફેરફાર કરો તે પહેલાં આ પાનું હટાવી દીધું તેનું કારણ:
+'confirmrecreate' => "સભ્ય [[wiki_User:$1|$1]] ([[wiki_User talk:$1|talk]]) એતમે ફેરફાર કરો તે પહેલાં આ પાનું હટાવી દીધું તેનું કારણ:
 : ''$2''
 કૃપયા ખાત્રી કરો કે તમે આ પાનું ખરેખર રચવા માંગો છે.",
-'confirmrecreate-noreason' => 'વપરાશકર્તા [[User:$1|$1]] ([[User talk:$1|talk]]) એ આ પાનું તમે ફેરફાર શરૂ કર્યા પછી  ખાતરી કરો કે તમે ખરેખર આ પૃષ્ઠ ફરીથી રચવા માંગો કરો.',
+'confirmrecreate-noreason' => 'વપરાશકર્તા [[wiki_User:$1|$1]] ([[wiki_User talk:$1|talk]]) એ આ પાનું તમે ફેરફાર શરૂ કર્યા પછી  ખાતરી કરો કે તમે ખરેખર આ પૃષ્ઠ ફરીથી રચવા માંગો કરો.',
 'recreate' => 'પુનર્નિર્માણ કરો',
 
 # action=purge

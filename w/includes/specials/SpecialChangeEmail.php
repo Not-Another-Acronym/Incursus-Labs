@@ -29,13 +29,13 @@
 class SpecialChangeEmail extends UnlistedSpecialPage {
 
 	/**
-	 * Users password
+	 * wiki_Users password
 	 * @var string
 	 */
 	protected $mPassword;
 
 	/**
-	 * Users new email address
+	 * wiki_Users new email address
 	 * @var string
 	 */
 	protected $mNewEmail;
@@ -62,7 +62,7 @@ class SpecialChangeEmail extends UnlistedSpecialPage {
 		$this->outputHeader();
 
 		$out = $this->getOutput();
-		$out->disallowUserJs();
+		$out->disallowwiki_UserJs();
 		$out->addModules( 'mediawiki.special.changeemail' );
 
 		if ( !$wgAuth->allowPropChange( 'emailaddress' ) ) {
@@ -207,12 +207,12 @@ class SpecialChangeEmail extends UnlistedSpecialPage {
 	}
 
 	/**
-	 * @param $user User
+	 * @param $user wiki_User
 	 * @param $pass string
 	 * @param $newaddr string
 	 * @return bool|string true or string on success, false on failure
 	 */
-	protected function attemptChange( User $user, $pass, $newaddr ) {
+	protected function attemptChange( wiki_User $user, $pass, $newaddr ) {
 		if ( $newaddr != '' && !Sanitizer::validateEmail( $newaddr ) ) {
 			$this->error( 'invalidemailaddress' );
 			return false;

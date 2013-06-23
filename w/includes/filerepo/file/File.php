@@ -1646,11 +1646,11 @@ abstract class File {
 	 *      File::FOR_PUBLIC       to be displayed to all users
 	 *      File::FOR_THIS_USER    to be displayed to the given user
 	 *      File::RAW              get the description regardless of permissions
-	 * @param $user User object to check for, only if FOR_THIS_USER is passed
+	 * @param $user wiki_User object to check for, only if FOR_THIS_USER is passed
 	 *              to the $audience parameter
 	 * @return string
 	 */
-	function getDescription( $audience = self::FOR_PUBLIC, User $user = null ) {
+	function getDescription( $audience = self::FOR_PUBLIC, wiki_User $user = null ) {
 		return null;
 	}
 
@@ -1694,10 +1694,10 @@ abstract class File {
 	 * field of this file, if it's marked as deleted.
 	 * STUB
 	 * @param $field Integer
-	 * @param $user User object to check, or null to use $wgUser
+	 * @param $user wiki_User object to check, or null to use $wgwiki_User
 	 * @return Boolean
 	 */
-	function userCan( $field, User $user = null ) {
+	function userCan( $field, wiki_User $user = null ) {
 		return true;
 	}
 

@@ -71,7 +71,7 @@ class NewFilesPager extends ReverseChronologicalPager {
 		$tables = array( 'image' );
 
 		if( !$this->showbots ) {
-			$groupsWithBotPermission = User::getGroupsWithPermission( 'bot' );
+			$groupsWithBotPermission = wiki_User::getGroupsWithPermission( 'bot' );
 			if( count( $groupsWithBotPermission ) ) {
 				$tables[] = 'user_groups';
 				$conds[] = 'ug_group IS NULL';
@@ -121,7 +121,7 @@ class NewFilesPager extends ReverseChronologicalPager {
 
 	function formatRow( $row ) {
 		$name = $row->img_name;
-		$user = User::newFromId( $row->img_user );
+		$user = wiki_User::newFromId( $row->img_user );
 
 		$title = Title::makeTitle( NS_FILE, $name );
 		$ul = Linker::link( $user->getUserpage(), $user->getName() );

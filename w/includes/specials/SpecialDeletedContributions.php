@@ -294,12 +294,12 @@ class DeletedContributionsPage extends SpecialPage {
 		$options['limit'] = $request->getInt( 'limit', $wgQueryPageDefaultLimit );
 		$options['target'] = $target;
 
-		$userObj = User::newFromName( $target, false );
+		$userObj = wiki_User::newFromName( $target, false );
 		if ( !$userObj ) {
 			$out->addHTML( $this->getForm( '' ) );
 			return;
 		}
-		$this->getSkin()->setRelevantUser( $userObj );
+		$this->getSkin()->setRelevantwiki_User( $userObj );
 
 		$target = $userObj->getName();
 		$out->addSubtitle( $this->getSubTitle( $userObj ) );
@@ -343,7 +343,7 @@ class DeletedContributionsPage extends SpecialPage {
 
 	/**
 	 * Generates the subheading with links
-	 * @param $userObj User object for the target
+	 * @param $userObj wiki_User object for the target
 	 * @return String: appropriately-escaped HTML to be output literally
 	 * @todo FIXME: Almost the same as contributionsSub in SpecialContributions.php. Could be combined.
 	 */
@@ -377,7 +377,7 @@ class DeletedContributionsPage extends SpecialPage {
 							)
 						);
 					}
-					else { # User is not blocked
+					else { # wiki_User is not blocked
 						$tools[] = Linker::linkKnown( # Block link
 							SpecialPage::getTitleFor( 'Block', $nt->getDBkey() ),
 							$this->msg( 'blocklink' )->escaped()
@@ -416,11 +416,11 @@ class DeletedContributionsPage extends SpecialPage {
 			);
 
 			# Add a link to change user rights for privileged users
-			$userrightsPage = new UserrightsPage();
+			$userrightsPage = new wiki_UserrightsPage();
 			$userrightsPage->setContext( $this->getContext() );
 			if( $userrightsPage->userCanChangeRights( $userObj ) ) {
 				$tools[] = Linker::linkKnown(
-					SpecialPage::getTitleFor( 'Userrights', $nt->getDBkey() ),
+					SpecialPage::getTitleFor( 'wiki_Userrights', $nt->getDBkey() ),
 					$this->msg( 'sp-contributions-userrights' )->escaped()
 				);
 			}

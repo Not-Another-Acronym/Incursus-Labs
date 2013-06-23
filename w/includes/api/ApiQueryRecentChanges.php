@@ -74,27 +74,27 @@ class ApiQueryRecentChanges extends ApiQueryGeneratorBase {
 	 * @return bool|String
 	 */
 	public static function getPatrolToken( $pageid, $title, $rc = null ) {
-		global $wgUser;
+		global $wgwiki_User;
 
-		$validTokenUser = false;
+		$validTokenwiki_User = false;
 
 		if ( $rc ) {
-			if ( ( $wgUser->useRCPatrol() && $rc->getAttribute( 'rc_type' ) == RC_EDIT ) ||
-				( $wgUser->useNPPatrol() && $rc->getAttribute( 'rc_type' ) == RC_NEW ) )
+			if ( ( $wgwiki_User->useRCPatrol() && $rc->getAttribute( 'rc_type' ) == RC_EDIT ) ||
+				( $wgwiki_User->useNPPatrol() && $rc->getAttribute( 'rc_type' ) == RC_NEW ) )
 			{
-				$validTokenUser = true;
+				$validTokenwiki_User = true;
 			}
 		} else {
-			if ( $wgUser->useRCPatrol() || $wgUser->useNPPatrol() ) {
-				$validTokenUser = true;
+			if ( $wgwiki_User->useRCPatrol() || $wgwiki_User->useNPPatrol() ) {
+				$validTokenwiki_User = true;
 			}
 		}
 
-		if ( $validTokenUser ) {
+		if ( $validTokenwiki_User ) {
 			// The patrol token is always the same, let's exploit that
 			static $cachedPatrolToken = null;
 			if ( is_null( $cachedPatrolToken ) ) {
-				$cachedPatrolToken = $wgUser->getEditToken( 'patrol' );
+				$cachedPatrolToken = $wgwiki_User->getEditToken( 'patrol' );
 			}
 			return $cachedPatrolToken;
 		} else {

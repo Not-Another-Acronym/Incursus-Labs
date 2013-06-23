@@ -1,6 +1,6 @@
 <?php
 /**
- * User interface for the difference engine.
+ * wiki_User interface for the difference engine.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -285,7 +285,7 @@ class DifferenceEngine extends ContextSource {
 				$samePage = false;
 			}
 
-			if ( $samePage && $this->mNewPage->quickUserCan( 'edit', $user ) ) {
+			if ( $samePage && $this->mNewPage->quickwiki_UserCan( 'edit', $user ) ) {
 				if ( $this->mNewRev->isCurrent() && $this->mNewPage->userCan( 'rollback', $user ) ) {
 					$out->preventClickjacking();
 					$rollback = '&#160;&#160;&#160;' . Linker::generateRollback( $this->mNewRev, $this->getContext() );
@@ -327,7 +327,7 @@ class DifferenceEngine extends ContextSource {
 
 			$oldHeader = '<div id="mw-diff-otitle1"><strong>' . $oldRevisionHeader . '</strong></div>' .
 				'<div id="mw-diff-otitle2">' .
-					Linker::revUserTools( $this->mOldRev, !$this->unhide ) . '</div>' .
+					Linker::revwiki_UserTools( $this->mOldRev, !$this->unhide ) . '</div>' .
 				'<div id="mw-diff-otitle3">' . $oldminor .
 					Linker::revComment( $this->mOldRev, !$diffOnly, !$this->unhide ) . $ldel . '</div>' .
 				'<div id="mw-diff-otitle4">' . $prevlink . '</div>';
@@ -369,7 +369,7 @@ class DifferenceEngine extends ContextSource {
 		$newRevisionHeader = $this->getRevisionHeader( $this->mNewRev, 'complete' ) . $undoLink;
 
 		$newHeader = '<div id="mw-diff-ntitle1"><strong>' . $newRevisionHeader . '</strong></div>' .
-			'<div id="mw-diff-ntitle2">' . Linker::revUserTools( $this->mNewRev, !$this->unhide ) .
+			'<div id="mw-diff-ntitle2">' . Linker::revwiki_UserTools( $this->mNewRev, !$this->unhide ) .
 				" $rollback</div>" .
 			'<div id="mw-diff-ntitle3">' . $newminor .
 				Linker::revComment( $this->mNewRev, !$diffOnly, !$this->unhide ) . $rdel . '</div>' .
@@ -427,7 +427,7 @@ class DifferenceEngine extends ContextSource {
 
 		if ( $this->mMarkPatrolledLink === null ) {
 			// Prepare a change patrol link, if applicable
-			if ( $wgUseRCPatrol && $this->mNewPage->quickUserCan( 'patrol', $this->getUser() ) ) {
+			if ( $wgUseRCPatrol && $this->mNewPage->quickwiki_UserCan( 'patrol', $this->getUser() ) ) {
 				// If we've been given an explicit change identifier, use it; saves time
 				if ( $this->mRcidMarkPatrolled ) {
 					$rcid = $this->mRcidMarkPatrolled;
@@ -440,7 +440,7 @@ class DifferenceEngine extends ContextSource {
 					$change = RecentChange::newFromConds(
 						array(
 						// Redundant user,timestamp condition so we can use the existing index
-							'rc_user_text'  => $this->mNewRev->getRawUserText(),
+							'rc_user_text'  => $this->mNewRev->getRawwiki_UserText(),
 							'rc_timestamp'  => $db->timestamp( $this->mNewRev->getTimestamp() ),
 							'rc_this_oldid' => $this->mNewid,
 							'rc_last_oldid' => $this->mOldid,
@@ -828,8 +828,8 @@ class DifferenceEngine extends ContextSource {
 		$nEdits = $this->mNewPage->countRevisionsBetween( $oldRev, $newRev );
 		if ( $nEdits > 0 ) {
 			$limit = 100; // use diff-multi-manyusers if too many users
-			$numUsers = $this->mNewPage->countAuthorsBetween( $oldRev, $newRev, $limit );
-			return self::intermediateEditsMsg( $nEdits, $numUsers, $limit );
+			$numwiki_Users = $this->mNewPage->countAuthorsBetween( $oldRev, $newRev, $limit );
+			return self::intermediateEditsMsg( $nEdits, $numwiki_Users, $limit );
 		}
 		return ''; // nothing
 	}
@@ -837,18 +837,18 @@ class DifferenceEngine extends ContextSource {
 	/**
 	 * Get a notice about how many intermediate edits and users there are
 	 * @param $numEdits int
-	 * @param $numUsers int
+	 * @param $numwiki_Users int
 	 * @param $limit int
 	 * @return string
 	 */
-	public static function intermediateEditsMsg( $numEdits, $numUsers, $limit ) {
-		if ( $numUsers > $limit ) {
+	public static function intermediateEditsMsg( $numEdits, $numwiki_Users, $limit ) {
+		if ( $numwiki_Users > $limit ) {
 			$msg = 'diff-multi-manyusers';
-			$numUsers = $limit;
+			$numwiki_Users = $limit;
 		} else {
 			$msg = 'diff-multi';
 		}
-		return wfMessage( $msg )->numParams( $numEdits, $numUsers )->parse();
+		return wfMessage( $msg )->numParams( $numEdits, $numwiki_Users )->parse();
 	}
 
 	/**
@@ -889,7 +889,7 @@ class DifferenceEngine extends ContextSource {
 				$editQuery['oldid'] = $rev->getID();
 			}
 
-			$msg = $this->msg( $title->quickUserCan( 'edit', $user ) ? 'editold' : 'viewsourceold' )->escaped();
+			$msg = $this->msg( $title->quickwiki_UserCan( 'edit', $user ) ? 'editold' : 'viewsourceold' )->escaped();
 			$header .= ' ' . $this->msg( 'parentheses' )->rawParams(
 				Linker::linkKnown( $title, $msg, array(), $editQuery ) )->plain();
 			if ( $rev->isDeleted( Revision::DELETED_TEXT ) ) {

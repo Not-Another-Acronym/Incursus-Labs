@@ -65,7 +65,7 @@ class LanguageConverter {
 	var $mUcfirst = false;
 	var $mConvRuleTitle = false;
 	var $mURLVariant;
-	var $mUserVariant;
+	var $mwiki_UserVariant;
 	var $mHeaderVariant;
 	var $mMaxDepth = 10;
 	var $mVarSeparatorPattern;
@@ -158,11 +158,11 @@ class LanguageConverter {
 	 * @return String: the preferred language code
 	 */
 	public function getPreferredVariant() {
-		global $wgDefaultLanguageVariant, $wgUser;
+		global $wgDefaultLanguageVariant, $wgwiki_User;
 
 		$req = $this->getURLVariant();
 
-		if ( $wgUser->isLoggedIn() && !$req ) {
+		if ( $wgwiki_User->isLoggedIn() && !$req ) {
 			$req = $this->getUserVariant();
 		} elseif ( !$req ) {
 			$req = $this->getHeaderVariant();
@@ -242,27 +242,27 @@ class LanguageConverter {
 	 * @return Mixed: variant if one found, false otherwise.
 	 */
 	protected function getUserVariant() {
-		global $wgUser;
+		global $wgwiki_User;
 
 		// memoizing this function wreaks havoc on parserTest.php
 		/*
-		if ( $this->mUserVariant ) {
-			return $this->mUserVariant;
+		if ( $this->mwiki_UserVariant ) {
+			return $this->mwiki_UserVariant;
 		}
 		*/
 
 		// Get language variant preference from logged in users
 		// Don't call this on stub objects because that causes infinite
 		// recursion during initialisation
-		if ( $wgUser->isLoggedIn() )  {
-			$ret = $wgUser->getOption( 'variant' );
+		if ( $wgwiki_User->isLoggedIn() )  {
+			$ret = $wgwiki_User->getOption( 'variant' );
 		} else {
 			// figure out user lang without constructing wgLang to avoid
 			// infinite recursion
-			$ret = $wgUser->getOption( 'language' );
+			$ret = $wgwiki_User->getOption( 'language' );
 		}
 
-		return $this->mUserVariant = $this->validateVariant( $ret );
+		return $this->mwiki_UserVariant = $this->validateVariant( $ret );
 	}
 
 	/**
@@ -737,7 +737,7 @@ class LanguageConverter {
 		}
 
 		global $wgDisableLangConversion, $wgDisableTitleConversion, $wgRequest,
-			$wgUser;
+			$wgwiki_User;
 		$isredir = $wgRequest->getText( 'redirect', 'yes' );
 		$action = $wgRequest->getText( 'action' );
 		$linkconvert = $wgRequest->getText( 'linkconvert', 'yes' );
@@ -753,7 +753,7 @@ class LanguageConverter {
 				 || $action == 'edit'
 				 || $action == 'submit'
 				 || $linkconvert == 'no'
-				 || $wgUser->getOption( 'noconvertlink' ) == 1 ) ) ) {
+				 || $wgwiki_User->getOption( 'noconvertlink' ) == 1 ) ) ) {
 			return;
 		}
 
@@ -1036,7 +1036,7 @@ class LanguageConverter {
 	 * @private
 	 *
 	 * @param $article Article object
-	 * @param $user Object: User object for the current user
+	 * @param $user Object: wiki_User object for the current user
 	 * @param $text String: article text (?)
 	 * @param $summary String: edit summary of the edit
 	 * @param $isMinor Boolean: was the edit marked as minor?

@@ -33,11 +33,11 @@ class PatrolLog {
 	 *
 	 * @param $rc Mixed: change identifier or RecentChange object
 	 * @param $auto Boolean: was this patrol event automatic?
-	 * @param $user User: user performing the action or null to use $wgUser
+	 * @param $user wiki_User: user performing the action or null to use $wgwiki_User
 	 *
 	 * @return bool
 	 */
-	public static function record( $rc, $auto = false, User $user = null ) {
+	public static function record( $rc, $auto = false, wiki_User $user = null ) {
 		if ( !$rc instanceof RecentChange ) {
 			$rc = RecentChange::newFromId( $rc );
 			if ( !is_object( $rc ) ) {
@@ -46,8 +46,8 @@ class PatrolLog {
 		}
 
 		if ( !$user ) {
-			global $wgUser;
-			$user = $wgUser;
+			global $wgwiki_User;
+			$user = $wgwiki_User;
 		}
 
 		$entry = new ManualLogEntry( 'patrol', 'patrol' );

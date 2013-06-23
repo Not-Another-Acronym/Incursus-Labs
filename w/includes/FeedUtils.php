@@ -37,9 +37,9 @@ class FeedUtils {
 	 * @param $key String: cache key of feed's content
 	 */
 	public static function checkPurge( $timekey, $key ) {
-		global $wgRequest, $wgUser, $messageMemc;
+		global $wgRequest, $wgwiki_User, $messageMemc;
 		$purge = $wgRequest->getVal( 'action' ) === 'purge';
-		if ( $purge && $wgUser->isAllowed('purge') ) {
+		if ( $purge && $wgwiki_User->isAllowed('purge') ) {
 			$messageMemc->delete( $timekey );
 			$messageMemc->delete( $key );
 		}
@@ -114,7 +114,7 @@ class FeedUtils {
 					Linker::formatComment( $comment ) ) ) ) . "</p>\n";
 
 		// NOTE: Check permissions for current user. -- HaloACL
-		$accErrors = $title->getUserPermissionsErrors( 'read', $wgUser, true );
+		$accErrors = $title->getUserPermissionsErrors( 'read', $wgwiki_User, true );
 
 		// Can't diff special pages, unreadable pages or pages with no new revision
 		// to compare against: just return the text.

@@ -32,7 +32,7 @@ require_once( __DIR__ . '/Maintenance.php' );
  *
  * @ingroup Maintenance
  */
-class PopulateLogUsertext extends LoggedUpdateMaintenance {
+class PopulateLogwiki_Usertext extends LoggedUpdateMaintenance {
 	public function __construct() {
 		parent::__construct();
 		$this->mDescription = "Populates the log_user_text field";
@@ -81,6 +81,6 @@ class PopulateLogUsertext extends LoggedUpdateMaintenance {
 	}
 }
 
-$maintClass = "PopulateLogUsertext";
+$maintClass = "PopulateLogwiki_Usertext";
 require_once( RUN_MAINTENANCE_IF_MAIN );
 

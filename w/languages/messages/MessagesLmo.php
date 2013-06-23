@@ -90,8 +90,8 @@ $specialPageAliases = array(
 	'Statistics'                => array( 'Statìstegh' ),
 	'Uncategorizedpages'        => array( 'PaginnMingaCategurizaa' ),
 	'Upload'                    => array( 'CaregaSü' ),
-	'Userlogin'                 => array( 'VenaDenter' ),
-	'Userlogout'                => array( 'VaFö' ),
+	'wiki_Userlogin'                 => array( 'VenaDenter' ),
+	'wiki_Userlogout'                => array( 'VaFö' ),
 	'Watchlist'                 => array( 'SutOeugg' ),
 );
 
@@ -103,7 +103,7 @@ $magicWords = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Sutulinia i ligam',
 'tog-justify' => 'Paràgraf: giüstifigaa',
 'tog-hideminor' => 'Scund i mudifegh men impurtant in di "cambiament recent"',
@@ -403,7 +403,7 @@ Quest chì a l'è de solet causaa perchè al s'è riciamaa un paragón intra rev
 
 Se l'è minga inscì, te pudariet vegh truà un bug in del software.
 
-Per piasè, fa raport a 'n'[[Special:ListUsers/sysop|aministradur]], cun la nota de l'URL.",
+Per piasè, fa raport a 'n'[[Special:Listwiki_Users/sysop|aministradur]], cun la nota de l'URL.",
 'missingarticle-rev' => '(revision#: $1)',
 'missingarticle-diff' => '(Diff: $1, $2)',
 'internalerror' => 'Erur in del sistema',
@@ -420,7 +420,7 @@ Per piasè, fa raport a 'n'[[Special:ListUsers/sysop|aministradur]], cun la nota
 # Login and logout pages
 'logouttext' => "'''Adess a sii descuness.'''
 
-A pudé andà inanz a druvà la {{SITENAME}} in manera anònima, o a pudé [[Special:UserLogin|cunètev anmò]] cun l'istess suranomm o cun un suranomm diferent.
+A pudé andà inanz a druvà la {{SITENAME}} in manera anònima, o a pudé [[Special:wiki_UserLogin|cunètev anmò]] cun l'istess suranomm o cun un suranomm diferent.
 Tegné cünt che certi paginn pödass che i seguiten a vedess tant 'me se a füdìssuv anmò cuness, fin quand che hii nò vudaa 'l ''cache'' del voster browser.",
 'welcomecreation' => "== Benvegnüü, $1! ==
 'L to cünt l'è staa pruntaa. Desmenteghet mía de mudifegà i to [[Special:Preferences|preferenz de {{SITENAME}}]].",
@@ -456,7 +456,7 @@ Per piasè, abilita i cookies e pröa anmò a andà dent cunt el tò nom e la pa
 'loginsuccess' => 'Al é connectaa a {{SITENAME}} compagn "$1".',
 'nosuchuser' => "A gh'è nissün druvat cun 'l nom ''$1''. <br />
 I suranomm i henn sensibil a i leter majùscul.<br />
-Cuntrola 'l nom che t'hee metüü denter o [[Special:UserLogin/signup|crea un cünt növ]].",
+Cuntrola 'l nom che t'hee metüü denter o [[Special:wiki_UserLogin/signup|crea un cünt növ]].",
 'nosuchusershort' => "Ghe n'è mia d'ütent cun el nom de \"\$1\". Ch'el cuntrola se l'ha scrivüü giüst.",
 'nouserspecified' => "Te gh'heet da specificà un nom del druvatt.",
 'wrongpassword' => "La ciav che t'hee metüü denter l'è nò giüsta. Pröva turna per piasè.",
@@ -534,7 +534,7 @@ Per creà la pagina, a l\'è assee che te tachet a scriv in del box desota (vard
 Se te seet chì per erur, schiscia "indree" in sül tò browser.',
 'anontalkpagetext' => "''Questa chí a l'é la pagina da ciciarada d'un druvadur che l'ha nonanmò registraa un cünt, o che 'l le dröva mia.
 Per 'sta reson chí, el pò vess identificaa dumà cunt el sò indirizz nümereg de IP.
-'Stu indirizz IP el pö vess druvaa da püssee d'un druvadur. Se te seet un druvadur anònim e ve someja che un quaj messagg ch'al ga par ch'al gh'a nagòt à vidé con lu, ch'al prœuva a [[Special:UserLogin|creà el sò cunt]].''",
+'Stu indirizz IP el pö vess druvaa da püssee d'un druvadur. Se te seet un druvadur anònim e ve someja che un quaj messagg ch'al ga par ch'al gh'a nagòt à vidé con lu, ch'al prœuva a [[Special:wiki_UserLogin|creà el sò cunt]].''",
 'noarticletext' => "Per 'l mument quela pagina chì l'è vöja. Te pòdet [[Special:Search/{{PAGENAME}}|cercà quel articul chì]] int i alter paginn, <span class=\"plainlinks\">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} cercà int i register imparentaa], o sedenò [{{fullurl:{{FULLPAGENAME}}|action=edit}} mudifichè 'sta pagina chì adess-adess]</span>.",
 'clearyourcache' => "'''Nòta:''' dòpu che avii salvaa, pudaría véss neçessari de scancelá la memòria \"cache\" dal vòst prugráma də navigazziún in reet par vidé i mudifich faa. '''Mozilla / Firefox / Safari:''' tegní schiscjaa al butún ''Shift'' intaant che sə clica ''Reload'', upüür schiscjá ''Ctrl-Shift-R'' (''Cmd-Shift-R'' sül Apple Mac); '''IE:''' schiscjá ''Ctrl'' intaant che sə clica ''Refresh'', upüür schiscjá ''Ctrl-F5''; '''Konqueror:''': semplicemeent clicá al butún ''Reload'', upüür schiscjá ''F5''; '''Opera''' i üteent pudarían vech büsögn da scancelá cumpletameent la memòria \"cache\" in ''Tools&rarr;Preferences''.",
 'previewnote' => "''''''Atenziun'''! Questa pagina la serviss dumà de vardà. I cambiament hinn minga staa salvaa.'''",
@@ -562,7 +562,7 @@ Cuntrulee se l'è propi el cas de cuntinuà a mudifegà 'sta pagina chì.
 Per cumudità, la lista di scancelament e di San Martìn l'è ripurtada chi de suta:",
 
 # "Undo" feature
-'undo-summary' => 'Scancelada la mudifega $1 de [[Special:Contributions/$2|$2]] ([[User talk:$2|Ciciarada]])',
+'undo-summary' => 'Scancelada la mudifega $1 de [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Ciciarada]])',
 
 # History pages
 'viewpagelogs' => 'Varda i register de quela pagina chì',
@@ -691,12 +691,12 @@ Pröa a giuntagh denanz a la tò ricerca ''all:'' per cercà in tücc i namespac
 'prefs-i18n' => 'Internaziunalizazión',
 'prefs-advancedrendering' => 'Fünzión avanzaa',
 
-# User rights
+# wiki_User rights
 'userrights' => 'Gestión di dirit di druvadur',
 'userrights-lookup-user' => 'Gestion di grüp di druvaduu',
 'userrights-user-editname' => 'Butée dent un nom da dovrat',
 'editusergroup' => 'Mudifega i grüp del druvadur',
-'editinguser' => "Mudifega di dirit del druvadur '''[[User:$1|$1]]''' ([[User talk:$1|{{int:talkpagelinktext}}]]{{int:pipe-separator}}[[Special:Contributions/$1|{{int:contribslink}}]])",
+'editinguser' => "Mudifega di dirit del druvadur '''[[wiki_User:$1|$1]]''' ([[wiki_User talk:$1|{{int:talkpagelinktext}}]]{{int:pipe-separator}}[[Special:Contributions/$1|{{int:contribslink}}]])",
 'userrights-editusergroup' => 'Mudifega i grüp del druvadur',
 'saveusergroups' => 'Salva i grüp di druvadur',
 'userrights-groupsmember' => 'El fà part di grüp:',
@@ -707,7 +707,7 @@ Pröa a giuntagh denanz a la tò ricerca ''all:'' per cercà in tücc i namespac
 'userrights-reason' => 'Reson:',
 'userrights-no-interwiki' => "Te gh'hee mía i permiss necessari per pudè mudifegà i dirit di druvadur di olter wiki.",
 'userrights-nodatabase' => "La base dat $1 a gh'é mia, o pura a l'é mia locala.",
-'userrights-nologin' => "Al gh'a da [[Special:UserLogin|rintrà ent el sistema]] con un cunt d'administrator par podé dà di drecc ai dovracc.",
+'userrights-nologin' => "Al gh'a da [[Special:wiki_UserLogin|rintrà ent el sistema]] con un cunt d'administrator par podé dà di drecc ai dovracc.",
 'userrights-notallowed' => "A l'ha mia li permission par podé dà di drecc ai dovracc.",
 'userrights-changeable-col' => 'Grüp che te pö mudifegà',
 'userrights-unchangeable-col' => 'Grüp che te pö mia mudifegà',
@@ -726,7 +726,7 @@ Pröa a giuntagh denanz a la tò ricerca ''all:'' per cercà in tücc i namespac
 'right-edit' => 'Edita pàgini',
 'right-createaccount' => 'Crea cünt de dovratt bej-e növ',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Dirit di druvat',
 'rightslogentry' => "l'ha mudifegaa $1 dal grüp $2 al grüp $3",
 
@@ -862,7 +862,7 @@ La descrizión sura la sua [$2 pagina de descrizión del file] l'è mustrada ch�
 'statistics-files' => 'File caregaa sü',
 'statistics-edits' => "Paginn mudifegaa dal dì che l'è nassüü 'l sit de {{SITENAME}}",
 'statistics-edits-average' => 'Mudifegh in média per pagina',
-'statistics-users' => '[[Special:ListUsers|Druvadur]] registraa',
+'statistics-users' => '[[Special:Listwiki_Users|Druvadur]] registraa',
 'statistics-users-active' => 'Druvadur ativ',
 'statistics-users-active-desc' => "Druvadur che i hann faa un'azión int {{PLURAL:$1|l'ültem dì|i ültem $1 dì}}",
 
@@ -936,10 +936,10 @@ La descrizión sura la sua [$2 pagina de descrizión del file] l'è mustrada ch�
 # Special:LinkSearch
 'linksearch' => 'Ligam de föra',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => 'Fàm vedè i dupradur a partì da:',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers-from' => 'Fàm vedè i dupradur a partì da:',
 
 # Special:Log/newusers
@@ -1029,8 +1029,8 @@ Per piasè, dà la cunferma che te gh'hee intenzión de andà inanz cun 'l scanc
 'rollback' => 'Rollback',
 'rollbacklink' => 'Rollback',
 'rollbackfailed' => 'L è mia staa pussibil purtá indré',
-'alreadyrolled' => "L è mia pussibil turná indré al'ültima versiún da [[:$1]] dal [[User:$2|$2]] ([[User talk:$2|Discüssiún]]); un quaivün l á gjamò redataa o giraa indré la pagina.
-L'ültima redatazziún l eva da [[User:$3|$3]] ([[User talk:$3|Discüssiún]]).",
+'alreadyrolled' => "L è mia pussibil turná indré al'ültima versiún da [[:$1]] dal [[wiki_User:$2|$2]] ([[wiki_User talk:$2|Discüssiún]]); un quaivün l á gjamò redataa o giraa indré la pagina.
+L'ültima redatazziún l eva da [[wiki_User:$3|$3]] ([[wiki_User talk:$3|Discüssiún]]).",
 'rollback-success' => "Nülaa i mudifegh de $1; pagina purtada indree a l'ültima versión de $2.",
 
 # Protect
@@ -1161,7 +1161,7 @@ Varda [[Special:BlockList|lista di IP blucaa]] per vidè anmò i bloch.",
 'ipb-blocklist-contribs' => 'Cuntribüzión de $1',
 'unblockip' => 'Desblòca quel druvàt chì',
 'ipusubmit' => "Tö via 'stu bloch chì",
-'unblocked' => "[[User:$1|$1]] l'è staa desblucaa",
+'unblocked' => "[[wiki_User:$1|$1]] l'è staa desblucaa",
 'ipblocklist' => 'Adrèss IP e druvàt blucaa',
 'infiniteblock' => 'per semper',
 'expiringblock' => 'el finiss el $1 a $2',

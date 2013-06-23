@@ -17,7 +17,7 @@
  */
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Kuritan sa idalom ang mga tabid:',
 'tog-justify' => 'Tadlongon ang mga parapo',
 'tog-hideminor' => 'Tagu-on ang menor nga gin-islan sa bag-o lang gid na-obra',
@@ -358,7 +358,7 @@ Ang may awtoridad nga nagkandado sini naghatag sang pagpaathag nga amo sini: $1'
 Ang rason kun nga natabo ay mga nagasunod bilang daan na diff o tabid nga historya sa may pahina nga nakakas na.
 
 Kung indi amo ni ang kaso, siguro may nakita ka nga guba o diperensiya sa software.
-Palihog isugid sa [[Special:ListUsers/sysop|administrador]], kag i-lista ang iya URL.',
+Palihog isugid sa [[Special:Listwiki_Users/sysop|administrador]], kag i-lista ang iya URL.',
 'missingarticle-rev' => '(rebisyon#: $1)',
 'missingarticle-diff' => '(Diff: $1, $2)',
 'readonly_lag' => 'Ang database ginkadadohan na dayon samtang ang alalay nga mga serber sang database nagalagas sa agalon',
@@ -409,7 +409,7 @@ $2',
 'customcssprotected' => 'Wala ka ginapasugtan nga mag-ilis sang sini nga panid nga CSS, tungod nga may yara ini sang pagpilian sang isa pa gid nga manug-gamit.',
 'customjsprotected' => 'Wala ka ginapasugtan nga mag-ilis sang sini nga panid nga JavaScript, tungod nga may yara ini sang pagpilian sang isa pa gid nga manug-gamit.',
 'ns-specialprotected' => 'Ang mga espesyal nga panid indi mahimo nga paga-ilisan.',
-'titleprotected' => 'Ang ini nga titulo ginpangapinan batok sa pagbuhat ni [[User:$1|$1]].
+'titleprotected' => 'Ang ini nga titulo ginpangapinan batok sa pagbuhat ni [[wiki_User:$1|$1]].
 Ang iya rason amo ang "\'\'$2\'\'".',
 'filereadonlyerror' => 'Indi mahimo nga ma-ilisan ang hilera nga "$1" tungod kay ang gintaguan sang mga hilera nga "$2" ara sa estado nga mahimo lang mabasa.
 
@@ -427,7 +427,7 @@ Ang administrador nga nag-kandado sini naghatag sang paathag nga: "$3".',
 # Login and logout pages
 'logouttext' => "'''Naka-guha ka na.'''
 
-Makapadayon ka sa gihapon sa paggamit sang {{SITENAME}} nga indi makilal-an, ukon mahimo ka man [[Special:UserLogin|magsulod liwat]] bilang amo sa gihapon ukon lain nga nga manug-gamit.
+Makapadayon ka sa gihapon sa paggamit sang {{SITENAME}} nga indi makilal-an, ukon mahimo ka man [[Special:wiki_UserLogin|magsulod liwat]] bilang amo sa gihapon ukon lain nga nga manug-gamit.
 Tandaan nga may mga panid nga mahimo ma-display sa gihapon nga daw nakasulod ka sa gihapon, hasta mapanas mo na ang tinago sang imo brawser.",
 'welcomecreation' => '== Pagtamyaw, $1! ==
 Ang imo account nahimo na.
@@ -475,7 +475,7 @@ Palihog sigurado kon nakabukas ang imo kokes, dayon ipakarga liwat ang ini nga p
 'loginsuccess' => "'''Nakasulod ka na subong sa {{SITENAME}} bilang si \"\$1\".'''",
 'nosuchuser' => 'Wala sang manug-gamit nga iya pangalan "$1".
 Ang mga gamit-pangalan sensitibo sa kadakoon sang letra.
-Siguradoha ang pagbaybay sang pumolongon, ukon  [[Special:UserLogin/signup|magbuhat sang bag-o nga akawnt]].',
+Siguradoha ang pagbaybay sang pumolongon, ukon  [[Special:wiki_UserLogin/signup|magbuhat sang bag-o nga akawnt]].',
 'nosuchusershort' => 'Wala sang manug-gamit nga iya pangalan "$1".
 Siguradoha ang pagbaybay sang pumolongon.',
 'nouserspecified' => 'Kinahanglan mo magbutang sa gamit-pangalan.',
@@ -682,7 +682,7 @@ Mahimo nga ini ginsaylo na ukon ginpanas samtang nagalantaw ka sang panid.',
 'loginreqlink' => 'mag sulod',
 'loginreqpagetext' => 'Kinahanglan mo nga mag-$1 agod nga makita ang iban nga mga panid.',
 'accmailtitle' => 'Napadala na ang pasword.',
-'accmailtext' => "May pasword nga wala ginpilian nga ginhimo para kay [[User talk:$1|$1]] nga ginpadala sa $2.
+'accmailtext' => "May pasword nga wala ginpilian nga ginhimo para kay [[wiki_User talk:$1|$1]] nga ginpadala sa $2.
 
 Ang pasword para sa sini nga bag-o nga akawnt mahimo ma-ilisan sa ''[[Special:ChangePassword|ilisan ang pasword]]'' nga panid pagkatapos magsulod.",
 'newarticle' => '(Bag-o)',
@@ -692,7 +692,7 @@ Pero kung nakasulod nga aksidente lamang, palihog lang i-klik sa imo internet ng
 'anontalkpagetext' => "----''Ini ang panid para sa pagtalakay sa wala makilala-an nga manuggamit nga wala pa nakatuga sang akawnt, ukon wala nagagamit sang isa.
 Amo nga kinahanglan naton mag-gamit sang IP adres nga de numero agod nga mahibaluan naton siya.
 Ang amo sini nga adres sang IP mahimo nga pagasaluhan sang madamo nga manuggamit.
-Kon ikaw manuggamit nga wala makilal-i kag nabatyagan mo nga may mga komento nga wala man sing labot nga ginapakadto sa imo, palihog [[Special:UserLogin/signup|maghimo ka sang akawnt]] ukon [[Special:UserLogin|magsulod]] para malikawan ang iban pa nga pagsala sa iban pa nga wala makilal-an nga manuggamit.''",
+Kon ikaw manuggamit nga wala makilal-i kag nabatyagan mo nga may mga komento nga wala man sing labot nga ginapakadto sa imo, palihog [[Special:wiki_UserLogin/signup|maghimo ka sang akawnt]] ukon [[Special:wiki_UserLogin|magsulod]] para malikawan ang iban pa nga pagsala sa iban pa nga wala makilal-an nga manuggamit.''",
 'noarticletext' => 'Wala subong sang teksto ang ini nga pahina.
 Pwede ka [[Special:Search/{{PAGENAME}}|mangita para sa titulo sang ini nga pahina]] sa iban man nga pahina,
 <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} mangita ka sang kaparehas nga logs],
@@ -734,13 +734,13 @@ Wala pa nabutang ang imo nga ginbag-o!",
 'previewconflict' => 'Ang ini nga paglantaw nagapakita sang mga teksto nga yara sa may ibabaw ayon nga amo man ang magagwa kon luyag mo na ini nga pagatiponon.',
 'session_fail_preview' => "'''Nagapangayo kami sang pasaylo! Indi namon ma-proseso ang imo pag-ilis tungod sa pagkadula sang datos sang sesyon.'''
 Palihog tilawi liwat.
-Kon indi man sa gihapon mag-gana, tilawi [[Special:UserLogout|mag-guha]] kag magsulod liwat.",
+Kon indi man sa gihapon mag-gana, tilawi [[Special:wiki_UserLogout|mag-guha]] kag magsulod liwat.",
 'session_fail_preview_html' => "'''Nagapangayo kami sang pasaylo! Indi namon ma-proseso ang imo pag-ilis tungod sang pagkadula sang datos sang sesyon.'''
 
 ''Kay ang {{SITENAME}} may ara sang hilaw nga HTML nga ginapasugtan, ang pagtan-aw gintago bilang pagpanghanda batok sa mga pag-atake sang JavaScript.''
 
 '''Kon ini lehitimo nga paghimakas, palihog tilawi liwat.'''
-Kon indi man sa gihapon mag-gana, tilawi  [[Special:UserLogout|mag-guha]] kag magsulod liwat dayon.",
+Kon indi man sa gihapon mag-gana, tilawi  [[Special:wiki_UserLogout|mag-guha]] kag magsulod liwat dayon.",
 'token_suffix_mismatch' => "'''Ang imo pag-ilis wala ginbaton tungod nga ang imo kleyente nag-guba sang mga letra sa token sang pag-ilis.'''
 Ang pag-ilis wala ginbaton agod to nga malikawan ang kalainan sang mga teksto sa panid.
 Ini nagakatabo kon kaisa kon nagagamit ka sang nakabase sa web nga serbisyo proxy nga madamo sing lusot.",
@@ -791,7 +791,7 @@ Ang pinaka-ulihi nga log ginbutang sa idalom agod nga imo mahibaluan:",
 'hiddencategories' => 'Ini nga pahina ay membro sang {{PLURAL:$1|1 tago nga kategorya|$1 mga tago nga kategorya}}:',
 'nocreatetitle' => 'Ginalimitahan ang pagbuhat sang panid',
 'nocreatetext' => 'Ang {{SITENAME}} nagapuggong sang abilidad nga magtuga sang mga bag-o nga panid.
-Mahimo ka nga magbalik kag mag-ilis sang naga-eksister nga panid, ukon[[Special:UserLogin|magsulod ukon maghimo sang akawnt]].',
+Mahimo ka nga magbalik kag mag-ilis sang naga-eksister nga panid, ukon[[Special:wiki_UserLogin|magsulod ukon maghimo sang akawnt]].',
 'nocreate-loggedin' => 'Wala ka sang lisensya sa pagbuhat sang bag-o nga mga panid.',
 'sectioneditnotsupported-title' => 'Ang pag-ilis sang bahin wala gina-suportahan',
 'sectioneditnotsupported-text' => 'Ang pag-ilis sang sini nga bahin wala ginapasugtan sa sini nga panid.',
@@ -842,11 +842,11 @@ Ang ini nga pagbinaisay wala na gin-upod pa.",
 Palihog lantaw sang pagbaki-baki sa dalom agod to nga mapamatud-an kon amo gid man sini ang imo luyag buhaton, dayon tipona ang mga pagbag-o sa dalom agod to nga matapos ang pagliwat sang pag-ilis.',
 'undo-failure' => 'Ang pag-ilis indi na maliwat pa tungod sang nagakonplikto nga mga pang-tunga nga pag-ilis.',
 'undo-norev' => 'Ang pag-ilis indii na maliwat pa tungod kay ini wala naga-eksister ukon ginpanas na.',
-'undo-summary' => 'Liwaton ang pagbag-o sang $1 sa [[Special:Contributions/$2|$2]] ([[User talk:$2|$2]])',
+'undo-summary' => 'Liwaton ang pagbag-o sang $1 sa [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|$2]])',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'Indi mabuhat ang akawnt',
-'cantcreateaccount-text' => "Ang pagbuhat sang akawnt sang sini nga adres sang IP ('''$1''') ginpunggan ni [[User:$3|$3]].
+'cantcreateaccount-text' => "Ang pagbuhat sang akawnt sang sini nga adres sang IP ('''$1''') ginpunggan ni [[wiki_User:$3|$3]].
 
 Ang rason nga ginhatag ni $3 amo ang ''$2''",
 
@@ -1112,7 +1112,7 @@ Tandai nga ang ila nga palasulundan sang mga unod sang {{SITENAME}} mahimo nga m
 'mypreferences' => 'Akon pagpalabi',
 'prefs-edits' => 'Numero sang mga gin-ilisan:',
 'prefsnologin' => 'Wala naka-sulod',
-'prefsnologintext' => 'Kinahanglan nga ikaw <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} nakasulod]</span> agod nga mabuhat ang pag-ilis sang mga ginapalabi.',
+'prefsnologintext' => 'Kinahanglan nga ikaw <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} nakasulod]</span> agod nga mabuhat ang pag-ilis sang mga ginapalabi.',
 'changepassword' => 'Ilisan ang pasword',
 'prefs-skin' => 'Panit',
 'skin-preview' => 'Ipakita subong',
@@ -1223,7 +1223,7 @@ Ang imo adres sang e-mail wala ginapakita kon kontakon ka sang iban.',
 'right-read' => 'Basahan ang panid',
 'right-edit' => 'Ilisan ang panid',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Karapatan sang naga-usar log',
 'rightsnone' => '(wala)',
 

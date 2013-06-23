@@ -23,7 +23,7 @@
 $fallback = 'ru';
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'ЭлячIунрин кIаникай цIар чIугун',
 'tog-justify' => 'Ччинин гьяркьуьвилихъ текст дуьзрун',
 'tog-hideminor' => 'Мукьвара хьайи дегишвилера авай гъвечIи дуьзар хъувунар чуьнуьхун',
@@ -300,7 +300,7 @@ $messages = array(
 Ихьтин гьал адет яз алуднавай ччинин масакIавилерин тарихдиз цlуру  рекьяй элячlайла арадал къвезва.
 
 Себеб ам туштlа, виридалайни мумкин тирди куьне программада гъалатl жугъурун я
-Тавакъу ийида, URL  къалурна адакай   [[Special:ListUsers/sysop|администратордиз]] хабар це.',
+Тавакъу ийида, URL  къалурна адакай   [[Special:Listwiki_Users/sysop|администратордиз]] хабар це.',
 'missingarticle-rev' => '(жуьре#: $1)',
 'internalerror' => 'КЪенепатан гъалатI',
 'internalerror_info' => 'КЪенепатан гъалатI $1',
@@ -658,7 +658,7 @@ $messages = array(
 'prefs-advancedrendering' => 'Гегьенш низамарунар',
 'prefs-advancedwatchlist' => 'Гегьенш низамарунар',
 
-# User rights
+# wiki_User rights
 'userrights-reason' => 'Кар',
 
 # Groups
@@ -690,7 +690,7 @@ $messages = array(
 'right-browsearchive' => 'Алуднавай ччинар жугъурун',
 'right-undelete' => 'Алуднавай ччинар туькIуьр хъувун',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Эхтияр Ишлемишчидин дафтlар',
 'rightsnone' => '(садни)',
 
@@ -914,7 +914,7 @@ $messages = array(
 'linksearch-ok' => 'Ахтармишун',
 'linksearch-line' => '$2-ай $1-аз элячlун',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusers-submit' => 'КЪалурун',
 'listusers-noresult' => 'Иштиракчияр жагъуриз хьанвач',
 'listusers-blocked' => '(блокарнава)',

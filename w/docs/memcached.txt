@@ -146,8 +146,8 @@ Newtalk:
 	key: $wgDBname:newtalk:ip:$ip
 	ex: wikidb:newtalk:ip:123.45.67.89
 	stores: integer, 0 or 1
-	set in: User::loadFromDatabase()
-	cleared by: User::saveSettings() # ?
+	set in: wiki_User::loadFromDatabase()
+	cleared by: wiki_User::saveSettings() # ?
 	expiry: 30 minutes
 
 Parser Cache:
@@ -241,11 +241,11 @@ Statistics:
 	expiry: none (?)
 	cleared by: maintenance/clear_stats.php script
 
-User:
+wiki_User:
 	key: $wgDBname:user:id:$sId
 	ex: wikidb:user:id:51
-	stores: instance of class User
-	set in: User::saveToCache()
-	cleared by: User::saveSettings(), User::clearSharedCache()
+	stores: instance of class wiki_User
+	set in: wiki_User::saveToCache()
+	cleared by: wiki_User::saveSettings(), wiki_User::clearSharedCache()
 	
 ... more to come ...

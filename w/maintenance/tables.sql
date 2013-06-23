@@ -53,18 +53,18 @@
 CREATE TABLE /*_*/user (
   user_id int unsigned NOT NULL PRIMARY KEY AUTO_INCREMENT,
 
-  -- Usernames must be unique, must not be in the form of
+  -- wiki_Usernames must be unique, must not be in the form of
   -- an IP address. _Shouldn't_ allow slashes or case
   -- conflicts. Spaces are allowed, and are _not_ converted
-  -- to underscores like titles. See the User::newFromName() for
+  -- to underscores like titles. See the wiki_User::newFromName() for
   -- the specific tests that usernames have to pass.
   user_name varchar(255) binary NOT NULL default '',
 
   -- Optional 'real name' to be displayed in credit listings
   user_real_name varchar(255) binary NOT NULL default '',
 
-  -- Password hashes, see User::crypt() and User::comparePasswords()
-  -- in User.php for the algorithm
+  -- Password hashes, see wiki_User::crypt() and wiki_User::comparePasswords()
+  -- in wiki_User.php for the algorithm
   user_password tinyblob NOT NULL,
 
   -- When using 'mail me a new password', a random
@@ -133,7 +133,7 @@ CREATE INDEX /*i*/user_email ON /*_*/user (user_email(50));
 
 
 --
--- User permissions have been broken out to a separate table;
+-- wiki_User permissions have been broken out to a separate table;
 -- this allows sites with a shared user table to have different
 -- permissions assigned to a user in each project.
 --
@@ -160,7 +160,7 @@ CREATE INDEX /*i*/ug_group ON /*_*/user_groups (ug_group);
 
 -- Stores the groups the user has once belonged to.
 -- The user may still belong to these groups (check user_groups).
--- Users are not autopromoted to groups from which they were removed.
+-- wiki_Users are not autopromoted to groups from which they were removed.
 CREATE TABLE /*_*/user_former_groups (
   -- Key to user_id
   ufg_user int unsigned NOT NULL default 0,
@@ -190,7 +190,7 @@ CREATE INDEX /*i*/un_user_ip ON /*_*/user_newtalk (user_ip);
 
 
 --
--- User preferences and perhaps other fun stuff. :)
+-- wiki_User preferences and perhaps other fun stuff. :)
 -- Replaces the old user.user_options blob, with a couple nice properties:
 --
 -- 1) We only store non-default settings, so changes to the defauls
@@ -726,10 +726,10 @@ CREATE TABLE /*_*/ipblocks (
   -- Blocked user ID or 0 for IP blocks.
   ipb_user int unsigned NOT NULL default 0,
 
-  -- User ID who made the block.
+  -- wiki_User ID who made the block.
   ipb_by int unsigned NOT NULL default 0,
 
-  -- User name of blocker
+  -- wiki_User name of blocker
   ipb_by_text varchar(255) binary NOT NULL default '',
 
   -- Text comment made by blocker.

@@ -69,7 +69,7 @@ $messages = array(
 'preferences' => 'Рекъезаби',
 'localtime' => 'Бакlалъул заман',
 
-# User rights
+# wiki_User rights
 'userrights-user-editname' => 'ГӀахьалчиясул цӀар хъвай:',
 
 # Recent changes

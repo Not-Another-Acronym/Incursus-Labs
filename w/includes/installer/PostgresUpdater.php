@@ -284,7 +284,7 @@ class PostgresUpdater extends DatabaseUpdater {
 
 			array( 'checkOiNameConstraint' ),
 			array( 'checkPageDeletedTrigger' ),
-			array( 'checkRevUserFkey' ),
+			array( 'checkRevwiki_UserFkey' ),
 			array( 'dropIndex', 'ipblocks', 'ipb_address'),
 			array( 'checkIndex', 'ipb_address_unique', array(
 				array('ipb_address', 'text_ops', 'btree', 0),
@@ -720,7 +720,7 @@ END;
 		}
 	}
 
-	protected function checkRevUserFkey() {
+	protected function checkRevwiki_UserFkey() {
 		if ( $this->fkeyDeltype( 'revision_rev_user_fkey' ) == 'r' ) {
 			$this->output( "...constraint 'revision_rev_user_fkey' is ON DELETE RESTRICT\n" );
 		} else {

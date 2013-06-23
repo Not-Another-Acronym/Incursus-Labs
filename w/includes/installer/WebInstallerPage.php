@@ -199,7 +199,7 @@ class WebInstaller_Language extends WebInstallerPage {
 				$this->parent->showError( $msg, $wgLang->formatTimePeriod( $lifetime ) );
 			} else {
 				if ( isset( $languages[$userLang] ) ) {
-					$this->setVar( '_UserLang', $userLang );
+					$this->setVar( '_wiki_UserLang', $userLang );
 				}
 				if ( isset( $languages[$contLang] ) ) {
 					$this->setVar( 'wgLanguageCode', $contLang );
@@ -216,7 +216,7 @@ class WebInstaller_Language extends WebInstallerPage {
 		$this->parent->setSession( 'test', true );
 
 		if ( !isset( $languages[$userLang] ) ) {
-			$userLang = $this->getVar( '_UserLang', 'en' );
+			$userLang = $this->getVar( '_wiki_UserLang', 'en' );
 		}
 		if ( !isset( $languages[$contLang] ) ) {
 			$contLang = $this->getVar( 'wgLanguageCode', 'en' );
@@ -377,9 +377,9 @@ class WebInstaller_ExistingWiki extends WebInstallerPage {
 		}
 
 		if ( isset( $vars['wgDBadminuser'] ) ) {
-			$this->setVar( '_InstallUser', $vars['wgDBadminuser'] );
+			$this->setVar( '_Installwiki_User', $vars['wgDBadminuser'] );
 		} else {
-			$this->setVar( '_InstallUser', $vars['wgDBuser'] );
+			$this->setVar( '_Installwiki_User', $vars['wgDBuser'] );
 		}
 		if ( isset( $vars['wgDBadminpassword'] ) ) {
 			$this->setVar( '_InstallPassword', $vars['wgDBadminpassword'] );
@@ -764,7 +764,7 @@ class WebInstaller_Name extends WebInstallerPage {
 			$cname = $name;
 			$retVal = false;
 		} else {
-			$cname = User::getCanonicalName( $name, 'creatable' );
+			$cname = wiki_User::getCanonicalName( $name, 'creatable' );
 			if ( $cname === false ) {
 				$this->parent->showError( 'config-admin-name-invalid', $name );
 				$retVal = false;
@@ -776,7 +776,7 @@ class WebInstaller_Name extends WebInstallerPage {
 		// Validate password
 		$msg = false;
 		$pwd = $this->getVar( '_AdminPassword' );
-		$user = User::newFromName( $cname );
+		$user = wiki_User::newFromName( $cname );
 		$valid = $user && $user->getPasswordValidity( $pwd );
 		if ( strval( $pwd ) === '' ) {
 			# $user->getPasswordValidity just checks for $wgMinimalPasswordLength.
@@ -829,7 +829,7 @@ class WebInstaller_Options extends WebInstallerPage {
 		$emailwrapperStyle = $this->getVar( 'wgEnableEmail' ) ? '' : 'display: none';
 		$this->startForm();
 		$this->addHTML(
-			# User Rights
+			# wiki_User Rights
 			$this->parent->getRadioSet( array(
 				'var' => '_RightsProfile',
 				'label' => 'config-profile',
@@ -864,12 +864,12 @@ class WebInstaller_Options extends WebInstallerPage {
 			) ) .
 			$this->parent->getHelpBox( 'config-email-sender-help' ) .
 			$this->parent->getCheckBox( array(
-				'var' => 'wgEnableUserEmail',
+				'var' => 'wgEnablewiki_UserEmail',
 				'label' => 'config-email-user',
 			) ) .
 			$this->parent->getHelpBox( 'config-email-user-help' ) .
 			$this->parent->getCheckBox( array(
-				'var' => 'wgEnotifUserTalk',
+				'var' => 'wgEnotifwiki_UserTalk',
 				'label' => 'config-email-usertalk',
 			) ) .
 			$this->parent->getHelpBox( 'config-email-usertalk-help' ) .
@@ -1004,7 +1004,7 @@ class WebInstaller_Options extends WebInstallerPage {
 			wfArrayToCGI( array(
 				'partner' => 'MediaWiki',
 				'exit_url' => $exitUrl,
-				'lang' => $this->getVar( '_UserLang' ),
+				'lang' => $this->getVar( '_wiki_UserLang' ),
 				'stylesheet' => $styleUrl,
 			) );
 		return $iframeUrl;
@@ -1073,7 +1073,7 @@ class WebInstaller_Options extends WebInstallerPage {
 	public function submit() {
 		$this->parent->setVarsFromRequest( array( '_RightsProfile', '_LicenseCode',
 			'wgEnableEmail', 'wgPasswordSender', 'wgEnableUploads', 'wgLogo',
-			'wgEnableUserEmail', 'wgEnotifUserTalk', 'wgEnotifWatchlist',
+			'wgEnablewiki_UserEmail', 'wgEnotifwiki_UserTalk', 'wgEnotifWatchlist',
 			'wgEmailAuthentication', 'wgMainCacheType', '_MemCachedServers',
 			'wgUseInstantCommons' ) );
 

@@ -160,9 +160,9 @@ $specialPageAliases = array(
 	'Unusedimages'              => array( 'Ubrugte_filer' ),
 	'Unusedtemplates'           => array( 'Ubrugte_skabeloner' ),
 	'Unwatchedpages'            => array( 'Uovervågede_sider' ),
-	'Userlogin'                 => array( 'Log_på', 'Brugerlogind' ),
-	'Userlogout'                => array( 'Log_ud', 'Brugerlogud' ),
-	'Userrights'                => array( 'Brugerrettigheder' ),
+	'wiki_Userlogin'                 => array( 'Log_på', 'Brugerlogind' ),
+	'wiki_Userlogout'                => array( 'Log_ud', 'Brugerlogud' ),
+	'wiki_Userrights'                => array( 'Brugerrettigheder' ),
 	'Wantedcategories'          => array( 'Ønskede_kategorier' ),
 	'Wantedfiles'               => array( 'Ønskede_filer' ),
 	'Wantedpages'               => array( 'Ønskede_sider' ),
@@ -187,7 +187,7 @@ $dateFormats = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Understreg henvisninger:',
 'tog-justify' => 'Vis afsnit med lige marginer',
 'tog-hideminor' => 'Skjul mindre ændringer i listen over seneste ændringer',
@@ -527,7 +527,7 @@ Databasen returnerede fejlen "$3: $4"',
 Den sandsynlige årsag er at du har fulgt et forældet link til en forskel eller en gammel version af en side der er blevet slettet.
 
 Hvis det ikke er tilfældet, har du muligvis fundet en software-fejl.
-Gør venligst en [[Special:ListUsers/sysop|administrator]] opmærksom på det, og husk at fortælle hvilken URL du har fulgt.',
+Gør venligst en [[Special:Listwiki_Users/sysop|administrator]] opmærksom på det, og husk at fortælle hvilken URL du har fulgt.',
 'missingarticle-rev' => '(versionsnummer: $1)',
 'missingarticle-diff' => '(Forskel: $1, $2)',
 'readonly_lag' => 'Databasen er automatisk blevet låst mens slave database serverne synkronisere med master databasen',
@@ -576,7 +576,7 @@ $2',
 'customcssprotected' => 'Du har ikke tilladelse til at redigere denne CSS-side, da den indeholder en anden brugers personlige indstillinger.',
 'customjsprotected' => 'Du har ikke tilladelse til at redigere denne JavaScript-side, da den indeholder en anden brugers personlige indstillinger.',
 'ns-specialprotected' => 'Sider i navnerummet {{ns:special}} kan ikke redigeres.',
-'titleprotected' => "Dette sidenavn er beskyttet mod oprettelse af [[User:$1|$1]]. Begrundelsen for beskyttelsen er ''$2''.",
+'titleprotected' => "Dette sidenavn er beskyttet mod oprettelse af [[wiki_User:$1|$1]]. Begrundelsen for beskyttelsen er ''$2''.",
 'filereadonlyerror' => 'Ude af stand til at redigere filen "$1", fordi fildatabasen "$2" er skrivebeskyttet.
 
 Administratoren, som skrivebeskyttede den, gav følgende begrundelse: "$3".',
@@ -593,7 +593,7 @@ Administratoren, som skrivebeskyttede den, gav følgende begrundelse: "$3".',
 # Login and logout pages
 'logouttext' => "'''Du er nu logget af.'''
 
-Du kan fortsætte med at bruge {{SITENAME}} anonymt, eller du kan [[Special:UserLogin|logge på igen]] som den samme eller en anden bruger.
+Du kan fortsætte med at bruge {{SITENAME}} anonymt, eller du kan [[Special:wiki_UserLogin|logge på igen]] som den samme eller en anden bruger.
 Bemærk, at nogle sider stadigvæk kan vises som om du var logget på, indtil du tømmer din browsers cache.",
 'welcomecreation' => '== Velkommen, $1! ==
 
@@ -636,7 +636,7 @@ Sørg for, at du har aktivereret cookies, genindlæs siden og prøv igen.',
 'loginsuccess' => "'''Du er nu logget på {{SITENAME}} som \"\$1\".'''",
 'nosuchuser' => 'Der er ingen bruger med navnet "$1".
 Der skelnes mellem store og bogstaver i brugernavne.
-Kontrollér stavemåden, eller [[Special:UserLogin/signup|opret en ny konto]].',
+Kontrollér stavemåden, eller [[Special:wiki_UserLogin/signup|opret en ny konto]].',
 'nosuchusershort' => 'Der er ingen bruger ved navn "$1". Tjek din stavning.',
 'nouserspecified' => 'Angiv venligst et brugernavn.',
 'login-userblocked' => 'Denne bruger er blokeret. Login er ikke tilladt',
@@ -829,7 +829,7 @@ Angiv venligst alle de ovenstående detaljer ved eventuelle henvendelser.',
 'loginreqlink' => 'logge på',
 'loginreqpagetext' => 'Du skal $1 for at se andre sider.',
 'accmailtitle' => 'Adgangskode sendt.',
-'accmailtext' => "En tilfældigt dannet adgangskode for [[User talk:$1|$1]] er sendt til $2.
+'accmailtext' => "En tilfældigt dannet adgangskode for [[wiki_User talk:$1|$1]] er sendt til $2.
 
 Adgangskoden for denne ny brugerkonto kan ændres på ''[[Special:ChangePassword|skift   adgangskode]]'', når du logger ind.",
 'newarticle' => '(Ny)',
@@ -840,7 +840,7 @@ Hvis du er her ved en fejl, så tryk på din browsers '''tilbage'''-knap.",
 'anontalkpagetext' => "---- ''Dette er en diskussionsside for en anonym bruger, der ikke har oprettet en konto endnu eller ikke bruger den.
 Vi er derfor nødt til at bruge den numeriske IP-adresse til at identificere ham eller hende.
 En IP-adresse kan være delt mellem flere brugere.
-Hvis du er en anonym bruger og synes, at du har fået irrelevante kommentarer på sådan en side, så vær venlig at [[Special:UserLogin/signup|oprette en brugerkonto]] og [[Special:UserLogin|logge på]], så vi undgår fremtidige forvekslinger med andre anonyme brugere.''",
+Hvis du er en anonym bruger og synes, at du har fået irrelevante kommentarer på sådan en side, så vær venlig at [[Special:wiki_UserLogin/signup|oprette en brugerkonto]] og [[Special:wiki_UserLogin|logge på]], så vi undgår fremtidige forvekslinger med andre anonyme brugere.''",
 'noarticletext' => 'Der er i øjeblikket ikke nogen tekst på denne side.
 Du kan [[Special:Search/{{PAGENAME}}|søge efter sidenavnet]] på andre sider,
 <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} søge i relaterede logger]
@@ -933,7 +933,7 @@ Den seneste logpost vises nedenfor:",
 'hiddencategories' => 'Denne side er i {{PLURAL:$1|en skjult kategori|$1 skjulte kategorier}}:',
 'edittools' => '<!-- Denne tekst vises under formularen „Ændre“ samt "Upload". -->',
 'nocreatetitle' => 'Oprettelse af nye sider er begrænset.',
-'nocreatetext' => 'Serveren har begrænset oprettelse af nye sider. Bestående sider kan ændres eller [[Special:UserLogin|logge på]].',
+'nocreatetext' => 'Serveren har begrænset oprettelse af nye sider. Bestående sider kan ændres eller [[Special:wiki_UserLogin|logge på]].',
 'nocreate-loggedin' => 'Du har ikke rettigheder til at oprette nye sider.',
 'sectioneditnotsupported-title' => 'Afsnitsredigering understøttes ikke',
 'sectioneditnotsupported-text' => 'Afsnitsredigering understøttes ikke på denne side.',
@@ -979,11 +979,11 @@ Der bør være færre end {{PLURAL:$2|$2 kald}}, lige nu er der {{PLURAL:$1|$1 k
 Kontroller venligst sammenligningen herunder for at bekræfte at det er hvad du ønsker at gøre, og gem så ændringerne for at fuldføre fjernelsen.',
 'undo-failure' => 'Redigeringen kunne ikke fjernes på grund af konflikter med efterfølgende redigeringer.',
 'undo-norev' => 'Redigeringen kunne ikke fjernes fordi den ikke findes eller er blevet slettet.',
-'undo-summary' => 'Fjerner version $1 af [[Special:Contributions/$2|$2]] ([[User talk:$2|diskussion]])',
+'undo-summary' => 'Fjerner version $1 af [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|diskussion]])',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'Brugerkontoen kan ikke oprettes.',
-'cantcreateaccount-text' => "Oprettelsen af en brugerkonto fra IP-adressen <b>$1</b> er spærret af [[User:$3|$3]]. Årsagen til blokeringen er angivet som ''$2''",
+'cantcreateaccount-text' => "Oprettelsen af en brugerkonto fra IP-adressen <b>$1</b> er spærret af [[wiki_User:$3|$3]]. Årsagen til blokeringen er angivet som ''$2''",
 
 # History pages
 'viewpagelogs' => 'Vis loglister for denne side',
@@ -1240,7 +1240,7 @@ Du kan prøve at bruge \"all:\" som præfiks for at søge i alt indhold (inkl. d
 'mypreferences' => 'Indstillinger',
 'prefs-edits' => 'Antal redigeringer:',
 'prefsnologin' => 'Ikke logget på',
-'prefsnologintext' => 'Du skal være <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} logget på]</span> for at ændre brugerindstillinger.',
+'prefsnologintext' => 'Du skal være <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} logget på]</span> for at ændre brugerindstillinger.',
 'changepassword' => 'Skift adgangskode',
 'prefs-skin' => 'Udseende',
 'skin-preview' => 'Forhåndsvisning',
@@ -1351,16 +1351,16 @@ Hvis du vælger at oplyse dit navn, vil det blive brugt til at tilskrive dig dit
 'prefs-displaywatchlist' => 'Visningsmuligheder',
 'prefs-diffs' => 'Forskelle',
 
-# User preference: e-mail validation using jQuery
+# wiki_User preference: e-mail validation using jQuery
 'email-address-validity-valid' => 'E-mailadressen ser ud til at være gyldig',
 'email-address-validity-invalid' => 'Indtast en gyldig e-mail adresse',
 
-# User rights
+# wiki_User rights
 'userrights' => 'Håndtering af brugerrettigheder',
 'userrights-lookup-user' => 'Administrér brugergrupper',
 'userrights-user-editname' => 'Skriv et brugernavn:',
 'editusergroup' => 'Redigér brugergrupper',
-'editinguser' => "Ændrer brugerrettigheder for brugeren '''[[User:$1|$1]]''' $2",
+'editinguser' => "Ændrer brugerrettigheder for brugeren '''[[wiki_User:$1|$1]]''' $2",
 'userrights-editusergroup' => 'Redigér brugergrupper',
 'saveusergroups' => 'Gem brugergrupper',
 'userrights-groupsmember' => 'Medlem af:',
@@ -1372,7 +1372,7 @@ Hvis du vælger at oplyse dit navn, vil det blive brugt til at tilskrive dig dit
 'userrights-reason' => 'Årsag:',
 'userrights-no-interwiki' => 'Du kan ikke ændre brugerrettigheder på andre wikier.',
 'userrights-nodatabase' => 'Databasen $1 eksisterer ikke lokalt.',
-'userrights-nologin' => 'Du skal [[Special:UserLogin|logge på]] med en administrativ konto, før du kan ændre brugerettigheder.',
+'userrights-nologin' => 'Du skal [[Special:wiki_UserLogin|logge på]] med en administrativ konto, før du kan ændre brugerettigheder.',
 'userrights-notallowed' => 'Din konto har ikke adgang til at tilføje eller fjerne brugerrettigheder.',
 'userrights-changeable-col' => 'Redigerbare grupper',
 'userrights-unchangeable-col' => 'Uredigerbare grupper',
@@ -1463,7 +1463,7 @@ Hvis du vælger at oplyse dit navn, vil det blive brugt til at tilskrive dig dit
 'right-sendemail' => 'Sende e-mail til andre brugere',
 'right-passwordreset' => 'Se emails til nulstilling af adgangskoder',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Rettighedslog',
 'rightslogtext' => 'Dette er en log over ændringer i brugeres rettigheder.',
 'rightslogentry' => 'ændrede grupperettigheder for „$1“ fra „$2“ til „$3“.',
@@ -1560,7 +1560,7 @@ Hvis du vælger at oplyse dit navn, vil det blive brugt til at tilskrive dig dit
 'reuploaddesc' => 'Tilbage til formularen til at lægge filer op.',
 'upload-tryagain' => 'Gem modificeret filbeskrivelse',
 'uploadnologin' => 'Ikke logget på',
-'uploadnologintext' => 'Du skal være [[Special:UserLogin|logget på]] for at kunne lægge filer op.',
+'uploadnologintext' => 'Du skal være [[Special:wiki_UserLogin|logget på]] for at kunne lægge filer op.',
 'upload_directory_missing' => 'upload-kataloget ($1) findes ikke. Webserveren har ikke mulighed for at oprette kataloget.',
 'upload_directory_read_only' => 'Webserveren har ingen skriverettigheder for upload-kataloget ($1).',
 'uploaderror' => 'Fejl under oplægning af fil',
@@ -1689,7 +1689,7 @@ $1',
 'upload-proto-error-text' => 'Adressen skal begynde med <code>http://</code> eller <code>ftp://</code>.',
 'upload-file-error' => 'Intern fejl',
 'upload-file-error-text' => 'Ved oprettelse af en midlertidig fil på serveren, er der sket en fejl.
-Informer venligst en [[Special:ListUsers/sysop|systemadministrator]].',
+Informer venligst en [[Special:Listwiki_Users/sysop|systemadministrator]].',
 'upload-misc-error' => 'Ukendt fejl ved upload',
 'upload-misc-error-text' => 'Ved upload er der sket en ukendt fejl. Kontroller adressen for fejl, sidens onlinestatus og forsøg igen. Hvis problemet fortsætter, informeres en system-administrator.',
 'upload-too-many-redirects' => "URL'en indeholdt for mange omdirigeringer",
@@ -1928,7 +1928,7 @@ Husk at kontrollere for andre henvisninger til skabelonerne før de slettes.',
 'statistics-views-total' => 'Visninger i alt',
 'statistics-views-total-desc' => 'Visninger på ikke-eksisterende sider og special sider er ikke inkluderet',
 'statistics-views-peredit' => 'Visninger per redigering',
-'statistics-users' => 'Registrerede [[Special:ListUsers|brugere]]',
+'statistics-users' => 'Registrerede [[Special:Listwiki_Users|brugere]]',
 'statistics-users-active' => 'Aktive brugere',
 'statistics-users-active-desc' => 'Brugere som har udført handlinger i {{PLURAL:$1|det sidste døgn|de sidste $1 dage}}',
 'statistics-mostpopular' => 'Mest besøgte sider',
@@ -2095,13 +2095,13 @@ Understøttede protokoller: <code>$1</code> (bruger automatisk http:// hvis der 
 'linksearch-line' => '$2 linker til $1',
 'linksearch-error' => 'Wildcards må kun benyttes i starten af hostnavnet.',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => 'Vis brugere fra:',
 'listusers-submit' => 'Vis',
 'listusers-noresult' => 'Ingen bruger fundet.',
 'listusers-blocked' => '(blokeret)',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'Liste over aktive brugere',
 'activeusers-intro' => 'Dette er en liste over brugere, som har haft en eller anden form for aktivitet inden for {{PLURAL:$1|den|de}} seneste {{PLURAL:$1|dag|$1 dage}}.',
 'activeusers-count' => '$1 {{PLURAL:$1|handling|handlinger}} i {{PLURAL:$3|det seneste døgn|de seneste $3 dage}}',
@@ -2136,7 +2136,7 @@ Der findes muligvis [[{{MediaWiki:Listgrouprights-helppage}}|yderligere informat
 
 # E-mail user
 'mailnologin' => 'Du er ikke logget på',
-'mailnologintext' => 'Du skal være [[Special:UserLogin|logget på]] og have en gyldig e-mailadresse sat i dine [[Special:Preferences|indstillinger]] for at sende e-mail til andre brugere.',
+'mailnologintext' => 'Du skal være [[Special:wiki_UserLogin|logget på]] og have en gyldig e-mailadresse sat i dine [[Special:Preferences|indstillinger]] for at sende e-mail til andre brugere.',
 'emailuser' => 'E-mail til denne bruger',
 'emailuser-title-target' => 'Send email til denne {{GENDER:$1|bruger}}',
 'emailuser-title-notarget' => 'Send email til en bruger',
@@ -2167,7 +2167,7 @@ Den e-mail-adresse, du har angivet i [[Special:Preferences|dine indstillinger]],
 'emailsenttext' => 'Din e-mail er blevet sendt.',
 'emailuserfooter' => 'Denne e-mail er sendt af $1 til $2 ved hjælp af funktionen "E-mail til denne bruger" på {{SITENAME}}.',
 
-# User Messenger
+# wiki_User Messenger
 'usermessage-summary' => 'Efterlader system besked.',
 'usermessage-editor' => 'System messenger',
 
@@ -2178,7 +2178,7 @@ Den e-mail-adresse, du har angivet i [[Special:Preferences|dine indstillinger]],
 'nowatchlist' => 'Du har ingenting i din overvågningsliste.',
 'watchlistanontext' => 'Du skal $1, for at se din overvågningsliste eller ændre indholdet af den.',
 'watchnologin' => 'Ikke logget på',
-'watchnologintext' => 'Du skal være [[Special:UserLogin|logget på]] for at kunne ændre din overvågningsliste.',
+'watchnologintext' => 'Du skal være [[Special:wiki_UserLogin|logget på]] for at kunne ændre din overvågningsliste.',
 'addwatch' => 'Tilføj til overvågningsliste',
 'addedwatchtext' => 'Siden "[[:$1]]" er blevet tilføjet til din [[Special:Watchlist|overvågningsliste]].
 Fremtidige ændringer af denne side og dens tilknyttede diskussionsside vil blive vist der.',
@@ -2286,13 +2286,13 @@ Bekræft venligst at du virkelig vil gøre dette, at du forstår konsekvenserne,
 'rollbacklinkcount-morethan' => 'tilbagefør mere end $1 {{PLURAL:$1|redigering|redigeringer}}',
 'rollbackfailed' => 'Kunne ikke fjerne redigeringen',
 'cantrollback' => 'Kan ikke fjerne redigering; den sidste bruger er den eneste forfatter.',
-'alreadyrolled' => 'Kan ikke fjerne den seneste redigering af [[:$1]] foretaget af [[User:$2|$2]] ([[User talk:$2|diskussion]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]);
+'alreadyrolled' => 'Kan ikke fjerne den seneste redigering af [[:$1]] foretaget af [[wiki_User:$2|$2]] ([[wiki_User talk:$2|diskussion]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]);
 en anden har allerede redigeret siden eller fjernet redigeringen.
 
-Den seneste redigering er foretaget af [[User:$3|$3]] ([[User talk:$3|diskussion]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
+Den seneste redigering er foretaget af [[wiki_User:$3|$3]] ([[wiki_User talk:$3|diskussion]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
 'editcomment' => "Redigeringsbeskrivelsen var: \"''\$1''\".",
-'revertpage' => 'Gendannelse til seneste version ved [[User:$1|$1]], fjerner ændringer fra [[Special:Contributions/$2|$2]] ([[User talk:$2|diskussion]])',
-'revertpage-nouser' => 'Gendannet til seneste version af [[User:$1|$1]], ændringer fra (brugernavn fjernet) fjernet',
+'revertpage' => 'Gendannelse til seneste version ved [[wiki_User:$1|$1]], fjerner ændringer fra [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|diskussion]])',
+'revertpage-nouser' => 'Gendannet til seneste version af [[wiki_User:$1|$1]], ændringer fra (brugernavn fjernet) fjernet',
 'rollback-success' => 'Ændringerne fra $1 er fjernet,
 og den seneste version af $2 er gendannet.',
 
@@ -2520,7 +2520,7 @@ Se [[Special:BlockList|blokeringslisten]] for alle blokeringer.',
 'unblockip' => 'Ophæv blokering af bruger',
 'unblockiptext' => 'Brug formularen herunder for at gendanne skriveadgangen for en tidligere blokeret IP-adresse eller bruger.',
 'ipusubmit' => 'Ophæv blokeringen',
-'unblocked' => '[[User:$1|$1]] blev frigivet',
+'unblocked' => '[[wiki_User:$1|$1]] blev frigivet',
 'unblocked-range' => '$1 er fjernet fra blokering',
 'unblocked-id' => 'Blokering $1 er blevet fjernet',
 'blocklist' => 'Blokerede brugere',
@@ -2553,7 +2553,7 @@ Se [[Special:BlockList|blokeringslisten]] for alle blokeringer.',
 'change-blocklink' => 'ændr blokering',
 'contribslink' => 'bidrag',
 'emaillink' => 'send e-mail',
-'autoblocker' => 'Du er automatisk blokeret, fordi du deler IP-adresse med "[[User:$1|$1]]".
+'autoblocker' => 'Du er automatisk blokeret, fordi du deler IP-adresse med "[[wiki_User:$1|$1]]".
 Begrundelse: "$2".',
 'blocklogpage' => 'Blokeringslog',
 'blocklog-showlog' => 'Denne bruger er tidligere blevet blokeret.
@@ -2638,7 +2638,7 @@ I disse tilfælde er du nødt til at flytte eller sammenflette siden manuelt.",
 'movearticle' => 'Flyt side',
 'moveuserpage-warning' => "'''Advarsel:''' Du er ved at flytte en brugerside. Bemærk at det kun er siden, der vil blive flyttet – brugeren bliver ''ikke'' omdøbt.",
 'movenologin' => 'Ikke logget på',
-'movenologintext' => 'Du skal være registreret bruger og [[Special:UserLogin|logget på]] for at flytte en side.',
+'movenologintext' => 'Du skal være registreret bruger og [[Special:wiki_UserLogin|logget på]] for at flytte en side.',
 'movenotallowed' => 'Du har ikke rettigheder til at flytte sider.',
 'movenotallowedfile' => 'Du har ikke tilladelse til at flytte filer.',
 'cant-move-user-page' => 'Du har ikke tilladelse til at flytte brugersider (bortset fra undersider).',
@@ -3526,10 +3526,10 @@ Denne bekræftelseskode vil udløbe den $4.',
 'deletedwhileediting' => 'Bemærk: Det blev forsøgt at slette denne side, efter at du var begyndt, at ændre den!
 Kig i [{{fullurl:Special:Log|type=delete&page=}}{{FULLPAGENAMEE}} slette-loggen],
 hvorfor siden blev slettet. Hvis du gemmer siden bliver den oprettet igen.',
-'confirmrecreate' => "Bruger [[User:$1|$1]] ([[User talk:$1|Diskussion]]) har slettet denne side, efter at du begyndte at ændre den. Begrundelsen lyder:
+'confirmrecreate' => "Bruger [[wiki_User:$1|$1]] ([[wiki_User talk:$1|Diskussion]]) har slettet denne side, efter at du begyndte at ændre den. Begrundelsen lyder:
 : ''$2''
 Bekræft venligst, at du virkelig vil oprette denne side igen.",
-'confirmrecreate-noreason' => '[[User:$1|$1]] ([[User talk:$1|diskussion]]) har slettet denne side, efter du begyndte at redigere. Bekræft venligst, at du gerne vil genoprette siden.',
+'confirmrecreate-noreason' => '[[wiki_User:$1|$1]] ([[wiki_User talk:$1|diskussion]]) har slettet denne side, efter du begyndte at redigere. Bekræft venligst, at du gerne vil genoprette siden.',
 'recreate' => 'Opret igen',
 
 # action=purge

@@ -35,7 +35,7 @@ class Protect extends Maintenance {
 		$this->addOption( 'unprotect', 'Removes protection' );
 		$this->addOption( 'semiprotect', 'Adds semi-protection' );
 		$this->addOption( 'cascade', 'Add cascading protection' );
-		$this->addOption( 'user', 'Username to protect with', false, true, 'u' );
+		$this->addOption( 'user', 'wiki_Username to protect with', false, true, 'u' );
 		$this->addOption( 'reason', 'Reason for un/protection', false, true, 'r' );
 		$this->addArg( 'title', 'Title to protect', true );
 	}
@@ -53,7 +53,7 @@ class Protect extends Maintenance {
 			$protection = "";
 		}
 
-		$user = User::newFromName( $userName );
+		$user = wiki_User::newFromName( $userName );
 		if ( !$user ) {
 			$this->error( "Invalid username", true );
 		}

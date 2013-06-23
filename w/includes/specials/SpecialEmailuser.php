@@ -26,7 +26,7 @@
  *
  * @ingroup SpecialPage
  */
-class SpecialEmailUser extends UnlistedSpecialPage {
+class SpecialEmailwiki_User extends UnlistedSpecialPage {
 	protected $mTarget;
 
 	public function __construct() {
@@ -35,7 +35,7 @@ class SpecialEmailUser extends UnlistedSpecialPage {
 
 	public function getDescription() {
 		$target = self::getTarget( $this->mTarget );
-		if( !$target instanceof User ) {
+		if( !$target instanceof wiki_User ) {
 			return $this->msg( 'emailuser-title-notarget' )->text();
 		}
 
@@ -114,7 +114,7 @@ class SpecialEmailUser extends UnlistedSpecialPage {
 			case 'badaccess':
 				throw new PermissionsError( 'sendemail' );
 			case 'blockedemailuser':
-				throw new UserBlockedError( $this->getUser()->mBlock );
+				throw new wiki_UserBlockedError( $this->getUser()->mBlock );
 			case 'actionthrottledtext':
 				throw new ThrottledError;
 			case 'mailnologin':
@@ -127,7 +127,7 @@ class SpecialEmailUser extends UnlistedSpecialPage {
 		}
 		// Got a valid target user name? Else ask for one.
 		$ret = self::getTarget( $this->mTarget );
-		if( !$ret instanceof User ) {
+		if( !$ret instanceof wiki_User ) {
 			if( $this->mTarget != '' ) {
 				$ret = ( $ret == 'notarget' ) ? 'emailnotarget' : ( $ret . 'text' );
 				$out->wrapWikiMsg( "<p class='error'>$1</p>", $ret );
@@ -146,7 +146,7 @@ class SpecialEmailUser extends UnlistedSpecialPage {
 		$form->setWrapperLegendMsg( 'email-legend' );
 		$form->loadData();
 
-		if( !wfRunHooks( 'EmailUserForm', array( &$form ) ) ) {
+		if( !wfRunHooks( 'Emailwiki_UserForm', array( &$form ) ) ) {
 			return false;
 		}
 
@@ -160,10 +160,10 @@ class SpecialEmailUser extends UnlistedSpecialPage {
 	}
 
 	/**
-	 * Validate target User
+	 * Validate target wiki_User
 	 *
 	 * @param $target String: target user name
-	 * @return User object on success or a string on error
+	 * @return wiki_User object on success or a string on error
 	 */
 	public static function getTarget( $target ) {
 		if ( $target == '' ) {
@@ -171,15 +171,15 @@ class SpecialEmailUser extends UnlistedSpecialPage {
 			return 'notarget';
 		}
 
-		$nu = User::newFromName( $target );
-		if( !$nu instanceof User || !$nu->getId() ) {
+		$nu = wiki_User::newFromName( $target );
+		if( !$nu instanceof wiki_User || !$nu->getId() ) {
 			wfDebug( "Target is invalid user.\n" );
 			return 'notarget';
 		} elseif ( !$nu->isEmailConfirmed() ) {
-			wfDebug( "User has no valid email.\n" );
+			wfDebug( "wiki_User has no valid email.\n" );
 			return 'noemail';
 		} elseif ( !$nu->canReceiveEmail() ) {
-			wfDebug( "User does not allow user emails.\n" );
+			wfDebug( "wiki_User does not allow user emails.\n" );
 			return 'nowikiemail';
 		}
 
@@ -189,13 +189,13 @@ class SpecialEmailUser extends UnlistedSpecialPage {
 	/**
 	 * Check whether a user is allowed to send email
 	 *
-	 * @param $user User object
+	 * @param $user wiki_User object
 	 * @param $editToken String: edit token
 	 * @return null on success or string on error
 	 */
 	public static function getPermissionsError( $user, $editToken ) {
-		global $wgEnableEmail, $wgEnableUserEmail;
-		if( !$wgEnableEmail || !$wgEnableUserEmail ) {
+		global $wgEnableEmail, $wgEnablewiki_UserEmail;
+		if( !$wgEnableEmail || !$wgEnablewiki_UserEmail ) {
 			return 'usermaildisabled';
 		}
 
@@ -208,7 +208,7 @@ class SpecialEmailUser extends UnlistedSpecialPage {
 		}
 
 		if( $user->isBlockedFromEmailuser() ) {
-			wfDebug( "User is blocked from sending e-mail.\n" );
+			wfDebug( "wiki_User is blocked from sending e-mail.\n" );
 			return "blockedemailuser";
 		}
 
@@ -218,8 +218,8 @@ class SpecialEmailUser extends UnlistedSpecialPage {
 		}
 
 		$hookErr = false;
-		wfRunHooks( 'UserCanSendEmail', array( &$user, &$hookErr ) );
-		wfRunHooks( 'EmailUserPermissionsErrors', array( $user, $editToken, &$hookErr ) );
+		wfRunHooks( 'wiki_UserCanSendEmail', array( &$user, &$hookErr ) );
+		wfRunHooks( 'Emailwiki_UserPermissionsErrors', array( $user, $editToken, &$hookErr ) );
 		if ( $hookErr ) {
 			return $hookErr;
 		}
@@ -264,13 +264,13 @@ class SpecialEmailUser extends UnlistedSpecialPage {
 	 * idea to check the edit token and ping limiter in advance.
 	 *
 	 * @return Mixed: Status object, or potentially a String on error
-	 * or maybe even true on success if anything uses the EmailUser hook.
+	 * or maybe even true on success if anything uses the Emailwiki_User hook.
 	 */
 	public static function submit( array $data, IContextSource $context ) {
-		global $wgUserEmailUseReplyTo;
+		global $wgwiki_UserEmailUseReplyTo;
 
 		$target = self::getTarget( $data['Target'] );
-		if( !$target instanceof User ) {
+		if( !$target instanceof wiki_User ) {
 			return $context->msg( $target . 'text' )->parseAsBlock();
 		}
 		$to = new MailAddress( $target );
@@ -284,11 +284,11 @@ class SpecialEmailUser extends UnlistedSpecialPage {
 			$from->name, $to->name )->inContentLanguage()->text();
 
 		$error = '';
-		if( !wfRunHooks( 'EmailUser', array( &$to, &$from, &$subject, &$text, &$error ) ) ) {
+		if( !wfRunHooks( 'Emailwiki_User', array( &$to, &$from, &$subject, &$text, &$error ) ) ) {
 			return $error;
 		}
 
-		if( $wgUserEmailUseReplyTo ) {
+		if( $wgwiki_UserEmailUseReplyTo ) {
 			// Put the generic wiki autogenerated address in the From:
 			// header and reserve the user for Reply-To.
 			//
@@ -316,7 +316,7 @@ class SpecialEmailUser extends UnlistedSpecialPage {
 			$replyTo = null;
 		}
 
-		$status = UserMailer::send( $to, $mailFrom, $subject, $text, $replyTo );
+		$status = wiki_UserMailer::send( $to, $mailFrom, $subject, $text, $replyTo );
 
 		if( !$status->isGood() ) {
 			return $status;
@@ -327,12 +327,12 @@ class SpecialEmailUser extends UnlistedSpecialPage {
 			if ( $data['CCMe'] && $to != $from ) {
 				$cc_subject = $context->msg( 'emailccsubject' )->rawParams(
 					$target->getName(), $subject )->text();
-				wfRunHooks( 'EmailUserCC', array( &$from, &$from, &$cc_subject, &$text ) );
-				$ccStatus = UserMailer::send( $from, $from, $cc_subject, $text );
+				wfRunHooks( 'Emailwiki_UserCC', array( &$from, &$from, &$cc_subject, &$text ) );
+				$ccStatus = wiki_UserMailer::send( $from, $from, $cc_subject, $text );
 				$status->merge( $ccStatus );
 			}
 
-			wfRunHooks( 'EmailUserComplete', array( $to, $from, $subject, $text ) );
+			wfRunHooks( 'Emailwiki_UserComplete', array( $to, $from, $subject, $text ) );
 			return $status;
 		}
 	}

@@ -345,7 +345,7 @@ if ($numusers < 1) {
 	close $mdump or die qq{Could not close "$MYSQLDUMPFILE": $!\n};
 	exit;
 }
-print "\n-- Users loaded: $numusers\n\n-- Loading rest of the mediawiki schema:\n";
+print "\n-- wiki_Users loaded: $numusers\n\n-- Loading rest of the mediawiki schema:\n";
 
 warn qq{Dumping all other tables from the MySQL schema\n} if $verbose;
 

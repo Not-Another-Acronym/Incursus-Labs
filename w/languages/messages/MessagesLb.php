@@ -133,9 +133,9 @@ $specialPageAliases = array(
 	'Unusedtemplates'           => array( 'Onbenotzte_Schablounen' ),
 	'Unwatchedpages'            => array( 'Säiten_déi_net_iwwerwaacht_ginn' ),
 	'Upload'                    => array( 'Eroplueden' ),
-	'Userlogin'                 => array( 'Umellen' ),
-	'Userlogout'                => array( 'Ofmellen' ),
-	'Userrights'                => array( 'Benotzerrechter' ),
+	'wiki_Userlogin'                 => array( 'Umellen' ),
+	'wiki_Userlogout'                => array( 'Ofmellen' ),
+	'wiki_Userrights'                => array( 'Benotzerrechter' ),
 	'Version'                   => array( 'Versioun' ),
 	'Wantedcategories'          => array( 'Gewënschte_Kategorien' ),
 	'Wantedfiles'               => array( 'Gewënschte_Fichieren' ),
@@ -180,7 +180,7 @@ $magicWords = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Linken ënnersträichen:',
 'tog-justify' => "Ränner vum Text riichten (''justify'')",
 'tog-hideminor' => 'Verstopp kleng Ännerungen an de rezenten Ännerungen',
@@ -522,7 +522,7 @@ Den Administrateur huet dës Erklärung uginn: $1",
 Dat geschitt normalerweis duerch e Link op eng Säit déi geläscht oder geréckelt gouf.
 
 Wann dat net de Fall ass, hutt Dir eventuell e Feeler an der Software fonnt.
-Mellt dëst w.e.g. bei engem [[Special:ListUsers/sysop|Administrateur]] a vergiesst net d'URL unzeginn.",
+Mellt dëst w.e.g. bei engem [[Special:Listwiki_Users/sysop|Administrateur]] a vergiesst net d'URL unzeginn.",
 'missingarticle-rev' => '(Versiounsnummer: $1)',
 'missingarticle-diff' => '(Ënnerscheed tëscht Versiounen: $1, $2)',
 'readonly_lag' => "D'Datebank gouf automatesch gespaart fir datt d'Zweetserveren (slaves) nees mat dem Haaptserver (master) synchron geschalt kënne ginn.",
@@ -572,7 +572,7 @@ $2',
 'customcssprotected' => "Dir hutt net d'Recht dës CSS-Säit z'änneren, well dorop déi perséinlech Astellunge vun engem anere Benotzer gespäichert sinn.",
 'customjsprotected' => "Dir hutt net d'Recht dës JavaScript-Säit z'änneren, well dorop déi perséinlech Astellunge vun engem anere Benotzer gespäichert sinn.",
 'ns-specialprotected' => 'Spezialsäite kënnen net verännert ginn.',
-'titleprotected' => "Eng Säit mat dësem Numm kann net ugeluecht ginn. Dës Spär gouf vum [[User:$1|$1]] gemaach deen als Grond ''$2'' uginn huet.",
+'titleprotected' => "Eng Säit mat dësem Numm kann net ugeluecht ginn. Dës Spär gouf vum [[wiki_User:$1|$1]] gemaach deen als Grond ''$2'' uginn huet.",
 'invalidtitle-knownnamespace' => 'Net valabelen Titel mam Nummraum "$2" a mam Text "$3"',
 'invalidtitle-unknownnamespace' => 'Net valabelen Titel mat der onbekannter Nummraum-Zuel $1 a mam Text "$2"',
 'exception-nologin' => 'Net ageloggt',
@@ -586,7 +586,7 @@ $2',
 # Login and logout pages
 'logouttext' => "'''Dir sidd elo ausgeloggt.'''
 
-Dir kënnt {{SITENAME}} elo anonym benotzen, oder Iech [[Special:UserLogin|erëm aloggen]].
+Dir kënnt {{SITENAME}} elo anonym benotzen, oder Iech [[Special:wiki_UserLogin|erëm aloggen]].
 
 Opgepasst: Op verschiddene Säite kann et nach esou aus gesinn, wéi wann Dir nach ageloggt wiert, bis Dir Ärem Browser säin Tëschespäicher (cache) eidel maacht.",
 'welcomecreation' => '== Wëllkomm, $1! ==
@@ -635,7 +635,7 @@ Vergewëssert Iech datt Dir Cookien zouloosst, luet dës Säit nei a probéiert 
 'loginsuccess' => "'''Dir sidd elo als \"\$1\" op {{SITENAME}} ugemellt.'''",
 'nosuchuser' => 'Et gëtt kee Benotzernumm mam Numm "$1".
 Beim Benotzernumm gëtt tëschent groussen a klenge Buschtawen ënnerscheet (casesensitive).
-Kuckt w.e.g. op d\'Schreifweis richteg ass, oder [[Special:UserLogin/signup|maacht en neie Benotzerkont op]].',
+Kuckt w.e.g. op d\'Schreifweis richteg ass, oder [[Special:wiki_UserLogin/signup|maacht en neie Benotzerkont op]].',
 'nosuchusershort' => 'De Benotzernumm "$1" gëtt et net.
 Kuckt w.e.g. op d\'Schreifweis richteg ass.',
 'nouserspecified' => 'Gitt w.e.g. e Benotzernumm un.',
@@ -828,14 +828,14 @@ Et ka sinn datt e geännert oder geläscht gouf iwwerdeems wou Dir d'Säit gekuc
 'loginreqlink' => 'aloggen',
 'loginreqpagetext' => 'Dir musst Iech $1, fir aner Säite liesen zu kënnen.',
 'accmailtitle' => 'Passwuert gouf geschéckt.',
-'accmailtext' => "En zoufällegt Passwuert fir [[User talk:$1|$1]] gouf op $2 geschéckt.
+'accmailtext' => "En zoufällegt Passwuert fir [[wiki_User talk:$1|$1]] gouf op $2 geschéckt.
 
 D'Passwuert fir dësen neie Benotzerkont kann op der ''[[Special:ChangePassword|Passwuert ännere]]'' Säit beim Alogge geännert ginn.",
 'newarticle' => '(Nei)',
 'newarticletext' => "Dir hutt op e Link vun enger Säit geklickt, déi et nach net gëtt. Fir déi Säit unzeleeën, gitt w.e.g. Ären Text an déi Këscht hei drënner an (kuckt d'[[{{MediaWiki:Helppage}}|Hëllef Säit]] fir méi Informatiounen). Wann Dir duerch een Iertum heihi komm sidd, da klickt einfach op de Knäppchen '''Zréck''' vun Ärem Browser.",
 'anontalkpagetext' => "---- ''Dëst ass d'Diskussiounssäit fir en anonyme Benotzer deen nach kee Kont opgemaach huet oder en net benotzt. Dowéinst musse mir d'IP Adress benotzen, fir de Benotzer z'identifizéieren.
 Sou eng IP Adress ka vun e puer Benotzer gedeelt ginn.
-Wann Dir en anonyme Benotzer sidd an Dir irrelevant Kommentäre krut, [[Special:UserLogin/signup|maacht w.e.g. e Kont op]] oder [[Special:UserLogin|loggt Iech an]], fir weider Verwiesselunge mat aneren anonyme Benotzer ze verhënneren.''",
+Wann Dir en anonyme Benotzer sidd an Dir irrelevant Kommentäre krut, [[Special:wiki_UserLogin/signup|maacht w.e.g. e Kont op]] oder [[Special:wiki_UserLogin|loggt Iech an]], fir weider Verwiesselunge mat aneren anonyme Benotzer ze verhënneren.''",
 'noarticletext' => 'Dës Säit huet momentan keen Text.
 Dir kënnt op anere Säiten no [[Special:Search/{{PAGENAME}}|dësem Säitentitel sichen]],
 <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} an den entspriechende Logbicher nokucken] oder [{{fullurl:{{FULLPAGENAME}}|action=edit}} esou eng Säit uleeën]</span>.',
@@ -875,13 +875,13 @@ Denkt drun datt eegen .css an .js Säiten e kleng geschriwwenen Titel benotzen, 
 'previewconflict' => 'Dir gesitt an dem ieweschten Textfeld wéi den Text ausgesi wäert, wann Dir späichert.',
 'session_fail_preview' => "'''Är Ännerung konnt net gespäichert gi well d'Date vun Ärer Sessioun verluergaange sinn.
 Versicht et w.e.g. nach eng Kéier.
-Wann de Problem dann ëmmer nach bestoe sollt, da versicht Iech [[Special:UserLogout|auszeloggen]] an dann erëm anzeloggen.'''",
+Wann de Problem dann ëmmer nach bestoe sollt, da versicht Iech [[Special:wiki_UserLogout|auszeloggen]] an dann erëm anzeloggen.'''",
 'session_fail_preview_html' => "'''Är Ännerung konnt net gespäichert gi well d'Date vun Ärer Sessioun verluergaange sinn.'''
 
 ''Well op {{SITENAME}} ''raw HTML'' aktivéiert ass, gouf d'Uweise vun der nach net gespäicherter Versioun ausgeblennt fir JavaScript-Attacken ze vermeiden.''
 
 '''Wann dir eng berechtegt Ännerung maache wëllt, da versicht et w.e.g. nach eng Kéier.
-Wann de Problem dann ëmmer nach bestoe sollt, versicht Iech [[Special:UserLogout|auszeloggen]] an dann erëm anzeloggen.'''",
+Wann de Problem dann ëmmer nach bestoe sollt, versicht Iech [[Special:wiki_UserLogout|auszeloggen]] an dann erëm anzeloggen.'''",
 'token_suffix_mismatch' => "'''Är Ännerung gouf refuséiert, well Äre Browser Zeechen am Ännerungs-Identifiant verännert huet.'''
 D'Ännerung gouf refuséiert, fir ze verhënneren datt den Text op der Säit onliesbar gëtt.
 Dëst geschitt heiandsdo wann Dir en anonyme Proxy-Service um Internet benotzt.",
@@ -924,7 +924,7 @@ Den Administrateur den d'Datebank gespaart huet, huet dës Erklärung ginn: $1",
 'hiddencategories' => 'Dës Säit gehéiert zu {{PLURAL:$1|1 verstoppter Kategorie|$1 verstoppte Kategorien}}:',
 'edittools' => '<!-- Dësen Text gëtt ënnert dem "Ännere"-Formulair esouwéi dem "Eropluede"-Formulair ugewisen. -->',
 'nocreatetitle' => "D'Uleeë vun neie Säiten ass limitéiert.",
-'nocreatetext' => "Op {{SITENAME}} gouf d'Schafe vun neie Säite limitéiert. Dir kënnt Säiten déi scho bestinn änneren oder Iech [[Special:UserLogin|umellen]].",
+'nocreatetext' => "Op {{SITENAME}} gouf d'Schafe vun neie Säite limitéiert. Dir kënnt Säiten déi scho bestinn änneren oder Iech [[Special:wiki_UserLogin|umellen]].",
 'nocreate-loggedin' => 'Dir hutt keng Berechtigung fir nei Säiten unzeleeën.',
 'sectioneditnotsupported-title' => 'Ännere vum Abschnitt gëtt net ënnerstëtzt',
 'sectioneditnotsupported-text' => "D'Ännere vun Abschnitten gëtt op dëser Ännerungssäit net ënnertstetzt.",
@@ -965,11 +965,11 @@ Et däerfen net méi wéi $2 {{PLURAL:$2|Ufro|Ufroe}} sinn, aktuell {{PLURAL:$2|
 'undo-success' => "D'Ännerung gëtt réckgängeg gemaach. Iwwerpréift w.e.g. de Verglach ënnendrënner fir nozekuckeen ob et esou richteg ass, duerno späichert w.e.g d'Ännerungen of, fir dës Aktioun ofzeschléissen.",
 'undo-failure' => "D'Ännerung konnt net réckgängeg gemaach ginn, wëll de betraffenen Abschnitt an der Tëschenzäit geännert gouf.",
 'undo-norev' => "D'Ännerung kann net zréckgesat ginn, well et se net gëtt oder well se scho geläscht ass.",
-'undo-summary' => 'Ännerung $1 vu(n) [[Special:Contributions/$2|$2]] ([[User talk:$2|Diskussioun]] | [[Special:Contributions/$2|{{MediaWiki:Contribslink}}]]) annulléieren.',
+'undo-summary' => 'Ännerung $1 vu(n) [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Diskussioun]] | [[Special:Contributions/$2|{{MediaWiki:Contribslink}}]]) annulléieren.',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'Benotzerkont konnt net opgemaach ginn',
-'cantcreateaccount-text' => 'D\'Opmaache vu Benotzerkonten vun dëser IP Adress (\'\'\'$1\'\'\') gouf vum [[User:$3|$3]] gespaart.
+'cantcreateaccount-text' => 'D\'Opmaache vu Benotzerkonten vun dëser IP Adress (\'\'\'$1\'\'\') gouf vum [[wiki_User:$3|$3]] gespaart.
 
 De Benotzer $3 huet "$2" als Grond uginn.',
 
@@ -1229,7 +1229,7 @@ Denkt w.e.g drunn datt d'Navigatiounslinken d'Wiel vun de Versiounen nees zréck
 'mypreferences' => 'Astellungen',
 'prefs-edits' => 'Zuel vun den Ännerungen:',
 'prefsnologin' => 'Net ageloggt',
-'prefsnologintext' => 'Dir musst <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}}ageloggt]</span> sinn, fir Är Astellungen änneren ze kënnen.',
+'prefsnologintext' => 'Dir musst <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}}ageloggt]</span> sinn, fir Är Astellungen änneren ze kënnen.',
 'changepassword' => 'Passwuert änneren',
 'prefs-skin' => 'Skin',
 'skin-preview' => 'Kucken',
@@ -1340,16 +1340,16 @@ Si muss manner wéi $1 {{PLURAL:$1|Zeechen|Zeechen}} hunn.',
 'prefs-displaywatchlist' => 'Optioune vun deem wat gewise gëtt',
 'prefs-diffs' => 'Ënnerscheeder',
 
-# User preference: e-mail validation using jQuery
+# wiki_User preference: e-mail validation using jQuery
 'email-address-validity-valid' => "D'E-Mailadress schéngt valabel ze sinn",
 'email-address-validity-invalid' => 'Gitt eng valabel e-Mailadress an',
 
-# User rights
+# wiki_User rights
 'userrights' => 'Benotzerrechterverwaltung',
 'userrights-lookup-user' => 'Benotzergrupp verwalten',
 'userrights-user-editname' => 'Benotzernumm uginn:',
 'editusergroup' => 'Benotzergruppen änneren',
-'editinguser' => "Ännere vun de Rechter vum Benotzer '''[[User:$1|$1]]''' $2",
+'editinguser' => "Ännere vun de Rechter vum Benotzer '''[[wiki_User:$1|$1]]''' $2",
 'userrights-editusergroup' => 'Benotzergruppen änneren',
 'saveusergroups' => 'Benotzergruppe späicheren',
 'userrights-groupsmember' => 'Member vun:',
@@ -1361,7 +1361,7 @@ Si muss manner wéi $1 {{PLURAL:$1|Zeechen|Zeechen}} hunn.',
 'userrights-reason' => 'Grond:',
 'userrights-no-interwiki' => "Dir hutt net déi néideg Rechter, fir d'Rechter vu Benoutzer op anere Wikien z'änneren.",
 'userrights-nodatabase' => "D'Datebank $1 gëtt et net oder se ass net lokal.",
-'userrights-nologin' => 'Dir musst mat engem Administrateurs-Benotzerkont [[Special:UserLogin|ageloggt sinn]], fir Benotzerrechter änneren ze kënnen.',
+'userrights-nologin' => 'Dir musst mat engem Administrateurs-Benotzerkont [[Special:wiki_UserLogin|ageloggt sinn]], fir Benotzerrechter änneren ze kënnen.',
 'userrights-notallowed' => "Äre Benotzerkont hutt net déi néideg Rechter fir d'Rechter vun anere Benotzer z'änneren.",
 'userrights-changeable-col' => 'Gruppen déi Dir ännere kënnt',
 'userrights-unchangeable-col' => 'Gruppen déi Dir net ännere kënnt',
@@ -1451,7 +1451,7 @@ Si muss manner wéi $1 {{PLURAL:$1|Zeechen|Zeechen}} hunn.',
 'right-sendemail' => 'Anere Benotzer E-Maile schécken',
 'right-passwordreset' => 'Maile vum Zrécksetze vum Passwuert weisen',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Logbuch vun de Benotzerrechter',
 'rightslogtext' => "Dëst ass d'Lëscht vun den Ännerunge vu Benotzerrechter.",
 'rightslogentry' => "huet d'Benotzerrechter vum $1 vun $2 op $3 geännert.",
@@ -1549,7 +1549,7 @@ Säite vun [[Special:Watchlist|Ärer Iwwerwaachungslëscht]] si '''fett''' gesch
 'reuploaddesc' => 'Eroplueden ofbriechen an zréck op de Formulaire fir Eropzelueden',
 'upload-tryagain' => 'Déi geännert Beschreiwung vum Fichier schécken',
 'uploadnologin' => 'Net ageloggt',
-'uploadnologintext' => 'Dir musst [[Special:UserLogin|ageloggt sinn]], fir Fichieren eroplueden zu kënnen.',
+'uploadnologintext' => 'Dir musst [[Special:wiki_UserLogin|ageloggt sinn]], fir Fichieren eroplueden zu kënnen.',
 'upload_directory_missing' => 'De Repertoire an deen Dir eropluede wollt ($1) feelt a konnt net vum Webserver ugeluecht ginn.',
 'upload_directory_read_only' => 'De Webserver kann net an den Upload-Repertoire ($1) schreiwen.',
 'uploaderror' => 'Feeler bäim Eroplueden',
@@ -1667,11 +1667,11 @@ $1',
 'upload-proto-error-text' => "D'URL muss mat <code>http://</code> oder <code>ftp://</code> ufänken.",
 'upload-file-error' => 'Interne Feeler',
 'upload-file-error-text' => 'Beim Erstelle vun engem temporäre Fichier um Server ass een interne Feeler geschitt.
-Informéiert w.e.g. e vun den [[Special:ListUsers/sysop|Administrateuren]].',
+Informéiert w.e.g. e vun den [[Special:Listwiki_Users/sysop|Administrateuren]].',
 'upload-misc-error' => 'Onbekannte Feeler beim Eroplueden',
 'upload-misc-error-text' => "Beim Eroplueden ass en onbekannte Feeler geschitt.
 Kuckt d'URL w.e.g. no, a vergewëssert iech datt d'Säit online ass a probéiert et dann nach eng Kéier.
-Wann de Problem weider besteet, dann un de [[Special:ListUsers/sysop|Administrateuren]].",
+Wann de Problem weider besteet, dann un de [[Special:Listwiki_Users/sysop|Administrateuren]].",
 'upload-too-many-redirects' => "Et waren zevill Viruleedungen fir d'URL do",
 'upload-unknown-size' => 'Onbekannte Gréisst',
 'upload-http-error' => 'Et ass en HTTP-Feeler geschitt: $1',
@@ -1897,7 +1897,7 @@ Dir musst ëmmer de Medien- a Subtyp aginn: z. Bsp. <code>image/jpeg</code>.",
 'statistics-views-total' => 'Total vun den Oprif',
 'statistics-views-total-desc' => 'Kucke vu Säiten déi et net gëtt a vu Spezialsäite sinn net mat dran',
 'statistics-views-peredit' => 'Affichage pro Ännerung',
-'statistics-users' => 'Registréiert [[Special:ListUsers|Benotzer]]',
+'statistics-users' => 'Registréiert [[Special:Listwiki_Users|Benotzer]]',
 'statistics-users-active' => 'Aktiv Benotzer',
 'statistics-users-active-desc' => 'Benotzer déi während {{PLURAL:$1|dem leschten Dag|de leschten $1 Deeg}} eppes gemaach hunn',
 'statistics-mostpopular' => 'Am meeschte gekuckte Säiten',
@@ -2064,13 +2064,13 @@ Et muss mindestens en Top-Level-Domaine ugi ginn, wéi z. Bsp. ".org".<br />
 'linksearch-line' => '$1 verlinkt vun $2',
 'linksearch-error' => 'Wildcards (*,?) kënnen nëmmen am Ufank vum Host-Numm benotzt ginn.',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => "D'Benotzer weisen, ugefaange bei:",
 'listusers-submit' => 'Weis',
 'listusers-noresult' => 'Kee Benotzer fonnt.',
 'listusers-blocked' => '(gespaart)',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'Lëscht vun den aktive Benotzer',
 'activeusers-intro' => 'Dëst ass eng Lëscht vun de Benotzer déi op iergend eng Manéier an de leschten $1 {{PLURAL:$1|Dag|Deeg}} aktiv waren.',
 'activeusers-count' => '$1 {{PLURAL:$1|Aktioun|Aktiounen}} {{PLURAL:$3|gëschter|an de leschten $3 Deeg}}',
@@ -2104,7 +2104,7 @@ Et ginn [[{{MediaWiki:Listgrouprights-helppage}}|zousätzlech Informatiounen]] i
 
 # E-mail user
 'mailnologin' => 'Keng E-Mailadress',
-'mailnologintext' => 'Dir musst [[Special:UserLogin|ugemellt]] sinn an eng gëlteg E-Mail Adress an Äre [[Special:Preferences|Astellungen]] aginn hunn, fir engem anere Benotzer eng E-Mail ze schécken.',
+'mailnologintext' => 'Dir musst [[Special:wiki_UserLogin|ugemellt]] sinn an eng gëlteg E-Mail Adress an Äre [[Special:Preferences|Astellungen]] aginn hunn, fir engem anere Benotzer eng E-Mail ze schécken.',
 'emailuser' => 'Dësem Benotzer eng E-Mail schécken',
 'emailuser-title-target' => '{{GENDER:$1|Dëser Benotzerin|Dësem Benotzer}} eng Mail schécken',
 'emailuser-title-notarget' => 'Dem Benotzer eng E-Mail schécken',
@@ -2135,7 +2135,7 @@ D\'E-Mailadress, déi Dir an [[Special:Preferences|Ären Astellungen]] aginn hut
 'emailsenttext' => 'Är E-Mail gouf fortgeschéckt.',
 'emailuserfooter' => 'Dës E-Mail gouf vum $1 dem $2 geschéckt dobäi gouf d\'Funktioun "Benotzer E-Mail" op {{SITENAME}} benotzt.',
 
-# User Messenger
+# wiki_User Messenger
 'usermessage-summary' => 'Benoriichtegung hannerloossen.',
 'usermessage-editor' => 'Benoriichtegungs-System',
 
@@ -2146,7 +2146,7 @@ D\'E-Mailadress, déi Dir an [[Special:Preferences|Ären Astellungen]] aginn hut
 'nowatchlist' => 'Är Iwwerwaachungslëscht ass eidel.',
 'watchlistanontext' => "Dir musst $1 fir Säiten op ärer Iwwerwaachungslëscht ze gesinn oder z'änneren.",
 'watchnologin' => 'Net ageloggt',
-'watchnologintext' => "Dir musst [[Special:UserLogin|ugemellt]] sinn, fir Är Iwwerwaachungslëscht z'änneren.",
+'watchnologintext' => "Dir musst [[Special:wiki_UserLogin|ugemellt]] sinn, fir Är Iwwerwaachungslëscht z'änneren.",
 'addwatch' => "Op d'Iwwerwaachungslëscht derbäisetzen",
 'addedwatchtext' => 'D\'Säit "[[:$1]]" gouf op är [[Special:Watchlist|Iwwerwaachtungslëscht]] gesat.
 All weider Ännerungen op dëser Säit an der assoziéierter Diskussiounssäit ginn hei opgelëscht.',
@@ -2260,13 +2260,13 @@ dës Aktioun soll mat Vierssiicht gemaach ginn.",
 'rollbacklinkcount-morethan' => 'méi wéi {{PLURAL:$1|Eng Ännerung|$1 Ännerungen}} zerécksetzen',
 'rollbackfailed' => 'Zrécksetzen huet net geklappt',
 'cantrollback' => 'Lescht Ännerung kann net zréckgesat ginn. De leschten Auteur ass deen eenzegen Auteur vun dëser Säit.',
-'alreadyrolled' => 'Déi lescht Ännerung vun der Säit [[:$1]] vum [[User:$2|$2]] ([[User talk:$2|talk]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]);; kann net zeréckgesat ginn;
+'alreadyrolled' => 'Déi lescht Ännerung vun der Säit [[:$1]] vum [[wiki_User:$2|$2]] ([[wiki_User talk:$2|talk]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]);; kann net zeréckgesat ginn;
 een Aneren huet dëst entweder scho gemaach oder nei Ännerungen agedroen.
 
-Déi lescht Ännerung vun der Säit ass vum [[User:$3|$3]] ([[User talk:$3|Diskussioun]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
+Déi lescht Ännerung vun der Säit ass vum [[wiki_User:$3|$3]] ([[wiki_User talk:$3|Diskussioun]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
 'editcomment' => "De Resumé vun der Ännerung war: \"''\$1''\".",
-'revertpage' => 'Ännerunge vum [[Special:Contributions/$2|$2]] ([[User talk:$2|Diskussioun]]) zréckgesat op déi lescht Versioun vum [[User:$1|$1]]',
-'revertpage-nouser' => 'Zréckgesaten Ännerungen vum (Benotzernummewechgeholl) op déilescht Versioun vum [[User:$1|$1]]',
+'revertpage' => 'Ännerunge vum [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Diskussioun]]) zréckgesat op déi lescht Versioun vum [[wiki_User:$1|$1]]',
+'revertpage-nouser' => 'Zréckgesaten Ännerungen vum (Benotzernummewechgeholl) op déilescht Versioun vum [[wiki_User:$1|$1]]',
 'rollback-success' => "D'Ännerunge vum $1 goufen zréckgesat op déi lescht Versioun vum $2.",
 
 # Edit tokens
@@ -2493,7 +2493,7 @@ Kuckt d'[[Special:BlockList|Spär-Lëscht]] fir all Spären nozekucken.",
 'unblockip' => 'Spär vum Benotzer ophiewen',
 'unblockiptext' => 'Benotzt dëse Formulaire fir enger IP-Adress oder engem Benotzer seng Spär opzehiewen.',
 'ipusubmit' => 'Des Spär ophiewen',
-'unblocked' => "D'Spär fir de [[User:$1|Benotzer $1]] gouf opgehuewen",
+'unblocked' => "D'Spär fir de [[wiki_User:$1|Benotzer $1]] gouf opgehuewen",
 'unblocked-range' => "D'Spär vum $1 gouf opgehuewen",
 'unblocked-id' => "D'Spär $1 gouf opgehuewen",
 'blocklist' => 'Gespaarte Benotzer',
@@ -2526,7 +2526,7 @@ Kuckt d'[[Special:BlockList|Spär-Lëscht]] fir all Spären nozekucken.",
 'change-blocklink' => 'Spär änneren',
 'contribslink' => 'Kontributiounen',
 'emaillink' => 'Mail schécken',
-'autoblocker' => 'Dir sidd automatesch gespaart well dir eng IP Adress mam "[[User:$1|$1]]" deelt.
+'autoblocker' => 'Dir sidd automatesch gespaart well dir eng IP Adress mam "[[wiki_User:$1|$1]]" deelt.
 De Grond dee fir d\'Spär vum $1 ugi gouf ass: "$2".',
 'blocklogpage' => 'Spärlëscht',
 'blocklog-showlog' => "Dëse Benotzer war virdru gespaart. D'Lëscht vun de Späre ass als Referenz hei ënnendrënner:",
@@ -2628,7 +2628,7 @@ An deene Fäll musst Dir d'Diskussiounssäit manuell réckelen oder fusionéiere
 'movearticle' => 'Säit réckelen:',
 'moveuserpage-warning' => "'''Opgepasst:''' Dir sidd am gaang eng Benotzersäit ze réckelen. Denkt w.e.g. dorunn datt just d'Säit geréckelt gëtt an datt de Benotzer ''net'' ëmbenannt gëtt.",
 'movenologin' => 'Net ageloggt',
-'movenologintext' => 'Dir musst e registréierte Benotzer an [[Special:UserLogin|ageloggt]] sinn, fir eng Säit ze réckelen.',
+'movenologintext' => 'Dir musst e registréierte Benotzer an [[Special:wiki_UserLogin|ageloggt]] sinn, fir eng Säit ze réckelen.',
 'movenotallowed' => 'Dir hutt net déi néideg Rechter fir Säiten ze réckelen.',
 'movenotallowedfile' => "Dir hutt net d'Recht fir Fichieren ze réckelen.",
 'cant-move-user-page' => 'Dir hutt net déi néideg Rechter fir Benotzerhaaptsäiten ze réckelen.',
@@ -3501,8 +3501,8 @@ Dëse Confirmatiouns-Code leeft den $4 of.',
 
 # Delete conflict
 'deletedwhileediting' => "'''Opgepasst''': Dës Säit gouf geläscht nodeems datt dir ugefaangen hutt se z'änneren!",
-'confirmrecreate' => "De Benotzer [[User:$1|$1]] ([[User talk:$1|Diskussioun]]) huet dës Säit geläscht, nodeems datt där ugefaangen hutt drun ze schaffen. D'Begrënnung war: ''$2'' Bestätegt w.e.g., datt Dir dës Säit wierklich erëm nei opmaache wëllt.",
-'confirmrecreate-noreason' => 'De Benotzer [[User:$1|$1]] ([[User talk:$1|Diskussioun]]) huet dës Säit geläscht, nodeems datt Dir ugefaangen hutt drun ze schaffen. Confirméiert w.e.g., datt Dir dës Säit wierklech erëm nei opmaache wëllt.',
+'confirmrecreate' => "De Benotzer [[wiki_User:$1|$1]] ([[wiki_User talk:$1|Diskussioun]]) huet dës Säit geläscht, nodeems datt där ugefaangen hutt drun ze schaffen. D'Begrënnung war: ''$2'' Bestätegt w.e.g., datt Dir dës Säit wierklich erëm nei opmaache wëllt.",
+'confirmrecreate-noreason' => 'De Benotzer [[wiki_User:$1|$1]] ([[wiki_User talk:$1|Diskussioun]]) huet dës Säit geläscht, nodeems datt Dir ugefaangen hutt drun ze schaffen. Confirméiert w.e.g., datt Dir dës Säit wierklech erëm nei opmaache wëllt.',
 'recreate' => 'Erëm uleeën',
 
 # action=purge

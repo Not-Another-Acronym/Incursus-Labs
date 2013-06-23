@@ -390,7 +390,7 @@ Cancellä',
 'right-read' => "Legg' pàgin",
 'right-edit' => 'Mudifich pàgin',
 
-# User rights log
+# wiki_User rights log
 'rightsnone' => '(ansöin)',
 
 # Associated actions - in the sentence "You do not have permission to X"
@@ -459,7 +459,7 @@ Cancellä',
 'alphaindexline' => 'da $1 a $2',
 'allpagessubmit' => 'Vé',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusers-submit' => 'Mustra',
 
 # Special:ListGroupRights

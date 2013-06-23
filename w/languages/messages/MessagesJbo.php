@@ -17,7 +17,7 @@
  */
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-justify' => 'jufmei co mulno selkuspe',
 
 'underline-always' => 'roroi',

@@ -141,8 +141,8 @@ abstract class Installer {
 		'wgRightsUrl',
 		'wgMainCacheType',
 		'wgEnableEmail',
-		'wgEnableUserEmail',
-		'wgEnotifUserTalk',
+		'wgEnablewiki_UserEmail',
+		'wgEnotifwiki_UserTalk',
 		'wgEnotifWatchlist',
 		'wgEmailAuthentication',
 		'wgDBtype',
@@ -172,7 +172,7 @@ abstract class Installer {
 	 * @var array
 	 */
 	protected $internalDefaults = array(
-		'_UserLang' => 'en',
+		'_wiki_UserLang' => 'en',
 		'_Environment' => false,
 		'_CompiledDBs' => array(),
 		'_SafeMode' => false,
@@ -225,7 +225,7 @@ abstract class Installer {
 	);
 
 	/**
-	 * User rights profiles.
+	 * wiki_User rights profiles.
 	 *
 	 * @var array
 	 */
@@ -331,7 +331,7 @@ abstract class Installer {
 	 * Constructor, always call this from child classes.
 	 */
 	public function __construct() {
-		global $wgExtensionMessagesFiles, $wgUser;
+		global $wgExtensionMessagesFiles, $wgwiki_User;
 
 		// Disable the i18n cache and LoadBalancer
 		Language::getLocalisationCache()->disableBackend();
@@ -341,8 +341,8 @@ abstract class Installer {
 		$wgExtensionMessagesFiles['MediawikiInstaller'] =
 			__DIR__ . '/Installer.i18n.php';
 
-		// Having a user with id = 0 safeguards us from DB access via User::loadOptions().
-		$wgUser = User::newFromId( 0 );
+		// Having a user with id = 0 safeguards us from DB access via wiki_User::loadOptions().
+		$wgwiki_User = wiki_User::newFromId( 0 );
 
 		$this->settings = $this->internalDefaults;
 
@@ -1300,7 +1300,7 @@ abstract class Installer {
 	 */
 	public function setParserLanguage( $lang ) {
 		$this->parserOptions->setTargetLanguage( $lang );
-		$this->parserOptions->setUserLang( $lang );
+		$this->parserOptions->setwiki_UserLang( $lang );
 	}
 
 	/**
@@ -1519,7 +1519,7 @@ abstract class Installer {
 	 */
 	protected function createSysop() {
 		$name = $this->getVar( '_AdminName' );
-		$user = User::newFromName( $name );
+		$user = wiki_User::newFromName( $name );
 
 		if ( !$user ) {
 			// We should've validated this earlier anyway!
@@ -1567,7 +1567,7 @@ abstract class Installer {
 
 		// Mailman doesn't support as many languages as we do, so check to make
 		// sure their selected language is available
-		$myLang = $this->getVar( '_UserLang' );
+		$myLang = $this->getVar( '_wiki_UserLang' );
 		if( in_array( $myLang, $this->mediaWikiAnnounceLanguages ) ) {
 			$myLang = $myLang == 'pt-br' ? 'pt_BR' : $myLang; // rewrite to Mailman's pt_BR
 			$params['language'] = $myLang;
@@ -1599,7 +1599,7 @@ abstract class Installer {
 					'',
 					EDIT_NEW,
 					false,
-					User::newFromName( 'MediaWiki default' )
+					wiki_User::newFromName( 'MediaWiki default' )
 			);
 		} catch (MWException $e) {
 			//using raw, because $wgShowExceptionDetails can not be set yet

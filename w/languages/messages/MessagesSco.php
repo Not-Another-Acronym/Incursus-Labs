@@ -22,7 +22,7 @@
  */
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Unnerline airtins:',
 'tog-justify' => 'Justifee paragraphs',
 'tog-hideminor' => 'Hide smaa edits in recent chynges',
@@ -326,7 +326,7 @@ $1",
 Maistly this is caused by follaein an ootdated diff or history link tae a page that haes been delete.
 
 If this isna the case, you micht hae fund a bug in the saftware.
-Please lat an [[Special:ListUsers/sysop|administrator]] ken aboot this, makin note o the URL.',
+Please lat an [[Special:Listwiki_Users/sysop|administrator]] ken aboot this, makin note o the URL.',
 'missingarticle-rev' => '(revision#: $1)',
 'missingarticle-diff' => '(Diff: $1, $2)',
 'readonly_lag' => 'The database haes been autaematically lockit while the sclave database servers catch up tae the maister',
@@ -364,7 +364,7 @@ For translations, please consider using [//translatewiki.net/wiki/Main_Page?setl
 $2',
 'namespaceprotected' => "Ye dinna hae permeession tae edit pages in the '''$1''' namespace.",
 'ns-specialprotected' => 'Byordinar pages canna be editit.',
-'titleprotected' => "This teetle haes been protectit frae bein makkit by [[User:$1|$1]].
+'titleprotected' => "This teetle haes been protectit frae bein makkit by [[wiki_User:$1|$1]].
 The grunds for this are: ''$2''.",
 
 # Login and logout pages
@@ -406,7 +406,7 @@ Mynd an chynge yer [[Special:Preferences|{{SITENAME}} preferences]].',
 'loginsuccess' => 'Ye\'re nou loggit in tae {{SITENAME}} as "$1".',
 'nosuchuser' => 'The\'r nae sic uiser as "$1".
 Uiser names are case-sensitive.
-Check yer spellin, or uise [[Special:UserLogin/signup|mak a new accoont]].',
+Check yer spellin, or uise [[Special:wiki_UserLogin/signup|mak a new accoont]].',
 'nosuchusershort' => 'The\'r nae sic uiser as "$1". Check yer spellin.',
 'nouserspecified' => 'Ye hae tae merk up a uisername.',
 'wrongpassword' => 'The password ye entered is wrang. Please gie it anither shot.',
@@ -539,7 +539,7 @@ Yer block ID is $5. Please include this ID in ony argies ye mak.',
 'accmailtext' => "The Password for '$1' haes been sent tae $2.",
 'newarticle' => '(New)',
 'newarticletext' => "Ye'v follaed an airtin til a page that disna exist yet. Tae create the page, stert typin in the box ablo (see the [[{{MediaWiki:Helppage}}|help page]] for mair info). Gin ye'r here by mistak, juist dab yer brouser's '''back''' button.",
-'anontalkpagetext' => "----''This is the collogue page for a nameless uiser that haesna made an accoont yet or that disna uise it. We syne hiv tae uise the numerical IP address tae identifee thaim. Sic an IP address can be shared bi a wheen o uisers. Gin you ar a nameless uiser an feel that irrelevant comments haes been directit at ye, please [[Special:UserLogin|mak an accoont or log in]] tae evyte futur confusion wi ither nameless uisers.''",
+'anontalkpagetext' => "----''This is the collogue page for a nameless uiser that haesna made an accoont yet or that disna uise it. We syne hiv tae uise the numerical IP address tae identifee thaim. Sic an IP address can be shared bi a wheen o uisers. Gin you ar a nameless uiser an feel that irrelevant comments haes been directit at ye, please [[Special:wiki_UserLogin|mak an accoont or log in]] tae evyte futur confusion wi ither nameless uisers.''",
 'noarticletext' => 'The\'r nae text on this page the nou. 
 Ye can [[Special:Search/{{PAGENAME}}|rake for this page teitle]] in ither pages,
 <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} rake th\' related logs],
@@ -602,7 +602,7 @@ lang, an that's langer than the maximum of $2 kilobytes. It canna be hained.'''"
 'hiddencategories' => 'This page is a member of {{PLURAL:$1|1 hidden category|$1 hidden categories}}:',
 'nocreatetitle' => 'Page makkin limitit',
 'nocreatetext' => 'This site haes restrictit the ability to mak new pages.
-Ye can go back an eik tae an existing page, or [[Special:UserLogin|log in or mak an accoont]].',
+Ye can go back an eik tae an existing page, or [[Special:wiki_UserLogin|log in or mak an accoont]].',
 'nocreate-loggedin' => 'Ye dinnae hae the richts tae mak new pages on this wiki.',
 'permissionserrors' => 'Richts Errors',
 'permissionserrorstext' => 'Ye dinnae hae the richts tae dae that, acause o the followin {{PLURAL:$1|grund|grunds}}:',
@@ -625,11 +625,11 @@ Thae arguments hae been left oot.',
 # "Undo" feature
 'undo-success' => 'The edit can be undone. Please check the chynges albo tae check that this is whit ye wint tae dae, an then hain the chynges albo tae be duin undooin the edit.',
 'undo-failure' => 'The edit culdnae be undone acause o conflictin edits inatween.',
-'undo-summary' => 'Undo reveision $1 by [[Special:Contributions/$2|$2]] ([[User talk:$2|Collogue]])',
+'undo-summary' => 'Undo reveision $1 by [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Collogue]])',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'Canna mak accoont',
-'cantcreateaccount-text' => "Accoont makkin frae this IP address ('''$1''') haes been blockit by [[User:$3|$3]].
+'cantcreateaccount-text' => "Accoont makkin frae this IP address ('''$1''') haes been blockit by [[wiki_User:$3|$3]].
 
 The grund for this, given by $3 is ''$2''",
 
@@ -750,7 +750,7 @@ there micht be parteeculars in the [{{fullurl:{{#Special:Log}}/suppress|page={{F
 # Preferences page
 'mypreferences' => 'Ma preferences',
 'prefsnologin' => 'No loggit in',
-'prefsnologintext' => 'Ye maun be [[Special:UserLogin|loggit in]] tae set uiser preferences.',
+'prefsnologintext' => 'Ye maun be [[Special:wiki_UserLogin|loggit in]] tae set uiser preferences.',
 'changepassword' => 'Chynge password',
 'prefs-skin' => 'Huil',
 'skin-preview' => 'First Leuk',
@@ -795,11 +795,11 @@ Yer e-mail address insae revealed whin ither uisers contact ye.",
 'prefs-help-email-required' => 'Yer e-mail address is needit.',
 'prefs-diffs' => 'Diffs',
 
-# User rights
+# wiki_User rights
 'userrights-lookup-user' => 'Manish uiser boorachs',
 'userrights-user-editname' => 'Enter a uisername:',
 'editusergroup' => 'Edit uiser boorach',
-'editinguser' => "Editin uiser '''[[User:$1|$1]]''' ([[User talk:$1|{{int:talkpagelinktext}}]] | [[Special:Contributions/$1|{{int:contribslink}}]])",
+'editinguser' => "Editin uiser '''[[wiki_User:$1|$1]]''' ([[wiki_User talk:$1|{{int:talkpagelinktext}}]] | [[Special:Contributions/$1|{{int:contribslink}}]])",
 'userrights-groupsmember' => 'Member o:',
 
 # Groups
@@ -813,7 +813,7 @@ Yer e-mail address insae revealed whin ither uisers contact ye.",
 # Rights
 'right-delete' => 'Delete pages',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Uiser richts log',
 'rightslogtext' => 'This is a log o chynges tae uiser richts.',
 
@@ -868,7 +868,7 @@ Pages on [[Special:Watchlist|your watchleet]] are '''bold'''.",
 'uploadbtn' => 'Uplaid file',
 'reuploaddesc' => 'Gang back tae the uplaid form.',
 'uploadnologin' => 'Nae loggit in',
-'uploadnologintext' => 'Ye maun be [[Special:UserLogin|loggit in]] til uplaid files.',
+'uploadnologintext' => 'Ye maun be [[Special:wiki_UserLogin|loggit in]] til uplaid files.',
 'uploaderror' => 'Uplaid error',
 'uploadtext' => "Uise the form ablo tae uplaid new files;
 tae keek at or rake throu aareadies uplaidit eimages gang tae the [[Special:FileList|leet o uplaidit files]];
@@ -1055,7 +1055,7 @@ Also see [[Special:WantedCategories|wanted categories]].',
 'linksearch-ok' => 'Rake',
 'linksearch-line' => '$1 is linked from $2',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusers-submit' => 'Shaw',
 'listusers-blocked' => '(blockit)',
 
@@ -1067,7 +1067,7 @@ Also see [[Special:WantedCategories|wanted categories]].',
 
 # E-mail user
 'mailnologin' => 'Nae send address',
-'mailnologintext' => 'Ye maun be [[Special:UserLogin|loggit in]] an hae a valid e-mail address in yer [[Special:Preferences|preferences]] tae send e-mail til ither uisers.',
+'mailnologintext' => 'Ye maun be [[Special:wiki_UserLogin|loggit in]] an hae a valid e-mail address in yer [[Special:Preferences|preferences]] tae send e-mail til ither uisers.',
 'emailuser' => 'E-mail this uiser',
 'noemailtitle' => 'Nae e-mail address',
 'noemailtext' => "This uiser haesna specifee'd a valid e-mail address, or haes chuisen no tae receive e-mail frae ither uisers.",
@@ -1079,7 +1079,7 @@ Also see [[Special:WantedCategories|wanted categories]].',
 'watchlistfor2' => 'For $1 $2',
 'nowatchlist' => 'Ye hivna onie eitems on yer watchleet.',
 'watchnologin' => 'Nae loggit in',
-'watchnologintext' => 'Ye maun be [[Special:UserLogin|loggit in]] tae modify yer watchleet.',
+'watchnologintext' => 'Ye maun be [[Special:wiki_UserLogin|loggit in]] tae modify yer watchleet.',
 'addedwatchtext' => "The page \"<nowiki>\$1</nowiki>\" haes been eikit ti yer [[Special:Watchlist|watchleet]]. Futur chynges ti this page an its associate Collogue page will be leetit thare, an the page will kythe '''bauldit''' in the [[Special:RecentChanges|leet o recent chynges]] ti mak it mair eith tae pick oot. <p>Gin ye want ti remuve the page frae yer watchleet later, dab \"Stop watching\" in the sidebar.",
 'removedwatchtext' => 'The page "[[:$1]]" haes been remuved frae yer watchleet.',
 'watch' => 'Watch',
@@ -1132,9 +1132,9 @@ an that ye'r daein this in accord wi [[{{MediaWiki:Policy-url}}]].",
 'rollbacklink' => 'rowback',
 'rollbackfailed' => 'Rowback failed',
 'cantrollback' => 'Canna revert edit; last contreibutor is the ae author o this page.',
-'alreadyrolled' => 'Canna rowback last edit o [[$1]] bi [[User:$2|$2]] ([[User talk:$2|Talk]]); some ither bodie haes editit or rowed back the page aareadies. Last edit wis bi [[User:$3|$3]] ([[User talk:$3|Talk]]).',
+'alreadyrolled' => 'Canna rowback last edit o [[$1]] bi [[wiki_User:$2|$2]] ([[wiki_User talk:$2|Talk]]); some ither bodie haes editit or rowed back the page aareadies. Last edit wis bi [[wiki_User:$3|$3]] ([[wiki_User talk:$3|Talk]]).',
 'editcomment' => "The edit comment wis: \"''\$1''\".",
-'revertpage' => 'Revertit edit o [[Special:Contributions/$2|$2]] ([[User talk:$2|Talk]]), chynged back tae last version bi [[User:$1|$1]]',
+'revertpage' => 'Revertit edit o [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Talk]]), chynged back tae last version bi [[wiki_User:$1|$1]]',
 
 # Protect
 'protectlogpage' => 'Fend log',
@@ -1243,7 +1243,7 @@ tae an afore-blockit IP address or uisername.',
 'unblocklink' => 'unblock',
 'change-blocklink' => 'chynge block',
 'contribslink' => 'contreibs',
-'autoblocker' => 'Autaematically blockit syne yer IP address haes been uised recently bi "[[User:$1|$1]]". The raeson gien for $1\'s block is "\'\'$2\'\'"',
+'autoblocker' => 'Autaematically blockit syne yer IP address haes been uised recently bi "[[wiki_User:$1|$1]]". The raeson gien for $1\'s block is "\'\'$2\'\'"',
 'blocklogpage' => 'Block log',
 'blocklogentry' => 'blockit [[$1]] wi an expiry time o $2 $3',
 'blocklogtext' => 'This is a log o uiser blockin an unblockin actions. Autaematically blockit IP addresses isna leetit. See the [[Special:BlockList|IP block leet]] for the leet o bans and blocks on the gae the nou.',
@@ -1285,7 +1285,7 @@ please be siccar ye unnerstaun the consequences o this afore proceedin.",
 'movepagetalktext' => "The associate Collogue page, gin onie, will be autaematically flittit alang wi it '''unless:''' *Ye'r flittin the page across namespaces, *A collogue page that isna tuim aareadies exists unner the new name, or *Ye tak the tick oot o the box ablo. In thae cases, ye maun flit or merge the page manually later gin ye hae saicont thochts.",
 'movearticle' => 'Flit page:',
 'movenologin' => 'No loggit in',
-'movenologintext' => 'Ye maun be a registert uiser an [[Special:UserLogin|loggit in]] tae flit a page.',
+'movenologintext' => 'Ye maun be a registert uiser an [[Special:wiki_UserLogin|loggit in]] tae flit a page.',
 'newtitle' => 'Tae new teitle',
 'movepagebtn' => 'Flit page',
 'pagemovedsub' => 'Flittin succeedit',
@@ -1511,7 +1511,7 @@ This confirmation code will end at $4.',
 
 # Delete conflict
 'deletedwhileediting' => 'Warnin: This page haes been delete syne ye stertit editin!',
-'confirmrecreate' => "Uiser [[User:$1|$1]] ([[User talk:$1|collogue]]) deletit this airticle efter ye stertit editin, giein the raeson:
+'confirmrecreate' => "Uiser [[wiki_User:$1|$1]] ([[wiki_User talk:$1|collogue]]) deletit this airticle efter ye stertit editin, giein the raeson:
 : ''$2''
 Please confirm that ye really want tae recreate this airticle.",
 

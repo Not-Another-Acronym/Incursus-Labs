@@ -53,12 +53,12 @@ $specialPageAliases = array(
 	'Unusedcategories'          => array( 'ބޭނުން ނުކުރާ ޤިސްމުތައް' ),
 	'Unusedimages'              => array( 'ބޭނުން ނުކުރާ ފައިލް' ),
 	'Upload'                    => array( 'ފޮނުއްވާ' ),
-	'Userlogin'                 => array( 'ވަދެވަޑައިގަންނަވާ' ),
-	'Userlogout'                => array( 'ބޭރަށް ވަޑައިގަންނަވާ' ),
+	'wiki_Userlogin'                 => array( 'ވަދެވަޑައިގަންނަވާ' ),
+	'wiki_Userlogout'                => array( 'ބޭރަށް ވަޑައިގަންނަވާ' ),
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-hideminor' => 'ކުދި އުނި އިތުރުތައް އެންމެފަހުގެ ބަދަލުތަކުގެ ލިސްޓުން ފޮރުއްވަވާ',
 'tog-ccmeonemails' => 'އަޅުގަނޑު އެހެން މެމްބަރުންނަށް ފޮނުވާ އީމެއިލްގެ ނަކަލެއް އަޅުގަނޑަށް ފޮނުވާ',
 'tog-showhiddencats' => 'ފޮރުވިފައިވާ ޤިސްމުތައް ދައްކަވާ',
@@ -489,7 +489,7 @@ $1',
 'email' => 'އީމޭލު',
 'prefs-signature' => 'ސޮއި',
 
-# User rights
+# wiki_User rights
 'userrights' => 'މެންބަރުގެ ހައްގުތަކުގެ އިންތިޒާމް',
 'userrights-user-editname' => 'މެންބަރުނަން ލިޔުއްވާ:',
 
@@ -562,7 +562,7 @@ $1',
 'statistics-files' => 'ފޮނުވިފައިވާ ފައިލުތައް',
 'statistics-edits' => '{{SITENAME}} ފެށުނުތާ ޞަފްޙާތަކަށް އުނިއިތުރު ގެނެވުނު އަދަދު',
 'statistics-edits-average' => 'ޞަފްޙާއަކަށް ގެނެވޭ އެވަރަޖު އުނިއިތުރު',
-'statistics-users' => 'ރަޖިސްޓަރކުރެވިފައިވާ [[Special:ListUsers|މެމްބަރުން]]',
+'statistics-users' => 'ރަޖިސްޓަރކުރެވިފައިވާ [[Special:Listwiki_Users|މެމްބަރުން]]',
 'statistics-users-active' => 'ހަރަކާތްތެރި މެމްބަރުން',
 'statistics-users-active-desc' => 'ފާއިތުވެދިޔަ {{PLURAL:$1|ދުވަސް|$1 ދުވަސްތައް}} ތެރޭގައި ކޮންމެވެސް ކަމެއް ކޮށްފައިވާ މެމްބަރުން',
 'statistics-mostpopular' => 'އެންމެ މަޤްބޫލް ޞަފްޙާތައް',
@@ -608,7 +608,7 @@ $1',
 [[Special:UnusedCategories|Unused categories]] are not shown here.
 Also see [[Special:WantedCategories|wanted categories]].',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'ހަރަކާތްތެރި މެމްބަރުންގެ ލިސްޓު',
 'activeusers-hidebots' => 'ބޮޓް ފޮރުއްވާ',
 'activeusers-hidesysops' => 'އެޑްމިނިސްޓްރޭޓަރުން ފޮރުއްވާ',

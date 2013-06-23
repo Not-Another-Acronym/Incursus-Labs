@@ -42,25 +42,25 @@ QUnit.test( 'mw.jqueryMsg Gender', 11, function ( assert ) {
 		'Alice: pink',
 		'Feminine from string "female"' );
 	assert.equal(
-		parser( 'gender-msg', 'User' ),
-		'User: green',
+		parser( 'gender-msg', 'wiki_User' ),
+		'wiki_User: green',
 		'Neutral when no parameter given' );
 	assert.equal(
-		parser( 'gender-msg', 'User', 'unknown' ),
-		'User: green',
+		parser( 'gender-msg', 'wiki_User', 'unknown' ),
+		'wiki_User: green',
 		'Neutral from string "unknown"'
 	);
 
-	mw.messages.set( 'gender-msg-one-form', '{{GENDER:$1|User}}: $2 {{PLURAL:$2|edit|edits}}' );
+	mw.messages.set( 'gender-msg-one-form', '{{GENDER:$1|wiki_User}}: $2 {{PLURAL:$2|edit|edits}}' );
 
 	assert.equal(
 		parser( 'gender-msg-one-form', 'male', 10 ),
-		'User: 10 edits',
+		'wiki_User: 10 edits',
 		'Gender neutral and plural form'
 	);
 	assert.equal(
 		parser( 'gender-msg-one-form', 'female', 1 ),
-		'User: 1 edit',
+		'wiki_User: 1 edit',
 		'Gender neutral and singular form'
 	);
 

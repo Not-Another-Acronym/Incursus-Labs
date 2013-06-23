@@ -67,7 +67,7 @@ $magicWords = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Nënvizoji vegzat',
 'tog-justify' => 'Drejto kryerreshtat',
 'tog-hideminor' => 'Mshef redaktimet e vogla të bâme së voni',
@@ -396,7 +396,7 @@ Administruesi, i cilli e ka bllokue dha këtë arsye: $1',
 
 Kjo zakonisht ndodh nga përcjellja e nji ndryshimi të vjetëruem apo të nji vegze në faqe të fshime.
 
-Nëse nuk âsht kështu, mund ta keni gjetë nji gabim në software. Ju lutemi, njoftoni nji [[Special:ListUsers/sysop|administrues]], për këtë, tue tregue URL\'ën.',
+Nëse nuk âsht kështu, mund ta keni gjetë nji gabim në software. Ju lutemi, njoftoni nji [[Special:Listwiki_Users/sysop|administrues]], për këtë, tue tregue URL\'ën.',
 'missingarticle-rev' => '(rishikimi#: $1)',
 'missingarticle-diff' => '(Ndryshimi: $1, $2)',
 'readonly_lag' => 'Databaza âsht bllokue automatikisht përderisa serverat e mvarun të skinkronizohen me kryesorin.',
@@ -440,7 +440,7 @@ Për përkthim, konsideroni ju lutem përdorimin e [//translatewiki.net/wiki/Mai
 $2',
 'namespaceprotected' => "Nuk keni tagër me redaktue faqe në hapësinën '''$1'''.",
 'ns-specialprotected' => 'Faqet speciale nuk mujnë me u redaktue.',
-'titleprotected' => 'Ky titull âsht i mbrojtun për krijim prej përdoruesit [[User:$1|$1]].
+'titleprotected' => 'Ky titull âsht i mbrojtun për krijim prej përdoruesit [[wiki_User:$1|$1]].
 Arsyeja e dhânë âsht "\'\'$2\'\'".',
 
 # Virus scanner
@@ -451,7 +451,7 @@ Arsyeja e dhânë âsht "\'\'$2\'\'".',
 # Login and logout pages
 'logouttext' => "'''Jeni çlajmërue.'''
 
-Mundeni me vazhdue me shfrytëzue {{SITENAME}} në mënyrë anonime, apo mundeni [[Special:UserLogin|me u kyçë]] si përdoruesi i njêjtë apo si nji tjetër.
+Mundeni me vazhdue me shfrytëzue {{SITENAME}} në mënyrë anonime, apo mundeni [[Special:wiki_UserLogin|me u kyçë]] si përdoruesi i njêjtë apo si nji tjetër.
 Disa faqe mujnë me u paraqitë prap si t'kishit qenë t'kyçun, derisa ta pastroni memorizimin e shfletuesit.",
 'welcomecreation' => '== Mirësevini, $1! ==
 
@@ -495,7 +495,7 @@ Të lutem aktivizoji dhe provo prap.',
 'loginsuccess' => "'''Je kyçë në {{SITENAME}} si \"\$1\".'''",
 'nosuchuser' => 'Nuk ka përdorues me emnin "$1".
 Emnat janë senzitiv në madhësi të germës.
-Kontrollo drejtshkrimin ose [[Special:UserLogin/signup|krijo llogari]].',
+Kontrollo drejtshkrimin ose [[Special:wiki_UserLogin/signup|krijo llogari]].',
 'nosuchusershort' => 'Nuk ka përdorues me emnin "$1".
 Kontrollo drejtshkrimin.',
 'nouserspecified' => 'Duhesh me dhânë nji nofkë.',
@@ -651,7 +651,7 @@ Ju lutemi vërtetoni adresën tuej të emailit përmjet [[Special:Preferences|pa
 'loginreqlink' => 'kyçë',
 'loginreqpagetext' => 'Duheni me u $1 për me i pâ faqet tjera.',
 'accmailtitle' => 'Fjalëkalimi u dërgue.',
-'accmailtext' => "Nji fjalëkalim i krijuem rastësisht për [[User talk:$1|$1]] u dërgue në $2.
+'accmailtext' => "Nji fjalëkalim i krijuem rastësisht për [[wiki_User talk:$1|$1]] u dërgue në $2.
 
 Fjalëkalimi për këtë llogari mundet me u ndryshue në faqen ''[[Special:ChangePassword|ndrysho fjalëkalimin]]'' mbas kyçjes.",
 'newarticle' => '(I ri)',
@@ -661,7 +661,7 @@ Nëse ke hy këtu gabimisht, klikoje sustën '''mbrapa''' në shfletues.",
 'anontalkpagetext' => "----''Kjo âsht faqe diskutimi e nji përdoruesi anonim, i cili nuk ka krijue llogari, apo nuk e përdor atê.
 Prandej përdoret adresa numerike IP e tij për me identifikue.
 Adresa IP mundet me u shfrytëzue prej disa përdoruesve.
-Nëse jeni përdorues anonim dhe keni përshtypjen se po ju drejtohen komente jorelevante, ju lutemi [[Special:UserLogin/signup|krijoni nji llogari]] apo [[Special:UserLogin|kyçuni]] për me iu shmângë ngatërrimit me përdorues tjerë anonim.''",
+Nëse jeni përdorues anonim dhe keni përshtypjen se po ju drejtohen komente jorelevante, ju lutemi [[Special:wiki_UserLogin/signup|krijoni nji llogari]] apo [[Special:wiki_UserLogin|kyçuni]] për me iu shmângë ngatërrimit me përdorues tjerë anonim.''",
 'noarticletext' => 'Momentalisht nuk ka tekst në këtë faqe.
 Ju mundeni [[Special:Search/{{PAGENAME}}|me kërkue këtë titull]] në faqe tjera,
 <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} me kërkue në regjistrat tematikisht të afërm],
@@ -688,13 +688,13 @@ Ndryshimet e tua nuk janë ruejtë ende!",
 'previewconflict' => 'Kjo parapâmje pasqyron tekstin në kutinë e sipërme të redaktimit, njashtu si do të duket nëse e rueni.',
 'session_fail_preview' => "'''Na vjen keq! Nuk mujtëm me ruejtë redaktimin tuej për shkak të hupjes së sesionit.'''
 Ju lutemi provoni prap.
-Nëse prap nuk funksionon, provoni me u [[Special:UserLogout|çkyçë]] dhe me u kyçë prap.",
+Nëse prap nuk funksionon, provoni me u [[Special:wiki_UserLogout|çkyçë]] dhe me u kyçë prap.",
 'session_fail_preview_html' => "'''Na vjen keq! Nuk mujtëm me i ruejtë ndryshimet tueja për shkak të hupjes së sesionit.'''
 
 ''Tue qenë se {{SITENAME}} ka të aktivizuem HTML të papërpunuem, parapâmja âsht e msheftë si preventivë kundër sulmeve me JavaScript.''
 
 '''Nëse kjo ishte redaktim legjitim, ju lutemi provoni prap.'''
-Nëse prap nuk funksionon, provoni me u [[Special:UserLogout|çkyçë]] edhe me u kyçë prap.",
+Nëse prap nuk funksionon, provoni me u [[Special:wiki_UserLogout|çkyçë]] edhe me u kyçë prap.",
 'token_suffix_mismatch' => "'''Redaktimi juej u refuzue meqenëse shfletuesi juej i ka përzî shêjat e pikësimit në tekstin e redaktuem.'''
 Redaktimi âsht refuzue për me parandalue korruptimin e tekstit.
 Kjo ndodh nganjiherë, kur jeni tue përdorë shërbime ndërmjetësash anonimizues që përmbajnë gabime.",
@@ -740,7 +740,7 @@ Administruesi që e ka mshelë e ka dhânë këtë shpjegim: $1",
 'hiddencategories' => 'Kjo faqe bân pjesë në {{PLURAL:$1|1 kategori të msheftë|$1 kategori të mshefta}}:',
 'nocreatetitle' => 'Krijimi i faqeve âsht i kufizuem.',
 'nocreatetext' => '{{SITENAME}} ka kufizue mundësinë e krijimit të faqeve të reja.
-Mundeni me u kthy mbrapa edhe me redaktue faqen ekzistuese, apo [[Special:UserLogin|me u kyçë a me krijue nji llogari]].',
+Mundeni me u kthy mbrapa edhe me redaktue faqen ekzistuese, apo [[Special:wiki_UserLogin|me u kyçë a me krijue nji llogari]].',
 'nocreate-loggedin' => 'Nuk keni tagër me krijue faqe të reja.',
 'permissionserrors' => 'Gabim tagri',
 'permissionserrorstext' => 'Nuk keni tagër me bâ atë veprim, për {{PLURAL:$1|arsyen|arsyet}} vijuese:',
@@ -773,11 +773,11 @@ Këto parametra nuk janë përfshirë.",
 'undo-success' => 'Redaktimi nuk mund të kthehej. Ju lutem kontrolloni ndryshimet e mëposhtëme për të vërtetuar dëshirën e veprimit dhe pastaj kryeni ndryshimet për të plotësuar kthimin e redaktimit.',
 'undo-failure' => 'Redaktimi nuk mund të kthehej për shkak të përplasjeve të ndërmjetshme.',
 'undo-norev' => "S'mund të zhbëja këtë redaktim pasi nuk ekziston ose është grisur.",
-'undo-summary' => 'U kthye versioni $1 i bërë nga [[Special:Contributions/$2]] ([[User talk:$2]])',
+'undo-summary' => 'U kthye versioni $1 i bërë nga [[Special:Contributions/$2]] ([[wiki_User talk:$2]])',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'Nuk mundet të krijohet llogaria',
-'cantcreateaccount-text' => "Hapja e llogarive nga kjo adresë IP ('''$1''') është bllokuar nga [[User:$3|$3]].
+'cantcreateaccount-text' => "Hapja e llogarive nga kjo adresë IP ('''$1''') është bllokuar nga [[wiki_User:$3|$3]].
 
 Arsyeja e dhënë nga $3 është ''$2''.",
 
@@ -966,7 +966,7 @@ Vini re se indeksat e tyne të përmbajtjes së {{SITENAME}} munden me qenë të
 'mypreferences' => 'Parapëlqimet e mija',
 'prefs-edits' => 'Numri i redaktimeve:',
 'prefsnologin' => 'Nuk jeni kyçë',
-'prefsnologintext' => 'Duheni me qenë <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} i kyçun]</span> për me i caktue parapëlqimet.',
+'prefsnologintext' => 'Duheni me qenë <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} i kyçun]</span> për me i caktue parapëlqimet.',
 'changepassword' => 'Ndërrimi i fjalëkalimit',
 'prefs-skin' => 'Doka',
 'skin-preview' => 'Parapâmja',
@@ -1053,12 +1053,12 @@ Mundeni me zgjedhe që të tjerët me ju kontaktue përmjet faqe së diskutimit 
 'prefs-i18n' => 'Internacionalizimi',
 'prefs-signature' => 'Firma',
 
-# User rights
+# wiki_User rights
 'userrights' => 'Ndrysho privilegjet e përdoruesve',
 'userrights-lookup-user' => 'Ndrysho grupet e përdoruesit',
 'userrights-user-editname' => 'Fusni emrin e përdoruesit:',
 'editusergroup' => 'Redakto grupet e përdoruesve',
-'editinguser' => "Duke ndryshuar privilegjet e përdoruesit '''[[User:$1|$1]]''' ([[User talk:$1|{{int:talkpagelinktext}}]]{{int:pipe-separator}}[[Special:Contributions/$1|{{int:contribslink}}]])",
+'editinguser' => "Duke ndryshuar privilegjet e përdoruesit '''[[wiki_User:$1|$1]]''' ([[wiki_User talk:$1|{{int:talkpagelinktext}}]]{{int:pipe-separator}}[[Special:Contributions/$1|{{int:contribslink}}]])",
 'userrights-editusergroup' => 'Anëtarësimi tek grupet',
 'saveusergroups' => 'Ruaj Grupin e Përdoruesve',
 'userrights-groupsmember' => 'Anëtar i:',
@@ -1069,7 +1069,7 @@ Mundeni me zgjedhe që të tjerët me ju kontaktue përmjet faqe së diskutimit 
 'userrights-reason' => 'Arsyeja:',
 'userrights-no-interwiki' => 'Nuk keni leje për të ndryshuar privilegjet e përdoruesve në wiki të tjera.',
 'userrights-nodatabase' => 'Regjistri $1 nuk ekziston ose nuk është vendor.',
-'userrights-nologin' => 'Duhet të [[Special:UserLogin|hyni brenda]] me një llogari administrative për të ndryshuar privilegjet e përdoruesve.',
+'userrights-nologin' => 'Duhet të [[Special:wiki_UserLogin|hyni brenda]] me një llogari administrative për të ndryshuar privilegjet e përdoruesve.',
 'userrights-notallowed' => 'Llogaria juaj nuk ju lejon të ndryshoni privilegjet e përdoruesve.',
 'userrights-changeable-col' => 'Grupe që mund të ndryshoni',
 'userrights-unchangeable-col' => "Grupe që s'mund të ndryshoni",
@@ -1136,7 +1136,7 @@ Mundeni me zgjedhe që të tjerët me ju kontaktue përmjet faqe së diskutimit 
 'right-userrights' => 'Redakto të gjitha të drejtat e përdoruesit',
 'right-passwordreset' => 'Fjalëkalimi Reset e një përdoruesi ([[Special:PasswordReset|faqe veçantë]])',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Regjsitri i tagrit të përdoruesve',
 'rightslogtext' => 'Ky është një regjistër për ndryshimet e titujve të përdoruesve.',
 'rightslogentry' => 'të drejtat e $1 u ndryshuan prej $2 në $3',

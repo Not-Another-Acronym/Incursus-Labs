@@ -393,8 +393,8 @@ class PermissionsError extends ErrorPageError {
 
 		if ( !count( $errors ) ) {
 			$groups = array_map(
-				array( 'User', 'makeGroupLinkWiki' ),
-				User::getGroupsWithPermission( $this->permission )
+				array( 'wiki_User', 'makeGroupLinkWiki' ),
+				wiki_User::getGroupsWithPermission( $this->permission )
 			);
 
 			if ( $groups ) {
@@ -459,14 +459,14 @@ class ThrottledError extends ErrorPageError {
  * @since 1.18
  * @ingroup Exception
  */
-class UserBlockedError extends ErrorPageError {
+class wiki_UserBlockedError extends ErrorPageError {
 	public function __construct( Block $block ){
 		global $wgLang, $wgRequest;
 
 		$blocker = $block->getBlocker();
-		if ( $blocker instanceof User ) { // local user
-			$blockerUserpage = $block->getBlocker()->getUserPage();
-			$link = "[[{$blockerUserpage->getPrefixedText()}|{$blockerUserpage->getText()}]]";
+		if ( $blocker instanceof wiki_User ) { // local user
+			$blockerwiki_Userpage = $block->getBlocker()->getUserPage();
+			$link = "[[{$blockerwiki_Userpage->getPrefixedText()}|{$blockerwiki_Userpage->getText()}]]";
 		} else { // foreign user
 			$link = $blocker;
 		}
@@ -508,7 +508,7 @@ class UserBlockedError extends ErrorPageError {
  * @par Example:
  * @code
  * if( $user->isAnon ) {
- * 	throw new UserNotLoggedIn();
+ * 	throw new wiki_UserNotLoggedIn();
  * }
  * @endcode
  *
@@ -519,13 +519,13 @@ class UserBlockedError extends ErrorPageError {
  * @par Example:
  * @code
  * if( $user->isAnon ) {
- * 	throw new UserNotLoggedIn( 'action-require-loggedin' );
+ * 	throw new wiki_UserNotLoggedIn( 'action-require-loggedin' );
  * }
  * @endcode
  *
  * @ingroup Exception
  */
-class UserNotLoggedIn extends ErrorPageError {
+class wiki_UserNotLoggedIn extends ErrorPageError {
 
 	/**
 	 * @param $reasonMsg A message key containing the reason for the error.

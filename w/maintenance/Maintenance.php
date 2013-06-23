@@ -81,7 +81,7 @@ abstract class Maintenance {
 
 	// Special vars for params that are always used
 	protected $mQuiet = false;
-	protected $mDbUser, $mDbPass;
+	protected $mDbwiki_User, $mDbPass;
 
 	// A description of the script, children should change this
 	protected $mDescription = '';
@@ -693,7 +693,7 @@ abstract class Maintenance {
 	 */
 	protected function loadSpecialVars() {
 		if ( $this->hasOption( 'dbuser' ) ) {
-			$this->mDbUser = $this->getOption( 'dbuser' );
+			$this->mDbwiki_User = $this->getOption( 'dbuser' );
 		}
 		if ( $this->hasOption( 'dbpass' ) ) {
 			$this->mDbPass = $this->getOption( 'dbpass' );
@@ -843,8 +843,8 @@ abstract class Maintenance {
 		}
 
 		# If these were passed, use them
-		if ( $this->mDbUser ) {
-			$wgDBadminuser = $this->mDbUser;
+		if ( $this->mDbwiki_User ) {
+			$wgDBadminuser = $this->mDbwiki_User;
 		}
 		if ( $this->mDbPass ) {
 			$wgDBadminpassword = $this->mDbPass;

@@ -72,15 +72,15 @@ $specialPageAliases = array(
 	'Unusedcategories'          => array( 'Royuwaay yiñ jëfandikuwul' ),
 	'Unusedimages'              => array( 'Nataal yiñ jëfandikuwul' ),
 	'Upload'                    => array( 'Yeb' ),
-	'Userlogin'                 => array( 'Lonku' ),
-	'Userlogout'                => array( 'Lonkiku' ),
+	'wiki_Userlogin'                 => array( 'Lonku' ),
+	'wiki_Userlogout'                => array( 'Lonkiku' ),
 	'Wantedcategories'          => array( 'Wàll yiñ laaj' ),
 	'Wantedpages'               => array( 'Xët yiñ laaj' ),
 	'Watchlist'                 => array( 'Limu toppte' ),
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Rëddaatu lëkkalekaay yi :',
 'tog-justify' => 'Maaseel xise yi',
 'tog-hideminor' => 'Nëbb coppite yu néewal yi mujj',
@@ -404,7 +404,7 @@ Yorkat bi def caabi ji, joxe na yii lay :$1',
 Li koy waral yenn saa yi mooy da ngay jéma ubbi ab lëkkalekaay, jaare ko ci ab jaar-jaar walla méngaleeb ay sumb yu aw xët wu faru.
 
 Su dul loolu kon daa am ag njuumte ci tëriinu Mediawiki bi.
-Di la sakku nga yegge ko ab [[Special:ListUsers/sysop|yorkat]] , jox ko màkkaan bi.',
+Di la sakku nga yegge ko ab [[Special:Listwiki_Users/sysop|yorkat]] , jox ko màkkaan bi.',
 'missingarticle-rev' => '(Limu sumb bi# : $1)',
 'missingarticle-diff' => '(Wuute : $1, $2)',
 'readonly_lag' => 'Dàttub njoxe bi daa caabi boppam ngir may ñaareelu joxekaay yi dap joxekaay bu njëkk bi.',
@@ -440,7 +440,7 @@ Laaj : $2',
 $2',
 'namespaceprotected' => "Amoo sañ-sañu soppi xët yi ne ci bii barabu tur « '''$1''' ».",
 'ns-specialprotected' => 'Xët yi ne ci bii barabu tur « {{ns:special}} » kenn maneesu leen a soppi.',
-'titleprotected' => "Koj bii [[User:$1|$1]] moo ko aar ngir bañ sosteefam.
+'titleprotected' => "Koj bii [[wiki_User:$1|$1]] moo ko aar ngir bañ sosteefam.
 Ngirte li mu joxe mooy ne « ''$2'' ».",
 
 # Virus scanner
@@ -450,7 +450,7 @@ Ngirte li mu joxe mooy ne « ''$2'' ».",
 # Login and logout pages
 'logouttext' => "Fi mu nekk nii génn nga.'''
 
-Man ngaa wéy di jëfandikoo {{SITENAME}} ci anam buñ la dul xamme walla nga  [[Special:UserLogin|duggewaat]] ak wenn tur wi walla ak weneen.",
+Man ngaa wéy di jëfandikoo {{SITENAME}} ci anam buñ la dul xamme walla nga  [[Special:wiki_UserLogin|duggewaat]] ak wenn tur wi walla ak weneen.",
 'welcomecreation' => '== Dalal-jàmm, $1 ! ==
 Sosees na sa sàq.
 Bul fatte soppi say [[Special:Preferences|{{SITENAME}} tànneef]].',
@@ -615,13 +615,13 @@ Sa màkkaanu IP mooy $3 xammeekaayu téye gi mooy #$5. Di la sakku nga joxe leen
 'loginreqlink' => 'Dugg',
 'loginreqpagetext' => 'Faaw nga $1 ngir gis yeneen xët yi.',
 'accmailtitle' => 'Baatujàll bi yónne nañ ko.',
-'accmailtext' => "Ab baatujàll ngir [[User talk:$1|$1]]  yónne nañu ko $2.
+'accmailtext' => "Ab baatujàll ngir [[wiki_User talk:$1|$1]]  yónne nañu ko $2.
 Baatujàllub bii jëfandikukat bu bees man nga ko soppi ci ''[[Special:ChangePassword|soppi baatujàll]]'' soo duggee ba noppi.",
 'newarticle' => '(Bees)',
 'newarticletext' => "Da ngaa topp ab lëkkalekaay buy jëme ci aw xët wu amagul. ngir sos xët wi léegi, duggalal sa mbind ci boyot bii ci suuf (man ngaa yër [[{{MediaWiki:Helppage}}|xëtu ndimbal wi]] ngir yeneeni xamle). Su fekkee njuumtee la fi indi cuqal ci '''dellu''' bu sa joowukaay.",
 'anontalkpagetext' => "---- ''Yaa ngi ci xëtu waxtaanuwaayu ab jëfandikukatu alaxam, bu bindoogul ba fim ne mbaa jëfandikoowul am sàqam.
 Kon ngir xàmmee ko fàw nga jëfandikoo màkkaanub IP wam. Te màkkaanub IP jëfandikukat yu bari man nañ koo bokk.
-Su fekkee jëfandikukatu alaxam nga, te nga gis ne dees laa féetale ay kàddu yoo moomul, ngalla [[Special:UserLogin|bindu]] walla [[Special:UserLogin|dugg]] ngir benn jaxase bañatee am ëllëg .''",
+Su fekkee jëfandikukatu alaxam nga, te nga gis ne dees laa féetale ay kàddu yoo moomul, ngalla [[Special:wiki_UserLogin|bindu]] walla [[Special:wiki_UserLogin|dugg]] ngir benn jaxase bañatee am ëllëg .''",
 'noarticletext' => 'Fi mu ne ni amul menn mbind ci xët wii; man ngaa [[Special:Search/{{PAGENAME}}|seet koju xët wi]] ci yeneen xët, <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} seet ci xëtu jagleel wi ],
 walla [{{fullurl:{{FULLPAGENAME}}|action=edit}} soppi xët wii]</span>.',
 'noarticletext-nopermission' => 'Nii-nii amul menn mbind ci wii xët.
@@ -686,7 +686,7 @@ Jëfandikukat yi nekk yorkat rekk a ko man a soppi.'''",
 'template-semiprotected' => '(aar-diggu)',
 'hiddencategories' => '{{PLURAL:$1|wàll bu nëbbu bu|wàll yu nëbbu yu }} xët wii bokk :',
 'nocreatetitle' => 'Digalu sosteefu xët',
-'nocreatetext' => 'Jëfandikukat yi bindu rekk a man a sosi xët ci {{SITENAME}}. Man nga dellu ginnaaw walla soppi aw xët wu am ba noppi, [[Special:UserLogin|duggu walla sos am sàq]].',
+'nocreatetext' => 'Jëfandikukat yi bindu rekk a man a sosi xët ci {{SITENAME}}. Man nga dellu ginnaaw walla soppi aw xët wu am ba noppi, [[Special:wiki_UserLogin|duggu walla sos am sàq]].',
 'nocreate-loggedin' => 'Amuloo sañ-sañ yu doy ngir man a sosi xët yu bees.',
 'permissionserrors' => 'Njuumte ci sañ-sañ yi',
 'permissionserrorstext' => 'Amuloo sañ-sañu àggali jëf ji nga tambali, ngax {{PLURAL:$1|lii toftal|yii toftal}} :',
@@ -718,11 +718,11 @@ Yenn royuwaay yi duñu man a dugg.',
 'undo-success' => 'Gii coppite man nga kaa neenal. Xoolal méngale gi ne ci suuf ngir wóorlu ne ni ëmbit li mel na ni nga ko bëgge, te nga denc xët wi ngir jeexal.',
 'undo-failure' => 'Neenalug coppite gi defuwul: man naa jur ab jàppante ci coppite yi ci diggante bi',
 'undo-norev' => 'Coppite gi manoo koo neenal ndaxte nekkul walla dañu koo far',
-'undo-summary' => 'Neenalug coppite $1 yu [[Special:Contributions/$2|$2]] ([[User talk:$2|waxtaan]])',
+'undo-summary' => 'Neenalug coppite $1 yu [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|waxtaan]])',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'sag mbindu Manu la nekk .',
-'cantcreateaccount-text' => "Sosum sàq mu bàyyikoo ci bii màkkaanu IP ('''$1''') dañ kaa téye [[User:$3|$3]].
+'cantcreateaccount-text' => "Sosum sàq mu bàyyikoo ci bii màkkaanu IP ('''$1''') dañ kaa téye [[wiki_User:$3|$3]].
 
 Ngirtey téye gi $3 joxe, mooy ne: ''$2''.",
 
@@ -942,7 +942,7 @@ Jéemala bindaale ''all'' ngir seet ci biir ëmbit gépp (boolewaale ci xëti wa
 'mypreferences' => 'Samay tànneef',
 'prefs-edits' => 'Limu coppite yi:',
 'prefsnologin' => 'Duggoo',
-'prefsnologintext' => 'Laaj na nga <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} dugg]</span> ngir soppi say tànneef.',
+'prefsnologintext' => 'Laaj na nga <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} dugg]</span> ngir soppi say tànneef.',
 'changepassword' => 'Coppiteg baatujàll bi',
 'prefs-skin' => 'Melokaan',
 'skin-preview' => 'Wonendil',
@@ -1029,12 +1029,12 @@ Jéemala bindaale ''all'' ngir seet ci biir ëmbit gépp (boolewaale ci xëti wa
 'prefs-displayrc' => 'Tànneefi wonewiin',
 'prefs-diffs' => 'Wuute',
 
-# User rights
+# wiki_User rights
 'userrights' => 'Yorug sañ-sañu aji-sos',
 'userrights-lookup-user' => 'Yorug mboolooy jëfandikukat',
 'userrights-user-editname' => 'Dugal ab turu jëfandikukat :',
 'editusergroup' => 'Coppiteg mboolooy Jëfandikukat',
-'editinguser' => "Coppiteg sañ-sañi jëfandikukat bii di '''[[User:$1|$1]]''' ([[User talk:$1|{{int:talkpagelinktext}}]] | [[Special:Contributions/$1|{{int:contribslink}}]])",
+'editinguser' => "Coppiteg sañ-sañi jëfandikukat bii di '''[[wiki_User:$1|$1]]''' ([[wiki_User talk:$1|{{int:talkpagelinktext}}]] | [[Special:Contributions/$1|{{int:contribslink}}]])",
 'userrights-editusergroup' => 'Soppi mboolooy jëfandikukat',
 'saveusergroups' => 'Denc mboolooy jëfandikukat yi',
 'userrights-groupsmember' => 'Cëru mbooloo mu:',
@@ -1045,7 +1045,7 @@ Jéemala bindaale ''all'' ngir seet ci biir ëmbit gépp (boolewaale ci xëti wa
 'userrights-reason' => 'Ngirte :',
 'userrights-no-interwiki' => 'Amoo sañ-sañu soppi sañ-sañi jëfandikukat yi ci yeneen wiki',
 'userrights-nodatabase' => 'Dàttub njoxe bii « $1 » amul walla nekkul ci barab bi.',
-'userrights-nologin' => 'Faaw nga  [[Special:UserLogin|dugg]] ak sàqum ab yorkat ngir man a soppi sañ-sañi ab jëfandukukat.',
+'userrights-nologin' => 'Faaw nga  [[Special:wiki_UserLogin|dugg]] ak sàqum ab yorkat ngir man a soppi sañ-sañi ab jëfandukukat.',
 'userrights-notallowed' => 'Sa sàq amul sañ-sañ ngir man a joxi sañ-sañ ab jëfandikukat.',
 'userrights-changeable-col' => 'Mbooloo yees man a soppi',
 'userrights-unchangeable-col' => 'Mbooloo yees manuta soppi',
@@ -1129,7 +1129,7 @@ Jéemala bindaale ''all'' ngir seet ci biir ëmbit gépp (boolewaale ci xëti wa
 'right-siteadmin' => 'Caabi walla caabeedi dàttub njoxe bi',
 'right-override-export-depth' => 'génne ay xët yu ëmbi xët yu lëkkaloo ba-ci xóotaay bu tolluwaayam àgg 5',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Sañ-sañi jëfandikukat',
 'rightslogtext' => 'Lii di toftal limu jaar-jaaru coppitey sañ-sañi jëfandikukat yi.',
 'rightslogentry' => 'moo jële jëfandikukat bii di « $1 » ci mbooloo  $2  yóbb ko ci $3',
@@ -1218,7 +1218,7 @@ Jéemala bindaale ''all'' ngir seet ci biir ëmbit gépp (boolewaale ci xëti wa
 'upload' => 'Yeb ab dencukaay',
 'uploadbtn' => 'Yeb ŋara wi',
 'uploadnologin' => 'Duggoo',
-'uploadnologintext' => 'Faaw nga [[Special:UserLogin|dugg]] ngir man a yebi ŋara.',
+'uploadnologintext' => 'Faaw nga [[Special:wiki_UserLogin|dugg]] ngir man a yebi ŋara.',
 'upload_directory_missing' => 'Wayndareb yeb bu ($1) nekku fi te joxekaayub web bi manu koo sos.',
 'upload_directory_read_only' => 'Joxekaayub web bi manuta bind ci wayndareb yeb bu ($1).',
 'uploaderror' => 'Njuumte ci yeb gi',
@@ -1394,7 +1394,7 @@ Bul fattee seet baxam amul yeneen lëkkalekaay yu lay jëmale ci royuwaay yi bal
 'statistics-edits' => 'Coppitey xët yi dalee ca campug  {{SITENAME}}',
 'statistics-views-total' => 'Mbooleem saytu yi',
 'statistics-views-peredit' => 'Saytu ngir soppi',
-'statistics-users' => '[[Special:ListUsers|Jëfandikukat]] yi bindu',
+'statistics-users' => '[[Special:Listwiki_Users|Jëfandikukat]] yi bindu',
 'statistics-users-active' => 'Jëfandikukat yu yëngu',
 'statistics-users-active-desc' => 'Jëfandikukat yi amal ag yëngu-yëngu ci {{PLURAL:$1|bés bu mujj bi|$1 bés yu mujj yi}}',
 'statistics-mostpopular' => 'Xët yees gën a saytu',
@@ -1537,13 +1537,13 @@ Xoolal itam [[Special:WantedCategories|wàll yi ñuy laaj]].',
 'linksearch-ok' => 'Seet',
 'linksearch-line' => '$1 moo ngi ci xët wii di $2',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => 'Wone jëfandikukat yi doore ko ci:',
 'listusers-submit' => 'Wone',
 'listusers-noresult' => 'Benn jëfandikukat giseesu ko',
 'listusers-blocked' => '(téyees)',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'Limu jëfandikukat yu yëngu',
 'activeusers-count' => '$1 coppite {{PLURAL:$2|bu mujj|yu mujj}}',
 'activeusers-from' => 'Wone jëfandikukat yi dalee ko ci:',
@@ -1574,7 +1574,7 @@ Man ngaa fee gis itam [[{{MediaWiki:Listgrouprights-helppage}}|yeneen xibaar]] �
 
 # E-mail user
 'mailnologin' => 'Amul benn mákkaan boo man a yónne bataaxal bi',
-'mailnologintext' => 'Ngir man a yónney bataaxal laaj na nga [[Special:UserLogin|dugg]] te it am ab màkkaanub m-bataaxal bu baax ci say [[Special:Preferences|tànneef]].',
+'mailnologintext' => 'Ngir man a yónney bataaxal laaj na nga [[Special:wiki_UserLogin|dugg]] te it am ab màkkaanub m-bataaxal bu baax ci say [[Special:Preferences|tànneef]].',
 'emailuser' => 'Bind bii jëfandikukat',
 'emailpage' => 'Yónne ab m-bataaxal bii jëfandikukat',
 'usermailererror' => 'Njuumte ci koju m-bataaxal bi',
@@ -1601,7 +1601,7 @@ Man ngaa fee gis itam [[{{MediaWiki:Listgrouprights-helppage}}|yeneen xibaar]] �
 'nowatchlist' => 'Sa limu toppte amul benn jukki.',
 'watchlistanontext' => 'Ngir mana gis walla soppi jëfkayu sa limu toppte, faw nga  $1.',
 'watchnologin' => 'Duggoo de',
-'watchnologintext' => 'Yaa wara nekk [[Special:UserLogin|duggal]] ngir soppi lim gi.',
+'watchnologintext' => 'Yaa wara nekk [[Special:wiki_UserLogin|duggal]] ngir soppi lim gi.',
 'addedwatchtext' => "Xët wii di « [[:$1]] » yokk nañu ko ci sa [[Special:Watchlist|limu toppte]].
 Coppite yiy ñëw yu xët wi ak xëtu waxtaanuwaay wi mu àndal di nañu leen fa dugal, dañula koy won mu '''duuf''' ci [[Special:RecentChanges|limu coppite yu mujj yi]] ngir xammee gi yomb.",
 'removedwatchtext' => 'Xët wii di « [[:$1]] » jële nañu ko ci sa [[Special:Watchlist|limu toppte]].',
@@ -1670,12 +1670,12 @@ Xolal $2 ngir gis limu farte bi mujj.',
 'rollbackfailed' => 'Loppanti gi antuwul',
 'cantrollback' => 'Neenal coppite gi manula nekk;
 Ki def coppite gi mooy Kenn ki masa cëru ci xët wii.',
-'alreadyrolled' => 'Loppantig coppite gu mujj gu xët wii di « [[:$1]] » manula nekk, ki ko def di [[User:$2|$2]] ([[User talk:$2|Waxtaan]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]);
+'alreadyrolled' => 'Loppantig coppite gu mujj gu xët wii di « [[:$1]] » manula nekk, ki ko def di [[wiki_User:$2|$2]] ([[wiki_User talk:$2|Waxtaan]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]);
 am na keneen ku jota soppi walla loppanti xët wi.
 
-Ki mujje soppi xët wi mooy [[User:$3|$3]] ([[User talk:$3|Waxtaan]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
+Ki mujje soppi xët wi mooy [[wiki_User:$3|$3]] ([[wiki_User talk:$3|Waxtaan]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
 'editcomment' => "Tënkug coppite gi mooy: « ''$1'' ».",
-'revertpage' => 'Loppantig coppite gu [[Special:Contributions/$2|$2]] ([[User talk:$2|Waxtaan]]) dello ko ci sumb mu [[User:$1|$1]]',
+'revertpage' => 'Loppantig coppite gu [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Waxtaan]]) dello ko ci sumb mu [[wiki_User:$1|$1]]',
 'rollback-success' => 'Ki loppanti mooy $1 ;
 Ki ko dello ci sumb mu mujj mi mooy $2.',
 
@@ -1853,7 +1853,7 @@ Xoolal [[Special:BlockList|limu IP yees téye]] ngir gis ñees téye ñépp.',
 'ipb-blocklist-contribs' => 'Cëru yu $1',
 'unblockip' => 'Téyedi jëfandikukat bi',
 'ipusubmit' => 'Far gii téye',
-'unblocked' => '[[User:$1|$1]] dees koo téye',
+'unblocked' => '[[wiki_User:$1|$1]] dees koo téye',
 'unblocked-id' => 'Téye gu $1 far nañu ko',
 'ipblocklist' => 'Màkkaanu IP ak jëfandikukat yees Téye',
 'ipblocklist-legend' => 'Seet jëfandikukat bees téye',
@@ -1943,7 +1943,7 @@ wóorluwul bu beex ne nand nga njeexiti jëf ji laataa ngay wéy.",
 
 Ci yii anam, faww nga tuddewaat walla yokk wii xëtu waxtaanuwaay ak sa loxo, su la neexee.',
 'movearticle' => 'Tuddewaatal jukki bi',
-'movenologintext' => 'Ngir man a tuddewaat aw xët, da ngaa war a [[Special:UserLogin|dugg]] ni jëfëndikookat bu bindu te saw sàq war naa am yaggaa bi mu laaj.',
+'movenologintext' => 'Ngir man a tuddewaat aw xët, da ngaa war a [[Special:wiki_UserLogin|dugg]] ni jëfëndikookat bu bindu te saw sàq war naa am yaggaa bi mu laaj.',
 'movenotallowed' => 'Amoo sañ-sañu tuddewaat xët yi.',
 'movenotallowedfile' => 'Amoo sañ-sañu tuddewaat dencukaay yi.',
 'cant-move-user-page' => 'Amoo sañ-sañu tuddewaat xëti jëfandikukat yi (ba mu des ron-xët yi).',
@@ -2166,7 +2166,7 @@ Lëkkalekaay yiy toftal, ci wenn rëdd wi, dees leen di jàppee nikiy sette, maa
 'confirmemail_noemail' => 'Jooxewoo ab m-bataaxal bu baax ci say [[Special:Preferences|tànneef]].',
 
 # Delete conflict
-'confirmrecreate' => "Jëfëndikookat bii [[User:$1|$1]] ([[User talk:$1|Waxtaan]]) moo dindi xët wii, nga xam ne tambaliwoon nga koo defar, ngir ngirte lii :
+'confirmrecreate' => "Jëfëndikookat bii [[wiki_User:$1|$1]] ([[wiki_User talk:$1|Waxtaan]]) moo dindi xët wii, nga xam ne tambaliwoon nga koo defar, ngir ngirte lii :
 : ''$2''
 Dëgëlël ni bëgg ngaa sakkaat xët wii.",
 

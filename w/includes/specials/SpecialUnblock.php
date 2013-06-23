@@ -96,7 +96,7 @@ class SpecialUnblock extends SpecialPage {
 			list( $target, $type ) = $this->block->getTargetAndType();
 
 			# Autoblocks are logged as "autoblock #123 because the IP was recently used by
-			# User:Foo, and we've just got any block, auto or not, that applies to a target
+			# wiki_User:Foo, and we've just got any block, auto or not, that applies to a target
 			# the user has specified.  Someone could be fishing to connect IPs to autoblocks,
 			# so don't show any distinction between unblocked IPs and autoblocked IPs
 			if( $type == Block::TYPE_AUTO && $this->type == Block::TYPE_IP ){
@@ -189,19 +189,19 @@ class SpecialUnblock extends SpecialPage {
 
 		# Unset _deleted fields as needed
 		if( $block->mHideName ) {
-			# Something is deeply FUBAR if this is not a User object, but who knows?
-			$id = $block->getTarget() instanceof User
+			# Something is deeply FUBAR if this is not a wiki_User object, but who knows?
+			$id = $block->getTarget() instanceof wiki_User
 				? $block->getTarget()->getID()
-				: User::idFromName( $block->getTarget() );
+				: wiki_User::idFromName( $block->getTarget() );
 
-			RevisionDeleteUser::unsuppressUserName( $block->getTarget(), $id );
+			RevisionDeletewiki_User::unsuppresswiki_UserName( $block->getTarget(), $id );
 		}
 
 		# Redact the name (IP address) for autoblocks
 		if ( $block->getType() == Block::TYPE_AUTO ) {
 			$page = Title::makeTitle( NS_USER, '#' . $block->getId() );
 		} else {
-			$page = $block->getTarget() instanceof User
+			$page = $block->getTarget() instanceof wiki_User
 				? $block->getTarget()->getUserpage()
 				: Title::makeTitle( NS_USER, $block->getTarget() );
 		}

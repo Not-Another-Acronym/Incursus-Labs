@@ -18,7 +18,7 @@
 $fallback = 'zh-hans';
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-norollbackdiff' => '进行回退后略过差异比较',
 
 'mytalk' => '我的讨论页',

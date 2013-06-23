@@ -45,14 +45,14 @@ class MoveBatch extends Maintenance {
 	public function __construct() {
 		parent::__construct();
 		$this->mDescription = "Moves a batch of pages";
-		$this->addOption( 'u', "User to perform move", false, true );
+		$this->addOption( 'u', "wiki_User to perform move", false, true );
 		$this->addOption( 'r', "Reason to move page", false, true );
 		$this->addOption( 'i', "Interval to sleep between moves" );
 		$this->addArg( 'listfile', 'List of pages to move, newline delimited', false );
 	}
 
 	public function execute() {
-		global $wgUser;
+		global $wgwiki_User;
 
 		# Change to current working directory
 		$oldCwd = getcwd();
@@ -72,8 +72,8 @@ class MoveBatch extends Maintenance {
 		if ( !$file ) {
 			$this->error( "Unable to read file, exiting", true );
 		}
-		$wgUser = User::newFromName( $user );
-		if ( !$wgUser ) {
+		$wgwiki_User = wiki_User::newFromName( $user );
+		if ( !$wgwiki_User ) {
 			$this->error( "Invalid username", true );
 		}
 

@@ -13,7 +13,7 @@
  */
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-justify' => 'jostifai di paragraf-dem',
 'tog-hideminor' => 'Haid di lili chenj-dem na di risent chenj list',
 'tog-extendwatchlist' => 'Big di wachlist fo sho ol di chenj-dem,  pas di risent chenj-dem nomo',

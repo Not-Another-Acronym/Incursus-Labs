@@ -506,11 +506,11 @@ abstract class DatabaseInstaller {
 	 *
 	 * @return String
 	 */
-	public function getInstallUserBox() {
+	public function getInstallwiki_UserBox() {
 		return
 			Html::openElement( 'fieldset' ) .
 			Html::element( 'legend', array(), wfMessage( 'config-db-install-account' )->text() ) .
-			$this->getTextBox( '_InstallUser', 'config-db-username', array( 'dir' => 'ltr' ), $this->parent->getHelpBox( 'config-db-install-username' ) ) .
+			$this->getTextBox( '_Installwiki_User', 'config-db-username', array( 'dir' => 'ltr' ), $this->parent->getHelpBox( 'config-db-install-username' ) ) .
 			$this->getPasswordBox( '_InstallPassword', 'config-db-password', array( 'dir' => 'ltr' ), $this->parent->getHelpBox( 'config-db-install-password' ) ) .
 			Html::closeElement( 'fieldset' );
 	}
@@ -519,8 +519,8 @@ abstract class DatabaseInstaller {
 	 * Submit a standard install user fieldset.
 	 * @return Status
 	 */
-	public function submitInstallUserBox() {
-		$this->setVarsFromRequest( array( '_InstallUser', '_InstallPassword' ) );
+	public function submitInstallwiki_UserBox() {
+		$this->setVarsFromRequest( array( '_Installwiki_User', '_InstallPassword' ) );
 		return Status::newGood();
 	}
 
@@ -531,7 +531,7 @@ abstract class DatabaseInstaller {
 	 *
 	 * @return String
 	 */
-	public function getWebUserBox( $noCreateMsg = false ) {
+	public function getWebwiki_UserBox( $noCreateMsg = false ) {
 		$wrapperStyle = $this->getVar( '_SameAccount' ) ? 'display: none' : '';
 		$s = Html::openElement( 'fieldset' ) .
 			Html::element( 'legend', array(), wfMessage( 'config-db-web-account' )->text() ) .
@@ -553,17 +553,17 @@ abstract class DatabaseInstaller {
 	}
 
 	/**
-	 * Submit the form from getWebUserBox().
+	 * Submit the form from getWebwiki_UserBox().
 	 *
 	 * @return Status
 	 */
-	public function submitWebUserBox() {
+	public function submitWebwiki_UserBox() {
 		$this->setVarsFromRequest(
 			array( 'wgDBuser', 'wgDBpassword', '_SameAccount', '_CreateDBAccount' )
 		);
 
 		if ( $this->getVar( '_SameAccount' ) ) {
-			$this->setVar( 'wgDBuser', $this->getVar( '_InstallUser' ) );
+			$this->setVar( 'wgDBuser', $this->getVar( '_Installwiki_User' ) );
 			$this->setVar( 'wgDBpassword', $this->getVar( '_InstallPassword' ) );
 		}
 

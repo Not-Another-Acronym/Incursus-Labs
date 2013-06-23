@@ -65,22 +65,22 @@ $files = findFiles( $dir, $extensions );
 
 # Initialise the user for this operation
 $user = isset( $options['user'] )
-	? User::newFromName( $options['user'] )
-	: User::newFromName( 'Maintenance script' );
-if ( !$user instanceof User ) {
-	$user = User::newFromName( 'Maintenance script' );
+	? wiki_User::newFromName( $options['user'] )
+	: wiki_User::newFromName( 'Maintenance script' );
+if ( !$user instanceof wiki_User ) {
+	$user = wiki_User::newFromName( 'Maintenance script' );
 }
-$wgUser = $user;
+$wgwiki_User = $user;
 
 # Get block check. If a value is given, this specified how often the check is performed
 if ( isset( $options['check-userblock'] ) ) {
 	if ( !$options['check-userblock'] ) {
-		$checkUserBlock = 1;
+		$checkwiki_UserBlock = 1;
 	} else {
-		$checkUserBlock = (int)$options['check-userblock'];
+		$checkwiki_UserBlock = (int)$options['check-userblock'];
 	}
 } else {
-	$checkUserBlock = false;
+	$checkwiki_UserBlock = false;
 }
 
 # Get --from
@@ -138,7 +138,7 @@ if ( $count > 0 ) {
 			}
 		}
 
-		if ( $checkUserBlock && ( ( $processed % $checkUserBlock ) == 0 ) ) {
+		if ( $checkwiki_UserBlock && ( ( $processed % $checkwiki_UserBlock ) == 0 ) ) {
 			$user->clearInstanceCache( 'name' ); // reload from DB!
 			if ( $user->isBlocked() ) {
 				echo( $user->getName() . " was blocked! Aborting.\n" );
@@ -184,12 +184,12 @@ if ( $count > 0 ) {
 				$commentText = $real_comment;
 
 			/* find user directly from source wiki, through MW's API */
-			$real_user = getFileUserFromSourceWiki( $options['source-wiki-url'], $base );
+			$real_user = getFilewiki_UserFromSourceWiki( $options['source-wiki-url'], $base );
 			if ( $real_user === false ) {
-				$wgUser = $user;
+				$wgwiki_User = $user;
 			} else {
-				$wgUser = User::newFromName( $real_user );
-				if ( $wgUser === false ) {
+				$wgwiki_User = wiki_User::newFromName( $real_user );
+				if ( $wgwiki_User === false ) {
 					# user does not exist in target wiki
 					echo ( "failed: user '$real_user' does not exist in target wiki." );
 					continue;
@@ -218,7 +218,7 @@ if ( $count > 0 ) {
 
 		# Import the file
 		if ( isset( $options['dry'] ) ) {
-			echo( " publishing {$file} by '" . $wgUser->getName() . "', comment '$commentText'... " );
+			echo( " publishing {$file} by '" . $wgwiki_User->getName() . "', comment '$commentText'... " );
 		} else {
 			$archive = $image->publish( $file );
 			if ( !$archive->isGood() ) {
@@ -331,7 +331,7 @@ Options:
 --dry			Dry run, don't import anything
 --protect=<protect>     Specify the protect value (autoconfirmed,sysop)
 --unprotect             Unprotects all uploaded images
---source-wiki-url   if specified, take User and Comment data for each imported file from this URL.
+--source-wiki-url   if specified, take wiki_User and Comment data for each imported file from this URL.
 					For example, --source-wiki-url="http://en.wikipedia.org/"
 
 TEXT;

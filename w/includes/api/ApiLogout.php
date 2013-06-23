@@ -26,7 +26,7 @@
 
 /**
  * API module to allow users to log out of the wiki. API equivalent of
- * Special:Userlogout.
+ * Special:wiki_Userlogout.
  *
  * @ingroup API
  */
@@ -43,7 +43,7 @@ class ApiLogout extends ApiBase {
 
 		// Give extensions to do something after user logout
 		$injected_html = '';
-		wfRunHooks( 'UserLogoutComplete', array( &$user, &$injected_html, $oldName ) );
+		wfRunHooks( 'wiki_UserLogoutComplete', array( &$user, &$injected_html, $oldName ) );
 	}
 
 	public function isReadMode() {

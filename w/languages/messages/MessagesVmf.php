@@ -52,13 +52,13 @@ $specialPageAliases = array(
 	'Undelete'                  => array( 'Wiidârhärschdälâ' ),
 	'Unwatchedpages'            => array( 'Unbäoobôchdâdâ_Sajdn' ),
 	'Upload'                    => array( 'Hoochlaadâ' ),
-	'Userlogin'                 => array( 'Ôômäldâ' ),
-	'Userlogout'                => array( 'Ôbmäldâ' ),
+	'wiki_Userlogin'                 => array( 'Ôômäldâ' ),
+	'wiki_Userlogout'                => array( 'Ôbmäldâ' ),
 	'Watchlist'                 => array( 'Bäoobôchdungslisdâ' ),
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Linggs undârschdrajchn:',
 'tog-justify' => 'Dhägsd in Blogsads',
 'tog-hideminor' => 'Glaane ändrungn ned ôôdsajchn',
@@ -327,7 +327,7 @@ Gschbärd is se desdâweechn: $1",
 
 Wen des basiird, dan massdn`s, wemma â dsu alde bearbajdung ôôschaua wil odâ ane fonra gleschdn sajdn.
 
-Wen's des ned is, bisd womeeglich iwa ân feela in dr sofdwäâr gschdolbäd. In dämm Fall melds´däs, bidde mid där URL, am [[Special:ListUsers/sysop|Administrator]].",
+Wen's des ned is, bisd womeeglich iwa ân feela in dr sofdwäâr gschdolbäd. In dämm Fall melds´däs, bidde mid där URL, am [[Special:Listwiki_Users/sysop|Administrator]].",
 'missingarticle-rev' => '(wärsjoonsnumâr: $1)',
 'badtitletext' => "Dii fârlangde sajdn gibd's ned, odâr sii had ân uugildichn sajdnnôôma ghabd, odâr s'wôôr â gschlambdâr fârwajs fonâm andârn wighi häär. Filajchd is aa â buuchschdôôb drin'n, däär in sajdnnôôm gôôr ned schdena däf.",
 'viewsource' => 'Gwäl-dhägsd ôôgugn',
@@ -496,7 +496,7 @@ Hirmid sagsd, das Du den dhägsd '''selbâr gschriim''' hasd, das däär dhägsd
 'mypreferences' => 'Maj ajschdelunga',
 'prefs-edits' => 'So ofd umgmoodld:',
 'prefsnologin' => 'Ned ôôgmäld',
-'prefsnologintext' => 'Ärschd wen\'d <span class="plainlinks">[{{fullurl:{{#special:UserLogin}}|returnto=$1}} ôôgmäld]</span> bisch, ghôôsch dâj âjschdelungn ändârn.',
+'prefsnologintext' => 'Ärschd wen\'d <span class="plainlinks">[{{fullurl:{{#special:wiki_UserLogin}}|returnto=$1}} ôôgmäld]</span> bisch, ghôôsch dâj âjschdelungn ändârn.',
 'changepassword' => "S'bhaswôrd ändârn",
 'prefs-skin' => 'Schaale',
 'skin-preview' => 'Môôl schbign',
@@ -549,7 +549,7 @@ Hirmid sagsd, das Du den dhägsd '''selbâr gschriim''' hasd, das däär dhägsd
 
 'grouppage-sysop' => '{{ns:project}}:Adminisdradoorn',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Brodoghol fo rächde-dsuudaalung an bearbajdâr',
 
 # Associated actions - in the sentence "You do not have permission to X"

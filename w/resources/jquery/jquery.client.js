@@ -1,5 +1,5 @@
 /**
- * User-agent detection
+ * wiki_User-agent detection
  */
 ( function ( $ ) {
 
@@ -47,7 +47,7 @@
 				// Generic version digit
 				var x = 'x';
 				// Strings found in user agent strings that need to be conformed
-				var wildUserAgents = ['Opera', 'Navigator', 'Minefield', 'KHTML', 'Chrome', 'PLAYSTATION 3'];
+				var wildwiki_UserAgents = ['Opera', 'Navigator', 'Minefield', 'KHTML', 'Chrome', 'PLAYSTATION 3'];
 				// Translations for conforming user agent strings
 				var userAgentTranslations = [
 					// Tons of browsers lie about being something they are not
@@ -112,7 +112,7 @@
 					platform = uk,
 					version = x;
 
-				if ( match = new RegExp( '(' + wildUserAgents.join( '|' ) + ')' ).exec( ua ) ) {
+				if ( match = new RegExp( '(' + wildwiki_UserAgents.join( '|' ) + ')' ).exec( ua ) ) {
 					// Takes a userAgent string and translates given text into something we can more easily work with
 					ua = translate( ua, userAgentTranslations );
 				}

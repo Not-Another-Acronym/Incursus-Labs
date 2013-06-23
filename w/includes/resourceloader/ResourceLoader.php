@@ -1077,7 +1077,7 @@ class ResourceLoader {
 	 * @param $modules array of module names (strings)
 	 * @param $lang string Language code
 	 * @param $skin string Skin name
-	 * @param $user string|null User name. If null, the &user= parameter is omitted
+	 * @param $user string|null wiki_User name. If null, the &user= parameter is omitted
 	 * @param $version string|null Versioning timestamp
 	 * @param $debug bool Whether the request should be in debug mode
 	 * @param $only string|null &only= parameter

@@ -35,7 +35,7 @@ class SpecialPreferences extends SpecialPage {
 		$this->setHeaders();
 		$this->outputHeader();
 		$out = $this->getOutput();
-		$out->disallowUserJs();  # Prevent hijacked user scripts from sniffing passwords etc.
+		$out->disallowwiki_UserJs();  # Prevent hijacked user scripts from sniffing passwords etc.
 
 		$user = $this->getUser();
 		if ( $user->isAnon() ) {

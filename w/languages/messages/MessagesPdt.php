@@ -15,7 +15,7 @@
 $fallback = 'de';
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Links unjastritje:',
 'tog-justify' => 'Tatjst em Blocksautz',
 'tog-hideminor' => 'Tjliene Endarunge ute latste Tiet nich wiese',
@@ -240,7 +240,7 @@ MySQL mald dem Fehla "<tt>$3: $4</tt>".',
 Dit tjemm jeweenlich soo, wan een oola nich jelaschda Link jebruckt worde es.
 
 Wan daut nich soo es, dan es doa vleicht een Fehla enne Software.
-Bitte schriew eene Notiz aun [[Special:ListUsers/sysop|administrator]], en lot dem dee URL weete.',
+Bitte schriew eene Notiz aun [[Special:Listwiki_Users/sysop|administrator]], en lot dem dee URL weete.',
 'badtitle' => 'Schlajchta Titel',
 
 # Login and logout pages
@@ -360,7 +360,7 @@ Bitte nemm eenen aundren.',
 'uploadbtn' => 'Datei nopplode',
 'reuploaddesc' => 'Stopp Nopplode en tridj no dee Nopplode-Sied',
 'uploadnologin' => 'Nich aunjemaldt',
-'uploadnologintext' => 'Du mottst [[Special:UserLogin|aunjemaldt senne]], wan Dateie nopplode wellst.',
+'uploadnologintext' => 'Du mottst [[Special:wiki_UserLogin|aunjemaldt senne]], wan Dateie nopplode wellst.',
 'upload_directory_missing' => 'Dee Nopplode-Vetetjnis ($1) fehlt en kunn vom Webserver nich jemoakt woare.',
 'upload_directory_read_only' => 'Dee Webserver haft tjeene Schriewrajchte fe daut Nopplode-Vetetjnis ($1).',
 'uploaderror' => 'Fehla biem Nopplode',
@@ -466,7 +466,7 @@ Bitte nemm eenen aundren.',
 'unblocklink' => 'frie jewe',
 'change-blocklink' => 'Daut Blocke endre',
 'contribslink' => 'Biedrachs',
-'autoblocker' => 'Automatisch jeblockt, wiels diene IP-Adras soo es aus bie "[[User:$1|$1]]".
+'autoblocker' => 'Automatisch jeblockt, wiels diene IP-Adras soo es aus bie "[[wiki_User:$1|$1]]".
 Dee Grunt es: "$2"',
 'blocklogpage' => 'Block-Logbok',
 'blocklogentry' => 'haft [[$1]] jeblockt fe dee Tiet $2 $3',

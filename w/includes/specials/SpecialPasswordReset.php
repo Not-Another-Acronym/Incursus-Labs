@@ -42,11 +42,11 @@ class SpecialPasswordReset extends FormSpecialPage {
 		parent::__construct( 'PasswordReset' );
 	}
 
-	public function userCanExecute( User $user ) {
+	public function userCanExecute( wiki_User $user ) {
 		return $this->canChangePassword( $user ) === true && parent::userCanExecute( $user );
 	}
 
-	public function checkExecutePermissions( User $user ) {
+	public function checkExecutePermissions( wiki_User $user ) {
 		$error = $this->canChangePassword( $user );
 		if ( is_string( $error ) ) {
 			throw new ErrorPageError( 'internalerror', $error );
@@ -61,12 +61,12 @@ class SpecialPasswordReset extends FormSpecialPage {
 		global $wgPasswordResetRoutes, $wgAuth;
 		$a = array();
 		if ( isset( $wgPasswordResetRoutes['username'] ) && $wgPasswordResetRoutes['username'] ) {
-			$a['Username'] = array(
+			$a['wiki_Username'] = array(
 				'type' => 'text',
 				'label-message' => 'passwordreset-username',
 			);
 			if( $this->getUser()->isLoggedIn() ) {
-				$a['Username']['default'] = $this->getUser()->getName();
+				$a['wiki_Username']['default'] = $this->getUser()->getName();
 			}
 		}
 
@@ -118,7 +118,7 @@ class SpecialPasswordReset extends FormSpecialPage {
 
 	/**
 	 * Process the form.  At this point we know that the user passes all the criteria in
-	 * userCanExecute(), and if the data array contains 'Username', etc, then Username
+	 * userCanExecute(), and if the data array contains 'wiki_Username', etc, then wiki_Username
 	 * resets are allowed.
 	 * @param $data array
 	 * @return Bool|Array
@@ -140,13 +140,13 @@ class SpecialPasswordReset extends FormSpecialPage {
 		}
 
 		/**
-		 * @var $firstUser User
-		 * @var $users User[]
+		 * @var $firstwiki_User wiki_User
+		 * @var $users wiki_User[]
 		 */
 
-		if ( isset( $data['Username'] ) && $data['Username'] !== '' ) {
+		if ( isset( $data['wiki_Username'] ) && $data['wiki_Username'] !== '' ) {
 			$method = 'username';
-			$users = array( User::newFromName( $data['Username'] ) );
+			$users = array( wiki_User::newFromName( $data['wiki_Username'] ) );
 		} elseif ( isset( $data['Email'] )
 			&& $data['Email'] !== ''
 			&& Sanitizer::validateEmail( $data['Email'] ) )
@@ -154,14 +154,14 @@ class SpecialPasswordReset extends FormSpecialPage {
 			$method = 'email';
 			$res = wfGetDB( DB_SLAVE )->select(
 				'user',
-				User::selectFields(),
+				wiki_User::selectFields(),
 				array( 'user_email' => $data['Email'] ),
 				__METHOD__
 			);
 			if ( $res ) {
 				$users = array();
 				foreach( $res as $row ){
-					$users[] = User::newFromRow( $row );
+					$users[] = wiki_User::newFromRow( $row );
 				}
 			} else {
 				// Some sort of database error, probably unreachable
@@ -187,10 +187,10 @@ class SpecialPasswordReset extends FormSpecialPage {
 			}
 		}
 
-		$firstUser = $users[0];
+		$firstwiki_User = $users[0];
 
-		if ( !$firstUser instanceof User || !$firstUser->getID() ) {
-			return array( array( 'nosuchuser', $data['Username'] ) );
+		if ( !$firstwiki_User instanceof wiki_User || !$firstwiki_User->getID() ) {
+			return array( array( 'nosuchuser', $data['wiki_Username'] ) );
 		}
 
 		// Check against the rate limiter
@@ -211,9 +211,9 @@ class SpecialPasswordReset extends FormSpecialPage {
 		global $wgNewPasswordExpiry;
 
 		// All the users will have the same email address
-		if ( $firstUser->getEmail() == '' ) {
+		if ( $firstwiki_User->getEmail() == '' ) {
 			// This won't be reachable from the email route, so safe to expose the username
-			return array( array( 'noemail', $firstUser->getName() ) );
+			return array( array( 'noemail', $firstwiki_User->getName() ) );
 		}
 
 		// We need to have a valid IP address for the hook, but per bug 18347, we should
@@ -223,14 +223,14 @@ class SpecialPasswordReset extends FormSpecialPage {
 			return array( 'badipaddress' );
 		}
 		$caller = $this->getUser();
-		wfRunHooks( 'User::mailPasswordInternal', array( &$caller, &$ip, &$firstUser ) );
+		wfRunHooks( 'wiki_User::mailPasswordInternal', array( &$caller, &$ip, &$firstwiki_User ) );
 		$username = $caller->getName();
 		$msg = IP::isValid( $username )
 			? 'passwordreset-emailtext-ip'
 			: 'passwordreset-emailtext-user';
 
 		// Send in the user's language; which should hopefully be the same
-		$userLanguage = $firstUser->getOption( 'language' );
+		$userLanguage = $firstwiki_User->getOption( 'language' );
 
 		$passwords = array();
 		foreach ( $users as $user ) {
@@ -253,7 +253,7 @@ class SpecialPasswordReset extends FormSpecialPage {
 
 		$title = $this->msg( 'passwordreset-emailtitle' );
 
-		$this->result = $firstUser->sendMail( $title->escaped(), $this->email->escaped() );
+		$this->result = $firstwiki_User->sendMail( $title->escaped(), $this->email->escaped() );
 
 		// Blank the email if the user is not supposed to see it
 		if( !isset( $data['Capture'] ) || !$data['Capture'] ) {
@@ -289,7 +289,7 @@ class SpecialPasswordReset extends FormSpecialPage {
 		$this->getOutput()->returnToMain();
 	}
 
-	protected function canChangePassword( User $user ) {
+	protected function canChangePassword( wiki_User $user ) {
 		global $wgPasswordResetRoutes, $wgAuth;
 
 		// Maybe password resets are disabled, or there are no allowable routes

@@ -28,10 +28,10 @@
 if( !defined( 'MEDIAWIKI' ) ) die( -1 );
 
 /**
- * HTML template for Special:Userlogin form
+ * HTML template for Special:wiki_Userlogin form
  * @ingroup Templates
  */
-class UserloginTemplate extends QuickTemplate {
+class wiki_UserloginTemplate extends QuickTemplate {
 	function execute() {
 		if( $this->data['message'] ) {
 ?>

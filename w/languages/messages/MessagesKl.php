@@ -269,7 +269,7 @@ Maanngarsimaguit kukkusumik, toortaat '''utimut''' tooruk.",
 'anontalkpagetext' => "---- ''Manna tassaavoq oqalliffik atuisumit anonym-iusumeersumit, konto-mik pilersitsisimanngitsumik imalt. atorneq ajugaanik.
 Taamaattumik IP-adressia kinaanerattut atortariaqassavarput.
 IP-adressi pigineqarsinnaavoq atuisunit arlalinnit.
-Atuisuuguit anonym-iusoq, isumaqarlutillu soqutiginngisannik oqaaseqarfigineqarlutit, qinnuigivatsigit [[Special:UserLogin/signup|atuisutut pilersitsissallutit]] aamma [[Special:UserLogin|iserlutit]], taava siunissami paarlattoornernik atuisuni arlalinni pinaveersaartoqarniassammat.''",
+Atuisuuguit anonym-iusoq, isumaqarlutillu soqutiginngisannik oqaaseqarfigineqarlutit, qinnuigivatsigit [[Special:wiki_UserLogin/signup|atuisutut pilersitsissallutit]] aamma [[Special:wiki_UserLogin|iserlutit]], taava siunissami paarlattoornernik atuisuni arlalinni pinaveersaartoqarniassammat.''",
 'noarticletext' => 'Maannamut una qupperneq allaffigineqanngilaq.
 Taamatut oqaasilimmik quppernerni allani [[Special:Search/{{PAGENAME}}|ujaasisinnaavutit]], <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} log-ini ujaasisinnavutillu] imaluunniit [{{fullurl:{{FULLPAGENAME}}|action=edit}} qupperneq pilersissinnaavat]</span>.',
 'previewnote' => 'Eqqaamallugu isikkua takutinneqaannarpoq, toqqorneqanngilaq suli!',
@@ -434,7 +434,7 @@ Aamma takuuk [[Special:WantedCategories|sunut atassusinut kissaatigineqartut]].'
 'deletedtext' => '"$1" peerpoq. Takukkit $2 peerneqarsimasut kingulliit.',
 
 # Rollback
-'revertpage' => 'Inisseqqiineq [[User:$1|$1]]-meersoq, peerneqarpoq [[Special:Contributions/$2|$2]] ([[User talk:$2|diskussion]])-meersoq',
+'revertpage' => 'Inisseqqiineq [[wiki_User:$1|$1]]-meersoq, peerneqarpoq [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|diskussion]])-meersoq',
 
 # Protect
 'prot_1movedto2' => '[[$1]]-i nuunneqarsimavoq [[$2]]-mut',

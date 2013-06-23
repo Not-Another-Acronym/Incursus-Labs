@@ -30,7 +30,7 @@ $wgExtensionCredits['other'][] = array(
 
 $wgHooks['ArticleSaveComplete'][]           = 'GadgetHooks::articleSaveComplete';
 $wgHooks['BeforePageDisplay'][]             = 'GadgetHooks::beforePageDisplay';
-$wgHooks['UserGetDefaultOptions'][]         = 'GadgetHooks::userGetDefaultOptions';
+$wgHooks['wiki_UserGetDefaultOptions'][]         = 'GadgetHooks::userGetDefaultOptions';
 $wgHooks['GetPreferences'][]                = 'GadgetHooks::getPreferences';
 $wgHooks['ResourceLoaderRegisterModules'][] = 'GadgetHooks::registerModules';
 $wgHooks['UnitTestsList'][]                 = 'GadgetHooks::unitTestsList';

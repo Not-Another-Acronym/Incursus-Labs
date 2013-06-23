@@ -32,18 +32,18 @@ class SpecialBlock extends FormSpecialPage {
 	 * TODO: config setting? */
 	const HIDEUSER_CONTRIBLIMIT = 1000;
 
-	/** @var User user to be blocked, as passed either by parameter (url?wpTarget=Foo)
+	/** @var wiki_User user to be blocked, as passed either by parameter (url?wpTarget=Foo)
 	 * or as subpage (Special:Block/Foo) */
 	protected $target;
 
 	/// @var Block::TYPE_ constant
 	protected $type;
 
-	/// @var  User|String the previous block target
+	/// @var  wiki_User|String the previous block target
 	protected $previousTarget;
 
-	/// @var Bool whether the previous submission of the form asked for HideUser
-	protected $requestedHideUser;
+	/// @var Bool whether the previous submission of the form asked for Hidewiki_User
+	protected $requestedHidewiki_User;
 
 	/// @var Bool
 	protected $alreadyBlocked;
@@ -58,10 +58,10 @@ class SpecialBlock extends FormSpecialPage {
 	/**
 	 * Checks that the user can unblock themselves if they are trying to do so
 	 *
-	 * @param User $user
+	 * @param wiki_User $user
 	 * @throws ErrorPageError
 	 */
-	protected function checkExecutePermissions( User $user ) {
+	protected function checkExecutePermissions( wiki_User $user ) {
 		 parent::checkExecutePermissions( $user );
 
 		# bug 15810: blocked admins should have limited access here
@@ -82,14 +82,14 @@ class SpecialBlock extends FormSpecialPage {
 		# there are legitimate uses for some variables
 		$request = $this->getRequest();
 		list( $this->target, $this->type ) = self::getTargetAndType( $par, $request );
-		if ( $this->target instanceof User ) {
+		if ( $this->target instanceof wiki_User ) {
 			# Set the 'relevant user' in the skin, so it displays links like Contributions,
-			# User logs, UserRights, etc.
-			$this->getSkin()->setRelevantUser( $this->target );
+			# wiki_User logs, wiki_UserRights, etc.
+			$this->getSkin()->setRelevantwiki_User( $this->target );
 		}
 
 		list( $this->previousTarget, /*...*/ ) = Block::parseTarget( $request->getVal( 'wpPreviousTarget' ) );
-		$this->requestedHideUser = $request->getBool( 'wpHideUser' );
+		$this->requestedHidewiki_User = $request->getBool( 'wpHidewiki_User' );
 	}
 
 	/**
@@ -181,7 +181,7 @@ class SpecialBlock extends FormSpecialPage {
 
 		# Allow some users to hide name from block log, blocklist and listusers
 		if ( $user->isAllowed( 'hideuser' ) ) {
-			$a['HideUser'] = array(
+			$a['Hidewiki_User'] = array(
 				'type' => 'check',
 				'label-message' => 'ipbhidename',
 				'cssclass' => 'mw-block-hideuser',
@@ -250,8 +250,8 @@ class SpecialBlock extends FormSpecialPage {
 				$fields['DisableEmail']['default'] = $block->prevents( 'sendemail' );
 			}
 
-			if ( isset( $fields['HideUser'] ) ) {
-				$fields['HideUser']['default'] = $block->mHideName;
+			if ( isset( $fields['Hidewiki_User'] ) ) {
+				$fields['Hidewiki_User']['default'] = $block->mHideName;
 			}
 
 			if ( isset( $fields['DisableUTEdit'] ) ) {
@@ -272,7 +272,7 @@ class SpecialBlock extends FormSpecialPage {
 				$fields['Confirm']['type'] = 'check';
 			} else {
 				# We got a target, but it wasn't a POST request, so the user must have gone
-				# to a link like [[Special:Block/User]].  We don't need to show the checkbox
+				# to a link like [[Special:Block/wiki_User]].  We don't need to show the checkbox
 				# as long as they go ahead and block *that* user
 				$fields['Confirm']['default'] = 1;
 			}
@@ -287,8 +287,8 @@ class SpecialBlock extends FormSpecialPage {
 			$this->preErrors[] = array( 'ipb-needreblock', wfEscapeWikiText( (string)$block->getTarget() ) );
 		}
 
-		# We always need confirmation to do HideUser
-		if ( $this->requestedHideUser ) {
+		# We always need confirmation to do Hidewiki_User
+		if ( $this->requestedHidewiki_User ) {
 			$fields['Confirm']['type'] = 'check';
 			unset( $fields['Confirm']['default'] );
 			$this->preErrors[] = 'ipb-confirmhideuser';
@@ -350,7 +350,7 @@ class SpecialBlock extends FormSpecialPage {
 		$links = array();
 
 		# Link to the user's contributions, if applicable
-		if ( $this->target instanceof User ) {
+		if ( $this->target instanceof wiki_User ) {
 			$contribsPage = SpecialPage::getTitleFor( 'Contributions', $this->target->getName() );
 			$links[] = Linker::link(
 				$contribsPage,
@@ -359,7 +359,7 @@ class SpecialBlock extends FormSpecialPage {
 		}
 
 		# Link to unblock the specified user, or to a blank unblock form
-		if ( $this->target instanceof User ) {
+		if ( $this->target instanceof wiki_User ) {
 			$message = $this->msg( 'ipb-unblock-addr', wfEscapeWikiText( $this->target->getName() ) )->parse();
 			$list = SpecialPage::getTitleFor( 'Unblock', $this->target->getName() );
 		} else {
@@ -435,11 +435,11 @@ class SpecialBlock extends FormSpecialPage {
 	/**
 	 * Get a user page target for things like logs.
 	 * This handles account and IP range targets.
-	 * @param $target User|string
+	 * @param $target wiki_User|string
 	 * @return Title|null
 	 */
 	protected static function getTargetUserTitle( $target ) {
-		if ( $target instanceof User ) {
+		if ( $target instanceof wiki_User ) {
 			return $target->getUserPage();
 		} elseif ( IP::isIPAddress( $target ) ) {
 			return Title::makeTitleSafe( NS_USER, $target );
@@ -453,7 +453,7 @@ class SpecialBlock extends FormSpecialPage {
 	 * @param $par String subpage parameter passed to setup, or data value from
 	 *     the HTMLForm
 	 * @param $request WebRequest optionally try and get data from a request too
-	 * @return array( User|string|null, Block::TYPE_ constant|null )
+	 * @return array( wiki_User|string|null, Block::TYPE_ constant|null )
 	 */
 	public static function getTargetAndType( $par, WebRequest $request = null ) {
 		$i = 0;
@@ -512,7 +512,7 @@ class SpecialBlock extends FormSpecialPage {
 		list( $target, $type ) = self::getTargetAndType( $value );
 
 		if ( $type == Block::TYPE_USER ) {
-			# TODO: why do we not have a User->exists() method?
+			# TODO: why do we not have a wiki_User->exists() method?
 			if ( !$target->getId() ) {
 				return $form->msg( 'nosuchusershort',
 					wfEscapeWikiText( $target->getName() ) );
@@ -624,11 +624,11 @@ class SpecialBlock extends FormSpecialPage {
 
 		# If the user has done the form 'properly', they won't even have been given the
 		# option to suppress-block unless they have the 'hideuser' permission
-		if ( !isset( $data['HideUser'] ) ) {
-			$data['HideUser'] = false;
+		if ( !isset( $data['Hidewiki_User'] ) ) {
+			$data['Hidewiki_User'] = false;
 		}
 
-		if ( $data['HideUser'] ) {
+		if ( $data['Hidewiki_User'] ) {
 			if ( !$performer->isAllowed('hideuser') ) {
 				# this codepath is unreachable except by a malicious user spoofing forms,
 				# or by race conditions (user has oversight and sysop, loads block form,
@@ -639,7 +639,7 @@ class SpecialBlock extends FormSpecialPage {
 
 			# Recheck params here...
 			if ( $type != Block::TYPE_USER ) {
-				$data['HideUser'] = false; # IP users should not be hidden
+				$data['Hidewiki_User'] = false; # IP users should not be hidden
 			} elseif ( !in_array( $data['Expiry'], array( 'infinite', 'infinity', 'indefinite' ) ) ) {
 				# Bad expiry.
 				return array( 'ipb_expiry_temp' );
@@ -663,7 +663,7 @@ class SpecialBlock extends FormSpecialPage {
 		$block->prevents( 'sendemail', $data['DisableEmail'] );
 		$block->isHardblock( $data['HardBlock'] );
 		$block->isAutoblocking( $data['AutoBlock'] );
-		$block->mHideName = $data['HideUser'];
+		$block->mHideName = $data['Hidewiki_User'];
 
 		if ( !wfRunHooks( 'BlockIp', array( &$block, &$performer ) ) ) {
 			return array( 'hookaborted' );
@@ -698,13 +698,13 @@ class SpecialBlock extends FormSpecialPage {
 				$logaction = 'reblock';
 
 				# Unset _deleted fields if requested
-				if ( $currentBlock->mHideName && !$data['HideUser'] ) {
-					RevisionDeleteUser::unsuppressUserName( $target, $userId );
+				if ( $currentBlock->mHideName && !$data['Hidewiki_User'] ) {
+					RevisionDeletewiki_User::unsuppresswiki_UserName( $target, $userId );
 				}
 
 				# If hiding/unhiding a name, this should go in the private logs
 				if ( (bool)$currentBlock->mHideName ) {
-					$data['HideUser'] = true;
+					$data['Hidewiki_User'] = true;
 				}
 			}
 		} else {
@@ -714,8 +714,8 @@ class SpecialBlock extends FormSpecialPage {
 		wfRunHooks( 'BlockIpComplete', array( $block, $performer ) );
 
 		# Set *_deleted fields if requested
-		if ( $data['HideUser'] ) {
-			RevisionDeleteUser::suppressUserName( $target, $userId );
+		if ( $data['Hidewiki_User'] ) {
+			RevisionDeletewiki_User::suppresswiki_UserName( $target, $userId );
 		}
 
 		# Can't watch a rangeblock
@@ -733,7 +733,7 @@ class SpecialBlock extends FormSpecialPage {
 		$logParams[] = self::blockLogFlags( $data, $type );
 
 		# Make log entry, if the name is hidden, put it in the oversight log
-		$log_type = $data['HideUser'] ? 'suppress' : 'block';
+		$log_type = $data['Hidewiki_User'] ? 'suppress' : 'block';
 		$log = new LogPage( $log_type );
 		$log_id = $log->addEntry(
 			$logaction,
@@ -808,43 +808,43 @@ class SpecialBlock extends FormSpecialPage {
 
 	/**
 	 * Can we do an email block?
-	 * @param $user User: the sysop wanting to make a block
+	 * @param $user wiki_User: the sysop wanting to make a block
 	 * @return Boolean
 	 */
 	public static function canBlockEmail( $user ) {
-		global $wgEnableUserEmail, $wgSysopEmailBans;
+		global $wgEnablewiki_UserEmail, $wgSysopEmailBans;
 
-		return ( $wgEnableUserEmail && $wgSysopEmailBans && $user->isAllowed( 'blockemail' ) );
+		return ( $wgEnablewiki_UserEmail && $wgSysopEmailBans && $user->isAllowed( 'blockemail' ) );
 	}
 
 	/**
 	 * bug 15810: blocked admins should not be able to block/unblock
 	 * others, and probably shouldn't be able to unblock themselves
 	 * either.
-	 * @param $user User|Int|String
-	 * @param $performer User user doing the request
+	 * @param $user wiki_User|Int|String
+	 * @param $performer wiki_User user doing the request
 	 * @return Bool|String true or error message key
 	 */
-	public static function checkUnblockSelf( $user, User $performer ) {
+	public static function checkUnblockSelf( $user, wiki_User $performer ) {
 		if ( is_int( $user ) ) {
-			$user = User::newFromId( $user );
+			$user = wiki_User::newFromId( $user );
 		} elseif ( is_string( $user ) ) {
-			$user = User::newFromName( $user );
+			$user = wiki_User::newFromName( $user );
 		}
 
 		if ( $performer->isBlocked() ) {
-			if ( $user instanceof User && $user->getId() == $performer->getId() ) {
-				# User is trying to unblock themselves
+			if ( $user instanceof wiki_User && $user->getId() == $performer->getId() ) {
+				# wiki_User is trying to unblock themselves
 				if ( $performer->isAllowed( 'unblockself' ) ) {
 					return true;
-				# User blocked themselves and is now trying to reverse it
+				# wiki_User blocked themselves and is now trying to reverse it
 				} elseif ( $performer->blockedBy() === $performer->getName() ) {
 					return true;
 				} else {
 					return 'ipbnounblockself';
 				}
 			} else {
-				# User is trying to block/unblock someone else
+				# wiki_User is trying to block/unblock someone else
 				return 'ipbblocked';
 			}
 		} else {
@@ -891,7 +891,7 @@ class SpecialBlock extends FormSpecialPage {
 			$flags[] = 'nousertalk';
 		}
 
-		if ( $data['HideUser'] ) {
+		if ( $data['Hidewiki_User'] ) {
 			// For grepping: message block-log-flags-hiddenname
 			$flags[] = 'hiddenname';
 		}

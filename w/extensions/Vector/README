@@ -13,5 +13,5 @@ require_once( "$IP/extensions/Vector/Vector.php" );
 
 # To enable a preference by default but still allow users to disable it in preferences, use something like...
 
-$wgDefaultUserOptions['vector-collapsiblenav'] = 1;
+$wgDefaultwiki_UserOptions['vector-collapsiblenav'] = 1;
 

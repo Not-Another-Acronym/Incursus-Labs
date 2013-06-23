@@ -19,7 +19,7 @@
 $fallback = 'id';
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Garih bawahi link:',
 'tog-justify' => 'Ratokan paragraf',
 'tog-hideminor' => 'Suruakkan suntingan ketek di parubahan tabaru',
@@ -355,7 +355,7 @@ Basis data manghasilkan kasalahan "$3: $4".',
 Hal ko biasonyo disababkan dek pranala usang ka pabaikkan tadahulu laman nan alah dihapuih.
 
 Jikok bukan iko panyababnyo, Sanak mungkin alah manamukan sabuah bug dalam pakakeh lunak.
-Silakan laporkan hal iko ka [[Special:ListUsers/sysop|Pangurus]], dangan manyabuikkan alamaik URL nan dituju.',
+Silakan laporkan hal iko ka [[Special:Listwiki_Users/sysop|Pangurus]], dangan manyabuikkan alamaik URL nan dituju.',
 'missingarticle-rev' => '(revisi#: $1)',
 'missingarticle-diff' => '(Bedo: $1, $2)',
 'readonly_lag' => 'Basis data alah dikunci otomatis salagi basis data sakunder malakukan sinkronisasi jo basis data utamo',
@@ -402,7 +402,7 @@ $2',
 'customcssprotected' => 'Sanak indak mampunyoi izin untuak maubah laman CSS iko, karano manganduang pangaturan pribadi pangguno lain.',
 'customjsprotected' => 'Sanak ndak mampunyo izin untuak maubah laman JavaScript iko, karano manganduang pangaturan pribadi pangguno lain.',
 'ns-specialprotected' => 'Laman istimewa indak dapek disuntiang.',
-'titleprotected' => "Judul iko alah dilindungi dari pambantuakan oleh [[User:$1|$1]].
+'titleprotected' => "Judul iko alah dilindungi dari pambantuakan oleh [[wiki_User:$1|$1]].
 Alasan nan diberikan adolah ''$2''.",
 'filereadonlyerror' => 'Indak bisa mangubah berkas "$1" karano repositori berkas "$2" dalam moda baco-sajo.
 
@@ -420,7 +420,7 @@ Pangurus nan manguncinyo manawarkan penjelasan: "$3"',
 # Login and logout pages
 'logouttext' => "'''Sanak alah kalua log dari sistem.'''
 
-Sanak dapek taruih manggunoan {{SITENAME}} sacaro anonim, atau Sanak dapek [[Special:UserLogin|masuak log liak]] sabagai pangguno nan samo atau pangguno nan lain.
+Sanak dapek taruih manggunoan {{SITENAME}} sacaro anonim, atau Sanak dapek [[Special:wiki_UserLogin|masuak log liak]] sabagai pangguno nan samo atau pangguno nan lain.
 Parhatian bahawa bara laman mungkin masih taruih manunjukkan bahawa Sanak masih masuak log sampai Sanak mambarasihan singgahan panjelajah web Sanak.",
 'welcomecreation' => '== Salamaik datang, $1! ==
 
@@ -468,7 +468,7 @@ Pastian Sanak alah mangaktifan kuki, lalu muek ulang laman iko dan cubo baliak.'
 'loginsuccess' => "'''Sanak kini lah masuak log di {{SITENAME}} sabagai \"\$1\".'''",
 'nosuchuser' => 'Indak ado pangguno jo namo "$1".
 Namo psngguno msmbedokan kapitalisasi.
-Pariso baliak ejaan Sanak, atau [[Special:UserLogin/signup|buek akun baharu]].',
+Pariso baliak ejaan Sanak, atau [[Special:wiki_UserLogin/signup|buek akun baharu]].',
 'nosuchusershort' => 'Indak ado pangguno jo namo "$1".
 Sila pariso baliak ejaan Sanak.',
 'nouserspecified' => 'Sanak harus mamasuakkan namo pangguno.',
@@ -663,7 +663,7 @@ Subbagian iko mungkin dipindahan atau dihapuih katiko Sanak mambukanyo.',
 'loginreqlink' => 'masuak log',
 'loginreqpagetext' => 'Sanak harus $1 untuak dapek maliek laman lainnyo.',
 'accmailtitle' => 'Kato sandi alah takirim.',
-'accmailtext' => "Sabuah kato sandi acak untuak [[User talk:$1|$1]] alah dibuek dan dikiriman ka $2.
+'accmailtext' => "Sabuah kato sandi acak untuak [[wiki_User talk:$1|$1]] alah dibuek dan dikiriman ka $2.
 
 Kato sandi untuak akun baharu iko dapek diubah di laman ''[[Special:ChangePassword|pangubahan kato sandi]]'' satalah masuak log.",
 'newarticle' => '(Baru)',
@@ -672,7 +672,7 @@ Untuak mambuek laman tu, mulailah dangan manulih dalam kotak di bawah (caliak [[
 Jikok awak indak sangajo sampai ka laman ko, klik tombol '''back''' pado panjalajah web awak.",
 'anontalkpagetext' => "----''Iko adolah laman pambicaraan saurang pangguno anonim nan alun mambuek akun atau indak manggunoannyo.
 Jadi, kami tapaso harus mamakai alamat IP nan basangkutan untuak maidentifikasikannyo.
-Jikok Sanak adolah saurang pangguno anonim dan marasa mandapekkan komentar-komentar nan indak relevan nan ditujuan langsung kapado Sanak, sila [[Special:UserLogin/signup|mambuek akun]] atau [[Special:UserLogin|masuak log]] untuak mahindari karancuan jo pangguno anonim lainnya di lain wakatu.''",
+Jikok Sanak adolah saurang pangguno anonim dan marasa mandapekkan komentar-komentar nan indak relevan nan ditujuan langsung kapado Sanak, sila [[Special:wiki_UserLogin/signup|mambuek akun]] atau [[Special:wiki_UserLogin|masuak log]] untuak mahindari karancuan jo pangguno anonim lainnya di lain wakatu.''",
 'noarticletext' => 'Kini ko indak ada teks di laman iko.
 Sanak dapek [[Special:Search/{{PAGENAME}}|malakukan pancarian untuak judul laman iko]] di laman-laman lain, <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} mancari log takaik], atau [{{fullurl:{{FULLPAGENAME}}|action=edit}} manyuntiang laman iko]</span>.',
 'noarticletext-nopermission' => 'Kini ko indak ado teks dalam laman iko.
@@ -709,13 +709,13 @@ Parubahan Sanak alun disimpan!",
 'previewconflict' => 'Pratayang iko mancaminan teks pado bagian ateh kotak suntiangan teks sabagaimano akan taliek bilo Sanak manyimpannyo.',
 'session_fail_preview' => "'''Maaf, kami ndak dapek mangolah suntiangan Sanak akibat tahapuihnyo data sesi.
 Sila cubo sakali lai.
-Jikok masih indak barhasil, cubolah [[Special:UserLogout|kalua log]] dan masuak log baliak.'''",
+Jikok masih indak barhasil, cubolah [[Special:wiki_UserLogout|kalua log]] dan masuak log baliak.'''",
 'session_fail_preview_html' => "'''Kami indak dapek mamproses suntiangan Sanak karano hilangnyo data sesi.'''
 
 ''Karano {{SITENAME}} mangizinan panggunoan HTML mantah, pratayang alah disurukan sabagai pancagahan terhadap serangan JavaScript.''
 
 '''Jikok iko marupokan upayo suntiangan nan sahih, sila cubo lai.
-Jikok masih tatap indak bahasil, cubolah [[Special:UserLogout|kalua log]] dan masuak baliak.'''",
+Jikok masih tatap indak bahasil, cubolah [[Special:wiki_UserLogout|kalua log]] dan masuak baliak.'''",
 'token_suffix_mismatch' => "'''Suntiangan Sanak ditolak karano aplikasi klien Sanak maubah karakter tando baco pado suntiangan.'''
 Suntiangan tasabuik ditolak untuak mancegah kasalahan pado teks laman.
 Hal iko kadang tajadi jikok Sanak manggunokan layanan proxy anonim babasis web nan bamasalah.",
@@ -763,7 +763,7 @@ Entri catatan tarakhir disadioan di bawah untuak referensi:",
 'hiddencategories' => 'Laman ko marupokan kalompok dari {{PLURAL:$1|1 kategori tapandam|$1 kategori tapandam}}:',
 'nocreatetitle' => 'Pambuekan laman baharu dibatasi',
 'nocreatetext' => '{{SITENAME}} alah mambatasi pambuekan laman-laman baharu.
-Sanak dapek baliak dan manyuntiang laman nan alah ado, atau sila [[Special:UserLogin|masuak log atau mambuek akun]].',
+Sanak dapek baliak dan manyuntiang laman nan alah ado, atau sila [[Special:wiki_UserLogin|masuak log atau mambuek akun]].',
 'nocreate-loggedin' => 'Sanak ndak mampunyoi hak akses untuak mambuek laman baharu.',
 'sectioneditnotsupported-title' => 'Panyuntiangan bagian indak didukuang',
 'sectioneditnotsupported-text' => 'Panyuntiangan bagian indak didukuang di laman suntiang iko.',
@@ -812,7 +812,7 @@ Uraian-uraian tu alah diabaikan.',
 Tolong cek pabandiangan di bawah untuak mayakinkan bahwa bana itu nan Sanak ingin buek, lalu simpan parubahan tasabuik untuak manyalasaikan pambatalan suntiangan.',
 'undo-failure' => 'Suntiangan ko indak dapek dibatalan dek konflik panyuntiangan antaro.',
 'undo-norev' => 'Suntiangan ko indak dapek dibatalan dek laman indak ditamukan atau lah dihapuih.',
-'undo-summary' => 'Mambatalan revisi $1 oleh [[Special:Contributions/$2|$2]] ([[User talk:$2|talk]])',
+'undo-summary' => 'Mambatalan revisi $1 oleh [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|talk]])',
 
 # History pages
 'viewpagelogs' => 'Caliak log untuak laman ko',
@@ -914,7 +914,7 @@ Alamaik surek elektronik awak ang tu indak kan katahuan dek urang lain nan mangh
 
 'grouppage-sysop' => '{{ns:project}}:Pengurus',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Log parubahan hak akses',
 
 # Associated actions - in the sentence "You do not have permission to X"

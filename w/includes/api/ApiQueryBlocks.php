@@ -85,7 +85,7 @@ class ApiQueryBlocks extends ApiQueryBase {
 		}
 		if ( isset( $params['users'] ) ) {
 			foreach ( (array)$params['users'] as $u ) {
-				$this->prepareUsername( $u );
+				$this->preparewiki_Username( $u );
 			}
 			$this->addWhereFld( 'ipb_address', $this->usernames );
 			$this->addWhereFld( 'ipb_auto', 0 );
@@ -218,15 +218,15 @@ class ApiQueryBlocks extends ApiQueryBase {
 		$result->setIndexedTagName_internal( array( 'query', $this->getModuleName() ), 'block' );
 	}
 
-	protected function prepareUsername( $user ) {
+	protected function preparewiki_Username( $user ) {
 		if ( !$user ) {
-			$this->dieUsage( 'User parameter may not be empty', 'param_user' );
+			$this->dieUsage( 'wiki_User parameter may not be empty', 'param_user' );
 		}
-		$name = User::isIP( $user )
+		$name = wiki_User::isIP( $user )
 			? $user
-			: User::getCanonicalName( $user, 'valid' );
+			: wiki_User::getCanonicalName( $user, 'valid' );
 		if ( $name === false ) {
-			$this->dieUsage( "User name {$user} is not valid", 'param_user' );
+			$this->dieUsage( "wiki_User name {$user} is not valid", 'param_user' );
 		}
 		$this->usernames[] = $name;
 	}
@@ -387,8 +387,8 @@ class ApiQueryBlocks extends ApiQueryBase {
 			$this->getRequireOnlyOneParameterErrorMessages( array( 'users', 'ip' ) ),
 			array(
 				array( 'code' => 'cidrtoobroad', 'info' => 'CIDR ranges broader than /16 are not accepted' ),
-				array( 'code' => 'param_user', 'info' => 'User parameter may not be empty' ),
-				array( 'code' => 'param_user', 'info' => 'User name user is not valid' ),
+				array( 'code' => 'param_user', 'info' => 'wiki_User parameter may not be empty' ),
+				array( 'code' => 'param_user', 'info' => 'wiki_User name user is not valid' ),
 				array( 'show' ),
 			)
 		);

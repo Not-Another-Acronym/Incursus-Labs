@@ -380,7 +380,7 @@ class ForeignAPIRepo extends FileRepo {
 	}
 
 	/**
-	 * Like a Http:get request, but with custom User-Agent.
+	 * Like a Http:get request, but with custom wiki_User-Agent.
 	 * @see Http:get
 	 * @param $url string
 	 * @param $timeout string
@@ -399,7 +399,7 @@ class ForeignAPIRepo extends FileRepo {
 		}
 
 		$req = MWHttpRequest::factory( $url, $options );
-		$req->setUserAgent( ForeignAPIRepo::getUserAgent() );
+		$req->setwiki_UserAgent( ForeignAPIRepo::getUserAgent() );
 		$status = $req->execute();
 
 		if ( $status->isOK() ) {

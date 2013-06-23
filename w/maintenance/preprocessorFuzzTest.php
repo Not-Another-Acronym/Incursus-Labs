@@ -185,14 +185,14 @@ class PPFuzzTest {
 	}
 
 	function execute() {
-		global $wgParser, $wgUser;
+		global $wgParser, $wgwiki_User;
 
-		$wgUser = new PPFuzzUser;
-		$wgUser->mName = 'Fuzz';
-		$wgUser->mFrom = 'name';
-		$wgUser->ppfz_test = $this;
+		$wgwiki_User = new PPFuzzwiki_User;
+		$wgwiki_User->mName = 'Fuzz';
+		$wgwiki_User->mFrom = 'name';
+		$wgwiki_User->ppfz_test = $this;
 
-		$options = ParserOptions::newFromUser( $wgUser );
+		$options = ParserOptions::newFromwiki_User( $wgwiki_User );
 		$options->setTemplateCallback( array( $this, 'templateHook' ) );
 		$options->setTimestamp( wfTimestampNow() );
 		$this->output = call_user_func( array( $wgParser, $this->entryPoint ), $this->mainText, $this->title, $options );
@@ -203,7 +203,7 @@ class PPFuzzTest {
 		$s = "Title: " . $this->title->getPrefixedDBkey() . "\n" .
 //			"Output type: {$this->outputType}\n" .
 			"Entry point: {$this->entryPoint}\n" .
-			"User: " . ( $this->fancySig ? 'fancy' : 'no-fancy' ) . ' ' . var_export( $this->nickname, true ) . "\n" .
+			"wiki_User: " . ( $this->fancySig ? 'fancy' : 'no-fancy' ) . ' ' . var_export( $this->nickname, true ) . "\n" .
 			"Main text: " . var_export( $this->mainText, true ) . "\n";
 		foreach ( $this->templates as $titleText => $template ) {
 			$finalTitle = $template['finalTitle'];
@@ -218,7 +218,7 @@ class PPFuzzTest {
 	}
 }
 
-class PPFuzzUser extends User {
+class PPFuzzwiki_User extends wiki_User {
 	var $ppfz_test, $mDataLoaded;
 
 	function load() {

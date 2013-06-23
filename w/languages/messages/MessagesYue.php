@@ -176,9 +176,9 @@ $specialPageAliases = array(
 	'Unusedtemplates'           => array( '未用模' ),
 	'Unwatchedpages'            => array( '無人監視嘅版' ),
 	'Upload'                    => array( '上傳' ),
-	'Userlogin'                 => array( '簽到' ),
-	'Userlogout'                => array( '簽走' ),
-	'Userrights'                => array( '用戶權限' ),
+	'wiki_Userlogin'                 => array( '簽到' ),
+	'wiki_Userlogout'                => array( '簽走' ),
+	'wiki_Userrights'                => array( '用戶權限' ),
 	'Version'                   => array( '版本' ),
 	'Wantedcategories'          => array( '要求嘅分類' ),
 	'Wantedfiles'               => array( '要求嘅文件' ),
@@ -232,7 +232,7 @@ $dateFormats = array(
 $linkTrail = '/^([a-z]+)(.*)$/sD';
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => '連結加底線：',
 'tog-justify' => '拍齊段落',
 'tog-hideminor' => '最新更改唔顯示小修改',
@@ -566,7 +566,7 @@ $1',
 通常係因為修訂歷史頁上面，由過時嘅連結去到刪除咗嘅版所引起嘅。
 
 如果唔係，你可能係搵到軟件裏面嘅臭蟲。
-請記低 URL 地址，向[[Special:ListUsers/sysop|管理員]]報告。',
+請記低 URL 地址，向[[Special:Listwiki_Users/sysop|管理員]]報告。',
 'missingarticle-rev' => '(修訂#: $1)',
 'missingarticle-diff' => '(差異: $1, $2)',
 'readonly_lag' => '當從伺服器追緊主伺服器時，資料庫會自動被鎖',
@@ -604,7 +604,7 @@ $1',
 'cascadeprotected' => '呢一版已經保護咗唔能夠編輯，因為佢係響以下嘅{{PLURAL:$1|一|幾}}頁度包含咗，當中啟用咗"連串"保護選項來保護嗰一版: $2',
 'namespaceprotected' => "你無權編輯響'''$1'''空間名裏面嘅呢一版。",
 'ns-specialprotected' => '特別頁係唔可以編輯嘅。',
-'titleprotected' => "呢個標題已經俾[[User:$1|$1]]保護咗防止去開。原因係''$2''。",
+'titleprotected' => "呢個標題已經俾[[wiki_User:$1|$1]]保護咗防止去開。原因係''$2''。",
 
 # Virus scanner
 'virus-badscanner' => "壞設定: 未知嘅病毒掃瞄器: ''$1''",
@@ -614,7 +614,7 @@ $1',
 # Login and logout pages
 'logouttext' => "'''你而家已經登出咗。'''
 
-你重可以用匿名身份用{{SITENAME}}，又或者[[Special:UserLogin|重新登入]]。
+你重可以用匿名身份用{{SITENAME}}，又或者[[Special:wiki_UserLogin|重新登入]]。
 但係留意某啲頁面可能會繼續話你未登入，除非等你清除瀏覽器嘅快取儲存。",
 'welcomecreation' => '== 歡迎， $1！ ==
 
@@ -655,7 +655,7 @@ $1',
 'loginsuccess' => "'''「$1」登入咗{{SITENAME}}。'''",
 'nosuchuser' => '呢度冇叫做 "$1"嘅用戶。
 用戶名係有分大細楷嘅。
-請檢查你個名嘅輸入方法，或者[[Special:UserLogin/signup|建立一個新嘅戶口]]。',
+請檢查你個名嘅輸入方法，或者[[Special:wiki_UserLogin/signup|建立一個新嘅戶口]]。',
 'nosuchusershort' => '呢度冇叫做 "$1"嘅用戶。 請檢查你個名嘅輸入方法。',
 'nouserspecified' => '你需要指定一個用戶名。',
 'login-userblocked' => '呢位用戶封鎖咗。唔容許登入。',
@@ -798,14 +798,14 @@ $1',
 'loginreqlink' => '登入',
 'loginreqpagetext' => '你一定$1去睇其它嘅頁面。',
 'accmailtitle' => '密碼寄咗喇。',
-'accmailtext' => "「[[User talk:$1|$1]]」嘅隨機產生密碼已經寄咗去 $2。
+'accmailtext' => "「[[wiki_User talk:$1|$1]]」嘅隨機產生密碼已經寄咗去 $2。
 
 呢個新戶口嘅密碼可以響登入咗之後嘅''[[Special:ChangePassword|改密碼]]''版度改佢。",
 'newarticle' => '(新)',
 'newarticletext' => "你連連過嚟嘅頁面重未存在。
 要起版新嘅，請你喺下面嗰格度輸入。(睇睇[[{{MediaWiki:Helppage}}|自助版]]拎多啲資料。)
 如果你係唔覺意嚟到呢度，撳一次你個瀏覽器'''返轉頭'''個掣。",
-'anontalkpagetext' => "----''呢度係匿名用戶嘅討論頁，佢可能係重未開戶口，或者佢重唔識開戶口。我哋會用數字表示嘅IP地址嚟代表佢。一個IP地址係可以由幾個用戶夾來用。如果你係匿名用戶，同覺得呢啲留言係同你冇關係嘅話，唔該去[[Special:UserLogin/signup|開一個新戶口]]或[[Special:UserLogin|登入]]，避免喺以後嘅留言會同埋其它用戶混淆。''",
+'anontalkpagetext' => "----''呢度係匿名用戶嘅討論頁，佢可能係重未開戶口，或者佢重唔識開戶口。我哋會用數字表示嘅IP地址嚟代表佢。一個IP地址係可以由幾個用戶夾來用。如果你係匿名用戶，同覺得呢啲留言係同你冇關係嘅話，唔該去[[Special:wiki_UserLogin/signup|開一個新戶口]]或[[Special:wiki_UserLogin|登入]]，避免喺以後嘅留言會同埋其它用戶混淆。''",
 'noarticletext' => '喺呢一頁而家並冇任何嘅文字，你可以喺其它嘅頁面中[[Special:Search/{{PAGENAME}}|搵呢一頁嘅標題]]，
 <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} 搵有關嘅日誌]，
 或者[{{fullurl:{{FULLPAGENAME}}|action=edit}} 編輯呢一版]</span>。',
@@ -836,12 +836,12 @@ $1',
 更改嘅内容重未儲存！",
 'previewconflict' => '呢個預覽係反映如果你選擇儲存嘅話，嘅上面嘅文字編輯區裏面嘅字會儲存落嚟。',
 'session_fail_preview' => "'''對唔住！由於小節嘅資料唔見咗，我哋唔能夠處理你嘅編輯。'''
-請再試過喇。如果仍然唔得嘅話，試下[[Special:UserLogout|登出]]，然後重新登入。",
+請再試過喇。如果仍然唔得嘅話，試下[[Special:wiki_UserLogout|登出]]，然後重新登入。",
 'session_fail_preview_html' => "'''對唔住！有關嘅程序資料已經遺失，我哋唔能夠處理你嘅編輯。'''
 
 ''由於{{SITENAME}}已經開放咗原 HTML 碼，預覽已經隱藏落嚟以預防 JavaScript 嘅攻擊。''
 
-'''如果呢個係正當嘅編輯嘗試，請再試過。'''如果重係唔得嘅話，請先[[Special:UserLogout|登出]]然後再登入。",
+'''如果呢個係正當嘅編輯嘗試，請再試過。'''如果重係唔得嘅話，請先[[Special:wiki_UserLogout|登出]]然後再登入。",
 'token_suffix_mismatch' => "'''因為你嘅用戶端度嘅編輯幣整壞咗一啲標點符號字元，你嘅編輯已經拒絕咗。'''個編輯已經拒絕，以防止嗰版嘅文字損毀。
 當你響度用緊一啲好多臭蟲，以網絡為主嘅匿名代理服務。",
 'edit_form_incomplete' => "'''編輯表格嘅某個部份同server唔夾，請檢查多次你嘅編輯同埋再試多次。'''",
@@ -887,7 +887,7 @@ $1',
 'edittools' => '<!-- 喺呢度嘅文字會喺編輯框下面同埋上載表格中顯示。 -->',
 'nocreatetitle' => '頁面建立被限制',
 'nocreatetext' => '{{SITENAME}}已經限制咗起新版嘅能力。
-你可以番轉頭去編輯一啲已經存在嘅頁面，或者[[Special:UserLogin|登入或開個新戶口]]。',
+你可以番轉頭去編輯一啲已經存在嘅頁面，或者[[Special:wiki_UserLogin|登入或開個新戶口]]。',
 'nocreate-loggedin' => '你並無許可權去開新版。',
 'sectioneditnotsupported-title' => '唔支援逐改段',
 'sectioneditnotsupported-text' => '呢版唔支援逐改段。',
@@ -929,11 +929,11 @@ $1',
 'undo-success' => '呢個編輯可以取消。請檢查一下個差異去確認呢個係你要去做嘅，跟住儲存下面嘅更改去完成編輯。',
 'undo-failure' => '呢個編輯唔能夠取消，由於同途中嘅編輯有衝突。',
 'undo-norev' => '呢個編輯唔能夠取消，由於佢唔存在或者刪除咗。',
-'undo-summary' => '取消由[[Special:Contributions/$2|$2]] ([[User talk:$2|對話]])所做嘅修訂 $1',
+'undo-summary' => '取消由[[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|對話]])所做嘅修訂 $1',
 
 # Account creation failure
 'cantcreateaccounttitle' => '唔可以開新戶口',
-'cantcreateaccount-text' => "由呢個IP地址 ('''$1''') 開嘅新戶口已經被[[User:$3|$3]]封鎖。
+'cantcreateaccount-text' => "由呢個IP地址 ('''$1''') 開嘅新戶口已經被[[wiki_User:$3|$3]]封鎖。
 
 當中俾$3封鎖嘅原因係''$2''",
 
@@ -1181,7 +1181,7 @@ $1",
 'mypreferences' => '自訂喜好',
 'prefs-edits' => '編輯數:',
 'prefsnologin' => '重未登入',
-'prefsnologintext' => '你一定要去<span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} 登入]</span>設定好用戶喜好值先。',
+'prefsnologintext' => '你一定要去<span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} 登入]</span>設定好用戶喜好值先。',
 'changepassword' => '改密碼',
 'prefs-skin' => '畫面',
 'skin-preview' => '預覽',
@@ -1288,16 +1288,16 @@ $1",
 'prefs-displaywatchlist' => '顯示選項',
 'prefs-diffs' => '差異',
 
-# User preference: e-mail validation using jQuery
+# wiki_User preference: e-mail validation using jQuery
 'email-address-validity-valid' => '電郵地址睇嚟有效',
 'email-address-validity-invalid' => '請打一個有效嘅電郵地址',
 
-# User rights
+# wiki_User rights
 'userrights' => '用戶權限管理',
 'userrights-lookup-user' => '管理用戶組',
 'userrights-user-editname' => '輸入一個用戶名：',
 'editusergroup' => '編輯用戶組',
-'editinguser' => "改緊用戶'''[[User:$1|$1]]''' ([[User talk:$1|{{int:talkpagelinktext}}]]{{int:pipe-separator}}[[Special:Contributions/$1|{{int:contribslink}}]]) 嘅用戶權限",
+'editinguser' => "改緊用戶'''[[wiki_User:$1|$1]]''' ([[wiki_User talk:$1|{{int:talkpagelinktext}}]]{{int:pipe-separator}}[[Special:Contributions/$1|{{int:contribslink}}]]) 嘅用戶權限",
 'userrights-editusergroup' => '編輯用戶組',
 'saveusergroups' => '儲存用戶組',
 'userrights-groupsmember' => '屬於：',
@@ -1309,7 +1309,7 @@ $1",
 'userrights-reason' => '原因:',
 'userrights-no-interwiki' => '你並無權限去編輯響其它wiki嘅用戶權限。',
 'userrights-nodatabase' => '資料庫$1唔存在或者唔係本地嘅。',
-'userrights-nologin' => '你一定要以操作員戶口[[Special:UserLogin|登入]]咗之後先可以指定用戶權限。',
+'userrights-nologin' => '你一定要以操作員戶口[[Special:wiki_UserLogin|登入]]咗之後先可以指定用戶權限。',
 'userrights-notallowed' => '你嘅戶口無權限去指定用戶權限。',
 'userrights-changeable-col' => '你可以改嘅組',
 'userrights-unchangeable-col' => '你唔可以改嘅組',
@@ -1398,7 +1398,7 @@ $1",
 'right-override-export-depth' => '倒出包含有五層深連版嘅頁面',
 'right-sendemail' => '寄電郵畀其他用戶',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => '用戶權限日誌',
 'rightslogtext' => '呢個係用戶權力嘅修改日誌。',
 'rightslogentry' => '已經將$1嘅組別從$2改到去$3',
@@ -1490,7 +1490,7 @@ $1",
 'reuploaddesc' => '取消上載再返到去上載表格',
 'upload-tryagain' => '遞交改咗嘅檔案描述',
 'uploadnologin' => '重未登入',
-'uploadnologintext' => '你必須先[[Special:UserLogin|登入]]去上載檔案。',
+'uploadnologintext' => '你必須先[[Special:wiki_UserLogin|登入]]去上載檔案。',
 'upload_directory_missing' => '嗰個上載嘅目錄 ($1) 唔見咗，唔可以由網頁伺服器建立。',
 'upload_directory_read_only' => '嗰個上載嘅目錄 ($1) 而家唔能夠被網頁伺服器寫入。',
 'uploaderror' => '上載錯誤',
@@ -1599,9 +1599,9 @@ $1',
 'upload-proto-error' => '唔正確嘅協議',
 'upload-proto-error-text' => '遙遠上載需要一個以 <code>http://</code> 或者 <code>ftp://</code> 作為開頭嘅URL。',
 'upload-file-error' => '內部錯誤',
-'upload-file-error-text' => '當響伺服器度建立一個暫存檔時發生咗一個內部錯誤。請聯絡一位[[Special:ListUsers/sysop|管理員]]。',
+'upload-file-error-text' => '當響伺服器度建立一個暫存檔時發生咗一個內部錯誤。請聯絡一位[[Special:Listwiki_Users/sysop|管理員]]。',
 'upload-misc-error' => '未知嘅上載錯誤',
-'upload-misc-error-text' => '響上載時發生咗未知嘅錯誤。請確認輸入咗嘅URL係可以訪問嘅，之後再試多一次。如果重有問題嘅話，請聯絡一位[[Special:ListUsers/sysop|管理員]]。',
+'upload-misc-error-text' => '響上載時發生咗未知嘅錯誤。請確認輸入咗嘅URL係可以訪問嘅，之後再試多一次。如果重有問題嘅話，請聯絡一位[[Special:Listwiki_Users/sysop|管理員]]。',
 'upload-too-many-redirects' => '個URL有太多跳轉',
 'upload-unknown-size' => '未知嘅大細',
 'upload-http-error' => '一個HTTP錯誤發生咗: $1',
@@ -1786,7 +1786,7 @@ $1',
 'statistics-views-total' => '查看總數',
 'statistics-views-total-desc' => '唔包唔存在頁面同特別頁嘅查看數',
 'statistics-views-peredit' => '每次編輯查看數',
-'statistics-users' => '註冊咗嘅[[Special:ListUsers|用戶]]',
+'statistics-users' => '註冊咗嘅[[Special:Listwiki_Users|用戶]]',
 'statistics-users-active' => '活躍用戶',
 'statistics-users-active-desc' => '響$1日前做過動作嘅用戶',
 'statistics-mostpopular' => '最多人睇嘅頁',
@@ -1937,13 +1937,13 @@ Template:搞清楚',
 'linksearch-line' => '$1 連自 $2',
 'linksearch-error' => '萬用字元只可以響主機名嘅開頭度用。',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => '顯示由呢個字開始嘅用戶：',
 'listusers-submit' => '顯示',
 'listusers-noresult' => '搵唔到用戶。',
 'listusers-blocked' => '(封鎖咗)',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => '活躍用戶名單',
 'activeusers-intro' => '呢個係響最近$1日之內有一啲動作嘅用戶名單。',
 'activeusers-count' => '響$3日之內嘅$1次編輯',
@@ -1977,7 +1977,7 @@ Template:搞清楚',
 
 # E-mail user
 'mailnologin' => '冇傳送地址',
-'mailnologintext' => '你一定要[[Special:UserLogin|登入咗]]同埋喺你嘅[[Special:Preferences|喜好設定]]度有個有效嘅電郵地址先可以傳送電郵畀其他用戶。',
+'mailnologintext' => '你一定要[[Special:wiki_UserLogin|登入咗]]同埋喺你嘅[[Special:Preferences|喜好設定]]度有個有效嘅電郵地址先可以傳送電郵畀其他用戶。',
 'emailuser' => '發電郵畀呢位用戶',
 'emailpage' => '發電郵畀用戶',
 'emailpagetext' => '你可以用下面嘅表去寄一封電郵畀呢位用戶。
@@ -2002,7 +2002,7 @@ Template:搞清楚',
 'emailsenttext' => '你嘅電郵信息已傳送。',
 'emailuserfooter' => '呢封電郵係由$1寄畀$2經{{SITENAME}}嘅「電郵用戶」功能發出嘅。',
 
-# User Messenger
+# wiki_User Messenger
 'usermessage-summary' => '留低系統訊息。',
 'usermessage-editor' => '系統訊息',
 
@@ -2013,7 +2013,7 @@ Template:搞清楚',
 'nowatchlist' => '你嘅監視清單度並冇任何項目。',
 'watchlistanontext' => '請先$1去睇或者改響你監視清單度嘅項目。',
 'watchnologin' => '未登入',
-'watchnologintext' => '你必須先[[Special:UserLogin|登入]]至可以更改你嘅監視清單。',
+'watchnologintext' => '你必須先[[Special:wiki_UserLogin|登入]]至可以更改你嘅監視清單。',
 'addedwatchtext' => "頁面「[[:$1]]」已加入到你嘅[[Special:Watchlist|監視清單]]度。
 呢個頁面以及佢個討論頁以後嘅修改都會列喺嗰度，佢喺[[Special:RecentChanges|最近更改清單]]度會以'''粗體'''顯示，等你可以容易啲睇到佢。",
 'removedwatchtext' => '頁面「[[:$1]]」已經喺[[Special:Watchlist|你嘅監視清單]]度刪除。',
@@ -2109,12 +2109,12 @@ wiki: $PAGEEDITOR_WIKI
 'rollbacklink' => '反轉',
 'rollbackfailed' => '反轉唔到',
 'cantrollback' => '反轉唔到；上一位貢獻者係唯一修改過呢版嘅人。',
-'alreadyrolled' => '無法反轉[[User:$2|$2]]（[[User talk:$2|留言]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]）對[[:$1]]嘅最後編輯；有人已經修改過或者反轉咗呢個頁面。
+'alreadyrolled' => '無法反轉[[wiki_User:$2|$2]]（[[wiki_User talk:$2|留言]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]）對[[:$1]]嘅最後編輯；有人已經修改過或者反轉咗呢個頁面。
 
-上次對呢版嘅編輯係由[[User:$3|$3]]（[[User talk:$3|留言]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]）做嘅。',
+上次對呢版嘅編輯係由[[wiki_User:$3|$3]]（[[wiki_User talk:$3|留言]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]）做嘅。',
 'editcomment' => "編輯摘要係：「'''$1'''」。",
-'revertpage' => '已經反轉由[[Special:Contributions/$2|$2]]（[[User talk:$2|對話]]）所寫嘅編輯到[[User:$1|$1]]嘅最後修訂。',
-'revertpage-nouser' => '已經反轉由（刪咗用戶名）所寫嘅編輯到[[User:$1|$1]]所寫嘅最後修訂。',
+'revertpage' => '已經反轉由[[Special:Contributions/$2|$2]]（[[wiki_User talk:$2|對話]]）所寫嘅編輯到[[wiki_User:$1|$1]]嘅最後修訂。',
+'revertpage-nouser' => '已經反轉由（刪咗用戶名）所寫嘅編輯到[[wiki_User:$1|$1]]所寫嘅最後修訂。',
 'rollback-success' => '已經反轉由$1所寫嘅編輯；恢復到$2嘅最後修訂。',
 
 # Edit tokens
@@ -2324,7 +2324,7 @@ $1',
 'unblockip' => '解封用戶',
 'unblockiptext' => '使用以下表格恢復之前阻止嘅某個IP地址或者某個用戶名嘅寫權限。',
 'ipusubmit' => '拎走呢個封鎖',
-'unblocked' => '"[[User:$1|$1]]"已經解封',
+'unblocked' => '"[[wiki_User:$1|$1]]"已經解封',
 'unblocked-id' => '$1嘅封鎖已經拎走咗',
 'ipblocklist' => '封咗嘅用戶',
 'ipblocklist-legend' => '搵一位封咗嘅用戶',
@@ -2344,7 +2344,7 @@ $1',
 'unblocklink' => '解封',
 'change-blocklink' => '改封',
 'contribslink' => '貢獻',
-'autoblocker' => '已經自動封鎖，因為你嘅IP地址冇幾耐之前"[[User:$1|$1]]"使用過。$1\\嘅封鎖原因係: 「$2」',
+'autoblocker' => '已經自動封鎖，因為你嘅IP地址冇幾耐之前"[[wiki_User:$1|$1]]"使用過。$1\\嘅封鎖原因係: 「$2」',
 'blocklogpage' => '封鎖日誌',
 'blocklog-showlog' => '呢位用戶已經響之前被封鎖過。響下面提供咗封鎖紀錄以便參考：',
 'blocklog-showsuppresslog' => '呢位用戶已經響之前被封鎖同隱藏過。響下面提供咗廢止紀錄以便參考：',
@@ -2433,7 +2433,7 @@ $1',
 'movearticle' => '搬頁:',
 'moveuserpage-warning' => "'''警告：'''你將會搬一個用戶版。請留意嗰版搬咗之後個用戶係''唔會''改名。",
 'movenologin' => '未登入',
-'movenologintext' => '你要係註冊用戶而且要[[Special:UserLogin|登入]]咗先可以搬頁',
+'movenologintext' => '你要係註冊用戶而且要[[Special:wiki_UserLogin|登入]]咗先可以搬頁',
 'movenotallowed' => '你並無權限去搬版。',
 'movenotallowedfile' => '你並無權限去搬檔。',
 'cant-move-user-page' => '你並無權限去搬用戶版（佢嘅細版之外）。',
@@ -3116,7 +3116,7 @@ Variants for Chinese language
 郵件遞送員回應咗：$1',
 'confirmemail_invalid' => '無效嘅確認碼。個代碼可能已經過咗期。',
 'confirmemail_needlogin' => '你需要先$1去確認你嘅電郵地址。',
-'confirmemail_success' => '你嘅電郵地址已經得到確認。你而家可以[[Special:UserLogin|登入]]同盡情享受wiki啦。',
+'confirmemail_success' => '你嘅電郵地址已經得到確認。你而家可以[[Special:wiki_UserLogin|登入]]同盡情享受wiki啦。',
 'confirmemail_loggedin' => '你嘅電郵地址現已得到確認。',
 'confirmemail_error' => '儲存你嘅確認資料嘅時候有小小嘢發生咗意外。',
 'confirmemail_subject' => '{{SITENAME}}電郵地址確認',
@@ -3166,7 +3166,7 @@ $5
 
 # Delete conflict
 'deletedwhileediting' => '警告：你寫緊文嗰陣，有用戶洗咗呢版！',
-'confirmrecreate' => "你寫緊文嗰陣，阿用戶 [[User:$1|$1]] ([[User talk:$1|talk]]) 洗咗呢一頁。以下係佢個理由：
+'confirmrecreate' => "你寫緊文嗰陣，阿用戶 [[wiki_User:$1|$1]] ([[wiki_User talk:$1|talk]]) 洗咗呢一頁。以下係佢個理由：
 : ''$2''
 請確認你係咪真係想重新整過呢版。",
 'recreate' => '重新整過',

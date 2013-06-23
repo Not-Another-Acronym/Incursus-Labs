@@ -56,7 +56,7 @@ $dateFormats = array(
 $linkTrail = "/^([a-z]+)(.*)$/sD";
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Sutalìnea is cullegamentos',
 'tog-justify' => 'Alliniamentu paràgrafos giustificados',
 'tog-hideminor' => 'Cua is acontzos minores in sa pàgina de is ùrtimas mudàntzias',
@@ -363,7 +363,7 @@ S'aministradore chi dd'at bloccadu at donadu custa ispiegatzione: $1",
 Custu a su sòlitu si verìficat cando bi est unu ligàmine in sa stòria o in unu cunfrontu intre revisiones de una pàgina ki est stada fuliada.
 
 Si no est custu su casu, s\'est agatada una faddina de su software.
-Pro praxere signa s\'acuntèssidu a unu [[Special:ListUsers/sysop|amministradore]] spetzifichende su URL de sa faddina.',
+Pro praxere signa s\'acuntèssidu a unu [[Special:Listwiki_Users/sysop|amministradore]] spetzifichende su URL de sa faddina.',
 'missingarticle-rev' => '(revisione nùmeru: $1)',
 'missingarticle-diff' => '(Dif: $1, $2)',
 'internalerror' => 'Faddina interna',
@@ -392,7 +392,7 @@ Podet èsser stadu burradu dae calicunu àteru.',
 # Login and logout pages
 'logouttext' => "'''As acabadu sa sessione.'''
 
-Immoe podes sighire a impreare {{SITENAME}} in forma anònima, o ti podes [[Special:UserLogin|identificare torra]] comente su de prima o comente usuàriu diferente.
+Immoe podes sighire a impreare {{SITENAME}} in forma anònima, o ti podes [[Special:wiki_UserLogin|identificare torra]] comente su de prima o comente usuàriu diferente.
 Tene contu ca is pàginas ki sunt giai abertas in àteras bentanas podent sighire a pàrrer comente cando fias identificadu, fintzas a cando non ddas renfriscas.",
 'welcomecreation' => "== Benènnidu, $1! ==
 S'account tuo est istadu creadu.
@@ -426,7 +426,7 @@ Sèbera unu nùmene diferente.',
 'loginsuccess' => "'''Immoe ses intradu in {{SITENAME}} cun su nùmene usuàriu \"\$1\".'''",
 'nosuchuser' => 'Non bi est usuàriu cun su nùmene "$1".
 Is nùmenes usuàriu sunt sensìbiles a is lìteras mannas.
-Verìfica su nùmene insertadu o [[Special:UserLogin/signup|crea unu account nou]].',
+Verìfica su nùmene insertadu o [[Special:wiki_UserLogin/signup|crea unu account nou]].',
 'nouserspecified' => 'Depes spetzificare unu nùmene usuàriu.',
 'wrongpassword' => 'Sa password insertada no est bona. Prova torra.',
 'wrongpasswordempty' => 'No as scritu sa password.
@@ -525,7 +525,7 @@ Pro praxere spetzìfica totu is particulares in antis in carche siat pregunta de
 'newarticletext' => "Custa pàgina no esistit galu.
 Pro creare sa pàgina, scrie in su box inoghe in bàsciu (abbàida sa [[{{MediaWiki:Helppage}}|pàgina de agiudu]] pro àteras informatziones).
 Si ses intradu inoghe pro sbàlliu, carca in su browser tuo su butone '''back/indietro'''.",
-'anontalkpagetext' => "----''Custa est sa pàgina de cuntierra de unu usuàriu anònimu ki no at creadu unu account galu, o ki non dd'usat. Pro custu impreamus su nùmeru de indiritzos IP pro ddu identificare. Is indiritzos IP podent però èsser cundivìdidos dae unos cantos usuàrios. Si ses unu usuàriu anònimu e ritenes ki custos cummentos non sunt diretos a tue, pro praxere [[Special:UserLogin/signup|crea unu account]] o [[Special:UserLogin|identifica·ti (log in)]] pro evitare cunfusione cun àteros usuàrios anònimos.''",
+'anontalkpagetext' => "----''Custa est sa pàgina de cuntierra de unu usuàriu anònimu ki no at creadu unu account galu, o ki non dd'usat. Pro custu impreamus su nùmeru de indiritzos IP pro ddu identificare. Is indiritzos IP podent però èsser cundivìdidos dae unos cantos usuàrios. Si ses unu usuàriu anònimu e ritenes ki custos cummentos non sunt diretos a tue, pro praxere [[Special:wiki_UserLogin/signup|crea unu account]] o [[Special:wiki_UserLogin|identifica·ti (log in)]] pro evitare cunfusione cun àteros usuàrios anònimos.''",
 'noarticletext' => 'In custu momentu sa pàgina est bùida.
 Podes [[Special:Search/{{PAGENAME}}|chircare custu tìtulu]] in àteras pàginas, <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} chircare in is registros ligados] oppuru [{{fullurl:{{FULLPAGENAME}}|action=edit}} acontzare sa pàgina]</span>.',
 'userpage-userdoesnotexist' => 'S\'account de s\'usuàriu "<nowiki>$1</nowiki>" no est stadu registradu.
@@ -678,7 +678,7 @@ Prova a seberare ''totu:'' pro chircare in totu su cuntènnidu (inclùdidas pàg
 'mypreferences' => 'Preferèntzias meas',
 'prefs-edits' => 'Nùmeru de acontzos:',
 'prefsnologin' => 'Non ses intrau',
-'prefsnologintext' => 'Depes èsser <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} intradu]</span> pro seberare is preferèntzias.',
+'prefsnologintext' => 'Depes èsser <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} intradu]</span> pro seberare is preferèntzias.',
 'changepassword' => 'Càmbia password',
 'prefs-skin' => 'Bisura',
 'skin-preview' => 'Antiprima',
@@ -733,9 +733,9 @@ Prova a seberare ''totu:'' pro chircare in totu su cuntènnidu (inclùdidas pàg
 'prefs-advancedwatchlist' => 'Sèberos avantzados',
 'prefs-diffs' => 'Diferèntzias',
 
-# User rights
+# wiki_User rights
 'userrights-user-editname' => 'Inserta unu nùmene usuàriu:',
-'editinguser' => "Cambiamentu de is deretos usuàriu de s'usuàriu '''[[User:$1|$1]]''' ([[User talk:$1|{{int:talkpagelinktext}}]]{{int:pipe-separator}}[[Special:Contributions/$1|{{int:contribslink}}]])",
+'editinguser' => "Cambiamentu de is deretos usuàriu de s'usuàriu '''[[wiki_User:$1|$1]]''' ([[wiki_User talk:$1|{{int:talkpagelinktext}}]]{{int:pipe-separator}}[[Special:Contributions/$1|{{int:contribslink}}]])",
 'userrights-reason' => 'Motivu:',
 'userrights-irreversible-marker' => '$1*',
 
@@ -777,7 +777,7 @@ Prova a seberare ''totu:'' pro chircare in totu su cuntènnidu (inclùdidas pàg
 'right-undelete' => 'Restaurare una pàgina',
 'right-siteadmin' => 'Bloccare e sbloccare su database',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Deretos de is usuàrios',
 'rightsnone' => '(nisciunu)',
 
@@ -835,7 +835,7 @@ Is pàginas de sa [[Special:Watchlist|watchlist tua]] sunt in '''grassu'''.",
 'uploadbtn' => 'Càrriga file',
 'reuploaddesc' => 'Torra a su mòdulu pro su carrigamentu.',
 'uploadnologin' => 'Non ses intrau',
-'uploadnologintext' => 'Depes èsser [[Special:UserLogin|identificadu (log in)]] pro carrigare files.',
+'uploadnologintext' => 'Depes èsser [[Special:wiki_UserLogin|identificadu (log in)]] pro carrigare files.',
 'uploaderror' => 'Faddina de carrigamentu',
 'uploadtext' => "Imprea su modulu a suta pro carrigare files nous.
 Pro castiare o chircare is files giai carrigaus, bae a sa [[Special:FileList|lista de is files carrigaus]]. Carrigamentos de files e de noas versiones de files sunt registradas in su [[Special:Log/upload|registru de carrigamentu]], is burraduras in su [[Special:Log/delete|registru burraduras]].
@@ -1008,10 +1008,10 @@ Dia podent essere immàgines impreadas dae àteros giassos cun unu ligàmine dir
 'linksearch-ns' => 'Nùmene-logu:',
 'linksearch-ok' => 'Chirca',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusers-submit' => 'Ammustra',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers-hidebots' => 'Cua bots',
 'activeusers-hidesysops' => 'Cua amministradores',
 
@@ -1023,7 +1023,7 @@ Dia podent essere immàgines impreadas dae àteros giassos cun unu ligàmine dir
 'listgrouprights-members' => '(lista de is cumponentes)',
 
 # E-mail user
-'mailnologintext' => "Depes èsser [[Special:UserLogin|identificadu (login)]] e àer registradu un'indiritzu e-mail vàlidu in is [[Special:Preferences|preferèntzias tuas]] pro imbiare e-mail a àteros usuàrios.",
+'mailnologintext' => "Depes èsser [[Special:wiki_UserLogin|identificadu (login)]] e àer registradu un'indiritzu e-mail vàlidu in is [[Special:Preferences|preferèntzias tuas]] pro imbiare e-mail a àteros usuàrios.",
 'emailuser' => 'E-mail a custu usuàriu',
 'emailpage' => "Ispedi una missada a s'usuàriu",
 'emailpagetext' => "Imprea su mòdulu a suta pro ispedire una missada eletrònica a custu usuàriu.
@@ -1041,7 +1041,7 @@ S'indiritzu chi as insertadu in is [[Special:Preferences|preferèntzias usuàriu
 'emailsent' => 'E-mail ispedia',
 'emailsenttext' => 'Sa e-mail tua est istada imbiada.',
 
-# User Messenger
+# wiki_User Messenger
 'usermessage-editor' => 'Missu de su sistema',
 
 # Watchlist
@@ -1049,7 +1049,7 @@ S'indiritzu chi as insertadu in is [[Special:Preferences|preferèntzias usuàriu
 'mywatchlist' => 'Sa watchlist mea',
 'nowatchlist' => 'No as indicadu pàginas in sa watchlist tua.',
 'watchnologin' => 'No intrau (log in)',
-'watchnologintext' => 'Devi prima fare il [[Special:UserLogin|login]]
+'watchnologintext' => 'Devi prima fare il [[Special:wiki_UserLogin|login]]
 per modificare la tua lista di osservati speciali.',
 'addedwatchtext' => "Sa pàgina \"[[:\$1]]\" est istada aciunta a sa [[Special:Watchlist|watchlist]] tua.
 Is mudàntzias de custa pàgina e de sa pàgina de cuntierras sua ant a bennere elencadas inoe, e su tìtulu at a aparire in '''grassetto''' in sa pàgina de is [[Special:RecentChanges|ùrtimas mudàntzias]] pro du bidere mengius.",
@@ -1098,7 +1098,7 @@ Càstia su log $2 pro unu registru de is ùrtimas fuliaduras.',
 'rollbackfailed' => 'Rollback faddidu',
 'cantrollback' => "Non si podet furriare s'acontzu;
 s'ùrtimu contribuidore est s'ùnicu autore de custa pàgina.",
-'revertpage' => 'Burradas is mudàntzias de [[Special:Contributions/$2|$2]] ([[User talk:$2|cuntierras]]), torrada a sa versione cabudiana de [[User:$1|$1]]',
+'revertpage' => 'Burradas is mudàntzias de [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|cuntierras]]), torrada a sa versione cabudiana de [[wiki_User:$1|$1]]',
 
 # Protect
 'protectlogpage' => 'Amparaduras',
@@ -1280,7 +1280,7 @@ pro praxere depes èsser seguru de àer cumpresu is cunsighèntzias prima de sig
 In custos casos, si cheres, depes mòvere a manu su cuntènnidu de sa pàgina.",
 'movearticle' => 'Move sa pàgina',
 'movenologin' => 'No identificadu (login)',
-'movenologintext' => 'Depes èsser unu usuàriu registradu e [[Special:UserLogin|identificadu]] pro pòder mòver una pàgina',
+'movenologintext' => 'Depes èsser unu usuàriu registradu e [[Special:wiki_UserLogin|identificadu]] pro pòder mòver una pàgina',
 'newtitle' => 'Tìtulu nou:',
 'move-watch' => 'Pone ogru a custa pàgina',
 'movepagebtn' => 'Move sa pàgina',

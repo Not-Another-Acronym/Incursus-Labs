@@ -14,18 +14,18 @@ diff -r 9adb5260a4b9 extensions/DeleteBatch/DeleteBatch.body.php
 +			$wgOut->addWikiMsg( 'deletebatch-omitting-nonexistant', $line );
 +			if (!$multi) {
 +				if (!is_null($user)) {
-+					$wgUser = $user;
++					$wgwiki_User = $user;
 +				}
 +			}
 +			return false;
 +		}
 +
-+		$allowed = wfRunHooks( 'userCan', array( &$page, &$wgUser, "delete", &$result ) );
++		$allowed = wfRunHooks( 'userCan', array( &$page, &$wgwiki_User, "delete", &$result ) );
 +		if( !$allowed ) {
 +			$wgOut->addWikiText( wfMsg('deletebatch-permission-denied', $line) );
  			if( !$multi ) {
  				if( !is_null( $user ) ) {
- 					$wgUser = $user;
+ 					$wgwiki_User = $user;
 diff -r 9adb5260a4b9 extensions/DeleteBatch/DeleteBatch.i18n.php
 --- extensions/DeleteBatch/DeleteBatch.i18n.php	Mon Feb 28 20:30:17 2011 +0300
 +++ extensions/DeleteBatch/DeleteBatch.i18n.php	Mon Feb 28 20:34:48 2011 +0300

@@ -42,9 +42,9 @@ class ChangePassword extends Maintenance {
 
 	public function execute() {
 		if ( $this->hasOption( "user" ) ) {
-			$user = User::newFromName( $this->getOption( 'user' ) );
+			$user = wiki_User::newFromName( $this->getOption( 'user' ) );
 		} elseif ( $this->hasOption( "userid" ) ) {
-			$user = User::newFromId( $this->getOption( 'userid' ) );
+			$user = wiki_User::newFromId( $this->getOption( 'userid' ) );
 		} else {
 			$this->error( "A \"user\" or \"userid\" must be set to change the password for" , true );
 		}

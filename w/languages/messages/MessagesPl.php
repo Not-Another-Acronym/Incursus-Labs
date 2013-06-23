@@ -196,9 +196,9 @@ $specialPageAliases = array(
 	'Unwatchedpages'            => array( 'Nieobserwowane_strony' ),
 	'Upload'                    => array( 'Prześlij' ),
 	'UploadStash'               => array( 'Schowane_pliki' ),
-	'Userlogin'                 => array( 'Zaloguj' ),
-	'Userlogout'                => array( 'Wyloguj' ),
-	'Userrights'                => array( 'Uprawnienia', 'Uprawnienia_użytkowników', 'Prawa_użytkowników' ),
+	'wiki_Userlogin'                 => array( 'Zaloguj' ),
+	'wiki_Userlogout'                => array( 'Wyloguj' ),
+	'wiki_Userrights'                => array( 'Uprawnienia', 'Uprawnienia_użytkowników', 'Prawa_użytkowników' ),
 	'Version'                   => array( 'Wersja' ),
 	'Wantedcategories'          => array( 'Potrzebne_kategorie' ),
 	'Wantedfiles'               => array( 'Potrzebne_pliki' ),
@@ -297,7 +297,7 @@ $magicWords = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Podkreślenie linków',
 'tog-justify' => 'Wyrównuj tekst w akapitach do obu marginesów',
 'tog-hideminor' => 'Ukryj drobne edycje w ostatnich zmianach',
@@ -638,7 +638,7 @@ Administrator, który zablokował bazę, podał następujące wyjaśnienie: $1',
 Zazwyczaj jest to spowodowane odwołaniem do nieaktualnego linku prowadzącego do różnicy pomiędzy dwoma wersjami strony lub do wersji z historii usuniętej strony.
 
 Jeśli tak nie jest, możliwe, że problem został wywołany przez błąd w oprogramowaniu.
-Można zgłosić ten fakt [[Special:ListUsers/sysop|administratorowi]], podając adres URL.',
+Można zgłosić ten fakt [[Special:Listwiki_Users/sysop|administratorowi]], podając adres URL.',
 'missingarticle-rev' => '(wersja $1)',
 'missingarticle-diff' => '(różnica: $1, $2)',
 'readonly_lag' => 'Baza danych została automatycznie zablokowana na czas potrzebny do wykonania synchronizacji zmian między serwerem głównym i serwerami pośredniczącymi.',
@@ -687,7 +687,7 @@ $2',
 'customcssprotected' => 'Nie jesteś uprawniony do edytowania tej strony CSS, ponieważ zawiera ona ustawienia osobiste innego użytkownika.',
 'customjsprotected' => 'Nie jesteś uprawniony do edytowania tej strony JavaScript, ponieważ zawiera ona ustawienia osobiste innego użytkownika.',
 'ns-specialprotected' => 'Stron specjalnych nie można edytować.',
-'titleprotected' => "Utworzenie strony o tej nazwie zostało zablokowane przez [[User:$1|$1]].
+'titleprotected' => "Utworzenie strony o tej nazwie zostało zablokowane przez [[wiki_User:$1|$1]].
 Uzasadnienie blokady: ''$2''.",
 'filereadonlyerror' => 'Nie można zmodyfikować pliku "$1" ponieważ repozytorium plików "$2" jest w trybie tylko do odczytu.
 
@@ -705,7 +705,7 @@ Administrator blokujący go podał następujący powód "\'\'$3\'\'".',
 # Login and logout pages
 'logouttext' => "'''Nie jesteś już zalogowany.'''
 
-Możesz kontynuować pracę w {{GRAMMAR:MS.lp|{{SITENAME}}}} jako niezarejestrowany użytkownik albo [[Special:UserLogin|zalogować się ponownie]] jako ten sam lub inny użytkownik.
+Możesz kontynuować pracę w {{GRAMMAR:MS.lp|{{SITENAME}}}} jako niezarejestrowany użytkownik albo [[Special:wiki_UserLogin|zalogować się ponownie]] jako ten sam lub inny użytkownik.
 Zauważ, że do momentu wyczyszczenia pamięci podręcznej przeglądarki niektóre strony mogą wyglądać tak, jakbyś wciąż był zalogowany.",
 'welcomecreation' => '== Witaj, $1! ==
 Twoje konto zostało utworzone.
@@ -753,7 +753,7 @@ Upewnij się, że masz włączoną obsługę ciasteczek, przeładuj stronę i sp
 'loginsuccess' => "'''{{GENDER:|Zalogowałeś się|Zalogowałaś się|Zalogowano}} do {{GRAMMAR:D.lp|{{SITENAME}}}} jako „$1”.'''",
 'nosuchuser' => 'Brak użytkownika o nazwie „$1”.
 W nazwie użytkownika ma znaczenie wielkość znaków.
-Sprawdź pisownię lub [[Special:UserLogin/signup|utwórz nowe konto]].',
+Sprawdź pisownię lub [[Special:wiki_UserLogin/signup|utwórz nowe konto]].',
 'nosuchusershort' => 'Brak użytkownika o nazwie „$1”.
 Sprawdź poprawność pisowni.',
 'nouserspecified' => 'Musisz podać nazwę użytkownika.',
@@ -951,7 +951,7 @@ Mogła zostać przeniesiona lub usunięta podczas przeglądania tej strony.',
 'loginreqlink' => 'zalogować się',
 'loginreqpagetext' => 'Musisz $1, żeby móc przeglądać inne strony.',
 'accmailtitle' => 'Hasło zostało wysłane.',
-'accmailtext' => "Losowo wygenerowane hasło dla [[User talk:$1|$1]] zostało wysłane do $2.
+'accmailtext' => "Losowo wygenerowane hasło dla [[wiki_User talk:$1|$1]] zostało wysłane do $2.
 
 Hasło dla tego nowego konta po zalogowaniu można zmienić na stronie ''[[Special:ChangePassword|zmiana hasła]]''.",
 'newarticle' => '(Nowy)',
@@ -961,7 +961,7 @@ Jeśli utworzenie nowej strony nie było Twoim zamiarem, wciśnij ''Wstecz'' w s
 'anontalkpagetext' => "---- ''To jest strona dyskusji anonimowego użytkownika – takiego, który nie ma jeszcze swojego konta lub nie chce go w tej chwili używać.
 By go identyfikować, używamy adresów IP.
 Jednak adres IP może być współdzielony przez wielu użytkowników.
-Jeśli jesteś anonimowym użytkownikiem i uważasz, że zamieszczone tu komentarze nie są skierowane do Ciebie, [[Special:UserLogin/signup|utwórz konto]] lub [[Special:UserLogin|zaloguj się]] – dzięki temu unikniesz w przyszłości podobnych nieporozumień.''",
+Jeśli jesteś anonimowym użytkownikiem i uważasz, że zamieszczone tu komentarze nie są skierowane do Ciebie, [[Special:wiki_UserLogin/signup|utwórz konto]] lub [[Special:wiki_UserLogin|zaloguj się]] – dzięki temu unikniesz w przyszłości podobnych nieporozumień.''",
 'noarticletext' => 'Brak strony o tym tytule.
 Możesz [[Special:Search/{{PAGENAME}}|poszukać „{{PAGENAME}}” na innych stronach]],
 <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} przeszukać log] lub [{{fullurl:{{FULLPAGENAME}}|action=edit}} utworzyć tę stronę]</span>.',
@@ -999,13 +999,13 @@ Zmiany nie zostały jeszcze zapisane!",
 'previewconflict' => 'Podgląd odnosi się do tekstu z górnego pola edycji. Tak będzie wyglądać strona, jeśli zdecydujesz się ją zapisać.',
 'session_fail_preview' => "'''Uwaga! Serwer nie może przetworzyć tej edycji z powodu utraty danych sesji.
 Spróbuj jeszcze raz.
-Jeśli to nie pomoże – [[Special:UserLogout|wyloguj się]] i zaloguj ponownie.'''",
+Jeśli to nie pomoże – [[Special:wiki_UserLogout|wyloguj się]] i zaloguj ponownie.'''",
 'session_fail_preview_html' => "'''Uwaga! Serwer nie może przetworzyć tej edycji z powodu utraty danych sesji.'''
 
 ''Ponieważ w {{GRAMMAR:MS.lp|{{SITENAME}}}} włączona została opcja „surowy HTML”, podgląd został ukryty w celu zabezpieczenia przed atakami z użyciem JavaScriptu.''
 
 '''Jeśli jest to uprawniona próba dokonania edycji, spróbuj jeszcze raz.
-Jeśli to nie pomoże – [[Special:UserLogout|wyloguj się]] i zaloguj ponownie.'''",
+Jeśli to nie pomoże – [[Special:wiki_UserLogout|wyloguj się]] i zaloguj ponownie.'''",
 'token_suffix_mismatch' => "'''Twoja edycja została odrzucona, ponieważ twój klient pomieszał znaki interpunkcyjne w żetonie edycyjnym.
 Twoja edycja została odrzucona by zapobiec zniszczeniu tekstu strony.
 Takie problemy zdarzają się w wypadku korzystania z wadliwych anonimowych sieciowych usług proxy.'''",
@@ -1054,7 +1054,7 @@ Ostatni wpis z rejestru jest pokazany poniżej.",
 'edittools' => '<!-- Znajdujący się tutaj tekst zostanie pokazany pod polem edycji i formularzem przesyłania plików. -->',
 'nocreatetitle' => 'Ograniczono możliwość tworzenia nowych stron',
 'nocreatetext' => 'W {{GRAMMAR:MS.lp|{{SITENAME}}}} ograniczono możliwość tworzenia nowych stron.
-Możesz edytować istniejące strony bądź też [[Special:UserLogin|zalogować się lub utworzyć konto]].',
+Możesz edytować istniejące strony bądź też [[Special:wiki_UserLogin|zalogować się lub utworzyć konto]].',
 'nocreate-loggedin' => 'Nie masz uprawnień do tworzenia nowych stron.',
 'sectioneditnotsupported-title' => 'Edycja sekcji nie jest obsługiwana',
 'sectioneditnotsupported-text' => 'Edycja sekcji na tej stronie nie jest obsługiwana.',
@@ -1104,11 +1104,11 @@ Argument ten będzie pominięty.',
 'undo-success' => 'Edycja może zostać wycofana. Porównaj ukazane poniżej różnice między wersjami, a następnie zapisz zmiany.',
 'undo-failure' => 'Edycja nie może zostać wycofana z powodu konfliktu z wersjami pośrednimi.',
 'undo-norev' => 'Edycja nie może być cofnięta, ponieważ nie istnieje lub została usunięta.',
-'undo-summary' => 'Anulowanie wersji nr $1 utworzonej przez [[Special:Contributions/$2|$2]] ([[User talk:$2|dyskusja]])',
+'undo-summary' => 'Anulowanie wersji nr $1 utworzonej przez [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|dyskusja]])',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'Nie można utworzyć konta',
-'cantcreateaccount-text' => "Tworzenie konta z tego adresu IP ('''$1''') zostało zablokowane przez [[User:$3|$3]].
+'cantcreateaccount-text' => "Tworzenie konta z tego adresu IP ('''$1''') zostało zablokowane przez [[wiki_User:$3|$3]].
 
 Podany przez $3 powód to ''$2''",
 
@@ -1368,7 +1368,7 @@ Jednak informacje o treści {{GRAMMAR:D.lp|{{SITENAME}}}} mogą być w Google ni
 'mypreferences' => 'Preferencje',
 'prefs-edits' => 'Liczba edycji',
 'prefsnologin' => 'Nie jesteś zalogowany',
-'prefsnologintext' => 'Musisz się <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} zalogować]</span> przed zmianą swoich preferencji.',
+'prefsnologintext' => 'Musisz się <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} zalogować]</span> przed zmianą swoich preferencji.',
 'changepassword' => 'Zmiana hasła',
 'prefs-skin' => 'Skórka',
 'skin-preview' => 'podgląd',
@@ -1480,16 +1480,16 @@ Jeśli zdecydujesz się je podać, zostaną użyte, by udokumentować Twoje auto
 'prefs-displaywatchlist' => 'Opcje wyświetlania',
 'prefs-diffs' => 'Zmiany',
 
-# User preference: e-mail validation using jQuery
+# wiki_User preference: e-mail validation using jQuery
 'email-address-validity-valid' => 'Wygląda na prawidłowy',
 'email-address-validity-invalid' => 'Wymagany jest prawidłowy adres!',
 
-# User rights
+# wiki_User rights
 'userrights' => 'Zarządzaj uprawnieniami użytkowników',
 'userrights-lookup-user' => 'Zarządzaj grupami użytkownika',
 'userrights-user-editname' => 'Wprowadź nazwę użytkownika',
 'editusergroup' => 'Edytuj grupy użytkownika',
-'editinguser' => "Zmiana uprawnień użytkownika '''[[User:$1|$1]]''' $2",
+'editinguser' => "Zmiana uprawnień użytkownika '''[[wiki_User:$1|$1]]''' $2",
 'userrights-editusergroup' => 'Edytuj grupy użytkownika',
 'saveusergroups' => 'Zapisz',
 'userrights-groupsmember' => 'Należy do:',
@@ -1501,7 +1501,7 @@ Jeśli zdecydujesz się je podać, zostaną użyte, by udokumentować Twoje auto
 'userrights-reason' => 'Powód',
 'userrights-no-interwiki' => 'Nie masz dostępu do edycji uprawnień na innych wiki.',
 'userrights-nodatabase' => 'Baza danych $1 nie istnieje lub nie jest lokalna.',
-'userrights-nologin' => 'Musisz [[Special:UserLogin|zalogować się]] na konto administratora, by nadawać uprawnienia użytkownikom.',
+'userrights-nologin' => 'Musisz [[Special:wiki_UserLogin|zalogować się]] na konto administratora, by nadawać uprawnienia użytkownikom.',
 'userrights-notallowed' => 'Nie jesteś upoważniony do nadawania i odbierania uprawnień użytkownikom.',
 'userrights-changeable-col' => 'Grupy, które możesz wybrać',
 'userrights-unchangeable-col' => 'Grupy, których nie możesz wybrać',
@@ -1592,7 +1592,7 @@ Jeśli zdecydujesz się je podać, zostaną użyte, by udokumentować Twoje auto
 'right-sendemail' => 'Wysyłanie e‐maili do innych użytkowników',
 'right-passwordreset' => 'Sprawdzanie treści e‐maila o resetowaniu hasła',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Uprawnienia',
 'rightslogtext' => 'Rejestr zmian uprawnień użytkowników.',
 'rightslogentry' => 'zmienił przynależność $1 do grup ($2 → $3)',
@@ -1689,7 +1689,7 @@ Strony z [[Special:Watchlist|listy obserwowanych]] są '''wytłuszczone'''.",
 'reuploaddesc' => 'Przerwij wysyłanie i wróć do formularza wysyłki',
 'upload-tryagain' => 'Zapisz zmieniony opis pliku',
 'uploadnologin' => 'Nie jesteś zalogowany',
-'uploadnologintext' => 'Musisz się [[Special:UserLogin|zalogować]] przed przesłaniem plików.',
+'uploadnologintext' => 'Musisz się [[Special:wiki_UserLogin|zalogować]] przed przesłaniem plików.',
 'upload_directory_missing' => 'Katalog dla przesyłanych plików ($1) nie istnieje i nie może zostać utworzony przez serwer WWW.',
 'upload_directory_read_only' => 'Serwer nie może zapisywać do katalogu ($1) przeznaczonego na przesyłane pliki.',
 'uploaderror' => 'Błąd wysyłania',
@@ -1825,11 +1825,11 @@ $1',
 'upload-proto-error-text' => 'Zdalne przesyłanie plików wymaga podania adresu URL zaczynającego się od <code>http://</code> lub <code>ftp://</code>.',
 'upload-file-error' => 'Błąd wewnętrzny',
 'upload-file-error-text' => 'Wystąpił błąd wewnętrzny podczas próby utworzenia tymczasowego pliku na serwerze.
-Skontaktuj się z [[Special:ListUsers/sysop|administratorem systemu]].',
+Skontaktuj się z [[Special:Listwiki_Users/sysop|administratorem systemu]].',
 'upload-misc-error' => 'Nieznany błąd przesyłania',
 'upload-misc-error-text' => 'Wystąpił nieznany błąd podczas przesyłania.
 Sprawdź, czy podany adres URL jest poprawny i dostępny, a następnie spróbuj ponownie.
-Jeśli problem będzie się powtarzał, skontaktuj się z [[Special:ListUsers/sysop|administratorem systemu]].',
+Jeśli problem będzie się powtarzał, skontaktuj się z [[Special:Listwiki_Users/sysop|administratorem systemu]].',
 'upload-too-many-redirects' => 'URL zawiera zbyt wiele przekierowań',
 'upload-unknown-size' => 'Nieznany rozmiar',
 'upload-http-error' => 'Wystąpił błąd protokołu HTTP – $1',
@@ -2068,7 +2068,7 @@ Sprawdź inne linki do szablonów, zanim usuniesz tę stronę.',
 'statistics-views-total' => 'Całkowita liczba odwiedzin',
 'statistics-views-total-desc' => 'Odsłony stron nieistniejących oraz specjalnych nie zostały uwzględnione.',
 'statistics-views-peredit' => 'Liczba odwiedzin na edycję',
-'statistics-users' => 'Zarejestrowanych [[Special:ListUsers|użytkowników]]',
+'statistics-users' => 'Zarejestrowanych [[Special:Listwiki_Users|użytkowników]]',
 'statistics-users-active' => 'Aktywnych użytkowników',
 'statistics-users-active-desc' => 'Użytkownicy, którzy byli aktywni w ciągu {{PLURAL:$1|ostatniego dnia|ostatnich $1 dni}}',
 'statistics-mostpopular' => 'Najczęściej odwiedzane strony',
@@ -2235,13 +2235,13 @@ Obsługiwane protokoły: <code>$1</code> (jeśli nie podano, domyślny to http:/
 'linksearch-line' => '$1 link na stronie $2',
 'linksearch-error' => 'Symbolu wieloznacznego można użyć wyłącznie na początku nazwy hosta.',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => 'Pokaż użytkowników zaczynając od',
 'listusers-submit' => 'Pokaż',
 'listusers-noresult' => 'Nie znaleziono żadnego użytkownika.',
 'listusers-blocked' => '({{GENDER:$1|zablokowany|zablokowana|zablokowany}})',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'Lista aktywnych użytkowników',
 'activeusers-intro' => 'Poniżej znajduje się lista użytkowników, którzy byli aktywni w ciągu {{PLURAL:$1|ostatniego dnia|ostatnich $1 dni}}.',
 'activeusers-count' => 'w ciągu {{PLURAL:$3|ostatniego dnia|ostatnich $3 dni}} {{GENDER:$2|wykonał|wykonała|wykonał}} $1 {{PLURAL:$1|edycję|edycje|edycji}}',
@@ -2275,7 +2275,7 @@ Sprawdź stronę z [[{{MediaWiki:Listgrouprights-helppage}}|dodatkowymi informac
 
 # E-mail user
 'mailnologin' => 'Brak adresu',
-'mailnologintext' => 'Musisz się [[Special:UserLogin|zalogować]] i mieć wpisany aktualny adres e‐mailowy w swoich [[Special:Preferences|preferencjach]], aby móc wysłać e‐mail do innego użytkownika.',
+'mailnologintext' => 'Musisz się [[Special:wiki_UserLogin|zalogować]] i mieć wpisany aktualny adres e‐mailowy w swoich [[Special:Preferences|preferencjach]], aby móc wysłać e‐mail do innego użytkownika.',
 'emailuser' => 'Wyślij e‐mail do tego użytkownika',
 'emailuser-title-target' => 'Wyślij e-mail do {{GENDER:$1|tego użytkownika|tej użytkowniczki|tego użytkownika}}',
 'emailuser-title-notarget' => 'Wyślij wiadomość e‐mail',
@@ -2306,7 +2306,7 @@ Adres e‐mailowy, który został przez Ciebie wprowadzony w [[Special:Preferenc
 'emailsenttext' => 'Twoja wiadomość została wysłana.',
 'emailuserfooter' => 'Wiadomość e‐mail została wysłana z {{GRAMMAR:D.lp|{{SITENAME}}}} do $2 przez $1 z użyciem „Wyślij e‐mail do tego użytkownika”.',
 
-# User Messenger
+# wiki_User Messenger
 'usermessage-summary' => 'Pozostawianie komunikatu systemowego.',
 'usermessage-editor' => 'Nadawca komunikatów systemowych',
 
@@ -2317,7 +2317,7 @@ Adres e‐mailowy, który został przez Ciebie wprowadzony w [[Special:Preferenc
 'nowatchlist' => 'Lista obserwowanych przez Ciebie stron jest pusta.',
 'watchlistanontext' => '$1, aby obejrzeć lub edytować elementy listy obserwowanych.',
 'watchnologin' => 'Nie jesteś zalogowany',
-'watchnologintext' => 'Musisz się [[Special:UserLogin|zalogować]] przed modyfikacją listy obserwowanych stron.',
+'watchnologintext' => 'Musisz się [[Special:wiki_UserLogin|zalogować]] przed modyfikacją listy obserwowanych stron.',
 'addwatch' => 'Dodaj do listy obserwowanych',
 'addedwatchtext' => 'Strona „[[:$1|$1]]” została dodana do Twojej [[Special:Watchlist|listy obserwowanych]].
 Każda zmiana treści tej strony lub związanej z nią strony dyskusji zostanie odnotowana na tej liście.',
@@ -2424,13 +2424,13 @@ Bądź ostrożny, ponieważ usunięcie jej może spowodować zakłócenia w prac
 'rollbacklinkcount-morethan' => 'cofnij więcej niż $1 {{PLURAL:$1|edycję|edycje|edycji}}',
 'rollbackfailed' => 'Nie udało się cofnąć zmiany',
 'cantrollback' => 'Nie można cofnąć edycji tego autora, ponieważ jest jedynym autorem tej strony.',
-'alreadyrolled' => 'Nie można dla strony [[:$1|$1]] cofnąć ostatniej zmiany, którą wykonał [[User:$2|$2]] ([[User talk:$2|dyskusja]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]).
+'alreadyrolled' => 'Nie można dla strony [[:$1|$1]] cofnąć ostatniej zmiany, którą wykonał [[wiki_User:$2|$2]] ([[wiki_User talk:$2|dyskusja]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]).
 Ktoś inny zdążył już to zrobić lub wprowadził własne poprawki do treści strony.
 
-Autorem ostatniej zmiany jest teraz [[User:$3|$3]] ([[User talk:$3|dyskusja]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
+Autorem ostatniej zmiany jest teraz [[wiki_User:$3|$3]] ([[wiki_User talk:$3|dyskusja]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
 'editcomment' => "Edycję opisał „''$1''”.",
-'revertpage' => 'Wycofano edycje użytkownika [[Special:Contributions/$2|$2]] ([[User talk:$2|dyskusja]]). Autor przywróconej wersji to [[User:$1|$1]].',
-'revertpage-nouser' => 'Wycofano edycje (nazwa użytkownika usunięta). Autor przywróconej wersji to [[User:$1|$1]].',
+'revertpage' => 'Wycofano edycje użytkownika [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|dyskusja]]). Autor przywróconej wersji to [[wiki_User:$1|$1]].',
+'revertpage-nouser' => 'Wycofano edycje (nazwa użytkownika usunięta). Autor przywróconej wersji to [[wiki_User:$1|$1]].',
 'rollback-success' => 'Wycofano edycje użytkownika $1.
 Przywrócono ostatnią wersję autorstwa $2.',
 
@@ -2665,7 +2665,7 @@ Przejdź do [[Special:BlockList|listy blokad]], by przejrzeć blokady.',
 'unblockip' => 'Odblokuj użytkownika',
 'unblockiptext' => 'Użyj poniższego formularza, by przywrócić możliwość edycji z wcześniej zablokowanego adresu IP lub użytkownikowi.',
 'ipusubmit' => 'Odblokuj',
-'unblocked' => '[[User:$1|$1]] {{GENDER:$1|został odblokowany|została odblokowana|został odblokowany}}.',
+'unblocked' => '[[wiki_User:$1|$1]] {{GENDER:$1|został odblokowany|została odblokowana|został odblokowany}}.',
 'unblocked-range' => '$1 został odblokowany',
 'unblocked-id' => 'Blokada $1 została zdjęta',
 'blocklist' => 'Zablokowani użytkownicy',
@@ -2698,7 +2698,7 @@ Przejdź do [[Special:BlockList|listy blokad]], by przejrzeć blokady.',
 'change-blocklink' => 'zmień blokadę',
 'contribslink' => 'edycje',
 'emaillink' => 'wyślij e‐mail',
-'autoblocker' => 'Zablokowano Cię automatycznie, ponieważ używasz tego samego adresu IP, co użytkownik „[[User:$1|$1]]”.
+'autoblocker' => 'Zablokowano Cię automatycznie, ponieważ używasz tego samego adresu IP, co użytkownik „[[wiki_User:$1|$1]]”.
 Przyczyna blokady $1 to: „$2”',
 'blocklogpage' => 'Historia blokad',
 'blocklog-showlog' => '{{GENDER:$1|Ten użytkownik był|Ta użytkowniczka była}} już wcześniej {{GENDER:$1|blokowany|blokowana}}. Poniżej znajduje się rejestr blokad:',
@@ -2798,7 +2798,7 @@ W takich przypadkach treść dyskusji można przenieść tylko ręcznie.',
 'movearticle' => 'Przeniesienie strony',
 'moveuserpage-warning' => "'''Uwaga!''' Masz zamiar przenieść stronę użytkownika. Miej na uwadze, że zostanie przeniesiona tylko strona, a '''nazwa użytkownika pozostanie niezmieniona'''.",
 'movenologin' => 'Nie jesteś zalogowany',
-'movenologintext' => 'Przenoszenie stron jest możliwe dopiero po zarejestrowaniu się i [[Special:UserLogin|zalogowaniu]].',
+'movenologintext' => 'Przenoszenie stron jest możliwe dopiero po zarejestrowaniu się i [[Special:wiki_UserLogin|zalogowaniu]].',
 'movenotallowed' => 'Nie masz uprawnień do przenoszenia stron.',
 'movenotallowedfile' => 'Nie masz uprawnień do przenoszenia plików.',
 'cant-move-user-page' => 'Nie masz uprawnień do przenoszenia stron użytkowników (za wyjątkiem podstron).',
@@ -3674,7 +3674,7 @@ System pocztowy zwrócił komunikat: $1',
 Kod może być przedawniony.',
 'confirmemail_needlogin' => 'Musisz $1 aby potwierdzić adres email.',
 'confirmemail_success' => 'Adres e‐mail został potwierdzony.
-Możesz [[Special:UserLogin|zalogować się]] i korzystać z szerszego wachlarza funkcji wiki.',
+Możesz [[Special:wiki_UserLogin|zalogować się]] i korzystać z szerszego wachlarza funkcji wiki.',
 'confirmemail_loggedin' => 'Twój adres email został zweryfikowany.',
 'confirmemail_error' => 'Pojawiły się błędy przy zapisywaniu potwierdzenia.',
 'confirmemail_subject' => '{{SITENAME}} – weryfikacja adresu e‐mail',
@@ -3731,10 +3731,10 @@ Kod zawarty w linku straci ważność $4.',
 
 # Delete conflict
 'deletedwhileediting' => "'''Uwaga!''' Ta strona została usunięta po tym, jak rozpoczął{{GENDER:|eś|aś|eś(‐aś)}} jej edycję!",
-'confirmrecreate' => "[[User:$1|$1]] ([[User talk:$1|dyskusja]]) usun{{GENDER:$1|ął|ęła|ął(‐ęła)}} tę stronę po tym, jak rozpoczął{{GENDER:|eś|aś|eś(‐aś)}} jego edycję, podając jako powód usunięcia:
+'confirmrecreate' => "[[wiki_User:$1|$1]] ([[wiki_User talk:$1|dyskusja]]) usun{{GENDER:$1|ął|ęła|ął(‐ęła)}} tę stronę po tym, jak rozpoczął{{GENDER:|eś|aś|eś(‐aś)}} jego edycję, podając jako powód usunięcia:
 : ''$2''
 Czy na pewno chcesz ją ponownie utworzyć?",
-'confirmrecreate-noreason' => 'Użytkownik [[User:$1|$1]] ([[User talk:$1|dyskusja]]) usunął tę stronę po rozpoczęciu przez Ciebie edycji. Potwierdź, czy naprawdę chcesz, ponownie utworzyć tę stronę.',
+'confirmrecreate-noreason' => 'Użytkownik [[wiki_User:$1|$1]] ([[wiki_User talk:$1|dyskusja]]) usunął tę stronę po rozpoczęciu przez Ciebie edycji. Potwierdź, czy naprawdę chcesz, ponownie utworzyć tę stronę.',
 'recreate' => 'Utwórz ponownie',
 
 # action=purge

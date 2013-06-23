@@ -425,7 +425,7 @@ $messages = array(
 'gender-female' => 'жєна',
 'prefs-signature' => 'аѵтографъ',
 
-# User rights
+# wiki_User rights
 'userrights-reason' => 'какъ съмꙑслъ :',
 
 # Groups
@@ -445,7 +445,7 @@ $messages = array(
 'grouppage-sysop' => '{{ns:project}}:Съмотритєлє',
 'grouppage-bureaucrat' => '{{ns:project}}:Чинодатєлє',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'чинодатєльства їсторїꙗ',
 
 # Associated actions - in the sentence "You do not have permission to X"
@@ -593,7 +593,7 @@ $messages = array(
 'linksearch' => 'вънѣщьн҄ь съвѧꙁь исканиѥ',
 'linksearch-ok' => 'ищи',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusers-submit' => 'виждь',
 
 # Special:Log/newusers

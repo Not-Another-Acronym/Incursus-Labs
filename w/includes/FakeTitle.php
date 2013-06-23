@@ -62,8 +62,8 @@ class FakeTitle extends Title {
 	function isProtected( $action = '' ) { $this->error(); }
 	function isConversionTable() { $this->error(); }
 	function userIsWatching() { $this->error(); }
-	function quickUserCan( $action, $user = null ) { $this->error(); }
-	function isNamespaceProtected( User $user ) { $this->error(); }
+	function quickwiki_UserCan( $action, $user = null ) { $this->error(); }
+	function isNamespaceProtected( wiki_User $user ) { $this->error(); }
 	function userCan( $action, $user = null, $doExpensiveQueries = true ) { $this->error(); }
 	function getUserPermissionsErrors( $action, $user, $doExpensiveQueries = true, $ignoreErrors = array() ) { $this->error(); }
 	function updateTitleProtection( $create_perm, $reason, $expiry ) { $this->error(); }

@@ -96,8 +96,8 @@ $specialPageAliases = array(
 	'Unusedtemplates'           => array( 'NeuzataShabloni' ),
 	'Unwatchedpages'            => array( 'NesurveyataPagini' ),
 	'Upload'                    => array( 'AdkargarArkivo' ),
-	'Userlogin'                 => array( 'Enirar' ),
-	'Userlogout'                => array( 'Ekirar' ),
+	'wiki_Userlogin'                 => array( 'Enirar' ),
+	'wiki_Userlogout'                => array( 'Ekirar' ),
 	'Version'                   => array( 'Versiono' ),
 	'Wantedcategories'          => array( 'BezonataKategorii' ),
 	'Wantedfiles'               => array( 'BezonataArkivi' ),
@@ -108,7 +108,7 @@ $specialPageAliases = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Sub-strekizez ligili:',
 'tog-justify' => 'Adjustigez paragrafi',
 'tog-hideminor' => 'Celez mikra redaktaji de recenta chanji',
@@ -409,7 +409,7 @@ nekorekta interlinguale od interwikale ligilo.',
 # Login and logout pages
 'logouttext' => "'''Vu nun esas nun ek {{SITENAME}}.'''
 
-Vu povas durar uzante {{SITENAME}} anonimale, o vu povas [[Special:UserLogin|enirar itere]] kom la sama o diferenta uzanto.
+Vu povas durar uzante {{SITENAME}} anonimale, o vu povas [[Special:wiki_UserLogin|enirar itere]] kom la sama o diferenta uzanto.
 Atencez ke kelka pagini posible duras montresar semblante ke vu ne ekirus, til vu vakuigas la tempala-magazino di vua navigilo.",
 'welcomecreation' => '== Bonveno, $1! ==
 Vua konto kreesis.
@@ -444,7 +444,7 @@ Voluntez, elektez ula diferanta uzantonomo.',
 'loginsuccess' => "'''Vu eniris a {{SITENAME}} kom \"\$1\".'''",
 'nosuchuser' => 'Ne existas uzanto "$1".
 Uzanto-nomi esas mayu/minuskulo-distingenda.
-Kontrolez vua espelado, o [[Special:UserLogin/signup|krear nova konto]].',
+Kontrolez vua espelado, o [[Special:wiki_UserLogin/signup|krear nova konto]].',
 'nosuchusershort' => 'Esas nula uzanto "$1".
 Kontrolez la espelado.',
 'nouserspecified' => 'Vu mustas specigar uzantonomo.',
@@ -520,7 +520,7 @@ Vua IP-adreso registragesos en la versionaro di ca pagino.",
 'loginreqlink' => 'enirar',
 'loginreqpagetext' => 'Vu mustas $1 por vidar altra pagini.',
 'accmailtitle' => 'Pasovorto sendita.',
-'accmailtext' => "Hazarde genitita pasovorto por [[User talk:$1|$1]] sendesis ad $2.
+'accmailtext' => "Hazarde genitita pasovorto por [[wiki_User talk:$1|$1]] sendesis ad $2.
 
 La pasovorto por ica nova konto povas chanjesar che la ''[[Special:ChangePassword|chanjar pasovorto]]'' pagino pos on eniras.",
 'newarticle' => '(nova)',
@@ -548,7 +548,7 @@ Voluntez konfirmez se vu volas krear/redaktar ica pagino.',
 'previewnote' => "'''Atencez ke ico esas nur prevido ed ol ne registragesis ankore!'''",
 'session_fail_preview' => "'''Pardonez! Ni ne povis traktar vua redakto pro perdo di sesiono donaji.'''
 Voluntez probar itere.
-Se ol ankore nefuncionas, probez [[Special:UserLogout|ekirar]] e pose enirar.",
+Se ol ankore nefuncionas, probez [[Special:wiki_UserLogout|ekirar]] e pose enirar.",
 'editing' => 'Vu redaktas $1',
 'creating' => 'Vu kreas $1',
 'editingsection' => 'Vu redaktas $1 (seciono)',
@@ -696,7 +696,7 @@ Probez prefixizar vua demando kun ''all:'' por serchar omna kontenajo (inkluzant
 'mypreferences' => 'Mea preferaji',
 'prefs-edits' => 'Nombro di redaktaji:',
 'prefsnologin' => 'Vu ne eniris',
-'prefsnologintext' => 'Vu mustas <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} enirir]</span> por establisar la preferaji.',
+'prefsnologintext' => 'Vu mustas <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} enirir]</span> por establisar la preferaji.',
 'changepassword' => 'Chanjar pasovorto',
 'prefs-skin' => 'Pelo',
 'skin-preview' => 'Pre-videz',
@@ -760,7 +760,7 @@ Ol mustas ne havar plu kam $1 {{PLURAL:$1|litero|literi}}.',
 'prefs-signature' => 'Signaturo',
 'prefs-diffs' => 'Diferi',
 
-# User rights
+# wiki_User rights
 'userrights-user-editname' => 'Skribez uzantonomo:',
 'userrights-groupsmember' => 'Membro di:',
 
@@ -792,7 +792,7 @@ Ol mustas ne havar plu kam $1 {{PLURAL:$1|litero|literi}}.',
 'right-browsearchive' => 'Serchar pagini efacita',
 'right-rollback' => 'Rapide retrorular la redakti da la lasta uzanto qua redaktis specigita pagino',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Uzanto-yuri-registraro',
 'rightsnone' => '(nula)',
 
@@ -849,7 +849,7 @@ Pagini en [[Special:Watchlist|vua surveryo-listo]] esas '''dika'''.",
 'uploadbtn' => 'Adkargar arkivo',
 'reuploaddesc' => 'Retrovenar al adkargo-formularo.',
 'uploadnologin' => 'Vu ne eniris',
-'uploadnologintext' => 'Vu mustas [[Special:UserLogin|enirir]] por adkargar arkivi.',
+'uploadnologintext' => 'Vu mustas [[Special:wiki_UserLogin|enirir]] por adkargar arkivi.',
 'uploaderror' => 'Eroro dum adkargo',
 'uploadlog' => 'adkargo-registraro',
 'uploadlogpage' => 'Adkargo-registraro',
@@ -1028,10 +1028,10 @@ Volutez kontrolar <strong>[[:$1]]</strong> se vu ne esas certa pri chanjar olu.
 'linksearch-ns' => 'Nomaro:',
 'linksearch-ok' => 'Serchez',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusers-submit' => 'Montrez',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers-noresult' => 'Nula uzanto trovesis.',
 
 # Special:Log/newusers
@@ -1043,7 +1043,7 @@ Volutez kontrolar <strong>[[:$1]]</strong> se vu ne esas certa pri chanjar olu.
 
 # E-mail user
 'mailnologin' => 'Ne sendar adreso',
-'mailnologintext' => 'Vu mustas [[Special:UserLogin|enirir]] e havar valida e-adreso en vua [[Special:Preferences|preferaji]] por sendar e-posto ad altra uzanti.',
+'mailnologintext' => 'Vu mustas [[Special:wiki_UserLogin|enirir]] e havar valida e-adreso en vua [[Special:Preferences|preferaji]] por sendar e-posto ad altra uzanti.',
 'emailuser' => 'Sendar e-posto a ca uzanto',
 'emailpage' => 'E-posto ad uzanto',
 'defemailsubject' => 'E-posto di {{SITENAME}}',
@@ -1061,7 +1061,7 @@ Volutez kontrolar <strong>[[:$1]]</strong> se vu ne esas certa pri chanjar olu.
 'mywatchlist' => 'Mea surveyaji',
 'nowatchlist' => 'Vu ne havas objekti en vua listo di surveyaji.',
 'watchnologin' => 'Vu ne startis sesiono',
-'watchnologintext' => 'Vu mustas [[Special:UserLogin|enirir]] por modifikar vua surveyaji.',
+'watchnologintext' => 'Vu mustas [[Special:wiki_UserLogin|enirir]] por modifikar vua surveyaji.',
 'addedwatchtext' => "La pagino \"<nowiki>\$1</nowiki>\" atachesis a vua [[Special:Watchlist|listo de surveyaji]]. Futura chanji di ica pagino ed olua relatanta debato-pagini montresos ibe, ed la pagino aparos per '''dika literi''' en la [[Special:RecentChanges|listo de recenta chanji]] por faciligar sua trovebleso.
 
 <p> Se vu volas efacar la pagino de vua listo de surveyaji pose, presez \"Ne plus surveyar\" en la selektaro.",
@@ -1118,12 +1118,12 @@ Videz $2 por obtenar registro di recenta efaci.',
 'rollbacklink' => 'retrorulez',
 'rollbackfailed' => 'Retrorular ne sucesis',
 'cantrollback' => 'Ne esas posibla retrorular. La lasta kontributanto esas la nura autoro di ica pagino.',
-'alreadyrolled' => 'Vu ne povas retrorular la lasta chanjo di [[:$1]] da [[User:$2|$2]] ([[User talk:$2|Diskutez]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]);
+'alreadyrolled' => 'Vu ne povas retrorular la lasta chanjo di [[:$1]] da [[wiki_User:$2|$2]] ([[wiki_User talk:$2|Diskutez]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]);
 ulu pluse ja redaktis o retrorulis ica pagino.
 
-La lasta chanjo a la pagino esis da [[User:$3|$3]] ([[User talk:$3|Diskutez]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
+La lasta chanjo a la pagino esis da [[wiki_User:$3|$3]] ([[wiki_User talk:$3|Diskutez]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
 'editcomment' => "La rezumo di la redakto esis: \"''\$1''\".",
-'revertpage' => 'Desfacita redakti da [[Special:Contributions/$2|$2]] ([[User talk:$2|Debato]]) e rekuperita la lasta redakto da [[User:$1|$1]]',
+'revertpage' => 'Desfacita redakti da [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Debato]]) e rekuperita la lasta redakto da [[wiki_User:$1|$1]]',
 'rollback-success' => 'Desfacis redakti da $1;
 restauris ad lasta versiono da $2.',
 
@@ -1247,7 +1247,7 @@ Videz [[Special:BlockList|IP-blokuslisto]] por revizor blokusadi.',
 'unblocklink' => 'desblokusar',
 'change-blocklink' => 'chanjar blokuso',
 'contribslink' => 'kontrib',
-'autoblocker' => 'Autoblokusita nam vu havas la sama IP-adreso kam "[[User:$1|$1]]". Motivo: "$2"',
+'autoblocker' => 'Autoblokusita nam vu havas la sama IP-adreso kam "[[wiki_User:$1|$1]]". Motivo: "$2"',
 'blocklogpage' => 'Blokuso-registraro',
 'blocklogentry' => 'blokusis [[$1]] dum periodo de $2 $3',
 'unblocklogentry' => 'desblokusis "$1"',
@@ -1286,7 +1286,7 @@ Ica povas esar drastika chanjo e ne-esperinda por populara pagino;
 voluntez certigar ke vu komprenas la konsequi qui eventos ante durar adavane.",
 'movearticle' => 'Movez pagino:',
 'movenologin' => 'Sesiono ne iniciata',
-'movenologintext' => 'Vu mustas esar registragita uzanto ed [[Special:UserLogin|enirir]] por rinomizar pagino.',
+'movenologintext' => 'Vu mustas esar registragita uzanto ed [[Special:wiki_UserLogin|enirir]] por rinomizar pagino.',
 'newtitle' => 'A nova titulo:',
 'move-watch' => 'Surveyar ca pagino',
 'movepagebtn' => 'Movar pagino',

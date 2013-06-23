@@ -79,7 +79,7 @@ class SpecialContributions extends SpecialPage {
 			$out->addHTML( $this->getForm() );
 			return;
 		}
-		$userObj = User::newFromName( $nt->getText(), false );
+		$userObj = wiki_User::newFromName( $nt->getText(), false );
 		if ( !$userObj ) {
 			$out->addHTML( $this->getForm() );
 			return;
@@ -90,7 +90,7 @@ class SpecialContributions extends SpecialPage {
 			$target = $nt->getText();
 			$out->addSubtitle( $this->contributionsSub( $userObj ) );
 			$out->setHTMLTitle( $this->msg( 'pagetitle', $this->msg( 'contributions-title', $target )->plain() ) );
-			$this->getSkin()->setRelevantUser( $userObj );
+			$this->getSkin()->setRelevantwiki_User( $userObj );
 		} else {
 			$out->addSubtitle( $this->msg( 'sp-contributions-newbies-sub' ) );
 			$out->setHTMLTitle( $this->msg( 'pagetitle', $this->msg( 'sp-contributions-newbies-title' )->plain() ) );
@@ -217,7 +217,7 @@ class SpecialContributions extends SpecialPage {
 
 	/**
 	 * Generates the subheading with links
-	 * @param $userObj User object for the target
+	 * @param $userObj wiki_User object for the target
 	 * @return String: appropriately-escaped HTML to be output literally
 	 * @todo FIXME: Almost the same as getSubTitle in SpecialDeletedContributions.php. Could be combined.
 	 */
@@ -277,10 +277,10 @@ class SpecialContributions extends SpecialPage {
 	 * Links to different places.
 	 * @param $userpage Title: Target user page
 	 * @param $talkpage Title: Talk page
-	 * @param $target User: Target user object
+	 * @param $target wiki_User: Target user object
 	 * @return array
 	 */
-	public function getUserLinks( Title $userpage, Title $talkpage, User $target ) {
+	public function getUserLinks( Title $userpage, Title $talkpage, wiki_User $target ) {
 
 		$id = $target->getId();
 		$username = $target->getName();
@@ -298,7 +298,7 @@ class SpecialContributions extends SpecialPage {
 						SpecialPage::getTitleFor( 'Unblock', $username ),
 						$this->msg( 'unblocklink' )->escaped()
 					);
-				} else { # User is not blocked
+				} else { # wiki_User is not blocked
 					$tools[] = Linker::linkKnown( # Block link
 						SpecialPage::getTitleFor( 'Block', $username ),
 						$this->msg( 'blocklink' )->escaped()
@@ -336,11 +336,11 @@ class SpecialContributions extends SpecialPage {
 		}
 
 		# Add a link to change user rights for privileged users
-		$userrightsPage = new UserrightsPage();
+		$userrightsPage = new wiki_UserrightsPage();
 		$userrightsPage->setContext( $this->getContext() );
 		if ( $userrightsPage->userCanChangeRights( $target ) ) {
 			$tools[] = Linker::linkKnown(
-				SpecialPage::getTitleFor( 'Userrights', $username ),
+				SpecialPage::getTitleFor( 'wiki_Userrights', $username ),
 				$this->msg( 'sp-contributions-userrights' )->escaped()
 			);
 		}
@@ -677,7 +677,7 @@ class ContribsPager extends ReverseChronologicalPager {
 			'tables'     => $tables,
 			'fields'     => array_merge(
 				Revision::selectFields(),
-				Revision::selectUserFields(),
+				Revision::selectwiki_UserFields(),
 				array( 'page_namespace', 'page_title', 'page_is_new',
 					'page_latest', 'page_is_redirect', 'page_len' )
 			),
@@ -709,7 +709,7 @@ class ContribsPager extends ReverseChronologicalPager {
 			$index = 'user_timestamp';
 			# ignore local groups with the bot right
 			# @todo FIXME: Global groups may have 'bot' rights
-			$groupsWithBotPermission = User::getGroupsWithPermission( 'bot' );
+			$groupsWithBotPermission = wiki_User::getGroupsWithPermission( 'bot' );
 			if( count( $groupsWithBotPermission ) ) {
 				$tables[] = 'user_groups';
 				$condition[] = 'ug_group IS NULL';
@@ -721,7 +721,7 @@ class ContribsPager extends ReverseChronologicalPager {
 				);
 			}
 		} else {
-			$uid = User::idFromName( $this->target );
+			$uid = wiki_User::idFromName( $this->target );
 			if ( $uid ) {
 				$condition['rev_user'] = $uid;
 				$index = 'user_timestamp';
@@ -850,8 +850,8 @@ class ContribsPager extends ReverseChronologicalPager {
 			if ( $row->rev_id == $row->page_latest ) {
 				$topmarktext .= '<span class="mw-uctop">' . $this->messages['uctop'] . '</span>';
 				# Add rollback link
-				if ( !$row->page_is_new && $page->quickUserCan( 'rollback', $user )
-					&& $page->quickUserCan( 'edit', $user ) )
+				if ( !$row->page_is_new && $page->quickwiki_UserCan( 'rollback', $user )
+					&& $page->quickwiki_UserCan( 'edit', $user ) )
 				{
 					$this->preventClickjacking();
 					$topmarktext .= ' ' . Linker::generateRollback( $rev, $this->getContext() );

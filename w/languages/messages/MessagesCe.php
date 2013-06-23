@@ -209,7 +209,7 @@ $magicWords = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Кlел сиз хьака хьажориган:',
 'tog-justify' => 'Нисде йоза шораллий агlонца',
 'tog-hideminor' => 'Къайладаха кигийра нисдарш оц могlама керла хийцамехь',
@@ -527,7 +527,7 @@ $1',
 Иштнарг наггахь хуьлу хьажориг дlайаьккхина йалхь йа хийцам бина тиша хьажоригца дехьа вала гlоьртича.
 
 Нагахьсан гlулкх цуьнах доьзна дацахь, хьуна карийна гlирс латточехь гlалат.
-Дехар до, хаам бе оцуьнах [[Special:ListUsers/sysop|адаманкуьйгалхога]], гойтуш URL.',
+Дехар до, хаам бе оцуьнах [[Special:Listwiki_Users/sysop|адаманкуьйгалхога]], гойтуш URL.',
 'missingarticle-rev' => '(варси № $1)',
 'missingarticle-diff' => '(тейп тайпнара: $1, $2)',
 'internalerror' => 'Чоьхьара гlалат',
@@ -565,7 +565,7 @@ $1',
 'loginsuccess' => 'Хlинца ахьа болх бó оцу цlарца $1.',
 'nosuchuser' => 'Декъашхо цlарца $1 воцаш ву.
 Декъашхой цlераш хаалуш йу дlайазвалрца элраш.
-Нийса юьй хьажа цlе йа [[Special:UserLogin/signup|дlайазвалар кхолла керла]].',
+Нийса юьй хьажа цlе йа [[Special:wiki_UserLogin/signup|дlайазвалар кхолла керла]].',
 'wrongpassword' => 'Ахьа язъйина йолу ишар нийса яц. Хьажа йуху цхьаъз.',
 'mailmypassword' => 'Схьаэца керла ишар',
 'accountcreated' => 'Дlавазвар кхоллина дели',
@@ -615,7 +615,7 @@ $1',
 'summary-preview' => 'Цуьнах лаьцна хирду:',
 'blockedtitle' => 'Декъашхо сацийна',
 'accmailtitle' => 'Ишар дlаяхьийтина.',
-'accmailtext' => "Ишар декъашхочуьна [[User talk:$1|$1]], йина ша шех хитта делла чу элпашах, дlаяхийтина хьокху хааман зlен чу $2.
+'accmailtext' => "Ишар декъашхочуьна [[wiki_User talk:$1|$1]], йина ша шех хитта делла чу элпашах, дlаяхийтина хьокху хааман зlен чу $2.
 
 Дlаязвинчултlяхьа, кху гlирса чохь шуьга хийцалур ю ''[[Special:ChangePassword|шай ишар]]''.",
 'newarticle' => '(Kерла)',
@@ -625,7 +625,7 @@ $1',
 'anontalkpagetext' => "----''Хlара дийцаре агIо къайлаха волу декъашхочуьна  ю, хlинца дlавазвина воцуш, йа лелош воцуш.
 Цундела иза вовзийта лелош ду терахьца IP-долу метаг.
 Иза терахь долу меттиг хила мега кхечу декъашхойчух терра.
-Нагахь хьо къайлах волу декъашхо валахь хьайна хаам кхаьчна аьлла хеташн, хьуна хьажийна доцуш, дехар до, кхолла хьай меттиг кху чохь[[Special:UserLogin/signup|дlавазло]] йа [[Special:UserLogin|хьой вовзийта]],",
+Нагахь хьо къайлах волу декъашхо валахь хьайна хаам кхаьчна аьлла хеташн, хьуна хьажийна доцуш, дехар до, кхолла хьай меттиг кху чохь[[Special:wiki_UserLogin/signup|дlавазло]] йа [[Special:wiki_UserLogin|хьой вовзийта]],",
 'noarticletext' => "Хlокх хан чохь кху агlонца йоза дац.
 Шуьга далундерг [[Special:Search/{{PAGENAME}}|лахар ишта хьехош йолу цlе]] кхечу яззамашкахь,
 <span class=\"plainlinks\">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} лахар кхечу тептаршкахь],
@@ -803,9 +803,9 @@ $1',
 'prefs-help-email' => 'Кехат яздо зlен цlе цахlоттийча аъ хlумма дац, амма иза оьшар ю, нагахь хьуна хьай ишар йицлахь.',
 'prefs-diffs' => 'Башхон варси',
 
-# User rights
+# wiki_User rights
 'userrights' => 'Декъашхочуьн бакъона урхалладар',
-'editinguser' => "Хийца декъашхочуьна бакъо '''[[User:$1|$1]]''' ([[User talk:$1|{{int:talkpagelinktext}}]]{{int:pipe-separator}}[[Special:Contributions/$1|{{int:contribslink}}]])",
+'editinguser' => "Хийца декъашхочуьна бакъо '''[[wiki_User:$1|$1]]''' ([[wiki_User talk:$1|{{int:talkpagelinktext}}]]{{int:pipe-separator}}[[Special:Contributions/$1|{{int:contribslink}}]])",
 
 # Groups
 'group' => 'Тоба:',
@@ -828,7 +828,7 @@ $1',
 'grouppage-bureaucrat' => '{{ns:project}}:Даржахой',
 'grouppage-suppress' => '{{ns:project}}:Левисорхой',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Декъашхон бакъона тéптар',
 
 # Associated actions - in the sentence "You do not have permission to X"
@@ -1055,10 +1055,10 @@ PICT # тайп тайпан
 'linksearch-ok' => 'Лаха',
 'linksearch-line' => '$2 — хьажориг кху $1',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusers-submit' => 'Гайта',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'Жигар декъашхой могlам',
 
 # Special:Log/newusers
@@ -1117,7 +1117,7 @@ PICT # тайп тайпан
 
 # Rollback
 'rollbacklink' => 'йухаяккха',
-'revertpage' => 'Нисдарш [[Special:Contributions/$2|$2]] ([[User talk:$2|дийцаре]]) йуха йаьхна башхаллийн [[User:$1|$1]]',
+'revertpage' => 'Нисдарш [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|дийцаре]]) йуха йаьхна башхаллийн [[wiki_User:$1|$1]]',
 
 # Protect
 'protectlogpage' => 'Гlаролли тептар',
@@ -1206,7 +1206,7 @@ PICT # тайп тайпан
 'blockipsuccesstext' => '[[Special:Contributions/$1|«$1»]] сацийна ву.<br />
 Хьажа. [[Special:BlockList|могlам сацийна IP-долу меттигаш]].',
 'ipb-blocklist-contribs' => 'Декъашхон къинхьегам $1',
-'unblocked' => '[[User:$1|$1]] хьайаьстина.',
+'unblocked' => '[[wiki_User:$1|$1]] хьайаьстина.',
 'ipblocklist' => 'Сацийна IP-долу меттиг а дlалаьрра язбаларш',
 'ipblocklist-submit' => 'Лаха',
 'blocklink' => 'сацаве',
@@ -1434,7 +1434,7 @@ PICT # тайп тайпан
 'limitall' => 'массо',
 
 # Delete conflict
-'confirmrecreate' => "Декъашхо [[User:$1|$1]] ([[User talk:$1|дийцаре]]) хlара агlо дlадайина, хьо иза нисда вола велча, дlадайарна бахьан:
+'confirmrecreate' => "Декъашхо [[wiki_User:$1|$1]] ([[wiki_User talk:$1|дийцаре]]) хlара агlо дlадайина, хьо иза нисда вола велча, дlадайарна бахьан:
 : ''$2''
 Дехар до, тешал де, хьо иза агlо метта хlотто лууш ву але.",
 

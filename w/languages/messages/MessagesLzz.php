@@ -57,7 +57,7 @@ $namespaceAliases = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => "Link'iş tude kogu3’uxaçki:",
 'tog-rememberpassword' => 'Parola-skani goişini (for a maximum of $1 {{PLURAL:$1|day|days}})',
 'tog-showhiddencats' => "Şinaxeri k'at'egorepe ko3'iri",
@@ -244,7 +244,7 @@ $messages = array(
 Muşeni? Çunki am butʼkʼa, jileri na ren a butʼkʼaşi golaxteri versiyoni ren.
 
 Eger sebebi aya na va renna, pʼrogramis ar çilata z*irit.
-Mu iqʼven! Aya, a [[Special:ListUsers/sysop|adminis]], URL-ti çʼareli şekʼilite rapʼortʼi doçʼarit.',
+Mu iqʼven! Aya, a [[Special:Listwiki_Users/sysop|adminis]], URL-ti çʼareli şekʼilite rapʼortʼi doçʼarit.',
 'missingarticle-rev' => '(revizyoni#: $1)',
 'badtitletext' => 'Na içʼaren butʼkʼaşi coxo ya çilatoni ren ya boşi ren varna inter-nena do inter-vikʼişi kʼontʼaktʼis na uğutʼu şeni mtini varen.
 Dudicoxopes oxmaruşi yasaği na ren ar, varna daha dido kʼarakʼtʼeri uğun.',
@@ -401,7 +401,7 @@ Ogoruşi dudis '''all:''' pʼrefiksi okʼatute doloçʼareli na ren iri şeyi (o
 # Rights
 'right-delete' => 'Am sayfape jili',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Maxmareş hakʼişi kʼayitʼepe',
 'rightsnone' => '(Va ren)',
 

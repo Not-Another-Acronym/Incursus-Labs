@@ -647,7 +647,7 @@
 		/**
 		 * Transform parsed structure into gender
 		 * Usage {{gender:[gender| mw.user object ] | masculine|feminine|neutral}}.
-		 * @param {Array} of nodes, [ {String|mw.User}, {String}, {String} , {String} ]
+		 * @param {Array} of nodes, [ {String|mw.wiki_User}, {String}, {String} , {String} ]
 		 * @return {String} selected gender form according to current language
 		 */
 		gender: function ( nodes ) {

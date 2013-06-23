@@ -83,7 +83,7 @@ $magicWords = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Кузе кылвер-влакым ӱлычын удыралаш?',
 'tog-justify' => 'Абзацым лопкыт дене тӧрлаш',
 'tog-hideminor' => 'Пытартыш тӧрлатымаш-влак лӱмер гыч изирак тӧрлатымаш-влакым ончыкташ огыл',
@@ -322,7 +322,7 @@ $messages = array(
 Кунам тый тоштемше кылвер почеш шӧрымӧ вашталтымаш лаштыкыш (але эртымгорно лаштыкыш) куснет, тыге лийын кертеш.
 
 Тыге огыл гын, очыни, тый программыште йоҥылышым муынат.
-Тидын нерген URL-ым ончыктен [[Special:ListUsers/sysop|сайтвиктарышым]] шижтаре.',
+Тидын нерген URL-ым ончыктен [[Special:Listwiki_Users/sysop|сайтвиктарышым]] шижтаре.',
 'missingarticle-rev' => '(тӱрлык#: $1)',
 'internalerror' => 'Кӧргысӧ йоҥылыш',
 'internalerror_info' => 'Кӧргысӧ йоҥылыш: $1',
@@ -358,7 +358,7 @@ $messages = array(
 'createaccountmail' => 'e-mail дене',
 'nosuchuser' => '"$1" лӱман пайдаланыше уке.
 Пайдаланышын лӱмыштӧ йӱкпале-влакын кугытшо тӱрыс лийшаш.
-Лӱмым чын возымым терге але [[Special:UserLogin/signup|регистрацийым эрте]].',
+Лӱмым чын возымым терге але [[Special:wiki_UserLogin/signup|регистрацийым эрте]].',
 'nosuchusershort' => '"$1" лӱман пайдаланыше уке.
 Лӱмым чын возымым терге.',
 'nouserspecified' => 'Тылат пайдаланышын лӱмжым пуртыман.',
@@ -591,7 +591,7 @@ $messages = array(
 'grouppage-bot' => '{{ns:project}}:Бот-влак',
 'grouppage-sysop' => '{{ns:project}}:Сайтвиктарыше-влак',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Пайдаланышын кертыж нерген журнал',
 
 # Associated actions - in the sentence "You do not have permission to X"
@@ -695,7 +695,7 @@ $messages = array(
 'statistics-edits-average' => 'Ик лаштыкым покшел тӧрлымӧ чот',
 'statistics-views-total' => 'Чылажге ончымо',
 'statistics-views-peredit' => 'Ик тӧрлатымашлан ончымо',
-'statistics-users' => 'Регистрацийым эртыше [[Special:ListUsers|пайдаланыше-влак]]',
+'statistics-users' => 'Регистрацийым эртыше [[Special:Listwiki_Users|пайдаланыше-влак]]',
 'statistics-users-active' => 'Чӱчкыдын пайдаланыше-влак',
 'statistics-users-active-desc' => 'Пытартыш {{PLURAL:$1|кечыште|$1 кечыште}} иктаж-мом ыштыше пайаланыше-влак',
 'statistics-mostpopular' => 'Эн чӱчкыдын ончымо лаштык-влак',
@@ -753,11 +753,11 @@ $messages = array(
 'linksearch-ns' => 'Лӱм-влакын кумдыкышт:',
 'linksearch-ok' => 'Кычал',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusers-submit' => 'ончыкташ',
 'listusers-blocked' => '(йӧн петырыме)',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'Чӱчкыдын пайдаланыше-влак лӱмер',
 'activeusers-count' => 'Пытартыш $3 {{PLURAL:$3|кечыште|кечылаште}} $1 {{PLURAL:$1|тӧрлатымаш|тӧрлатымаш-влак}}',
 'activeusers-hidebots' => 'Бот-влакым шылташ',

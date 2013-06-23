@@ -1,21 +1,24 @@
 <?php
+	global $user, $auth;
 	include("config.php");
 	//define('IN_PHPBB', true);
-	
+	$new = false;
 	if(!defined("ROOT_PATH"))
 	{
-		$location = split("/", dirname($_SERVER['PHP_SELF']));
+		$location = explode("/", dirname($_SERVER['PHP_SELF']));
 		$path = "";
 		foreach($location as $loc)
 			if($loc != "")
 				$path .= "../";
-        define('ROOT_PATH', $path . "phpBB");
+	        define('ROOT_PATH', $path . "phpBB");
+		$new = true;
+		global $db, $user, $cache, $SID, $_SID, $config, $phpbb_root_path, $phpEx, $auth, $template;
 	}
    	$phpEx = "php";
-    $phpbb_root_path = (defined('PHPBB_ROOT_PATH')) ? PHPBB_ROOT_PATH : ROOT_PATH . '/';
-    require_once($phpbb_root_path . 'common.' . $phpEx);
-    require_once($phpbb_root_path . 'includes/functions_user.' . $phpEx);
-	global $user, $auth;
+	$phpbb_root_path = (defined('PHPBB_ROOT_PATH')) ? PHPBB_ROOT_PATH : ROOT_PATH . '/';
+	
+	require_once($phpbb_root_path . 'common.' . $phpEx);
+        require_once($phpbb_root_path . 'includes/functions_user.' . $phpEx);
 
 	$loggedIn = false;
 	$user->session_begin();
@@ -42,10 +45,10 @@
                 $_POST = $POST;
                 $_GET = $GET;
                 chdir("' . getcwd()  .'");
-				ob_start();
-                include("../loginWikiUser.php");
+				ob_start();*/
+                include("../loginWikiUser.php");/*
 				$out = ob_get_clean();
-        ');
+	        ');
 		$cookieToken = $php->cookieToken;
 		$cookieUserID = $php->cookieUserID;
 		$cookieUserName = $php->cookieUserName;

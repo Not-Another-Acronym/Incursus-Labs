@@ -108,7 +108,7 @@ class LocalisationCache {
 		'separatorTransformTable', 'fallback8bitEncoding', 'linkPrefixExtension',
 		'linkTrail', 'namespaceAliases',
 		'dateFormats', 'datePreferences', 'datePreferenceMigrationMap',
-		'defaultDateFormat', 'extraUserToggles', 'specialPageAliases',
+		'defaultDateFormat', 'extrawiki_UserToggles', 'specialPageAliases',
 		'imageFiles', 'preloadedMessages', 'namespaceGenderAliases',
 		'digitGroupingPattern', 'pluralRules', 'compiledPluralRules',
 	);
@@ -124,7 +124,7 @@ class LocalisationCache {
 	/**
 	 * Keys for items which are a numbered array.
 	 */
-	static public $mergeableListKeys = array( 'extraUserToggles' );
+	static public $mergeableListKeys = array( 'extrawiki_UserToggles' );
 
 	/**
 	 * Keys for items which contain an array of arrays of equivalent aliases

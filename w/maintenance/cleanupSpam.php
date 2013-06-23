@@ -39,16 +39,16 @@ class CleanupSpam extends Maintenance {
 	}
 
 	public function execute() {
-		global $wgLocalDatabases, $wgUser;
+		global $wgLocalDatabases, $wgwiki_User;
 
 		$username = wfMessage( 'spambot_username' )->text();
-		$wgUser = User::newFromName( $username );
-		if ( !$wgUser ) {
+		$wgwiki_User = wiki_User::newFromName( $username );
+		if ( !$wgwiki_User ) {
 			$this->error( "Invalid username", true );
 		}
 		// Create the user if necessary
-		if ( !$wgUser->getId() ) {
-			$wgUser->addToDatabase();
+		if ( !$wgwiki_User->getId() ) {
+			$wgwiki_User->addToDatabase();
 		}
 		$spec = $this->getArg();
 		$like = LinkFilter::makeLikeArray( $spec );

@@ -269,7 +269,7 @@ class DatabaseIbm_db2 extends DatabaseBase {
 	protected $mLastQuery = '';
 	protected $mPHPError = false;
 
-	protected $mServer, $mUser, $mPassword, $mConn = null, $mDBname;
+	protected $mServer, $mwiki_User, $mPassword, $mConn = null, $mDBname;
 	protected $mOpened = false;
 
 	protected $mTablePrefix;
@@ -516,7 +516,7 @@ class DatabaseIbm_db2 extends DatabaseBase {
 		// Cache conn info
 		$this->mServer = $server;
 		$this->mPort = $port = $wgDBport;
-		$this->mUser = $user;
+		$this->mwiki_User = $user;
 		$this->mPassword = $password;
 		$this->mDBname = $dbName;
 
@@ -525,12 +525,12 @@ class DatabaseIbm_db2 extends DatabaseBase {
 		if ( !$this->mConn ) {
 			$this->installPrint( "DB connection error\n" );
 			$this->installPrint(
-				"Server: $server, Database: $dbName, User: $user, Password: "
+				"Server: $server, Database: $dbName, wiki_User: $user, Password: "
 				. substr( $password, 0, 3 ) . "...\n" );
 			$this->installPrint( $this->lastError() . "\n" );
 			wfProfileOut( __METHOD__ );
 			wfDebug( "DB connection error\n" );
-			wfDebug( "Server: $server, Database: $dbName, User: $user, Password: " . substr( $password, 0, 3 ) . "...\n" );
+			wfDebug( "Server: $server, Database: $dbName, wiki_User: $user, Password: " . substr( $password, 0, 3 ) . "...\n" );
 			wfDebug( $this->lastError() . "\n" );
 			throw new DBConnectionError( $this, $this->lastError() );
 		}
@@ -1433,7 +1433,7 @@ class DatabaseIbm_db2 extends DatabaseBase {
 		// db2_ping() doesn't exist
 		// Emulate
 		$this->close();
-		$this->openUncataloged( $this->mDBName, $this->mUser,
+		$this->openUncataloged( $this->mDBName, $this->mwiki_User,
 			$this->mPassword, $this->mServer, $this->mPort );
 
 		return false;

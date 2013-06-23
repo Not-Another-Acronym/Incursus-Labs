@@ -11,7 +11,7 @@ This is a security and maintenance release of the MediaWiki 1.20 branch.
 === Changes since 1.20.2 ===
 * New preference type - 'api'. Preferences of this type are not shown on
   Special:Preferences, but are still available via the action=options API.
-* (bug 44010) Context is passed to UserGetLanguageObject.
+* (bug 44010) Context is passed to wiki_UserGetLanguageObject.
 * The recursion guard on RequestContext::getLanguage() was weakened.
 * (bug 40585) Don't drop 'step="any"' in HTML input fields.
 * (bug 44024) Fixed problems in ObjectCache when using XCache.
@@ -35,7 +35,7 @@ This is a security release of the MediaWiki 1.20 branch.
 
 === Changes since 1.20 ===
 * (bug 42202) Validate options to prevent html injection
-* (bug 40995) Prevent session fixation in Special:UserLogin (CVE-2012-5391)
+* (bug 40995) Prevent session fixation in Special:wiki_UserLogin (CVE-2012-5391)
 * (bug 41400) Prevent linker regex from exceeding PCRE backtrack limit
 * Javscript Lint fixes
 * (bug 40632) Remove CleanupPresentationalAttributes feature
@@ -124,7 +124,7 @@ upgrade PHP if you have not done so prior to upgrading MediaWiki.
 * Added new function getDomain to AuthPlugin for getting a user's domain
 * (bug 23427) New magic word {{PAGEID}} which gives the current page ID.
   Will be null on previewing a page being created.
-* (bug 37627) UserNotLoggedIn() exception to show a generic error page whenever
+* (bug 37627) wiki_UserNotLoggedIn() exception to show a generic error page whenever
   a user is not logged in.
 * Watched status in changes lists are no longer indicated by <strong></strong>
   tags with class "mw-watched". Instead, each line now has a class
@@ -267,7 +267,7 @@ milestone in Bugzilla.
 * (bug 37708) mw.Uri.clone() should make a deep copy.
 * (bug 38024) ResourceLoader should not create empty stylesheets for modules
   that don't have stylesheets.
-* (bug 36812) Special:ActiveUsers "Hide bots" should hide users from any group
+* (bug 36812) Special:Activewiki_Users "Hide bots" should hide users from any group
   having the "bot" user right, instead of just the default "bot" user group.
 * (bug 35082) mw.util.addPortletLink incorrectly adds link to mutiple <ul> tags.
 * (bug 36991) jquery.tablesorter should extract date sort format from date

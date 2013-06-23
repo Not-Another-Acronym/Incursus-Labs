@@ -191,7 +191,7 @@ class ApiQueryAllMessages extends ApiQueryBase {
 			// Language not specified, will be fetched from preferences
 			return 'anon-public-user-private';
 		} elseif ( $params['enableparser'] ) {
-			// User-specific parser options will be used
+			// wiki_User-specific parser options will be used
 			return 'anon-public-user-private';
 		} else {
 			// OK to cache

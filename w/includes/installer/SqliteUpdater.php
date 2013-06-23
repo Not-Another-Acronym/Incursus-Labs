@@ -33,7 +33,7 @@ class SqliteUpdater extends DatabaseUpdater {
 		return array(
 			// 1.14
 			array( 'addField', 'site_stats',    'ss_active_users',  'patch-ss_active_users.sql' ),
-			array( 'doActiveUsersInit' ),
+			array( 'doActivewiki_UsersInit' ),
 			array( 'addField', 'ipblocks',      'ipb_allow_usertalk', 'patch-ipb_allow_usertalk.sql' ),
 			array( 'sqliteInitialIndexes' ),
 
@@ -46,7 +46,7 @@ class SqliteUpdater extends DatabaseUpdater {
 			array( 'addTable', 'user_properties',                   'patch-user_properties.sql' ),
 			array( 'addTable', 'log_search',                        'patch-log_search.sql' ),
 			array( 'addField', 'logging',       'log_user_text',    'patch-log_user_text.sql' ),
-			array( 'doLogUsertextPopulation' ), # listed separately from the previous update because 1.16 was released without this update
+			array( 'doLogwiki_UsertextPopulation' ), # listed separately from the previous update because 1.16 was released without this update
 			array( 'doLogSearchPopulation' ),
 			array( 'addTable', 'l10n_cache',                        'patch-l10n_cache.sql' ),
 			array( 'addTable', 'external_user',                     'patch-external_user.sql' ),
@@ -77,7 +77,7 @@ class SqliteUpdater extends DatabaseUpdater {
 
 			// 1.19
 			array( 'addIndex', 'logging',       'type_action',      'patch-logging-type-action-index.sql'),
-			array( 'doMigrateUserOptions' ),
+			array( 'doMigratewiki_UserOptions' ),
 			array( 'dropField', 'user',         'user_options', 'patch-drop-user_options.sql' ),
 			array( 'addField', 'revision',      'rev_sha1',         'patch-rev_sha1.sql' ),
 			array( 'addField', 'archive',       'ar_sha1',          'patch-ar_sha1.sql' ),

@@ -35,7 +35,7 @@ If you are logged in, you can disable this warning in the "Editing" section of y
  * @author Umherirrender
  */
 $messages['qqq'] = array(
-	'vector' => 'UI means User Interface. Vector is the name of an interface skin.',
+	'vector' => 'UI means wiki_User Interface. Vector is the name of an interface skin.',
 	'vector-desc' => '{{desc}}',
 	'vector-collapsiblenav-preference' => 'The message refers to the sidebar, whose sections are collapsible in Vector skin (some of them collapsed by default and some no); the preference disables collapsing entirely and is among "Advanced options" in the "Appearence" section.',
 	'vector-editwarning-warning' => "{{doc-important|Do ''not'' use <nowiki>{{int:prefs-editing}}</nowiki> for \"Editing\". It is forbidden in this message, see [[mwr:68405]].}}

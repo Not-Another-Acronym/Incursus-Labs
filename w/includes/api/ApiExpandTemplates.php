@@ -38,7 +38,7 @@ class ApiExpandTemplates extends ApiBase {
 	}
 
 	public function execute() {
-		// Cache may vary on $wgUser because ParserOptions gets data from it
+		// Cache may vary on $wgwiki_User because ParserOptions gets data from it
 		$this->getMain()->setCacheMode( 'anon-public-user-private' );
 
 		// Get parameters

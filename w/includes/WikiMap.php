@@ -70,11 +70,11 @@ class WikiMap {
 	 *
 	 * @param $wikiID String: wiki'd id (generally database name)
 	 * @param $user String: user name (must be normalised before calling this function!)
-	 * @param $text String: link's text; optional, default to "User:$user"
+	 * @param $text String: link's text; optional, default to "wiki_User:$user"
 	 * @return String: HTML link or false if the wiki was not found
 	 */
-	public static function foreignUserLink( $wikiID, $user, $text=null ) {
-		return self::makeForeignLink( $wikiID, "User:$user", $text );
+	public static function foreignwiki_UserLink( $wikiID, $user, $text=null ) {
+		return self::makeForeignLink( $wikiID, "wiki_User:$user", $text );
 	}
 
 	/**

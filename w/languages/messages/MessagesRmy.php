@@ -226,7 +226,7 @@ Mishto si te jas kai {{SITENAME}} thai te paruves tiro lav sigo.',
 'showpreview' => 'Dikh sar avelas i patrin',
 'showlivepreview' => 'Jivutno angledikhipen',
 'showdiff' => 'Dikh le paruvimata',
-'whitelistedittext' => 'Trebul te [[Special:UserLogin|autentifikisares]] kashte editisares artikolurya.',
+'whitelistedittext' => 'Trebul te [[Special:wiki_UserLogin|autentifikisares]] kashte editisares artikolurya.',
 'accmailtitle' => 'O nakhavipnasko lav bićhaldo.',
 'accmailtext' => "O nakhavipnasko lav andar '$1' bićhaldo ko $2.",
 'newarticle' => '(Nevo)',
@@ -288,8 +288,8 @@ Kana avilyan kathe doshatar, ja palpale.',
 'yournick' => 'I xarni versyunya, le semnaturenge',
 'badsig' => 'Bilachhi semnatura; dikh le tagurya HTML.',
 
-# User rights
-'editinguser' => "Editisaripen '''[[User:$1|$1]]''' ([[User talk:$1|{{int:talkpagelinktext}}]] | [[Special:Contributions/$1|{{int:contribslink}}]])",
+# wiki_User rights
+'editinguser' => "Editisaripen '''[[wiki_User:$1|$1]]''' ([[wiki_User talk:$1|{{int:talkpagelinktext}}]] | [[Special:Contributions/$1|{{int:contribslink}}]])",
 
 # Groups
 'group' => 'Grupo:',

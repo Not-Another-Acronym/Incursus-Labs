@@ -40,7 +40,7 @@ class Ibm_db2Installer extends DatabaseInstaller {
 	);
 
 	protected $internalDefaults = array(
-		'_InstallUser' => 'db2admin'
+		'_Installwiki_User' => 'db2admin'
 	);
 
 	/**
@@ -72,7 +72,7 @@ class Ibm_db2Installer extends DatabaseInstaller {
 			$this->getTextBox( 'wgDBname', 'config-db-name', array(), $this->parent->getHelpBox( 'config-db-name-help' ) ) .
 			$this->getTextBox( 'wgDBmwschema', 'config-db-schema', array(), $this->parent->getHelpBox( 'config-db-schema-help' ) ) .
 			Html::closeElement( 'fieldset' ) .
-			$this->getInstallUserBox();
+			$this->getInstallwiki_UserBox();
 	}
 
 	/**
@@ -107,7 +107,7 @@ class Ibm_db2Installer extends DatabaseInstaller {
 
 		// Submit user box
 		if ( $status->isOK() ) {
-			$status->merge( $this->submitInstallUserBox() );
+			$status->merge( $this->submitInstallwiki_UserBox() );
 		}
 		if ( !$status->isOK() ) {
 			return $status;
@@ -122,7 +122,7 @@ class Ibm_db2Installer extends DatabaseInstaller {
 			return $status;
 		}
 
-		$this->parent->setVar( 'wgDBuser', $this->getVar( '_InstallUser' ) );
+		$this->parent->setVar( 'wgDBuser', $this->getVar( '_Installwiki_User' ) );
 		$this->parent->setVar( 'wgDBpassword', $this->getVar( '_InstallPassword' ) );
 
 		return $status;
@@ -137,7 +137,7 @@ class Ibm_db2Installer extends DatabaseInstaller {
 		try {
 			$db = new DatabaseIbm_db2(
 				$this->getVar( 'wgDBserver' ),
-				$this->getVar( '_InstallUser' ),
+				$this->getVar( '_Installwiki_User' ),
 				$this->getVar( '_InstallPassword' ),
 				$this->getVar( 'wgDBname' ),
 				0,

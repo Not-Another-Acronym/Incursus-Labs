@@ -87,7 +87,7 @@ class SearchEngineTest extends MediaWikiTestCase {
 	function insertPage( $pageName, $text, $ns ) {
 		$title = Title::newFromText( $pageName );
 
-		$user = User::newFromName( 'WikiSysop' );
+		$user = wiki_User::newFromName( 'WikiSysop' );
 		$comment = 'Search Test';
 
 		// avoid memory leak...?

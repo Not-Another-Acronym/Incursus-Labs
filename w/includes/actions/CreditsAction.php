@@ -80,7 +80,7 @@ class CreditsAction extends FormlessAction {
 	 * @return String HTML
 	 */
 	protected function getAuthor( Page $article ) {
-		$user = User::newFromName( $article->getUserText(), false );
+		$user = wiki_User::newFromName( $article->getUserText(), false );
 
 		$timestamp = $article->getTimestamp();
 		if ( $timestamp ) {
@@ -180,10 +180,10 @@ class CreditsAction extends FormlessAction {
 
 	/**
 	 * Get a link to $user's user page
-	 * @param $user User object
+	 * @param $user wiki_User object
 	 * @return String: html
 	 */
-	protected function link( User $user ) {
+	protected function link( wiki_User $user ) {
 		global $wgHiddenPrefs;
 		if ( !in_array( 'realname', $wgHiddenPrefs ) && !$user->isAnon() ) {
 			$real = $user->getRealName();
@@ -200,10 +200,10 @@ class CreditsAction extends FormlessAction {
 
 	/**
 	 * Get a link to $user's user page
-	 * @param $user User object
+	 * @param $user wiki_User object
 	 * @return String: html
 	 */
-	protected function userLink( User $user ) {
+	protected function userLink( wiki_User $user ) {
 		$link = $this->link( $user );
 		if ( $user->isAnon() ) {
 			return $this->msg( 'anonuser' )->rawParams( $link )->parse();

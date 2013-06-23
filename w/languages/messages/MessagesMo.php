@@ -157,7 +157,7 @@ $messages = array(
 Ын мод нормал фаптул есте кауза де урмэриря уней диф неактуализатэ сау а уней легэтурь дин историк спре о паӂинэ каре а фост штярсэ.
 
 Дакэ ну ачеста е мотивул, с-ар путя сэ фи гэсит ун буг ын програм.
-Те рог анунцэ ачест аспект унуй [[Special:ListUsers/sysop|администратор]], индикынду-ь адреса УРЛ.',
+Те рог анунцэ ачест аспект унуй [[Special:Listwiki_Users/sysop|администратор]], индикынду-ь адреса УРЛ.',
 'viewsource' => 'Везь сурса',
 
 # Login and logout pages
@@ -274,7 +274,7 @@ $messages = array(
 
 'grouppage-sysop' => '{{ns:project}}:Администраторь',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Журнал дрептурь де утилизатор',
 
 # Associated actions - in the sentence "You do not have permission to X"

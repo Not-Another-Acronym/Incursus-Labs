@@ -57,7 +57,7 @@ class RevertFileAction extends FormAction {
 		return 'upload';
 	}
 
-	protected function checkCanExecute( User $user ) {
+	protected function checkCanExecute( wiki_User $user ) {
 		parent::checkCanExecute( $user );
 
 		$oldimage = $this->getRequest()->getText( 'oldimage' );

@@ -49,7 +49,7 @@ class RevDel_RevisionList extends RevDel_List {
 		$ids = array_map( 'intval', $this->ids );
 		$live = $db->select(
 			array( 'revision', 'page', 'user' ),
-			array_merge( Revision::selectFields(), Revision::selectUserFields() ),
+			array_merge( Revision::selectFields(), Revision::selectwiki_UserFields() ),
 			array(
 				'rev_page' => $this->title->getArticleID(),
 				'rev_id'   => $ids,
@@ -154,7 +154,7 @@ class RevDel_RevisionItem extends RevDel_Item {
 	}
 
 	public function getAuthorNameField() {
-		return 'user_name'; // see Revision::selectUserFields()
+		return 'user_name'; // see Revision::selectwiki_UserFields()
 	}
 
 	public function canView() {
@@ -260,7 +260,7 @@ class RevDel_RevisionItem extends RevDel_Item {
 		$difflink = $this->list->msg( 'parentheses' )
 			->rawParams( $this->getDiffLink() )->escaped();
 		$revlink = $this->getRevisionLink();
-		$userlink = Linker::revUserLink( $this->revision );
+		$userlink = Linker::revwiki_UserLink( $this->revision );
 		$comment = Linker::revComment( $this->revision );
 		if ( $this->isDeleted() ) {
 			$revlink = "<span class=\"history-deleted\">$revlink</span>";
@@ -895,7 +895,7 @@ class RevDel_LogItem extends RevDel_Item {
 			array( 'page' => $title->getPrefixedText() )
 		);
 		$loglink = $this->list->msg( 'parentheses' )->rawParams( $loglink )->escaped();
-		// User links and action text
+		// wiki_User links and action text
 		$action = $formatter->getActionText();
 		// Comment
 		$comment = $this->list->getLanguage()->getDirMark() . Linker::commentBlock( $this->row->log_comment );

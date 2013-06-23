@@ -73,7 +73,7 @@ class RefreshLinksJob extends Job {
 		global $wgParser, $wgContLang;
 
 		wfProfileIn( $fname . '-parse' );
-		$options = ParserOptions::newFromUserAndLang( new User, $wgContLang );
+		$options = ParserOptions::newFromwiki_UserAndLang( new wiki_User, $wgContLang );
 		$parserOutput = $wgParser->parse(
 			$revision->getText(), $title, $options, true, true, $revision->getId() );
 		wfProfileOut( $fname . '-parse' );

@@ -62,7 +62,7 @@ $wgRealnamesLinkStyle = 'replace';
 
 /**
  * The format to apply to a user's name in text. 
- * This typically only replaces User: text in titles
+ * This typically only replaces wiki_User: text in titles
  * @since 2011-09-16, 0.1
  */  
 $wgRealnamesBareStyle = false;
@@ -71,7 +71,7 @@ $wgRealnamesBareStyle = false;
  * Do you want to show blank real names?
  * If this is false, then it will fall back on a 'replace' username style.
  * If true, then in a style like 'append' ( Joe [Joe Cardigan] )you will see: Joe []  
- * @note User:Joe text will still become Joe.
+ * @note wiki_User:Joe text will still become Joe.
  * @since 2011-09-15, 0.1
  */    
 $wgRealnamesBlank = false;

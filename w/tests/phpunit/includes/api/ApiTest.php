@@ -190,7 +190,7 @@ class ApiTest extends ApiTestCase {
 		$this->assertNotEquals( false, $serverName );
 		$serializedCookie = $cj->serializeToHttpRequest( $wgScriptPath, $serverName );
 		$this->assertNotEquals( '', $serializedCookie );
-		$this->assertRegexp( '/_session=[^;]*; .*UserID=[0-9]*; .*UserName=' . $user->userName . '; .*Token=/', $serializedCookie );
+		$this->assertRegexp( '/_session=[^;]*; .*wiki_UserID=[0-9]*; .*wiki_UserName=' . $user->userName . '; .*Token=/', $serializedCookie );
 
 		return $cj;
 	}
@@ -216,11 +216,11 @@ class ApiTest extends ApiTestCase {
 	}
 	
 	function testRunLogin() {
-		$sysopUser = self::$users['sysop'];
+		$sysopwiki_User = self::$users['sysop'];
 		$data = $this->doApiRequest( array(
 			'action' => 'login',
-			'lgname' => $sysopUser->username,
-			'lgpassword' => $sysopUser->password ) );
+			'lgname' => $sysopwiki_User->username,
+			'lgpassword' => $sysopwiki_User->password ) );
 
 		$this->assertArrayHasKey( "login", $data[0] );
 		$this->assertArrayHasKey( "result", $data[0]['login'] );
@@ -230,8 +230,8 @@ class ApiTest extends ApiTestCase {
 		$data = $this->doApiRequest( array(
 			'action' => 'login',
 			"lgtoken" => $token,
-			"lgname" => $sysopUser->username,
-			"lgpassword" => $sysopUser->password ), $data[2] );
+			"lgname" => $sysopwiki_User->username,
+			"lgpassword" => $sysopwiki_User->password ), $data[2] );
 
 		$this->assertArrayHasKey( "login", $data[0] );
 		$this->assertArrayHasKey( "result", $data[0]['login'] );

@@ -57,7 +57,7 @@ class EmailConfirmation extends UnlistedSpecialPage {
 				}
 			} else {
 				$llink = Linker::linkKnown(
-					SpecialPage::getTitleFor( 'Userlogin' ),
+					SpecialPage::getTitleFor( 'wiki_Userlogin' ),
 					$this->msg( 'loginreqlink' )->escaped(),
 					array(),
 					array( 'returnto' => $this->getTitle()->getPrefixedText() )
@@ -113,14 +113,14 @@ class EmailConfirmation extends UnlistedSpecialPage {
 	 * @param $code string Confirmation code
 	 */
 	function attemptConfirm( $code ) {
-		$user = User::newFromConfirmationCode( $code );
+		$user = wiki_User::newFromConfirmationCode( $code );
 		if( is_object( $user ) ) {
 			$user->confirmEmail();
 			$user->saveSettings();
 			$message = $this->getUser()->isLoggedIn() ? 'confirmemail_loggedin' : 'confirmemail_success';
 			$this->getOutput()->addWikiMsg( $message );
 			if( !$this->getUser()->isLoggedIn() ) {
-				$title = SpecialPage::getTitleFor( 'Userlogin' );
+				$title = SpecialPage::getTitleFor( 'wiki_Userlogin' );
 				$this->getOutput()->returnToMain( true, $title );
 			}
 		} else {
@@ -159,7 +159,7 @@ class EmailInvalidation extends UnlistedSpecialPage {
 	 * @param $code string Confirmation code
 	 */
 	function attemptInvalidate( $code ) {
-		$user = User::newFromConfirmationCode( $code );
+		$user = wiki_User::newFromConfirmationCode( $code );
 		if( is_object( $user ) ) {
 			$user->invalidateEmail();
 			$user->saveSettings();

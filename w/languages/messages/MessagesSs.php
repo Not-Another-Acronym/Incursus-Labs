@@ -257,7 +257,7 @@ Naka kutsi makhasi abo e {{SITENAME}} angaba sekadlulelwe sikhatsi.',
 # Special:LinkSearch
 'linksearch-ok' => 'Sesha',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusers-submit' => 'Khomba',
 
 # Watchlist

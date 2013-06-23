@@ -95,9 +95,9 @@ $specialPageAliases = array(
 	'Uncategorizedpages'        => array( 'FolednowHebKlass' ),
 	'Uncategorizedtemplates'    => array( 'SkantlynsHebKlass' ),
 	'Upload'                    => array( 'Ughkarga' ),
-	'Userlogin'                 => array( 'Omgelmi' ),
-	'Userlogout'                => array( 'Digelmi' ),
-	'Userrights'                => array( 'GwiryowDevnydhyer' ),
+	'wiki_Userlogin'                 => array( 'Omgelmi' ),
+	'wiki_Userlogout'                => array( 'Digelmi' ),
+	'wiki_Userrights'                => array( 'GwiryowDevnydhyer' ),
 	'Version'                   => array( 'Versyon' ),
 	'Wantedcategories'          => array( 'KlassysHwansus' ),
 	'Wantedfiles'               => array( 'RestrednowHwansus' ),
@@ -108,7 +108,7 @@ $specialPageAliases = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Islinenna kevrennow:',
 'tog-hideminor' => 'Cudha chanjyow bian yn chanjyow a-dhiwedhes',
 'tog-showtoolbar' => 'Disqwedhes an toulvar chanjya (res yw JavaScript)',
@@ -552,7 +552,7 @@ Yma covnoten dhileans ha gwayans an folen a-woles.',
 'log-fulllog' => 'Gweles an govnoten dien',
 
 # "Undo" feature
-'undo-summary' => 'Diswul amendyans $1 gans [[Special:Contributions/$2|$2]] ([[User talk:$2|kescows]])',
+'undo-summary' => 'Diswul amendyans $1 gans [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|kescows]])',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'Nyns yw possybyl formya an acont',
@@ -726,7 +726,7 @@ Nyns yw disqwedhys agas trigva ebost pan wrella devnydhyoryon erel kestava dhywg
 'prefs-displaysearchoptions' => 'Etholyow disqwedhes',
 'prefs-displaywatchlist' => 'Etholyow disqwedhes',
 
-# User rights
+# wiki_User rights
 'userrights-user-editname' => 'Entrowgh hanow usyer:',
 'userrights-groupsmember' => 'Esel a:',
 'userrights-reason' => 'Acheson:',
@@ -756,7 +756,7 @@ Nyns yw disqwedhys agas trigva ebost pan wrella devnydhyoryon erel kestava dhywg
 'right-upload' => 'Ughcarga restrennow',
 'right-delete' => 'Dilea folennow',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Covnoten wiryow an devnydhyer',
 
 # Associated actions - in the sentence "You do not have permission to X"
@@ -810,7 +810,7 @@ Nyns yw disqwedhys agas trigva ebost pan wrella devnydhyoryon erel kestava dhywg
 'uploadbtn' => 'Ughcarga restren',
 'reuploaddesc' => "Hedhy ughcarga ha dewheles dhe'n furvlen ughcarga",
 'uploadnologin' => 'Digelmys',
-'uploadnologintext' => 'Res yw bos [[Special:UserLogin|omgelmys]] rag ughcarga restrennow.',
+'uploadnologintext' => 'Res yw bos [[Special:wiki_UserLogin|omgelmys]] rag ughcarga restrennow.',
 'uploaderror' => 'Gwall ughcarga',
 'uploadlogpage' => 'Covnoten ughcarga',
 'filename' => 'Hanow an restren',
@@ -945,7 +945,7 @@ Yma'n descrifans war y [$2 folen dhescrifans] disqwedhys a-woles.",
 'linksearch-ok' => 'Whilas',
 'linksearch-line' => 'Kevrennys yw $1 dhyworth $2',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusers-submit' => 'Disqwedhes',
 
 # Special:Log/newusers

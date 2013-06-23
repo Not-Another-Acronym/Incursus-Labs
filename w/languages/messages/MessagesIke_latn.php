@@ -10,7 +10,7 @@
  */
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-rememberpassword' => 'Iqtuu uikipitia atiq qakugiq atuinnasivuq uvalumaq qaritaujaq (for a maximum of $1 {{PLURAL:$1|day|days}})',
 
 # Dates
@@ -193,8 +193,8 @@ pigivuq qatannguti uikipitia kiinaujaqutiqarvik isuillingaitjapaa. iqtuu suqusiq
 'email' => 'kigutiup sitiniqpaanga',
 'prefs-help-email' => 'kigutiup sitiniqpaanga (pikkallavuq) — qakugu nalunanngilaq ilissi pijungnaqtuq pigivaa kanngunaqtuq aajiiqatiginggiq',
 
-# User rights
-'editinguser' => "suqusiqpaa qatannguti '''[[User:$1|$1]]''' ([[User talk:$1|{{int:talkpagelinktext}}]] | [[Special:Contributions/$1|{{int:contribslink}}]])",
+# wiki_User rights
+'editinguser' => "suqusiqpaa qatannguti '''[[wiki_User:$1|$1]]''' ([[wiki_User talk:$1|{{int:talkpagelinktext}}]] | [[Special:Contributions/$1|{{int:contribslink}}]])",
 
 # Recent changes
 'recentchanges' => 'pigivuq asianngutuq',

@@ -29,7 +29,7 @@ $namespaceNames = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Hlenċa undermearcian:',
 'tog-justify' => 'Macian cwidfloccas riht',
 'tog-hideminor' => 'Lytla ādihtas hȳdan in nīƿum hƿeorfum',
@@ -359,7 +359,7 @@ Cȳþþuhord edƿende ƿōh "<tt>$3: $4</tt>"',
 # Login and logout pages
 'logouttext' => "'''Þū eart nū ūtmeldod.'''
 
-Þū canst ætfeolan tō brūcenne {{SITENAME}} ungecūðe, oþþe þū canst [[Special:UserLogin|inmeldian eft]] tō ylcan oþþe ōðrum brūcende.
+Þū canst ætfeolan tō brūcenne {{SITENAME}} ungecūðe, oþþe þū canst [[Special:wiki_UserLogin|inmeldian eft]] tō ylcan oþþe ōðrum brūcende.
 Cnāw þæt sume sīdan cunnon gelǣstende ēowod wesan swā þū wǣre gīet inmeldod, oþ þæt þū clǣnsie þīnes sēcendtōles gemynd.",
 'welcomecreation' => '== Ƿilcumen, $1! ==
 
@@ -394,7 +394,7 @@ Bidde þē, lǣt hīe tō twyrcenne, and þǣræfter inmelda þurh þīnne nīwa
 'loginsuccess' => "'''Þu eart nū inmeldod tō {{SITENAME}} swā \"\$1\".'''",
 'nosuchuser' => 'Þǣr nis nān brūcere þe hæfþ þone naman "$1".
 Stafena micelnesse sind hefige and ānlica on brūcendnamum.
-Scēawa þīne wrītunge eft, oþþe brūc þā cartan þe is hērunder tō [[Special:UserLogin/signup|settene nīwne brūcendreccend]].',
+Scēawa þīne wrītunge eft, oþþe brūc þā cartan þe is hērunder tō [[Special:wiki_UserLogin/signup|settene nīwne brūcendreccend]].',
 'nosuchusershort' => 'Þǣr is nān brūcend mid þǣm naman "$1".  Edscēawa on þīne wrītunge.',
 'passwordtooshort' => 'Gelēafword sculon habban læst {{PLURAL:$1|1 stafan|$1 stafan}}.',
 'mailmypassword' => 'Nīƿe þafungƿord bȳ e-mail sendan',
@@ -448,7 +448,7 @@ Scēawa þīne wrītunge eft, oþþe brūc þā cartan þe is hērunder tō [[Sp
 'loginreqlink' => 'inmeldian',
 'loginreqpagetext' => 'Þū scealt $1 tō sēonne ōðre sīdan.',
 'accmailtitle' => 'Þafungƿord sended.',
-'accmailtext' => "Hlīetemaced þafungƿord for [[User talk:$1|$1]] ƿæs to $2 sended.
+'accmailtext' => "Hlīetemaced þafungƿord for [[wiki_User talk:$1|$1]] ƿæs to $2 sended.
 
 Þū meaht þæt þafungƿord hƿeorfan for þissum nīƿan hordcleofa on þǣre ''[[Special:ChangePassword|change password]]'' sīde æfter inmeldiende.",
 'newarticle' => '(Nīƿe)',
@@ -612,7 +612,7 @@ folcliċum āgnunge oþþe ȝelīċum frēom horde (sēo $1 for āscungum).
 'gender-female' => 'Frēo',
 'email' => 'E-ǣrende',
 
-# User rights
+# wiki_User rights
 'userrights-user-editname' => 'Brūcendnama ƿrītan:',
 'editusergroup' => 'Ādihtan Brūcendsamþrēatas',
 'userrights-editusergroup' => 'Brūcenda clīeƿenas ādihtan:',
@@ -636,7 +636,7 @@ folcliċum āgnunge oþþe ȝelīċum frēom horde (sēo $1 for āscungum).
 
 'grouppage-sysop' => '{{ns:project}}:Beƿitendas',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Brūcenda riht cranic',
 
 # Associated actions - in the sentence "You do not have permission to X"
@@ -832,10 +832,10 @@ Also see [[Special:WantedCategories|wanted categories]].',
 'linksearch' => 'Ūtanƿeard hlenċan',
 'linksearch-ok' => 'Sēċan',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusers-noresult' => 'Nǣnne brūcend gefundenne.',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'Hƿata brūcenda ȝetalu',
 
 # Special:Log/newusers
@@ -904,7 +904,7 @@ Also see [[Special:WantedCategories|wanted categories]].',
 'rollbacklink' => 'Edhƿeorfan',
 'rollbackfailed' => 'Edhƿeorf misfangen',
 'editcomment' => "Sēo ādihtungymbsprǣc wæs: \"''\$1''\".",
-'revertpage' => 'Ācierde ādihtunga fram [[Special:Contributions/$2|$2]] ([[User talk:$2|Gesprec]]); wendede on bæc tō ǣrran fadunge fram [[User:$1|$1]]',
+'revertpage' => 'Ācierde ādihtunga fram [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Gesprec]]); wendede on bæc tō ǣrran fadunge fram [[wiki_User:$1|$1]]',
 
 # Protect
 'protectlogpage' => 'Beorges ƿīsbōc',

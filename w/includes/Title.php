@@ -59,7 +59,7 @@ class Title {
 	var $mTextform = '';              // /< Text form (spaces not underscores) of the main part
 	var $mUrlform = '';               // /< URL-encoded form of the main part
 	var $mDbkeyform = '';             // /< Main part with underscores
-	var $mUserCaseDBKey;              // /< DB key with the initial letter in the case specified by the user
+	var $mwiki_UserCaseDBKey;              // /< DB key with the initial letter in the case specified by the user
 	var $mNamespace = NS_MAIN;        // /< Namespace index, i.e. one of the NS_xxxx constants
 	var $mInterwiki = '';             // /< Interwiki prefix (or null string)
 	var $mFragment;                   // /< Title fragment (i.e. the bit after the #)
@@ -80,7 +80,7 @@ class Title {
 	# places.  See bug 696.
 	var $mDefaultNamespace = NS_MAIN; // /< Namespace index when there is no namespace
 									  # Zero except in {{transclusion}} tags
-	var $mWatched = null;             // /< Is $wgUser watching this page? null if unfilled, accessed through userIsWatching()
+	var $mWatched = null;             // /< Is $wgwiki_User watching this page? null if unfilled, accessed through userIsWatching()
 	var $mLength = -1;                // /< The page length, 0 for special pages
 	var $mRedirect = null;            // /< Is the article at this title a redirect?
 	var $mNotificationTimestamp = array(); // /< Associative array of user ID -> timestamp/false
@@ -702,7 +702,7 @@ class Title {
 	 * @return String DB key
 	 */
 	function getUserCaseDBKey() {
-		return $this->mUserCaseDBKey;
+		return $this->mwiki_UserCaseDBKey;
 	}
 
 	/**
@@ -1528,28 +1528,28 @@ class Title {
 	}
 
 	/**
-	 * Is $wgUser watching this page?
+	 * Is $wgwiki_User watching this page?
 	 *
-	 * @deprecated in 1.20; use User::isWatched() instead.
+	 * @deprecated in 1.20; use wiki_User::isWatched() instead.
 	 * @return Bool
 	 */
 	public function userIsWatching() {
-		global $wgUser;
+		global $wgwiki_User;
 
 		if ( is_null( $this->mWatched ) ) {
-			if ( NS_SPECIAL == $this->mNamespace || !$wgUser->isLoggedIn() ) {
+			if ( NS_SPECIAL == $this->mNamespace || !$wgwiki_User->isLoggedIn() ) {
 				$this->mWatched = false;
 			} else {
-				$this->mWatched = $wgUser->isWatched( $this );
+				$this->mWatched = $wgwiki_User->isWatched( $this );
 			}
 		}
 		return $this->mWatched;
 	}
 
 	/**
-	 * Can $wgUser read this page?
+	 * Can $wgwiki_User read this page?
 	 *
-	 * @deprecated in 1.19; use userCan(), quickUserCan() or getUserPermissionsErrors() instead
+	 * @deprecated in 1.19; use userCan(), quickwiki_UserCan() or getUserPermissionsErrors() instead
 	 * @return Bool
 	 * @todo fold these checks into userCan()
 	 */
@@ -1569,11 +1569,11 @@ class Title {
 	 * May provide false positives, but should never provide a false negative.
 	 *
 	 * @param $action String action that permission needs to be checked for
-	 * @param $user User to check (since 1.19); $wgUser will be used if not
+	 * @param $user wiki_User to check (since 1.19); $wgwiki_User will be used if not
 	 *              provided.
 	 * @return Bool
 	 */
-	public function quickUserCan( $action, $user = null ) {
+	public function quickwiki_UserCan( $action, $user = null ) {
 		return $this->userCan( $action, $user, false );
 	}
 
@@ -1581,16 +1581,16 @@ class Title {
 	 * Can $user perform $action on this page?
 	 *
 	 * @param $action String action that permission needs to be checked for
-	 * @param $user User to check (since 1.19); $wgUser will be used if not
+	 * @param $user wiki_User to check (since 1.19); $wgwiki_User will be used if not
 	 *   provided.
 	 * @param $doExpensiveQueries Bool Set this to false to avoid doing
 	 *   unnecessary queries.
 	 * @return Bool
 	 */
 	public function userCan( $action, $user = null, $doExpensiveQueries = true ) {
-		if ( !$user instanceof User ) {
-			global $wgUser;
-			$user = $wgUser;
+		if ( !$user instanceof wiki_User ) {
+			global $wgwiki_User;
+			$user = $wgwiki_User;
 		}
 		return !count( $this->getUserPermissionsErrorsInternal( $action, $user, $doExpensiveQueries, true ) );
 	}
@@ -1598,10 +1598,10 @@ class Title {
 	/**
 	 * Can $user perform $action on this page?
 	 *
-	 * @todo FIXME: This *does not* check throttles (User::pingLimiter()).
+	 * @todo FIXME: This *does not* check throttles (wiki_User::pingLimiter()).
 	 *
 	 * @param $action String action that permission needs to be checked for
-	 * @param $user User to check
+	 * @param $user wiki_User to check
 	 * @param $doExpensiveQueries Bool Set this to false to avoid doing unnecessary
 	 *   queries by skipping checks for cascading protections and user blocks.
 	 * @param $ignoreErrors Array of Strings Set this to a list of message keys
@@ -1627,7 +1627,7 @@ class Title {
 	 * Permissions checks that fail most often, and which are easiest to test.
 	 *
 	 * @param $action String the action to check
-	 * @param $user User user to check
+	 * @param $user wiki_User user to check
 	 * @param $errors Array list of current errors
 	 * @param $doExpensiveQueries Boolean whether or not to perform expensive queries
 	 * @param $short Boolean short circuit on first error
@@ -1653,7 +1653,7 @@ class Title {
 			}
 
 			if ( !$user->isAllowed( 'move' ) ) {
-				// User can't move anything
+				// wiki_User can't move anything
 				global $wgGroupPermissions;
 				$userCanMove = false;
 				if ( isset( $wgGroupPermissions['user']['move'] ) ) {
@@ -1672,7 +1672,7 @@ class Title {
 			}
 		} elseif ( $action == 'move-target' ) {
 			if ( !$user->isAllowed( 'move' ) ) {
-				// User can't move anything
+				// wiki_User can't move anything
 				$errors[] = array( 'movenotallowed' );
 			} elseif ( !$user->isAllowed( 'move-rootuserpages' )
 					&& $this->mNamespace == NS_USER && !$this->isSubpage() ) {
@@ -1715,7 +1715,7 @@ class Title {
 	 * Check various permission hooks
 	 *
 	 * @param $action String the action to check
-	 * @param $user User user to check
+	 * @param $user wiki_User user to check
 	 * @param $errors Array list of current errors
 	 * @param $doExpensiveQueries Boolean whether or not to perform expensive queries
 	 * @param $short Boolean short circuit on first error
@@ -1745,7 +1745,7 @@ class Title {
 	 * Check permissions on special pages & namespaces
 	 *
 	 * @param $action String the action to check
-	 * @param $user User user to check
+	 * @param $user wiki_User user to check
 	 * @param $errors Array list of current errors
 	 * @param $doExpensiveQueries Boolean whether or not to perform expensive queries
 	 * @param $short Boolean short circuit on first error
@@ -1775,7 +1775,7 @@ class Title {
 	 * Check CSS/JS sub-page permissions
 	 *
 	 * @param $action String the action to check
-	 * @param $user User user to check
+	 * @param $user wiki_User user to check
 	 * @param $errors Array list of current errors
 	 * @param $doExpensiveQueries Boolean whether or not to perform expensive queries
 	 * @param $short Boolean short circuit on first error
@@ -1804,7 +1804,7 @@ class Title {
 	 * action.
 	 *
 	 * @param $action String the action to check
-	 * @param $user User user to check
+	 * @param $user wiki_User user to check
 	 * @param $errors Array list of current errors
 	 * @param $doExpensiveQueries Boolean whether or not to perform expensive queries
 	 * @param $short Boolean short circuit on first error
@@ -1818,7 +1818,7 @@ class Title {
 				$right = 'protect';
 			}
 			if ( $right != '' && !$user->isAllowed( $right ) ) {
-				// Users with 'editprotected' permission can edit protected pages
+				// wiki_Users with 'editprotected' permission can edit protected pages
 				// without cascading option turned on.
 				if ( $action != 'edit' || !$user->isAllowed( 'editprotected' )
 					|| $this->mCascadeRestriction )
@@ -1835,7 +1835,7 @@ class Title {
 	 * Check restrictions on cascading pages.
 	 *
 	 * @param $action String the action to check
-	 * @param $user User to check
+	 * @param $user wiki_User to check
 	 * @param $errors Array list of current errors
 	 * @param $doExpensiveQueries Boolean whether or not to perform expensive queries
 	 * @param $short Boolean short circuit on first error
@@ -1874,7 +1874,7 @@ class Title {
 	 * Check action permissions not already checked in checkQuickPermissions
 	 *
 	 * @param $action String the action to check
-	 * @param $user User to check
+	 * @param $user wiki_User to check
 	 * @param $errors Array list of current errors
 	 * @param $doExpensiveQueries Boolean whether or not to perform expensive queries
 	 * @param $short Boolean short circuit on first error
@@ -1898,7 +1898,7 @@ class Title {
 				if( $title_protection['pt_create_perm'] == '' ||
 					!$user->isAllowed( $title_protection['pt_create_perm'] ) )
 				{
-					$errors[] = array( 'titleprotected', User::whoIs( $title_protection['pt_user'] ), $title_protection['pt_reason'] );
+					$errors[] = array( 'titleprotected', wiki_User::whoIs( $title_protection['pt_user'] ), $title_protection['pt_reason'] );
 				}
 			}
 		} elseif ( $action == 'move' ) {
@@ -1930,14 +1930,14 @@ class Title {
 	 * Check that the user isn't blocked from editting.
 	 *
 	 * @param $action String the action to check
-	 * @param $user User to check
+	 * @param $user wiki_User to check
 	 * @param $errors Array list of current errors
 	 * @param $doExpensiveQueries Boolean whether or not to perform expensive queries
 	 * @param $short Boolean short circuit on first error
 	 *
 	 * @return Array list of errors
 	 */
-	private function checkUserBlock( $action, $user, $errors, $doExpensiveQueries, $short ) {
+	private function checkwiki_UserBlock( $action, $user, $errors, $doExpensiveQueries, $short ) {
 		// Account creation blocks handled at userlogin.
 		// Unblocking handled in SpecialUnblock
 		if( !$doExpensiveQueries || in_array( $action, array( 'createaccount', 'unblock' ) ) ) {
@@ -1967,7 +1967,7 @@ class Title {
 			$ip = $user->getRequest()->getIP();
 
 			if ( is_numeric( $id ) ) {
-				$name = User::whoIs( $id );
+				$name = wiki_User::whoIs( $id );
 			} else {
 				$name = $id;
 			}
@@ -1995,7 +1995,7 @@ class Title {
 	 * Check that the user is allowed to read this page.
 	 *
 	 * @param $action String the action to check
-	 * @param $user User to check
+	 * @param $user wiki_User to check
 	 * @param $errors Array list of current errors
 	 * @param $doExpensiveQueries Boolean whether or not to perform expensive queries
 	 * @param $short Boolean short circuit on first error
@@ -2036,7 +2036,7 @@ class Title {
 		} elseif ( $user->isAllowed( 'read' ) ) {
 			# If the user is allowed to read pages, he is allowed to read all pages
 			$whitelisted = true;
-		} elseif ( $this->isSpecial( 'Userlogin' )
+		} elseif ( $this->isSpecial( 'wiki_Userlogin' )
 			|| $this->isSpecial( 'ChangePassword' )
 			|| $this->isSpecial( 'PasswordReset' )
 		) {
@@ -2084,20 +2084,20 @@ class Title {
 
 	/**
 	 * Get a description array when the user doesn't have the right to perform
-	 * $action (i.e. when User::isAllowed() returns false)
+	 * $action (i.e. when wiki_User::isAllowed() returns false)
 	 *
 	 * @param $action String the action to check
 	 * @param $short Boolean short circuit on first error
 	 * @return Array list of errors
 	 */
 	private function missingPermissionError( $action, $short ) {
-		// We avoid expensive display logic for quickUserCan's and such
+		// We avoid expensive display logic for quickwiki_UserCan's and such
 		if ( $short ) {
 			return array( 'badaccess-group0' );
 		}
 
-		$groups = array_map( array( 'User', 'makeGroupLinkWiki' ),
-			User::getGroupsWithPermission( $action ) );
+		$groups = array_map( array( 'wiki_User', 'makeGroupLinkWiki' ),
+			wiki_User::getGroupsWithPermission( $action ) );
 
 		if ( count( $groups ) ) {
 			global $wgLang;
@@ -2117,7 +2117,7 @@ class Title {
 	 * checks on wfReadOnly() and blocks)
 	 *
 	 * @param $action String action that permission needs to be checked for
-	 * @param $user User to check
+	 * @param $user wiki_User to check
 	 * @param $doExpensiveQueries Bool Set this to false to avoid doing unnecessary queries.
 	 * @param $short Bool Set this to true to stop after the first permission error.
 	 * @return Array of arrays of the arguments to wfMessage to explain permissions problems.
@@ -2140,7 +2140,7 @@ class Title {
 				'checkPageRestrictions',
 				'checkCascadingSourcesRestrictions',
 				'checkActionPermissions',
-				'checkUserBlock'
+				'checkwiki_UserBlock'
 			);
 		}
 
@@ -2156,31 +2156,31 @@ class Title {
 	}
 
 	/**
-	 * Protect css subpages of user pages: can $wgUser edit
+	 * Protect css subpages of user pages: can $wgwiki_User edit
 	 * this page?
 	 *
 	 * @deprecated in 1.19; will be removed in 1.20. Use getUserPermissionsErrors() instead.
 	 * @return Bool
 	 */
 	public function userCanEditCssSubpage() {
-		global $wgUser;
+		global $wgwiki_User;
 		wfDeprecated( __METHOD__, '1.19' );
-		return ( ( $wgUser->isAllowedAll( 'editusercssjs', 'editusercss' ) )
-			|| preg_match( '/^' . preg_quote( $wgUser->getName(), '/' ) . '\//', $this->mTextform ) );
+		return ( ( $wgwiki_User->isAllowedAll( 'editusercssjs', 'editusercss' ) )
+			|| preg_match( '/^' . preg_quote( $wgwiki_User->getName(), '/' ) . '\//', $this->mTextform ) );
 	}
 
 	/**
-	 * Protect js subpages of user pages: can $wgUser edit
+	 * Protect js subpages of user pages: can $wgwiki_User edit
 	 * this page?
 	 *
 	 * @deprecated in 1.19; will be removed in 1.20. Use getUserPermissionsErrors() instead.
 	 * @return Bool
 	 */
 	public function userCanEditJsSubpage() {
-		global $wgUser;
+		global $wgwiki_User;
 		wfDeprecated( __METHOD__, '1.19' );
-		return ( ( $wgUser->isAllowedAll( 'editusercssjs', 'edituserjs' ) )
-			   || preg_match( '/^' . preg_quote( $wgUser->getName(), '/' ) . '\//', $this->mTextform ) );
+		return ( ( $wgwiki_User->isAllowedAll( 'editusercssjs', 'edituserjs' ) )
+			   || preg_match( '/^' . preg_quote( $wgwiki_User->getName(), '/' ) . '\//', $this->mTextform ) );
 	}
 
 	/**
@@ -2270,13 +2270,13 @@ class Title {
 	public function updateTitleProtection( $create_perm, $reason, $expiry ) {
 		wfDeprecated( __METHOD__, '1.19' );
 
-		global $wgUser;
+		global $wgwiki_User;
 
 		$limit = array( 'create' => $create_perm );
 		$expiry = array( 'create' => $expiry );
 
 		$page = WikiPage::factory( $this );
-		$status = $page->doUpdateRestrictions( $limit, $expiry, false, $reason, $wgUser );
+		$status = $page->doUpdateRestrictions( $limit, $expiry, false, $reason, $wgwiki_User );
 
 		return $status->isOK();
 	}
@@ -2357,10 +2357,10 @@ class Title {
 	 * Determines if $user is unable to edit this page because it has been protected
 	 * by $wgNamespaceProtection.
 	 *
-	 * @param $user User object to check permissions
+	 * @param $user wiki_User object to check permissions
 	 * @return Bool
 	 */
-	public function isNamespaceProtected( User $user ) {
+	public function isNamespaceProtected( wiki_User $user ) {
 		global $wgNamespaceProtection;
 
 		if ( isset( $wgNamespaceProtection[$this->mNamespace] ) ) {
@@ -3092,7 +3092,7 @@ class Title {
 		# Normally, all wiki links are forced to have an initial capital letter so [[foo]]
 		# and [[Foo]] point to the same place.  Don't force it for interwikis, since the
 		# other site might be case-sensitive.
-		$this->mUserCaseDBKey = $dbkey;
+		$this->mwiki_UserCaseDBKey = $dbkey;
 		if ( $this->mInterwiki == '' ) {
 			$dbkey = self::capitalize( $dbkey, $this->mNamespace );
 		}
@@ -3342,13 +3342,13 @@ class Title {
 	 * Returns true if ok, or a getUserPermissionsErrors()-like array otherwise
 	 *
 	 * @param $nt Title the new title
-	 * @param $auth Bool indicates whether $wgUser's permissions
+	 * @param $auth Bool indicates whether $wgwiki_User's permissions
 	 *  should be checked
 	 * @param $reason String is the log summary of the move, used for spam checking
 	 * @return Mixed True on success, getUserPermissionsErrors()-like array on failure
 	 */
 	public function isValidMoveOperation( &$nt, $auth = true, $reason = '' ) {
-		global $wgUser;
+		global $wgwiki_User;
 
 		$errors = array();
 		if ( !$nt ) {
@@ -3392,10 +3392,10 @@ class Title {
 
 		if ( $auth ) {
 			$errors = wfMergeErrorArrays( $errors,
-				$this->getUserPermissionsErrors( 'move', $wgUser ),
-				$this->getUserPermissionsErrors( 'edit', $wgUser ),
-				$nt->getUserPermissionsErrors( 'move-target', $wgUser ),
-				$nt->getUserPermissionsErrors( 'edit', $wgUser ) );
+				$this->getUserPermissionsErrors( 'move', $wgwiki_User ),
+				$this->getUserPermissionsErrors( 'edit', $wgwiki_User ),
+				$nt->getUserPermissionsErrors( 'move-target', $wgwiki_User ),
+				$nt->getUserPermissionsErrors( 'edit', $wgwiki_User ) );
 		}
 
 		$match = EditPage::matchSummarySpamRegex( $reason );
@@ -3405,7 +3405,7 @@ class Title {
 		}
 
 		$err = null;
-		if ( !wfRunHooks( 'AbortMove', array( $this, $nt, $wgUser, &$err, $reason ) ) ) {
+		if ( !wfRunHooks( 'AbortMove', array( $this, $nt, $wgwiki_User, &$err, $reason ) ) ) {
 			$errors[] = array( 'hookaborted', $err );
 		}
 
@@ -3420,7 +3420,7 @@ class Title {
 		} else {
 			$tp = $nt->getTitleProtection();
 			$right = ( $tp['pt_create_perm'] == 'sysop' ) ? 'protect' : $tp['pt_create_perm'];
-			if ( $tp and !$wgUser->isAllowed( $right ) ) {
+			if ( $tp and !$wgwiki_User->isAllowed( $right ) ) {
 				$errors[] = array( 'cantmove-titleprotected' );
 			}
 		}
@@ -3436,7 +3436,7 @@ class Title {
 	 * @return array List of errors
 	 */
 	protected function validateFileMoveOperation( $nt ) {
-		global $wgUser;
+		global $wgwiki_User;
 
 		$errors = array();
 
@@ -3462,7 +3462,7 @@ class Title {
 		// wfFindFile( $nt ) / wfLocalFile( $nt ) is allowed below here
 
 		$destFile = wfLocalFile( $nt );
-		if ( !$wgUser->isAllowed( 'reupload-shared' ) && !$destFile->exists() && wfFindFile( $nt ) ) {
+		if ( !$wgwiki_User->isAllowed( 'reupload-shared' ) && !$destFile->exists() && wfFindFile( $nt ) ) {
 			$errors[] = array( 'file-exists-sharedrepo' );
 		}
 
@@ -3473,7 +3473,7 @@ class Title {
 	 * Move a title to a new location
 	 *
 	 * @param $nt Title the new title
-	 * @param $auth Bool indicates whether $wgUser's permissions
+	 * @param $auth Bool indicates whether $wgwiki_User's permissions
 	 *  should be checked
 	 * @param $reason String the reason for the move
 	 * @param $createRedirect Bool Whether to create a redirect from the old title to the new title.
@@ -3481,15 +3481,15 @@ class Title {
 	 * @return Mixed true on success, getUserPermissionsErrors()-like array on failure
 	 */
 	public function moveTo( &$nt, $auth = true, $reason = '', $createRedirect = true ) {
-		global $wgUser;
+		global $wgwiki_User;
 		$err = $this->isValidMoveOperation( $nt, $auth, $reason );
 		if ( is_array( $err ) ) {
 			// Auto-block user's IP if the account was "hard" blocked
-			$wgUser->spreadAnyEditBlock();
+			$wgwiki_User->spreadAnyEditBlock();
 			return $err;
 		}
 		// Check suppressredirect permission
-		if ( $auth && !$wgUser->isAllowed( 'suppressredirect' ) ) {
+		if ( $auth && !$wgwiki_User->isAllowed( 'suppressredirect' ) ) {
 			$createRedirect = true;
 		}
 
@@ -3582,7 +3582,7 @@ class Title {
 
 		$dbw->commit( __METHOD__ );
 
-		wfRunHooks( 'TitleMoveComplete', array( &$this, &$nt, &$wgUser, $pageid, $redirid ) );
+		wfRunHooks( 'TitleMoveComplete', array( &$this, &$nt, &$wgwiki_User, $pageid, $redirid ) );
 		return true;
 	}
 
@@ -3597,7 +3597,7 @@ class Title {
 	 * @throws MWException
 	 */
 	private function moveToInternal( &$nt, $reason = '', $createRedirect = true ) {
-		global $wgUser, $wgContLang;
+		global $wgwiki_User, $wgContLang;
 
 		if ( $nt->exists() ) {
 			$moveOverRedirect = true;
@@ -3610,7 +3610,7 @@ class Title {
 		$redirectSuppressed = !$createRedirect;
 
 		$logEntry = new ManualLogEntry( 'move', $logType );
-		$logEntry->setPerformer( $wgUser );
+		$logEntry->setPerformer( $wgwiki_User );
 		$logEntry->setTarget( $this );
 		$logEntry->setComment( $reason );
 		$logEntry->setParameters( array(
@@ -3668,9 +3668,9 @@ class Title {
 		$newpage->updateRevisionOn( $dbw, $nullRevision );
 
 		wfRunHooks( 'NewRevisionFromEditComplete',
-			array( $newpage, $nullRevision, $nullRevision->getParentId(), $wgUser ) );
+			array( $newpage, $nullRevision, $nullRevision->getParentId(), $wgwiki_User ) );
 
-		$newpage->doEditUpdates( $nullRevision, $wgUser, array( 'changed' => false ) );
+		$newpage->doEditUpdates( $nullRevision, $wgwiki_User, array( 'changed' => false ) );
 
 		if ( !$moveOverRedirect ) {
 			WikiPage::onArticleCreate( $nt );
@@ -3693,9 +3693,9 @@ class Title {
 				$redirectArticle->updateRevisionOn( $dbw, $redirectRevision, 0 );
 
 				wfRunHooks( 'NewRevisionFromEditComplete',
-					array( $redirectArticle, $redirectRevision, false, $wgUser ) );
+					array( $redirectArticle, $redirectRevision, false, $wgwiki_User ) );
 
-				$redirectArticle->doEditUpdates( $redirectRevision, $wgUser, array( 'created' => true ) );
+				$redirectArticle->doEditUpdates( $redirectRevision, $wgwiki_User, array( 'created' => true ) );
 			}
 		}
 
@@ -3708,7 +3708,7 @@ class Title {
 	 * Move this page's subpages to be subpages of $nt
 	 *
 	 * @param $nt Title Move target
-	 * @param $auth bool Whether $wgUser's permissions should be checked
+	 * @param $auth bool Whether $wgwiki_User's permissions should be checked
 	 * @param $reason string The reason for the move
 	 * @param $createRedirect bool Whether to create redirects from the old subpages to
 	 *     the new ones Ignored if the user doesn't have the 'suppressredirect' right
@@ -4143,7 +4143,7 @@ class Title {
 			if ( $old_cmp === '>' || $new_cmp === '<' ) {
 				return ( $old_cmp === '>' && $new_cmp === '<' ) ? 0 : 1;
 			}
-			return ( $old->getRawUserText() === $new->getRawUserText() ) ? 1 : 2;
+			return ( $old->getRawwiki_UserText() === $new->getRawwiki_UserText() ) ? 1 : 2;
 		}
 		$dbr = wfGetDB( DB_SLAVE );
 		$res = $dbr->select( 'revision', 'DISTINCT rev_user_text',
@@ -4364,14 +4364,14 @@ class Title {
 	/**
 	 * Get the timestamp when this page was updated since the user last saw it.
 	 *
-	 * @param $user User
+	 * @param $user wiki_User
 	 * @return String|Null
 	 */
 	public function getNotificationTimestamp( $user = null ) {
-		global $wgUser, $wgShowUpdatedMarker;
+		global $wgwiki_User, $wgShowUpdatedMarker;
 		// Assume current user if none given
 		if ( !$user ) {
-			$user = $wgUser;
+			$user = $wgwiki_User;
 		}
 		// Check cache first
 		$uid = $user->getId();
@@ -4475,8 +4475,8 @@ class Title {
 	public function isValidRedirectTarget() {
 		global $wgInvalidRedirectTargets;
 
-		// invalid redirect targets are stored in a global array, but explicity disallow Userlogout here
-		if ( $this->isSpecial( 'Userlogout' ) ) {
+		// invalid redirect targets are stored in a global array, but explicity disallow wiki_Userlogout here
+		if ( $this->isSpecial( 'wiki_Userlogout' ) ) {
 			return false;
 		}
 
@@ -4504,11 +4504,11 @@ class Title {
 	 * @return Boolean
 	 */
 	public function canUseNoindex() {
-		global $wgContentNamespaces, $wgExemptFromUserRobotsControl;
+		global $wgContentNamespaces, $wgExemptFromwiki_UserRobotsControl;
 
-		$bannedNamespaces = is_null( $wgExemptFromUserRobotsControl )
+		$bannedNamespaces = is_null( $wgExemptFromwiki_UserRobotsControl )
 			? $wgContentNamespaces
-			: $wgExemptFromUserRobotsControl;
+			: $wgExemptFromwiki_UserRobotsControl;
 
 		return !in_array( $this->mNamespace, $bannedNamespaces );
 
@@ -4614,7 +4614,7 @@ class Title {
 	 * 		true, if this title can be read
 	 * 		false, if the title is protected or "Permission denied".
 	 */
-	public function userCanReadEx( $otherUser = NULL ) {
+	public function userCanReadEx( $otherwiki_User = NULL ) {
 		if ( !defined( 'HACL_HALOACL_VERSION' ) ) {
 			// IntraACL is disabled
 			return true;
@@ -4624,9 +4624,9 @@ class Title {
 			// Special handling of "Permission denied" page
 			return false;
 		}
-		if ( $otherUser ) {
+		if ( $otherwiki_User ) {
 			$canRead = false;
-			$status = HACLEvaluator::userCan( $this, $otherUser, 'read', $canRead );
+			$status = HACLEvaluator::userCan( $this, $otherwiki_User, 'read', $canRead );
 			return $canRead;
 		}
 		return $this->userCanRead();

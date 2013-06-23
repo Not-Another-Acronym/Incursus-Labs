@@ -307,8 +307,8 @@ class SpecialRecentChanges extends IncludableSpecialPage {
 		$conds[] = 'rc_timestamp >= ' . $dbr->addQuotes( $cutoff );
 
 		$hidePatrol = $this->getUser()->useRCPatrol() && $opts['hidepatrolled'];
-		$hideLoggedInUsers = $opts['hideliu'] && !$forcebot;
-		$hideAnonymousUsers = $opts['hideanons'] && !$forcebot;
+		$hideLoggedInwiki_Users = $opts['hideliu'] && !$forcebot;
+		$hideAnonymouswiki_Users = $opts['hideanons'] && !$forcebot;
 
 		if( $opts['hideminor'] ) {
 			$conds['rc_minor'] = 0;
@@ -322,10 +322,10 @@ class SpecialRecentChanges extends IncludableSpecialPage {
 		if( $forcebot ) {
 			$conds['rc_bot'] = 1;
 		}
-		if( $hideLoggedInUsers ) {
+		if( $hideLoggedInwiki_Users ) {
 			$conds[] = 'rc_user = 0';
 		}
-		if( $hideAnonymousUsers ) {
+		if( $hideAnonymouswiki_Users ) {
 			$conds[] = 'rc_user != 0';
 		}
 
@@ -471,7 +471,7 @@ class SpecialRecentChanges extends IncludableSpecialPage {
 	 * @param $opts FormOptions
 	 */
 	public function webOutput( $rows, $opts ) {
-		global $wgRCShowWatchingUsers, $wgShowUpdatedMarker, $wgAllowCategorizedRecentChanges;
+		global $wgRCShowWatchingwiki_Users, $wgShowUpdatedMarker, $wgAllowCategorizedRecentChanges;
 
 		$limit = $opts['limit'];
 
@@ -487,7 +487,7 @@ class SpecialRecentChanges extends IncludableSpecialPage {
 			$this->filterByCategories( $rows, $opts );
 		}
 
-		$showWatcherCount = $wgRCShowWatchingUsers && $this->getUser()->getOption( 'shownumberswatching' );
+		$showWatcherCount = $wgRCShowWatchingwiki_Users && $this->getUser()->getOption( 'shownumberswatching' );
 		$watcherCache = array();
 
 		$dbr = wfGetDB( DB_SLAVE );

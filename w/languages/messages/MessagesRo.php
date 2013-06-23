@@ -272,9 +272,9 @@ $specialPageAliases = array(
 	'Unusedtemplates'           => array( 'Formate_nefolosite' ),
 	'Unwatchedpages'            => array( 'Pagini_neurmărite' ),
 	'Upload'                    => array( 'Încărcare' ),
-	'Userlogin'                 => array( 'Autentificare' ),
-	'Userlogout'                => array( 'Ieșire' ),
-	'Userrights'                => array( 'Drepturi_utilizator' ),
+	'wiki_Userlogin'                 => array( 'Autentificare' ),
+	'wiki_Userlogout'                => array( 'Ieșire' ),
+	'wiki_Userrights'                => array( 'Drepturi_utilizator' ),
 	'Version'                   => array( 'Versiune' ),
 	'Wantedcategories'          => array( 'Categorii_dorite' ),
 	'Wantedfiles'               => array( 'Fișiere_dorite' ),
@@ -298,7 +298,7 @@ $fallback8bitEncoding = 'iso8859-2';
 $linkTrail = '/^([a-zăâîşţșțĂÂÎŞŢȘȚ]+)(.*)$/sDu';
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Sublinierea legăturilor:',
 'tog-justify' => 'Aranjează justificat paragrafele',
 'tog-hideminor' => 'Ascunde modificările minore în schimbări recente',
@@ -642,7 +642,7 @@ Administratorul care a blocat-o a oferit această explicație: $1',
 În mod normal faptul este cauzat de accesarea unei dif neactualizată sau a unei legături din istoric spre o pagină care a fost ștearsă.
 
 Dacă nu acesta e motivul, s-ar putea să fi găsit un bug în program.
-Vă rugăm să-i semnalați acest aspect unui [[Special:ListUsers/sysop|administrator]], indicându-i adresa URL.',
+Vă rugăm să-i semnalați acest aspect unui [[Special:Listwiki_Users/sysop|administrator]], indicându-i adresa URL.',
 'missingarticle-rev' => '(versiunea#: $1)',
 'missingarticle-diff' => '(Dif: $1, $2)',
 'readonly_lag' => 'Baza de date a fost închisă automatic în timp ce serverele secundare ale bazei de date îl urmează pe cel principal.',
@@ -694,7 +694,7 @@ $2',
 'customcssprotected' => 'Nu aveți permisiunea de a modifica această pagină CSS, deoarece conține setările personale ale altui utilizator.',
 'customjsprotected' => 'Nu aveți permisiunea de a modifica această pagină JavaScript, deoarece conține setările personale ale altui utilizator.',
 'ns-specialprotected' => 'Paginile din spațiul de nume {{ns:special}} nu pot fi editate.',
-'titleprotected' => "Acest titlu a fos protejat la creare de [[User:$1|$1]].
+'titleprotected' => "Acest titlu a fos protejat la creare de [[wiki_User:$1|$1]].
 Motivul invocat este ''$2''.",
 'filereadonlyerror' => 'Imposibil de modificat fișierul „$1”, deoarece depozitul de fișiere „$2” este în modul „doar citire”.
 
@@ -712,7 +712,7 @@ Administratorul care a efectuat blocarea a furnizat explicația: „$3”.',
 # Login and logout pages
 'logouttext' => "'''Acum sunteți deconectat.'''
 
-Sesiunea dumneavoastră la {{SITENAME}} a fost închisă. Puteți continua să folosiți {{SITENAME}} ca utilizator anonim, sau puteți să vă [[Special:UserLogin|reautentificați]] ca același sau ca alt utilizator.
+Sesiunea dumneavoastră la {{SITENAME}} a fost închisă. Puteți continua să folosiți {{SITENAME}} ca utilizator anonim, sau puteți să vă [[Special:wiki_UserLogin|reautentificați]] ca același sau ca alt utilizator.
 Țineți minte că anumite pagini pot fi în continuare afișate ca și când ați fi autentificat până când curățați memoria cache a navigatorului.",
 'welcomecreation' => '==Bun venit, $1!==
 
@@ -755,7 +755,7 @@ Asigurați-vă că aveți cookie-urile activate, reîncărcați pagina și înce
 'loginsuccess' => "'''Ați fost autentificat la {{SITENAME}} ca „$1”.'''",
 'nosuchuser' => 'Nu există nici un utilizator cu numele „$1”.
 Numele de utilizatori sunt sensibile la majuscule.
-Verifică dacă ai scris corect sau [[Special:UserLogin/signup|creează un nou cont de utilizator]].',
+Verifică dacă ai scris corect sau [[Special:wiki_UserLogin/signup|creează un nou cont de utilizator]].',
 'nosuchusershort' => 'Nu există niciun utilizator cu numele „$1”.
 Verificați ortografierea.',
 'nouserspecified' => 'Trebuie să specificați un nume de utilizator.',
@@ -948,7 +948,7 @@ Aceasta fie a fost mutată, fie a fost ștearsă în timp ce vizualizați pagina
 'loginreqlink' => 'autentificați',
 'loginreqpagetext' => 'Trebuie să te $1 pentru a vizualiza alte pagini.',
 'accmailtitle' => 'Parola a fost trimisă.',
-'accmailtext' => "Parola generată automat pentru [[User talk:$1|$1]] a fost trimisă la $2.
+'accmailtext' => "Parola generată automat pentru [[wiki_User talk:$1|$1]] a fost trimisă la $2.
 
 Parola pentru acest nou cont poate fi schimbată după autentificare din ''[[Special:ChangePassword|schimbare parolă]]''",
 'newarticle' => '(Nou)',
@@ -956,7 +956,7 @@ Parola pentru acest nou cont poate fi schimbată după autentificare din ''[[Spe
 'anontalkpagetext' => "---- ''Aceasta este pagina de discuții pentru un utilizator care nu și-a creat un cont încă, sau care nu s-a autentificat.
 De aceea trebuie să folosim adresă IP pentru a identifica această persoană.
 O adresă IP poate fi folosită în comun de mai mulți utilizatori.
-Dacă sunteți un astfel de utilizator și credeți că vă sunt adresate mesaje irelevante, vă rugăm să [[Special:UserLogin/signup|vă creați un cont]] sau să [[Special:UserLogin|vă autentificați]] pentru a evita confuzii cu alți utilizatori anonimi în viitor.''",
+Dacă sunteți un astfel de utilizator și credeți că vă sunt adresate mesaje irelevante, vă rugăm să [[Special:wiki_UserLogin/signup|vă creați un cont]] sau să [[Special:wiki_UserLogin|vă autentificați]] pentru a evita confuzii cu alți utilizatori anonimi în viitor.''",
 'noarticletext' => 'Actualmente, această pagină este lipsită de conținut.
 Puteți [[Special:Search/{{PAGENAME}}|căuta acest titlu]] în alte pagini,
 puteți <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} căuta înregistrări în jurnale] 
@@ -997,12 +997,12 @@ Modificările dumneavoastră nu au fost încă salvate!",
 'previewconflict' => 'Această pre-vizualizare reflectă textul din caseta de sus, respectiv felul în care va arăta articolul dacă alegeți să-l salvați acum.',
 'session_fail_preview' => "'''Ne pare rău! Nu am putut procesa modificarea dumneavoastră din cauza pierderii datelor sesiunii.
 Vă rugăm să încercați din nou.
-Dacă tot nu funcționează, încercați să [[Special:UserLogout|închideți sesiunea]] și să vă autentificați din nou.'''",
+Dacă tot nu funcționează, încercați să [[Special:wiki_UserLogout|închideți sesiunea]] și să vă autentificați din nou.'''",
 'session_fail_preview_html' => "'''Ne pare rău! Modificările dvs. nu au putut fi procesate din cauza pierderii datelor sesiunii.'''
 
 ''Deoarece {{SITENAME}} are activat HTML brut, previzualizarea este ascunsă ca măsură de precauție împotriva atacurilor JavaScript.''
 
-'''Dacă această încercare de modificare este legitimă, vă rugăm să încercați din nou. Dacă nu funcționează nici în acest fel, [[Special:UserLogout|închideți sesiunea]] și încearcați să vă autentificați din nou.'''",
+'''Dacă această încercare de modificare este legitimă, vă rugăm să încercați din nou. Dacă nu funcționează nici în acest fel, [[Special:wiki_UserLogout|închideți sesiunea]] și încearcați să vă autentificați din nou.'''",
 'token_suffix_mismatch' => "'''Modificarea ta a fost refuzată pentru că clientul tău a deformat caracterele de punctuatie în modificarea semnului.
 Modificarea a fost respinsă pentru a preveni deformarea textului paginii.
 Acest fapt se poate întâmpla atunci când folosești un serviciu proxy anonim.'''",
@@ -1054,7 +1054,7 @@ Ultima intrare în jurnal este afișată mai jos pentru referință:",
 'edittools' => '<!-- Acest text va apărea după caseta de editare și formularele de trimitere fișier. -->',
 'nocreatetitle' => 'Creare de pagini limitată',
 'nocreatetext' => '{{SITENAME}} a restricționat abilitatea de a crea pagini noi.
-Puteți edita o pagină deja existentă sau puteți să vă [[Special:UserLogin|autentificați/creați]] un cont de utilizator.',
+Puteți edita o pagină deja existentă sau puteți să vă [[Special:wiki_UserLogin|autentificați/creați]] un cont de utilizator.',
 'nocreate-loggedin' => 'Nu ai permisiunea să creezi pagini noi.',
 'sectioneditnotsupported-title' => 'Modificarea secțiunilor nu este suportată',
 'sectioneditnotsupported-text' => 'Modificarea secțiunilor nu este suportată în această pagină.',
@@ -1104,11 +1104,11 @@ Acsete argumente au fost omise.',
 'undo-success' => 'Modificarea poate fi anulată. Verificați diferența de dedesupt și apoi salvați pentru a termina anularea modificării.',
 'undo-failure' => 'Modificarea nu poate fi reversibilă datorită conflictului de modificări intermediare.',
 'undo-norev' => 'Modificarea nu poate fi reversibilă pentru că nu există sau pentru că a fost ștearsă.',
-'undo-summary' => 'Anularea modificării $1 făcute de [[Special:Contributions/$2|$2]] ([[User talk:$2|Discuție]])',
+'undo-summary' => 'Anularea modificării $1 făcute de [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Discuție]])',
 
 # Account creation failure
 'cantcreateaccounttitle' => 'Crearea contului nu poate fi realizată',
-'cantcreateaccount-text' => "Crearea de conturi de la această adresă IP ('''$1''') a fost blocată de [[User:$3|$3]].
+'cantcreateaccount-text' => "Crearea de conturi de la această adresă IP ('''$1''') a fost blocată de [[wiki_User:$3|$3]].
 
 Motivul invocat de $3 este ''$2''",
 
@@ -1367,7 +1367,7 @@ Detalii se pot găsi în [{{fullurl:{{#Special:Log}}/delete|page={{FULLPAGENAMEE
 'mypreferences' => 'Preferințe',
 'prefs-edits' => 'Număr de modificări:',
 'prefsnologin' => 'Neautentificat',
-'prefsnologintext' => 'Trebuie să fiți <span class="plainlinks">[{{fullurl:{{#Special:UserLogin}}|returnto=$1}} autentificat]</span> pentru a vă putea salva preferințele.',
+'prefsnologintext' => 'Trebuie să fiți <span class="plainlinks">[{{fullurl:{{#Special:wiki_UserLogin}}|returnto=$1}} autentificat]</span> pentru a vă putea salva preferințele.',
 'changepassword' => 'Schimbă parola',
 'prefs-skin' => 'Aspect',
 'skin-preview' => 'Previzualizare',
@@ -1480,16 +1480,16 @@ Dacă decideți furnizarea sa, acesta va fi folosit pentru a vă atribui munca.'
 'prefs-displaywatchlist' => 'Opțiuni de afișare',
 'prefs-diffs' => 'Diferențe',
 
-# User preference: e-mail validation using jQuery
+# wiki_User preference: e-mail validation using jQuery
 'email-address-validity-valid' => 'Adresa de e-mail pare validă',
 'email-address-validity-invalid' => 'Introduceți o adresă de e-mail validă',
 
-# User rights
+# wiki_User rights
 'userrights' => 'Administrare permisiuni de utilizator',
 'userrights-lookup-user' => 'Administrare grupuri de utilizatori',
 'userrights-user-editname' => 'Introduceți un nume de utilizator:',
 'editusergroup' => 'Modificare grup de utilizatori',
-'editinguser' => "Modificarea permisiunilor de utilizator pentru '''[[User:$1|$1]]''' $2",
+'editinguser' => "Modificarea permisiunilor de utilizator pentru '''[[wiki_User:$1|$1]]''' $2",
 'userrights-editusergroup' => 'Modificare grup de utilizatori',
 'saveusergroups' => 'Salvează grupul de utilizatori',
 'userrights-groupsmember' => 'Membru al:',
@@ -1501,7 +1501,7 @@ Dacă decideți furnizarea sa, acesta va fi folosit pentru a vă atribui munca.'
 'userrights-reason' => 'Motiv:',
 'userrights-no-interwiki' => 'Nu aveți permisiunea de a modifica permisiunile utilizatorilor pe alte wiki.',
 'userrights-nodatabase' => 'Baza de date $1 nu există sau nu este locală.',
-'userrights-nologin' => 'Trebuie să te [[Special:UserLogin|autentifici]] cu un cont de administrator pentru a atribui permisiuni utilizatorilor.',
+'userrights-nologin' => 'Trebuie să te [[Special:wiki_UserLogin|autentifici]] cu un cont de administrator pentru a atribui permisiuni utilizatorilor.',
 'userrights-notallowed' => 'Contul dumneavoastră nu are permisiunea de a acorda sau elimina drepturi utilizatorilor.',
 'userrights-changeable-col' => 'Grupuri pe care le puteți schimba',
 'userrights-unchangeable-col' => 'Grupuri pe care nu le puteți schimba',
@@ -1592,7 +1592,7 @@ Dacă decideți furnizarea sa, acesta va fi folosit pentru a vă atribui munca.'
 'right-sendemail' => 'Trimite e-mail altor utilizatori',
 'right-passwordreset' => 'Vizualizează e-mailurile de reinițializare a parolelor',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => 'Jurnal permisiuni de utilizator',
 'rightslogtext' => 'Acest jurnal cuprinde modificările permisiunilor utilizatorilor.',
 'rightslogentry' => 'a schimbat permisiunile pentru $1 de la $2 la $3',
@@ -1692,7 +1692,7 @@ Paginile pe care le [[Special:Watchlist|urmăriți]] apar în '''aldine'''.",
 'reuploaddesc' => 'Revocare încărcare și întoarcere la formularul de trimitere.',
 'upload-tryagain' => 'Trimiteți descrierea fișierului modificată',
 'uploadnologin' => 'Nu sunteți autentificat',
-'uploadnologintext' => 'Trebuie să fiți [[Special:UserLogin|autentificat]] pentru a putea trimite fișiere.',
+'uploadnologintext' => 'Trebuie să fiți [[Special:wiki_UserLogin|autentificat]] pentru a putea trimite fișiere.',
 'upload_directory_missing' => 'Directorul în care sunt încărcate fișierele ($1) lipsește și nu poate fi creat de serverul web.',
 'upload_directory_read_only' => 'Directorul de încărcare ($1) nu poate fi scris de server.',
 'uploaderror' => 'Eroare la trimitere fișier',
@@ -1808,11 +1808,11 @@ $1',
 'upload-proto-error-text' => 'Importul de la distanță necesită adrese URL care încep cu <code>http://</code> sau <code>ftp://</code>.',
 'upload-file-error' => 'Eroare internă',
 'upload-file-error-text' => 'A apărut o eroare internă la crearea unui fișier temporar pe server.
-Vă rugăm să contactați un [[Special:ListUsers/sysop|administrator]].',
+Vă rugăm să contactați un [[Special:Listwiki_Users/sysop|administrator]].',
 'upload-misc-error' => 'Eroare de încărcare necunoscută',
 'upload-misc-error-text' => 'A apărut o eroare necunoscută în timpul încărcării.
 Vă rugăm să verificați dacă adresa URL este validă și accesibilă și încercați din nou.
-Dacă problema persistă, contactați un [[Special:ListUsers/sysop|administrator]].',
+Dacă problema persistă, contactați un [[Special:Listwiki_Users/sysop|administrator]].',
 'upload-too-many-redirects' => 'URL-ul conținea prea multe redirecționări',
 'upload-unknown-size' => 'Mărime necunoscută',
 'upload-http-error' => 'A avut loc o eroare HTTP: $1',
@@ -2063,7 +2063,7 @@ Lista tipurilor MIME recunoscute de MediaWiki poate fi găsită la [http://svn.w
 'statistics-views-total' => 'Număr de vizualizări',
 'statistics-views-total-desc' => 'Vizualizările paginilor inexistente și a paginilor speciale nu sunt incluse',
 'statistics-views-peredit' => 'Vizualizări pe editare',
-'statistics-users' => '[[Special:ListUsers|Utilizatori]] înregistrați',
+'statistics-users' => '[[Special:Listwiki_Users|Utilizatori]] înregistrați',
 'statistics-users-active' => 'Utilizatori activi',
 'statistics-users-active-desc' => 'Utilizatori care au efectuat o acțiune în {{PLURAL:$1|ultima zi|ultimele $1 zile}}',
 'statistics-mostpopular' => 'Paginile cele mai vizualizate',
@@ -2230,13 +2230,13 @@ Protocoale suportate: <code>$1</code> (se trece implicit la http:// dacă nu est
 'linksearch-line' => '$1 este legat de $2',
 'linksearch-error' => 'Metacaracterele pot să apară doar la începutul hostname-ului.',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusersfrom' => 'Afișează utilizatori începând cu:',
 'listusers-submit' => 'Arată',
 'listusers-noresult' => 'Nici un utilizator găsit.',
 'listusers-blocked' => '(blocat{{GENDER:$1||ă|}})',
 
-# Special:ActiveUsers
+# Special:Activewiki_Users
 'activeusers' => 'Listă utilizatori activi',
 'activeusers-intro' => 'Aceasta este o listă cu utilizatorii care au avut orice fel de activitate în {{PLURAL:$1|ultima zi|ultimele $1 zile}}.',
 'activeusers-count' => '{{PLURAL:$1|o acțiune|$1 acțiuni|$1 de acțiuni}} în {{PLURAL:$3|ultima zi|ultimele $3 zile|ultimele $3 de zile}}',
@@ -2270,7 +2270,7 @@ Pot exista [[{{MediaWiki:Listgrouprights-helppage}}|informații suplimentare]] d
 
 # E-mail user
 'mailnologin' => 'Nu există adresă de trimitere',
-'mailnologintext' => 'Trebuie să fii [[Special:UserLogin|autentificat]] și să ai o adresă validă de e-mail în [[Special:Preferences|preferințe]] pentru a trimite e-mail altor utilizatori.',
+'mailnologintext' => 'Trebuie să fii [[Special:wiki_UserLogin|autentificat]] și să ai o adresă validă de e-mail în [[Special:Preferences|preferințe]] pentru a trimite e-mail altor utilizatori.',
 'emailuser' => 'Trimiteți un e-mail',
 'emailuser-title-target' => 'E-mail către {{GENDER:$1|acest utilizator|această utilizatoare}}',
 'emailuser-title-notarget' => 'E-mail către utilizator',
@@ -2301,7 +2301,7 @@ Adresa de e-mail specificată de dumneavoastră în [[Special:Preferences|prefer
 'emailsenttext' => 'E-mailul dumneavoastră a fost trimis.',
 'emailuserfooter' => 'Acest mesaj a fost trimis de $1 către $2 prin intermediul funcției „Trimite e-mail” de la {{SITENAME}}.',
 
-# User Messenger
+# wiki_User Messenger
 'usermessage-summary' => 'a lăsat un mesaj de sistem',
 'usermessage-editor' => 'Mesager de sistem',
 
@@ -2312,7 +2312,7 @@ Adresa de e-mail specificată de dumneavoastră în [[Special:Preferences|prefer
 'nowatchlist' => 'Lista dumneavoastră de pagini urmărite nu conține nici o pagină.',
 'watchlistanontext' => 'Vă rugăm să vă $1 pentru a vizualiza sau edita elementele din lista dumneavoastră de pagini urmărite.',
 'watchnologin' => 'Nu sunteți autentificat',
-'watchnologintext' => 'Trebuie să fiți [[Special:UserLogin|autentificat]] pentru a vă modifica lista de pagini urmărite.',
+'watchnologintext' => 'Trebuie să fiți [[Special:wiki_UserLogin|autentificat]] pentru a vă modifica lista de pagini urmărite.',
 'addwatch' => 'Adăugă la lista de pagini urmărite',
 'addedwatchtext' => 'Pagina „[[:$1]]” a fost adăugată la lista dumneavoastră de [[Special:Watchlist|pagini urmărite]].
 Modificările viitoare efectuate asupra acestei pagini dar și asupra paginii de discuție asociată vor fi listate acolo.',
@@ -2422,12 +2422,12 @@ acționați cu precauție.',
 'rollbacklinkcount-morethan' => 'revenire asupra a mai mult de {{PLURAL:$1|o modificare|$1 modificări|$1 de modificări}}',
 'rollbackfailed' => 'Revenirea nu s-a putut face',
 'cantrollback' => 'Nu se poate reveni; ultimul contribuitor este autorul acestui articol.',
-'alreadyrolled' => 'Nu se poate reveni peste ultima modificare a articolului [[:$1]] făcută de către [[User:$2|$2]] ([[User talk:$2|discuție]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]); altcineva a modificat articolul sau a revenit deja.
+'alreadyrolled' => 'Nu se poate reveni peste ultima modificare a articolului [[:$1]] făcută de către [[wiki_User:$2|$2]] ([[wiki_User talk:$2|discuție]]{{int:pipe-separator}}[[Special:Contributions/$2|{{int:contribslink}}]]); altcineva a modificat articolul sau a revenit deja.
 
-Ultima editare a fost făcută de către [[User:$3|$3]] ([[User talk:$3|discuție]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
+Ultima editare a fost făcută de către [[wiki_User:$3|$3]] ([[wiki_User talk:$3|discuție]]{{int:pipe-separator}}[[Special:Contributions/$3|{{int:contribslink}}]]).',
 'editcomment' => "Descrierea modificărilor a fost: „''$1''”.",
-'revertpage' => 'Anularea modificărilor efectuate de către [[Special:Contributions/$2|$2]] ([[User talk:$2|discuție]]) și revenire la ultima versiune de către [[User:$1|$1]]',
-'revertpage-nouser' => 'Anularea modificărilor efectuate de (nume de utilizator șters) și revenirea la ultima modificare de către [[User:$1|$1]]',
+'revertpage' => 'Anularea modificărilor efectuate de către [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|discuție]]) și revenire la ultima versiune de către [[wiki_User:$1|$1]]',
+'revertpage-nouser' => 'Anularea modificărilor efectuate de (nume de utilizator șters) și revenirea la ultima modificare de către [[wiki_User:$1|$1]]',
 'rollback-success' => 'Anularea modificărilor făcute de $1;
 revenire la ultima versiune de $2.',
 
@@ -2658,7 +2658,7 @@ Vedeți [[Special:BlockList|lista blocărilor]] pentru a revizui adresele blocat
 'unblockip' => 'Deblochează adresă IP',
 'unblockiptext' => 'Folosiți formularul de mai jos pentru a restaura permisiunea de scriere pentru adrese IP sau nume de utilizator blocate anterior.',
 'ipusubmit' => 'Elimină blocarea',
-'unblocked' => '[[User:$1|$1]] a fost deblocat',
+'unblocked' => '[[wiki_User:$1|$1]] a fost deblocat',
 'unblocked-range' => '$1 a fost deblocat',
 'unblocked-id' => 'Blocarea $1 a fost eliminată',
 'blocklist' => 'Utilizatori blocați',
@@ -2691,7 +2691,7 @@ Vedeți [[Special:BlockList|lista blocărilor]] pentru a revizui adresele blocat
 'change-blocklink' => 'modifică blocarea',
 'contribslink' => 'contribuții',
 'emaillink' => 'trimite e-mail',
-'autoblocker' => 'Autoblocat fiindcă folosiți aceeași adresă IP ca și „[[User:$1|$1]]”.
+'autoblocker' => 'Autoblocat fiindcă folosiți aceeași adresă IP ca și „[[wiki_User:$1|$1]]”.
 Motivul blocării utilizatorului $1 este: „$2”',
 'blocklogpage' => 'Jurnal blocări',
 'blocklog-showlog' => 'Acest utilizator a fost blocat în trecut.
@@ -2798,7 +2798,7 @@ manual paginile de discuții, dacă doriți acest lucru.",
 'movearticle' => 'Pagina de redenumit:',
 'moveuserpage-warning' => "'''Atenție''': sunteți pe cale să redenumiți o pagină de utilizator. Vă rugăm să rețineți că singura redenumită va fi pagina, nu și utilizatorul.",
 'movenologin' => 'Nu sunteți autentificat{{GENDER:||ă}}.',
-'movenologintext' => 'Trebuie să fiți un utilizator înregistrat și [[Special:UserLogin|autentificat]] pentru a redenumi o pagină.',
+'movenologintext' => 'Trebuie să fiți un utilizator înregistrat și [[Special:wiki_UserLogin|autentificat]] pentru a redenumi o pagină.',
 'movenotallowed' => 'Nu aveți permisiunea de a redenumi pagini.',
 'movenotallowedfile' => 'Nu aveți permisiunea de a redenumi fișiere.',
 'cant-move-user-page' => 'Nu aveți permisiunea de a redenumi pagini de utilizator (cu excepția subpaginilor).',
@@ -3649,7 +3649,7 @@ Acest cod nu este necesar pentru autentificare, dar trebuie transmis înainte de
 Serverul de mail a returnat: $1',
 'confirmemail_invalid' => 'Cod de confirmare invalid. Acest cod poate fi expirat.',
 'confirmemail_needlogin' => 'Trebuie să vă $1 pentru a vă confirma adresa de e-mail.',
-'confirmemail_success' => 'Adresa de e-mail a fost confirmată. Acum vă puteți [[Special:UserLogin|autentifica]] și bucura de wiki.',
+'confirmemail_success' => 'Adresa de e-mail a fost confirmată. Acum vă puteți [[Special:wiki_UserLogin|autentifica]] și bucura de wiki.',
 'confirmemail_loggedin' => 'Adresa de e-mail a fost confirmată.',
 'confirmemail_error' => 'Ceva nu a funcționat la salvarea confirmării.',
 'confirmemail_subject' => 'Confirmarea adresei de e-mail la {{SITENAME}}',
@@ -3696,10 +3696,10 @@ Acest cod de confirmare va expira la $4.',
 
 # Delete conflict
 'deletedwhileediting' => "'''Atenție''': Această pagină a fost ștearsă după ce ați început s-o modificați!",
-'confirmrecreate' => "Utilizatorul [[User:$1|$1]] ([[User talk:$1|discuție]]) a șters acest articol după ce ați început să contribuiți la el din motivul:
+'confirmrecreate' => "Utilizatorul [[wiki_User:$1|$1]] ([[wiki_User talk:$1|discuție]]) a șters acest articol după ce ați început să contribuiți la el din motivul:
 : ''$2''
 Vă rugăm să confirmați faptul că într-adevăr doriți să recreați acest articol.",
-'confirmrecreate-noreason' => 'Utilizatorul [[User:$1|$1]] ([[User talk:$1|discuție]]) a șters această pagină după ce dumneavoastră ați început să o modificați. Vă rugăm să confirmați faptul că într-adevăr doriți să recreați această pagină.',
+'confirmrecreate-noreason' => 'Utilizatorul [[wiki_User:$1|$1]] ([[wiki_User talk:$1|discuție]]) a șters această pagină după ce dumneavoastră ați început să o modificați. Vă rugăm să confirmați faptul că într-adevăr doriți să recreați această pagină.',
 'recreate' => 'Recreează',
 
 # action=purge

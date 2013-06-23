@@ -6,7 +6,7 @@ abstract class MediaWikiTestCase extends PHPUnit_Framework_TestCase {
 	public $runDisabled = false;
 
 	/**
-	 * @var Array of TestUser
+	 * @var Array of Testwiki_User
 	 */
 	public static $users;
 
@@ -194,10 +194,10 @@ abstract class MediaWikiTestCase extends PHPUnit_Framework_TestCase {
 
 		}
 
-		User::resetIdByNameCache();
+		wiki_User::resetIdByNameCache();
 
 		//Make sysop user
-		$user = User::newFromName( 'UTSysop' );
+		$user = wiki_User::newFromName( 'UTSysop' );
 
 		if ( $user->idForName() == 0 ) {
 			$user->addToDatabase();
@@ -216,7 +216,7 @@ abstract class MediaWikiTestCase extends PHPUnit_Framework_TestCase {
 							'UTPageSummary',
 							EDIT_NEW,
 							false,
-							User::newFromName( 'UTSysop' ) );
+							wiki_User::newFromName( 'UTSysop' ) );
 		}
 	}
 

@@ -67,7 +67,7 @@ abstract class RdfMetaData {
 		$this->element( 'identifier', $this->reallyFullUrl() );
 		$this->element( 'date', $this->date( $this->mArticle->getTimestamp() ) );
 
-		$lastEditor = User::newFromId( $this->mArticle->getUser() );
+		$lastEditor = wiki_User::newFromId( $this->mArticle->getUser() );
 		$this->person( 'creator', $lastEditor );
 
 		foreach( $this->mArticle->getContributors() as $user ){
@@ -115,7 +115,7 @@ abstract class RdfMetaData {
 		print "\t\t<dc:{$name} rdf:resource=\"{$url}\" />\n";
 	}
 
-	protected function person( $name, User $user ) {
+	protected function person( $name, wiki_User $user ) {
 		if( $user->isAnon() ){
 			$this->element( $name, wfMessage( 'anonymous' )->numParams( 1 )->text() );
 		} else {

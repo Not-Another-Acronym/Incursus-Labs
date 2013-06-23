@@ -60,11 +60,11 @@ in the load balancer, usually indicating a replication environment.' );
 
 			$dbr = wfGetDB( DB_SLAVE );
 			$chunkSize = 100;
-			$lastUser = $dbr->selectField( 'user', 'MAX(user_id)', '', __METHOD__ );
+			$lastwiki_User = $dbr->selectField( 'user', 'MAX(user_id)', '', __METHOD__ );
 
 			$start = microtime( true );
 			$migrated = 0;
-			for ( $min = 0; $min <= $lastUser; $min += $chunkSize ) {
+			for ( $min = 0; $min <= $lastwiki_User; $min += $chunkSize ) {
 				$max = $min + $chunkSize;
 				$result = $dbr->query(
 					"SELECT
@@ -89,7 +89,7 @@ in the load balancer, usually indicating a replication environment.' );
 				$this->output( sprintf( "%s %d (%0.1f%%) done in %0.1f secs (%0.3f accounts/sec).\n",
 					wfWikiID(),
 					$migrated,
-					min( $max, $lastUser ) / $lastUser * 100.0,
+					min( $max, $lastwiki_User ) / $lastwiki_User * 100.0,
 					$delta,
 					$rate ) );
 

@@ -35,7 +35,7 @@ $namespaceNames = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Fo-loidhneadh nan ceanglaichean:',
 'tog-justify' => 'Taobhaich na h-earrannan',
 'tog-hideminor' => 'Falaich mùthaidhean beaga ann an liosta nam mùthaidhean ùra',
@@ -376,7 +376,7 @@ Chuir an rianadair a ghlas e an cèill na leanas: $1",
 \'S e mùthaidhean no ceangal eachdraidheil ro shean ri duilleag a chaidh a sguabadh às a bhios coireach à seo mar is trice.
 
 Mur eil seo fìor, faodaidh gun do lorg thu buga sa bhathar-bhog.
-An dèan thu aithris air seo do [[Special:ListUsers/sysop|rianadair]], ag innse dhaibh dè an t-URL a bha ann.',
+An dèan thu aithris air seo do [[Special:Listwiki_Users/sysop|rianadair]], ag innse dhaibh dè an t-URL a bha ann.',
 'missingarticle-rev' => '(mùthadh#: $1)',
 'missingarticle-diff' => '(Diof: $1, $2)',
 'readonly_lag' => "Chaidh an stòr-dàta a ghlasadh leis fhèin fhad 's a tha frithealaichean nan stòr-dàta tràilleach air dheireadh a' mhaighstir",
@@ -427,7 +427,7 @@ $2',
 'customcssprotected' => "Chan eil cead agad an duilleag CSS seo a dheasachadh a chionn 's gu bheil na roghainnean pearsanta aig cleachdaiche eile innte.",
 'customjsprotected' => "Chan eil cead agad an duilleag JavaScript seo a dheasachadh a chionn 's gu bheil na roghainnean pearsanta aig cleachdaiche eile innte.",
 'ns-specialprotected' => 'Chan ghabh duilleagan sònraichte a dheasachadh.',
-'titleprotected' => 'Chaidh an duilleag seo a dhìon o chruthachadh le [[User:$1|$1]].
+'titleprotected' => 'Chaidh an duilleag seo a dhìon o chruthachadh le [[wiki_User:$1|$1]].
 Seo am mìneachadh: "\'\'$2\'\'".',
 'filereadonlyerror' => 'Cha ghabh am faidhle "$1" atharrachadh a chionn \'s gu bheil ionad-tasgaidh fhaidhlichean "$2" ri leughadh a-mhàin.
 Thug an rianaire a ghlais e seachad an t-adhbhar a leanas: "$3".',
@@ -443,7 +443,7 @@ Thug an rianaire a ghlais e seachad an t-adhbhar a leanas: "$3".',
 
 # Login and logout pages
 'logouttext' => "'''Chaidh do logadh a-mach.'''
-'S urrainn dhut leantainn air adhart a' cleachdadh {{SITENAME}} a chleachdadh gun urra no 's urrainn dhut [[Special:UserLogin|logadh a-steach a-rithist]] mar an dearbh-chleachdaiche no mar chleachdaiche eile.
+'S urrainn dhut leantainn air adhart a' cleachdadh {{SITENAME}} a chleachdadh gun urra no 's urrainn dhut [[Special:wiki_UserLogin|logadh a-steach a-rithist]] mar an dearbh-chleachdaiche no mar chleachdaiche eile.
 Thoir an aire gum bi coltas air cuide dhe na duilleagan mar gum biodh tu air logadh a-steach gus am falamhaich thu tasgadan a' bhrabhsair agad.",
 'welcomecreation' => '== Fàilte ort, $1! ==
 Chaidh an cunntas agad a chruthachadh.
@@ -491,7 +491,7 @@ Dèan cinnteach gu bheil briosgaidean an comas, ath-luchdaich an duilleag seo 's
 'loginsuccess' => "'''Rinn thu logadh a-steach air {{SITENAME}} mar \"\$1\".'''",
 'nosuchuser' => 'Chan eil cleachdaiche ann air a bheil "$1".
 Tha ainmean chleachdaichean mothaichail do litrichean mòra \'s beaga.
-Thoir sùil air an litreachadh no [[Special:UserLogin/signup|cruthaich cunntas ùr]].',
+Thoir sùil air an litreachadh no [[Special:wiki_UserLogin/signup|cruthaich cunntas ùr]].',
 'nosuchusershort' => 'Chan eil cleachdaiche ann leis an ainm "$1".
 Cuir sùil air an litreachadh.',
 'nouserspecified' => 'Tha agad ri ainm-cleachdaiche a chur ann.',
@@ -691,7 +691,7 @@ Dh'fhaoidte gun deach a ghluasad no a sguabadh às fhad 's a bha thu a' coimhead
 'loginreqlink' => 'log a-steach',
 'loginreqpagetext' => 'Feumaidh tu $1 mus urrainn dhut coimhead air duilleagan eile.',
 'accmailtitle' => 'Facal-faire air a chur.',
-'accmailtext' => "Chaidh facal-faire a chruthachadh air thuaiream airson [[User talk:$1|$1]] 's a chur gu $2.
+'accmailtext' => "Chaidh facal-faire a chruthachadh air thuaiream airson [[wiki_User talk:$1|$1]] 's a chur gu $2.
 
 Gabhaidh am facal-faire airson a' chunntais ùir seo atharrachadh air an fo ''[[Special:ChangePassword|atharraich facal-faire]]'' as dèidh do chleachdaiche logadh a-steach.",
 'newarticle' => '(Ùr)',
@@ -701,7 +701,7 @@ Mura robh dùil agad ris an duilleag seo a ruigsinn, briog air a' phutan '''air 
 'anontalkpagetext' => "----''Seo an duilleag deasbaireachd aig cleachdaiche gun urra nach do chruthaich cunntas fhathast no nach eil 'ga chleachdadh.
 Feumaidh sinn an àireamh IP aca a chleachdadh air sgàth sin.
 Faodadh grunn chleachdaichean seòladh IP mar a chleachdadh còmhla.
-Mas e cleachdaiche gun urra a tha annad 's ma tha thu dhen bheachd nach eil na beachdan seo a' buntainn riut, nach [[Special:UserLogin/signup|clàraich thu]] no [[Special:UserLogin|clàraich a-steach]] gus bùrach mar seo a sheachnadh san àm ri teachd?''",
+Mas e cleachdaiche gun urra a tha annad 's ma tha thu dhen bheachd nach eil na beachdan seo a' buntainn riut, nach [[Special:wiki_UserLogin/signup|clàraich thu]] no [[Special:wiki_UserLogin|clàraich a-steach]] gus bùrach mar seo a sheachnadh san àm ri teachd?''",
 'noarticletext' => 'Chan eil teacsa sam bith anns an duilleag seo an-dràsta.
 \'S urrainn dhut [[Special:Search/{{PAGENAME}}|an tiotal seo a lorg]] ann an duilleagan eile,
 <span class="plainlinks">[{{fullurl:{{#Special:Log}}|page={{FULLPAGENAMEE}}}} na logaichean co-cheangailte a rannsachadh],
@@ -742,13 +742,13 @@ Cha deach na mùthaidhean agad a shàbhaladh fhathast!",
 'previewconflict' => "Tha an ro-shealladh seo a' sealltainn dhut an teacsa san raon teacsa gu h-àrd mar a nochdas e ma shàbhaileas tu an-dràsta.",
 'session_fail_preview' => "'''Duilich! Cha b' urrainn dhuinn na dheasaich thu a làimhseachadh air sgàth call dàta an t-seisein.'''
 Nach fheuch thu ris a-rithist?
-Mur obraich e fhathast, feuch is [[Special:UserLogout|clàraich a-mach]] is a-steach a-rithist an uairsin.",
+Mur obraich e fhathast, feuch is [[Special:wiki_UserLogout|clàraich a-mach]] is a-steach a-rithist an uairsin.",
 'session_fail_preview_html' => "'''Duilich! Cha b' urrainn dhuinn na dheasaich thu a làimhseachadh air sgàth call dàta an t-seisein.'''
 
 ''A chionn 's gun do chuir {{SITENAME}} HTML amh an comas, tha an ro-shealladh falaichte mar dhìon an aghaidh ionnsaighean JavaScript.''
 
 '''Mas e deasachadh dligheach a tha seo, feuch ris a-rithist.'''
-Mur obraich e fhathast, feuch is [[Special:UserLogout|clàraich a-mach]] is a-steach a-rithist an uairsin.",
+Mur obraich e fhathast, feuch is [[Special:wiki_UserLogout|clàraich a-mach]] is a-steach a-rithist an uairsin.",
 'token_suffix_mismatch' => "'''Dhiùlt sinn na dheasaich thu a chionn 's gun do chuir an cliant agad na caractaran puingeachaidh tro chèile san tòcan deasachaidh.'''
 Dhiùlt sinn na dheasaich thu air eagal 's gun coirbeadh e teacsa na duilleige.
 Tachraidh seo uaireannan ma chleachdar seirbheis-lìn progsaidh gun urra a tha làn de mhearachdan.",
@@ -799,7 +799,7 @@ Seo an rud mu dheireadh san loga mar fhiosrachadh dhut:",
 'hiddencategories' => "Tha an duilleag seo 'na ball de {{PLURAL:$1|1 roinn-seòrsa fhalaichte|$1 roinn-seòrsa fhalaichte|1 roinn-seòrsa fhalaichte|$1 roinn-seòrsa fhalaichte|$1 roinnean-seòrsa falaichte|$1 roinn-seòrsa fhalaichte}}:",
 'nocreatetitle' => 'Tha cruthachadh dhuilleagan cuingichte',
 'nocreatetext' => "Chuir {{SITENAME}} bacadh air cruthachadh de dhuilleagan ùra.
-'S urrainn dhut tilleadh is duilleag a tha ann mu thràth a dheasachadh no [[Special:UserLogin|clàradh a-steach no cunntas a chruthachadh]].",
+'S urrainn dhut tilleadh is duilleag a tha ann mu thràth a dheasachadh no [[Special:wiki_UserLogin|clàradh a-steach no cunntas a chruthachadh]].",
 'nocreate-loggedin' => 'Chan eil cead agad duilleagan ùra a chruthachadh.',
 'sectioneditnotsupported-title' => 'Chan eil taic ri deasachadh earrannan',
 'sectioneditnotsupported-text' => 'Chan eil taic ri deasachadh earrannan air an duilleag seo.',
@@ -1015,7 +1015,7 @@ Chan fhaicear an seòladh fhèin nuair a chuireas cuideigin post-dealain thugad.
 'prefs-advancedsearchoptions' => 'Roghainnean adhartach',
 'prefs-advancedwatchlist' => 'Roghainnean adhartach',
 
-# User rights
+# wiki_User rights
 'userrights-changeable-col' => 'Buidhnean as urrainn dhut atharrachadh',
 
 # Groups
@@ -1029,7 +1029,7 @@ Chan fhaicear an seòladh fhèin nuair a chuireas cuideigin post-dealain thugad.
 'grouppage-user' => '{{ns:project}}:Cleachdaichean',
 'grouppage-sysop' => '{{ns:project}}:Rianadairean',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => "Loga còraichean a' chleachdaiche",
 'rightsnone' => '(chan eil gin)',
 
@@ -1249,7 +1249,7 @@ Seall air $2 airson clàr de dhuilleagan a chaidh a sguabadh às o chionn ghoiri
 # Rollback
 'rollbacklink' => 'roilig air ais',
 'editcomment' => "Seo gearr-chunntas an deasachaidh: \"''\$1''\".",
-'revertpage' => 'Deasachaidhean a chaidh a thilleadh le [[Special:Contributions/$2|$2]] ([[User talk:$2|talk]]) dhan mhùthadh mu dheireadh le [[User:$1|$1]]',
+'revertpage' => 'Deasachaidhean a chaidh a thilleadh le [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|talk]]) dhan mhùthadh mu dheireadh le [[wiki_User:$1|$1]]',
 
 # Protect
 'protectlogpage' => 'Loga an dìon',

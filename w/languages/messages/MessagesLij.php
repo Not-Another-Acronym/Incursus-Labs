@@ -112,9 +112,9 @@ $specialPageAliases = array(
 	'Unusedtemplates'           => array( 'Template sensa ûso' ),
 	'Unwatchedpages'            => array( 'Paggine no osservæ' ),
 	'Upload'                    => array( 'Carrega' ),
-	'Userlogin'                 => array( 'Intra', 'Registrate' ),
-	'Userlogout'                => array( 'Sciorti' ),
-	'Userrights'                => array( 'Permissi utente' ),
+	'wiki_Userlogin'                 => array( 'Intra', 'Registrate' ),
+	'wiki_Userlogout'                => array( 'Sciorti' ),
+	'wiki_Userrights'                => array( 'Permissi utente' ),
 	'Version'                   => array( 'Verscion' ),
 	'Wantedcategories'          => array( 'Categorîe domandæ' ),
 	'Wantedpages'               => array( 'Paggine domandæ' ),
@@ -124,7 +124,7 @@ $specialPageAliases = array(
 );
 
 $messages = array(
-# User preference toggles
+# wiki_User preference toggles
 'tog-underline' => 'Sottolineâ i collegamenti',
 'tog-justify' => 'Alliniamento di paragrafi giustificòu',
 'tog-hideminor' => 'asconde e modifiche minori inte ùrtime modifiche',
@@ -364,7 +364,7 @@ $messages = array(
 Spésse vòtte questo o sucede quande a vegne riciamâ, da stöia ò dò-u confronto tra revixioìn, in colegaménto a 'na pàgina scancelâ, a in confronto tra revixioìn che no ghe son ciù ò a in confronto tra revixioìn sénsa ciù a stöia.
 
 Se coscì no fîse l'é probabile che t'aggi scoverto 'n erô into software MediaWiki.
-Pe favô ti peu segnalâ quello che l'é sucesso a in [[Special:ListUsers/sysop|aministratô]] dîndo  l'URL in questión.",
+Pe favô ti peu segnalâ quello che l'é sucesso a in [[Special:Listwiki_Users/sysop|aministratô]] dîndo  l'URL in questión.",
 'missingarticle-rev' => '(nùmero da revixón: $1)',
 'internalerror' => 'Errô interno',
 'filecopyerror' => 'Non ho potùo copiâ o papê "$1" in te "$2".',
@@ -524,7 +524,7 @@ Inviando o testo ti diciâri, sott'a teu responsabilitæ, ch'o l'é stæto scrî
 'template-semiprotected' => '(semiprotezûo)',
 'hiddencategories' => "Sta pàgina a l'é de {{PLURAL:$1|1 categoria ascoza|$1 categorie ascoze}}:",
 'nocreatetext' => "A poscibilitæ de creâ nêuve paggine insce {{SITENAME}} a l'è stæta limitâ solo a-i ûtenti registræ.
-O se pêu tornâ inderê e modificâ 'na paggina escistente, oppûre [[Special:UserLogin|intrâ ò creâ 'n accesso nêuvo]].",
+O se pêu tornâ inderê e modificâ 'na paggina escistente, oppûre [[Special:wiki_UserLogin|intrâ ò creâ 'n accesso nêuvo]].",
 'permissionserrorstext-withaction' => "No t'æ i permìssi pe $2 pe {{PLURAL:$1|sta raxon|ste raxoìn}}:",
 'recreate-moveddeleted-warn' => "Atençión: o se sta pe ricreâ 'na pàgina zà scancelâ into passòu.'''
 
@@ -542,7 +542,7 @@ Quàrcheùn di teu template no saiâ azónto.",
 
 # Account creation failure
 'cantcreateaccounttitle' => 'Non çe peu registrâ o utente',
-'cantcreateaccount-text' => "A registrascion de utenti da questo indirisso IP (<b>$1</b>) a l'è stæta affermaä da [[User:$3|$3]].
+'cantcreateaccount-text' => "A registrascion de utenti da questo indirisso IP (<b>$1</b>) a l'è stæta affermaä da [[wiki_User:$3|$3]].
 
 A razon dæta a l'è ''$2''",
 
@@ -655,7 +655,7 @@ Leggenda: (corr) = differense co-a verscion corrente, (prec) = differense co-a v
 
 'grouppage-sysop' => '{{ns:project}}:Amministratoî',
 
-# User rights log
+# wiki_User rights log
 'rightslog' => "Diritti d'ûtente",
 
 # Associated actions - in the sentence "You do not have permission to X"
@@ -864,7 +864,7 @@ Ti te peu strinza a vista se ti te çerni un tipo de registro, un nomme de un ut
 # Special:LinkSearch
 'linksearch-line' => '$1 colegòu a-a pagina $2',
 
-# Special:ListUsers
+# Special:Listwiki_Users
 'listusers-submit' => 'Fanni vedde',
 'listusers-noresult' => 'Utente non trovöo.',
 
@@ -893,7 +893,7 @@ Ti te peu strinza a vista se ti te çerni un tipo de registro, un nomme de un ut
 'mywatchlist' => 'Lista in oservaçion',
 'watchlistfor2' => 'Pe $1 $2',
 'watchnologin' => "Non ti t'æ entroö",
-'watchnologintext' => 'Devvi [[Special:UserLogin|entrâ]] pe cangiâ a toa lista in osservaçion.',
+'watchnologintext' => 'Devvi [[Special:wiki_UserLogin|entrâ]] pe cangiâ a toa lista in osservaçion.',
 'addedwatchtext' => "A paggina \"[[:\$1]]\" a l'è stæta azzonta a-a pròpia [[Special:Watchlist|lista in osservaçion]]. De chì in avanti, i cangiamenti fæti a-a paggina e a-a sêu discûxon sajàn missi in lista lì; o tittolo da paggina o sajà scrîo in '''grascietto''' inta paggina di [[Special:RecentChanges|ûrtimi cangiamenti]] coscì ti o veddi megio. Se ti vêu eliminâla da-a lista in osservaçion ciû târdi, sciacca \"no seguî\" inscia barra de d'âto.",
 'removedwatchtext' => 'A paggina "[[:$1]]" a l\'è stæta scassâa da-a têu lista in osservaçion.',
 'watch' => 'Inta lista in oservaçion',
@@ -930,10 +930,10 @@ Ti te peu strinza a vista se ti te çerni un tipo de registro, un nomme de un ut
 'rollbacklink' => 'rollback',
 'cantrollback' => "O no se pêu tornâ inderê; l'ûtente ch'à fæto quelle modiffiche o l'è stæto l'ûnico contribûente.",
 'alreadyrolled' => "O no se peû tornâ inderê a-i ûrtimi cangiamenti da pagina [[:$1]]
-da [[User:$2|$2]] ([[User talk:$2|Ciæti]]); quarche âtro
+da [[wiki_User:$2|$2]] ([[wiki_User talk:$2|Ciæti]]); quarche âtro
 o l'à cangiâ ò o l'è zà tornòu inderê.
-L'ûrtimo cangiamento o ghe l'à fæto [[User:$3|$3]] ([[User talk:$3|Ciæti]]).",
-'revertpage' => 'E modificaçioin de [[Special:Contributions/$2|$2]] ([[User talk:$2|Ciæti]]) son stæte eliminæ; riportæ a verscion de primma de [[User:$1|$1]]',
+L'ûrtimo cangiamento o ghe l'à fæto [[wiki_User:$3|$3]] ([[wiki_User talk:$3|Ciæti]]).",
+'revertpage' => 'E modificaçioin de [[Special:Contributions/$2|$2]] ([[wiki_User talk:$2|Ciæti]]) son stæte eliminæ; riportæ a verscion de primma de [[wiki_User:$1|$1]]',
 
 # Protect
 'protectlogpage' => 'Protessioîn',
@@ -1039,7 +1039,7 @@ $1',
 'unblocklink' => 'sblòcca',
 'change-blocklink' => 'càngia blòcco',
 'contribslink' => 'Contribuçioìn',
-'autoblocker' => 'Affermoö automaticamente perchè o teu indirisso IP o l\'è stæto usöo da "[[User:$1|$1]]" neuvamente. A razon dæta pe affermâ $1 a l\'è stæta:
+'autoblocker' => 'Affermoö automaticamente perchè o teu indirisso IP o l\'è stæto usöo da "[[wiki_User:$1|$1]]" neuvamente. A razon dæta pe affermâ $1 a l\'è stæta:
 "$2"',
 'blocklogpage' => 'Blòcchi',
 'blocklogentry' => "l'a blocòu [[$1]] pe in periodo de $2 $3",
