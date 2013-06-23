@@ -20,89 +20,115 @@
 	$loggedIn = false;
 	$user->session_begin();
 	$auth->acl($user->data);
+	$bbuserses = $user->session_id;
+	$bbusercok = $user->cookie_data;
+	$exit = false;
 	if(!empty($_POST['naa_loginname']))
 	{
 	    $auth->login($_POST["naa_loginname"], $_POST["naa_password"], true, 1, 1);
-	    print("<script type='text/javascript'>window.location = window.location.href;</script>");
+		$bbuserses = $user->session_id;
+		$bbusercok = $user->cookie_data;
 		$php = new Runkit_Sandbox();
         $php->session_start();
-		$php->session_id(session_id());
         $php->SERVER = $_SERVER;
-        $php->user = $_POST["naa_loginname"];
-        $php->pass = $_POST["naa_password"];
+        $php->COOKIE = $_COOKIE;
+        $php->POST = $_POST;
+        $php->GET = $_GET;
+        $php->noexit = true;
         $php->eval('
+                runkit_function_remove("apache_request_headers");
                 $_SERVER = $SERVER;
+                $_COOKIE = $COOKIE;
+                $_POST = $POST;
+                $_GET = $GET;
                 chdir("' . getcwd()  .'");
 				ob_start();
                 include("../loginWikiUser.php");
 				$out = ob_get_clean();
         ');
+		$cookieToken = $php->$cookieToken;
+		$cookieUserID = $php->$cookieUserID;
+		$cookieUserName = $php->$cookieUserName;
+		setcookie("Token", $php->$cookieToken, time() + 5 * 60 * 60, "/", "naa.waterfoul.net", true, true);
+		setcookie("UserID", $php->$cookieUserID, time() + 5 * 60 * 60, "/", "naa.waterfoul.net", true, true);
+		setcookie("UserName", $php->$cookieUserName, time() + 5 * 60 * 60, "/", "naa.waterfoul.net", true, true);
 		print($php->out);
-	    exit();
+	    print("<script type='text/javascript'>window.location = window.location.href;</script>");
+		$exit = true;
 	}
 	else
 	{
 	    $user->setup();
 	}
-	if ($user->data['user_id'] != ANONYMOUS)
+	if(!$exit)
 	{
-	    $loggedIn = true;
-	    //logon wiki
-	}
-	$uri = (explode("?", $_SERVER['REQUEST_URI']));
-	if($uri[0] == "/phpBB/ucp.php" && !empty($_GET["mode"]) && $_GET["mode"] == "logout")
-	{
-	    $user->session_kill();
-	    $user->session_begin();
-	    $cookies = explode(';', $_SERVER['HTTP_COOKIE']);
-	    foreach($cookies as $cookie)
+		if ($user->data['user_id'] != ANONYMOUS)
 		{
-        	$parts = explode('=', $cookie);
-	        $name = trim($parts[0]);
-        	setcookie($name, '', time()-1000);
-	        setcookie($name, '', time()-1000, '/');
-	    }
-	    print("<script type='text/javascript'>window.location='/';</script>");
-            exit();
-	}
-?>
-<link rel="stylesheet" tyle="text/css" href="/header.css" />
-<div class="forumbg">
-    <div class="inner"><span class="corners-top"><span></span></span>
-    <div class="solidblockmenu">
-        <ul>
-            <li><a href="/phpBB" title="Forums">Forums</a></li>
-            <li><a href="/wiki" title="Wiki">Wiki</a></li>
-            <?php
-                if($loggedIn)
-				{
-					if($user->data['loginname'] =="waterfoul" || $user->data['loginname'] == "MrWacko" || $user->data['loginname'] == "themastercheif92")
-						print('<li><a href="/industry/index.php">Industry Calc</a></li>');
-					if( group_memberships( 14, $user->data['user_id'] ) )
-						print('<li><a href="/corpTools/index.php">Corporation Tools</a></li>');
-				}
+		    $loggedIn = true;
+		    //logon wiki
+		}
+		$uri = (explode("?", $_SERVER['REQUEST_URI']));
+		if($uri[0] == "/phpBB/ucp.php" && !empty($_GET["mode"]) && $_GET["mode"] == "logout")
+		{
+		    $user->session_kill();
+		    $user->session_begin();
+		    $cookies = explode(';', $_SERVER['HTTP_COOKIE']);
+		    foreach($cookies as $cookie)
+			{
+	        	$parts = explode('=', $cookie);
+		        $name = trim($parts[0]);
+	        	setcookie($name, '', time()-1000);
+		        setcookie($name, '', time()-1000, '/');
+		    }
+		    print("<script type='text/javascript'>window.location='/';</script>");
+	    	$exit = true;
+		}
+		if(!$exit)
+		{
 			?>
-            <li><a href="/characterTools" title="Character Tools">Character Tools</a></li>
-	    	<?php global $extra; print($extra); ?>
-            <?php
-                if($loggedIn)
-                {
-                	print('<li><a href="/phpBB/ucp.php">Logged in as ' . $user->data['username'] . '</a></li>');
-                    print('<li><a href="/phpBB/ucp.php?mode=logout" title="Logoff">Logoff</a></li>'); 
-                }
-                else
-                {
-                    print('<li><form method="post" action="">
-                        <fieldset class="quick-login">
-                            <div><label for="naa_loginname">Username:</label>&nbsp;<input type="text" name="naa_loginname" id="naa_loginname" size="10" class="inputbox" title="Username"></div>
-                            <div><label for="naa_password">Password:</label>&nbsp;<input type="password" name="naa_password" id="naa_password" size="10" class="inputbox" title="Password"></div>
-                            <input type="submit" name="login" value="Login" class="button2">
-                            <input type="hidden" name="redirect" value="./index.php?">
-                        </fieldset>
-                    </form></li>');
-                }
-            ?>
-        </ul>
-    </div>
-    <span class="corners-bottom"><span></span></span></div>
-</div>
+			<link rel="stylesheet" tyle="text/css" href="/header.css" />
+			<div class="forumbg">
+			    <div class="inner"><span class="corners-top"><span></span></span>
+			    <div class="solidblockmenu">
+			        <ul>
+			            <li><a href="/phpBB" title="Forums">Forums</a></li>
+			            <li><a href="/wiki" title="Wiki">Wiki</a></li>
+			            <?php
+			                if($loggedIn)
+							{
+								if($user->data['loginname'] =="waterfoul" || $user->data['loginname'] == "MrWacko" || $user->data['loginname'] == "themastercheif92")
+									print('<li><a href="/industry/index.php">Industry Calc</a></li>');
+								if( group_memberships( 14, $user->data['user_id'] ) )
+									print('<li><a href="/corpTools/index.php">Corporation Tools</a></li>');
+							}
+						?>
+			            <li><a href="/characterTools" title="Character Tools">Character Tools</a></li>
+				    	<?php global $extra; print($extra); ?>
+			            <?php
+			                if($loggedIn)
+			                {
+			                	print('<li><a href="/phpBB/ucp.php">Logged in as ' . $user->data['username'] . '</a></li>');
+			                    print('<li><a href="/phpBB/ucp.php?mode=logout" title="Logoff">Logoff</a></li>'); 
+			                }
+			                else
+			                {
+			                    print('<li><form method="post" action="">
+			                        <fieldset class="quick-login">
+			                            <div><label for="naa_loginname">Username:</label>&nbsp;<input type="text" name="naa_loginname" id="naa_loginname" size="10" class="inputbox" title="Username"></div>
+			                            <div><label for="naa_password">Password:</label>&nbsp;<input type="password" name="naa_password" id="naa_password" size="10" class="inputbox" title="Password"></div>
+			                            <input type="submit" name="login" value="Login" class="button2">
+			                            <input type="hidden" name="redirect" value="./index.php?">
+			                        </fieldset>
+			                    </form></li>');
+			                }
+			            ?>
+			        </ul>
+			    </div>
+			    <span class="corners-bottom"><span></span></span></div>
+			</div>
+			<?php
+		}
+	}
+	if($exit && empty($noexit))
+		exit();
+?>
