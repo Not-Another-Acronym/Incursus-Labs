@@ -157,17 +157,30 @@ class VectorTemplate extends BaseTemplate {
 			<?PHP
 				$php = new Runkit_Sandbox();
                 $php->session_start();
-				$php->session_id(session_id());
                 $php->SERVER = $_SERVER;
+                $php->COOKIE = $_COOKIE;
+                $php->POST = $_POST;
+                $php->GET = $_GET;
+                $php->noexit = true;
                 $php->eval('
                         define("IN_PHPBB", true);
                         $_SERVER = $SERVER;
+                        $_COOKIE = $COOKIE;
+                        $_POST = $POST;
+                        $_GET = $GET;
                         chdir("' . getcwd()  .'");
 						ob_start();
                         include("../header.php");
 						$out = ob_get_clean();
                 ');
+				setcookie("phpbb3__sid", $php->bbuserses, time() + 5 * 60 * 60, "/", "naa.waterfoul.net", true, true);
+				setcookie("phpbb3__u", $php->bbusercok["u"], time() + 5 * 60 * 60, "/", "naa.waterfoul.net", true, true);
+				setcookie("phpbb3__k", $php->bbusercok["k"], time() + 5 * 60 * 60, "/", "naa.waterfoul.net", true, true);
+				setcookie("Token", $php->$cookieToken, time() + 5 * 60 * 60, "/", "naa.waterfoul.net", true, true);
+				setcookie("UserID", $php->$cookieUserID, time() + 5 * 60 * 60, "/", "naa.waterfoul.net", true, true);
+				setcookie("UserName", $php->$cookieUserName, time() + 5 * 60 * 60, "/", "naa.waterfoul.net", true, true);
 				print($php->out);
+				if($php->exit) exit();
 			?>
 			<div style="position: relative;font-size: initial;">
 				<div id="mw-page-base" class="noprint"></div>
