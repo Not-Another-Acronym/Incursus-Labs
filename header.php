@@ -26,6 +26,7 @@
 	    print("<script type='text/javascript'>window.location = window.location.href;</script>");
 		$php = new Runkit_Sandbox();
         $php->session_start();
+		$php->session_id(session_id());
         $php->SERVER = $_SERVER;
         $php->user = $_POST["naa_loginname"];
         $php->pass = $_POST["naa_password"];
