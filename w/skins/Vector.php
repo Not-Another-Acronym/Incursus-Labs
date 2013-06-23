@@ -155,7 +155,7 @@ class VectorTemplate extends BaseTemplate {
 ?>
 		<div id="wrap">
 			<?PHP
-				$php = new Runkit_Sandbox();
+				/*$php = new Runkit_Sandbox();
                 $php->session_start();
                 $php->SERVER = $_SERVER;
                 $php->COOKIE = $_COOKIE;
@@ -186,7 +186,7 @@ class VectorTemplate extends BaseTemplate {
 					setcookie("naa_wikiUserName", $php->cookieUserName, time() + 5 * 60 * 60, "/", "naa.waterfoul.net", true, true);
 				}
 				print($php->out);
-				if($php->exit) exit();
+				if($php->exit) exit();*/
 			?>
 			<div style="position: relative;font-size: initial;">
 				<div id="mw-page-base" class="noprint"></div>

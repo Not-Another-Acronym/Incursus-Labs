@@ -28,7 +28,7 @@
 	    $auth->login($_POST["naa_loginname"], $_POST["naa_password"], true, 1, 1);
 		$bbuserses = $user->session_id;
 		$bbusercok = $user->cookie_data;
-		$php = new Runkit_Sandbox();
+		/*$php = new Runkit_Sandbox();
         $php->session_start();
         $php->SERVER = $_SERVER;
         $php->COOKIE = $_COOKIE;
@@ -55,7 +55,7 @@
 		setcookie("naa_wikiToken", $php->cookieToken, time() + 5 * 60 * 60, "/", "naa.waterfoul.net", true, true);
 		setcookie("naa_wikiUserID", $php->cookieUserID, time() + 5 * 60 * 60, "/", "naa.waterfoul.net", true, true);
 		setcookie("naa_wikiUserName", $php->cookieUserName, time() + 5 * 60 * 60, "/", "naa.waterfoul.net", true, true);
-		print($php->out);
+		print($php->out);*/
 	    print("<script type='text/javascript'>window.location = window.location.href;</script>");
 		$exit = true;
 	}
