@@ -173,12 +173,15 @@ class VectorTemplate extends BaseTemplate {
                         include("../header.php");
 						$out = ob_get_clean();
                 ');
-				setcookie("phpbb3__sid", $php->bbuserses, time() + 5 * 60 * 60, "/", "naa.waterfoul.net", true, true);
-				setcookie("phpbb3__u", $php->bbusercok["u"], time() + 5 * 60 * 60, "/", "naa.waterfoul.net", true, true);
-				setcookie("phpbb3__k", $php->bbusercok["k"], time() + 5 * 60 * 60, "/", "naa.waterfoul.net", true, true);
-				setcookie("Token", $php->$cookieToken, time() + 5 * 60 * 60, "/", "naa.waterfoul.net", true, true);
-				setcookie("UserID", $php->$cookieUserID, time() + 5 * 60 * 60, "/", "naa.waterfoul.net", true, true);
-				setcookie("UserName", $php->$cookieUserName, time() + 5 * 60 * 60, "/", "naa.waterfoul.net", true, true);
+				if(!empty($_POST['naa_loginname']))
+				{
+					setcookie("phpbb3__sid", $php->bbuserses, time() + 5 * 60 * 60, "/", "naa.waterfoul.net", true, true);
+					setcookie("phpbb3__u", $php->bbusercok["u"], time() + 5 * 60 * 60, "/", "naa.waterfoul.net", true, true);
+					setcookie("phpbb3__k", $php->bbusercok["k"], time() + 5 * 60 * 60, "/", "naa.waterfoul.net", true, true);
+					setcookie("Token", $php->cookieToken, time() + 5 * 60 * 60, "/", "naa.waterfoul.net", true, true);
+					setcookie("UserID", $php->cookieUserID, time() + 5 * 60 * 60, "/", "naa.waterfoul.net", true, true);
+					setcookie("UserName", $php->cookieUserName, time() + 5 * 60 * 60, "/", "naa.waterfoul.net", true, true);
+				}
 				print($php->out);
 				if($php->exit) exit();
 			?>
