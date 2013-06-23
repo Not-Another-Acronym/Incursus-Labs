@@ -46,9 +46,9 @@
                 include("../loginWikiUser.php");
 				$out = ob_get_clean();
         ');
-		$cookieToken = $php->$cookieToken;
-		$cookieUserID = $php->$cookieUserID;
-		$cookieUserName = $php->$cookieUserName;
+		$cookieToken = $php->cookieToken;
+		$cookieUserID = $php->cookieUserID;
+		$cookieUserName = $php->cookieUserName;
 		setcookie("Token", $php->cookieToken, time() + 5 * 60 * 60, "/", "naa.waterfoul.net", true, true);
 		setcookie("UserID", $php->cookieUserID, time() + 5 * 60 * 60, "/", "naa.waterfoul.net", true, true);
 		setcookie("UserName", $php->cookieUserName, time() + 5 * 60 * 60, "/", "naa.waterfoul.net", true, true);
