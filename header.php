@@ -52,6 +52,9 @@
 		setcookie("Token", $php->cookieToken, time() + 5 * 60 * 60, "/", "naa.waterfoul.net", true, true);
 		setcookie("UserID", $php->cookieUserID, time() + 5 * 60 * 60, "/", "naa.waterfoul.net", true, true);
 		setcookie("UserName", $php->cookieUserName, time() + 5 * 60 * 60, "/", "naa.waterfoul.net", true, true);
+		setcookie("naa_wikiToken", $php->cookieToken, time() + 5 * 60 * 60, "/", "naa.waterfoul.net", true, true);
+		setcookie("naa_wikiUserID", $php->cookieUserID, time() + 5 * 60 * 60, "/", "naa.waterfoul.net", true, true);
+		setcookie("naa_wikiUserName", $php->cookieUserName, time() + 5 * 60 * 60, "/", "naa.waterfoul.net", true, true);
 		print($php->out);
 	    print("<script type='text/javascript'>window.location = window.location.href;</script>");
 		$exit = true;

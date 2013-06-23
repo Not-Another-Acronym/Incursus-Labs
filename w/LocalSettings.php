@@ -180,3 +180,6 @@ require_once("$IP/extensions/Realnames/Realnames.php");
 
 require_once('extensions/IntraACL/includes/HACL_Initialize.php');
 enableIntraACL();
+
+$wgMainCacheType = CACHE_ACCEL;
+
