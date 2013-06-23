@@ -157,6 +157,7 @@ class VectorTemplate extends BaseTemplate {
 			<?PHP
 				$php = new Runkit_Sandbox();
                 $php->session_start();
+				$php->session_id(session_id());
                 $php->SERVER = $_SERVER;
                 $php->eval('
                         define("IN_PHPBB", true);
