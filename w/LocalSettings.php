@@ -206,4 +206,8 @@ function StripLogin(&$personal_urls, &$wgTitle) {
 $wgHooks['PersonalUrls'][] = 'StripLogin';
 
 require_once('extensions/EveShips.php');
+$wgShowExceptionDetails = true;
+$wgUseAjax = true;
+require_once( "$IP/extensions/CategoryTree/CategoryTree.php" );
+$wgCategoryTreeCategoryPageMode = CT_MODE_ALL;
 ?>

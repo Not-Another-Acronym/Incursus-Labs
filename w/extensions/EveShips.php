@@ -33,7 +33,7 @@ $wgExtensionCredits['parserhook'][] = array(
 $wgHooks['ParserFirstCallInit'][] = 'EveShipSetupParserFunction';
  
 // Allow translation of the parser function name
-$wgExtensionMessagesFiles['EveShipsExtension'] = dirname( __FILE__ ) . '/EveShip.i18n.php';
+$wgExtensionMessagesFiles['EveShipsExtension'] = dirname( __FILE__ ) . '/EveShips.i18n.php';
  
 // Tell MediaWiki that the parser function exists.
 function EveShipSetupParserFunction( &$parser ) {
@@ -49,17 +49,62 @@ function EveShipSetupParserFunction( &$parser ) {
  
 // Render the output of the parser function.
 function EveShipRenderParserFunction( $parser ) {
+	static $first = true;
 	$num = func_num_args();
     if($num < 1)
    		$output = "You must at least supply the ship dna";
 	else {
 		$randNumber = rand(0,1000);
-	    $output = "<div id='Ship" . $randNumber . "'>&nbsp;</div><script type='text/javascript'>insertship('ship','" . func_get_arg( 0 ) . "');</script>";
+		if($first)
+		{
+			$first = false;
+                        $output = 
+				"<script type='text/javascript' src='../ShipLib/ship.js'></script>" .
+				"<style type='text/css'>/*StupidWiki 
+					/**/
+					.ship
+					{
+						float:left;
+					}
+					.skill
+					{
+						float:left;
+					}
+					.skills
+					{
+						overflow: auto;
+						border-top:1px solid black;
+					}
+					.skillWrapper
+					{
+						padding-left:430px;
+					}
+					.skill .name
+					{
+						text-align:right;
+						width:270px;
+						display:inline-block;
+						white-space:nowrap;
+					}
+					.skill .name:after
+					{
+						content: ':';	
+					}
+				</style>
+				<form action='../ShipLib/genXml.php' method='post' target='shipInput' id='shipFrm'>
+				   <input type='hidden' name='json' value='' id='shipInput' />
+				   <input type='hidden' name='name' value='' id='nameInput' />
+				</form>
+				<iframe name='shipInput' id='shipInput' src='about:blank' style='display:none'></iframe>
+			";
+		}
+		else
+			$output = "";
 		$stage = 0;
 		$required = array();
 		$recommended = array();
 		$perfect = array();
-		for($i = 1;$i < $num; $i++)
+		for($i = 2;$i < $num; $i++)
 		{
 			$arg = func_get_arg( $i );
 			if($arg == "[Recommended]")
@@ -77,16 +122,62 @@ function EveShipRenderParserFunction( $parser ) {
 					$perfect[$arg] = $lvl;
 			}
 		}
-		$output .= "Required<br>";
-		foreach($required as $i => $v)
-			$output .= $i . ":" . $v . "<br>";
-		$output .= "Recommended<br>";
+		$output .= "<div class='ship' id='Ship" . $randNumber . "'>&nbsp;</div><div class='skillWrapper'><a href='#' onclick='return false;' id='SkillsLnk" . $randNumber . "'>Required</a><div class='skills' id='Skills" . $randNumber . "'>&nbsp;</div><script type='text/javascript'>insertship('Ship" . $randNumber . "','" .
+			func_get_arg( 1 ) . "',[";
+		foreach($required as $i=>$v)
+			$output .= "['" . $i . "','" . $v . "'],";
+		$output .= "],'Skills" . $randNumber . "','SkillsLnk" . $randNumber . "','" . $parser->recursiveTagParse("{{FULLPAGENAME}}") . "');</script>";
+		$output .= "<a href='#' onclick='" .
+                                "skills=window.skillsStorage[\"SkillsLnk" . $randNumber . "\"][0];";
+                foreach($recommended as $i => $v)
+                {
+                    if($first)
+                    {
+                        $output.= "skills.push([\"" . $i . "\",\"" . $v . "\",\"remap\"]);";
+                        $first = false;
+                    }
+                    else
+                        $output .= "skills.push([\"" . $i . "\",\"" . $v . "\"]);";
+                }
+		$output .=  "$(\"#shipInput\").val(JSON.stringify(skills));" .
+                            "$(\"#nameInput\").val(window.skillsStorage[\"SkillsLnk" . $randNumber . "\"][1] + \" Recommended\");" .
+                            "$(\"#shipFrm\").submit();" .
+                            "return false;".
+                            "'>Recommended</a><div class='skills'>";
 		foreach($recommended as $i => $v)
-			$output .= $i . ":" . $v . "<br>";
-		$output .= "Perfect<br>";
+			$output .= "<div class='skill'><span class='name'>" . $i . "</span><span class='level'>" . $v . "</span></div>";
+		$output .= "</div><a href='#' onclick='" .
+                                "skills=window.skillsStorage[\"SkillsLnk" . $randNumber . "\"][0];";
+		$first=true;
+                foreach($recommended as $i => $v)
+		{
+		    if($first)
+                    {
+                        $output.= "skills.push([\"" . $i . "\",\"" . $v . "\",\"remap\"]);";
+                        $first = false;
+                    }
+                    else
+                        $output .= "skills.push([\"" . $i . "\",\"" . $v . "\"]);";
+                }
+                $first=true;
 		foreach($perfect as $i => $v)
-			$output .= $i . ":" . $v . "<br>";
+                {
+                    if($first)
+                    {
+                        $output.= "skills.push([\"" . $i . "\",\"" . $v . "\",\"remap\"]);";
+                        $first = false;
+                    }
+                    else
+                        $output .= "skills.push([\"" . $i . "\",\"" . $v . "\"]);";
+                }
+                $output .=  "$(\"#shipInput\").val(JSON.stringify(skills));" .
+                            "$(\"#nameInput\").val(window.skillsStorage[\"SkillsLnk" . $randNumber . "\"][1] + \" Perfect\");" .
+                            "$(\"#shipFrm\").submit();" .
+                            "return false;".
+                            "'>Perfect</a><div class='skills'>";
+		foreach($perfect as $i => $v)
+			$output .= "<div class='skill'><span class='name'>" . $i . "</span><span class='level'>" . $v . "</span></div>";
+		$output .= "</div></div>";
 	}
- 
-    return $output;
+    return array( $output, 'noparse' => true, 'isHTML' => true );
 }
