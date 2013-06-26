@@ -8,7 +8,7 @@ function getSkills($itemID)
 {
     global $skills, $skillNames, $skillLevels, $dbh;
     $sql = "
-        SELECT Skills.typeID as ID, Skills.typeName AS name, SkillLevel.valueInt AS level
+        SELECT Skills.typeID as ID, Skills.typeName AS name, coalesce(SkillLevel.valueInt, SkillLevel.valueFloat) AS level
         FROM dgmTypeAttributes AS SkillName
         INNER JOIN invTypes AS Skills ON Skills.typeID = SkillName.valueInt AND
             (
