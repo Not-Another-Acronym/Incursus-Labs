@@ -17,6 +17,13 @@ subsystem=["left: 122px; top: 163px","left: 153px; top: 130px","left: 195px; top
             return -1;
         if (a[0] > b[0])
             return 1;
+        if (a[0] = b[0])
+        {
+            if (a[1] < b[1])
+                return 1;
+            if (a[1] > b[1])
+                return -1;
+        }
         return 0;
     }
 
@@ -163,9 +170,9 @@ jQuery.get(Url,function(json){
    skills.sort(compareSkills);
    
    for(i = skills.length-1; i > 0; i--)
-      if(skills[i]==skills[i-1])
-	skills.slice(i, 1);
-   
+      if(skills[i][0] == skills[i - 1][0])
+         skills.splice(i, 1);
+
    skillsDisplay="";
    for(i = 0; i < skills.length; i++)
        skillsDisplay += "<div class='skill'><span class='name'>" + skills[i][0] + "</a></span><span class='level'>" + skills[i][1] + "</span></div>";
