@@ -32,7 +32,7 @@
 			                    if($charRow = $charQry->fetch_object())
 			                    {
 			                    	$charRow->curHist = array();
-									$histQry = $yapeal->query("SELECT * FROM  `custom_charHistory` WHERE `characterID`=" . $v->characterID);
+									$histQry = $yapeal->query("SELECT * FROM  `custom_charHistory` WHERE `characterID`=" . $v->characterID . " ORDER BY startDate DESC");
 									while($histRow = $histQry->fetch_object())
 										$charRow->curHist[] = $histRow;
 			                    	$rows[] = $charRow;

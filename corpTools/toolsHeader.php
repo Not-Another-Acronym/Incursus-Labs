@@ -18,6 +18,7 @@ foreach($_GET as $i=>$v)
         	<li><a href="wallet.php<?php print($getVars); ?>">Wallet Transaction Viewer</a></li>
         	<li><a href="character.php<?php print($getVars); ?>">Character Viewer</a></li>
         	<li><a href="assets.php<?php print($getVars); ?>">Assets Viewer</a></li>
+		<li><a href="addApiKey.php<?php print($getVars); ?>">Add Api Keys</a></li>
         </ul>
     </div>
     <span class="corners-bottom"><span></span></span></div>
@@ -94,4 +95,7 @@ foreach($_GET as $i=>$v)
 		}
 	}
 ?>
-User: <select onchange="top.location='?user_id=' + this.value"><?php print($users_options); ?></select>
+<?php 
+if(empty($nouser)) 
+	print('User: <select onchange="top.location=\'?user_id=\' + this.value">' . $users_options . '</select>');
+?>

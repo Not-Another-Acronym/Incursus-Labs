@@ -1,3 +1,19 @@
+function selectText(element) {
+    var doc = document;
+    var text = doc.getElementById(element);    
+
+    if (doc.body.createTextRange) { // ms
+        var range = doc.body.createTextRange();
+        range.moveToElementText(text);
+        range.select();
+    } else if (window.getSelection) { // moz, opera, webkit
+        var selection = window.getSelection();            
+        var range = doc.createRange();
+        range.selectNodeContents(text);
+        selection.removeAllRanges();
+        selection.addRange(range);
+    }
+}
 
 function insertship(div,dna,extraSkills,skillsDiv,skillsLnk,name)
 {
@@ -155,7 +171,7 @@ jQuery.get(Url,function(json){
       }
    }
    shipdisplay+="</div>";
-   shipdisplay+="<div class='eft'><a href='#' style='color:white;text-decoration:underline;clear:both;display:block;padding-left:10px;' onclick='$(\"#eftInner" + div + "\").toggle();event.stopPropagation();return false;'>Eft Fit</a><div id='eftInner" + div + "' style='display:none'>";
+   shipdisplay+="<div class='eft'><a href='#' style='color:white;text-decoration:underline;clear:both;display:block;padding-left:10px;' onclick='$(\"#eftInner" + div + "\").toggle();selectText(\"eftInner" + div + "\");event.stopPropagation();return false;'>Eft Fit</a><div id='eftInner" + div + "' style='display:none'>";
    shipdisplay+="[" + json["ship"]["shipname"] + "," + (name==undefined?json["ship"]["shipname"]:name) + "]<br><br>";
    shipdisplay+=low + "<br>";
    shipdisplay+=mid + "<br>";

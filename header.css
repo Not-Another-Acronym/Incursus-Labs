@@ -7,7 +7,7 @@ body {
 	padding: 12px 0;
 }
 
-html, body {
+html, body, #firstHeader {
 	color: #000000;
 	background-color: #639FD6;
 	background-image: url("./phpBB/styles/rockn_roll/theme/images/bg.gif");
@@ -15,7 +15,35 @@ html, body {
 	background-attachment: fixed;
 }
 
-#wrap {
+#firstHeader
+{
+	top:12px;
+	position: fixed;
+	left: 0;
+	width: 100%;
+	z-index: 1;
+	height:46px;
+	color: #000000;
+        background-color: #639FD6;
+        background-image: url("./phpBB/styles/rockn_roll/theme/images/bg.gif");
+        background-repeat: repeat-x;
+        background-attachment: fixed;
+}
+
+#firstHeader .right
+{
+	float:right;
+}
+#firstHeader li.right.first a
+{
+	border:none;
+}
+#firstHeader li.right.last a
+{
+	border-left:1px solid white;
+}
+
+#wrap, #firstHeader .wrap {
 	padding: 10px 10px;
 	min-width: 650px;
 	width: 95%;
@@ -23,6 +51,15 @@ html, body {
 	background-color: #FFFFFF;
 	border: 3px solid #000000;
 	min-height:95%;
+	padding-top:46px;
+}
+
+#firstHeader .wrap
+{
+        min-height: 0;
+        border-bottom:0;
+	padding-top:10px;
+	padding-bottom:0.1px;
 }
 
 .solidblockmenu ul{

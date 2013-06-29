@@ -82,7 +82,7 @@ foreach ($innertypelist as $value)
 $shiptype='';
 $shipid='';
 $charges=array();
-$drones=array();
+$drone=array();
 $skills=array();
 $skillNames=array();
 $skillLevels=array();

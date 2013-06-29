@@ -1,5 +1,5 @@
 <?php
-	function getAPIStatus($key, $vcode)
+	function getAPIStatus($key, $vcode, &$maskOut = null)
     {
             $xml = simplexml_load_file("https://api.eveonline.com/account/APIKeyInfo.xml.aspx?keyID=" . $key . "&vCode=" . $vcode);
             if(!empty($xml->error))
@@ -7,6 +7,7 @@
             if($xml->result->key->attributes()->type!="Account")
                     return("NOT ACCOUNT TYPE");
             $mask = $xml->result->key->attributes()->accessMask;
+	    $maskOut = $mask;
             $standings = maskmatches($mask, 524288);                //Just Standings
             $skills = maskmatches($mask, 8);                        //Just Character Sheet
             $defcon3 = maskmatches($mask, 8913152);                 //Public Character Info, Standings, Killlog

@@ -1,3 +1,13 @@
+<script type="text/javascript" src="https://naa.waterfoul.net/w/load.php?debug=false&amp;lang=en&amp;modules=jquery%2Cmediawiki&amp;only=scripts&amp;skin=vector&amp;version=20130623T185045Z"></script>
+<script type="text/javascript">
+	$(document).scroll(function(){
+		scrollTop = $(window).scrollTop();
+		if(scrollTop < 12)
+			$("#firstHeader").css("top", (12 - scrollTop) + "px");
+		else
+			$("#firstHeader").css("top","0"); 
+	});
+</script>
 <?php
 	global $user, $auth;
 	include("config.php");
@@ -29,38 +39,11 @@
 	if(!empty($_POST['naa_loginname']))
 	{
 	    $auth->login($_POST["naa_loginname"], $_POST["naa_password"], true, 1, 1);
-		$bbuserses = $user->session_id;
-		$bbusercok = $user->cookie_data;
-		/*$php = new Runkit_Sandbox();
-        $php->session_start();
-        $php->SERVER = $_SERVER;
-        $php->COOKIE = $_COOKIE;
-        $php->POST = $_POST;
-        $php->GET = $_GET;
-        $php->noexit = true;
-        $php->eval('
-                runkit_function_remove("apache_request_headers");
-                $_SERVER = $SERVER;
-                $_COOKIE = $COOKIE;
-                $_POST = $POST;
-                $_GET = $GET;
-                chdir("' . getcwd()  .'");
-				ob_start();*/
-                include("../loginWikiUser.php");/*
-				$out = ob_get_clean();
-	        ');
-		$cookieToken = $php->cookieToken;
-		$cookieUserID = $php->cookieUserID;
-		$cookieUserName = $php->cookieUserName;
-		setcookie("Token", $php->cookieToken, time() + 5 * 60 * 60, "/", "naa.waterfoul.net", true, true);
-		setcookie("UserID", $php->cookieUserID, time() + 5 * 60 * 60, "/", "naa.waterfoul.net", true, true);
-		setcookie("UserName", $php->cookieUserName, time() + 5 * 60 * 60, "/", "naa.waterfoul.net", true, true);
-		setcookie("naa_wikiToken", $php->cookieToken, time() + 5 * 60 * 60, "/", "naa.waterfoul.net", true, true);
-		setcookie("naa_wikiUserID", $php->cookieUserID, time() + 5 * 60 * 60, "/", "naa.waterfoul.net", true, true);
-		setcookie("naa_wikiUserName", $php->cookieUserName, time() + 5 * 60 * 60, "/", "naa.waterfoul.net", true, true);
-		print($php->out);*/
+	    $bbuserses = $user->session_id;
+	    $bbusercok = $user->cookie_data;
+            include("../loginWikiUser.php");
 	    print("<script type='text/javascript'>window.location = window.location.href;</script>");
-		$exit = true;
+	    $exit = true;
 	}
 	else
 	{
@@ -93,7 +76,7 @@
 		{
 			?>
 			<link rel="stylesheet" tyle="text/css" href="/header.css" />
-			<div class="forumbg">
+			<div id="firstHeader"><div class="wrap"><div class="forumbg">
 			    <div class="inner"><span class="corners-top"><span></span></span>
 			    <div class="solidblockmenu">
 			        <ul>
@@ -110,15 +93,19 @@
 						?>
 			            <li><a href="/characterTools" title="Character Tools">Character Tools</a></li>
 				    	<?php global $extra; print($extra); ?>
+				    <li><a href="/phpBB/memberlist.php" title="View complete list of members">Members</a></li>
+				    <li><a href="/phpBB/faq.php" title="Frequently Asked Questions">FAQ</a></li>
 			            <?php
 			                if($loggedIn)
 			                {
-			                	print('<li><a href="/phpBB/ucp.php">Logged in as ' . $user->data['username'] . '</a></li>');
-			                    print('<li><a href="/phpBB/ucp.php?mode=logout" title="Logoff">Logoff</a></li>'); 
+			                        print('<li class="right first"><a href="/phpBB/ucp.php?mode=logout" title="Logoff">Logoff</a></li>'); 
+						print('<li class="right"><a href="/phpBB/ucp.php">' . $user->data['username'] . '</a></li>');
+						print('<li class="right"><a href="/phpBB/search.php?search_id=egosearch">View your posts</a></li>');
+						print('<li class="right last"><a href="/phpBB/ucp.php?i=pm&folder=inbox">' . $user->data['user_new_privmsg'] . ' new messages</a></li>');
 			                }
 			                else
 			                {
-			                    print('<li><form method="post" action="">
+			                    print('<li class="right first"><form method="post" action="">
 			                        <fieldset class="quick-login">
 			                            <div><label for="naa_loginname">Username:</label>&nbsp;<input type="text" name="naa_loginname" id="naa_loginname" size="10" class="inputbox" title="Username"></div>
 			                            <div><label for="naa_password">Password:</label>&nbsp;<input type="password" name="naa_password" id="naa_password" size="10" class="inputbox" title="Password"></div>
@@ -126,12 +113,13 @@
 			                            <input type="hidden" name="redirect" value="./index.php?">
 			                        </fieldset>
 			                    </form></li>');
+					    print('<li class="right last"><a href="./ucp.php?mode=register">Register</a></li>');
 			                }
 			            ?>
 			        </ul>
 			    </div>
 			    <span class="corners-bottom"><span></span></span></div>
-			</div>
+			</div></div></div>
 			<?php
 		}
 	}
