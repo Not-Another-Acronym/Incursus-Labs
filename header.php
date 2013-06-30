@@ -38,7 +38,8 @@
 	$exit = false;
 	if(!empty($_POST['naa_loginname']))
 	{
-	    $auth->login($_POST["naa_loginname"], $_POST["naa_password"], true, 1, 1);
+	    $res=$auth->login($_POST["naa_loginname"], $_POST["naa_password"], true, 1, 1);
+	    if($res["error_msg"] == "LOGIN_ERROR_ATTEMPTS") {print("TOO MANY ATTEMPTS");exit();}
 	    $bbuserses = $user->session_id;
 	    $bbusercok = $user->cookie_data;
             include("../loginWikiUser.php");
@@ -54,7 +55,6 @@
 		if ($user->data['user_id'] != ANONYMOUS)
 		{
 		    $loggedIn = true;
-		    //logon wiki
 		}
 		$uri = (explode("?", $_SERVER['REQUEST_URI']));
 		if($uri[0] == "/phpBB/ucp.php" && !empty($_GET["mode"]) && $_GET["mode"] == "logout")

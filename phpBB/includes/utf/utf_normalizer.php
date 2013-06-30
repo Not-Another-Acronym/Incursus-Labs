@@ -20,14 +20,22 @@ if (!defined('IN_PHPBB'))
 *
 * Preserved for compatibility
 */
-define('UTF8_REPLACEMENT', "\xEF\xBF\xBD");
-define('UTF8_MAX', "\xF4\x8F\xBF\xBF");
-define('UTF8_FFFE', "\xEF\xBF\xBE");
-define('UTF8_FFFF', "\xEF\xBF\xBF");
-define('UTF8_SURROGATE_FIRST', "\xED\xA0\x80");
-define('UTF8_SURROGATE_LAST', "\xED\xBF\xBF");
-define('UTF8_HANGUL_FIRST', "\xEA\xB0\x80");
-define('UTF8_HANGUL_LAST', "\xED\x9E\xA3");
+if(!defined('UTF8_REPLACEMENT'))
+	define('UTF8_REPLACEMENT', "\xEF\xBF\xBD");
+if(!defined('UTF8_MAX'))
+	define('UTF8_MAX', "\xF4\x8F\xBF\xBF");
+if(!defined('UTF8_FFFE'))
+	define('UTF8_FFFE', "\xEF\xBF\xBE");
+if(!defined('UTF8_FFFF'))
+	define('UTF8_FFFF', "\xEF\xBF\xBF");
+if(!defined('UTF8_SURROGATE_FIRST'))
+	define('UTF8_SURROGATE_FIRST', "\xED\xA0\x80");
+if(!defined('UTF8_SURROGATE_LAST'))
+	define('UTF8_SURROGATE_LAST', "\xED\xBF\xBF");
+if(!defined('UTF8_SURROGATE_LAST'))
+	define('UTF8_HANGUL_FIRST', "\xEA\xB0\x80");
+if(!defined('UTF8_SURROGATE_LAST'))
+	define('UTF8_HANGUL_LAST', "\xED\x9E\xA3");
 
 define('UTF8_CJK_FIRST', "\xE4\xB8\x80");
 define('UTF8_CJK_LAST', "\xE9\xBE\xBB");
@@ -49,14 +57,21 @@ define('UTF8_TRAILING_BYTES', "\xA9\xA0\xA8\x80\xAA\x99\xA7\xBB\xAB\x89\x94\x82\
 
 // Constants used by the Hangul [de]composition algorithms
 define('UNICODE_HANGUL_SBASE', 0xAC00);
-define('UNICODE_HANGUL_LBASE', 0x1100);
-define('UNICODE_HANGUL_VBASE', 0x1161);
-define('UNICODE_HANGUL_TBASE', 0x11A7);
+if(!defined('UTF8_SURROGATE_LAST'))
+	define('UNICODE_HANGUL_LBASE', 0x1100);
+if(!defined('UTF8_SURROGATE_LAST'))
+	define('UNICODE_HANGUL_VBASE', 0x1161);
+if(!defined('UTF8_SURROGATE_LAST'))
+	define('UNICODE_HANGUL_TBASE', 0x11A7);
 define('UNICODE_HANGUL_SCOUNT', 11172);
-define('UNICODE_HANGUL_LCOUNT', 19);
-define('UNICODE_HANGUL_VCOUNT', 21);
-define('UNICODE_HANGUL_TCOUNT', 28);
-define('UNICODE_HANGUL_NCOUNT', 588);
+if(!defined('UTF8_SURROGATE_LAST'))
+	define('UNICODE_HANGUL_LCOUNT', 19);
+if(!defined('UTF8_SURROGATE_LAST'))
+	define('UNICODE_HANGUL_VCOUNT', 21);
+if(!defined('UTF8_SURROGATE_LAST'))
+	define('UNICODE_HANGUL_TCOUNT', 28);
+if(!defined('UTF8_SURROGATE_LAST'))
+	define('UNICODE_HANGUL_NCOUNT', 588);
 define('UNICODE_JAMO_L', 0);
 define('UNICODE_JAMO_V', 1);
 define('UNICODE_JAMO_T', 2);
