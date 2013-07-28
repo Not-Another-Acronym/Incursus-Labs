@@ -37,7 +37,6 @@ $messages = array();
 $messages['en'] = array(
 
     // General
-    'haloacl-inclusion-denied'          => '',
     'intraacl'                          => 'IntraACL',
     'hacl_special_page'                 => 'IntraACL',  // Name of the special page for administration
     'specialpages-group-hacl_group'     => 'IntraACL',
@@ -62,7 +61,7 @@ $messages['en'] = array(
     'hacl_pf_group_members_title'       => "===Group members===\n",
     'hacl_assigned_user'                => 'Assigned users: ',
     'hacl_assigned_groups'              => 'Assigned groups:',
-    'hacl_user_member'                  => 'wiki_Users who are member of this group:',
+    'hacl_user_member'                  => 'Users who are member of this group:',
     'hacl_group_member'                 => 'Groups who are member of this group:',
     'hacl_description'                  => 'Description:',
     'hacl_error'                        => 'Errors:',
@@ -107,6 +106,9 @@ Please, add one of the following categories to the description, or you will <b>n
 You have no read access to the <tt>File</tt> namespace. You will <b>not</b> be able to view the file after uploading!
 </div>',
 
+    'hacl_upload_forbidden'             => 'File uploads forbidden',
+    'hacl_upload_forbidden_text'        => 'File uploads are forbidden because you have no IntraACL right to create articles within File namespace. Contact the site administrator.',
+
     /**** IntraACL: ****/
 
     'tog-showacltab'                    => 'Always show ACL tab (page access rights)',
@@ -140,7 +142,7 @@ If you want to protect some pages, ACL page must be named as one of: ACL:Page/*,
     'hacl_autocomplete_no_sds'          => 'No security descriptors found',
 
     'hacl_login_first_title'            => 'Please login',
-    'hacl_login_first_text'             => 'Please [[Special:wiki_Userlogin|login]] first to use IntraACL special page.',
+    'hacl_login_first_text'             => 'Please [[Special:Userlogin|login]] first to use IntraACL special page.',
     'hacl_acl_create'                   => 'Create ACL definition',
     'hacl_acl_create_title'             => 'Create ACL definition: $1',
     'hacl_acl_edit'                     => 'Editing ACL definition: $1',
@@ -172,13 +174,13 @@ If you want to protect some pages, ACL page must be named as one of: ACL:Page/*,
     'hacl_start_typing_category'        => 'Start typing to display category list...',
     'hacl_start_typing_user'            => 'Start typing to display user list...',
     'hacl_start_typing_group'           => 'Start typing to display group list...',
-    'hacl_edit_users_affected'          => 'wiki_Users affected:',
+    'hacl_edit_users_affected'          => 'Users affected:',
     'hacl_edit_groups_affected'         => 'Groups affected:',
     'hacl_edit_no_users_affected'       => 'No users affected.',
     'hacl_edit_no_groups_affected'      => 'No groups affected.',
     'hacl_edit_goto_group'              => 'Go to group $1 definition',
 
-    'hacl_edit_user'                    => 'wiki_User',
+    'hacl_edit_user'                    => 'User',
     'hacl_edit_group'                   => 'Group',
     'hacl_edit_all'                     => 'All users',
     'hacl_edit_reg'                     => 'Registered users',
@@ -225,7 +227,7 @@ If you want to protect some pages, ACL page must be named as one of: ACL:Page/*,
     'hacl_acllist_type_namespace'       => 'Namespace',
     'hacl_acllist_type_category'        => 'Category',
     'hacl_acllist_type_right'           => 'Predefined rights',
-    'hacl_acllist_type_template'        => 'wiki_User templates',
+    'hacl_acllist_type_template'        => 'User templates',
 
     'hacl_acllist_page'                 => 'Rights for pages:',
     'hacl_acllist_namespace'            => 'Rights for namespaces:',
@@ -272,7 +274,7 @@ If you want to protect some pages, ACL page must be named as one of: ACL:Page/*,
     'hacl_grp_member_reg'               => 'All registered users',
     'hacl_grp_members'                  => 'Group members:',
     'hacl_grp_managers'                 => 'Group managers:',
-    'hacl_grp_users'                    => 'wiki_Users:',
+    'hacl_grp_users'                    => 'Users:',
     'hacl_grp_groups'                   => 'Groups:',
 
     'hacl_grp_exists'                   => 'This group already exists.',
@@ -402,6 +404,9 @@ $messages['ru'] = array(
 У вас доступа на чтение пространства имён Файл. Вы <b>не сможете</b> просмотреть файл после загрузки!
 </div>',
 
+    'hacl_upload_forbidden'             => 'Загрузка файлов запрещена',
+    'hacl_upload_forbidden_text'        => 'Вы не можете загружать файлы, так как у вас нет IntraACL-прав на создание статей в пространстве имён Файл. Свяжитесь с администратором проекта.',
+
     /**** IntraACL: ****/
 
     'tog-showacltab'                    => 'Всегда показывать вкладку ACL (права доступа к странице)',
@@ -434,7 +439,7 @@ $messages['ru'] = array(
     'hacl_autocomplete_no_sds'          => 'Определения прав не найдены',
 
     'hacl_login_first_title'            => 'Сначала представьтесь',
-    'hacl_login_first_text'             => 'Пожалуйста, [[Special:wiki_Userlogin|представьтесь]] для использования редактора IntraACL.',
+    'hacl_login_first_text'             => 'Пожалуйста, [[Special:Userlogin|представьтесь]] для использования редактора IntraACL.',
     'hacl_acl_create'                   => 'Создать ACL',
     'hacl_acl_create_title'             => 'Создать ACL: $1',
     'hacl_acl_edit'                     => 'Правка ACL: $1',
@@ -674,11 +679,11 @@ $messages['de'] = array(
     'hacl_nonreadable_create_nocat'       => '<div style="border: 0.2em solid red; padding: 0 0.5em 0.5em"><span style="color: red; font-weight: bold">Warnung!</span>Der Namensraum, in dem der Artikel erstellt werden soll, kann mit ihren Berechtigungen nicht gelesen werden.Um trotzdem fortzufahren, aktivieren Sie "<b>Nicht lesbaren Artikel erstellen</b>".</div>',
     'hacl_nonreadable_upload'             => '<div style="border: 0.2em solid red; padding: 0.2em 0.5em 0.5em; display: inline-block; width: 50%"><span style="color: red; font-weight: bold">Warnung!</span>Der Namensraum <tt>Datei</tt> kann mit ihren Berechtigungen nicht gelesen werden.<br />Bitte fügen Sie einer der folgenden Kategorien zur Beschreibung der Datei hinzu oder die Datei wird nach dem Upload <b>nicht</b> mehr für Sie lesbar sein:&nbsp;$1</div>',
     'hacl_nonreadable_upload_nocat'       => '<div style="border: 0.2em solid red; padding: 0.2em 0.5em 0.5em; display: inline-block; width: 50%"><span style="color: red; font-weight: bold">Warnung!</span>Der Namensraum <tt>Datei</tt> kann mit ihren Berechtigungen nicht gelesen werden.</div>',
-  
+
     /**** IntraACL: ****/
-  
+
     'tog-showacltab'                    => '"Rechte" Tab immer anzeigen',
-  
+
     // General
     'hacl_invalid_prefix'               => 'Diese Seite selbst schützt keine Artikel, bitte erstellen Sie neue Rechte oder Rechtevorlagen. Entweder soll diese Seite in eine andere Rechtedefinition eingebunden werden oder sie wurde falsch erstellt. Wenn Artikel geschützt werden sollen, muss die Rechteseite wie folgt heißen: ACL:Page/*, ACL:Category/*, ACL:Namespace/*, ACL:Right/*.',
     'hacl_pe_not_exists'                => 'Das Element, das mit diesen Rechten geschützt werden soll, existiert nicht.',
@@ -705,7 +710,7 @@ $messages['de'] = array(
     'hacl_autocomplete_no_sds'          => 'Keine Rechtedefinition gefunden',
 
     'hacl_login_first_title'            => 'Bitte anmelden',
-    'hacl_login_first_text'             => 'Bitte [[Special:wiki_Userlogin|anmelden]] um IntraACL zu benutzen.',
+    'hacl_login_first_text'             => 'Bitte [[Special:Userlogin|anmelden]] um IntraACL zu benutzen.',
     'hacl_acl_create'                   => 'Rechtedefinition erstellen',
     'hacl_acl_create_title'             => 'Rechtedefinition erstellen: $1',
     'hacl_acl_edit'                     => 'Rechtedefinition ändern: $1',

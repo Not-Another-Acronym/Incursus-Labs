@@ -92,7 +92,7 @@ HACLGroupEditor.prototype.pf_param = function(name, value, is_assigned_to)
     if (is_assigned_to)
     {
         if (this.regexp_user)
-            ass = ass.replace(this.regexp_user, '$1wiki_User:');
+            ass = ass.replace(this.regexp_user, '$1User:');
         if (this.regexp_group)
             ass = ass.replace(this.regexp_group, '$1Group/');
     }
@@ -190,7 +190,7 @@ HACLGroupEditor.prototype.refresh_hints = function(what)
             if (!hint.element.value.trim().length)
                 hint.change_ajax(this.get_empty_hint(x[i][0], x[i][1]));
             else
-                this.find_set(x[i][0], x[i][1] == 'group' ? 'Group/' : 'wiki_User:', hint, hint.tip_div);
+                this.find_set(x[i][0], x[i][1] == 'group' ? 'Group/' : 'User:', hint, hint.tip_div);
         }
     }
 };
@@ -331,7 +331,7 @@ HACLGroupEditor.prototype.get_empty_hint = function(who, what)
             else if (i == '#')
                 rn = '#: '+this.msg.edit_reg;
             else
-                rn = n = htmlspecialchars(i.replace(/^wiki_User:|^Group\//, ''));
+                rn = n = htmlspecialchars(i.replace(/^User:|^Group\//, ''));
             current.push(
                 '<div id="'+pref+'_'+j+'" class="hacl_ti'+(current_hash[i] ? ' hacl_dis' : '')+'" title="'+n+
                 '"><input style="cursor: pointer" type="checkbox" id="c'+pref+'_'+j+
@@ -361,7 +361,7 @@ HACLGroupEditor.prototype.load_handler = function(ge, h, v)
                 if (request.status == 200)
                 {
                     h.change_ajax(request.responseText);
-                    ge.find_set(who, what == 'group' ? 'Group/' : 'wiki_User:', h, h.tip_div);
+                    ge.find_set(who, what == 'group' ? 'Group/' : 'User:', h, h.tip_div);
                 }
             });
 };
@@ -416,7 +416,7 @@ HACLGroupEditor.prototype.set_handler = function(ge, hint, ev, e)
     var grp = hint.element.id == 'member_groups' || hint.element.id == 'manager_groups';
     var hash = hint.element.id == 'member_groups' || hint.element.id == 'member_users'
         ? this.members : this.managers;
-    to = e.title == '*' || e.title == '#' ? e.title : (grp ? 'Group/' : 'wiki_User:')+e.title;
+    to = e.title == '*' || e.title == '#' ? e.title : (grp ? 'Group/' : 'User:')+e.title;
     if (chk.checked)
         hash[to] = true;
     else

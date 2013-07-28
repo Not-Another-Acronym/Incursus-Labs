@@ -48,7 +48,7 @@ class HACLToolbar
      */
     static function get($title, $nonreadable)
     {
-        global $wgwiki_User, $wgRequest, $haclgContLang, $wgContLang,
+        global $wgUser, $wgRequest, $haclgContLang, $wgContLang,
             $haclgIP, $haclgHaloScriptPath, $wgScriptPath, $wgOut,
             $haclgOpenWikiAccess;
 
@@ -84,7 +84,7 @@ class HACLToolbar
             {
                 $pageSD = HACLSecurityDescriptor::newFromId($pageSDId);
                 $pageSDTitle = Title::newFromId($pageSDId);
-                $canModify = HACLEvaluator::checkACLManager($pageSDTitle, $wgwiki_User, HACLLanguage::RIGHT_EDIT);
+                $canModify = HACLEvaluator::checkACLManager($pageSDTitle, $wgUser, HACLLanguage::RIGHT_EDIT);
                 // Check if page SD is a single predefined right inclusion
                 if ($single = $pageSD->isSinglePredefinedRightInclusion())
                 {
@@ -110,7 +110,7 @@ class HACLToolbar
         }
 
         // Add Quick ACLs
-        $quickacl = HACLQuickacl::newForwiki_UserId($wgwiki_User->getId());
+        $quickacl = HACLQuickacl::newForUserId($wgUser->getId());
         $default = $quickacl->getDefaultSD_ID();
         $hasQuickACL = false;
         foreach ($quickacl->getSDs() as $sd)
@@ -247,15 +247,15 @@ class HACLToolbar
     // Warn him about it.
     public static function warnNonReadableCreate($editpage)
     {
-        global $haclgOpenWikiAccess, $wgwiki_User, $wgOut;
-        $g = $wgwiki_User->getGroups();
+        global $haclgOpenWikiAccess, $wgUser, $wgOut;
+        $g = $wgUser->getGroups();
         if (!isset($editpage->eNonReadable) &&
             !$editpage->mTitle->getArticleId() &&
             (!$g || !in_array('bureaucrat', $g) && !in_array('sysop', $g)))
         {
             list($r, $sd) = HACLEvaluator::checkNamespaceRight(
                 $editpage->mTitle->getNamespace(),
-                $wgwiki_User->getId(), HACLLanguage::RIGHT_READ
+                $wgUser->getId(), HACLLanguage::RIGHT_READ
             );
             if (!($sd ? $r : $haclgOpenWikiAccess))
                 $editpage->eNonReadable = true;
@@ -274,9 +274,9 @@ class HACLToolbar
     // Get categories which are granted readable for current user
     public static function getReadableCategories()
     {
-        global $wgwiki_User;
-        $groups = $wgwiki_User->getId() ? IACLStorage::get('Groups')->getGroupsOfMember('user', $wgwiki_User->getId()) : NULL;
-        list($uid) = haclfGetwiki_UserID($wgwiki_User);
+        global $wgUser;
+        $groups = $wgUser->getId() ? IACLStorage::get('Groups')->getGroupsOfMember('user', $wgUser->getId()) : NULL;
+        list($uid) = haclfGetUserID($wgUser);
         // Lookup readable categories
         $pe = IACLStorage::get('IR')->lookupRights($uid, $groups, HACLLanguage::RIGHT_READ, 'category');
         if ($pe)
@@ -312,24 +312,52 @@ class HACLToolbar
     // Similar to warnNonReadableCreate, but warns about non-readable file uploads
     public static function warnNonReadableUpload($upload)
     {
-        global $haclgOpenWikiAccess, $wgwiki_User, $wgOut;
-        $g = $wgwiki_User->getGroups();
+        global $haclgOpenWikiAccess, $wgUser, $wgOut;
+        $g = $wgUser->getGroups();
         if (!$g || !in_array('bureaucrat', $g) && !in_array('sysop', $g))
         {
-            list($r, $sd) = HACLEvaluator::checkNamespaceRight(
-                NS_FILE, $wgwiki_User->getId(), HACLLanguage::RIGHT_READ
-            );
-            if (!($sd ? $r : $haclgOpenWikiAccess))
+            $dest = NULL;
+            if ($upload->mDesiredDestName)
             {
-                $sel = self::getReadableCategoriesSelectBox(true);
-                if ($sel)
+                $dest = Title::makeTitleSafe(NS_FILE, $upload->mDesiredDestName);
+            }
+            if (!$dest || !$dest->exists())
+            {
+                // New file
+                list($cr, $sd) = HACLEvaluator::checkNamespaceRight(
+                    NS_FILE, $wgUser->getId(), HACLLanguage::RIGHT_CREATE
+                );
+                $cr = $sd ? $cr : $haclgOpenWikiAccess;
+                if (!$cr)
                 {
-                    self::addToolbarLinks($wgOut);
-                    $t = wfMsgNoTrans('hacl_nonreadable_upload', $sel);
+                    $wgOut->showErrorPage('hacl_upload_forbidden', 'hacl_upload_forbidden_text');
+                    return false;
                 }
                 else
-                    $t = wfMsgNoTrans('hacl_nonreadable_upload_nocat');
-                $upload->uploadFormTextTop .= $t;
+                {
+                    list($cr, $sd) = HACLEvaluator::checkNamespaceRight(
+                        NS_FILE, $wgUser->getId(), HACLLanguage::RIGHT_READ
+                    );
+                    $cr = $sd ? $cr : $haclgOpenWikiAccess;
+                    if (!$cr)
+                    {
+                        $sel = self::getReadableCategoriesSelectBox(true);
+                        if ($sel)
+                        {
+                            self::addToolbarLinks($wgOut);
+                            $t = wfMsgNoTrans('hacl_nonreadable_upload', $sel);
+                        }
+                        else
+                            $t = wfMsgNoTrans('hacl_nonreadable_upload_nocat');
+                        $upload->uploadFormTextTop .= $t;
+                    }
+                }
+            }
+            elseif (($permission_errors = $dest->getUserPermissionsErrors('edit', $wgUser)))
+            {
+                // New version of existing file
+                $wgOut->showPermissionsErrorPage($permission_errors);
+                return false;
             }
         }
         return true;
@@ -339,25 +367,25 @@ class HACLToolbar
     // a non-readable page without checking the "force" checkbox
     public static function attemptNonReadableCreate($editpage)
     {
-        global $haclgOpenWikiAccess, $wgwiki_User, $wgParser, $wgRequest, $wgOut;
-        $g = $wgwiki_User->getGroups();
+        global $haclgOpenWikiAccess, $wgUser, $wgParser, $wgRequest, $wgOut;
+        $g = $wgUser->getGroups();
         if (!$editpage->mTitle->getArticleId() && (!$g || !in_array('bureaucrat', $g) && !in_array('sysop', $g)))
         {
             list($r, $sd) = HACLEvaluator::checkNamespaceRight(
                 $editpage->mTitle->getNamespace(),
-                $wgwiki_User->getId(), HACLLanguage::RIGHT_READ
+                $wgUser->getId(), HACLLanguage::RIGHT_READ
             );
             if (!($sd ? $r : $haclgOpenWikiAccess))
             {
                 $editpage->eNonReadable = true;
-                $options = ParserOptions::newFromwiki_User($wgwiki_User);
+                $options = ParserOptions::newFromUser($wgUser);
                 // clearState = true when not cleared yet
-                $text = $wgParser->preSaveTransform($editpage->textbox1, $editpage->mTitle, $wgwiki_User, $options, !$wgParser->mStripState);
+                $text = $wgParser->preSaveTransform($editpage->textbox1, $editpage->mTitle, $wgUser, $options, !$wgParser->mStripState);
                 $parserOutput = $wgParser->parse($text, $editpage->mTitle, $options);
                 $categories = $parserOutput->getCategoryLinks();
                 foreach ($categories as &$cat)
                     $cat = "Category:$cat";
-                list($r, $sd) = HACLEvaluator::hasCategoryRight($categories, $wgwiki_User->getId(), HACLLanguage::RIGHT_READ);
+                list($r, $sd) = HACLEvaluator::hasCategoryRight($categories, $wgUser->getId(), HACLLanguage::RIGHT_READ);
                 if ((!$r || !$sd) && !$wgRequest->getBool('hacl_nonreadable_create'))
                 {
                     $editpage->showEditForm();
@@ -375,14 +403,14 @@ class HACLToolbar
      *
      * No modifications are made if:
      * - Page namespace is ACL
-     * - wiki_User is anonymous
-     * - wiki_Users don't have the right to modify page SD
+     * - User is anonymous
+     * - Users don't have the right to modify page SD
      * - 'haloacl_protect_with' request value is invalid
      *   (valid are 'unprotected', or ID/name of predefined right or THIS page SD)
      *
      * @param Article $article
      *        The article which was saved
-     * @param wiki_User $user
+     * @param User $user
      *        The user who saved the article
      * @param string $text
      *        The content of the article
@@ -391,7 +419,7 @@ class HACLToolbar
      */
     public static function articleSaveComplete_SaveSD(&$article, &$user, $text)
     {
-        global $wgwiki_User, $wgRequest, $haclgContLang;
+        global $wgUser, $wgRequest, $haclgContLang;
 
         if ($user->isAnon())
         {
@@ -454,7 +482,7 @@ class HACLToolbar
         // Check SD modification rights
         if ($pageSDId)
         {
-            $allowed = HACLEvaluator::checkACLManager(Title::newFromId($pageSDId), $wgwiki_User, 'edit');
+            $allowed = HACLEvaluator::checkACLManager(Title::newFromId($pageSDId), $wgUser, 'edit');
             if (!$allowed)
                 return true;
         }
@@ -496,7 +524,7 @@ class HACLToolbar
             return true;
         $InsideSaveEmbedded = true;
 
-        global $wgRequest, $wgOut, $haclgContLang, $wgwiki_User;
+        global $wgRequest, $wgOut, $haclgContLang, $wgUser;
 
         $isACL = $article->getTitle()->getNamespace() == HACL_NS_ACL;
         if ($isACL)
@@ -692,7 +720,7 @@ class HACLToolbar
         return true;
     }
 
-    // wiki_User setting hook allowing user to select whether to display "ACL" tab for 
+    // User setting hook allowing user to select whether to display "ACL" tab for 
     static function GetPreferences($user, &$prefs)
     {
         global $haclgDisableACLTab;
@@ -711,8 +739,8 @@ class HACLToolbar
     // Returns content-action for inserting into skin tabs
     static function getContentAction()
     {
-        global $wgTitle, $haclgContLang, $haclgDisableACLTab, $wgwiki_User;
-        if ($wgwiki_User->isAnon())
+        global $wgTitle, $haclgContLang, $haclgDisableACLTab, $wgUser;
+        if ($wgUser->isAnon())
             return NULL;
         if ($wgTitle->getNamespace() == HACL_NS_ACL)
         {
@@ -739,7 +767,7 @@ class HACLToolbar
                     '/'.$wgTitle->getPrefixedText();
             $sd = Title::newFromText($sd, HACL_NS_ACL);
             // Hide ACL tab if SD does not exist and $haclgDisableACLTab is true
-            if (!$sd || !empty($haclgDisableACLTab) && !$sd->exists() && !$wgwiki_User->getOption('showacltab'))
+            if (!$sd || !empty($haclgDisableACLTab) && !$sd->exists() && !$wgUser->getOption('showacltab'))
                 return NULL;
             return array(
                 'class' => $sd->exists() ? false : 'new',

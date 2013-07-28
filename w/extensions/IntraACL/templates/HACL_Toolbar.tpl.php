@@ -8,11 +8,11 @@
  </select>
  <?php if ($selectedIndex !== false && $options[$selectedIndex]['title']) { ?>
   <a id="hacl_toolbar_goto" href="<?= Title::newFromText($options[$selectedIndex]['title'])->getLocalUrl() ?>" target="_blank" title="<?= htmlspecialchars(wfMsg('hacl_toolbar_goto', $options[$selectedIndex]['title'])) ?>">
-   <img src="<?= $wgScriptPath ?>/skins/monobook/external.png" width="10" height="10" alt="&rarr;" />
+   <img src="<?= $wgScriptPath ?>/skins/monobook/external-ltr.png" width="10" height="10" alt="&rarr;" />
   </a>
  <?php } else { ?>
   <a id="hacl_toolbar_goto" href="#" target="_blank" style="display: none">
-   <img src="<?= $wgScriptPath ?>/skins/monobook/external.png" width="10" height="10" alt="&rarr;" />
+   <img src="<?= $wgScriptPath ?>/skins/monobook/external-ltr.png" width="10" height="10" alt="&rarr;" />
   </a>
  <?php } ?>
 <?php } elseif (!$canModify) { ?>
@@ -34,7 +34,7 @@
   </div></div>
  </div>
 <?php } if ($title->exists()) { ?>
- <a style="text-decoration: none" class="haclt_title" target="_blank" href="index.php?title=Special:IntraACL&action=acl&sd=<?= urlencode($haclgContLang->getPetPrefix(HACLLanguage::PET_PAGE).'/'.$title) ?>"><img src="<?= $haclgHaloScriptPath ?>/skins/images/edit.png" width="16" height="16" alt="Edit" /> <?= wfMsg('hacl_toolbar_advanced_'.($pageSDId ? 'edit' : 'create')) ?></a>
+ <a style="text-decoration: none" class="haclt_title" target="_blank" href="index.php?title=Special:IntraACL&action=acl&sd=<?= urlencode($haclgContLang->getPetPrefix($title->getNamespace() == NS_CATEGORY ? HACLLanguage::PET_CATEGORY : HACLLanguage::PET_PAGE).'/'.$title) ?>"><img src="<?= $haclgHaloScriptPath ?>/skins/images/edit.png" width="16" height="16" alt="Edit" /> <?= wfMsg('hacl_toolbar_advanced_'.($pageSDId ? 'edit' : 'create')) ?></a>
 <?php } elseif (!$hasQuickACL) {?>
  <?= wfMsg('hacl_toolbar_select_qacl', $quick_acl_link) ?>
 <?php } if ($nonreadable) { ?>

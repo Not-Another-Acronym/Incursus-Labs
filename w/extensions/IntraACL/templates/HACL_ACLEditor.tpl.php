@@ -1,5 +1,5 @@
 <form action="<?= $wgScript ?>?action=submit" method="POST">
-<input type="hidden" name="wpEditToken" value="<?= htmlspecialchars($wgwiki_User->editToken()) ?>" />
+<input type="hidden" name="wpEditToken" value="<?= htmlspecialchars($wgUser->editToken()) ?>" />
 <input type="hidden" name="wpEdittime" value="<?= $aclArticle ? $aclArticle->getTimestamp() : '' ?>" />
 <input type="hidden" name="wpStarttime" value="<?= wfTimestampNow() ?>" />
 <input type="hidden" id="wpTitle" name="title" value="<?= $aclArticle ? htmlspecialchars($aclTitle->getPrefixedText()) : '' ?>" />
@@ -41,7 +41,7 @@
    </select>
    <input type="text" id="to_name" style="width: 200px" autocomplete="off" />
    <a id="hacl_to_goto" href="#" target="_blank" style="display: none" title="">
-    <img src="<?= $wgScriptPath ?>/skins/monobook/external.png" width="10" height="10" alt="&rarr;" />
+    <img src="<?= $wgScriptPath ?>/skins/monobook/external-ltr.png" width="10" height="10" alt="&rarr;" />
    </a>
   </p>
   <p>

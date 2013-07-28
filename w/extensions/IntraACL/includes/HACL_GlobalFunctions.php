@@ -135,12 +135,23 @@ function haclfSetupExtension()
     if (!empty($_SERVER['SERVER_NAME']))
     {
         define('HACL_HALOACL_VERSION', '1.0');
+
+        // UI hooks - useless in console mode
         $wgHooks['EditPage::showEditForm:initial'][] = 'HACLToolbar::warnNonReadableCreate';
         $wgHooks['UploadForm:initial'][] = 'HACLToolbar::warnNonReadableUpload';
         $wgHooks['EditPage::attemptSave'][] = 'HACLToolbar::attemptNonReadableCreate';
-        // ArticleSaveComplete_SaveSD hook must come before articleSaveComplete_SaveEmbedded
+        $wgHooks['EditPage::showEditForm:fields'][] = 'haclfAddToolbarForEditPage';
+        $wgHooks['SkinTemplateContentActions'][] = 'HACLToolbar::SkinTemplateContentActions';
+        $wgHooks['SkinTemplateNavigation'][] = 'HACLToolbar::SkinTemplateNavigation';
+        // UI hooks used to update permissions along with article modification
+        // ArticleSaveComplete_SaveSD hook must run before articleSaveComplete_SaveEmbedded
         $wgHooks['ArticleSaveComplete'][] = 'HACLToolbar::articleSaveComplete_SaveSD';
         $wgHooks['ArticleSaveComplete'][] = 'HACLToolbar::articleSaveComplete_SaveEmbedded';
+
+        // Permission and cache checks - intentionally disabled in console mode
+        $wgHooks['userCan'][] = 'HACLEvaluator::userCan';
+        $wgHooks['IsFileCacheable'][] = 'haclfIsFileCacheable';
+        $wgHooks['PageRenderingHash'][] = 'haclfPageRenderingHash';
     }
     else
     {
@@ -160,23 +171,9 @@ function haclfSetupExtension()
             $haclgUnprotectableNamespaceIds[$ns] = true;
     }
 
-    //--- Register hooks ---
-    global $wgHooks;
-    $wgHooks['userCan'][] = 'HACLEvaluator::userCan';
-
     wfLoadExtensionMessages('IntraACL');
 
-    $wgHooks['IsFileCacheable'][]       = 'haclfIsFileCacheable';
-    $wgHooks['PageRenderingHash'][]     = 'haclfPageRenderingHash';
-
-    //-- Hooks for ACL toolbar --
-    $wgHooks['EditPage::showEditForm:fields'][] = 'haclfAddToolbarForEditPage';
-    $wgHooks['SkinTemplateContentActions'][] = 'HACLToolbar::SkinTemplateContentActions';
-    $wgHooks['SkinTemplateNavigation'][] = 'HACLToolbar::SkinTemplateNavigation';
     $wgHooks['GetPreferences'][] = 'HACLToolbar::GetPreferences';
-
-    //-- Hooks for SMW interface (not checked and disabled)
-    //$wgHooks['sfEditPageBeforeForm'][] = 'haclfAddToolbarForSemanticForms';
 
     //-- includes for Ajax calls --
     global $wgUseAjax, $wgRequest;
@@ -197,12 +194,6 @@ function haclfSetupExtension()
         'author'      => "Vitaliy Filippov, Stas Fomin, Thomas Schweitzer",
         'url'         => 'http://wiki.4intra.net/IntraACL',
         'description' => 'The best MediaWiki rights extension, based on HaloACL.');
-
-    // Register autocompletion icon
-    $wgHooks['smwhACNamespaceMappings'][] = 'haclfRegisterACIcon';
-
-    // Handle input fields of Semantic Forms
-    $wgHooks['sfCreateFormField'][] = 'haclfHandleFormField';
 
     // HACLParserFunctions callbacks
     $wgParser->setFunctionHook('haclaccess',            'HACLParserFunctions::access');
@@ -303,8 +294,8 @@ function haclfInitContentLanguage($langcode)
 /**
  * Returns the ID and name of the given user.
  *
- * @param wiki_User/string/int $user
- *         wiki_User-object, name of a user or ID of a user. If <null> (which is the
+ * @param User/string/int $user
+ *         User-object, name of a user or ID of a user. If <null> (which is the
  *      default), the currently logged in user is assumed.
  *      There are two special user names:
  *            '*' - all users including anonymous (ID: 0)
@@ -317,7 +308,7 @@ function haclfInitContentLanguage($langcode)
  *         HACLException(HACLException::UNKNOWN_USER)
  *             ...if the user does not exist.
  */
-function haclfGetwiki_UserID($user = null, $throw_error = true)
+function haclfGetUserID($user = null, $throw_error = true)
 {
     $userID = false;
     $userName = '';
@@ -325,9 +316,9 @@ function haclfGetwiki_UserID($user = null, $throw_error = true)
     {
         // no user given
         // => the current user's ID is requested
-        global $wgwiki_User;
-        $userID = $wgwiki_User->getId();
-        $userName = $wgwiki_User->getName();
+        global $wgUser;
+        $userID = $wgUser->getId();
+        $userName = $wgUser->getName();
     }
     elseif (is_int($user) || is_numeric($user))
     {
@@ -350,16 +341,16 @@ function haclfGetwiki_UserID($user = null, $throw_error = true)
         {
             // name of user given
             $etc = haclfDisableTitlePatch();
-            $userID = wiki_User::idFromName($user);
+            $userID = User::idFromName($user);
             haclfRestoreTitlePatch($etc);
             if (!$userID)
                 $userID = false;
             $userName = $user;
         }
     }
-    elseif (is_a($user, 'wiki_User'))
+    elseif (is_a($user, 'User'))
     {
-        // wiki_User-object given
+        // User-object given
         $userID = $user->getId();
         $userName = $user->getName();
     }
@@ -409,9 +400,9 @@ function haclfIsFileCacheable($article)
  */
 function haclfPageRenderingHash(&$hash)
 {
-    global $wgwiki_User, $wgTitle;
-    if (is_object($wgwiki_User))
-        $hash .= '!'.$wgwiki_User->getId();
+    global $wgUser, $wgTitle;
+    if (is_object($wgUser))
+        $hash .= '!'.$wgUser->getId();
     return true;
 }
 

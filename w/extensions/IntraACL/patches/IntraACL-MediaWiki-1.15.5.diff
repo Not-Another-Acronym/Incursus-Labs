@@ -40,7 +40,7 @@ diff -r 9adb5260a4b9 includes/ChangesFeed.php
  	public function execute( $feed, $rows, $limit=0, $hideminor=false, $lastmod=false, $target='' ) {
  		global $messageMemc, $wgFeedCacheTimeout;
  		global $wgSitename, $wgContLanguageCode;
-+		global $wgwiki_User;
++		global $wgUser;
  
  		if ( !FeedUtils::checkFeedOutput( $this->format ) ) {
  			return;
@@ -48,7 +48,7 @@ diff -r 9adb5260a4b9 includes/ChangesFeed.php
  
 -		$timekey = wfMemcKey( $this->type, $this->format, 'timestamp' );
 -		$key = wfMemcKey( $this->type, $this->format, $limit, $hideminor, $target );
-+		$userid = $wgwiki_User->getId();
++		$userid = $wgUser->getId();
 +		$timekey = wfMemcKey( $this->type, $this->format, $userid, 'timestamp' );
 +		$key = wfMemcKey( $this->type, $this->format, $userid, 'limit', $limit, 'minor', $hideminor );
  
@@ -75,10 +75,10 @@ diff -r 9adb5260a4b9 includes/FeedUtils.php
 -		//NOTE: Check permissions for anonymous users, not current user.
 -		//      No "privileged" version should end up in the cache.
 -		//      Most feed readers will not log in anway.
--		$anon = new wiki_User();
+-		$anon = new User();
 -		$accErrors = $title->getUserPermissionsErrors( 'read', $anon, true );
 +		// NOTE: Check permissions for current user. -- IntraACL
-+		$accErrors = $title->getUserPermissionsErrors( 'read', $wgwiki_User, true );
++		$accErrors = $title->getUserPermissionsErrors( 'read', $wgUser, true );
  
  		if( $title->getNamespace() >= 0 && !$accErrors ) {
  			if( $oldid ) {
@@ -86,7 +86,7 @@ diff -r 9adb5260a4b9 includes/LogEventsList.php
 --- includes/LogEventsList.php	Mon Feb 28 20:30:17 2011 +0300
 +++ includes/LogEventsList.php	Mon Feb 28 20:34:48 2011 +0300
 @@ -206,6 +206,12 @@
- 		global $wgLang, $wgwiki_User, $wgContLang;
+ 		global $wgLang, $wgUser, $wgContLang;
  
  		$title = Title::makeTitle( $row->log_namespace, $row->log_title );
 +/*patch|2011-02-28|IntraACL|start*/
@@ -97,7 +97,7 @@ diff -r 9adb5260a4b9 includes/LogEventsList.php
 +
  		$classes = array( "mw-logline-{$row->log_type}" );
  		$time = $wgLang->timeanddate( wfTimestamp(TS_MW, $row->log_timestamp), true );
- 		// wiki_User links
+ 		// User links
 diff -r 9adb5260a4b9 includes/QueryPage.php
 --- includes/QueryPage.php	Mon Feb 28 20:30:17 2011 +0300
 +++ includes/QueryPage.php	Mon Feb 28 20:34:48 2011 +0300
@@ -284,11 +284,11 @@ diff -r 9adb5260a4b9 includes/Title.php
 +/*patch|2009-06-19|IntraACL|end*/
 +
  }
-diff -r 9adb5260a4b9 includes/wiki_User.php
---- includes/wiki_User.php	Mon Feb 28 20:30:17 2011 +0300
-+++ includes/wiki_User.php	Mon Feb 28 20:34:48 2011 +0300
+diff -r 9adb5260a4b9 includes/User.php
+--- includes/User.php	Mon Feb 28 20:30:17 2011 +0300
++++ includes/User.php	Mon Feb 28 20:34:48 2011 +0300
 @@ -498,6 +498,11 @@
- 	static function isValidwiki_UserName( $name ) {
+ 	static function isValidUserName( $name ) {
  		global $wgContLang, $wgMaxNameChars;
  
 +		# Disable IntraACL title check as the main and/or
@@ -297,7 +297,7 @@ diff -r 9adb5260a4b9 includes/wiki_User.php
 +			$hacl = haclfDisableTitlePatch();
 +
  		if ( $name == ''
- 		|| wiki_User::isIP( $name )
+ 		|| User::isIP( $name )
  		|| strpos( $name, '/' ) !== false
 @@ -505,6 +510,8 @@
  		|| $name != $wgContLang->ucfirst( $name ) ) {

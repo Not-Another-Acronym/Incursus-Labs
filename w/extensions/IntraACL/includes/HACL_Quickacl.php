@@ -40,7 +40,7 @@ class HACLQuickacl
         return $this->userid;
     }
 
-    public function setwiki_Userid($userid)
+    public function setUserid($userid)
     {
         $this->userid = $userid;
     }
@@ -79,7 +79,7 @@ class HACLQuickacl
         $this->sd_ids[$sdID] = true;
     }
 
-    public static function newForwiki_UserId($user_id)
+    public static function newForUserId($user_id)
     {
         return IACLStorage::get('QuickACL')->getQuickacl($user_id);
     }

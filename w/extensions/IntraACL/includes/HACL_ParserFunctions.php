@@ -52,20 +52,20 @@ class HACLParserFunctions
     // array(string): All predefined rights that are referenced
     private $mPredefinedRights = array();
 
-    // array(string): wiki_Users who can change a right
-    private $mRightManagerwiki_Users = array();
+    // array(string): Users who can change a right
+    private $mRightManagerUsers = array();
 
     // array(string): Groups who can change a right
     private $mRightManagerGroups = array();
 
-    // array(string): wiki_Users who can change a group
-    private $mGroupManagerwiki_Users = array();
+    // array(string): Users who can change a group
+    private $mGroupManagerUsers = array();
 
     // array(string): Groups who can change a group
     private $mGroupManagerGroups = array();
 
-    // array(string): wiki_Users who are member of a group
-    private $mwiki_UserMembers = array();
+    // array(string): Users who are member of a group
+    private $mUserMembers = array();
 
     // array(string): Groups who are member of a group
     private $mGroupMembers = array();
@@ -303,7 +303,7 @@ class HACLParserFunctions
             // no errors
             // => store the list of assignees for later use.
             if (!in_array($fingerprint, $this->mFingerprints)) {
-                $this->mRightManagerwiki_Users  = array_merge($this->mRightManagerwiki_Users, $users);
+                $this->mRightManagerUsers  = array_merge($this->mRightManagerUsers, $users);
                 $this->mRightManagerGroups = array_merge($this->mRightManagerGroups, $groups);
                 $this->mFingerprints[] = $fingerprint;
             }
@@ -349,7 +349,7 @@ class HACLParserFunctions
             // no errors
             // => store the list of members for later use.
             if (!in_array($fingerprint, $this->mFingerprints)) {
-                $this->mwiki_UserMembers  = array_merge($this->mwiki_UserMembers, $users);
+                $this->mUserMembers  = array_merge($this->mUserMembers, $users);
                 $this->mGroupMembers = array_merge($this->mGroupMembers, $groups);
                 $this->mFingerprints[] = $fingerprint;
             }
@@ -396,7 +396,7 @@ class HACLParserFunctions
             // no errors
             // => store the list of assignees for later use.
             if (!in_array($fingerprint, $this->mFingerprints)) {
-                $this->mGroupManagerwiki_Users  = array_merge($this->mGroupManagerwiki_Users, $users);
+                $this->mGroupManagerUsers  = array_merge($this->mGroupManagerUsers, $users);
                 $this->mGroupManagerGroups = array_merge($this->mGroupManagerGroups, $groups);
                 $this->mFingerprints[] = $fingerprint;
             }
@@ -473,7 +473,7 @@ class HACLParserFunctions
      * its content is transferred to the database.
      *
      * @param Article $article
-     * @param wiki_User $user
+     * @param User $user
      * @param string $text
      * @return true
      */
@@ -518,7 +518,7 @@ class HACLParserFunctions
                     $sd->removeAllRights();
                     // The empty right article can now be changed by everyone
                     $sd->setManageGroups(NULL);
-                    $sd->setManagewiki_Users('*,#');
+                    $sd->setManageUsers('*,#');
                     $sd->save();
                 }
             }
@@ -628,7 +628,7 @@ class HACLParserFunctions
      * @param unknown_type $oldTitle
      * @param unknown_type $newTitle
      */
-    public static function TitleMoveComplete($oldTitle, $newTitle, $wgwiki_User, $pageid, $redirid)
+    public static function TitleMoveComplete($oldTitle, $newTitle, $wgUser, $pageid, $redirid)
     {
         if ($oldTitle->getNamespace() == HACL_NS_ACL)
             return true;
@@ -662,7 +662,7 @@ class HACLParserFunctions
             $group->removeAllMembers();
             // The empty group article can now be changed by everyone
             $group->setManageGroups(NULL);
-            $group->setManagewiki_Users('*,#');
+            $group->setManageUsers('*,#');
             $group->save();
         } catch(Exception $e) {}
     }
@@ -714,8 +714,8 @@ class HACLParserFunctions
                         $exists = true;
                         // Check consistency: is the definition in the DB equal to article text?
                         $consistent = $grp->checkIsEqual(
-                            $this->mwiki_UserMembers, $this->mGroupMembers,
-                            $this->mGroupManagerwiki_Users, $this->mGroupManagerGroups
+                            $this->mUserMembers, $this->mGroupMembers,
+                            $this->mGroupManagerUsers, $this->mGroupManagerGroups
                         );
                     }
                 }
@@ -795,18 +795,18 @@ class HACLParserFunctions
     private function saveGroup()
     {
         // FIXME make this HACLGroup's method
-        global $wgwiki_User;
+        global $wgUser;
         $t = $this->mTitle;
         $id = $t->getArticleID();
         $group = new HACLGroup(
             $id,
             $t->getText(),
             $this->mGroupManagerGroups,
-            $this->mGroupManagerwiki_Users
+            $this->mGroupManagerUsers
         );
-        if (HACLGroup::exists($id) && !$group->userCanModify($wgwiki_User))
+        if (HACLGroup::exists($id) && !$group->userCanModify($wgUser))
         {
-            wfDebug(__METHOD__." ".$wgwiki_User->getName()." does not have the right to modify group $t\n");
+            wfDebug(__METHOD__." ".$wgUser->getName()." does not have the right to modify group $t\n");
             return false;
         }
         wfDebug(__METHOD__." Saving group: $t\n");
@@ -814,8 +814,8 @@ class HACLParserFunctions
         $group->removeAllMembers();
         foreach ($this->mGroupMembers as $m)
             $group->addGroup($m);
-        foreach ($this->mwiki_UserMembers as $m)
-            $group->addwiki_User($m);
+        foreach ($this->mUserMembers as $m)
+            $group->addUser($m);
         return true;
     }
 
@@ -851,7 +851,7 @@ class HACLParserFunctions
             list($pe, $peType) = HACLSecurityDescriptor::nameOfPE($t->getText());
             $sd = new HACLSecurityDescriptor(
                 $t->getArticleID(), $t->getText(), $pe, $peType,
-                $this->mRightManagerGroups, $this->mRightManagerwiki_Users
+                $this->mRightManagerGroups, $this->mRightManagerUsers
             );
             $sd->save();
 
@@ -890,7 +890,7 @@ class HACLParserFunctions
         {
             // check for members
             if (count($this->mGroupMembers) == 0 &&
-                count($this->mwiki_UserMembers) == 0)
+                count($this->mUserMembers) == 0)
                 $msg[] = wfMsgForContent('hacl_group_must_have_members');
         }
         // Check if the definition of a right or security descriptor is complete and valid
@@ -950,20 +950,20 @@ class HACLParserFunctions
             }
         }
         if (count($this->mRightManagerGroups) > 0 ||
-            count($this->mRightManagerwiki_Users) > 0) {
+            count($this->mRightManagerUsers) > 0) {
             if ($type == 'group') {
                 $msg[] = wfMsgForContent("hacl_invalid_parser_function",
                     $haclgContLang->getParserFunction(HACLLanguage::PF_MANAGE_RIGHTS));
             }
         }
         if (count($this->mGroupManagerGroups) > 0 ||
-            count($this->mGroupManagerwiki_Users) > 0) {
+            count($this->mGroupManagerUsers) > 0) {
             if ($type == 'right' || $type == 'sd') {
                 $msg[] = wfMsgForContent("hacl_invalid_parser_function",
                     $haclgContLang->getParserFunction(HACLLanguage::PF_MANAGE_GROUP));
             }
         }
-        if (count($this->mwiki_UserMembers) > 0 ||
+        if (count($this->mUserMembers) > 0 ||
             count($this->mGroupMembers) > 0) {
             if ($type == 'right' || $type == 'sd') {
                 $msg[] = wfMsgForContent("hacl_invalid_parser_function",
@@ -1049,9 +1049,9 @@ class HACLParserFunctions
                 {
                     $user = $t->getText();
                     // Check if the user exists
-                    if (wiki_User::idFromName($user) == 0)
+                    if (User::idFromName($user) == 0)
                     {
-                        // wiki_User does not exist => add a warning
+                        // User does not exist => add a warning
                         $warnings[] = wfMsgForContent("hacl_unknown_user", $user);
                     }
                     else
@@ -1197,7 +1197,7 @@ class HACLParserFunctions
      * group.
      *
      * @param array(string) $users
-     *         Array of user names (without namespace "wiki_User"). May be empty.
+     *         Array of user names (without namespace "User"). May be empty.
      * @param array(string) $groups
      *         Array of group names (without namespace "ACL"). May be emtpy.
      * @param bool $isAssignedTo

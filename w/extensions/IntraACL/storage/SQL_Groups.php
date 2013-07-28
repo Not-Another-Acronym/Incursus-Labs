@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Copyright (c) 2010.,
+ * Copyright (c) 2010+,
  *   Vitaliy Filippov <vitalif[d.o.g]mail.ru>
  *   Stas Fomin <stas.fomin[d.o.g]yandex.ru>
  *
@@ -26,14 +26,6 @@
 
 class IntraACL_SQL_Groups
 {
-    private function getDBConn(&$bb, &$wiki, &$tables)
-    {
-        global $wgAuth;
-	$bb = $wgAuth->connect($wiki);
-	$tables["group"]=$wgAuth->_GroupsTB;
-	$tables["users"]=$wgAuth->_UserTB;
-	$tables["usergroups"]=$wgAuth->_User_GroupTB;
-    }
     /**
      * Returns the name of the group with the ID $groupID.
      *
@@ -46,9 +38,8 @@ class IntraACL_SQL_Groups
      */
     public function groupNameForID($groupID)
     {
-	$this->getDBConn($bb, $wiki, $tables);
-	$qry = mysql_query("SELECT group_name FROM " . $tables["group"] . " WHERE group_id = '" . mysql_real_escape_string($groupID) . "'");
-	$groupName = mysql_fetch_object($qry)->group_name;
+        $dbr = wfGetDB(DB_SLAVE);
+        $groupName = $dbr->selectField('halo_acl_groups', 'group_name', array('group_id' => $groupID), __METHOD__);
         return $groupName;
     }
 
@@ -59,6 +50,17 @@ class IntraACL_SQL_Groups
      */
     public function saveGroup(HACLGroup $group)
     {
+        $dbw = wfGetDB(DB_MASTER);
+        $mgGroups = implode(',', $group->getManageGroups());
+        $mgUsers = implode(',', $group->getManageUsers());
+        $dbw->replace(
+            'halo_acl_groups', NULL, array(
+                'group_id'   => $group->getGroupID(),
+                'group_name' => $group->getGroupName(),
+                'mg_groups'  => $mgGroups,
+                'mg_users'   => $mgUsers
+            ), __METHOD__
+        );
     }
 
     /**
@@ -72,49 +74,34 @@ class IntraACL_SQL_Groups
      */
     public function getGroups($text = NULL, $nottext = NULL, $limit = NULL, $as_object = false)
     {
-	$this->getDBConn($bb, $wiki, $tables);
+        $dbr = wfGetDB(DB_SLAVE);
 
         $options = array('ORDER BY' => 'group_name');
         if ($limit !== NULL)
             $options['LIMIT'] = $limit;
         $where = array();
         if (strlen($text))
-            $where[] = 'group_name LIKE "%' . mysql_real_escape_string($text) . '%"';
+            $where[] = 'group_name LIKE '.$dbr->addQuotes("%$text%");
         if (strlen($nottext))
-            $where[] = 'group_name NOT LIKE "%' . mysql_real_escape_string($nottext) . '%"';
-	$qry = "SELECT group_name, group_id FROM " . $tables["group"];
-	if(count($where) != 0)
-		$qry .= " WHERE " . implode(" AND ", $where);
-	foreach($options as $i => $v)
-		$qry .= " " . $i . " " . $v;
-        $qry = mysql_query($qry, $bb);
+            $where[] = 'group_name NOT LIKE '.$dbr->addQuotes("%$nottext%");
+        $res = $dbr->select('halo_acl_groups', '*', $where, __METHOD__, $options);
+
         $groups = array();
         if ($as_object)
         {
-            while ($row = mysql_fetch_object($qry))
+            while ($row = $dbr->fetchObject($res))
             {
                 $groupID = $row->group_id;
                 $groupName = $row->group_name;
-                $mgGroups = array(5);
-                $mgUsers = array();
+                $mgGroups = IACLStorage::explode($row->mg_groups);
+                $mgUsers = IACLStorage::explode($row->mg_users);
                 $groups[] = new HACLGroup($groupID, $groupName, $mgGroups, $mgUsers);
             }
         }
         else
         {
-            while ($row = mysql_fetch_array($qry))
-	    {
-		$rowArray = array();
-		$rowArray[0] = $row["group_id"];
-		$rowArray["group_id"] = $rowArray[0];
-		$rowArray[1] = $row["group_name"];
-                $rowArray["group_name"] = $rowArray[1];
-		$rowArray[2] = "5";
-                $rowArray["mg_groups"] = $rowArray[2];
-		$rowArray[3] = "";
-                $rowArray["mg_users"] = $rowArray[3];
-                $groups[] = $rowArray;
-	    }
+            while ($row = $dbr->fetchRow($res))
+                $groups[] = $row;
         }
         return $groups;
     }
@@ -132,24 +119,21 @@ class IntraACL_SQL_Groups
      *
      */
     public function getGroupByName($groupName) {
-	if($groupName == "/")
-	    return -1;
-	$groupName = explode("/", $groupName);
-	if(count($groupName)>1)
-		$groupName = $groupName[1];
-	else
-		$groupName = $groupName[0];
-	IntraACL_SQL_Groups::getDBConn($bb, $wiki, $tables);
-        $qry = mysql_query("SELECT group_name, group_id FROM " . $tables["group"] . " WHERE group_name = '" . mysql_real_escape_string($groupName) . "'");
+        $dbr = wfGetDB( DB_SLAVE );
+        $gt = $dbr->tableName('halo_acl_groups');
         $group = NULL;
 
-        if ($row = mysql_fetch_object($qry)){
+        $res = $dbr->select('halo_acl_groups', '*', array('group_name' => $groupName), __METHOD__);
+
+        if ($dbr->numRows($res) == 1) {
+            $row = $dbr->fetchObject($res);
             $groupID = $row->group_id;
-            $mgGroups = array(5);
-            $mgUsers  = array();
+            $mgGroups = IACLStorage::explode($row->mg_groups);
+            $mgUsers  = IACLStorage::explode($row->mg_users);
 
             $group = new HACLGroup($groupID, $groupName, $mgGroups, $mgUsers);
         }
+        $dbr->freeResult($res);
 
         return $group;
     }
@@ -167,18 +151,21 @@ class IntraACL_SQL_Groups
      *
      */
     public function getGroupByID($groupID) {
-	IntraACL_SQL_Groups::getDBConn($bb, $wiki, $tables);
-        $qry = mysql_query("SELECT group_name, group_id FROM " . $tables["group"] . " WHERE group_id = '" . mysql_real_escape_string($groupID) . "'");
+        $dbr = wfGetDB( DB_SLAVE );
         $group = NULL;
 
-        if ($row = mysql_fetch_object($qry)){
+        $res = $dbr->select('halo_acl_groups', '*', array('group_id' => $groupID), __METHOD__);
+
+        if ($dbr->numRows($res) == 1) {
+            $row = $dbr->fetchObject($res);
             $groupID = $row->group_id;
-	    $groupName = $row->group_name;
-            $mgGroups = array(5);
-            $mgUsers  = array();
+            $groupName = $row->group_name;
+            $mgGroups = IACLStorage::explode($row->mg_groups);
+            $mgUsers  = IACLStorage::explode($row->mg_users);
 
             $group = new HACLGroup($groupID, $groupName, $mgGroups, $mgUsers);
         }
+        $dbr->freeResult($res);
 
         return $group;
     }
@@ -192,7 +179,13 @@ class IntraACL_SQL_Groups
      *         The ID of the user who is added to the group.
      *
      */
-    public function addwiki_UserToGroup($groupID, $userID) {
+    public function addUserToGroup($groupID, $userID) {
+        $dbw = wfGetDB( DB_MASTER );
+
+        $dbw->replace('halo_acl_group_members', NULL, array(
+            'parent_group_id' => $groupID,
+            'child_type'      => 'user',
+            'child_id '       => $userID), __METHOD__);
     }
 
     /**
@@ -207,6 +200,12 @@ class IntraACL_SQL_Groups
      *
      */
     public function addGroupToGroup($parentGroupID, $childGroupID) {
+        $dbw = wfGetDB( DB_MASTER );
+
+        $dbw->replace('halo_acl_group_members', NULL, array(
+            'parent_group_id' => $parentGroupID,
+            'child_type'      => 'group',
+            'child_id '       => $childGroupID), __METHOD__);
     }
 
     /**
@@ -218,7 +217,13 @@ class IntraACL_SQL_Groups
      *         The ID of the user who is removed from the group.
      *
      */
-    public function removewiki_UserFromGroup($groupID, $userID) {
+    public function removeUserFromGroup($groupID, $userID) {
+        $dbw = wfGetDB( DB_MASTER );
+
+        $dbw->delete('halo_acl_group_members', array(
+            'parent_group_id' => $groupID,
+            'child_type'      => 'user',
+            'child_id '       => $userID), __METHOD__);
     }
 
     /**
@@ -229,6 +234,8 @@ class IntraACL_SQL_Groups
      *
      */
     public function removeAllMembersFromGroup($groupID) {
+        $dbw = wfGetDB( DB_MASTER );
+        $dbw->delete('halo_acl_group_members', array('parent_group_id' => $groupID), __METHOD__);
     }
 
     /**
@@ -242,6 +249,11 @@ class IntraACL_SQL_Groups
      *
      */
     public function removeGroupFromGroup($parentGroupID, $childGroupID) {
+        $dbw = wfGetDB( DB_MASTER );
+        $dbw->delete('halo_acl_group_members', array(
+            'parent_group_id' => $parentGroupID,
+            'child_type'      => 'group',
+            'child_id '       => $childGroupID), __METHOD__);
     }
 
     /**
@@ -257,19 +269,14 @@ class IntraACL_SQL_Groups
      */
     public function getMembersOfGroup($groupID, $memberType)
     {
-	if($memberType == 'group')
-	    return array();
-	
-	$this->getDBConn($bb, $wiki, $tables);
-        $qry = mysql_query("SELECT b.login_name_clean FROM " . $tables["usergroups"] . " as a JOIN " . $tables["users"] . " AS b ON a.user_id = b.user_id WHERE a.group_id = '" . mysql_real_escape_string($groupID) . "'", $bb);
+        $dbr = wfGetDB( DB_SLAVE );
+        $res = $dbr->select('halo_acl_group_members', 'child_id', array(
+            'parent_group_id' => $groupID,
+            'child_type'      => $memberType), __METHOD__);
 
         $members = array();
-        while ($row = mysql_fetch_object($qry))
-	{
-	    $qry2 = mysql_query("SELECT user_id FROM user WHERE user_name = '" . $row->login_name_clean . "'");
-	    if($row2 = $mysql_fetch_object($qry2))
-            	$members[] = (int) $row2->user_id;
-	}
+        while ($row = $dbr->fetchObject($res))
+            $members[] = (int) $row->child_id;
 
         $dbr->freeResult($res);
 
@@ -283,9 +290,11 @@ class IntraACL_SQL_Groups
     {
         if (!$ids)
             return array();
-	$members = array();
-	foreach($ids as $id)
-		$members[$id]["user"] = getMembersOfGroup($id,"user");
+        $dbr = wfGetDB(DB_SLAVE);
+        $res = $dbr->select('halo_acl_group_members', '*', array('parent_group_id' => $ids), __METHOD__);
+        $members = array();
+        foreach ($res as $row)
+            $members[$row->parent_group_id][$row->child_type][] = $row->child_id;
         return $members;
     }
 
@@ -299,19 +308,35 @@ class IntraACL_SQL_Groups
      */
     public function getGroupsOfMember($memberType, $memberID, $recurse = true)
     {
-	if($memberType = 'group')
-	    return array();
-	
-	$this->getDBConn($bb, $wiki, $tables);
-        $qry = mysql_query("SELECT group_id FROM " . $tables["usergroups"] . " WHERE user_id = '" . mysql_real_escape_string($memberID) . "'", $bb);
+        $dbr = wfGetDB(DB_SLAVE);
 
-        $members = array();
-        while ($row = mysql_fetch_object($qry))
+        $type = $memberType;
+        $ids = $memberID;
+        $groups = array();
+        if ($memberType == 'group')
+            $groups[$memberID] = true;
+        do
         {
-	    $members[] = $row->group_id;
-        }
+            $res = $dbr->select('halo_acl_group_members', 'parent_group_id', array(
+                'child_type' => $type,
+                'child_id'   => $ids,
+            ), __METHOD__);
+            $type = 'group';
+            $ids = array();
+            foreach ($res as $row)
+            {
+                $id = $row->parent_group_id;
+                if (empty($groups[$id]))
+                {
+                    $ids[] = $id;
+                    $groups[$id] = true;
+                }
+            }
+        } while ($recurse && $ids);
+        if ($memberType == 'group')
+            unset($groups[$memberID]);
 
-        return $members;
+        return array_keys($groups);
     }
 
     /**
@@ -340,26 +365,58 @@ class IntraACL_SQL_Groups
      */
     public function hasGroupMember($parentID, $childID, $memberType, $recursive)
     {
-	if($memberType == HACLGroup::GROUP)
-	    return array();
-	$this->getDBConn($bb, $wiki, $tables);
-        $qry = mysql_query("SELECT group_id FROM " . $tables["usergroups"] . " WHERE group_id = '" . mysql_real_escape_string($parentID) . "' AND user_id = '" . mysql_real_escape_string($childID) . "'");
-        $group = NULL;
+        $dbr = wfGetDB(DB_SLAVE);
 
-        if ($row = mysql_fetch_object($qry)){
-            $groupID = $row->group_id;
-            $mgGroups = array(5);
-            $mgUsers  = array();
-
-            $group = new HACLGroup($groupID, $groupName, $mgGroups, $mgUsers);
+        // Ask for the immediate parents of $childID
+        // Then check recursively, if one of the parent groups of $childID is $parentID
+        if ($memberType === 'user')
+        {
+            // Include 0 and -1 to check for "all users" (*) / "all registered users" (#) grants, respectively
+            $childID = array($childID, -1, 0);
         }
+        $where = array('child_type' => $memberType, 'child_id' => $childID);
+        $parents = array();
+        do
+        {
+            $res = $dbr->select('halo_acl_group_members', 'parent_group_id', $where, __METHOD__);
+            $new = array();
+            foreach ($res as $row)
+                if (!isset($parents[$row->parent_group_id]))
+                    $new[$row->parent_group_id] = true;
+            if (isset($new[$parentID]))
+                return true;
+            $parents += $new;
+            $where = array('child_type' => 'group', 'child_id' => array_keys($new));
+        } while ($recursive && $new);
 
-        return $group;
+        return false;
     }
 
     public function getGroupMembersRecursive($groupID, $children = array())
     {
-	return getMembersOfGroup($groupID,"user");
+        if (!isset($children['user']))
+            $children['user'] = array();
+        if (!isset($children['group']))
+            $children['group'] = array();
+        $dbr = wfGetDB(DB_SLAVE);
+        while ($groupID)
+        {
+            $r = $dbr->select('halo_acl_group_members',
+                'child_type, child_id',
+                array('parent_group_id' => $groupID),
+                __METHOD__);
+            $groupID = array();
+            while ($obj = $dbr->fetchRow($r))
+            {
+                if (!$children[$obj[0]][$obj[1]])
+                {
+                    $children[$obj[0]][$obj[1]] = true;
+                    if ($obj[0] == 'group')
+                        $groupID[] = $obj[1];
+                }
+            }
+        }
+        return $children;
     }
 
     /**
@@ -371,10 +428,12 @@ class IntraACL_SQL_Groups
     {
         if (!$group_ids)
             return array();
-	$groups = array();
-	foreach($group_ids as $id)
-	    $groups[$id] = getGroupByID($id);
-	return $groups;
+        $dbr = wfGetDB(DB_SLAVE);
+        $rows = array();
+        $res = $dbr->select('halo_acl_groups', '*', is_null($group_ids) ? '1' : array('group_id' => $group_ids), __METHOD__);
+        foreach ($res as $r)
+            $rows[$r->group_id] = $r;
+        return $rows;
     }
 
     /**
@@ -390,6 +449,14 @@ class IntraACL_SQL_Groups
      *
      */
     public function deleteGroup($groupID) {
+        $dbw = wfGetDB( DB_MASTER );
+
+        // Delete the group from the hierarchy of groups (as parent and as child)
+        $dbw->delete('halo_acl_group_members', array('parent_group_id' => $groupID), __METHOD__);
+        $dbw->delete('halo_acl_group_members', array('child_type' => 'group', 'child_id' => $groupID), __METHOD__);
+
+        // Delete the group's definition
+        $dbw->delete('halo_acl_groups', array('group_id' => $groupID), __METHOD__);
     }
 
     /**
@@ -404,15 +471,8 @@ class IntraACL_SQL_Groups
      */
     public function groupExists($groupID)
     {
-	$this->getDBConn($bb, $wiki, $tables);
-        $qry = mysql_query("SELECT group_name, group_id FROM " . $tables["group"] . " WHERE group_id = '" . mysql_real_escape_string($groupID) . "'");
-        $group = NULL;
-
-        if ($row = mysql_fetch_object($qry)){
-	    return true;
-        }
-	
-	return false;
-
+        $dbr = wfGetDB(DB_SLAVE);
+        $obj = $dbr->selectRow('halo_acl_groups', 'group_id', array('group_id' => $groupID), __METHOD__);
+        return ($obj !== false);
     }
 }

@@ -46,7 +46,7 @@ function haclAutocomplete($t, $n, $limit = 11, $checkbox_prefix = false)
         $limit = 11;
     $a = array();
     $dbr = wfGetDB(DB_SLAVE);
-    // wiki_Users
+    // Users
     if ($t == 'user')
     {
         $r = $dbr->select(
@@ -230,7 +230,7 @@ function haclGroupClosure($groups, $predefined = '')
             $m = IACLStorage::get('Groups')->getGroupMembersRecursive($i);
             $members[$k] = array();
             foreach (IACLStorage::get('Util')->getUsers(array_keys($m['user'])) as $u)
-                $members[$k][] = 'wiki_User:'.$u->user_name;
+                $members[$k][] = 'User:'.$u->user_name;
             foreach (IACLStorage::get('Groups')->getGroupsByIds(array_keys($m['group'])) as $g)
                 $members[$k][] = $g->group_name;
             sort($members[$k]);

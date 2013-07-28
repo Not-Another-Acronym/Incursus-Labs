@@ -57,7 +57,7 @@ class HACLEvaluator
      *
      * @param Title $title
      *        The title object for the article that will be accessed.
-     * @param wiki_User $user
+     * @param User $user
      *        Reference to the current user.
      * @param string $action
      *        Action concerning the title in question
@@ -119,7 +119,7 @@ class HACLEvaluator
 
         $groups = $user->getGroups();
         if ($groups && (in_array('bureaucrat', $groups) || in_array('sysop', $groups)))
-            return array('wiki_User is a bureaucrat/sysop and can do anything.', true, true);
+            return array('User is a bureaucrat/sysop and can do anything.', true, true);
 
         // no access to the page "Permission denied" is allowed.
         // together with the TitlePatch which returns this page, this leads
@@ -260,7 +260,7 @@ class HACLEvaluator
 
         // Check for all rights, if they are granted for the given user
         foreach ($rights as $right)
-            if ($right->grantedForwiki_User($userID))
+            if ($right->grantedForUser($userID))
                 return true;
 
         return false;
@@ -384,8 +384,8 @@ class HACLEvaluator
      *
      * @param Title $t
      *        The title.
-     * @param wiki_User $user
-     *        wiki_User-object of the user.
+     * @param User $user
+     *        User-object of the user.
      * @param int $actionID
      *        ID of the action (one of HACLLanguage::RIGHT_*).
      *        In fact, $actionID=RIGHT_READ checks read access
@@ -468,7 +468,7 @@ class HACLEvaluator
      * Starts the log for an evaluation. The log string is assembled in self::mLog.
      *
      * @param Title $title
-     * @param wiki_User $user
+     * @param User $user
      * @param string $action
      */
     private static function startLog($title, $user, $action)
@@ -487,7 +487,7 @@ class HACLEvaluator
         self::$mLog .= "IntraACL Evaluation Log\n";
         self::$mLog .= "======================\n\n";
         self::$mLog .= "Title: ". (is_null($title) ? "null" : $title->getFullText()). "\n";
-        self::$mLog .= "wiki_User: ". $user->getName(). "\n";
+        self::$mLog .= "User: ". $user->getName(). "\n";
         self::$mLog .= "Action: $action; mode: $haclgCombineMode\n";
     }
 
