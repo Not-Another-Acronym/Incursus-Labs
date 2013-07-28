@@ -210,4 +210,5 @@ $wgShowExceptionDetails = true;
 $wgUseAjax = true;
 require_once( "$IP/extensions/CategoryTree/CategoryTree.php" );
 $wgCategoryTreeCategoryPageMode = CT_MODE_ALL;
+$haclgUnprotectableNamespaces = array();
 ?>

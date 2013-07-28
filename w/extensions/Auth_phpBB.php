@@ -223,7 +223,8 @@
         function __construct($aConfig)
         {
             // Set some values phpBB needs.
-            define('IN_PHPBB', true); // We are secure.
+            if(!defined('IN_PHPBB'))
+		define('IN_PHPBB', true); // We are secure.
 
             // Read config
             $this->_GroupsTB        = $aConfig['GroupsTB'];
