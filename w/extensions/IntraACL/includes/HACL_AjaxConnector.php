@@ -62,7 +62,7 @@ function haclAutocomplete($t, $n, $limit = 11, $checkbox_prefix = false)
     elseif ($t == 'group')
     {
         $ip = 'hi_';
-        $r = IACLStorage::get('Groups')->getGroups($n, $limit);
+        $r = IACLStorage::get('Groups')->getGroups($n, null, $limit);
         foreach ($r as $group)
         {
             $n = $group['group_name'];

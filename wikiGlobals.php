@@ -114,5 +114,5 @@
 	$wgCategoryTreeCategoryPageMode, $wgCategoryTreeCategoryPageOptions, $wgCategoryTreeSpecialPageOptions, $wgCategoryTreeSidebarOptions,
 	$wgCategoryTreePageCategoryOptions, $wgUseEnotif, $wgCanonicalNamespaceNames, $wgContLanguageCode, $wgRequest, $wgMemc, $wgLangConvMemc,
 	$wgSessionStarted, $wgLanguageNames, $wgContLang, $wgwiki_User, $wgLang, $wgOut, $wgParser, $wgTitle, $wgDeferredUpdateList,
-	$wgFullyInitialised, $wgArticle;
+	$wgFullyInitialised, $wgArticle, $haclgOpenWikiAccess;
 ?>

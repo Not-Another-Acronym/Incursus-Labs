@@ -90,7 +90,6 @@ class Hooks {
 	 */
 	public static function run( $event, $args = array() ) {
 		global $wgHooks;
-
 		// Return quickly in the most common case
 		if ( !isset( self::$handlers[$event] ) && !isset( $wgHooks[$event] ) ) {
 			return true;

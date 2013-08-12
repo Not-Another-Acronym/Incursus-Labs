@@ -32,7 +32,6 @@
  */
 if (!defined('MEDIAWIKI'))
     die("This file is part of the IntraACL extension. It is not a valid entry point.");
-
 /**
  * This class describes a group in HaloACL.
  *

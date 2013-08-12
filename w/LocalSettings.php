@@ -15,6 +15,12 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	exit;
 }
 
+error_reporting( -1 );
+ini_set( 'display_startup_errors', 1);
+ini_set( 'display_errors', 1 );
+$wgDebugComments = true;
+$wgResourceLoaderDebug = true;
+
 ## Uncomment this to disable output compression
 # $wgDisableOutputCompression = true;
 
@@ -69,8 +75,8 @@ $wgDBTableOptions   = "ENGINE=InnoDB, DEFAULT CHARSET=binary";
 $wgDBmysql5 = false;
 
 ## Shared memory settings
-$wgMainCacheType    = CACHE_NONE;
-$wgMemCachedServers = array();
+//$wgMainCacheType    = CACHE_NONE;
+//$wgMemCachedServers = array();
 
 ## To enable image uploads, make sure the 'images' directory
 ## is writable, then set this to true:
@@ -181,7 +187,7 @@ require_once("$IP/extensions/Realnames/Realnames.php");
 require_once('extensions/IntraACL/includes/HACL_Initialize.php');
 enableIntraACL();
 
-$wgMainCacheType = CACHE_ACCEL;
+//$wgMainCacheType = CACHE_ACCEL;
 
 
 // see http://www.mediawiki.org/wiki/Manual:Hooks/SpecialPage_initList
@@ -210,5 +216,7 @@ $wgShowExceptionDetails = true;
 $wgUseAjax = true;
 require_once( "$IP/extensions/CategoryTree/CategoryTree.php" );
 $wgCategoryTreeCategoryPageMode = CT_MODE_ALL;
-$haclgUnprotectableNamespaces = array();
+$haclgInclusionDeniedMessage = '';
+$wgPasswordAttemptThrottle = false;
+$haclgOpenWikiAccess = true;
 ?>

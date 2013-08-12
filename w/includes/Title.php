@@ -149,7 +149,6 @@ class Title {
 		$t = new Title();
 		$t->mDbkeyform = str_replace( ' ', '_', $filteredText );
 		$t->mDefaultNamespace = $defaultNamespace;
-
 		static $cachedcount = 0 ;
 		if ( $t->secureAndSplit() ) {
 			if ( $defaultNamespace == NS_MAIN ) {
@@ -1737,7 +1736,6 @@ class Title {
 			 !wfRunHooks( 'getUserPermissionsErrorsExpensive', array( &$this, &$user, $action, &$result ) ) ) {
 			$errors = $this->resultToError( $errors, $result );
 		}
-
 		return $errors;
 	}
 
@@ -2124,7 +2122,6 @@ class Title {
 	 */
 	protected function getUserPermissionsErrorsInternal( $action, $user, $doExpensiveQueries = true, $short = false ) {
 		wfProfileIn( __METHOD__ );
-
 		# Read has special handling
 		if ( $action == 'read' ) {
 			$checks = array(

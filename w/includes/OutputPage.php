@@ -2084,7 +2084,6 @@ class OutputPage extends ContextSource {
 	 */
 	public function showPermissionsErrorPage( $errors, $action = null ) {
 		global $wgGroupPermissions;
-
 		// For some action (read, edit, create and upload), display a "login to do this action"
 		// error if all of the following conditions are met:
 		// 1. the user is not logged in

@@ -691,7 +691,7 @@ class HACLSecurityDescriptor
                 return true;
 
         // Sysops and bureaucrats can modify anything
-        $user = User::newFromId($userID);
+        $user = wiki_User::newFromId($userID);
         $groups = $user->getGroups();
         if (in_array('sysop', $groups) || in_array('bureaucrat', $groups))
             return true;

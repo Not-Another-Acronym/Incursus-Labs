@@ -1,5 +1,6 @@
+<script src="https://naa.waterfoul.net/w/load.php?debug=true&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
 <form action="<?= $wgScript ?>?action=submit" method="POST">
-<input type="hidden" name="wpEditToken" value="<?= htmlspecialchars($wgUser->editToken()) ?>" />
+<input type="hidden" name="wpEditToken" value="<?= htmlspecialchars($wgwiki_User->editToken()) ?>" />
 <input type="hidden" name="wpEdittime" value="<?= $aclArticle ? $aclArticle->getTimestamp() : '' ?>" />
 <input type="hidden" name="wpStarttime" value="<?= wfTimestampNow() ?>" />
 <input type="hidden" id="wpTitle" name="title" value="<?= $aclArticle ? htmlspecialchars($aclTitle->getPrefixedText()) : '' ?>" />
@@ -78,8 +79,16 @@
 
 <script language="JavaScript">
 var AE;
+function waitLoop(continueFn, checkFn)
+{
+	if(!checkFn())
+	   setTimeout(function(){waitLoop(continueFn, checkFn);},10);
+	else continueFn();
+}
 exAttach(window, 'load', function()
 {
+waitLoop(function(){
+waitLoop(function(){
     var msg = {
 <?php foreach (explode(' ',
         'edit_save edit_create regexp_user regexp_group'.
@@ -113,5 +122,7 @@ exAttach(window, 'load', function()
         initialType: '<?= $aclPEType ?>',
         initialExists: <?= $aclArticle ? 1 : 0 ?>
     });
+}, function(){ return mw.util != null; });
+}, function(){ return mw.config != null; });
 });
 </script>

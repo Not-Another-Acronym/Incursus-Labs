@@ -18,8 +18,12 @@
 		$location = explode("/", dirname($_SERVER['PHP_SELF']));
 		$path = "";
 		foreach($location as $loc)
+		{
+			if($loc == "index.php")
+				break;
 			if($loc != "")
 				$path .= "../";
+		}
 	        define('ROOT_PATH', $path . "phpBB");
 		$new = true;
 		global $db, $user, $cache, $SID, $_SID, $config, $phpbb_root_path, $phpEx, $auth, $template;

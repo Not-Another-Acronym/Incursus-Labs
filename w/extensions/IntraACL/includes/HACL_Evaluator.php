@@ -76,7 +76,6 @@ class HACLEvaluator
         self::startLog($title, $user, $action);
 
         $grant = self::userCan_Switches($title, $user, $action);
-
         // Articles with no SD are not protected if $haclgOpenWikiAccess is
         // true. Otherwise access is denied for non-bureaucrats/sysops.
         if (!$grant[2])
@@ -102,7 +101,6 @@ class HACLEvaluator
         // because Wiki needs it to show the creation form.
         if ($action == 'read' && !$result && !$grant[2] && !$title->exists())
             $grant[2] = self::userCan($title, $user, 'create', $result);
-
         return $grant[2];
     }
 
@@ -257,7 +255,6 @@ class HACLEvaluator
     {
         // retrieve all appropriate rights from the database
         $rights = IACLStorage::get('IR')->getRights($titleID, $type, $actionID, $originNE);
-
         // Check for all rights, if they are granted for the given user
         foreach ($rights as $right)
             if ($right->grantedForUser($userID))

@@ -535,7 +535,8 @@
         public function initwiki_User( &$user, $autocreate=false )
     	{
             // Connect to the database.
-    		$fresMySQLConnection = $this->connect();
+		$fresMySQLConnection2;
+    		$fresMySQLConnection = $this->connect($fresMySQLConnection2);
 
             $username = $this->utf8($user->mName); // Convert to UTF8
 

@@ -316,9 +316,9 @@ function haclfGetUserID($user = null, $throw_error = true)
     {
         // no user given
         // => the current user's ID is requested
-        global $wgUser;
-        $userID = $wgUser->getId();
-        $userName = $wgUser->getName();
+        global $wgwiki_User;
+        $userID = $wgwiki_User->getId();
+        $userName = $wgwiki_User->getName();
     }
     elseif (is_int($user) || is_numeric($user))
     {
@@ -341,7 +341,7 @@ function haclfGetUserID($user = null, $throw_error = true)
         {
             // name of user given
             $etc = haclfDisableTitlePatch();
-            $userID = User::idFromName($user);
+            $userID = wiki_User::idFromName($user);
             haclfRestoreTitlePatch($etc);
             if (!$userID)
                 $userID = false;
@@ -369,7 +369,8 @@ function haclfGetUserID($user = null, $throw_error = true)
     if ($userID === false && $throw_error)
     {
         // invalid user
-        throw new HACLException(HACLException::UNKNOWN_USER, '"'.$user.'"');
+        //throw new HACLException(HACLException::UNKNOWN_USER, '"'.$user.'"');
+	$userID = 0;
     }
 
     return array($userID, $userName);
