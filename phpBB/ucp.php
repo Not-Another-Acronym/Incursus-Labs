@@ -7,7 +7,7 @@
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
 */
-
+ob_start();
 /**
 * @ignore
 */
@@ -357,5 +357,5 @@ function _module_zebra($mode, &$module_row)
 		$template->assign_var('S_ZEBRA_FOES_ENABLED', true);
 	}
 }
-
+ob_end_flush();
 ?>

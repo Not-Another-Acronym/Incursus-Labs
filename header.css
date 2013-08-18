@@ -80,7 +80,7 @@ html, body, #firstHeader {
 }
 
 .solidblockmenu li div input{
-        width: auto;
+        width: auto !important
 }
 
 .solidblockmenu li a{
@@ -97,7 +97,7 @@ html, body, #firstHeader {
 
 .solidblockmenu li a:hover, .solidblockmenu li a.current{
         color: white;
-        background: transparent url("./styles/rockn_roll/theme/images/blockactive.gif") center center repeat-x;
+        background: transparent url("../styles/rockn_roll/theme/images/blockactive.gif") center center repeat-x;
 }
 .tabcontainer{
         clear: left;
@@ -123,7 +123,7 @@ html, body, #firstHeader {
         padding: 0 5px;
         clear: both;
  background-color: #000000;
-        background-image: url("/phpBB/styles/rockn_roll/theme/images/bg_forum.gif");
+        background-image: url("./phpBB/styles/rockn_roll/theme/images/bg_forum.gif");
 }
 span.corners-top, span.corners-bottom, span.corners-top span, span.corners-bottom span {
         font-size: 1px;
@@ -173,19 +173,19 @@ span.corners-bottom span {
 }
 
 span.corners-top {
-        background-image: url("/phpBB/styles/rockn_roll/theme/images/corners_left.png");
+        background-image: url("./phpBB/styles/rockn_roll/theme/images/corners_left.png");
 }
 
 span.corners-top span {
-        background-image: url("/phpBB/styles/rockn_roll/theme/images/corners_right.png");
+        background-image: url("./phpBB/styles/rockn_roll/theme/images/corners_right.png");
 }
 
 span.corners-bottom {
-        background-image: url("/phpBB/styles/rockn_roll/theme/images/corners_left.png");
+        background-image: url("./phpBB/styles/rockn_roll/theme/images/corners_left.png");
 }
 
 span.corners-bottom span {
-        background-image: url("/phpBB/styles/rockn_roll/theme/images/corners_right.png");
+        background-image: url("./phpBB/styles/rockn_roll/theme/images/corners_right.png");
 }
 
 .quick-login{
@@ -236,7 +236,7 @@ span.corners-bottom span {
 	padding: 0 3px;
 	margin: 0;
 	color: #000;
-	background-image: url("/phpBB/styles/rockn_roll/theme/images/bg_button.gif");
+	background-image: url("./phpBB/styles/rockn_roll/theme/images/bg_button.gif");
 	border: 1px solid #666666;
 	margin-left: 5px;
 }

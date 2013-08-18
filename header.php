@@ -21,7 +21,7 @@
 		{
 			if($loc == "index.php")
 				break;
-			if($loc != "")
+			if($loc != "" && $loc != "_")
 				$path .= "../";
 		}
 	        define('ROOT_PATH', $path . "phpBB");
@@ -35,14 +35,17 @@
         require_once($phpbb_root_path . 'includes/functions_user.' . $phpEx);
 
 	$loggedIn = false;
-	$user->session_begin();
+	if(empty($user->session_id))
+		$user->session_begin();
+	
 	$auth->acl($user->data);
 	$bbuserses = $user->session_id;
 	$bbusercok = $user->cookie_data;
 	$exit = false;
 	if(!empty($_POST['naa_loginname']))
 	{
-	    $res=$auth->login($_POST["naa_loginname"], $_POST["naa_password"], true, 1, 1);
+	    print("here");
+	    $res=$auth->login($_POST["naa_loginname"], $_POST["naa_password"], true, 1, 1);print("here");
 	    if($res["error_msg"] == "LOGIN_ERROR_ATTEMPTS") {print("TOO MANY ATTEMPTS");exit();}
 	    $bbuserses = $user->session_id;
 	    $bbusercok = $user->cookie_data;
@@ -79,33 +82,33 @@
 		if(!$exit)
 		{
 			?>
-			<link rel="stylesheet" tyle="text/css" href="/header.css" />
+			<link rel="stylesheet" tyle="text/css" href="<?php print($path); ?>/header.css" />
 			<div id="firstHeader"><div class="wrap"><div class="forumbg">
 			    <div class="inner"><span class="corners-top"><span></span></span>
 			    <div class="solidblockmenu">
 			        <ul>
-			            <li><a href="/phpBB" title="Forums">Forums</a></li>
-			            <li><a href="/wiki" title="Wiki">Wiki</a></li>
+			            <li><a href="<?php print($path); ?>phpBB" title="Forums">Forums</a></li>
+			            <li><a href="<?php print($path); ?>wiki" title="Wiki">Wiki</a></li>
 			            <?php
 			                if($loggedIn)
 							{
 								if($user->data['loginname'] =="waterfoul" || $user->data['loginname'] == "MrWacko" || $user->data['loginname'] == "themastercheif92")
-									print('<li><a href="/industry/index.php">Industry Calc</a></li>');
+									print('<li><a href="' . $path . 'industry/index.php">Industry Calc</a></li>');
 								if( group_memberships( 14, $user->data['user_id'] ) )
-									print('<li><a href="/corpTools/index.php">Corporation Tools</a></li>');
+									print('<li><a href="' . $path . 'corpTools/index.php">Corporation Tools</a></li>');
 							}
 						?>
-			            <li><a href="/characterTools" title="Character Tools">Character Tools</a></li>
+			            <li><a href="<?php print($path); ?>characterTools" title="Character Tools">Character Tools</a></li>
 				    	<?php global $extra; print($extra); ?>
-				    <li><a href="/phpBB/memberlist.php" title="View complete list of members">Members</a></li>
-				    <li><a href="/phpBB/faq.php" title="Frequently Asked Questions">FAQ</a></li>
+				    <li><a href="<?php print($path); ?>phpBB/memberlist.php" title="View complete list of members">Members</a></li>
+				    <li><a href="<?php print($path); ?>phpBB/faq.php" title="Frequently Asked Questions">FAQ</a></li>
 			            <?php
 			                if($loggedIn)
 			                {
-			                        print('<li class="right first"><a href="/phpBB/ucp.php?mode=logout" title="Logoff">Logoff</a></li>'); 
-						print('<li class="right"><a href="/phpBB/ucp.php">' . $user->data['username'] . '</a></li>');
-						print('<li class="right"><a href="/phpBB/search.php?search_id=egosearch">View your posts</a></li>');
-						print('<li class="right last"><a href="/phpBB/ucp.php?i=pm&folder=inbox">' . $user->data['user_new_privmsg'] . ' new messages</a></li>');
+			                        print('<li class="right first"><a href="' . $path . 'phpBB/ucp.php?mode=logout" title="Logoff">Logoff</a></li>'); 
+						print('<li class="right"><a href="' . $path . 'phpBB/ucp.php">' . $user->data['username'] . '</a></li>');
+						print('<li class="right"><a href="' . $path . 'phpBB/search.php?search_id=egosearch">View your posts</a></li>');
+						print('<li class="right last"><a href="' . $path . 'phpBB/ucp.php?i=pm&folder=inbox">' . $user->data['user_new_privmsg'] . ' new messages</a></li>');
 			                }
 			                else
 			                {
@@ -117,7 +120,7 @@
 			                            <input type="hidden" name="redirect" value="./index.php?">
 			                        </fieldset>
 			                    </form></li>');
-					    print('<li class="right last"><a href="./ucp.php?mode=register">Register</a></li>');
+					    print('<li class="right last"><a href="' . $path . 'phpBB/ucp.php?mode=register">Register</a></li>');
 			                }
 			            ?>
 			        </ul>

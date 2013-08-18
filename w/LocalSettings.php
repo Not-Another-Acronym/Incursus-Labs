@@ -15,29 +15,26 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	exit;
 }
 
-error_reporting( -1 );
-ini_set( 'display_startup_errors', 1);
-ini_set( 'display_errors', 1 );
-$wgDebugComments = true;
-$wgResourceLoaderDebug = true;
+ini_set( 'display_startup_errors', 0);
+ini_set( 'display_errors', 0 );
 
 ## Uncomment this to disable output compression
 # $wgDisableOutputCompression = true;
 
-$wgSitename      = "Not Another Acronym";
-$wgMetaNamespace = "Not_Another_Acronym";
+$wgSitename      = "Warp To Me";
+$wgMetaNamespace = "Warp_To_Me";
 
 ## The URL base path to the directory containing the wiki;
 ## defaults for all runtime URL paths are based off of this.
 ## For more information on customizing the URLs
 ## (like /w/index.php/Page_title to /wiki/Page_title) please see:
 ## http://www.mediawiki.org/wiki/Manual:Short_URL
-$wgScriptPath       = "/w";
-$wgArticlePath = "/wiki/$1";
+$wgScriptPath       = "/_/w";
+$wgArticlePath = "/_/wiki/$1";
 $wgScriptExtension  = ".php";
 
 ## The protocol and server name to use in fully-qualified URLs
-$wgServer           = "https://naa.waterfoul.net";
+$wgServer           = "http://warptome.com";
 
 ## The relative URL path to the skins directory
 $wgStylePath        = "$wgScriptPath/skins";
@@ -61,9 +58,9 @@ $wgEmailAuthentication = true;
 ## Database settings
 $wgDBtype           = "mysql";
 $wgDBserver         = "localhost";
-$wgDBname           = "naa_wiki";
-$wgDBuser           = "naa";
-$wgDBpassword       = "CvVTWbwdaqUsV78L";
+$wgDBname           = "warptome_wiki";
+$wgDBuser           = "warptome_incurs";
+$wgDBpassword       = "OP-{ty)h5^22";
 
 # MySQL specific settings
 $wgDBprefix         = "";
@@ -166,14 +163,14 @@ $wgAuth_Config['UseExtDatabase'] = true;       // This tells the plugin that the
                                                 // The default settings is false.
  
 $wgAuth_Config['MySQL_Host']        = 'localhost';      // phpBB MySQL Host Name.
-$wgAuth_Config['MySQL_Username']    = 'naa';       // phpBB MySQL Username.
-$wgAuth_Config['MySQL_Password']    = 'CvVTWbwdaqUsV78L';       // phpBB MySQL Password.
-$wgAuth_Config['MySQL_Database']    = 'naa_phpBB';       // phpBB MySQL Database Name.
+$wgAuth_Config['MySQL_Username']    = 'warptome_incurs';       // phpBB MySQL Username.
+$wgAuth_Config['MySQL_Password']    = 'OP-{ty)h5^22';       // phpBB MySQL Password.
+$wgAuth_Config['MySQL_Database']    = 'warptome_phpBB';       // phpBB MySQL Database Name.
  
 $wgAuth_Config['UserTB']         = 'phpbb_users';       // Name of your PHPBB user table. (i.e. phpbb_users)
 $wgAuth_Config['GroupsTB']       = 'phpbb_groups';      // Name of your PHPBB groups table. (i.e. phpbb_groups)
 $wgAuth_Config['User_GroupTB']   = 'phpbb_user_group';  // Name of your PHPBB user_group table. (i.e. phpbb_user_group)
-$wgAuth_Config['PathToPHPBB']    = '../phpBB/';         // Path from this file to your phpBB install. Must end with '/'.
+$wgAuth_Config['PathToPHPBB']    = '../../_/phpBB/';         // Path from this file to your phpBB install. Must end with '/'.
  
 // Local
 $wgAuth_Config['LoginMessage']   = '<b>You need a phpBB account to login.</b><br /><a href="' . $wgAuth_Config['PathToPHPBB'] .
