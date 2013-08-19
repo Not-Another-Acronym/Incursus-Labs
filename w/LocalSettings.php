@@ -58,9 +58,9 @@ $wgEmailAuthentication = true;
 ## Database settings
 $wgDBtype           = "mysql";
 $wgDBserver         = "localhost";
-$wgDBname           = "warptome_wiki";
-$wgDBuser           = "warptome_incurs";
-$wgDBpassword       = "OP-{ty)h5^22";
+$wgDBname           = "";
+$wgDBuser           = "";
+$wgDBpassword       = "";
 
 # MySQL specific settings
 $wgDBprefix         = "";
@@ -161,11 +161,12 @@ $wgAuth_Config['UseWikiGroup'] = false;          // This tells the Plugin to req
 $wgAuth_Config['UseExtDatabase'] = true;       // This tells the plugin that the phpBB tables
                                                 // are in a different database then the wiki.
                                                 // The default settings is false.
- 
+
 $wgAuth_Config['MySQL_Host']        = 'localhost';      // phpBB MySQL Host Name.
-$wgAuth_Config['MySQL_Username']    = 'warptome_incurs';       // phpBB MySQL Username.
-$wgAuth_Config['MySQL_Password']    = 'OP-{ty)h5^22';       // phpBB MySQL Password.
-$wgAuth_Config['MySQL_Database']    = 'warptome_phpBB';       // phpBB MySQL Database Name.
+$wgAuth_Config['MySQL_Username']    = '';       // phpBB MySQL Username.
+$wgAuth_Config['MySQL_Password']    = '';       // phpBB MySQL Password.
+$wgAuth_Config['MySQL_Database']    = '';       // phpBB MySQL Database Name.
+include("$IP/wikiDB.php");
  
 $wgAuth_Config['UserTB']         = 'phpbb_users';       // Name of your PHPBB user table. (i.e. phpbb_users)
 $wgAuth_Config['GroupsTB']       = 'phpbb_groups';      // Name of your PHPBB groups table. (i.e. phpbb_groups)
