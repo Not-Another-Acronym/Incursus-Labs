@@ -10,7 +10,7 @@ i* @version $Id$
 
 /**
 */
-
+ob_start();
 /**
 * @ignore
 */
@@ -143,4 +143,5 @@ $template->set_filenames(array(
 );
 
 page_footer();
+ob_end_flush();
 ?>
