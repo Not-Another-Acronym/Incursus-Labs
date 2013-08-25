@@ -7,7 +7,6 @@
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
 */
-
 /**
 * @ignore
 */
@@ -15,7 +14,6 @@ if (!defined('IN_PHPBB'))
 {
 	exit;
 }
-
 /**
 * ucp_profile
 * Changing profile settings
@@ -92,11 +90,12 @@ class ucp_profile
 		                                $key = $key[0];
 
 						$name_ok = false;
+						require($phpbb_root_path . "/../config.php"); //This is here since it wouldn't work elsewhere even with the global kw
 						$sql_arr = array(
 						    'SELECT'    => 'c.characterID,c.characterName',
 						    'FROM'        => array(
-						        "naa_yapeal.accountKeyBridge" => 'b',
-						        "naa_yapeal.accountCharacters" => 'c',
+						        $mysql_yapeal_db . ".accountKeyBridge" => 'b',
+						        $mysql_yapeal_db . ".accountCharacters" => 'c',
 						        ),
 						    'WHERE'        => 'b.characterID = c.characterID AND b.keyID = "' . $key . '"',
 						    );
@@ -331,11 +330,12 @@ class ucp_profile
 				$row = $db->sql_fetchrow($result);
 				$key = explode(":", $row["pf_api_key"]);
 				$key = $key[0];
+				require($phpbb_root_path . "/../config.php");//This is here since it wouldn't work elsewhere even with the global kw
 				$sql_arr = array(
 				    'SELECT'    => 'c.characterID,c.characterName',
 				    'FROM'        => array(
-				        "naa_yapeal.accountKeyBridge" => 'b',
-				        "naa_yapeal.accountCharacters" => 'c',
+				        $mysql_yapeal_db . ".accountKeyBridge" => 'b',
+				        $mysql_yapeal_db . ".accountCharacters" => 'c',
 				        ),
 				    'WHERE'        => 'b.characterID = c.characterID AND b.keyID = "' . $key . '"',
 				    );
