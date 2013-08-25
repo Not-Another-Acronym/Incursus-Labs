@@ -1,6 +1,6 @@
 <?php
         include("../config.php");
-		include("../apiSync/syncPermissions.php");
+	include("../apiSync/syncPermissions.php");
 ?>
 <html>
 	<head>
@@ -78,7 +78,7 @@
 			                        $skillQry = $yapeal->query("
 				                        SELECT s.skillpoints, s.level, i.typeName, i.description
 				                        FROM  charSkills as s
-										JOIN `naa_dbdump`.`invTypes` as i ON i.`typeID` = s.`typeID`
+										JOIN `" . $mysql_eve_dbDump . "`.`invTypes` as i ON i.`typeID` = s.`typeID`
 				                        WHERE s.ownerID = " . $v->characterID
 				                    );
 				                    while($skillRow = $skillQry->fetch_object())

@@ -263,9 +263,9 @@ class IntraACL_SQL_Groups
         $fresMySQLConnection = $wgAuth->connect($fresMySQLConnection_wiki);
 	$users = array();
         $qry=mysql_query("
-		SELECT naa_wiki.user.user_id FROM phpbb_user_group
+		SELECT " . $GLOBALS['wgDBname'] . ".user.user_id FROM phpbb_user_group
 			LEFT JOIN phpbb_users ON phpbb_user_group.user_id = phpbb_users.user_id
-			LEFT JOIN naa_wiki.user ON naa_wiki.user.user_name = phpbb_users.username
+			LEFT JOIN " . $GLOBALS['wgDBname'] . ".user ON " . $GLOBALS['wgDBname'] . ".user.user_name = phpbb_users.username
 			WHERE phpbb_user_group.group_id = " . $groupId);
         while($row = mysql_fetch_assoc($qry))
             $users[] = $row["user_id"];
@@ -282,9 +282,9 @@ class IntraACL_SQL_Groups
         $fresMySQLConnection = $wgAuth->connect($fresMySQLConnection_wiki);
         $users = array();
         $qry=mysql_query("
-                SELECT naa_wiki.user.user_id, phpbb_user_group.group_id FROM phpbb_user_group
+                SELECT " . $GLOBALS['wgDBname'] . ".user.user_id, phpbb_user_group.group_id FROM phpbb_user_group
                         LEFT JOIN phpbb_users ON phpbb_user_group.user_id = phpbb_users.user_id
-                        LEFT JOIN naa_wiki.user ON naa_wiki.user.user_name = phpbb_users.username
+                        LEFT JOIN " . $GLOBALS['wgDBname'] . ".user ON " . $GLOBALS['wgDBname'] . ".user.user_name = phpbb_users.username
                         WHERE phpbb_user_group.group_id IN (" . implode(",", $ids) . ")");
 	$members = array();
         while($row = mysql_fetch_assoc($qry))

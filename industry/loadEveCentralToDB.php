@@ -20,7 +20,7 @@
 		foreach($items->marketstat->type as $v)
 		{
 			$db->query("
-				INSERT INTO  `naa_evecentral`.`marketStat` (
+				INSERT INTO  `" . $mysql_evecentral . "`.`marketStat` (
 					`recordID` ,
 					`itemID` ,
 					`Type` ,
@@ -49,7 +49,7 @@
 				);
 			");
 			$db->query("
-				INSERT INTO  `naa_evecentral`.`marketStat` (
+				INSERT INTO  `" . $mysql_evecentral . "`.`marketStat` (
 					`recordID` ,
 					`itemID` ,
 					`Type` ,
@@ -78,7 +78,7 @@
 				);
 			");
 			$db->query("
-				INSERT INTO  `naa_evecentral`.`marketStat` (
+				INSERT INTO  `" . $mysql_evecentral . "`.`marketStat` (
 					`recordID` ,
 					`itemID` ,
 					`Type` ,

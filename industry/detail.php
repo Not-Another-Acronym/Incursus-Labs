@@ -42,12 +42,12 @@
 	            $qry = $db->query("
 	                    SELECT c.`itemID`, g.`groupName`, c.`Profit`, c.`Date`, i.`typeName`, b.`researchTechTime`, b.`productionTime`, b.`researchCopyTime`, d.`valueInt`, d.`valueFloat`, b2.`maxProductionLimit`
 	                    FROM  `calculatedTheory` c
-	                    LEFT JOIN `naa_dbdump`.`invTypes` AS i ON c.`itemID` = i.`typeID`
-	                    LEFT JOIN `naa_dbdump`.`invGroups` AS g ON i.`groupID` = g.`groupID`
-	                    LEFT JOIN `naa_dbdump`.`invBlueprintTypes` as b ON b.`productTypeID` = i.`typeID`
-	                    LEFT OUTER JOIN `naa_dbdump`.`dgmTypeAttributes` as d ON d.`typeID` = b.`productTypeID` AND d.`attributeID` = 422
-			    LEFT OUTER JOIN `naa_dbdump`.`invMetaTypes` as m ON m.`typeID` = i.`typeID`
-                            LEFT OUTER JOIN `naa_dbdump`.`invBlueprintTypes` as b2 ON b2.`productTypeID` = m.`parentTypeID`
+	                    LEFT JOIN `" . $mysql_eve_dbDump . "`.`invTypes` AS i ON c.`itemID` = i.`typeID`
+	                    LEFT JOIN `" . $mysql_eve_dbDump . "`.`invGroups` AS g ON i.`groupID` = g.`groupID`
+	                    LEFT JOIN `" . $mysql_eve_dbDump . "`.`invBlueprintTypes` as b ON b.`productTypeID` = i.`typeID`
+	                    LEFT OUTER JOIN `" . $mysql_eve_dbDump . "`.`dgmTypeAttributes` as d ON d.`typeID` = b.`productTypeID` AND d.`attributeID` = 422
+			    LEFT OUTER JOIN `" . $mysql_eve_dbDump . "`.`invMetaTypes` as m ON m.`typeID` = i.`typeID`
+                            LEFT OUTER JOIN `" . $mysql_eve_dbDump . "`.`invBlueprintTypes` as b2 ON b2.`productTypeID` = m.`parentTypeID`
 	                    WHERE c.`itemID` IN (" . $db->escape_string(implode($current,",")) . ")
 	                    ORDER BY  `c`.`itemID` DESC,
 	                                  `c`.`Date` ASC

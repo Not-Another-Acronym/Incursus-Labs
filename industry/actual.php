@@ -41,7 +41,7 @@
 				
 				if(isset($_GET["ignore"]))
 				{
-					$other->query("INSERT INTO  `naa_other`.`Ignored_Transactions` (
+					$other->query("INSERT INTO  `" . $mysql_other_db . "`.`Ignored_Transactions` (
 						`UserID` ,
 						`jorunalTransactionID`
 						)
@@ -52,7 +52,7 @@
 				
 				if(isset($_GET["process"]))
 				{
-					$other->query("INSERT INTO  `naa_other`.`Processed_Items` (
+					$other->query("INSERT INTO  `" . $mysql_other_db . "`.`Processed_Items` (
 						`UserID` ,
 						`itemID`
 						)

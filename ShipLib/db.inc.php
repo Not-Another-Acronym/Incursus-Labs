@@ -1,1 +1,4 @@
-<?php $dbh = new PDO('mysql:host=localhost;dbname=naa_dbdump', 'naa', 'CvVTWbwdaqUsV78L'); ?>
+<?php
+ require("../config.php");
+ $dbh = new PDO('mysql:host=' . $mysql_host . ';dbname=' . $mysql_eve_dbDump, $mysql_user, $mysql_password);
+?>

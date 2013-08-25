@@ -7,7 +7,7 @@
 			$assetQry = $yapeal->query("
                 SELECT a.flag, a.lvl, a.lft, a.rgt, a.quantity, i.typeName, i.description, a.locationID, a.itemID
                 FROM  corpAssetList as a 
-				JOIN `naa_dbdump`.`invTypes` as i ON i.`typeID` = a.`typeID`
+				JOIN `" . $mysql_eve_dbDump . "`.`invTypes` as i ON i.`typeID` = a.`typeID`
                 WHERE a.ownerID = " . $corpID . " AND lft > " . $lft . " AND rgt < " . $rgt . " AND a.lvl = " . $level . "
                 ORDER BY a.locationID"
             );
@@ -15,7 +15,7 @@
             $assetQry = $yapeal->query("
                 SELECT a.flag, a.lvl, a.lft, a.rgt, a.quantity, i.typeName, i.description, a.locationID, a.itemID
                 FROM  charAssetList as a 
-				JOIN `naa_dbdump`.`invTypes` as i ON i.`typeID` = a.`typeID`
+				JOIN `" . $mysql_eve_dbDump . "`.`invTypes` as i ON i.`typeID` = a.`typeID`
                 WHERE a.ownerID = " . $currentChar . " AND lft > " . $lft . " AND rgt < " . $rgt . " AND a.lvl = " . $level . "
                 ORDER BY a.locationID"
             );
@@ -57,7 +57,7 @@
 		static $flags = array();
 		if(empty($flags[$id]))
 		{
-			$qry = $phpBB->query("SELECT s.flagName, s.flagText FROM naa_dbdump.invFlags AS s WHERE s.flagID=" . $id);
+			$qry = $phpBB->query("SELECT s.flagName, s.flagText FROM " . $mysql_eve_dbDump . ".invFlags AS s WHERE s.flagID=" . $id);
 			if($row=$qry->fetch_object())
 				$flags[$id] = Array($row->flagName, $row->flagText);
 			else
@@ -72,7 +72,7 @@
 		{
 			if(66000000 < $id && $id > 66014933)
 			{
-				$qry = $phpBB->query("SELECT s.stationName FROM naa_dbdump.staStations AS s WHERE s.stationID=" . ($id-6000001));
+				$qry = $phpBB->query("SELECT s.stationName FROM " . $mysql_eve_dbDump . ".staStations AS s WHERE s.stationID=" . ($id-6000001));
 				if($row=$qry->fetch_object())
 					$stations[$id] = $row->stationName;
 				else
@@ -80,7 +80,7 @@
 			}
 			else if(66014934 < $id && $id > 67999999)
 			{
-				$qry = $phpBB->query("SELECT c.stationName FROM naa_yapeal.eveConquerableStationList AS c WHERE c.stationID=" . ($id-6000000));
+				$qry = $phpBB->query("SELECT c.stationName FROM " . $mysql_yapeal_db . ".eveConquerableStationList AS c WHERE c.stationID=" . ($id-6000000));
 				if($row=$qry->fetch_object())
 					$stations[$id] = $row->stationName;
 				else
@@ -88,7 +88,7 @@
 			}
 			else if(60014861 < $id && $id > 60014928)
 			{
-				$qry = $phpBB->query("SELECT c.stationName FROM naa_yapeal.eveConquerableStationList AS c WHERE c.stationID=" . ($id));
+				$qry = $phpBB->query("SELECT c.stationName FROM " . $mysql_yapeal_db . ".eveConquerableStationList AS c WHERE c.stationID=" . ($id));
 				if($row=$qry->fetch_object())
 					$stations[$id] = $row->stationName;
 				else
@@ -96,7 +96,7 @@
 			}
 			else if(60000000 < $id && $id > 61000000)
 			{
-				$qry = $phpBB->query("SELECT s.stationName FROM naa_dbdump.staStations AS s WHERE s.stationID=" . ($id));
+				$qry = $phpBB->query("SELECT s.stationName FROM " . $mysql_eve_dbDump . ".staStations AS s WHERE s.stationID=" . ($id));
 				if($row=$qry->fetch_object())
 					$stations[$id] = $row->stationName;
 				else
@@ -104,7 +104,7 @@
 			}
 			else if($id >= 61000000)
 			{
-				$qry = $phpBB->query("SELECT c.stationName FROM naa_yapeal.eveConquerableStationList AS c WHERE c.stationID=" . ($id));
+				$qry = $phpBB->query("SELECT c.stationName FROM " . $mysql_yapeal_db . ".eveConquerableStationList AS c WHERE c.stationID=" . ($id));
 				if($row=$qry->fetch_object())
 					$stations[$id] = $row->stationName;
 				else
@@ -112,7 +112,7 @@
 			}
 			else
 			{
-				$qry = $phpBB->query("SELECT m.itemName FROM naa_dbdump.mapDenormalize AS m WHERE m.itemID=" . ($id));
+				$qry = $phpBB->query("SELECT m.itemName FROM " . $mysql_eve_dbDump . ".mapDenormalize AS m WHERE m.itemID=" . ($id));
 				if($row=$qry->fetch_object())
 					$stations[$id] = $row->itemName;
 				else
