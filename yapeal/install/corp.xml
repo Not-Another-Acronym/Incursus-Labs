@@ -61,6 +61,9 @@
       <KEY/>
       <UNSIGNED/>
     </field>
+    <field name="`contactTypeID`" type="I8" size="20">
+      <UNSIGNED/>
+    </field>
     <field name="`contactName`" type="C" size="255">
       <NOTNULL/>
     </field>
@@ -121,7 +124,7 @@
     <opt platform="mysql"> ENGINE = InnoDB COLLATE = utf8_unicode_ci</opt>
   </table>
   <table name="corpAttackers">
-    <descr>Sub table from /corp/KillLog.xml.aspx</descr>
+    <descr>Sub table from /corp/KillMails.xml.aspx</descr>
     <field name="`killID`" type="I8" size="20">
       <KEY/>
       <UNSIGNED/>
@@ -368,6 +371,9 @@
       <KEY/>
       <UNSIGNED/>
     </field>
+    <field name="`contactTypeID`" type="I8" size="20">
+      <UNSIGNED/>
+    </field>
     <field name="`contactName`" type="C" size="255">
       <NOTNULL/>
     </field>
@@ -399,6 +405,11 @@
       <NOTNULL/>
     </field>
     <field name="`description`" type="X"/>
+    <field name="`factionID`" type="I8" size="20">
+      <NOTNULL/>
+      <DEFAULT value="0"/>
+      <UNSIGNED/>
+    </field>
     <field name="`memberCount`" type="I2" size="5">
       <NOTNULL/>
       <UNSIGNED/>
@@ -517,7 +528,7 @@
     <opt platform="mysql"> ENGINE = InnoDB COLLATE = utf8_unicode_ci</opt>
   </table>
   <table name="corpGeneralSettings">
-    <descr>Sub table from /corp/KillLog.xml.aspx</descr>
+    <descr>Sub table from /corp/KillMails.xml.aspx</descr>
     <field name="`ownerID`" type="I8" size="20">
       <KEY/>
       <UNSIGNED/>
@@ -673,7 +684,7 @@
     <opt platform="mysql"> ENGINE = InnoDB COLLATE = utf8_unicode_ci</opt>
   </table>
   <table name="corpItems">
-    <descr>Sub table from /corp/KillLog.xml.aspx</descr>
+    <descr>Sub table from /corp/KillMails.xml.aspx</descr>
     <field name="`flag`" type="I2" size="5">
       <NOTNULL/>
       <UNSIGNED/>
@@ -712,8 +723,8 @@
     </field>
     <opt platform="mysql"> ENGINE = InnoDB COLLATE = utf8_unicode_ci</opt>
   </table>
-  <table name="corpKillLog">
-    <descr>Main table for /corp/KillLog.xml.aspx</descr>
+  <table name="corpKillMails">
+    <descr>Main table for /corp/KillMails.xml.aspx</descr>
     <field name="`killID`" type="I8" size="20">
       <KEY/>
       <UNSIGNED/>
@@ -730,6 +741,10 @@
       <UNSIGNED/>
     </field>
     <opt platform="mysql"> ENGINE = InnoDB COLLATE = utf8_unicode_ci</opt>
+  </table>
+  <table name="corpKillLog">
+    <descr>Replaced by KillMails</descr>
+    <DROP/>
   </table>
   <table name="corpLogo">
     <descr>Sub table from /corp/CorporationSheet.xml.aspx</descr>
@@ -1114,7 +1129,7 @@
     <opt platform="mysql"> ENGINE = InnoDB COLLATE = utf8_unicode_ci</opt>
   </table>
   <table name="corpVictim">
-    <descr>Sub table from /corp/KillLog.xml.aspx</descr>
+    <descr>Sub table from /corp/KillMails.xml.aspx</descr>
     <field name="`killID`" type="I8" size="20">
       <KEY/>
       <UNSIGNED/>
@@ -1207,6 +1222,12 @@
       <NOTNULL/>
       <UNSIGNED/>
     </field>
+    <field name="`owner1TypeID`" type="I8" size="20">
+      <UNSIGNED/>
+    </field>
+    <field name="`owner2TypeID`" type="I8" size="20">
+      <UNSIGNED/>
+    </field>
     <opt platform="mysql"> ENGINE = InnoDB COLLATE = utf8_unicode_ci</opt>
   </table>
   <table name="corpWalletTransactions">
@@ -1227,6 +1248,9 @@
       <UNSIGNED/>
     </field>
     <field name="`clientName`" type="C" size="255"/>
+    <field name="`clientTypeID`" type="I8" size="20">
+      <UNSIGNED/>
+    </field>
     <field name="`journalTransactionID`" type="I8" size="20">
       <NOTNULL/>
       <UNSIGNED/>
