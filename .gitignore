@@ -5,7 +5,7 @@
 # *.[oa]
 # *~
 yapeal/config/yapeal.ini
-yapeal/cache
+yapeal/cache/*/*.xml
 yapeal/log
 yapeal/error_log
 phpBB/cache
