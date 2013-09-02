@@ -28,8 +28,8 @@ class IntraACL_SQL_Groups
 {
     private function getUsersForGroup($sql, $sql_wiki, $groupId)
     {
-	global $debug;
-	if($debug)
+	global $my_debug;
+	if($my_debug)
                 print("DEBUG - getUsersForGroup");
 	$users = array();
 	$groupId = $this->WIKItoPHPB($groupId, $sql_wiki, $sql);
@@ -40,8 +40,8 @@ class IntraACL_SQL_Groups
     }
     private function WIKItoPHPB($groupID, $fresMySQLConnection_wiki, $fresMySQLConnection)
     {
-	global $debug;
-	if($debug)
+	global $my_debug;
+	if($my_debug)
                 print("DEBUG - WIKItoPHPBB");
 	$qry=mysql_query("SELECT page_title FROM page WHERE page_id = " . $groupID, $fresMySQLConnection_wiki);
 	if(!($row = mysql_fetch_row($qry)))
@@ -66,8 +66,8 @@ class IntraACL_SQL_Groups
      */
     public function groupNameForID($groupID)
     {
-	global $debug;
-	if($debug)
+	global $my_debug;
+	if($my_debug)
                 print("DEBUG - groupNameForID");
 	global $wgAuth;
         $fresMySQLConnection_wiki = null;
@@ -98,8 +98,8 @@ class IntraACL_SQL_Groups
     public function getGroups($text = NULL, $nottext = NULL, $limit = NULL, $as_object = false)
     {
 	
-        global $debug;
-        if($debug)
+        global $my_debug;
+        if($my_debug)
                 print("DEBUG - getGroups");
 	global $wgAuth;
 	$fresMySQLConnection_wiki = null;
@@ -156,8 +156,8 @@ class IntraACL_SQL_Groups
      */
     public function getGroupByName($groupName) {
 	
-        global $debug;
-        if($debug)
+        global $my_debug;
+        if($my_debug)
                 print("DEBUG - getGroupByName");
 	global $wgAuth;
         $fresMySQLConnection_wiki = null;
@@ -186,8 +186,8 @@ class IntraACL_SQL_Groups
      */
     public function getGroupByID($groupID) {
 	
-        global $debug;
-        if($debug)
+        global $my_debug;
+        if($my_debug)
                 print("DEBUG - getGroupById");
 	global $wgAuth;
         $fresMySQLConnection_wiki = null;
@@ -277,8 +277,8 @@ class IntraACL_SQL_Groups
      */
     public function getMembersOfGroup($groupID, $memberType)
     {
-        global $debug;
-        if($debug)
+        global $my_debug;
+        if($my_debug)
                 print("DEBUG - getMembersOfGroup");
 	if($memberType = "group")
 	    return array();
@@ -302,8 +302,8 @@ class IntraACL_SQL_Groups
     public function getMembersOfGroups($ids)
     {
 	
-        global $debug;
-        if($debug)
+        global $my_debug;
+        if($my_debug)
                 print("DEBUG - getMembersOfGroup");
 	global $wgAuth;
         $fresMySQLConnection_wiki = null;
@@ -331,8 +331,8 @@ class IntraACL_SQL_Groups
     public function getGroupsOfMember($memberType, $memberID, $recurse = true)
     {
 	
-        global $debug;
-        if($debug)
+        global $my_debug;
+        if($my_debug)
                 print("DEBUG - getGroupsOfMember");
 	if($memberType == 'group')
 		return array();
@@ -378,8 +378,8 @@ class IntraACL_SQL_Groups
     public function hasGroupMember($parentID, $childID, $memberType, $recursive)
     {
 	
-        global $debug;
-        if($debug)
+        global $my_debug;
+        if($my_debug)
                 print("DEBUG - hasGroupMember($parentID, $childID, $memberType, $recursive)\n");
 	if($memberType == "user")
 	{
@@ -397,7 +397,7 @@ class IntraACL_SQL_Groups
 				  " . $GLOBALS['wgDBname'] . ".user.user_id = " . $childID
 		, $fresMySQLConnection);
 		$retval = mysql_fetch_row($qry);
-		if($debug)
+		if($my_debug)
 			print($retval . " " . ($retval?"true\n":"false\n"));
 		return $retval;
 	}
@@ -406,8 +406,8 @@ class IntraACL_SQL_Groups
 
     public function getGroupMembersRecursive($groupID, $children = array())
     {
-	global $debug;
-	if($debug)
+	global $my_debug;
+	if($my_debug)
 		throw  new Exception("getGroupMembersRecursive");
 	/* TODO */
         if (!isset($children['user']))
@@ -442,8 +442,8 @@ class IntraACL_SQL_Groups
      */
     public function getGroupsByIds($group_ids)
     {
-	global $debug;
-	if($debug)
+	global $my_debug;
+	if($my_debug)
 		throw  new Exception("getGroupsByIds");
 	/* TODO */
         if (!$group_ids)
@@ -483,8 +483,8 @@ class IntraACL_SQL_Groups
      */
     public function groupExists($groupID)
     {
-	global $debug;
-	if($debug)
+	global $my_debug;
+	if($my_debug)
 		print("DEBUG - groupExists");
 	global $wgAuth;
 	$fresMySQLConnection_wiki = null;

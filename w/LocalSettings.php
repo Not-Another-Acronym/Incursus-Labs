@@ -166,7 +166,7 @@ $wgAuth_Config['MySQL_Host']        = 'localhost';      // phpBB MySQL Host Name
 $wgAuth_Config['MySQL_Username']    = '';       // phpBB MySQL Username.
 $wgAuth_Config['MySQL_Password']    = '';       // phpBB MySQL Password.
 $wgAuth_Config['MySQL_Database']    = '';       // phpBB MySQL Database Name.
-require_once("$IP/wikiDB.php");
+include("$IP/wikiDB.php");
  
 $wgAuth_Config['UserTB']         = 'phpbb_users';       // Name of your PHPBB user table. (i.e. phpbb_users)
 $wgAuth_Config['GroupsTB']       = 'phpbb_groups';      // Name of your PHPBB groups table. (i.e. phpbb_groups)
