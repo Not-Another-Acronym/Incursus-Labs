@@ -155,38 +155,7 @@ class VectorTemplate extends BaseTemplate {
 ?>
 		<div id="wrap">
 			<?PHP
-				/*$php = new Runkit_Sandbox();
-                $php->session_start();
-                $php->SERVER = $_SERVER;
-                $php->COOKIE = $_COOKIE;
-                $php->POST = $_POST;
-                $php->GET = $_GET;
-                $php->noexit = true;
-                $php->eval('
-                        define("IN_PHPBB", true);
-                        $_SERVER = $SERVER;
-                        $_COOKIE = $COOKIE;
-                        $_POST = $POST;
-                        $_GET = $GET;
-                        chdir("' . getcwd()  .'");
-						ob_start();*/
                         include("../header.php");
-/*						$out = ob_get_clean();
-                ');
-				if(!empty($_POST['naa_loginname']))
-				{
-					setcookie("phpbb3__sid", $php->bbuserses, time() + 5 * 60 * 60, "/", "naa.waterfoul.net", true, true);
-					setcookie("phpbb3__u", $php->bbusercok["u"], time() + 5 * 60 * 60, "/", "naa.waterfoul.net", true, true);
-					setcookie("phpbb3__k", $php->bbusercok["k"], time() + 5 * 60 * 60, "/", "naa.waterfoul.net", true, true);
-					setcookie("Token", $php->cookieToken, time() + 5 * 60 * 60, "/", "naa.waterfoul.net", true, true);
-					setcookie("wiki_UserID", $php->cookiewiki_UserID, time() + 5 * 60 * 60, "/", "naa.waterfoul.net", true, true);
-					setcookie("wiki_UserName", $php->cookiewiki_UserName, time() + 5 * 60 * 60, "/", "naa.waterfoul.net", true, true);
-					setcookie("naa_wikiToken", $php->cookieToken, time() + 5 * 60 * 60, "/", "naa.waterfoul.net", true, true);
-					setcookie("naa_wikiwiki_UserID", $php->cookiewiki_UserID, time() + 5 * 60 * 60, "/", "naa.waterfoul.net", true, true);
-					setcookie("naa_wikiwiki_UserName", $php->cookiewiki_UserName, time() + 5 * 60 * 60, "/", "naa.waterfoul.net", true, true);
-				}
-				print($php->out);
-				if($php->exit) exit();*/
 			?>
 			<div style="position: relative;font-size: initial;">
 				<div id="mw-page-base" class="noprint"></div>

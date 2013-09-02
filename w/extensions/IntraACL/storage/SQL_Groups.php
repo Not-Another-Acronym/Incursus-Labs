@@ -28,6 +28,9 @@ class IntraACL_SQL_Groups
 {
     private function getUsersForGroup($sql, $sql_wiki, $groupId)
     {
+	global $debug;
+	if($debug)
+                print("DEBUG - getUsersForGroup");
 	$users = array();
 	$groupId = $this->WIKItoPHPB($groupId, $sql_wiki, $sql);
         $qry=mysql_query("SELECT phpbb_users.username FROM phpbb_user_group LEFT JOIN phpbb_users ON phpbb_user_group.user_id = phpbb_users.user_id WHERE phpbb_user_group.group_id = " . $groupId, $sql);
@@ -37,6 +40,9 @@ class IntraACL_SQL_Groups
     }
     private function WIKItoPHPB($groupID, $fresMySQLConnection_wiki, $fresMySQLConnection)
     {
+	global $debug;
+	if($debug)
+                print("DEBUG - WIKItoPHPBB");
 	$qry=mysql_query("SELECT page_title FROM page WHERE page_id = " . $groupID, $fresMySQLConnection_wiki);
 	if(!($row = mysql_fetch_row($qry)))
 		return -1;
@@ -60,6 +66,9 @@ class IntraACL_SQL_Groups
      */
     public function groupNameForID($groupID)
     {
+	global $debug;
+	if($debug)
+                print("DEBUG - groupNameForID");
 	global $wgAuth;
         $fresMySQLConnection_wiki = null;
         $fresMySQLConnection = $wgAuth->connect($fresMySQLConnection_wiki);
@@ -88,6 +97,10 @@ class IntraACL_SQL_Groups
      */
     public function getGroups($text = NULL, $nottext = NULL, $limit = NULL, $as_object = false)
     {
+	
+        global $debug;
+        if($debug)
+                print("DEBUG - getGroups");
 	global $wgAuth;
 	$fresMySQLConnection_wiki = null;
         $fresMySQLConnection = $wgAuth->connect($fresMySQLConnection_wiki);
@@ -142,6 +155,10 @@ class IntraACL_SQL_Groups
      *
      */
     public function getGroupByName($groupName) {
+	
+        global $debug;
+        if($debug)
+                print("DEBUG - getGroupByName");
 	global $wgAuth;
         $fresMySQLConnection_wiki = null;
         $fresMySQLConnection = $wgAuth->connect($fresMySQLConnection_wiki);
@@ -168,6 +185,10 @@ class IntraACL_SQL_Groups
      *
      */
     public function getGroupByID($groupID) {
+	
+        global $debug;
+        if($debug)
+                print("DEBUG - getGroupById");
 	global $wgAuth;
         $fresMySQLConnection_wiki = null;
         $fresMySQLConnection = $wgAuth->connect($fresMySQLConnection_wiki);
@@ -256,6 +277,9 @@ class IntraACL_SQL_Groups
      */
     public function getMembersOfGroup($groupID, $memberType)
     {
+        global $debug;
+        if($debug)
+                print("DEBUG - getMembersOfGroup");
 	if($memberType = "group")
 	    return array();
 	global $wgAuth;
@@ -277,6 +301,10 @@ class IntraACL_SQL_Groups
      */
     public function getMembersOfGroups($ids)
     {
+	
+        global $debug;
+        if($debug)
+                print("DEBUG - getMembersOfGroup");
 	global $wgAuth;
         $fresMySQLConnection_wiki = null;
         $fresMySQLConnection = $wgAuth->connect($fresMySQLConnection_wiki);
@@ -302,36 +330,25 @@ class IntraACL_SQL_Groups
      */
     public function getGroupsOfMember($memberType, $memberID, $recurse = true)
     {
-	/* TODO */
-        $dbr = wfGetDB(DB_SLAVE);
-
-        $type = $memberType;
-        $ids = $memberID;
-        $groups = array();
-        if ($memberType == 'group')
-            $groups[$memberID] = true;
-        do
-        {
-            $res = $dbr->select('halo_acl_group_members', 'parent_group_id', array(
-                'child_type' => $type,
-                'child_id'   => $ids,
-            ), __METHOD__);
-            $type = 'group';
-            $ids = array();
-            foreach ($res as $row)
-            {
-                $id = $row->parent_group_id;
-                if (empty($groups[$id]))
-                {
-                    $ids[] = $id;
-                    $groups[$id] = true;
-                }
-            }
-        } while ($recurse && $ids);
-        if ($memberType == 'group')
-            unset($groups[$memberID]);
-
-        return array_keys($groups);
+	
+        global $debug;
+        if($debug)
+                print("DEBUG - getGroupsOfMember");
+	if($memberType == 'group')
+		return array();
+	global $wgAuth;
+        $fresMySQLConnection_wiki = null;
+        $fresMySQLConnection = $wgAuth->connect($fresMySQLConnection_wiki);
+        $users = array();
+        $qry=mysql_query("
+                SELECT phpbb_user_group.group_id FROM phpbb_user_group
+                        LEFT JOIN phpbb_users ON phpbb_user_group.user_id = phpbb_users.user_id
+                        LEFT JOIN " . $GLOBALS['wgDBname'] . ".user ON " . $GLOBALS['wgDBname'] . ".user.user_name = phpbb_users.username
+                        WHERE " . $GLOBALS['wgDBname'] . ".user.user_id = '" . mysql_real_escape_string($memberID) . "';");
+        $grps = array();
+        while($row = mysql_fetch_assoc($qry))
+            $grps[] = $row["group_id"];
+        return $grps;
     }
 
     /**
@@ -360,19 +377,38 @@ class IntraACL_SQL_Groups
      */
     public function hasGroupMember($parentID, $childID, $memberType, $recursive)
     {
+	
+        global $debug;
+        if($debug)
+                print("DEBUG - hasGroupMember($parentID, $childID, $memberType, $recursive)\n");
 	if($memberType == "user")
 	{
 		global $wgAuth;
         	$fresMySQLConnection_wiki = null;
 	        $fresMySQLConnection = $wgAuth->connect($fresMySQLConnection_wiki);
-		$qry=mysql_query("SELECT phpbb_user_group.user_id FROM phpbb_user_group WHERE phpbb_user_group.group_id = " . $parentID . " AND phpbb_user_group.user_id = " . $childID, $fresMySQLConnection);
-		return mysql_fetch_row($qry) === false;
+		$qry=mysql_query("
+			SELECT " . $GLOBALS['wgDBname'] . ".user.user_id FROM " . $GLOBALS['wgDBname'] . ".page
+				LEFT JOIN " . $GLOBALS['wgAuth_Config']['MySQL_Database'] . ".phpbb_groups ON substr(page.page_title, 7) = phpbb_groups.group_name
+				LEFT JOIN " . $GLOBALS['wgAuth_Config']['MySQL_Database'] . ".phpbb_user_group ON phpbb_user_group.group_id = phpbb_groups.group_id
+				LEFT JOIN " . $GLOBALS['wgAuth_Config']['MySQL_Database'] . ".phpbb_users ON phpbb_user_group.user_id = phpbb_users.user_id
+				LEFT JOIN " . $GLOBALS['wgDBname'] . ".user ON LOWER(CONVERT(user.user_name USING utf8)) LIKE LOWER(phpbb_users.loginname)
+				WHERE 
+				  " . $GLOBALS['wgDBname'] . ".page.page_id = " . $parentID . " AND
+				  " . $GLOBALS['wgDBname'] . ".user.user_id = " . $childID
+		, $fresMySQLConnection);
+		$retval = mysql_fetch_row($qry);
+		if($debug)
+			print($retval . " " . ($retval?"true\n":"false\n"));
+		return $retval;
 	}
         return false;
     }
 
     public function getGroupMembersRecursive($groupID, $children = array())
     {
+	global $debug;
+	if($debug)
+		throw  new Exception("getGroupMembersRecursive");
 	/* TODO */
         if (!isset($children['user']))
             $children['user'] = array();
@@ -406,6 +442,9 @@ class IntraACL_SQL_Groups
      */
     public function getGroupsByIds($group_ids)
     {
+	global $debug;
+	if($debug)
+		throw  new Exception("getGroupsByIds");
 	/* TODO */
         if (!$group_ids)
             return array();
@@ -444,6 +483,9 @@ class IntraACL_SQL_Groups
      */
     public function groupExists($groupID)
     {
+	global $debug;
+	if($debug)
+		print("DEBUG - groupExists");
 	global $wgAuth;
 	$fresMySQLConnection_wiki = null;
         $fresMySQLConnection = $wgAuth->connect($fresMySQLConnection_wiki);

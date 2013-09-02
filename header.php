@@ -1,4 +1,22 @@
-<script type="text/javascript" src="https://naa.waterfoul.net/w/load.php?debug=false&amp;lang=en&amp;modules=jquery%2Cmediawiki&amp;only=scripts&amp;skin=vector&amp;version=20130623T185045Z"></script>
+<?php
+	if(!defined("ROOT_PATH"))
+        {
+                $location = explode("/", dirname($_SERVER['PHP_SELF']));
+                $path = "";
+                foreach($location as $loc)
+                {
+                        if($loc == "index.php")
+                                break;
+                        if($loc != "" && $loc != "_")
+                                $path .= "../";
+                }
+                define('ROOT_PATH', $path . "phpBB");
+                $new = true;
+                global $db, $user, $cache, $SID, $_SID, $config, $phpbb_root_path, $phpEx, $auth, $template;
+        }
+	require_once("$path/w/wikiDB.php");
+?>
+<script type="text/javascript" src="<?php print($wgServer); ?>/w/load.php?debug=false&amp;lang=en&amp;modules=jquery%2Cmediawiki&amp;only=scripts&amp;skin=vector&amp;version=20130623T185045Z"></script>
 <script type="text/javascript">
 	$(document).scroll(function(){
 		scrollTop = $(window).scrollTop();
@@ -13,21 +31,6 @@
 	include("config.php");
 	//define('IN_PHPBB', true);
 	$new = false;
-	if(!defined("ROOT_PATH"))
-	{
-		$location = explode("/", dirname($_SERVER['PHP_SELF']));
-		$path = "";
-		foreach($location as $loc)
-		{
-			if($loc == "index.php")
-				break;
-			if($loc != "" && $loc != "_")
-				$path .= "../";
-		}
-	        define('ROOT_PATH', $path . "phpBB");
-		$new = true;
-		global $db, $user, $cache, $SID, $_SID, $config, $phpbb_root_path, $phpEx, $auth, $template;
-	}
    	$phpEx = "php";
 	$phpbb_root_path = (defined('PHPBB_ROOT_PATH')) ? PHPBB_ROOT_PATH : ROOT_PATH . '/';
 	

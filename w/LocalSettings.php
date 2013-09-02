@@ -29,12 +29,12 @@ $wgMetaNamespace = "Warp_To_Me";
 ## For more information on customizing the URLs
 ## (like /w/index.php/Page_title to /wiki/Page_title) please see:
 ## http://www.mediawiki.org/wiki/Manual:Short_URL
-$wgScriptPath       = "/_/w";
-$wgArticlePath = "/_/wiki/$1";
+//$wgScriptPath       = "/_/w";
+//$wgArticlePath = "/_/wiki/$1";
 $wgScriptExtension  = ".php";
 
 ## The protocol and server name to use in fully-qualified URLs
-$wgServer           = "http://warptome.com";
+//$wgServer           = "http://warptome.com";
 
 ## The relative URL path to the skins directory
 $wgStylePath        = "$wgScriptPath/skins";
@@ -166,12 +166,12 @@ $wgAuth_Config['MySQL_Host']        = 'localhost';      // phpBB MySQL Host Name
 $wgAuth_Config['MySQL_Username']    = '';       // phpBB MySQL Username.
 $wgAuth_Config['MySQL_Password']    = '';       // phpBB MySQL Password.
 $wgAuth_Config['MySQL_Database']    = '';       // phpBB MySQL Database Name.
-include("$IP/wikiDB.php");
+require_once("$IP/wikiDB.php");
  
 $wgAuth_Config['UserTB']         = 'phpbb_users';       // Name of your PHPBB user table. (i.e. phpbb_users)
 $wgAuth_Config['GroupsTB']       = 'phpbb_groups';      // Name of your PHPBB groups table. (i.e. phpbb_groups)
 $wgAuth_Config['User_GroupTB']   = 'phpbb_user_group';  // Name of your PHPBB user_group table. (i.e. phpbb_user_group)
-$wgAuth_Config['PathToPHPBB']    = '../../_/phpBB/';         // Path from this file to your phpBB install. Must end with '/'.
+//$wgAuth_Config['PathToPHPBB']    = '../../_/phpBB/';         // Path from this file to your phpBB install. Must end with '/'.
  
 // Local
 $wgAuth_Config['LoginMessage']   = '<b>You need a phpBB account to login.</b><br /><a href="' . $wgAuth_Config['PathToPHPBB'] .

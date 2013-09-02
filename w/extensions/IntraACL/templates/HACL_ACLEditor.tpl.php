@@ -1,4 +1,4 @@
-<script src="https://naa.waterfoul.net/w/load.php?debug=true&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script src="<?php print($wgServer); ?>/w/load.php?debug=true&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
 <form action="<?= $wgScript ?>?action=submit" method="POST">
 <input type="hidden" name="wpEditToken" value="<?= htmlspecialchars($wgwiki_User->editToken()) ?>" />
 <input type="hidden" name="wpEdittime" value="<?= $aclArticle ? $aclArticle->getTimestamp() : '' ?>" />
